@@ -1,0 +1,11 @@
+{
+  "dataset": "followupqg",
+  "split": "test",
+  "n_pairs": 501,
+  "k_hard_negatives": 4,
+  "encoding_seconds": 0.6125245094299316,
+  "knn_seconds": 0.03543424606323242,
+  "miner": "sentence-transformers/all-MiniLM-L6-v2",
+  "hard_negatives_path": "/mnt/localssd/base_line/internship-causal-embedding/finetune_eval/results/followupqg/test_hard_negatives.npy",
+  "pairs_path": "/mnt/localssd/base_line/internship-causal-embedding/finetune_eval/results/followupqg/test_pairs.jsonl"
+}

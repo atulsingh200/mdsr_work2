@@ -1,0 +1,343 @@
+========================================================
+  Dataset: followupqg   GPU: 0   Wed Jun  3 11:35:31 PDT 2026
+========================================================
+
+[step 0] stage data
+  copied train_pairs.jsonl
+  copied test_pairs.jsonl
+  copied hard_negatives.npy
+  copied test_hard_negatives.npy
+  no val split — holding out 10% of train
+  val=279  train=2511
+
+[step 1] mine K=8 hard negatives (train + test)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[miner] sentence-transformers/all-MiniLM-L6-v2  K=8
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 9149.72it/s]
+
+[train] loading /mnt/localssd/internship-causal-embedding-merge-followup/my_work/kl/results/followupqg/train_pairs.jsonl
+  2511 pairs
+  encoding 2511 positives …
+  encoded in 2.1s  dim=384
+  k-NN (8 per anchor) on cuda  chunk=1024 …
+  k-NN done in 0.0s
+  saved /mnt/localssd/internship-causal-embedding-merge-followup/my_work/kl/results/followupqg/hard_negatives_k8.npy
+
+[test] loading /mnt/localssd/internship-causal-embedding-merge-followup/my_work/kl/results/followupqg/test_pairs.jsonl
+  501 pairs
+  encoding 501 positives …
+  encoded in 0.3s  dim=384
+  k-NN (8 per anchor) on cuda  chunk=1024 …
+  k-NN done in 0.0s
+  saved /mnt/localssd/internship-causal-embedding-merge-followup/my_work/kl/results/followupqg/test_hard_negatives_k8.npy
+
+[done]
+
+[step 2] train CDEv2 retriever
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[device] cuda
+[out]    /mnt/localssd/internship-causal-embedding-merge-followup/my_work/kl/results/followupqg
+[data] 2511 train pairs  K=8
+[data] 279 val pairs
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 7671.07it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 7857.31it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[warm-start] from /mnt/localssd/internship-causal-embedding-merge-followup/finetune_eval/results/followupqg/checkpoint_best.pt
+  [warm-start] loaded 199 anchor tensors -> cause_enc, 199 positive tensors -> effect_enc (missing=0, unexpected=0)
+[model] shared_encoder=False  kl_scale=dim  init_cos_weight=1.0  pooling=cls  mu_identity=True  log_sigma_init=3.0
+[model] CDEv2  backbone=google-bert/bert-base-uncased  proj_dim=768  params=226,059,268
+
+================================================================================
+CDEv2 training  total=3000  phA=3000  phB_end=3000
+batch=64  K=8  bf16=True  backbone_lr=2e-05  head_lr=0.0001
+================================================================================
+  step=   50/3000 [A]  loss=1.2387  info=1.2387  τ=0.0497  λcos=1.001  s+=0.553  s-=0.205  γ=0.0004
+  step=  100/3000 [A]  loss=0.8129  info=0.8129  τ=0.0485  λcos=1.003  s+=0.499  s-=0.075  γ=0.0012
+  step=  150/3000 [A]  loss=0.6494  info=0.6494  τ=0.0465  λcos=1.007  s+=0.433  s-=-0.027  γ=0.0028
+  step=  200/3000 [A]  loss=0.2061  info=0.2061  τ=0.0448  λcos=1.012  s+=0.438  s-=-0.111  γ=0.0059
+  [val step=200]  MRR=0.8297  R@1=0.767  R@5=0.910  R@10=0.932  med=1  * new best
+  step=  250/3000 [A]  loss=0.1583  info=0.1583  τ=0.0436  λcos=1.016  s+=0.389  s-=-0.200  γ=0.0076
+  step=  300/3000 [A]  loss=0.1144  info=0.1144  τ=0.0429  λcos=1.018  s+=0.366  s-=-0.233  γ=0.0105
+  step=  350/3000 [A]  loss=0.1709  info=0.1709  τ=0.0423  λcos=1.021  s+=0.359  s-=-0.266  γ=0.0124
+  step=  400/3000 [A]  loss=0.1589  info=0.1589  τ=0.0419  λcos=1.023  s+=0.343  s-=-0.274  γ=0.0145
+  [val step=400]  MRR=0.8015  R@1=0.738  R@5=0.889  R@10=0.925  med=1  (patience 1/6)
+  step=  450/3000 [A]  loss=0.1295  info=0.1295  τ=0.0415  λcos=1.025  s+=0.358  s-=-0.325  γ=0.0156
+  step=  500/3000 [A]  loss=8.7602  info=8.7602  τ=0.0413  λcos=1.027  s+=-0.046  s-=-0.384  γ=0.0172
+  step=  550/3000 [A]  loss=0.1570  info=0.1570  τ=0.0419  λcos=1.029  s+=0.324  s-=-0.357  γ=0.0191
+  step=  600/3000 [A]  loss=0.0802  info=0.0802  τ=0.0417  λcos=1.031  s+=0.301  s-=-0.369  γ=0.0204
+  [val step=600]  MRR=0.7800  R@1=0.706  R@5=0.871  R@10=0.910  med=1  (patience 2/6)
+  step=  650/3000 [A]  loss=0.1840  info=0.1840  τ=0.0416  λcos=1.033  s+=0.297  s-=-0.374  γ=0.0214
+  step=  700/3000 [A]  loss=0.0829  info=0.0829  τ=0.0416  λcos=1.035  s+=0.294  s-=-0.413  γ=0.0226
+  step=  750/3000 [A]  loss=0.2036  info=0.2036  τ=0.0416  λcos=1.037  s+=0.240  s-=-0.531  γ=0.0235
+  step=  800/3000 [A]  loss=0.0664  info=0.0664  τ=0.0421  λcos=1.038  s+=0.284  s-=-0.516  γ=0.0251
+  [val step=800]  MRR=0.7703  R@1=0.688  R@5=0.864  R@10=0.918  med=1  (patience 3/6)
+  step=  850/3000 [A]  loss=0.1296  info=0.1296  τ=0.0421  λcos=1.040  s+=0.267  s-=-0.460  γ=0.0266
+  step=  900/3000 [A]  loss=0.0608  info=0.0608  τ=0.0422  λcos=1.041  s+=0.294  s-=-0.444  γ=0.0283
+  step=  950/3000 [A]  loss=0.2596  info=0.2596  τ=0.0422  λcos=1.043  s+=0.249  s-=-0.501  γ=0.0295
+  step= 1000/3000 [A]  loss=0.0433  info=0.0433  τ=0.0428  λcos=1.044  s+=0.280  s-=-0.509  γ=0.0306
+  [val step=1000]  MRR=0.7747  R@1=0.695  R@5=0.860  R@10=0.907  med=1  (patience 4/6)
+  step= 1050/3000 [A]  loss=0.0831  info=0.0831  τ=0.0429  λcos=1.046  s+=0.282  s-=-0.517  γ=0.0314
+  step= 1100/3000 [A]  loss=0.5891  info=0.5891  τ=0.0429  λcos=1.047  s+=0.204  s-=-0.612  γ=0.0320
+  step= 1150/3000 [A]  loss=0.1400  info=0.1400  τ=0.0430  λcos=1.048  s+=0.247  s-=-0.607  γ=0.0330
+  step= 1200/3000 [A]  loss=0.0486  info=0.0486  τ=0.0434  λcos=1.050  s+=0.257  s-=-0.595  γ=0.0339
+  [val step=1200]  MRR=0.7683  R@1=0.695  R@5=0.867  R@10=0.914  med=1  (patience 5/6)
+  step= 1250/3000 [A]  loss=0.2012  info=0.2012  τ=0.0436  λcos=1.051  s+=0.267  s-=-0.530  γ=0.0350
+  step= 1300/3000 [A]  loss=0.0457  info=0.0457  τ=0.0438  λcos=1.052  s+=0.301  s-=-0.583  γ=0.0358
+  step= 1350/3000 [A]  loss=0.0939  info=0.0939  τ=0.0438  λcos=1.053  s+=0.280  s-=-0.628  γ=0.0362
+  step= 1400/3000 [A]  loss=0.1372  info=0.1372  τ=0.0439  λcos=1.053  s+=0.294  s-=-0.588  γ=0.0369
+  [val step=1400]  MRR=0.7549  R@1=0.670  R@5=0.857  R@10=0.907  med=1  (patience 6/6)
+
+[early stop] no MRR improvement for 6 checks.
+
+================================================================================
+[done]  best val MRR=0.8297
+  best:   /mnt/localssd/internship-causal-embedding-merge-followup/my_work/kl/results/followupqg/cde_v2_run5c_best.pt
+  latest: /mnt/localssd/internship-causal-embedding-merge-followup/my_work/kl/results/followupqg/cde_v2_run5c_latest.pt
+
+[step 3] train cross-encoder reranker
+[data] train from finetune_eval/results/followupqg/train_pairs.jsonl
+        2790 train pairs
+        hard negatives (2790, 4)
+[data] no mined val split for followupqg; holding out 5% of train as val
+        train=2651  val=139
+        flattened: train rows=13255  val rows=695
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 9427.32it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[model] backbone=google-bert/bert-base-uncased  params=109,483,009
+[train] dataset=followupqg total_steps=416 warmup=24 batch_size=128 epochs=4 max_length=256  early_stop=(thresh 0.001, patience 2)
+[epoch 1/4]  train_loss=0.4203  val_AUC=0.9694  val_P@1=0.9137  (19s)
+  * new best val_AUC=0.9694, saved checkpoint_best.pt
+  step=   200/416  loss=0.2610  lr=1.10e-05  epoch=2
+[epoch 2/4]  train_loss=0.2991  val_AUC=0.9574  val_P@1=0.9209  (39s)
+  no improvement (best=0.9694, bad_epochs=1/2)
+[epoch 3/4]  train_loss=0.2450  val_AUC=0.9515  val_P@1=0.9209  (59s)
+  no improvement (best=0.9694, bad_epochs=2/2)
+[early stop] no val-AUC improvement for 2 epochs.
+
+[done]  best val_AUC=0.9694  stopped_early=True
+  best:   my_work/kl/cross_encoder/results/followupqg_rerank/checkpoint_best.pt
+  latest: my_work/kl/cross_encoder/results/followupqg_rerank/checkpoint_latest.pt
+
+[step 4a] rerank eval on VAL (sweep pool/blend)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[rerank] 279 pairs  retriever=cde  device=cuda
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 9342.69it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 9036.90it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[stage1] retrieval MRR=0.8297  R@1=0.767  R@10=0.932
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 9336.84it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[stage2] scoring 13950 pairs with CE followupqg_rerank …
+
+ pool  blend      MRR     R@1     R@5    R@10
+----------------------------------------------
+   20   0.30   0.8688   0.817   0.921   0.943  <<
+   20   0.50   0.8755   0.824   0.935   0.946  <<
+   20   0.70   0.8711   0.810   0.935   0.953
+   50   0.30   0.8737   0.821   0.932   0.953
+   50   0.50   0.8793   0.821   0.953   0.964  <<
+   50   0.70   0.8757   0.810   0.953   0.964
+
+[best] pool50_blend0.5  MRR=0.8793
+[baseline BiEncoder MRR]  0.5844
+[lift over baseline]      +50.5%  (target +10% = 0.6429  ACHIEVED)
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 8053.05it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[fused AUC vs 4 random negs]  0.9992
+[saved] /mnt/localssd/internship-causal-embedding-merge-followup/my_work/kl/results/followupqg/rerank_eval.json
+
+[step 4b] rerank eval on TEST
+  using val-best: pool=50 blend=0.5
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[rerank] 501 pairs  retriever=cde  device=cuda
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 8016.16it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 7277.08it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[stage1] retrieval MRR=0.6541  R@1=0.549  R@10=0.846
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 7682.30it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[stage2] scoring 25050 pairs with CE followupqg_rerank …
+
+ pool  blend      MRR     R@1     R@5    R@10
+----------------------------------------------
+   50   0.50   0.7870   0.705   0.884   0.910  <<
+
+[best] pool50_blend0.5  MRR=0.7870
+[baseline BiEncoder MRR]  0.5844
+[lift over baseline]      +34.7%  (target +10% = 0.6429  ACHIEVED)
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 8969.51it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[fused AUC vs 4 random negs]  0.9982
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 9596.63it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[fused AUC vs 4 hard negs]    0.9706
+[saved] /mnt/localssd/internship-causal-embedding-merge-followup/my_work/kl/results/followupqg/rerank_eval.json
+
+========================================================
+  DONE followupqg   Wed Jun  3 11:58:06 PDT 2026
+  Results: /mnt/localssd/internship-causal-embedding-merge-followup/my_work/kl/results/followupqg/rerank_eval.json
+  stage-1 MRR : 0.6541
+  fused   MRR : 0.7870  (pool50_blend0.5)
+========================================================
+   | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[fused AUC vs 4 hard negs]    0.9706
+[saved] /mnt/localssd/internship-causal-embedding-merge-followup/my_work/kl/results/followupqg/rerank_eval.json
+
+========================================================
+  DONE followupqg   Wed Jun  3 11:58:06 PDT 2026
+  Results: /mnt/localssd/internship-causal-embedding-merge-followup/my_work/kl/results/followupqg/rerank_eval.json
+  stage-1 MRR : 0.6541
+  fused   MRR : 0.7870  (pool50_blend0.5)
+========================================================

@@ -1,0 +1,28 @@
+{
+  "dataset": "multiwoz_v24",
+  "checkpoint": "/mnt/localssd/internship-causal-embedding-lorentz/lorentz_enc_results/multiwoz_v24/lorentz_best.pt",
+  "backbone": "google-bert/bert-base-uncased",
+  "space_dim": 768,
+  "time_dim": 20,
+  "n_test_pairs": 7368,
+  "encoding_seconds": 25.164053440093994,
+  "auc": 0.9570721825924178,
+  "precision_at_1": 0.881786102062975,
+  "mrr": 0.27671004814078226,
+  "mean_rank": 39.116313789359396,
+  "median_rank": 13.0,
+  "recall_at_k": {
+    "1": 0.18010314875135722,
+    "3": 0.2988599348534202,
+    "5": 0.36604234527687296,
+    "10": 0.46973398479913137
+  },
+  "hit_at_k": {
+    "1": 0.18010314875135722,
+    "3": 0.2988599348534202,
+    "5": 0.36604234527687296,
+    "10": 0.46973398479913137
+  },
+  "n_candidates_per_query": 1000,
+  "use_time": false
+}

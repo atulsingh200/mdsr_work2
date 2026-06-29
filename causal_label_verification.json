@@ -1,0 +1,302 @@
+[
+  {
+    "sample_id": 1,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 (AEM Dynamic Media setup) is a specific how-to and text_2 (AJO overview) is foundational; the specific does not causally precede the general."
+  },
+  {
+    "sample_id": 2,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "AJO intro (text_1, tier_1=1) precedes dataset export configuration (text_2, tier_2=3) in the learning path; borderline semantically but correct under the learning-path dependency framework."
+  },
+  {
+    "sample_id": 3,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 (sandboxes tutorial) is a specific infrastructure topic and text_2 (AJO overview) is general; the specific does not causally precede the general."
+  },
+  {
+    "sample_id": 4,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "AJO intro (text_1) is foundational and must be understood before using the embedded Adobe Express editor (text_2), a specific AJO content feature."
+  },
+  {
+    "sample_id": 5,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "AJO key capabilities overview (text_1) is a clear prerequisite before performing S3 dataset export destination setup (text_2)."
+  },
+  {
+    "sample_id": 6,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 (dataset export setup) is specific and text_2 (AJO UI/capabilities) is general; causality runs in the opposite direction."
+  },
+  {
+    "sample_id": 7,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 (source connector configuration) is a specific data management task and text_2 (AJO UI/capabilities) is general; wrong direction for causality."
+  },
+  {
+    "sample_id": 8,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "AJO intro (text_1, tier_1=1) is foundational and naturally precedes source connector configuration (text_2, tier_2=3 data management)."
+  },
+  {
+    "sample_id": 9,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "AJO intro (text_1) is a prerequisite for understanding how to use the Adobe Express editor embedded within AJO (text_2)."
+  },
+  {
+    "sample_id": 10,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 (CSV-to-schema data ingestion) is specific and text_2 (AJO intro) is general; causality runs in the opposite direction."
+  },
+  {
+    "sample_id": 11,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 (Adobe Express editing with brand controls) is a specific content task and text_2 (AJO intro) is general; wrong direction for causality."
+  },
+  {
+    "sample_id": 12,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "AJO intro (text_1, tier_1=1) is foundational and must be understood before using AEM Dynamic Media integration (text_2, tier_2=5 content management)."
+  },
+  {
+    "sample_id": 13,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 (content fragment creation) is a specific content task and text_2 (AJO UI/capabilities) is general; causality runs in the opposite direction."
+  },
+  {
+    "sample_id": 14,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 (subscription list creation) is a specific audience feature and text_2 (AJO intro) is general; wrong direction for causality."
+  },
+  {
+    "sample_id": 15,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "AJO intro (text_1, tier_1=1) provides the foundational context required before working with schema browser UI and schema creation (text_2, tier_2=3)."
+  },
+  {
+    "sample_id": 16,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "AJO mobile capabilities overview (text_1) is more foundational than the specific multilingual messaging setup (text_2); borderline pairing since multilingual messaging spans all channels, but the learning-path direction (tier_1=1 → tier_2=5) supports label=1."
+  },
+  {
+    "sample_id": 17,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 (subscription/landing page opt-out flow) is a specific audience feature and text_2 (AJO intro) is general; causality runs in the opposite direction."
+  },
+  {
+    "sample_id": 18,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "Understanding AJO capabilities and personas (text_1, tier_1=1) is a prerequisite before managing sandbox reset and administration tasks (text_2, tier_2=2)."
+  },
+  {
+    "sample_id": 19,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 (sandbox/access control with Permissions tab) is a specific admin task and text_2 (AJO capabilities) is general; wrong direction for causality."
+  },
+  {
+    "sample_id": 20,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 (dataset export with cloud storage destinations) is specific and text_2 (AJO intro) is general; causality runs in the opposite direction."
+  },
+  {
+    "sample_id": 21,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 (dataset export scheduling with incremental files) is a specific data management task and text_2 (AJO key capabilities) is general; wrong direction for causality."
+  },
+  {
+    "sample_id": 22,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "AJO key capabilities (text_1, tier_1=1) is foundational and naturally precedes identity mapping tutorial work (text_2, tier_2=3 data management)."
+  },
+  {
+    "sample_id": 23,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 (audience rule builder tutorial) is a specific audience management task and text_2 (AJO key capabilities) is general; causality runs in the opposite direction."
+  },
+  {
+    "sample_id": 24,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "AJO mobile capabilities overview (text_1) establishes the context for why asset editing is needed before the specific Adobe Express asset editing steps (text_2); borderline since these are somewhat parallel topics, but the learning-path direction (tier_1=1 → tier_2=5) supports label=1."
+  },
+  {
+    "sample_id": 25,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "AJO overview for marketers (text_1, tier_1=1) is a clear prerequisite before performing sandbox API administration tasks (text_2, tier_2=2)."
+  },
+  {
+    "sample_id": 26,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "AJO mobile capabilities overview (text_1, tier_1=1) precedes the specific multilingual messaging translation workflow (text_2, tier_2=5) in the learning path."
+  },
+  {
+    "sample_id": 27,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 (data ingestion verification) is a specific data management task and text_2 (AJO overview video) is general; wrong direction for causality."
+  },
+  {
+    "sample_id": 28,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 (content locking in templates) is a specific content feature and text_2 (AJO key capabilities) is general; causality runs in the opposite direction."
+  },
+  {
+    "sample_id": 29,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "AJO intro with journey triggers (text_1, tier_1=1) is foundational and must be understood before configuring multilingual messaging (text_2, tier_2=5)."
+  },
+  {
+    "sample_id": 30,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "AJO capabilities and personas (text_1, tier_1=1) provide the foundational understanding needed before creating expression fragments (text_2, tier_2=5)."
+  },
+  {
+    "sample_id": 31,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "AJO intro (text_1, tier_1=1) is a clear prerequisite before setting up subscription lists (text_2, tier_2=4 audience management)."
+  },
+  {
+    "sample_id": 32,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 (XDM schema creation) is a specific data modeling task and text_2 (AJO key capabilities) is general; causality runs in the opposite direction."
+  },
+  {
+    "sample_id": 33,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "AJO overview (text_1, tier_1=1) is foundational and naturally precedes landing page configuration tasks (text_2, tier_2=4)."
+  },
+  {
+    "sample_id": 34,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "AJO mobile capabilities (text_1, tier_1=1) precedes content template locking (text_2, tier_2=5) in the learning path; borderline semantically since content locking applies to all channels not just mobile, but the learning-path direction supports label=1."
+  },
+  {
+    "sample_id": 35,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "AJO key capabilities including Journey Canvas (text_1, tier_1=1) is foundational before tackling schema creation workflows (text_2, tier_2=3 data management)."
+  },
+  {
+    "sample_id": 36,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "AJO overview (text_1, tier_1=1) is a prerequisite for understanding how to create emails using GenStudio within AJO (text_2, tier_2=5)."
+  },
+  {
+    "sample_id": 37,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 (GenStudio brands/personas/products setup) is a specific content tool configuration and text_2 (AJO key capabilities) is general; wrong direction for causality."
+  },
+  {
+    "sample_id": 38,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 (sandbox access control/Permissions tab) is a specific admin task and text_2 (AJO intro) is general; causality runs in the opposite direction."
+  },
+  {
+    "sample_id": 39,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "AJO intro (text_1, tier_1=1) provides the required context before working with AEM Dynamic Media integration and real-time content personalization (text_2, tier_2=5)."
+  },
+  {
+    "sample_id": 40,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 (GenStudio brand guidelines with voice and image guidelines) is a specific content tool task and text_2 (AJO key capabilities) is general; wrong direction for causality."
+  },
+  {
+    "sample_id": 41,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 (source connector mapping with concatenation and scheduling) is a specific data ingestion task and text_2 (AJO intro) is general; causality runs in the opposite direction."
+  },
+  {
+    "sample_id": 42,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 (GenStudio brand-guided content generation) is a specific content tool workflow and text_2 (AJO key capabilities) is general; wrong direction for causality."
+  },
+  {
+    "sample_id": 43,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 (Audience Rule Builder with drag-drop canvas) is a specific audience management tool and text_2 (AJO intro) is general; causality runs in the opposite direction."
+  },
+  {
+    "sample_id": 44,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "AJO mobile capabilities (text_1, tier_1=1) provides the foundational context for why schemas need to be configured before the specific schema creation and access control steps (text_2, tier_2=3) needed to support mobile use cases."
+  },
+  {
+    "sample_id": 45,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "AJO intro (text_1, tier_1=1) is foundational and must be understood before performing dataset export scheduling tasks (text_2, tier_2=3)."
+  },
+  {
+    "sample_id": 46,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 (XDM Individual Profile and Experience Event schema creation) is a specific data modeling task and text_2 (AJO key capabilities) is general; causality runs in the opposite direction."
+  },
+  {
+    "sample_id": 47,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 (expression fragment usage with fragment ID and paste-and-edit) is a specific content feature and text_2 (AJO intro) is general; wrong direction for causality."
+  },
+  {
+    "sample_id": 48,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 (dataset creation confirmation) is a specific data management task (tier_1=3) while text_2 (AJO mobile capabilities, sub_2=2b) is a higher-level topic (tier_2=1); the tier_1 > tier_2 pattern confirms the wrong direction for causality."
+  },
+  {
+    "sample_id": 49,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "AJO intro covering business challenges and customer journeys (text_1, tier_1=1) is foundational and naturally precedes dataset export scheduling (text_2, tier_2=3)."
+  },
+  {
+    "sample_id": 50,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 (landing page content designer with components and asset library) is a specific audience/content task and text_2 (AJO intro) is general; causality runs in the opposite direction."
+  }
+]

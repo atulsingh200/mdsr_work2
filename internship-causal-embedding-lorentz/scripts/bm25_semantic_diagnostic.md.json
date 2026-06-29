@@ -1,0 +1,102 @@
+[
+  {
+    "dataset": "followupqg",
+    "n_test_pairs": 501,
+    "n_queries": 501,
+    "n_negatives_per_anchor": 4,
+    "encoder": "sentence-transformers/all-MiniLM-L6-v2",
+    "mean_sim_pos": 0.452926903963089,
+    "median_sim_pos": 0.46804189682006836,
+    "mean_sim_neg_all": 0.12668128311634064,
+    "mean_sim_neg_hardest": 0.272829532623291,
+    "gap_pos_minus_avg_neg": 0.32624562084674835,
+    "gap_pos_minus_hardest_neg": 0.18009737133979797,
+    "fraction_neg_beats_pos": 0.20159680638722555,
+    "samples": [
+      {
+        "anchor": "ELI5: How does the McGurk Effect happen? The Ben 10 toy that produces that sample (which correctly says \u201cBrainstorm\u201das that is the name of the toy character) has a fairly low sample rate and a hanging frequency in the background. Br and Gr sound similar enough to be confused if you have one in mind\u2026",
+        "gold_positive": "(I'm not english, I'm sorry for any mistake I make) So it's basically our brain choosing to interpret a frequency and the words when associated with the words on the screen? But, if I'm not looking at the screen to read or I'm thinking about something unrelated to the audio, I can still only hear G\u2026",
+        "sim_anchor_gold": 0.39960306882858276,
+        "negatives": [
+          {
+            "rank": 1,
+            "sim_anchor_neg": 0.011302702128887177,
+            "text": "Thank you for the detailed response. I have heard about a similar manual, systematic approach determining edibility in the past. Is there anything else to test on a molecular basis to determine if it will effect the various cells in the human body?"
+          },
+          {
+            "rank": 2,
+            "sim_anchor_neg": 0.17411111295223236,
+            "text": "> In those moments while it's in the air, does that 10 pound rock add weight to the box? During a ballistic arc neither the rock or a fly would be weighing the box down (although the mass would be included). The issue there though is that *part* of the box is falling. You can't gauge the force requ\u2026"
+          },
+          {
+            "rank": 3,
+            "sim_anchor_neg": 0.20320813357830048,
+            "text": "Thanks. I\u2019m listening to the audiobooks and totally missed it.I have watched the movies many times and am just on the second time through the books. Is it spoke of during the battle at Pelennor Fields? there is a lot going on there that is new and I must have glossed over it."
+          },
+          {
+            "rank": 4,
+            "sim_anchor_neg": 0.20698590576648712,
+            "text": "Gotcha, that makes a lot of sense! So it's a combination of inefficient sound capturing (would need a VERY sensitive diaphragm) and the general low dBs that could be captured.. Would there be some sort of way to boost the dB frequency just before it reaches the diaphragm yet contain it in a way tha\u2026"
+          }
+        ],
+        "gap": 0.19261716306209564
+      },
+      {
+        "anchor": "ELI5: How can a food high in fat have zero cholesterol? How can I high cholesterol food have low fat? Cholesterol is made in your body to repair damaged cells like blood vessels, so if you eat a lot of sugars, your cholesterol will be released into the blood to repair the damage caused by the sugar\u2026",
+        "gold_positive": "It looks like you're suggesting a vegetarian keto plan, right?",
+        "sim_anchor_gold": 0.1571068912744522,
+        "negatives": [
+          {
+            "rank": 1,
+            "sim_anchor_neg": 0.26578250527381897,
+            "text": ">Because all of the food now is riddled with terrible ingredients we have not evolved to eat naturally I'd love you to tell me which common foods we aren't able to eat naturally? Humans are built to eat almost everything"
+          },
+          {
+            "rank": 2,
+            "sim_anchor_neg": -0.008485279977321625,
+            "text": "Rescue breaths aren't as important if the heart is stopped, right? Like if the body isn't moving the blood around there's no reason to blow air into their lungs."
+          },
+          {
+            "rank": 3,
+            "sim_anchor_neg": 0.17086075246334076,
+            "text": "So the reason fruits taste good is because the tree/plant knows that animals will be more likely to eat it then? Wow that's so cool"
+          },
+          {
+            "rank": 4,
+            "sim_anchor_neg": 0.217817485332489,
+            "text": "What if we\u2019re fat and short? I\u2019m just the latter but wouldn\u2019t we be using more resources if we\u2019re fat?"
+          }
+        ],
+        "gap": -0.10867561399936676
+      },
+      {
+        "anchor": "ELI5: Why does in bass in speakers seem to limit at higher volumes? The speaker may have circuitry designed to limit bass at higher volume to prevent damage to itself. Bass frequencies require a lot of speaker movement to create. Small speakers aren't good and producing bass anyway.",
+        "gold_positive": "Thank you!! Completely different random question. But is there a reason why speakers that hold more bass, are quieter than say a speaker that pushes the mids and highs more?? Sorry for the random question, just really interested in learning in the physics of audio.",
+        "sim_anchor_gold": 0.7502835988998413,
+        "negatives": [
+          {
+            "rank": 1,
+            "sim_anchor_neg": 0.16303566098213196,
+            "text": "Thank you. What causes the air in the atmosphere to have higher pressure than the heavy air closer to the surface?"
+          },
+          {
+            "rank": 2,
+            "sim_anchor_neg": 0.062164306640625,
+            "text": "Ok, that's a pretty good analogy. So a follow-up of sorts: when someone is badly injured and is to be 'transferred' up the chain to a higher level hospital, is it usually due to experienced staff, equipment or something else?"
+          },
+          {
+            "rank": 3,
+            "sim_anchor_neg": 0.29090616106987,
+            "text": ">Your ears pick up more bass from your voice resonating in your head which is why it sounds different and often worse on recordings so is the voice you hear on recording more accurate to what other people hear? for instance people say i sound very much like my dad but my recorded voice sounds nothi\u2026"
+          },
+          {
+            "rank": 4,
+            "sim_anchor_neg": -0.06443631649017334,
+            "text": "are ya saying the intensity of energy? sunlight having low energy not allowing movement than are feelable/observable, while electricity at the end of a wire is high hence the movement is immense enough to be feelable and observable?"
+          }
+        ],
+        "gap": 0.4593774378299713
+      }
+    ]
+  }
+]

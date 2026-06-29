@@ -1,0 +1,51 @@
+2026-06-29 12:38:11 === PHASE 0: Pre-downloading 6 backbones (serial) ===
+2026-06-29 12:38:11   fetch microsoft/deberta-v3-large
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/390 [00:00<?, ?it/s]Loading weights: 100%|██████████| 390/390 [00:00<00:00, 35349.84it/s]
+[transformers] [1mDebertaV2Model LOAD REPORT[0m from: microsoft/deberta-v3-large
+Key                                     | Status     |  | 
+----------------------------------------+------------+--+-
+lm_predictions.lm_head.dense.weight     | UNEXPECTED |  | 
+mask_predictions.classifier.bias        | UNEXPECTED |  | 
+mask_predictions.dense.bias             | UNEXPECTED |  | 
+lm_predictions.lm_head.dense.bias       | UNEXPECTED |  | 
+lm_predictions.lm_head.LayerNorm.weight | UNEXPECTED |  | 
+lm_predictions.lm_head.bias             | UNEXPECTED |  | 
+mask_predictions.LayerNorm.bias         | UNEXPECTED |  | 
+mask_predictions.LayerNorm.weight       | UNEXPECTED |  | 
+lm_predictions.lm_head.LayerNorm.bias   | UNEXPECTED |  | 
+mask_predictions.dense.weight           | UNEXPECTED |  | 
+mask_predictions.classifier.weight      | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+cached microsoft/deberta-v3-large
+2026-06-29 12:38:20   fetch sentence-transformers/all-mpnet-base-v2
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 8108.20it/s]
+cached sentence-transformers/all-mpnet-base-v2
+2026-06-29 12:38:26   fetch sentence-transformers/all-MiniLM-L6-v2
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 10580.26it/s]
+cached sentence-transformers/all-MiniLM-L6-v2
+2026-06-29 12:38:33   fetch intfloat/e5-large-v2
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 7070.10it/s]
+cached intfloat/e5-large-v2
+2026-06-29 12:38:39   fetch BAAI/bge-base-en-v1.5
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 7387.48it/s]
+cached BAAI/bge-base-en-v1.5
+2026-06-29 12:38:46   fetch BAAI/bge-large-en-v1.5
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 6776.08it/s]
+cached BAAI/bge-large-en-v1.5
+2026-06-29 12:38:52 === PHASE 0 complete ===
+2026-06-29 12:38:52 === PHASE 1: Training (7 datasets × 6 models = 42 runs) ===
+2026-06-29 12:38:52 START GPU0: aep_causal_cls34/deberta-v3-large  batch=8
+2026-06-29 12:38:52 START GPU1: aep_causal_cls34/all-mpnet-base-v2  batch=64
+2026-06-29 12:38:52 START GPU2: aep_causal_cls34/all-MiniLM-L6-v2  batch=64
+2026-06-29 12:38:52 START GPU3: aep_causal_cls34/e5-large-v2  batch=16
+2026-06-29 12:48:22 START GPU2: aep_causal_cls34/bge-base-en-v1.5  batch=64
+2026-06-29 13:14:52 START GPU2: aep_causal_cls34/bge-large-en-v1.5  batch=16
+2026-06-29 13:18:22 START GPU1: aep_dataset/deberta-v3-large  batch=8

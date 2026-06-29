@@ -1,0 +1,45 @@
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environments
+gritlm_test_env/
+venv/
+env/
+.venv/
+
+# Model weights and checkpoints (all >100MB — GitHub hard limit is 100MB)
+*.pt
+*.safetensors
+*.bin
+*.ckpt
+
+# NumPy embedding caches (large binary arrays)
+*.npy
+
+# Large training/eval data files confirmed >100MB
+directional_train.jsonl
+directional_train_all_label1.jsonl
+train_with_explanations.jsonl
+anchor_positive_pairs.json
+anchor_positive_pairs.jsonl
+raw_workflows.json
+train_pairs.jsonl
+dev_pairs.jsonl
+test_pairs.jsonl
+
+# Archive files
+*.zip
+*.tar.gz
+*.tar
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Cache and build dirs
+.cache/
+.buildkit/
+
+# macOS
+.DS_Store

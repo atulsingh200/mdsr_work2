@@ -1,0 +1,62 @@
+[
+  {
+    "sample_id": 1,
+    "assigned_label": 1,
+    "label_correct": false,
+    "reasoning": "Decisioning-based SMS campaigns and journey event configuration are parallel, independent capabilities with no pedagogical dependency in either direction, despite tier_1=8 < tier_2=11."
+  },
+  {
+    "sample_id": 2,
+    "assigned_label": 1,
+    "label_correct": false,
+    "reasoning": "While sandboxes (tier 2) are generally foundational, text_2 is a content-empty outro/closing slide that carries no informational payload, making any prerequisite claim vacuous."
+  },
+  {
+    "sample_id": 3,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "AJO capabilities overview (tier 1) is a genuine learning prerequisite for hands-on multi-action campaign authoring (tier 6), with both tier ordering and semantic dependency aligned."
+  },
+  {
+    "sample_id": 4,
+    "assigned_label": 1,
+    "label_correct": false,
+    "reasoning": "Journey frequency capping and data source configuration are independent features with no directional dependency; the close tier proximity (10 vs 11) does not compensate for the absence of any semantic prerequisite relationship."
+  },
+  {
+    "sample_id": 5,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "A subscription/unsubscription journey use case (tier 4) is a concrete application that naturally precedes understanding the general journey lifecycle and publishing mechanics (tier 7), with tier ordering and content dependency both supporting label=1."
+  },
+  {
+    "sample_id": 6,
+    "assigned_label": 1,
+    "label_correct": false,
+    "reasoning": "Dataset export scheduling is not a direct prerequisite for defining RTCDP audiences — audience building does not depend on having exports configured first, making the causal direction semantically weak despite the correct tier ordering."
+  },
+  {
+    "sample_id": 7,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "Dataset export to cloud destinations (tier 3) is a direct prerequisite for applying data governance policies at the destination level (tier 12), as the DUEL framework and enforcement are specifically concerned with controlling data sent to external destinations."
+  },
+  {
+    "sample_id": 8,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "Ingesting data via a source connector (tier 3) is a genuine prerequisite for building profile-attribute-based audience rules (tier 4), since the profile attributes referenced in rule conditions must first exist in the platform."
+  },
+  {
+    "sample_id": 9,
+    "assigned_label": 1,
+    "label_correct": false,
+    "reasoning": "Supplemental identifiers (advanced journey feature, tier 9) are not a prerequisite for the RTCDP product-view abandoned-cart use case (tier 15), which is a separate platform integration pattern with only an indirect and non-required conceptual overlap."
+  },
+  {
+    "sample_id": 10,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "Sandbox management (tier 2) is foundational AJO/AEP infrastructure knowledge required before working with any feature including Decisioning (tier 8), and understanding sandbox reset/isolation is a genuine operational prerequisite for setting up decisioning catalogs."
+  }
+]

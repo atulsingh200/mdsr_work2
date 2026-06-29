@@ -1,0 +1,10 @@
+{
+  "dataset": "qrecc",
+  "n_pairs": 15000,
+  "k_hard_negatives": 4,
+  "encoding_seconds": 1.152890920639038,
+  "knn_seconds": 0.0201570987701416,
+  "miner": "sentence-transformers/all-MiniLM-L6-v2",
+  "hard_negatives_path": "/mnt/localssd/base_line/internship-causal-embedding/finetune_eval/results/qrecc/hard_negatives.npy",
+  "train_pairs_path": "/mnt/localssd/base_line/internship-causal-embedding/finetune_eval/results/qrecc/train_pairs.jsonl"
+}

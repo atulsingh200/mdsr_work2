@@ -1,0 +1,851 @@
+{
+  "meta": {
+    "title": "Adobe Journey Optimizer – Orchestrated Campaign Workflow Samples",
+    "description": "30 three-step workflow samples based on AJO orchestrated campaign activities: Targeting (Build Audience, Enrichment, Combine, Deduplication, Split), Channel (Email, SMS, Push, Direct Mail), and Flow Control (Wait, Fork, And-join).",
+    "total_workflows": 30,
+    "steps_per_workflow": 3,
+    "activity_categories": ["Targeting", "Channel", "Flow Control"]
+  },
+  "workflows": [
+    {
+      "id": 1,
+      "name": "Abandoned Cart Email",
+      "use_case": "Re-engage shoppers who left items in their cart",
+      "steps": [
+        {
+          "step": 1,
+          "activity_type": "Targeting",
+          "activity": "Build Audience",
+          "label": "Identify Cart Abandoners",
+          "description": "Select all profiles who added items to their cart but did not complete a purchase in the last 24 hours. Use the rule builder to filter by cart status equals 'active' and no order event."
+        },
+        {
+          "step": 2,
+          "activity_type": "Targeting",
+          "activity": "Enrichment",
+          "label": "Add Cart Product Details",
+          "description": "Enrich each profile with the product names, images, and prices from their abandoned cart. This data will be used to personalize the email content."
+        },
+        {
+          "step": 3,
+          "activity_type": "Channel",
+          "activity": "Email",
+          "label": "Send Cart Recovery Email",
+          "description": "Send a personalized email reminding the customer of their left-behind items and offering a 10% discount to complete the purchase. Use the enriched cart data to populate the product block in the email template."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Welcome New Subscriber",
+      "use_case": "Greet newly opted-in email subscribers",
+      "steps": [
+        {
+          "step": 1,
+          "activity_type": "Targeting",
+          "activity": "Build Audience",
+          "label": "Find New Opt-ins",
+          "description": "Target all profiles who subscribed to email marketing within the last 7 days. Filter by the consent flag set to 'opted-in' and subscription date falls within the current week."
+        },
+        {
+          "step": 2,
+          "activity_type": "Flow Control",
+          "activity": "Wait",
+          "label": "Wait 1 Day",
+          "description": "Pause the campaign execution for 24 hours after the audience is built. This ensures the welcome email arrives the day after subscription rather than immediately."
+        },
+        {
+          "step": 3,
+          "activity_type": "Channel",
+          "activity": "Email",
+          "label": "Send Welcome Email",
+          "description": "Deliver a branded welcome email introducing the customer to the brand, its top products, and their subscriber-only benefits. Include a first-purchase discount code to encourage early conversion."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Back-in-Stock SMS Alert",
+      "use_case": "Notify customers when a wishlisted product is available again",
+      "steps": [
+        {
+          "step": 1,
+          "activity_type": "Targeting",
+          "activity": "Build Audience",
+          "label": "Find Wishlist Customers",
+          "description": "Select all profiles who added a specific out-of-stock product to their wishlist. Filter by wishlist product SKU matching the restocked item."
+        },
+        {
+          "step": 2,
+          "activity_type": "Targeting",
+          "activity": "Deduplication",
+          "label": "Remove Duplicate Profiles",
+          "description": "Remove any duplicate profile entries that may have been created by multiple wishlist additions of the same product. Keep only one record per email address to avoid sending multiple messages to the same customer."
+        },
+        {
+          "step": 3,
+          "activity_type": "Channel",
+          "activity": "SMS",
+          "label": "Send Back-in-Stock SMS",
+          "description": "Send a short SMS notification informing customers that the item they wishlisted is now back in stock. Include a direct product URL so they can purchase immediately."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Loyalty Points Expiry Reminder",
+      "use_case": "Remind members before their loyalty points expire",
+      "steps": [
+        {
+          "step": 1,
+          "activity_type": "Targeting",
+          "activity": "Build Audience",
+          "label": "Find Expiring Points Members",
+          "description": "Target all loyalty members whose points are set to expire within the next 30 days. Use a rule filtering on the loyalty expiry date field in the member profile."
+        },
+        {
+          "step": 2,
+          "activity_type": "Targeting",
+          "activity": "Enrichment",
+          "label": "Attach Points Balance Data",
+          "description": "Enrich each profile with their current points balance and expiry date from the loyalty worktable. This data will be injected directly into the push notification content."
+        },
+        {
+          "step": 3,
+          "activity_type": "Channel",
+          "activity": "Push Notification",
+          "label": "Send Points Expiry Push",
+          "description": "Push a personalized mobile notification showing the exact number of points expiring and the deadline. Link the notification to the rewards redemption page inside the app."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Churn Prevention Email",
+      "use_case": "Re-engage customers showing signs of disengagement",
+      "steps": [
+        {
+          "step": 1,
+          "activity_type": "Targeting",
+          "activity": "Build Audience",
+          "label": "Identify At-Risk Customers",
+          "description": "Build an audience of customers who have not made a purchase or opened a marketing email in the last 90 days. Combine these inactivity signals to flag the highest-risk profiles."
+        },
+        {
+          "step": 2,
+          "activity_type": "Targeting",
+          "activity": "Enrichment",
+          "label": "Add Last Purchase Data",
+          "description": "Enrich each profile with their last purchased product category and the number of days since that purchase. Use this data to tailor the re-engagement message to their past interests."
+        },
+        {
+          "step": 3,
+          "activity_type": "Channel",
+          "activity": "Email",
+          "label": "Send Win-Back Offer Email",
+          "description": "Send a personalized win-back email featuring products from the customer's previously purchased categories along with a limited-time discount. Clearly communicate the offer expiry date to create urgency."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Birthday Offer Campaign",
+      "use_case": "Celebrate customers with a birthday month exclusive offer",
+      "steps": [
+        {
+          "step": 1,
+          "activity_type": "Targeting",
+          "activity": "Build Audience",
+          "label": "Select Birthday Month Customers",
+          "description": "Target all customers whose birth month matches the current calendar month. Filter the audience using the date-of-birth field extracted from the profile schema."
+        },
+        {
+          "step": 2,
+          "activity_type": "Targeting",
+          "activity": "Enrichment",
+          "label": "Attach Purchase History",
+          "description": "Enrich the audience with each customer's top product category from their last three purchases. This helps personalize the birthday offer toward products they are most likely to buy."
+        },
+        {
+          "step": 3,
+          "activity_type": "Channel",
+          "activity": "Email",
+          "label": "Send Birthday Offer Email",
+          "description": "Deliver a personalized birthday email with a special discount code valid for the entire birthday month. Customize the product recommendations block with items from the customer's preferred category."
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Re-engagement Push Blast",
+      "use_case": "Re-activate dormant mobile app users",
+      "steps": [
+        {
+          "step": 1,
+          "activity_type": "Targeting",
+          "activity": "Build Audience",
+          "label": "Find Inactive App Users",
+          "description": "Build an audience of profiles who have the mobile app installed but have not opened it in the last 60 days. Use the last app open event timestamp to filter the population."
+        },
+        {
+          "step": 2,
+          "activity_type": "Targeting",
+          "activity": "Deduplication",
+          "label": "Deduplicate on Device Token",
+          "description": "Remove profiles with duplicate push tokens to ensure each device receives only one notification. Keep the most recently active token per profile."
+        },
+        {
+          "step": 3,
+          "activity_type": "Channel",
+          "activity": "Push Notification",
+          "label": "Send Re-engagement Push",
+          "description": "Send a compelling push notification highlighting what is new in the app since their last visit. Include a deep link to the app's home screen to make re-entry frictionless."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "VIP Tier Upgrade Notification",
+      "use_case": "Inform customers they have reached a new loyalty tier",
+      "steps": [
+        {
+          "step": 1,
+          "activity_type": "Targeting",
+          "activity": "Build Audience",
+          "label": "Identify Newly Upgraded Members",
+          "description": "Select all loyalty members whose tier status changed from 'Silver' to 'Gold' or higher in the past week. Filter on the tier_change_date field to catch only recent upgrades."
+        },
+        {
+          "step": 2,
+          "activity_type": "Targeting",
+          "activity": "Enrichment",
+          "label": "Add New Tier Benefits",
+          "description": "Enrich the profile data with the specific perks and benefits available at the member's new tier level. This content will be dynamically inserted into the email body."
+        },
+        {
+          "step": 3,
+          "activity_type": "Channel",
+          "activity": "Email",
+          "label": "Send Tier Upgrade Email",
+          "description": "Deliver a congratulations email showcasing the new tier badge and listing all unlocked benefits. Include a call-to-action directing members to explore their new perks in the loyalty portal."
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Post-Purchase Follow-up",
+      "use_case": "Check in with customers a few days after their order",
+      "steps": [
+        {
+          "step": 1,
+          "activity_type": "Targeting",
+          "activity": "Build Audience",
+          "label": "Select Recent Purchasers",
+          "description": "Build an audience of customers who completed a purchase in the last 3 days. Filter by the order_status field equal to 'confirmed' and purchase date within the 72-hour window."
+        },
+        {
+          "step": 2,
+          "activity_type": "Flow Control",
+          "activity": "Wait",
+          "label": "Wait 3 Days Post-Purchase",
+          "description": "Pause execution for 3 days to allow enough time for the customer to receive and experience their order. This timing ensures the follow-up feels helpful rather than intrusive."
+        },
+        {
+          "step": 3,
+          "activity_type": "Channel",
+          "activity": "Email",
+          "label": "Send Follow-up Email",
+          "description": "Send a friendly follow-up email asking if the customer is happy with their order and inviting them to leave a product review. Include direct links to the relevant product review pages."
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Flash Sale SMS Alert",
+      "use_case": "Instantly notify opted-in customers of a time-limited sale",
+      "steps": [
+        {
+          "step": 1,
+          "activity_type": "Targeting",
+          "activity": "Build Audience",
+          "label": "Select SMS-Opted-In Customers",
+          "description": "Target all profiles who have given SMS marketing consent and have been active customers in the past 6 months. Filter by SMS opt-in flag equals 'true' and last_purchase_date within 180 days."
+        },
+        {
+          "step": 2,
+          "activity_type": "Targeting",
+          "activity": "Deduplication",
+          "label": "Remove Duplicate Phone Numbers",
+          "description": "Deduplicate the audience on the mobile phone number field to prevent the same number from receiving the flash sale SMS twice. Keep only the most complete profile record per number."
+        },
+        {
+          "step": 3,
+          "activity_type": "Channel",
+          "activity": "SMS",
+          "label": "Send Flash Sale SMS",
+          "description": "Deliver a short, urgent SMS announcing the flash sale with the discount percentage and a direct link to the sale page. Keep the message under 160 characters to ensure single-message delivery."
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Subscription Renewal Reminder",
+      "use_case": "Prompt subscribers to renew before their plan expires",
+      "steps": [
+        {
+          "step": 1,
+          "activity_type": "Targeting",
+          "activity": "Build Audience",
+          "label": "Find Expiring Subscriptions",
+          "description": "Select all customers whose subscription is set to expire within the next 14 days. Use the subscription_end_date field in the profile to filter this segment."
+        },
+        {
+          "step": 2,
+          "activity_type": "Targeting",
+          "activity": "Enrichment",
+          "label": "Add Renewal Plan Options",
+          "description": "Enrich each profile with their current plan name, renewal price, and the next available plan upgrade option. This data will populate the personalized renewal offer block in the email."
+        },
+        {
+          "step": 3,
+          "activity_type": "Channel",
+          "activity": "Email",
+          "label": "Send Renewal Reminder Email",
+          "description": "Send a personalized renewal email showing the subscription end date, current plan details, and a one-click renewal button. Optionally highlight an upgrade offer for customers who qualify."
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Product Launch Announcement",
+      "use_case": "Announce a new product to the most relevant audience",
+      "steps": [
+        {
+          "step": 1,
+          "activity_type": "Targeting",
+          "activity": "Build Audience",
+          "label": "Select Interested Customers",
+          "description": "Build an audience of customers who have previously purchased from or browsed the product category related to the new launch. Use past purchase and web browse event data to identify the right segment."
+        },
+        {
+          "step": 2,
+          "activity_type": "Targeting",
+          "activity": "Enrichment",
+          "label": "Add New Product Details",
+          "description": "Enrich each profile with the product name, key features, launch price, and availability date. These attributes will be used to create a dynamic and personalized announcement email."
+        },
+        {
+          "step": 3,
+          "activity_type": "Channel",
+          "activity": "Email",
+          "label": "Send Product Launch Email",
+          "description": "Deliver a visually rich announcement email showcasing the new product with its key benefits and a pre-order or shop-now CTA. Ensure subject line references the customer's known product interest."
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Lapsed Customer Direct Mail",
+      "use_case": "Reach dormant customers through physical mail",
+      "steps": [
+        {
+          "step": 1,
+          "activity_type": "Targeting",
+          "activity": "Build Audience",
+          "label": "Identify Lapsed Customers",
+          "description": "Target customers who have not purchased in over 12 months and have a valid mailing address in their profile. Filter by last_purchase_date older than 365 days and postal_address field is not null."
+        },
+        {
+          "step": 2,
+          "activity_type": "Targeting",
+          "activity": "Combine",
+          "label": "Exclude Email Unsubscribers",
+          "description": "Exclude any profiles who have unsubscribed from all marketing communications using an exclusion rule in the Combine activity. This ensures only reachable customers receive the mailing."
+        },
+        {
+          "step": 3,
+          "activity_type": "Channel",
+          "activity": "Direct Mail",
+          "label": "Send Re-engagement Mailer",
+          "description": "Generate and dispatch a personalized direct mail piece featuring a high-value comeback offer and a QR code linking to a custom landing page. The mailer file is exported to the configured direct mail provider."
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Order Confirmation Push",
+      "use_case": "Confirm order details immediately after purchase via push",
+      "steps": [
+        {
+          "step": 1,
+          "activity_type": "Targeting",
+          "activity": "Build Audience",
+          "label": "Capture New Orders",
+          "description": "Build an audience of profiles who placed an order in the last hour. Filter by order_created_timestamp within the campaign's last execution window to pick up the freshest orders."
+        },
+        {
+          "step": 2,
+          "activity_type": "Targeting",
+          "activity": "Enrichment",
+          "label": "Attach Order Summary",
+          "description": "Enrich each profile with their order ID, item count, total price, and estimated delivery date. These values will be dynamically inserted into the push notification message body."
+        },
+        {
+          "step": 3,
+          "activity_type": "Channel",
+          "activity": "Push Notification",
+          "label": "Send Order Confirmation Push",
+          "description": "Send a push notification confirming that the order has been received and is being processed. Include the order ID and a deep link to the order tracking screen in the app."
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Survey Invitation After Delivery",
+      "use_case": "Invite customers to give feedback after receiving their order",
+      "steps": [
+        {
+          "step": 1,
+          "activity_type": "Targeting",
+          "activity": "Build Audience",
+          "label": "Select Delivered Orders",
+          "description": "Target customers whose delivery status changed to 'delivered' within the last 48 hours. Use the shipment status field in the order dataset to filter the segment."
+        },
+        {
+          "step": 2,
+          "activity_type": "Flow Control",
+          "activity": "Wait",
+          "label": "Wait 2 Days After Delivery",
+          "description": "Pause for 2 days to give the customer time to actually use or try the product before being asked for feedback. Sending the survey too soon could result in poor-quality responses."
+        },
+        {
+          "step": 3,
+          "activity_type": "Channel",
+          "activity": "Email",
+          "label": "Send Survey Email",
+          "description": "Send a friendly email asking the customer to rate their purchase and delivery experience. Embed a one-click star-rating link so customers can respond without leaving their inbox."
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Reorder Reminder for Consumables",
+      "use_case": "Remind customers to reorder frequently used products",
+      "steps": [
+        {
+          "step": 1,
+          "activity_type": "Targeting",
+          "activity": "Build Audience",
+          "label": "Find Consumable Product Buyers",
+          "description": "Select profiles who purchased a consumable product category (such as supplements, skincare, or cleaning supplies) between 25 and 35 days ago. This window aligns with the average product usage lifecycle."
+        },
+        {
+          "step": 2,
+          "activity_type": "Targeting",
+          "activity": "Enrichment",
+          "label": "Attach Product Reorder Data",
+          "description": "Enrich each profile with the exact product name, SKU, and price of the item they previously purchased. This data is used to auto-populate the reorder call-to-action in the message."
+        },
+        {
+          "step": 3,
+          "activity_type": "Channel",
+          "activity": "Email",
+          "label": "Send Reorder Reminder Email",
+          "description": "Send a timely email reminding the customer that their supply is likely running low and making it easy to reorder with one click. Consider including a small repeat-purchase discount to incentivize the action."
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Event Invitation Campaign",
+      "use_case": "Invite qualified customers to an upcoming brand event",
+      "steps": [
+        {
+          "step": 1,
+          "activity_type": "Targeting",
+          "activity": "Build Audience",
+          "label": "Select High-Value Customers",
+          "description": "Build an audience of customers who have made three or more purchases in the past year and are located within 50 km of the event venue. Use the lifetime purchase count and geo-location profile fields for filtering."
+        },
+        {
+          "step": 2,
+          "activity_type": "Targeting",
+          "activity": "Enrichment",
+          "label": "Add Event Details",
+          "description": "Enrich the audience with the event name, date, location address, and a unique RSVP code per profile. These fields will be rendered dynamically inside the email invitation template."
+        },
+        {
+          "step": 3,
+          "activity_type": "Channel",
+          "activity": "Email",
+          "label": "Send Event Invitation Email",
+          "description": "Deliver a personalized event invitation email with the event details, the customer's unique RSVP code, and a link to the registration page. Include a calendar attachment so they can save the date."
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Price Drop Alert Push",
+      "use_case": "Notify customers when a product they viewed goes on sale",
+      "steps": [
+        {
+          "step": 1,
+          "activity_type": "Targeting",
+          "activity": "Build Audience",
+          "label": "Find Recent Product Viewers",
+          "description": "Select profiles who viewed a specific product detail page in the last 30 days but did not purchase. Filter by the product_view event and exclude any subsequent purchase event for the same SKU."
+        },
+        {
+          "step": 2,
+          "activity_type": "Targeting",
+          "activity": "Deduplication",
+          "label": "Remove Duplicate Viewers",
+          "description": "Deduplicate the audience so that customers who viewed the same product multiple times appear only once. This prevents sending several price-drop alerts to the same person."
+        },
+        {
+          "step": 3,
+          "activity_type": "Channel",
+          "activity": "Push Notification",
+          "label": "Send Price Drop Push",
+          "description": "Push a notification informing the customer that a product they previously viewed has dropped in price. Include the original price, the new price, and a deep link directly to the product page."
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Referral Program Invite",
+      "use_case": "Encourage loyal customers to refer friends and earn rewards",
+      "steps": [
+        {
+          "step": 1,
+          "activity_type": "Targeting",
+          "activity": "Build Audience",
+          "label": "Identify Loyal Customers",
+          "description": "Target customers who have made at least five purchases and hold an active loyalty membership. Use the purchase_count attribute and loyalty_status field to define this high-affinity group."
+        },
+        {
+          "step": 2,
+          "activity_type": "Targeting",
+          "activity": "Enrichment",
+          "label": "Generate Referral Codes",
+          "description": "Enrich each profile with a unique referral code pulled from the referral programme dataset. This code will be embedded in the email for the customer to share with friends."
+        },
+        {
+          "step": 3,
+          "activity_type": "Channel",
+          "activity": "Email",
+          "label": "Send Referral Invite Email",
+          "description": "Send an email explaining the referral programme: the customer earns store credit for every friend who makes their first purchase using their personal code. Make the unique referral code prominent and easy to copy or share."
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "New Account Onboarding",
+      "use_case": "Guide newly registered users through their first steps",
+      "steps": [
+        {
+          "step": 1,
+          "activity_type": "Targeting",
+          "activity": "Build Audience",
+          "label": "Select New Account Registrations",
+          "description": "Target profiles whose account was created within the last 24 hours. Filter by the account_created_date field to capture only the most recent registrations in each campaign run."
+        },
+        {
+          "step": 2,
+          "activity_type": "Flow Control",
+          "activity": "Wait",
+          "label": "Wait 1 Hour",
+          "description": "Pause execution for 1 hour to allow the account setup process to complete on the platform before sending any communication. This prevents onboarding messages from arriving before the account is fully active."
+        },
+        {
+          "step": 3,
+          "activity_type": "Channel",
+          "activity": "Email",
+          "label": "Send Onboarding Welcome Email",
+          "description": "Deliver a step-by-step onboarding email outlining how to complete their profile, explore key features, and place their first order. Include links to getting-started guides and the customer support page."
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Membership Anniversary Reward",
+      "use_case": "Celebrate customers on their brand membership anniversary",
+      "steps": [
+        {
+          "step": 1,
+          "activity_type": "Targeting",
+          "activity": "Build Audience",
+          "label": "Select Anniversary Members",
+          "description": "Build an audience of customers whose account creation anniversary falls within the current week. Use the account_created_date field and filter for profiles whose anniversary date matches the current calendar week."
+        },
+        {
+          "step": 2,
+          "activity_type": "Targeting",
+          "activity": "Enrichment",
+          "label": "Attach Milestone and Reward Data",
+          "description": "Enrich each profile with the number of years they have been a member and the anniversary reward offer amount. These values will be used to personalise the subject line and email body."
+        },
+        {
+          "step": 3,
+          "activity_type": "Channel",
+          "activity": "Email",
+          "label": "Send Anniversary Reward Email",
+          "description": "Send a warm anniversary email celebrating how long the customer has been a member and presenting their exclusive reward. Include a prominently displayed discount code or bonus points valid for 30 days."
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Cross-sell Recommendation Email",
+      "use_case": "Suggest complementary products to single-category buyers",
+      "steps": [
+        {
+          "step": 1,
+          "activity_type": "Targeting",
+          "activity": "Build Audience",
+          "label": "Target Single-Category Buyers",
+          "description": "Identify customers who have only ever purchased from one product category across all their orders. Filter using the distinct_category_count attribute to find profiles with a value of exactly one."
+        },
+        {
+          "step": 2,
+          "activity_type": "Targeting",
+          "activity": "Enrichment",
+          "label": "Add Recommended Products",
+          "description": "Enrich the audience with up to three recommended products from categories commonly purchased alongside their known category, sourced from the product affinity dataset. These recommendations will populate the email's dynamic product carousel."
+        },
+        {
+          "step": 3,
+          "activity_type": "Channel",
+          "activity": "Email",
+          "label": "Send Cross-sell Email",
+          "description": "Send a personalised email showcasing the three recommended products with their names, images, and prices. Frame the message as 'Customers like you also love…' to make the recommendations feel relevant."
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "App Uninstall Recovery Push",
+      "use_case": "Attempt to re-engage users who recently uninstalled the app",
+      "steps": [
+        {
+          "step": 1,
+          "activity_type": "Targeting",
+          "activity": "Build Audience",
+          "label": "Detect App Uninstalls",
+          "description": "Target profiles for whom the push token became invalid in the last 7 days, indicating a likely app uninstall. Use the token_invalid_date field to capture profiles within this recent window."
+        },
+        {
+          "step": 2,
+          "activity_type": "Targeting",
+          "activity": "Combine",
+          "label": "Keep Email-Reachable Profiles Only",
+          "description": "Use an intersection rule in the Combine activity to keep only profiles who also have a valid email address and are opted in to email marketing. This ensures a fallback channel is available since push is unavailable."
+        },
+        {
+          "step": 3,
+          "activity_type": "Channel",
+          "activity": "Email",
+          "label": "Send App Re-install Email",
+          "description": "Send an email to former app users highlighting new features or improvements added since they last used the app. Include a prominent download button linking to the app store listing."
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "name": "High-Value Order Thank You",
+      "use_case": "Personally thank customers after a large purchase",
+      "steps": [
+        {
+          "step": 1,
+          "activity_type": "Targeting",
+          "activity": "Build Audience",
+          "label": "Find High-Value Orders",
+          "description": "Select all customers who placed an order above $500 in the last 48 hours. Filter by the order_total field greater than 500 and order_created_date within the last two days."
+        },
+        {
+          "step": 2,
+          "activity_type": "Targeting",
+          "activity": "Enrichment",
+          "label": "Add Order and Support Details",
+          "description": "Enrich each profile with their order ID, a direct link to order tracking, and the name of their dedicated customer support contact if applicable. This makes the email feel premium and personal."
+        },
+        {
+          "step": 3,
+          "activity_type": "Channel",
+          "activity": "Email",
+          "label": "Send VIP Thank You Email",
+          "description": "Deliver a premium-feeling thank you email acknowledging the order value and expressing genuine appreciation. Include the order tracking link and a dedicated support contact to reinforce the high-end experience."
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Seasonal Sale Email Blast",
+      "use_case": "Promote a seasonal sale to the active customer base",
+      "steps": [
+        {
+          "step": 1,
+          "activity_type": "Targeting",
+          "activity": "Build Audience",
+          "label": "Build Active Customer Segment",
+          "description": "Target all customers who have purchased at least once in the past year and are opted in to marketing emails. This ensures the seasonal promotion reaches only engaged, reachable profiles."
+        },
+        {
+          "step": 2,
+          "activity_type": "Targeting",
+          "activity": "Combine",
+          "label": "Exclude Recent Purchasers",
+          "description": "Use the exclusion option in the Combine activity to remove customers who already made a purchase in the last 7 days. This avoids over-messaging recently active buyers who may already be satisfied."
+        },
+        {
+          "step": 3,
+          "activity_type": "Channel",
+          "activity": "Email",
+          "label": "Send Seasonal Sale Email",
+          "description": "Send a visually impactful seasonal sale email with a bold banner, the discount code, and a curated selection of on-sale products. Include a countdown timer to reinforce urgency."
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "name": "Inactive Loyalty Member Nudge",
+      "use_case": "Remind loyalty members who have not redeemed points in a long time",
+      "steps": [
+        {
+          "step": 1,
+          "activity_type": "Targeting",
+          "activity": "Build Audience",
+          "label": "Find Inactive Redeemers",
+          "description": "Target loyalty members who have accumulated points but have not redeemed any in the last 180 days. Filter using the last_redemption_date field and total_points_balance greater than zero."
+        },
+        {
+          "step": 2,
+          "activity_type": "Targeting",
+          "activity": "Split",
+          "label": "Split by Points Balance Tier",
+          "description": "Split the audience into two subsets: members with fewer than 500 points and members with 500 or more points. Each subset will receive a message tailored to their points balance level."
+        },
+        {
+          "step": 3,
+          "activity_type": "Channel",
+          "activity": "Email",
+          "label": "Send Points Nudge Email",
+          "description": "Send a personalised email to each subset showing their current points balance and what rewards they can already unlock. Make redemption feel immediate by linking directly to the rewards catalogue."
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "name": "Shipping Delay Apology SMS",
+      "use_case": "Proactively notify customers of an order delay",
+      "steps": [
+        {
+          "step": 1,
+          "activity_type": "Targeting",
+          "activity": "Build Audience",
+          "label": "Identify Delayed Orders",
+          "description": "Select all profiles with an active order whose estimated delivery date has passed but whose shipment status is still 'in transit'. Use the delivery_due_date and shipment_status fields to identify these cases."
+        },
+        {
+          "step": 2,
+          "activity_type": "Targeting",
+          "activity": "Enrichment",
+          "label": "Add New Estimated Delivery Date",
+          "description": "Enrich each profile with the revised estimated delivery date sourced from the logistics dataset. This updated date will be included in the SMS message to set the right expectations."
+        },
+        {
+          "step": 3,
+          "activity_type": "Channel",
+          "activity": "SMS",
+          "label": "Send Delay Apology SMS",
+          "description": "Send a concise SMS apologising for the delay and providing the new estimated delivery date. Optionally include a discount code as a goodwill gesture for the inconvenience caused."
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "name": "Free Shipping Threshold Nudge",
+      "use_case": "Encourage customers who are close to qualifying for free shipping",
+      "steps": [
+        {
+          "step": 1,
+          "activity_type": "Targeting",
+          "activity": "Build Audience",
+          "label": "Find Near-Threshold Cart Owners",
+          "description": "Select profiles whose current cart total is between $30 and $49, just below the $50 free shipping threshold. Use the cart_total field to identify customers who are closest to qualifying."
+        },
+        {
+          "step": 2,
+          "activity_type": "Targeting",
+          "activity": "Enrichment",
+          "label": "Calculate Remaining Amount",
+          "description": "Enrich each profile with the precise dollar amount they need to add to their cart to reach free shipping. This personalised figure makes the email message concrete and actionable."
+        },
+        {
+          "step": 3,
+          "activity_type": "Channel",
+          "activity": "Email",
+          "label": "Send Free Shipping Nudge Email",
+          "description": "Send a personalised email telling the customer exactly how much more they need to spend to unlock free shipping, with product suggestions to bridge the gap. Link directly to their active cart or a curated product page."
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "name": "Account Verification Reminder",
+      "use_case": "Follow up with users who have not verified their email address",
+      "steps": [
+        {
+          "step": 1,
+          "activity_type": "Targeting",
+          "activity": "Build Audience",
+          "label": "Select Unverified Accounts",
+          "description": "Build an audience of profiles who registered their account more than 24 hours ago but whose email address is still unverified. Filter by email_verified equals 'false' and account_created_date older than 24 hours."
+        },
+        {
+          "step": 2,
+          "activity_type": "Targeting",
+          "activity": "Deduplication",
+          "label": "Deduplicate on Email Address",
+          "description": "Remove any duplicate profiles sharing the same email address to ensure only one verification reminder is sent per address. Keep the most recently created profile in case of duplicates."
+        },
+        {
+          "step": 3,
+          "activity_type": "Channel",
+          "activity": "Email",
+          "label": "Send Verification Reminder Email",
+          "description": "Send a clear reminder email prompting the user to click the verification link and activate their account. Explain that certain features are locked until their email address is confirmed."
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "name": "Holiday Gift Guide Campaign",
+      "use_case": "Share a curated holiday gift guide with the active subscriber base",
+      "steps": [
+        {
+          "step": 1,
+          "activity_type": "Targeting",
+          "activity": "Build Audience",
+          "label": "Select Opted-In Active Subscribers",
+          "description": "Target all customers who are opted into email marketing and have engaged with at least one email in the last 90 days. Use the last_email_open_date field to ensure the guide reaches an engaged audience."
+        },
+        {
+          "step": 2,
+          "activity_type": "Targeting",
+          "activity": "Enrichment",
+          "label": "Add Personalised Gift Suggestions",
+          "description": "Enrich each profile with three product gift suggestions based on their purchase history and browsing behaviour from the product recommendation engine. This data will populate a personalised gift section in the email."
+        },
+        {
+          "step": 3,
+          "activity_type": "Channel",
+          "activity": "Email",
+          "label": "Send Holiday Gift Guide Email",
+          "description": "Send a festive gift guide email with a curated selection of top products and a personalised gift picks section for each recipient. Include a limited-time free gift wrapping offer to drive conversions."
+        }
+      ]
+    }
+  ]
+}

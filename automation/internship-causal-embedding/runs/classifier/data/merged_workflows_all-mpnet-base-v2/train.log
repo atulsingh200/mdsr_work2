@@ -1,0 +1,6 @@
+04:05:43 INFO run_dir=runs/classifier/data/merged_workflows_all-mpnet-base-v2
+04:05:43 INFO device=cuda  bf16=True
+04:05:43 INFO tokenizer <- sentence-transformers/all-mpnet-base-v2
+04:05:44 INFO max_seq_len=524 exceeds model cap 512; clamping to 512
+04:05:44 INFO max_seq_len=512 (user-provided)
+04:05:44 INFO loading datasets

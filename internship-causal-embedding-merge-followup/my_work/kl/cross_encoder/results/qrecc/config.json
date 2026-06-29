@@ -1,0 +1,19 @@
+{
+  "dataset": "qrecc",
+  "backbone": "google-bert/bert-base-uncased",
+  "epochs": 10,
+  "batch_size": 128,
+  "val_batch_size": 256,
+  "lr": 2e-05,
+  "weight_decay": 0.01,
+  "warmup_ratio": 0.06,
+  "max_length": 256,
+  "grad_clip": 1.0,
+  "seed": 42,
+  "early_stop_threshold": 0.001,
+  "early_stop_patience": 2,
+  "out_dir": "/mnt/localssd/base_line/my_work/kl/cross_encoder/results/qrecc",
+  "log_every": 200,
+  "num_workers": 4,
+  "data_dir": "/mnt/localssd/base_line/my_work/kl/cross_encoder/data"
+}

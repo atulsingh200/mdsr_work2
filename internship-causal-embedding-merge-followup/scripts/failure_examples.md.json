@@ -1,0 +1,458 @@
+[
+  {
+    "dataset": "followupqg",
+    "mode": "bm25",
+    "anchor": "ELI5: Why do gas prices include the extra 9/10 cent on the end? That is an ancient consumer marketing technique. A very long time ago, people in marketing figured out that consumers perceive a price of, say, $1.99 to be significantly less than a price of $2.00. Of course, those prices are not actually very different, but people tend to round down \u2026",
+    "positive": "So what you\u2019re saying is that we\u2019re all being hornswoggled?",
+    "positive_sim": -0.02444671094417572,
+    "negatives": [
+      {
+        "rank": 1,
+        "sim": 0.5564181804656982,
+        "wins": true,
+        "is_max_winner": true,
+        "text": "If the prices aren\u2019t even that high than why is gas price higher? And surely there\u2019s the same demand right?"
+      },
+      {
+        "rank": 2,
+        "sim": 0.49072280526161194,
+        "wins": false,
+        "is_max_winner": false,
+        "text": "so why do gasoline prices wax and wane consistently via different presidential administrations with different agendas? why do gasoline prices vary so widely between nations and different states, regardless of their purported subsidization of \"big oil\" companies? are you intimating that the rapid increase of price per gallon \"at the pump\" in the u.\u2026"
+      },
+      {
+        "rank": 3,
+        "sim": 0.14345377683639526,
+        "wins": false,
+        "is_max_winner": false,
+        "text": "So, and affirming that you are no expert, you would assume that the only difference is the size of the L/P but even across species they are physically the same? (like if you were to compare my L/P to a mouse's L/P they would look exactly the same but be different size)"
+      },
+      {
+        "rank": 4,
+        "sim": 0.30944597721099854,
+        "wins": false,
+        "is_max_winner": false,
+        "text": "So basically, in my example, the guy who owns one share only has the benefit of being able to sell that share in the future for a (hopefully) greater price than he originally bought it for? How is that any different than buying an NFT?"
+      }
+    ],
+    "gap": 0.5808649063110352
+  },
+  {
+    "dataset": "followupqg",
+    "mode": "bm25",
+    "anchor": "ELI5: If an insect is inside of a container, but flying, is it adding weight to the container? The crux of the answer is, it depends if there's a lid on the container. If there's no lid then it's not adding weight, if there is a lid then it is.",
+    "positive": "I'm skeptical. What if the lid is there, but open just a crack? What if the lid is open halfway?",
+    "positive_sim": 0.21836672723293304,
+    "negatives": [
+      {
+        "rank": 1,
+        "sim": 0.30454280972480774,
+        "wins": false,
+        "is_max_winner": false,
+        "text": "I heard on a podcast that putting a lid on a pot helps it boil because it increases the pressure. I guess what it is saying is that it helps contain the water vapor and increase the vapor pressure. I suppose putting a lid on the pot wouldn\u2019t increase the ambient pressure because it isn\u2019t an airtight seal?"
+      },
+      {
+        "rank": 2,
+        "sim": 0.014122728258371353,
+        "wins": false,
+        "is_max_winner": false,
+        "text": "Rescue breaths aren't as important if the heart is stopped, right? Like if the body isn't moving the blood around there's no reason to blow air into their lungs."
+      },
+      {
+        "rank": 3,
+        "sim": 0.7389239072799683,
+        "wins": true,
+        "is_max_winner": true,
+        "text": "Will the added weight be as much as the weight of the insect itself?"
+      },
+      {
+        "rank": 4,
+        "sim": 0.2813158333301544,
+        "wins": false,
+        "is_max_winner": false,
+        "text": "Also if there is no wind, the air is moving at same speed (velocity??) also so there's no force moving you out of position."
+      }
+    ],
+    "gap": 0.520557165145874
+  },
+  {
+    "dataset": "followupqg",
+    "mode": "bm25",
+    "anchor": "ELI5: Why does taking a sip of coffee make someone who has adhd very sleepy instead of energized? Coffee doesn\u2019t energize you much, it just stops you from from feeling sleepy. However, it also seems to have some effects resembling those of ADHD medications. So, when you drink coffee it makes you feel normal in terms of sleepiness, and then also cu\u2026",
+    "positive": "Speed? Yes. Because they're both Stimulants",
+    "positive_sim": 0.16325342655181885,
+    "negatives": [
+      {
+        "rank": 1,
+        "sim": 0.6448085308074951,
+        "wins": true,
+        "is_max_winner": true,
+        "text": "I can't say whether they're similar or not but I can say for sure that every type of coffee makes me feel like that? Take out, homemade, from espresso to latte, so I bet I sometimes consume less caffeine than in an energy drink and still feel that way. That's why I was wondering if there's some other factor that differentiates coffee from energy d\u2026"
+      },
+      {
+        "rank": 2,
+        "sim": -0.0008840188384056091,
+        "wins": false,
+        "is_max_winner": false,
+        "text": "Is that why when you touch something you feel the sensation instantly but the pain takes longer? Also when you stub your toe you can sense the incoming pain before it actually starts. Why\u2019s that?"
+      },
+      {
+        "rank": 3,
+        "sim": 0.477525532245636,
+        "wins": false,
+        "is_max_winner": false,
+        "text": "Is caffeine kind of just stuck on coffee like dust and washes off?"
+      },
+      {
+        "rank": 4,
+        "sim": 0.07028095424175262,
+        "wins": false,
+        "is_max_winner": false,
+        "text": "It's untenable from a practical standpoint. What if you don't have the money to pay it? Are you forced to sell? Will you then get charged capital gains on selling? Do you get a tax refund for taxes paid on gains that are never realized because of losses on the value? The second hand negative effects of something like this are insane. So insane it \u2026"
+      }
+    ],
+    "gap": 0.48155510425567627
+  },
+  {
+    "dataset": "followupqg",
+    "mode": "semantic_hard",
+    "anchor": "ELI5: I\u2019m often shocked at the way people sound talking vs singing, especially when it comes to accents. Why does the singing voice sound different from the speaking voice? (extra emphasis on accents but also tone, timbre, etc.) Tone changes based on the position and tension of the tongue, larynx and soft palatte. Mixing different combos of those \u2026",
+    "positive": "What about accents though? There's a guy a follow on youtube that makes metal covers of songs, but he's got a thick Norwegian accent that's super hard to understand as an english-only speaker, so at the end of his videos when he does his little outro, he kind of half-sings it and makes his accent almost completely go away and I can understand him \u2026",
+    "positive_sim": 0.5118297338485718,
+    "negatives": [
+      {
+        "rank": 1,
+        "sim": 0.7491116523742676,
+        "wins": true,
+        "is_max_winner": true,
+        "text": "Ok, so how do people sing in tune if their voice sounds different?"
+      },
+      {
+        "rank": 2,
+        "sim": 0.6364399194717407,
+        "wins": false,
+        "is_max_winner": false,
+        "text": ">2 people with identical accents might argue over how to pronounce scone - does it rhyme with cone or gone? Or, indeed, with [spoon](https://forvo.com/word/stone_of_scone/)?"
+      },
+      {
+        "rank": 3,
+        "sim": 0.4969590902328491,
+        "wins": false,
+        "is_max_winner": false,
+        "text": "Do you know what the purpose of the intro overdub is? Asking because as a listener I've always detested it. When the talking stops and the volume goes up it's like suddenly finding yourself in the middle of a lake (of sound) when you weren't expecting to be swimming. Similarly, I imagine the artists must hate it because a song is meticulously craf\u2026"
+      },
+      {
+        "rank": 4,
+        "sim": 0.7051510810852051,
+        "wins": false,
+        "is_max_winner": false,
+        "text": "Is it a good enough explanation that if every language picked the tone randomly independently, 70-30 split would not be that unusual?"
+      }
+    ],
+    "gap": 0.2372819185256958
+  },
+  {
+    "dataset": "followupqg",
+    "mode": "semantic_hard",
+    "anchor": "ELI5:What makes colours? I'll take a stab at this, even though I'm sure someone here can do it better. Light \u2014 which contains all of the possible colors we can see \u2014 is absorbed into everything. When we look at something and see its color, what we see is the frequency (or color) of light that isn't absorbed by it. So think about it this way. You h\u2026",
+    "positive": "That makes perfect sense thanks so much! Edit, so when we paint something a different colour, all were doing is applying a substance that spits out a different frequency of colour?",
+    "positive_sim": 0.4773608446121216,
+    "negatives": [
+      {
+        "rank": 1,
+        "sim": 0.6127645969390869,
+        "wins": false,
+        "is_max_winner": false,
+        "text": "Ok that makes sense. But then the question is: do we know why our brains assign the same or similar perceived color for a mix of blue and red (purple) as \"true\" violet?"
+      },
+      {
+        "rank": 2,
+        "sim": 0.4537085294723511,
+        "wins": false,
+        "is_max_winner": false,
+        "text": "Thanks for the reply! Why can\u2019t white surfaces be polished or microscopically made to be flat?"
+      },
+      {
+        "rank": 3,
+        "sim": 0.7134641408920288,
+        "wins": true,
+        "is_max_winner": true,
+        "text": "yes this makes sense, a lot of sense. So to make sure I understand... my \"green\" cones can detect every color, just in the same way I can see every color, even that I may have green sunglasses on (yes it is properly more the complimentary color, but just for fun) and the same with blue and red. Things are just easier to see / clear if the color is\u2026"
+      },
+      {
+        "rank": 4,
+        "sim": 0.6285451650619507,
+        "wins": false,
+        "is_max_winner": false,
+        "text": "I may sound stupid here, but doesn't there needs to be something to not reflect the white color to make the light color white?"
+      }
+    ],
+    "gap": 0.23610329627990723
+  },
+  {
+    "dataset": "followupqg",
+    "mode": "semantic_hard",
+    "anchor": "ELI5: How are allergies related to the immune system? Your digestive tract is essentially a tube going through your body. It's where elements from outside of your body have an opportunity to go inside your body. A strong digestive tract prevents this. Between the cells that line your intestines, you have something called tight-junction. When your \u2026",
+    "positive": "She was telling me about diet and I think about this too!! Saying stuff about leaky gut... I thought it sounded suspicious though but ultimately you have had good results?!",
+    "positive_sim": 0.45425018668174744,
+    "negatives": [
+      {
+        "rank": 1,
+        "sim": 0.36204105615615845,
+        "wins": false,
+        "is_max_winner": false,
+        "text": "This really needs to be higher up. \"Use more calories than you eat\" is reductionist. Sure it'll work for a lot of people but there are *many, many* people for whom this is just not medically, physiologically true. I decided to lose weight in 2018, as well as improve all the numbers actually associated with health-- resting heart rate, etc. In orde\u2026"
+      },
+      {
+        "rank": 2,
+        "sim": 0.6706033945083618,
+        "wins": true,
+        "is_max_winner": true,
+        "text": "She suggested i take an IgG food allergy test? How are IgE and IgG related to allergies specifically? So can you have a hyper sensitive super active and strong immune system that also leads to allergies ?"
+      },
+      {
+        "rank": 3,
+        "sim": 0.46283161640167236,
+        "wins": false,
+        "is_max_winner": false,
+        "text": "This is what I was looking for. I took some antibiotics (Amoxicillin) that threw off the balance in my gut. Lots of pickles has helped. May I ask what else has worked for you?"
+      },
+      {
+        "rank": 4,
+        "sim": 0.5345057249069214,
+        "wins": false,
+        "is_max_winner": false,
+        "text": "This is super interesting. Just curious if you by chance have any idea why you also get that taste when you're given IV fluids?"
+      }
+    ],
+    "gap": 0.21635320782661438
+  },
+  {
+    "dataset": "workflow",
+    "mode": "bm25",
+    "anchor": "Check if the folder already exists, if not create it",
+    "positive": "Function to retrieve user settings",
+    "positive_sim": -0.04887133836746216,
+    "negatives": [
+      {
+        "rank": 1,
+        "sim": 1.0000001192092896,
+        "wins": true,
+        "is_max_winner": true,
+        "text": "Check if the folder already exists, if not create it"
+      },
+      {
+        "rank": 2,
+        "sim": 0.9566628336906433,
+        "wins": false,
+        "is_max_winner": false,
+        "text": "Check if the folder exists; if not, create it"
+      },
+      {
+        "rank": 3,
+        "sim": 0.81913161277771,
+        "wins": false,
+        "is_max_winner": false,
+        "text": "Function to create a folder if it does not exist"
+      },
+      {
+        "rank": 4,
+        "sim": 0.20676153898239136,
+        "wins": false,
+        "is_max_winner": false,
+        "text": "Check if the current follower is not already counted in the previous follower count"
+      }
+    ],
+    "gap": 1.0488715171813965
+  },
+  {
+    "dataset": "workflow",
+    "mode": "bm25",
+    "anchor": "Open the game developer's website Step 21: Open the developer's website",
+    "positive": "Retrieve related podcast episodes",
+    "positive_sim": -0.1271447092294693,
+    "negatives": [
+      {
+        "rank": 1,
+        "sim": 0.9107370972633362,
+        "wins": true,
+        "is_max_winner": true,
+        "text": "Open the game developer's website"
+      },
+      {
+        "rank": 2,
+        "sim": 0.18675577640533447,
+        "wins": false,
+        "is_max_winner": false,
+        "text": "Open the Allrecipes website"
+      },
+      {
+        "rank": 3,
+        "sim": 0.0898859053850174,
+        "wins": false,
+        "is_max_winner": false,
+        "text": "Open the Nutrition Data website"
+      },
+      {
+        "rank": 4,
+        "sim": 0.46163639426231384,
+        "wins": false,
+        "is_max_winner": false,
+        "text": "Open the website if available"
+      }
+    ],
+    "gap": 1.037881851196289
+  },
+  {
+    "dataset": "workflow",
+    "mode": "bm25",
+    "anchor": "If the workflow is active, proceed with further actions.",
+    "positive": "Get the type of item based on the URL component retrieved.",
+    "positive_sim": 0.0010312581434845924,
+    "negatives": [
+      {
+        "rank": 1,
+        "sim": 1.0,
+        "wins": true,
+        "is_max_winner": true,
+        "text": "If the workflow is active, proceed with further actions."
+      },
+      {
+        "rank": 2,
+        "sim": 0.48859867453575134,
+        "wins": false,
+        "is_max_winner": false,
+        "text": "Step 6: If the task type is 'Reminder', proceed with further actions."
+      },
+      {
+        "rank": 3,
+        "sim": 0.3999714255332947,
+        "wins": false,
+        "is_max_winner": false,
+        "text": "If the document picker is not open, proceed with the following actions."
+      },
+      {
+        "rank": 4,
+        "sim": 0.5241060853004456,
+        "wins": false,
+        "is_max_winner": false,
+        "text": "If the name does not match, proceed with the following actions."
+      }
+    ],
+    "gap": 0.9989687204360962
+  },
+  {
+    "dataset": "workflow",
+    "mode": "semantic_hard",
+    "anchor": "Initializes a variable 'sunglasses_art' containing the visual setup of this ASCII art.",
+    "positive": "Shows the setup phase of the sunglass art.",
+    "positive_sim": 0.3214651346206665,
+    "negatives": [
+      {
+        "rank": 1,
+        "sim": 0.5245348215103149,
+        "wins": false,
+        "is_max_winner": false,
+        "text": "Displays what this artwork will represent to the user."
+      },
+      {
+        "rank": 2,
+        "sim": 0.9222298264503479,
+        "wins": true,
+        "is_max_winner": true,
+        "text": "Initializes a variable 'sunglasses_art' containing the visual setup of this ASCII art."
+      },
+      {
+        "rank": 3,
+        "sim": 0.6376399397850037,
+        "wins": false,
+        "is_max_winner": false,
+        "text": "This line replaces the 'Setup' part of the sunglasses art with the user's provided setup input."
+      },
+      {
+        "rank": 4,
+        "sim": 0.19491063058376312,
+        "wins": false,
+        "is_max_winner": false,
+        "text": "Display the artwork."
+      }
+    ],
+    "gap": 0.6007646918296814
+  },
+  {
+    "dataset": "workflow",
+    "mode": "semantic_hard",
+    "anchor": "Comments stating that the function 'completion' is called to indicate the end of the script execution.",
+    "positive": "Calls the completion function with 'true' to indicate that the inversion was successful.",
+    "positive_sim": 0.3247445225715637,
+    "negatives": [
+      {
+        "rank": 1,
+        "sim": 0.5766898989677429,
+        "wins": false,
+        "is_max_winner": false,
+        "text": "Calls a function named completion with the 'result' variable, presumably to handle or display the final output."
+      },
+      {
+        "rank": 2,
+        "sim": 0.9134118556976318,
+        "wins": true,
+        "is_max_winner": true,
+        "text": "Comments stating that the function 'completion' is called to indicate the end of the script execution."
+      },
+      {
+        "rank": 3,
+        "sim": 0.5320753455162048,
+        "wins": false,
+        "is_max_winner": false,
+        "text": "Calls the completion function to finalize the JavaScript operation."
+      },
+      {
+        "rank": 4,
+        "sim": 0.5301251411437988,
+        "wins": false,
+        "is_max_winner": false,
+        "text": "Calls a completion function passing the result of the operation, signaling that the JavaScript execution is completed."
+      }
+    ],
+    "gap": 0.5886673331260681
+  },
+  {
+    "dataset": "workflow",
+    "mode": "semantic_hard",
+    "anchor": "Checks if 'IsValidTimeStamp' is True; if valid, proceeds with updating the configuration.",
+    "positive": "Updates the 'Time' key in the 'Config' dictionary with the validated segment timestamp.",
+    "positive_sim": 0.3140754699707031,
+    "negatives": [
+      {
+        "rank": 1,
+        "sim": 0.16985277831554413,
+        "wins": false,
+        "is_max_winner": false,
+        "text": "Displays an alert indicating that the segment time is not valid, with the specific time entered."
+      },
+      {
+        "rank": 2,
+        "sim": 0.2830285429954529,
+        "wins": false,
+        "is_max_winner": false,
+        "text": "Checks if the updated time entry details exist."
+      },
+      {
+        "rank": 3,
+        "sim": 0.9018709659576416,
+        "wins": true,
+        "is_max_winner": true,
+        "text": "Checks if 'IsValidTimeStamp' is True; if valid, proceeds with updating the configuration."
+      },
+      {
+        "rank": 4,
+        "sim": 0.07621070742607117,
+        "wins": false,
+        "is_max_winner": false,
+        "text": "Step 12: Update the time entry"
+      }
+    ],
+    "gap": 0.5877954959869385
+  }
+]

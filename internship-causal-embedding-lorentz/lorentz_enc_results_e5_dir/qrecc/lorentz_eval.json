@@ -1,0 +1,38 @@
+{
+  "dataset": "qrecc",
+  "checkpoint": "lorentz_enc_results_e5_dir/qrecc/lorentz_best.pt",
+  "backbone": "intfloat/e5-base-v2",
+  "space_dim": 768,
+  "time_dim": 32,
+  "n_test_pairs": 5204,
+  "encoding_seconds": 16.189825773239136,
+  "auc": 0.9405854048739191,
+  "precision_at_1": 0.8307071483474251,
+  "mrr": 0.29731433322285455,
+  "mean_rank": 58.30034588777863,
+  "median_rank": 11.0,
+  "recall_at_k": {
+    "1": 0.19542659492697925,
+    "3": 0.33531898539584937,
+    "5": 0.40103766333589547,
+    "10": 0.4928900845503459
+  },
+  "hit_at_k": {
+    "1": 0.19542659492697925,
+    "3": 0.33531898539584937,
+    "5": 0.40103766333589547,
+    "10": 0.4928900845503459
+  },
+  "n_candidates_per_query": 1000,
+  "directional_acc": 0.429477334022522,
+  "directional_margin": -0.015282285399734974,
+  "mrr_combined": 0.28741986171238654,
+  "median_rank_combined": 12.0,
+  "recall_at_k_combined": {
+    "1": 0.18831667947732514,
+    "3": 0.32186779400461185,
+    "5": 0.3816295157571099,
+    "10": 0.4846272098385857
+  },
+  "beta_eval": 0.5
+}

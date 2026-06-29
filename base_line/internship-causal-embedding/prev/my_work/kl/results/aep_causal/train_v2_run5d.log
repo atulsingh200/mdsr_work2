@@ -1,0 +1,136 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[device] cuda
+[out]    /mnt/localssd/internship-causal-embedding-merge-followup/my_work/kl/results/aep_causal
+[data] 5487 train pairs  K=8
+[data] 562 val pairs
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 7424.41it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 9137.62it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[warm-start] from ../../finetune_eval/results/aep_causal/checkpoint_best.pt
+  [warm-start] loaded 199 anchor tensors -> cause_enc, 199 positive tensors -> effect_enc (missing=0, unexpected=0)
+[model] shared_encoder=False  kl_scale=dim  init_cos_weight=1.0  pooling=cls  mu_identity=True  log_sigma_init=3.0
+[model] CDEv2  backbone=google-bert/bert-base-uncased  proj_dim=768  params=226,058,498
+
+================================================================================
+CDEv2 training  total=3000  phA=3000  phB_end=3000
+batch=128  K=8  bf16=True  backbone_lr=1e-05  head_lr=0.0001
+================================================================================
+Traceback (most recent call last):
+  File "/mnt/localssd/internship-causal-embedding-merge-followup/my_work/kl/v2/train_v2.py", line 531, in <module>
+    main()
+    ~~~~^^
+  File "/mnt/localssd/internship-causal-embedding-merge-followup/my_work/kl/v2/train_v2.py", line 492, in main
+    loss, stats = train_step(model, loss_fn, batch, K, device, phase)
+                  ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/localssd/internship-causal-embedding-merge-followup/my_work/kl/v2/train_v2.py", line 128, in train_step
+    mu_n, log_sigma_n = model.encode_effect(
+                        ~~~~~~~~~~~~~~~~~~~^
+        neg_ids.view(B * K, -1), neg_mask.view(B * K, -1)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/mnt/localssd/internship-causal-embedding-merge-followup/my_work/kl/v2/model_v2.py", line 161, in encode_effect
+    out = self.effect_enc(input_ids=input_ids, attention_mask=attention_mask)
+  File "/mnt/localssd/internship-causal-embedding-merge-followup/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/mnt/localssd/internship-causal-embedding-merge-followup/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/localssd/internship-causal-embedding-merge-followup/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 1032, in wrapper
+    output = func(self, *args, **kwargs)
+  File "/mnt/localssd/internship-causal-embedding-merge-followup/.venv/lib/python3.13/site-packages/transformers/utils/output_capturing.py", line 252, in wrapper
+    outputs = func(self, *args, **kwargs)
+  File "/mnt/localssd/internship-causal-embedding-merge-followup/.venv/lib/python3.13/site-packages/transformers/models/bert/modeling_bert.py", line 673, in forward
+    encoder_outputs = self.encoder(
+        embedding_output,
+    ...<6 lines>...
+        **kwargs,
+    )
+  File "/mnt/localssd/internship-causal-embedding-merge-followup/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/mnt/localssd/internship-causal-embedding-merge-followup/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/localssd/internship-causal-embedding-merge-followup/.venv/lib/python3.13/site-packages/transformers/models/bert/modeling_bert.py", line 440, in forward
+    hidden_states = layer_module(
+        hidden_states,
+    ...<4 lines>...
+        **kwargs,
+    )
+  File "/mnt/localssd/internship-causal-embedding-merge-followup/.venv/lib/python3.13/site-packages/transformers/modeling_layers.py", line 93, in __call__
+    return super().__call__(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/mnt/localssd/internship-causal-embedding-merge-followup/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/mnt/localssd/internship-causal-embedding-merge-followup/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/localssd/internship-causal-embedding-merge-followup/.venv/lib/python3.13/site-packages/transformers/models/bert/modeling_bert.py", line 387, in forward
+    self_attention_output, _ = self.attention(
+                               ~~~~~~~~~~~~~~^
+        hidden_states,
+        ^^^^^^^^^^^^^^
+    ...<2 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/mnt/localssd/internship-causal-embedding-merge-followup/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/mnt/localssd/internship-causal-embedding-merge-followup/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/localssd/internship-causal-embedding-merge-followup/.venv/lib/python3.13/site-packages/transformers/models/bert/modeling_bert.py", line 325, in forward
+    attention_output = self.output(attention_output, hidden_states)
+  File "/mnt/localssd/internship-causal-embedding-merge-followup/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/mnt/localssd/internship-causal-embedding-merge-followup/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/localssd/internship-causal-embedding-merge-followup/.venv/lib/python3.13/site-packages/transformers/models/bert/modeling_bert.py", line 296, in forward
+    hidden_states = self.LayerNorm(hidden_states + input_tensor)
+  File "/mnt/localssd/internship-causal-embedding-merge-followup/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/mnt/localssd/internship-causal-embedding-merge-followup/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/localssd/internship-causal-embedding-merge-followup/.venv/lib/python3.13/site-packages/torch/nn/modules/normalization.py", line 217, in forward
+    return F.layer_norm(
+           ~~~~~~~~~~~~^
+        input, self.normalized_shape, self.weight, self.bias, self.eps
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/mnt/localssd/internship-causal-embedding-merge-followup/.venv/lib/python3.13/site-packages/torch/nn/functional.py", line 2910, in layer_norm
+    return torch.layer_norm(
+           ~~~~~~~~~~~~~~~~^
+        input, normalized_shape, weight, bias, eps, torch.backends.cudnn.enabled
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 672.00 MiB. GPU 0 has a total capacity of 79.25 GiB of which 100.38 MiB is free. Process 542908 has 8.20 GiB memory in use. Including non-PyTorch memory, this process has 70.94 GiB memory in use. Of the allocated memory 70.30 GiB is allocated by PyTorch, and 140.95 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

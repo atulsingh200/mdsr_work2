@@ -1,0 +1,6 @@
+  7368 pairs — test_pairs.jsonl
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 8461.23it/s]
+  encoded in 1.3s  dim=384
+  kNN in 0.0s
+  saved /mnt/localssd/base_line/internship-causal-embedding/ce2x_data/multiwoz_v24/test_hard_negatives.npy  shape=(7368, 4)

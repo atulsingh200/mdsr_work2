@@ -1,0 +1,14 @@
+{
+  "model": "CrossEncoder2x",
+  "n_params": 194537473,
+  "n_layers": 24,
+  "dataset": "workflow",
+  "checkpoint": "/mnt/localssd/new_base_line/internship-causal-embedding/my_work/kl/cross_encoder_2x/results/workflow/checkpoint_best.pt",
+  "backbone": "google-bert/bert-base-uncased",
+  "n_test_pairs": 260487,
+  "auc": 0.7189661990275711,
+  "precision_at_1": 0.509315244138863,
+  "n_negatives": 4,
+  "eval_type": "semantic_hard_negatives",
+  "miner": "sentence-transformers/all-MiniLM-L6-v2"
+}

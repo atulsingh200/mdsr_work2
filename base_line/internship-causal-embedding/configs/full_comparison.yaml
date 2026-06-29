@@ -1,0 +1,38 @@
+# Full head-to-head comparison: all models × all datasets × all negatives.
+# This is the canonical reproducible benchmark config.
+# Run with:
+#   uv run python scripts/run_eval.py --config configs/full_comparison.yaml
+
+models:
+  - type: cross_encoder_2x
+    checkpoint: my_work/kl/cross_encoder_2x/results/aep_causal/checkpoint_best.pt
+  - type: biencoder
+    checkpoint: finetune_eval/results/aep_causal/checkpoint_best.pt
+  - type: cde
+    checkpoint: my_work/kl/results/aep_causal/cde_best.pt
+  - type: pretrained
+    hf_id: BAAI/bge-small-en-v1.5
+  - type: tfidf
+
+datasets:
+  - aep_causal
+  - qrecc
+  - followupqg
+  - multiwoz_v24
+
+splits:
+  - test
+
+negatives:
+  - random
+  - bm25
+
+eval:
+  pool_size: 1000
+  k_negatives: 4
+  seed: 42
+  k_values: [1, 3, 5, 10]
+  max_queries: 0
+
+output:
+  dir: results/full_comparison

@@ -1,0 +1,95 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[data] train=110775 val=6004 test=6004  arch=cde
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 10053.32it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 9852.52it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+  [warm-start CDE from cde_v2_run5c_best.pt]
+[model] params=226,059,270
+  ep1 0/3462 loss=0.7020 acc=0.4688
+  ep1 200/3462 loss=0.3036 acc=0.7586
+  ep1 400/3462 loss=0.2360 acc=0.8257
+  ep1 600/3462 loss=0.1412 acc=0.8540
+  ep1 800/3462 loss=0.1142 acc=0.8739
+  ep1 1000/3462 loss=0.0278 acc=0.8880
+  ep1 1200/3462 loss=0.1906 acc=0.8996
+  ep1 1400/3462 loss=0.7961 acc=0.9091
+  ep1 1600/3462 loss=0.2807 acc=0.9160
+  ep1 1800/3462 loss=0.0088 acc=0.9227
+  ep1 2000/3462 loss=0.0028 acc=0.9285
+  ep1 2200/3462 loss=0.0051 acc=0.9330
+  ep1 2400/3462 loss=0.0611 acc=0.9371
+  ep1 2600/3462 loss=0.0129 acc=0.9407
+  ep1 2800/3462 loss=0.0116 acc=0.9437
+  ep1 3000/3462 loss=0.0108 acc=0.9465
+  ep1 3200/3462 loss=0.0402 acc=0.9489
+  ep1 3400/3462 loss=0.1079 acc=0.9511
+[epoch 1] train_acc=0.9517 val_acc=0.8781 val_auc=0.9334 val_f1=0.8798 (692s)
+  * new best val_acc=0.8781
+  ep2 0/3462 loss=0.0187 acc=1.0000
+  ep2 200/3462 loss=0.0011 acc=0.9891
+  ep2 400/3462 loss=0.0000 acc=0.9882
+  ep2 600/3462 loss=0.0425 acc=0.9883
+  ep2 800/3462 loss=0.0281 acc=0.9883
+  ep2 1000/3462 loss=0.0637 acc=0.9879
+  ep2 1200/3462 loss=0.0170 acc=0.9877
+  ep2 1400/3462 loss=0.0003 acc=0.9878
+  ep2 1600/3462 loss=0.0195 acc=0.9881
+  ep2 1800/3462 loss=0.0002 acc=0.9884
+  ep2 2000/3462 loss=0.0026 acc=0.9884
+  ep2 2200/3462 loss=0.0522 acc=0.9883
+  ep2 2400/3462 loss=0.0001 acc=0.9884
+  ep2 2600/3462 loss=0.0003 acc=0.9887
+  ep2 2800/3462 loss=0.0001 acc=0.9888
+  ep2 3000/3462 loss=0.0361 acc=0.9889
+  ep2 3200/3462 loss=0.0398 acc=0.9890
+  ep2 3400/3462 loss=0.0023 acc=0.9890
+[epoch 2] train_acc=0.9890 val_acc=0.8713 val_auc=0.9267 val_f1=0.8730 (697s)
+  ep3 0/3462 loss=0.0011 acc=1.0000
+  ep3 200/3462 loss=0.0000 acc=0.9922
+  ep3 400/3462 loss=0.0002 acc=0.9913
+  ep3 600/3462 loss=0.0255 acc=0.9911
+  ep3 800/3462 loss=0.0000 acc=0.9913
+  ep3 1000/3462 loss=0.0294 acc=0.9913
+  ep3 1200/3462 loss=0.0186 acc=0.9912
+  ep3 1400/3462 loss=0.0215 acc=0.9911
+  ep3 1600/3462 loss=0.0000 acc=0.9910
+  ep3 1800/3462 loss=0.0001 acc=0.9911
+  ep3 2000/3462 loss=0.0001 acc=0.9911
+  ep3 2200/3462 loss=0.0373 acc=0.9912
+  ep3 2400/3462 loss=0.0000 acc=0.9911
+  ep3 2600/3462 loss=0.0220 acc=0.9911
+  ep3 2800/3462 loss=0.0235 acc=0.9909
+  ep3 3000/3462 loss=0.0115 acc=0.9908
+  ep3 3200/3462 loss=0.0109 acc=0.9908
+  ep3 3400/3462 loss=0.0405 acc=0.9907
+[epoch 3] train_acc=0.9907 val_acc=0.8826 val_auc=0.9222 val_f1=0.8841 (690s)
+  * new best val_acc=0.8826
+
+[TEST cde]  acc=0.8629  AUC=0.9019  F1=0.8595
+[reference bge-small]  acc=0.8571  AUC=0.9031  F1=0.8558  | acc delta +0.7%
+[saved] /mnt/localssd/internship-causal-embedding-merge-followup/my_work/kl/results/directional/cde

@@ -1,0 +1,13 @@
+{
+  "dataset": "workflow",
+  "checkpoint": "finetune_eval/results/workflow_no_inbatch/checkpoint_best.pt",
+  "backbone": "google-bert/bert-base-uncased",
+  "pooling": "cls",
+  "n_test_pairs": 260487,
+  "n_negatives": 4,
+  "encoding_seconds": 432.29664063453674,
+  "auc": 0.6998421488312483,
+  "precision_at_1": 0.48893802761750105,
+  "eval_type": "semantic_hard_negatives",
+  "miner": "sentence-transformers/all-MiniLM-L6-v2"
+}

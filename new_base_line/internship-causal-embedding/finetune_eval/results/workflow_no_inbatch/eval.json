@@ -1,0 +1,27 @@
+{
+  "dataset": "workflow",
+  "checkpoint": "finetune_eval/results/workflow_no_inbatch/checkpoint_best.pt",
+  "backbone": "google-bert/bert-base-uncased",
+  "pooling": "cls",
+  "n_test_pairs": 260487,
+  "n_candidates_per_query": 1000,
+  "encoding_seconds": 431.6441481113434,
+  "auc": 0.9431122532267436,
+  "precision_at_1": 0.8538506720105034,
+  "n_negatives": 4,
+  "mrr": 0.4614876666226438,
+  "mean_rank": 56.56435445914767,
+  "median_rank": 4.0,
+  "recall_at_k": {
+    "1": 0.3839231900248381,
+    "3": 0.496585242257771,
+    "5": 0.5426297665526495,
+    "10": 0.6027364129495906
+  },
+  "hit_at_k": {
+    "1": 0.3839231900248381,
+    "3": 0.496585242257771,
+    "5": 0.5426297665526495,
+    "10": 0.6027364129495906
+  }
+}

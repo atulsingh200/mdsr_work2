@@ -1,0 +1,37 @@
+[config] dataset=aep_causal_t  neg_type=hard  k=4  epochs=10  batch=64  grad_accum=2  eff_batch=128  max_len=256  total_steps=2140  warmup=128  params=194,537,473
+  opt_step=   200/2140  loss=0.5531  lr=1.93e-05  epoch=1
+[epoch 1/10]  train_loss=0.5130  val_AUC=0.6601  val_P@1=0.3434  (80s)
+  * new best val_AUC=0.6601, saved checkpoint_best.pt
+  opt_step=   400/2140  loss=0.4846  lr=1.73e-05  epoch=2
+[epoch 2/10]  train_loss=0.5018  val_AUC=0.6011  val_P@1=0.2011  (162s)
+  no improvement (best=0.6601, bad_epochs=1/2)
+  opt_step=   600/2140  loss=0.5766  lr=1.53e-05  epoch=3
+[epoch 3/10]  train_loss=0.4995  val_AUC=0.6717  val_P@1=0.3612  (244s)
+  * new best val_AUC=0.6717, saved checkpoint_best.pt
+  opt_step=   800/2140  loss=0.4456  lr=1.33e-05  epoch=4
+[epoch 4/10]  train_loss=0.4949  val_AUC=0.6894  val_P@1=0.3897  (326s)
+  * new best val_AUC=0.6894, saved checkpoint_best.pt
+  opt_step=  1000/2140  loss=0.5099  lr=1.13e-05  epoch=5
+[epoch 5/10]  train_loss=0.4863  val_AUC=0.7065  val_P@1=0.4039  (408s)
+  * new best val_AUC=0.7065, saved checkpoint_best.pt
+  opt_step=  1200/2140  loss=0.4680  lr=9.34e-06  epoch=6
+[epoch 6/10]  train_loss=0.4754  val_AUC=0.7045  val_P@1=0.4004  (491s)
+  no improvement (best=0.7065, bad_epochs=1/2)
+  opt_step=  1400/2140  loss=0.3824  lr=7.36e-06  epoch=7
+[epoch 7/10]  train_loss=0.4618  val_AUC=0.7156  val_P@1=0.4181  (572s)
+  * new best val_AUC=0.7156, saved checkpoint_best.pt
+  opt_step=  1600/2140  loss=0.5639  lr=5.37e-06  epoch=8
+[epoch 8/10]  train_loss=0.4488  val_AUC=0.7219  val_P@1=0.4128  (654s)
+  * new best val_AUC=0.7219, saved checkpoint_best.pt
+  opt_step=  1800/2140  loss=0.4737  lr=3.38e-06  epoch=9
+[epoch 9/10]  train_loss=0.4370  val_AUC=0.7184  val_P@1=0.4164  (737s)
+  no improvement (best=0.7219, bad_epochs=1/2)
+  opt_step=  2000/2140  loss=0.4935  lr=1.39e-06  epoch=10
+[epoch 10/10]  train_loss=0.4264  val_AUC=0.7163  val_P@1=0.3932  (818s)
+  no improvement (best=0.7219, bad_epochs=2/2)
+[early stop] triggered at epoch 10
+
+[test] loading checkpoint_best.pt …
+[test]  AUC=0.6964  P@1=0.4075  n_anchors=562
+
+[done]  neg_type=hard  k=4  best_val_AUC=0.7219  test_AUC=0.6964  test_P@1=0.4075  stopped_early=True

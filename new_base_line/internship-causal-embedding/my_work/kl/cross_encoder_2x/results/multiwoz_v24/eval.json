@@ -1,0 +1,30 @@
+{
+  "model": "CrossEncoder2x",
+  "n_params": 194537473,
+  "n_layers": 24,
+  "dataset": "multiwoz_v24",
+  "checkpoint": "/mnt/localssd/new_base_line/internship-causal-embedding/my_work/kl/cross_encoder_2x/results/multiwoz_v24/checkpoint_best.pt",
+  "backbone": "google-bert/bert-base-uncased",
+  "n_test_pairs": 7368,
+  "auc": 0.954873671570786,
+  "precision_at_1": 0.8422909880564604,
+  "n_negatives": 4,
+  "eval_type": "random_negatives",
+  "n_candidates_per_query": 1000,
+  "n_queries": 2000,
+  "mrr": 0.21720956102164285,
+  "mean_rank": 52.741,
+  "median_rank": 22.0,
+  "recall_at_k": {
+    "1": 0.133,
+    "3": 0.233,
+    "5": 0.287,
+    "10": 0.382
+  },
+  "hit_at_k": {
+    "1": 0.133,
+    "3": 0.233,
+    "5": 0.287,
+    "10": 0.382
+  }
+}

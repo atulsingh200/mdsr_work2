@@ -1,0 +1,41 @@
+01:11:46 INFO run_dir=runs/crossencoder2x/new_aep_workflow_scrap  device=cuda  bf16=True
+01:11:47 INFO tokenizer <- google-bert/bert-base-uncased
+01:11:47 INFO scanning max joint token length across all splits …
+01:11:52 INFO   observed max=444  -> max_seq_len=469  (scan 5.3s)
+01:11:52 INFO loading datasets …
+01:11:52 INFO   train=13904  val=1676  test=1548
+01:11:52 INFO building CrossEncoder2x  backbone=google-bert/bert-base-uncased  n_layers=24 …
+01:11:55 INFO   total params=194,537,473
+01:11:55 INFO   total_steps=2607  warmup_steps=156
+01:23:53 INFO run_dir=runs/crossencoder2x/new_aep_workflow_scrap  device=cuda  bf16=True
+01:23:54 INFO tokenizer <- google-bert/bert-base-uncased
+01:23:54 INFO scanning max joint token length across all splits …
+01:23:59 INFO   observed max=444  -> max_seq_len=469  (scan 5.4s)
+01:23:59 INFO loading datasets …
+01:23:59 INFO   train=13904  val=1676  test=1548
+01:23:59 INFO building CrossEncoder2x  backbone=google-bert/bert-base-uncased  n_layers=24 …
+01:24:02 INFO   total params=194,537,473
+01:24:02 INFO   total_steps=2607  warmup_steps=156
+01:38:56 INFO run_dir=runs/crossencoder2x/new_aep_workflow_scrap  device=cuda  bf16=True
+01:38:57 INFO tokenizer <- google-bert/bert-base-uncased
+01:38:57 INFO scanning max joint token length across all splits …
+01:41:17 INFO run_dir=runs/crossencoder2x/new_aep_workflow_scrap  device=cuda  bf16=True
+01:41:17 INFO tokenizer <- google-bert/bert-base-uncased
+01:41:17 INFO scanning max joint token length across all splits …
+01:53:14 INFO run_dir=runs/crossencoder2x/new_aep_workflow_scrap  device=cuda  bf16=True
+01:53:14 INFO tokenizer <- google-bert/bert-base-uncased
+01:53:14 INFO scanning max joint token length across all splits …
+01:53:19 INFO   observed max=444  -> max_seq_len=469  (scan 5.3s)
+01:53:19 INFO loading datasets …
+01:53:20 INFO   train=13904  val=1676  test=1546
+01:53:20 INFO building CrossEncoder2x  backbone=google-bert/bert-base-uncased  n_layers=24 …
+01:53:23 INFO   total params=194,537,473
+01:53:23 INFO   total_steps=2607  warmup_steps=156
+01:53:27 INFO   e1 opt_step=50/2607  loss=0.6946  acc=0.5513  lr=6.41e-06
+01:53:31 INFO   e1 opt_step=100/2607  loss=0.7026  acc=0.5194  lr=1.28e-05
+01:53:34 INFO   e1 opt_step=150/2607  loss=0.7019  acc=0.5162  lr=1.92e-05
+01:53:38 INFO   e1 opt_step=200/2607  loss=0.7020  acc=0.5122  lr=1.96e-05
+01:53:41 INFO   e1 opt_step=250/2607  loss=0.7008  acc=0.5130  lr=1.92e-05
+01:53:45 INFO   e1 opt_step=300/2607  loss=0.7000  acc=0.5144  lr=1.88e-05
+01:53:48 INFO   e1 opt_step=350/2607  loss=0.6999  acc=0.5143  lr=1.84e-05
+01:53:52 INFO   e1 opt_step=400/2607  loss=0.7000  acc=0.5123  lr=1.80e-05

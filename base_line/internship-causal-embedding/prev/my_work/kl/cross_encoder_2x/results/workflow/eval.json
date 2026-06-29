@@ -1,0 +1,30 @@
+{
+  "model": "CrossEncoder2x",
+  "n_params": 194537473,
+  "n_layers": 24,
+  "dataset": "workflow",
+  "checkpoint": "my_work/kl/cross_encoder_2x/results/workflow/checkpoint_best.pt",
+  "backbone": "google-bert/bert-base-uncased",
+  "n_test_pairs": 260487,
+  "auc": 0.9462147770679418,
+  "precision_at_1": 0.8339878765543002,
+  "n_negatives": 4,
+  "eval_type": "random_negatives",
+  "n_candidates_per_query": 1000,
+  "n_queries": 2000,
+  "mrr": 0.44125126716986457,
+  "mean_rank": 60.303,
+  "median_rank": 5.0,
+  "recall_at_k": {
+    "1": 0.3665,
+    "3": 0.4735,
+    "5": 0.5195,
+    "10": 0.581
+  },
+  "hit_at_k": {
+    "1": 0.3665,
+    "3": 0.4735,
+    "5": 0.5195,
+    "10": 0.581
+  }
+}

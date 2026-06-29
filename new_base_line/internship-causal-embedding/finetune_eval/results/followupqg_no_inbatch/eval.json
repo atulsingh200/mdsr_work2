@@ -1,0 +1,27 @@
+{
+  "dataset": "followupqg",
+  "checkpoint": "finetune_eval/results/followupqg_no_inbatch/checkpoint_best.pt",
+  "backbone": "google-bert/bert-base-uncased",
+  "pooling": "cls",
+  "n_test_pairs": 501,
+  "n_candidates_per_query": 501,
+  "encoding_seconds": 2.7637226581573486,
+  "auc": 0.9770718044948028,
+  "precision_at_1": 0.9421157684630739,
+  "n_negatives": 4,
+  "mrr": 0.6029329815902389,
+  "mean_rank": 11.508982035928144,
+  "median_rank": 2.0,
+  "recall_at_k": {
+    "1": 0.4491017964071856,
+    "3": 0.718562874251497,
+    "5": 0.7844311377245509,
+    "10": 0.8423153692614771
+  },
+  "hit_at_k": {
+    "1": 0.4491017964071856,
+    "3": 0.718562874251497,
+    "5": 0.7844311377245509,
+    "10": 0.8423153692614771
+  }
+}

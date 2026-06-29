@@ -1,0 +1,28 @@
+{
+  "model": "CrossEncoder",
+  "dataset": "qrecc",
+  "checkpoint": "/mnt/localssd/base_line/my_work/kl/cross_encoder/results/qrecc/checkpoint_best.pt",
+  "backbone": "google-bert/bert-base-uncased",
+  "n_test_pairs": 5204,
+  "auc": 0.8551687979033452,
+  "precision_at_1": 0.648923904688701,
+  "n_negatives": 4,
+  "eval_type": "random_negatives",
+  "n_candidates_per_query": 1000,
+  "n_queries": 2000,
+  "mrr": 0.20836381892866213,
+  "mean_rank": 136.255,
+  "median_rank": 72.0,
+  "recall_at_k": {
+    "1": 0.1545,
+    "3": 0.221,
+    "5": 0.254,
+    "10": 0.304
+  },
+  "hit_at_k": {
+    "1": 0.1545,
+    "3": 0.221,
+    "5": 0.254,
+    "10": 0.304
+  }
+}

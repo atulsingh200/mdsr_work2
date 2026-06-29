@@ -1,0 +1,19 @@
+{
+  "cde_v2": {
+    "model": "CDEv2",
+    "backbone": "google-bert/bert-base-uncased",
+    "n_test_pairs": 562,
+    "auc_random": 0.9633933207532833,
+    "p1_random": 0.8932384341637011,
+    "auc_hard_neg": 0.7287430661972365,
+    "p1_hard_neg": 0.5338078291814946,
+    "n_test": 562,
+    "mrr": 0.40941306948661804,
+    "mean_rank": 20.418149948120117,
+    "median_rank": 4.0,
+    "recall@1": 0.2597864866256714,
+    "recall@3": 0.4804270565509796,
+    "recall@5": 0.5943060517311096,
+    "recall@10": 0.7241992950439453
+  }
+}

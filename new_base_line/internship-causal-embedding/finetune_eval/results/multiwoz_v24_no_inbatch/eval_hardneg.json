@@ -1,0 +1,13 @@
+{
+  "dataset": "multiwoz_v24",
+  "checkpoint": "finetune_eval/results/multiwoz_v24_no_inbatch/checkpoint_best.pt",
+  "backbone": "google-bert/bert-base-uncased",
+  "pooling": "cls",
+  "n_test_pairs": 7368,
+  "n_negatives": 4,
+  "encoding_seconds": 24.607687950134277,
+  "auc": 0.5912266255256466,
+  "precision_at_1": 0.379343105320304,
+  "eval_type": "semantic_hard_negatives",
+  "miner": "sentence-transformers/all-MiniLM-L6-v2"
+}

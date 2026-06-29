@@ -1,0 +1,18 @@
+{
+  "dataset_slug": "aep_causal_cls34",
+  "model_slug": "all-mpnet-base-v2",
+  "base_model": "sentence-transformers/all-mpnet-base-v2",
+  "schema": "standard",
+  "best_val_acc": 0.909394,
+  "best_val_auc": 0.961707,
+  "test_acc": 0.887742,
+  "test_auc": 0.945969,
+  "test_f1": 0.879514,
+  "test_loss": 0.694337,
+  "n_train": 110775,
+  "n_val": 6004,
+  "n_test": 6004,
+  "epochs": 4,
+  "batch_size": 64,
+  "max_seq_len": 512
+}

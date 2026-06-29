@@ -1,0 +1,62 @@
+[train] total_steps=2574 warmup=154 batch_size=32 epochs=3
+  step=    50/2574  loss=0.5141  lr=6.49e-06  epoch=1
+  step=   100/2574  loss=0.4885  lr=1.30e-05  epoch=1
+  step=   150/2574  loss=0.4434  lr=1.95e-05  epoch=1
+  step=   200/2574  loss=0.4527  lr=1.96e-05  epoch=1
+  step=   250/2574  loss=0.5665  lr=1.92e-05  epoch=1
+  step=   300/2574  loss=0.4160  lr=1.88e-05  epoch=1
+  step=   350/2574  loss=0.4652  lr=1.84e-05  epoch=1
+  step=   400/2574  loss=0.3882  lr=1.80e-05  epoch=1
+  step=   450/2574  loss=0.5349  lr=1.76e-05  epoch=1
+  step=   500/2574  loss=0.5250  lr=1.71e-05  epoch=1
+  step=   550/2574  loss=0.4317  lr=1.67e-05  epoch=1
+  step=   600/2574  loss=0.5843  lr=1.63e-05  epoch=1
+  step=   650/2574  loss=0.4593  lr=1.59e-05  epoch=1
+  step=   700/2574  loss=0.3906  lr=1.55e-05  epoch=1
+  step=   750/2574  loss=0.4379  lr=1.51e-05  epoch=1
+  step=   800/2574  loss=0.5475  lr=1.47e-05  epoch=1
+  step=   850/2574  loss=0.4417  lr=1.42e-05  epoch=1
+[epoch 1/3]  train_loss=0.5097  val_AUC=0.6378  val_P@1=0.2954  (55s)
+  * new best val_AUC=0.6378, saved checkpoint_best.pt
+  step=   900/2574  loss=0.4393  lr=1.38e-05  epoch=2
+  step=   950/2574  loss=0.5423  lr=1.34e-05  epoch=2
+  step=  1000/2574  loss=0.4873  lr=1.30e-05  epoch=2
+  step=  1050/2574  loss=0.2813  lr=1.26e-05  epoch=2
+  step=  1100/2574  loss=0.4720  lr=1.22e-05  epoch=2
+  step=  1150/2574  loss=0.4863  lr=1.18e-05  epoch=2
+  step=  1200/2574  loss=0.5915  lr=1.14e-05  epoch=2
+  step=  1250/2574  loss=0.4798  lr=1.09e-05  epoch=2
+  step=  1300/2574  loss=0.5621  lr=1.05e-05  epoch=2
+  step=  1350/2574  loss=0.5202  lr=1.01e-05  epoch=2
+  step=  1400/2574  loss=0.5047  lr=9.70e-06  epoch=2
+  step=  1450/2574  loss=0.5985  lr=9.29e-06  epoch=2
+  step=  1500/2574  loss=0.5469  lr=8.88e-06  epoch=2
+  step=  1550/2574  loss=0.4647  lr=8.46e-06  epoch=2
+  step=  1600/2574  loss=0.4040  lr=8.05e-06  epoch=2
+  step=  1650/2574  loss=0.5578  lr=7.64e-06  epoch=2
+  step=  1700/2574  loss=0.4837  lr=7.22e-06  epoch=2
+[epoch 2/3]  train_loss=0.4960  val_AUC=0.6905  val_P@1=0.3986  (102s)
+  * new best val_AUC=0.6905, saved checkpoint_best.pt
+  step=  1750/2574  loss=0.4549  lr=6.81e-06  epoch=3
+  step=  1800/2574  loss=0.6620  lr=6.40e-06  epoch=3
+  step=  1850/2574  loss=0.4502  lr=5.98e-06  epoch=3
+  step=  1900/2574  loss=0.3920  lr=5.57e-06  epoch=3
+  step=  1950/2574  loss=0.4285  lr=5.16e-06  epoch=3
+  step=  2000/2574  loss=0.5848  lr=4.74e-06  epoch=3
+  step=  2050/2574  loss=0.5758  lr=4.33e-06  epoch=3
+  step=  2100/2574  loss=0.5016  lr=3.92e-06  epoch=3
+  step=  2150/2574  loss=0.3029  lr=3.50e-06  epoch=3
+  step=  2200/2574  loss=0.4492  lr=3.09e-06  epoch=3
+  step=  2250/2574  loss=0.5376  lr=2.68e-06  epoch=3
+  step=  2300/2574  loss=0.4079  lr=2.26e-06  epoch=3
+  step=  2350/2574  loss=0.4173  lr=1.85e-06  epoch=3
+  step=  2400/2574  loss=0.4348  lr=1.44e-06  epoch=3
+  step=  2450/2574  loss=0.4865  lr=1.02e-06  epoch=3
+  step=  2500/2574  loss=0.4498  lr=6.12e-07  epoch=3
+  step=  2550/2574  loss=0.3219  lr=1.98e-07  epoch=3
+[epoch 3/3]  train_loss=0.4814  val_AUC=0.7134  val_P@1=0.4235  (150s)
+  * new best val_AUC=0.7134, saved checkpoint_best.pt
+
+[done]  best val_AUC=0.7134
+  best:   /mnt/localssd/base_line/my_work/kl/cross_encoder/results/aep_causal/checkpoint_best.pt
+  latest: /mnt/localssd/base_line/my_work/kl/cross_encoder/results/aep_causal/checkpoint_latest.pt

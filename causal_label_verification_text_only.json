@@ -1,0 +1,302 @@
+[
+  {
+    "sample_id": 1,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 describes a specific workflow in AJO/Dynamic Media, while text_2 is a high-level overview of Journey Optimizer's business value — neither depends on the other to be understood."
+  },
+  {
+    "sample_id": 2,
+    "assigned_label": 1,
+    "label_correct": false,
+    "reasoning": "text_2 describes a specific UI workflow for selecting a dataset in a destination export, with no direct conceptual dependency on text_1's explanation of Journey Optimizer's real-time event listening capabilities."
+  },
+  {
+    "sample_id": 3,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 explains AEP sandboxes while text_2 is a generic statement about Journey Optimizer's marketer value — no dependency in either direction."
+  },
+  {
+    "sample_id": 4,
+    "assigned_label": 1,
+    "label_correct": false,
+    "reasoning": "text_2 describes using the embedded Adobe Express Editor inside Journey Optimizer, which requires no prior understanding of text_1's general AJO overview to be actionable or understandable."
+  },
+  {
+    "sample_id": 5,
+    "assigned_label": 1,
+    "label_correct": false,
+    "reasoning": "text_2 describes a step-by-step UI workflow for configuring an S3 export (file type, compression), which has no conceptual dependency on text_1's description of Journey Optimizer's omnichannel orchestration capabilities."
+  },
+  {
+    "sample_id": 6,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 is a hands-on demo walkthrough for dataset export connections, while text_2 describes the three main personas in Journey Optimizer — unrelated topics with no dependency."
+  },
+  {
+    "sample_id": 7,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 describes configuring data flow error thresholds in Sources, while text_2 describes AJO's three key capability pillars — topically unrelated with no dependency."
+  },
+  {
+    "sample_id": 8,
+    "assigned_label": 1,
+    "label_correct": false,
+    "reasoning": "text_2 describes a highly specific UI workflow (error thresholds, batch status, dataflow management in Sources) that a reader can fully understand without any knowledge of text_1's high-level AJO overview."
+  },
+  {
+    "sample_id": 9,
+    "assigned_label": 1,
+    "label_correct": false,
+    "reasoning": "text_2 describes using a design team's brand template in an editor with brand controls, which is fully understandable without reading text_1's general description of what Adobe Journey Optimizer is."
+  },
+  {
+    "sample_id": 10,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 describes a file ingestion and schema mapping workflow in AEP, while text_2 describes Journey Optimizer's real-time event listening — no dependency between these topics."
+  },
+  {
+    "sample_id": 11,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 describes a hands-on text editing workflow with brand color controls in an editor, while text_2 describes Journey Optimizer's real-time event triggering — no conceptual link between them."
+  },
+  {
+    "sample_id": 12,
+    "assigned_label": 1,
+    "label_correct": false,
+    "reasoning": "text_2 describes a workflow for simulating Dynamic Media template renders in AJO, which requires no prior reading of text_1's general AJO overview to be understood."
+  },
+  {
+    "sample_id": 13,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 describes creating a content fragment in a drag-and-drop interface, while text_2 describes AJO's three capability pillars — unrelated topics with no dependency."
+  },
+  {
+    "sample_id": 14,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 describes creating a subscription list in AJO, while text_2 describes AJO's high-level capability areas (real-time profile, omnichannel, decisioning) — no dependency."
+  },
+  {
+    "sample_id": 15,
+    "assigned_label": 1,
+    "label_correct": false,
+    "reasoning": "text_2 describes a UI walkthrough for viewing and creating schemas (column sorters, sidebar metadata, JSON sample, schema ID), which has no conceptual dependency on text_1's description of consumer expectations and brand challenges."
+  },
+  {
+    "sample_id": 16,
+    "assigned_label": 1,
+    "label_correct": false,
+    "reasoning": "text_2 describes a specific UI workflow for creating a journey with multilingual email options, which is understandable without reading text_1's description of in-app and SMS personalization capabilities."
+  },
+  {
+    "sample_id": 17,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 describes a specific landing page unsubscription and journey creation workflow, while text_2 is a general AJO overview — neither depends on the other."
+  },
+  {
+    "sample_id": 18,
+    "assigned_label": 1,
+    "label_correct": false,
+    "reasoning": "text_2 describes how to reset a development sandbox in AEP (permissions, navigation, confirmation), which requires no prior understanding of text_1's description of AJO's three value driver capabilities."
+  },
+  {
+    "sample_id": 19,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 describes sandbox permission management for admins, while text_2 describes AJO's API architecture and the marketer persona — no dependency between these topics."
+  },
+  {
+    "sample_id": 20,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 describes cloud storage destination permissions for dataset export, while text_2 describes business challenges driving Journey Optimizer adoption — no dependency."
+  },
+  {
+    "sample_id": 21,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 describes scheduling export frequency settings (daily/hourly), while text_2 describes AJO's API architecture and the marketer persona — no conceptual dependency."
+  },
+  {
+    "sample_id": 22,
+    "assigned_label": 1,
+    "label_correct": false,
+    "reasoning": "text_2 describes a specific task about labeling schema fields as identities and ingesting identity data, which has no direct conceptual dependency on text_1's description of AJO's three high-level value drivers."
+  },
+  {
+    "sample_id": 23,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 describes using the Audience Rule Builder UI in AJO, while text_2 describes AJO's identity resolution and Journey Canvas capabilities — neither depends on the other."
+  },
+  {
+    "sample_id": 24,
+    "assigned_label": 1,
+    "label_correct": false,
+    "reasoning": "text_2 describes a UI workflow for adding assets from AJO's asset integration and resizing/recoloring them, which has no direct dependency on text_1's description of in-app and SMS personalization capabilities."
+  },
+  {
+    "sample_id": 25,
+    "assigned_label": 1,
+    "label_correct": false,
+    "reasoning": "text_2 describes a specific technical task of making REST API calls using Postman with sandbox name headers to retrieve datasets — fully understandable without text_1's vague high-level overview of AJO's marketer value."
+  },
+  {
+    "sample_id": 26,
+    "assigned_label": 1,
+    "label_correct": false,
+    "reasoning": "text_2 describes a UI workflow for checking translation provider status and opening a translation project, which has no conceptual dependency on text_1's description of in-app and SMS personalization in Journey Optimizer."
+  },
+  {
+    "sample_id": 27,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 describes completing a CSV ingestion and verifying a dataset batch in AEP, while text_2 is a generic statement about AJO's marketer value — no dependency."
+  },
+  {
+    "sample_id": 28,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 describes content locking modes in a template editor, while text_2 describes the marketer and data architect personas in Journey Optimizer — no dependency."
+  },
+  {
+    "sample_id": 29,
+    "assigned_label": 1,
+    "label_correct": false,
+    "reasoning": "text_2 describes a UI workflow for publishing translations in AJO (checking Spanish, clicking publish, auto-pasting copy), which has no direct conceptual dependency on text_1's description of Journey Optimizer's real-time event listening and campaign capabilities."
+  },
+  {
+    "sample_id": 30,
+    "assigned_label": 1,
+    "label_correct": false,
+    "reasoning": "text_2 describes creating a fragment via an expression editor to insert a first-name attribute into a subject line, which does not depend on text_1's description of marketer and data architect personas in Journey Optimizer."
+  },
+  {
+    "sample_id": 31,
+    "assigned_label": 1,
+    "label_correct": false,
+    "reasoning": "text_2 describes setting start/end dates for a subscription list and notes that a segment is auto-created — fully understandable without text_1's general description of what Adobe Journey Optimizer is."
+  },
+  {
+    "sample_id": 32,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 describes schema creation prerequisites in AEP, while text_2 describes AJO's API architecture and marketer persona — unrelated topics with no dependency."
+  },
+  {
+    "sample_id": 33,
+    "assigned_label": 1,
+    "label_correct": false,
+    "reasoning": "text_2 describes a specific landing page URL configuration task (domain delegation, expiry date) that is fully actionable without reading text_1's vague high-level statement about AJO's marketer value."
+  },
+  {
+    "sample_id": 34,
+    "assigned_label": 1,
+    "label_correct": false,
+    "reasoning": "text_2 describes content locking template modes (read-only vs. content locking, structure addition options) that are understandable without reading text_1's description of Journey Optimizer's in-app, SMS, and Journey Canvas capabilities."
+  },
+  {
+    "sample_id": 35,
+    "assigned_label": 1,
+    "label_correct": false,
+    "reasoning": "text_2 describes a specific schema creation workflow (choosing a base class, Individual Profile vs. Experience Event), which has no direct conceptual dependency on text_1's description of AJO's identity resolution, Journey Canvas, and message designer."
+  },
+  {
+    "sample_id": 36,
+    "assigned_label": 1,
+    "label_correct": false,
+    "reasoning": "text_2 describes importing existing content into Gen Studio and defining editable fields — fully understandable without text_1's vague high-level statement about AJO's value to the marketer."
+  },
+  {
+    "sample_id": 37,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 describes Gen Studio brand setup and email creation workflow, while text_2 describes AJO's API architecture and marketer persona — no dependency between them."
+  },
+  {
+    "sample_id": 38,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 describes sandbox permission management for admins in Platform, while text_2 describes business challenges and the need for personalized customer journeys — no dependency."
+  },
+  {
+    "sample_id": 39,
+    "assigned_label": 1,
+    "label_correct": false,
+    "reasoning": "text_2 describes a tutorial about integrating AEM Dynamic Media with AJO for real-time content updates — the tutorial overview is self-contained and does not require text_1's general AJO product overview to be understood."
+  },
+  {
+    "sample_id": 40,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 describes setting up a brand in Gen Studio with brand guidelines, while text_2 describes the Admin persona in Journey Optimizer and the homepage navigation — no dependency."
+  },
+  {
+    "sample_id": 41,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 describes field mapping and scheduling in a data ingestion workflow, while text_2 is a general AJO product overview — no dependency."
+  },
+  {
+    "sample_id": 42,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 describes a Gen Studio prompt-based content generation workflow with brand guidelines, while text_2 describes the marketer and data architect personas in Journey Optimizer — no dependency."
+  },
+  {
+    "sample_id": 43,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 describes using the Audience Rule Builder UI in AJO, while text_2 is a general AJO product overview — no dependency in either direction."
+  },
+  {
+    "sample_id": 44,
+    "assigned_label": 1,
+    "label_correct": false,
+    "reasoning": "text_2 describes the prerequisites and UI steps to access the Schemas interface in AEP (permissions, navigation), which has no conceptual dependency on text_1's description of Journey Optimizer's mobile personalization and push notification capabilities."
+  },
+  {
+    "sample_id": 45,
+    "assigned_label": 1,
+    "label_correct": false,
+    "reasoning": "text_2 describes a specific export scheduling configuration workflow (incremental files, daily/hourly), which is fully understandable without reading text_1's general description of what Adobe Journey Optimizer is."
+  },
+  {
+    "sample_id": 46,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 describes schema creation steps (class selection, Individual Profile), while text_2 describes AJO's API architecture and marketer persona — no dependency."
+  },
+  {
+    "sample_id": 47,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 describes viewing and editing a fragment in a content editor, while text_2 is a general AJO product overview — no dependency."
+  },
+  {
+    "sample_id": 48,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 describes confirming dataset data looks correct after creation, while text_2 describes AJO's mobile personalization capabilities — no dependency."
+  },
+  {
+    "sample_id": 49,
+    "assigned_label": 1,
+    "label_correct": false,
+    "reasoning": "text_2 describes scheduling an incremental data export (daily or hourly frequency), which is a specific technical task with no conceptual dependency on text_1's description of consumer expectations and brand journey challenges."
+  },
+  {
+    "sample_id": 50,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 describes the landing page content designer UI in AJO, while text_2 describes Journey Optimizer's real-time event listening and journey triggering — no dependency."
+  }
+]

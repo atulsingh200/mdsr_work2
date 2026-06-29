@@ -1,0 +1,30 @@
+# Evaluate CrossEncoder-2x on all 5 trained datasets with both negative strategies.
+# Run with:
+#   uv run python scripts/run_eval.py --config configs/cross_encoder_2x_all_datasets.yaml
+
+models:
+  - type: cross_encoder_2x
+    checkpoint: my_work/kl/cross_encoder_2x/results/aep_causal/checkpoint_best.pt
+
+datasets:
+  - aep_causal
+  - qrecc
+  - followupqg
+  - multiwoz_v24
+
+splits:
+  - test
+
+negatives:
+  - random
+  - bm25
+
+eval:
+  pool_size: 1000
+  k_negatives: 4
+  seed: 42
+  k_values: [1, 3, 5, 10]
+  max_queries: 0
+
+output:
+  dir: results/cross_encoder_2x_all_datasets

@@ -1,0 +1,90 @@
+13:18:27 INFO run_dir=/mnt/localssd/baseline_sweep/runs/aep_dataset/deberta-v3-large
+13:18:27 INFO device=cuda:0  bf16=False  physical_gpu=1  CUDA_VISIBLE_DEVICES=1
+13:18:27 INFO dataset=aep_dataset  model=deberta-v3-large  backbone=microsoft/deberta-v3-large
+13:18:27 INFO tokenizer <- microsoft/deberta-v3-large
+13:18:28 INFO split files: ['directional_train.jsonl', 'directional_val.jsonl', 'directional_test.jsonl']
+13:18:28 INFO scanning max token length across all splits ...
+13:19:41 INFO   observed_max=4359 -> max_seq_len=512 (cap=512, scan=72.9s)
+13:19:41 INFO loading datasets ...
+13:19:42 INFO   schema=standard  train=67500  val=8460  test=8460
+13:19:42 INFO building DirectionalClassifier  backbone=microsoft/deberta-v3-large  head=MLP(4d->512->128->1, act=gelu, norm=layer, dropout=0.1)  n_tiers=0
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/390 [00:00<?, ?it/s]Loading weights: 100%|██████████| 390/390 [00:00<00:00, 27672.06it/s]
+[transformers] [1mDebertaV2Model LOAD REPORT[0m from: microsoft/deberta-v3-large
+Key                                     | Status     |  | 
+----------------------------------------+------------+--+-
+lm_predictions.lm_head.bias             | UNEXPECTED |  | 
+mask_predictions.classifier.weight      | UNEXPECTED |  | 
+lm_predictions.lm_head.dense.bias       | UNEXPECTED |  | 
+mask_predictions.LayerNorm.bias         | UNEXPECTED |  | 
+lm_predictions.lm_head.LayerNorm.weight | UNEXPECTED |  | 
+mask_predictions.dense.bias             | UNEXPECTED |  | 
+mask_predictions.classifier.bias        | UNEXPECTED |  | 
+mask_predictions.dense.weight           | UNEXPECTED |  | 
+lm_predictions.lm_head.LayerNorm.bias   | UNEXPECTED |  | 
+lm_predictions.lm_head.dense.weight     | UNEXPECTED |  | 
+mask_predictions.LayerNorm.weight       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Loading weights:   0%|          | 0/390 [00:00<?, ?it/s]Loading weights: 100%|██████████| 390/390 [00:00<00:00, 32241.62it/s]
+[transformers] [1mDebertaV2Model LOAD REPORT[0m from: microsoft/deberta-v3-large
+Key                                     | Status     |  | 
+----------------------------------------+------------+--+-
+lm_predictions.lm_head.bias             | UNEXPECTED |  | 
+mask_predictions.classifier.weight      | UNEXPECTED |  | 
+lm_predictions.lm_head.dense.bias       | UNEXPECTED |  | 
+mask_predictions.LayerNorm.bias         | UNEXPECTED |  | 
+lm_predictions.lm_head.LayerNorm.weight | UNEXPECTED |  | 
+mask_predictions.dense.bias             | UNEXPECTED |  | 
+mask_predictions.classifier.bias        | UNEXPECTED |  | 
+mask_predictions.dense.weight           | UNEXPECTED |  | 
+lm_predictions.lm_head.LayerNorm.bias   | UNEXPECTED |  | 
+lm_predictions.lm_head.dense.weight     | UNEXPECTED |  | 
+mask_predictions.LayerNorm.weight       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+13:19:47 INFO   hidden_size=1024  trainable_params=870,197,249
+13:19:47 INFO   total_steps=33752  warmup_steps=3375
+13:20:45 INFO   e1 step    50/8438  loss=0.8325  acc=0.5550  lr0=2.96e-07 lr1=1.48e-05
+13:21:38 INFO   e1 step   100/8438  loss=0.8273  acc=0.5238  lr0=5.93e-07 lr1=2.96e-05
+13:22:31 INFO   e1 step   150/8438  loss=0.8030  acc=0.5200  lr0=8.89e-07 lr1=4.44e-05
+13:23:28 INFO   e1 step   200/8438  loss=0.7942  acc=0.5169  lr0=1.19e-06 lr1=5.93e-05
+13:24:20 INFO   e1 step   250/8438  loss=0.7842  acc=0.5185  lr0=1.48e-06 lr1=7.41e-05
+13:25:13 INFO   e1 step   300/8438  loss=0.7728  acc=0.5217  lr0=1.78e-06 lr1=8.89e-05
+13:26:05 INFO   e1 step   350/8438  loss=0.7618  acc=0.5289  lr0=2.07e-06 lr1=1.04e-04
+13:27:02 INFO   e1 step   400/8438  loss=0.7528  acc=0.5391  lr0=2.37e-06 lr1=1.19e-04
+13:27:56 INFO   e1 step   450/8438  loss=0.7390  acc=0.5528  lr0=2.67e-06 lr1=1.33e-04
+13:28:52 INFO   e1 step   500/8438  loss=0.7289  acc=0.5657  lr0=2.96e-06 lr1=1.48e-04
+13:29:46 INFO   e1 step   550/8438  loss=0.7137  acc=0.5805  lr0=3.26e-06 lr1=1.63e-04
+13:30:41 INFO   e1 step   600/8438  loss=0.6988  acc=0.5931  lr0=3.56e-06 lr1=1.78e-04
+13:31:38 INFO   e1 step   650/8438  loss=0.6887  acc=0.6027  lr0=3.85e-06 lr1=1.93e-04
+13:32:37 INFO   e1 step   700/8438  loss=0.6825  acc=0.6095  lr0=4.15e-06 lr1=2.07e-04
+13:33:32 INFO   e1 step   750/8438  loss=0.6667  acc=0.6230  lr0=4.44e-06 lr1=2.22e-04
+13:34:30 INFO   e1 step   800/8438  loss=0.6621  acc=0.6311  lr0=4.74e-06 lr1=2.37e-04
+13:35:25 INFO   e1 step   850/8438  loss=0.6518  acc=0.6410  lr0=5.04e-06 lr1=2.52e-04
+13:36:23 INFO   e1 step   900/8438  loss=0.6397  acc=0.6515  lr0=5.33e-06 lr1=2.67e-04
+13:37:17 INFO   e1 step   950/8438  loss=0.6316  acc=0.6588  lr0=5.63e-06 lr1=2.81e-04
+13:38:14 INFO   e1 step  1000/8438  loss=0.6231  acc=0.6666  lr0=5.93e-06 lr1=2.96e-04
+13:39:11 INFO   e1 step  1050/8438  loss=0.6128  acc=0.6735  lr0=6.22e-06 lr1=3.11e-04
+13:40:06 INFO   e1 step  1100/8438  loss=0.6057  acc=0.6798  lr0=6.52e-06 lr1=3.26e-04
+13:41:03 INFO   e1 step  1150/8438  loss=0.5998  acc=0.6845  lr0=6.81e-06 lr1=3.41e-04
+13:41:57 INFO   e1 step  1200/8438  loss=0.5955  acc=0.6893  lr0=7.11e-06 lr1=3.56e-04
+13:42:52 INFO   e1 step  1250/8438  loss=0.5871  acc=0.6952  lr0=7.41e-06 lr1=3.70e-04
+13:43:48 INFO   e1 step  1300/8438  loss=0.5819  acc=0.6992  lr0=7.70e-06 lr1=3.85e-04
+13:44:40 INFO   e1 step  1350/8438  loss=0.5765  acc=0.7032  lr0=8.00e-06 lr1=4.00e-04
+13:45:34 INFO   e1 step  1400/8438  loss=0.5704  acc=0.7076  lr0=8.30e-06 lr1=4.15e-04
+13:46:30 INFO   e1 step  1450/8438  loss=0.5666  acc=0.7111  lr0=8.59e-06 lr1=4.30e-04
+13:47:26 INFO   e1 step  1500/8438  loss=0.5624  acc=0.7143  lr0=8.89e-06 lr1=4.44e-04
+13:48:23 INFO   e1 step  1550/8438  loss=0.5561  acc=0.7181  lr0=9.19e-06 lr1=4.59e-04
+13:49:19 INFO   e1 step  1600/8438  loss=0.5521  acc=0.7213  lr0=9.48e-06 lr1=4.74e-04
+13:50:15 INFO   e1 step  1650/8438  loss=0.5458  acc=0.7255  lr0=9.78e-06 lr1=4.89e-04
+13:51:09 INFO   e1 step  1700/8438  loss=0.5384  acc=0.7296  lr0=1.01e-05 lr1=5.04e-04
+13:52:03 INFO   e1 step  1750/8438  loss=0.5339  acc=0.7332  lr0=1.04e-05 lr1=5.19e-04
+13:52:56 INFO   e1 step  1800/8438  loss=0.5298  acc=0.7360  lr0=1.07e-05 lr1=5.33e-04
+13:53:49 INFO   e1 step  1850/8438  loss=0.5272  acc=0.7389  lr0=1.10e-05 lr1=5.48e-04
+13:54:46 INFO   e1 step  1900/8438  loss=0.5250  acc=0.7412  lr0=1.13e-05 lr1=5.63e-04
+13:55:42 INFO   e1 step  1950/8438  loss=0.5204  acc=0.7442  lr0=1.16e-05 lr1=5.78e-04
+13:56:37 INFO   e1 step  2000/8438  loss=0.5185  acc=0.7464  lr0=1.19e-05 lr1=5.93e-04
+13:57:34 INFO   e1 step  2050/8438  loss=0.5157  acc=0.7490  lr0=1.21e-05 lr1=6.07e-04

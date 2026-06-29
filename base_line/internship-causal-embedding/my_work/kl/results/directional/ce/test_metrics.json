@@ -1,0 +1,52 @@
+{
+  "test": {
+    "acc": 0.8552631578947368,
+    "auc": 0.8892191131516294,
+    "f1": 0.8528365791701947
+  },
+  "val_best_acc": 0.8824117255163224,
+  "history": [
+    {
+      "epoch": 1,
+      "train_acc": 0.9112615662378696,
+      "val_acc": 0.868421052631579,
+      "val_auc": 0.9115145658673347,
+      "val_f1": 0.8713774014978835
+    },
+    {
+      "epoch": 2,
+      "train_acc": 0.9878853531934101,
+      "val_acc": 0.8784143904063957,
+      "val_auc": 0.9120332395055849,
+      "val_f1": 0.8806799607714939
+    },
+    {
+      "epoch": 3,
+      "train_acc": 0.9909997743173099,
+      "val_acc": 0.8824117255163224,
+      "val_auc": 0.9127107281596336,
+      "val_f1": 0.884224335847819
+    }
+  ],
+  "config": {
+    "arch": "ce",
+    "backbone": "google-bert/bert-base-uncased",
+    "warm_ckpt": "/mnt/localssd/internship-causal-embedding-merge-followup/my_work/kl/results/aep_causal/cde_v2_run5c_best.pt",
+    "epochs": 3,
+    "batch_size": 32,
+    "lr": 2e-05,
+    "head_lr": 0.001,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.1,
+    "max_length": 512,
+    "grad_clip": 1.0,
+    "num_workers": 4,
+    "limit": null,
+    "out_suffix": ""
+  },
+  "reference": {
+    "acc": 0.8571,
+    "auc": 0.9031,
+    "f1": 0.8558
+  }
+}

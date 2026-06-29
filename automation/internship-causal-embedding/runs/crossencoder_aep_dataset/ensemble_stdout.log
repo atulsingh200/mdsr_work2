@@ -1,0 +1,13 @@
+[test] aligned 8460 shared rows (sem=8460, ind=8460)
+[val] aligned 8460 shared rows (sem=18696, ind=18696)
+
+==================== ENSEMBLE TEST RESULTS ====================
+  CE-semantic alone        acc=0.9196  auc=0.9493  f1=0.9198
+  CE-indomain alone        acc=0.9113  auc=0.9426  f1=0.9130
+  blend mean (0.5)         acc=0.9200  auc=0.9549  f1=0.9215
+  blend best a=0.50        acc=0.9200  auc=0.9549  f1=0.9215
+  dual-encoder baseline    acc=0.9243  auc=0.9513  f1=0.9257
+  (best alpha 0.50 chosen on val, val_acc=0.9557)
+===============================================================
+
+[ensemble] wrote runs/crossencoder_aep_dataset/ensemble_metrics.json

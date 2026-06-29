@@ -1,0 +1,273 @@
+/mnt/localssd/automation/internship-causal-embedding/data/aep_causal_classification_34
+
+/mnt/localssd/automation/internship-causal-embedding/runs/classifier/best_mlp_bge_small
+
+/mnt/localssd/automation/internship-causal-embedding/src/followup_data/builders/build_classification_data.py
+
+here we have the main build file that we have used to build the dataset but the issue we have is that model is performing good on the test set but when we have some general example and checking whether model has actuallu learned causality or not then in that case it. fails like. we get 2/30 and we give a 6 step workflow to rearrange then it is unable to do so
+/mnt/localssd/test_samples_milan_scored_biencoder.json
+
+(follow-up-causal-embeddings) colligo@pluto-prod-atul1-new-1-0:/mnt/localssd$ python3 score_milan_biencoder.py --test-ajo
+device=cuda  bf16=True
+loading checkpoint <- /mnt/localssd/automation/internship-causal-embedding/runs/classifier/best_mlp_bge_small/best.pt
+base_model=BAAI/bge-small-en-v1.5  head=MLP(4d->512->128->1, act=gelu, norm=layer, dropout=0.1)  n_tiers=0  max_seq_len=524
+Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 199/199 [00:00<00:00, 10268.40it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 199/199 [00:00<00:00, 8682.41it/s]
+loaded 30 AJO samples from /mnt/localssd/ajo_orchestrated_workflows_flat.json  (bi-encoder)
+scoring 6 directed pairs per sample (both directions for each unordered pair) ...
+
+[sample 1]  predicted: ['t3', 't1', 't2']  [WRONG]
+t1->t2  score=0.0206  pred=0
+t1->t3  score=0.0000  pred=0
+t2->t1  score=0.0012  pred=0
+t2->t3  score=0.0016  pred=0
+t3->t1  score=1.0000  pred=1
+t3->t2  score=1.0000  pred=1
+
+[sample 2]  predicted: ['t2', 't1', 't3']  [WRONG]
+t1->t2  score=0.0008  pred=0
+t1->t3  score=0.0952  pred=0
+t2->t1  score=1.0000  pred=1
+t2->t3  score=1.0000  pred=1
+t3->t1  score=0.0260  pred=0
+t3->t2  score=0.0002  pred=0
+
+[sample 3]  predicted: ['t2', 't3', 't1']  [WRONG]
+t1->t2  score=0.0000  pred=0
+t1->t3  score=0.0000  pred=0
+t2->t1  score=1.0000  pred=1
+t2->t3  score=1.0000  pred=1
+t3->t1  score=1.0000  pred=1
+t3->t2  score=0.0000  pred=0
+
+[sample 4]  predicted: ['t3', 't2', 't1']  [WRONG]
+t1->t2  score=0.4395  pred=0
+t1->t3  score=0.9453  pred=1
+t2->t1  score=0.9961  pred=1
+t2->t3  score=0.9609  pred=1
+t3->t1  score=1.0000  pred=1
+t3->t2  score=1.0000  pred=1
+
+[sample 5]  predicted: ['t3', 't1', 't2']  [WRONG]
+t1->t2  score=1.0000  pred=1
+t1->t3  score=0.0000  pred=0
+t2->t1  score=0.0000  pred=0
+t2->t3  score=0.0000  pred=0
+t3->t1  score=0.3535  pred=0
+t3->t2  score=1.0000  pred=1
+
+[sample 6]  predicted: ['t1', 't3', 't2']  [WRONG]
+t1->t2  score=1.0000  pred=1
+t1->t3  score=1.0000  pred=1
+t2->t1  score=0.0002  pred=0
+t2->t3  score=0.0000  pred=0
+t3->t1  score=0.5156  pred=1
+t3->t2  score=1.0000  pred=1
+
+[sample 7]  predicted: ['t3', 't2', 't1']  [WRONG]
+t1->t2  score=0.0001  pred=0
+t1->t3  score=0.0000  pred=0
+t2->t1  score=1.0000  pred=1
+t2->t3  score=0.0005  pred=0
+t3->t1  score=1.0000  pred=1
+t3->t2  score=1.0000  pred=1
+
+[sample 8]  predicted: ['t2', 't1', 't3']  [WRONG]
+t1->t2  score=0.0136  pred=0
+t1->t3  score=1.0000  pred=1
+t2->t1  score=1.0000  pred=1
+t2->t3  score=1.0000  pred=1
+t3->t1  score=0.0415  pred=0
+t3->t2  score=0.0001  pred=0
+
+[sample 9]  predicted: ['t1', 't2', 't3']  [CORRECT]
+t1->t2  score=1.0000  pred=1
+t1->t3  score=0.9883  pred=1
+t2->t1  score=0.0021  pred=0
+t2->t3  score=0.0014  pred=0
+t3->t1  score=0.0004  pred=0
+t3->t2  score=0.0001  pred=0
+
+[sample 10]  predicted: ['t3', 't1', 't2']  [WRONG]
+t1->t2  score=0.0000  pred=0
+t1->t3  score=0.0000  pred=0
+t2->t1  score=0.0000  pred=0
+t2->t3  score=0.0000  pred=0
+t3->t1  score=1.0000  pred=1
+t3->t2  score=1.0000  pred=1
+
+[sample 11]  predicted: ['t1', 't3', 't2']  [WRONG]
+t1->t2  score=1.0000  pred=1
+t1->t3  score=1.0000  pred=1
+t2->t1  score=0.0000  pred=0
+t2->t3  score=0.0000  pred=0
+t3->t1  score=1.0000  pred=1
+t3->t2  score=1.0000  pred=1
+
+[sample 12]  predicted: ['t2', 't1', 't3']  [WRONG]
+t1->t2  score=0.0009  pred=0
+t1->t3  score=1.0000  pred=1
+t2->t1  score=1.0000  pred=1
+t2->t3  score=1.0000  pred=1
+t3->t1  score=0.0000  pred=0
+t3->t2  score=0.0000  pred=0
+
+[sample 13]  predicted: ['t3', 't2', 't1']  [WRONG]
+t1->t2  score=0.0016  pred=0
+t1->t3  score=0.0000  pred=0
+t2->t1  score=1.0000  pred=1
+t2->t3  score=0.0000  pred=0
+t3->t1  score=1.0000  pred=1
+t3->t2  score=1.0000  pred=1
+
+[sample 14]  predicted: ['t1', 't3', 't2']  [WRONG]
+t1->t2  score=1.0000  pred=1
+t1->t3  score=1.0000  pred=1
+t2->t1  score=0.0003  pred=0
+t2->t3  score=0.0284  pred=0
+t3->t1  score=1.0000  pred=1
+t3->t2  score=1.0000  pred=1
+
+[sample 15]  predicted: ['t1', 't3', 't2']  [WRONG]
+t1->t2  score=1.0000  pred=1
+t1->t3  score=1.0000  pred=1
+t2->t1  score=0.0000  pred=0
+t2->t3  score=0.0000  pred=0
+t3->t1  score=0.4316  pred=0
+t3->t2  score=1.0000  pred=1
+
+[sample 16]  predicted: ['t2', 't3', 't1']  [WRONG]
+t1->t2  score=0.0000  pred=0
+t1->t3  score=0.0000  pred=0
+t2->t1  score=1.0000  pred=1
+t2->t3  score=0.9883  pred=1
+t3->t1  score=1.0000  pred=1
+t3->t2  score=0.0549  pred=0
+
+[sample 17]  predicted: ['t2', 't1', 't3']  [WRONG]
+t1->t2  score=0.0000  pred=0
+t1->t3  score=0.9102  pred=1
+t2->t1  score=1.0000  pred=1
+t2->t3  score=1.0000  pred=1
+t3->t1  score=0.0154  pred=0
+t3->t2  score=0.0000  pred=0
+
+[sample 18]  predicted: ['t3', 't2', 't1']  [WRONG]
+t1->t2  score=0.0000  pred=0
+t1->t3  score=0.0000  pred=0
+t2->t1  score=0.9453  pred=1
+t2->t3  score=0.0001  pred=0
+t3->t1  score=1.0000  pred=1
+t3->t2  score=1.0000  pred=1
+
+[sample 19]  predicted: ['t2', 't1', 't3']  [WRONG]
+t1->t2  score=0.0008  pred=0
+t1->t3  score=1.0000  pred=1
+t2->t1  score=1.0000  pred=1
+t2->t3  score=1.0000  pred=1
+t3->t1  score=0.0000  pred=0
+t3->t2  score=0.0000  pred=0
+
+[sample 20]  predicted: ['t2', 't1', 't3']  [WRONG]
+t1->t2  score=0.0737  pred=0
+t1->t3  score=1.0000  pred=1
+t2->t1  score=1.0000  pred=1
+t2->t3  score=1.0000  pred=1
+t3->t1  score=1.0000  pred=1
+t3->t2  score=0.9688  pred=1
+
+[sample 21]  predicted: ['t1', 't2', 't3']  [CORRECT]
+t1->t2  score=1.0000  pred=1
+t1->t3  score=1.0000  pred=1
+t2->t1  score=0.0012  pred=0
+t2->t3  score=1.0000  pred=1
+t3->t1  score=0.0002  pred=0
+t3->t2  score=0.9883  pred=1
+
+[sample 22]  predicted: ['t3', 't1', 't2']  [WRONG]
+t1->t2  score=0.8281  pred=1
+t1->t3  score=0.0001  pred=0
+t2->t1  score=0.6602  pred=1
+t2->t3  score=0.2217  pred=0
+t3->t1  score=1.0000  pred=1
+t3->t2  score=0.9609  pred=1
+
+[sample 23]  predicted: ['t2', 't1', 't3']  [WRONG]
+t1->t2  score=0.0008  pred=0
+t1->t3  score=1.0000  pred=1
+t2->t1  score=1.0000  pred=1
+t2->t3  score=1.0000  pred=1
+t3->t1  score=0.0020  pred=0
+t3->t2  score=0.0001  pred=0
+
+[sample 24]  predicted: ['t3', 't2', 't1']  [WRONG]
+t1->t2  score=0.0000  pred=0
+t1->t3  score=0.0000  pred=0
+t2->t1  score=1.0000  pred=1
+t2->t3  score=0.0000  pred=0
+t3->t1  score=1.0000  pred=1
+t3->t2  score=1.0000  pred=1
+
+[sample 25]  predicted: ['t1', 't3', 't2']  [WRONG]
+t1->t2  score=1.0000  pred=1
+t1->t3  score=1.0000  pred=1
+t2->t1  score=0.0000  pred=0
+t2->t3  score=0.0000  pred=0
+t3->t1  score=0.0000  pred=0
+t3->t2  score=1.0000  pred=1
+
+[sample 26]  predicted: ['t2', 't3', 't1']  [WRONG]
+t1->t2  score=0.0378  pred=0
+t1->t3  score=0.0004  pred=0
+t2->t1  score=1.0000  pred=1
+t2->t3  score=0.2656  pred=0
+t3->t1  score=1.0000  pred=1
+t3->t2  score=0.0117  pred=0
+
+[sample 27]  predicted: ['t2', 't3', 't1']  [WRONG]
+t1->t2  score=0.0000  pred=0
+t1->t3  score=0.0097  pred=0
+t2->t1  score=1.0000  pred=1
+t2->t3  score=1.0000  pred=1
+t3->t1  score=1.0000  pred=1
+t3->t2  score=0.0000  pred=0
+
+[sample 28]  predicted: ['t2', 't3', 't1']  [WRONG]
+t1->t2  score=0.0000  pred=0
+t1->t3  score=0.0000  pred=0
+t2->t1  score=1.0000  pred=1
+t2->t3  score=1.0000  pred=1
+t3->t1  score=1.0000  pred=1
+t3->t2  score=0.0002  pred=0
+
+[sample 29]  predicted: ['t3', 't2', 't1']  [WRONG]
+t1->t2  score=0.6484  pred=1
+t1->t3  score=0.0001  pred=0
+t2->t1  score=1.0000  pred=1
+t2->t3  score=0.2334  pred=0
+t3->t1  score=1.0000  pred=1
+t3->t2  score=1.0000  pred=1
+
+[sample 30]  predicted: ['t3', 't1', 't2']  [WRONG]
+t1->t2  score=1.0000  pred=1
+t1->t3  score=0.9844  pred=1
+t2->t1  score=0.0041  pred=0
+t2->t3  score=0.0000  pred=0
+t3->t1  score=0.9961  pred=1
+t3->t2  score=1.0000  pred=1
+
+ordering accuracy: 2/30 samples correctly ordered
+
+wrote results to /mnt/localssd/ajo_doc_dataset.json
+(follow-up-causal-embeddings) colligo@pluto-prod-atul1-new-1-0:/mnt/localssd$
+
+so ig the model is not learning correct causality for which ig our data is the issue see what is the main issue with our dataset and training for which model is not able to generalise
+
+one more thing that when i test the same model with these samples it gives a score of 10/10
+
+/mnt/localssd/new_10_samples.json this is the output file
+
+/mnt/localssd/tier_ordering_eval_10_clean.json this was the. input
+
+/mnt/localssd/score_milan_biencoder.py file used to score them

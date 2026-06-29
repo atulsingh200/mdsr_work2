@@ -1,0 +1,216 @@
+{
+  "results": [
+    {
+      "dataset": "aep_causal",
+      "checkpoint": "lorentz_enc_results_e5_dir/aep_causal/lorentz_best.pt",
+      "backbone": "intfloat/e5-base-v2",
+      "space_dim": 768,
+      "time_dim": 32,
+      "n_test_pairs": 562,
+      "encoding_seconds": 3.7049245834350586,
+      "auc": 0.9735059079798888,
+      "precision_at_1": 0.9306049822064056,
+      "mrr": 0.38371124524800515,
+      "mean_rank": 14.96085409252669,
+      "median_rank": 4.0,
+      "recall_at_k": {
+        "1": 0.1903914590747331,
+        "3": 0.49644128113879005,
+        "5": 0.6174377224199288,
+        "10": 0.7669039145907474
+      },
+      "hit_at_k": {
+        "1": 0.1903914590747331,
+        "3": 0.49644128113879005,
+        "5": 0.6174377224199288,
+        "10": 0.7669039145907474
+      },
+      "n_candidates_per_query": 562,
+      "directional_acc": 0.4715302586555481,
+      "directional_margin": -0.007189612369984388,
+      "mrr_combined": 0.42208768331055324,
+      "median_rank_combined": 4.0,
+      "recall_at_k_combined": {
+        "1": 0.26334519572953735,
+        "3": 0.4875444839857651,
+        "5": 0.6227758007117438,
+        "10": 0.7704626334519573
+      },
+      "beta_eval": 0.5
+    },
+    {
+      "dataset": "followupqg",
+      "checkpoint": "lorentz_enc_results_e5_dir/followupqg/lorentz_best.pt",
+      "backbone": "intfloat/e5-base-v2",
+      "space_dim": 768,
+      "time_dim": 32,
+      "n_test_pairs": 501,
+      "encoding_seconds": 2.8680169582366943,
+      "auc": 0.9921036171170632,
+      "precision_at_1": 0.9780439121756487,
+      "mrr": 0.6790988798884594,
+      "mean_rank": 4.582834331337326,
+      "median_rank": 1.0,
+      "recall_at_k": {
+        "1": 0.5149700598802395,
+        "3": 0.8163672654690619,
+        "5": 0.8762475049900199,
+        "10": 0.9161676646706587
+      },
+      "hit_at_k": {
+        "1": 0.5149700598802395,
+        "3": 0.8163672654690619,
+        "5": 0.8762475049900199,
+        "10": 0.9161676646706587
+      },
+      "n_candidates_per_query": 501,
+      "directional_acc": 0.401197612285614,
+      "directional_margin": -0.017779354006052017,
+      "mrr_combined": 0.7473342073034585,
+      "median_rank_combined": 1.0,
+      "recall_at_k_combined": {
+        "1": 0.656686626746507,
+        "3": 0.8043912175648703,
+        "5": 0.8642714570858283,
+        "10": 0.9161676646706587
+      },
+      "beta_eval": 0.5
+    },
+    {
+      "dataset": "multiwoz_v24",
+      "checkpoint": "lorentz_enc_results_e5_dir/multiwoz_v24/lorentz_best.pt",
+      "backbone": "intfloat/e5-base-v2",
+      "space_dim": 768,
+      "time_dim": 32,
+      "n_test_pairs": 7368,
+      "encoding_seconds": 25.422003984451294,
+      "auc": 0.9579420065133317,
+      "precision_at_1": 0.880971769815418,
+      "mrr": 0.2893258350341631,
+      "mean_rank": 38.38192182410423,
+      "median_rank": 12.0,
+      "recall_at_k": {
+        "1": 0.19353963083604778,
+        "3": 0.3133821932681867,
+        "5": 0.373914223669924,
+        "10": 0.4831704668838219
+      },
+      "hit_at_k": {
+        "1": 0.19353963083604778,
+        "3": 0.3133821932681867,
+        "5": 0.373914223669924,
+        "10": 0.4831704668838219
+      },
+      "n_candidates_per_query": 1000,
+      "directional_acc": 0.3853148818016052,
+      "directional_margin": -0.02498534321784973,
+      "mrr_combined": 0.27691388668121675,
+      "median_rank_combined": 12.0,
+      "recall_at_k_combined": {
+        "1": 0.18200325732899023,
+        "3": 0.2945168295331162,
+        "5": 0.36577090119435396,
+        "10": 0.46919109663409336
+      },
+      "beta_eval": 0.5
+    },
+    {
+      "dataset": "qrecc",
+      "checkpoint": "lorentz_enc_results_e5_dir/qrecc/lorentz_best.pt",
+      "backbone": "intfloat/e5-base-v2",
+      "space_dim": 768,
+      "time_dim": 32,
+      "n_test_pairs": 5204,
+      "encoding_seconds": 16.189825773239136,
+      "auc": 0.9405854048739191,
+      "precision_at_1": 0.8307071483474251,
+      "mrr": 0.29731433322285455,
+      "mean_rank": 58.30034588777863,
+      "median_rank": 11.0,
+      "recall_at_k": {
+        "1": 0.19542659492697925,
+        "3": 0.33531898539584937,
+        "5": 0.40103766333589547,
+        "10": 0.4928900845503459
+      },
+      "hit_at_k": {
+        "1": 0.19542659492697925,
+        "3": 0.33531898539584937,
+        "5": 0.40103766333589547,
+        "10": 0.4928900845503459
+      },
+      "n_candidates_per_query": 1000,
+      "directional_acc": 0.429477334022522,
+      "directional_margin": -0.015282285399734974,
+      "mrr_combined": 0.28741986171238654,
+      "median_rank_combined": 12.0,
+      "recall_at_k_combined": {
+        "1": 0.18831667947732514,
+        "3": 0.32186779400461185,
+        "5": 0.3816295157571099,
+        "10": 0.4846272098385857
+      },
+      "beta_eval": 0.5
+    },
+    {
+      "dataset": "workflow",
+      "checkpoint": "lorentz_enc_results_e5_dir/workflow/lorentz_best.pt",
+      "backbone": "intfloat/e5-base-v2",
+      "space_dim": 768,
+      "time_dim": 32,
+      "n_test_pairs": 260487,
+      "encoding_seconds": 459.8912630081177,
+      "auc": 0.978494980675557,
+      "precision_at_1": 0.9361925931044544,
+      "mrr": 0.5969132685454475,
+      "mean_rank": 22.36202574408704,
+      "median_rank": 1.0,
+      "recall_at_k": {
+        "1": 0.5076644899745477,
+        "3": 0.6456905718903438,
+        "5": 0.6979235048198182,
+        "10": 0.76203802876919
+      },
+      "hit_at_k": {
+        "1": 0.5076644899745477,
+        "3": 0.6456905718903438,
+        "5": 0.6979235048198182,
+        "10": 0.76203802876919
+      },
+      "n_candidates_per_query": 1000,
+      "directional_acc": 0.47915250062942505,
+      "directional_margin": -0.0048028710298240185,
+      "mrr_combined": 0.5851860855690623,
+      "median_rank_combined": 2.0,
+      "recall_at_k_combined": {
+        "1": 0.4941014330849524,
+        "3": 0.6347648827004803,
+        "5": 0.6883452917036167,
+        "10": 0.7538725541005885
+      },
+      "beta_eval": 0.5
+    }
+  ],
+  "baseline": {
+    "aep_causal": {
+      "mrr": 0.3525,
+      "auc": 0.9712
+    },
+    "followupqg": {
+      "mrr": 0.5844,
+      "auc": 0.9827
+    },
+    "multiwoz_v24": {
+      "mrr": 0.2493,
+      "auc": 0.9526
+    },
+    "qrecc": {
+      "mrr": 0.2758,
+      "auc": 0.9227
+    },
+    "workflow": {
+      "mrr": 0.55,
+      "auc": 0.9662
+    }
+  }
+}

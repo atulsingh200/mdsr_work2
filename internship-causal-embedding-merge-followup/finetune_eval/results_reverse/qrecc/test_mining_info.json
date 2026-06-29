@@ -1,0 +1,8 @@
+{
+  "dataset": "qrecc",
+  "split": "test",
+  "n_pairs": 5204,
+  "hard_neg_type": "reverse_direction (hard_neg = anchor)",
+  "elapsed_seconds": 0.05351614952087402,
+  "pairs_path": "/mnt/localssd/internship-causal-embedding-merge-followup/finetune_eval/results_reverse/qrecc/test_pairs.jsonl"
+}

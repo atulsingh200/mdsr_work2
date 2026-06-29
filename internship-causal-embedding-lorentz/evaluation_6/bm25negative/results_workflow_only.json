@@ -1,0 +1,91 @@
+{
+  "config": {
+    "models": {
+      "all-MiniLM-L6-v2": {
+        "hf_id": "sentence-transformers/all-MiniLM-L6-v2",
+        "pooling": "mean",
+        "max_seq_length": 256
+      },
+      "bert-base-uncased": {
+        "hf_id": "google-bert/bert-base-uncased",
+        "pooling": "cls",
+        "max_seq_length": 512
+      }
+    },
+    "datasets": {
+      "workflow": "/mnt/localssd/base_line/internship-causal-embedding/data_6/workflow/test_pairs.jsonl"
+    },
+    "candidate_pool_size": 1000,
+    "n_negatives": 4,
+    "bm25_corpus_size": 10000,
+    "max_bm25_queries": 10000,
+    "k_values": [
+      1,
+      3,
+      5,
+      10
+    ],
+    "batch_size": 128,
+    "seed": 0
+  },
+  "results": [
+    {
+      "model": "all-MiniLM-L6-v2",
+      "model_hf_id": "sentence-transformers/all-MiniLM-L6-v2",
+      "dataset": "workflow",
+      "n_queries": 260487,
+      "n_bm25_queries": 10000,
+      "bm25_corpus_size": 10000,
+      "n_candidates_per_query": 1000,
+      "encoding_seconds": 112.77806878089905,
+      "ranking_seconds": 5.123607158660889,
+      "bm25_auc": 0.49817719250000003,
+      "bm25_precision_at_1": 0.3017,
+      "n_negatives": 4,
+      "mrr": 0.39866469051373055,
+      "mean_rank": 95.49765247401982,
+      "median_rank": 6.0,
+      "recall_at_k": {
+        "1": 0.31092914425671914,
+        "3": 0.43685097528859407,
+        "5": 0.49358317305662086,
+        "10": 0.5672336815272931
+      },
+      "hit_at_k": {
+        "1": 0.31092914425671914,
+        "3": 0.43685097528859407,
+        "5": 0.49358317305662086,
+        "10": 0.5672336815272931
+      }
+    },
+    {
+      "model": "bert-base-uncased",
+      "model_hf_id": "google-bert/bert-base-uncased",
+      "dataset": "workflow",
+      "n_queries": 260487,
+      "n_bm25_queries": 10000,
+      "bm25_corpus_size": 10000,
+      "n_candidates_per_query": 1000,
+      "encoding_seconds": 448.17687249183655,
+      "ranking_seconds": 5.718808174133301,
+      "bm25_auc": 0.5325371975000001,
+      "bm25_precision_at_1": 0.2636,
+      "n_negatives": 4,
+      "mrr": 0.16600795395550005,
+      "mean_rank": 179.06866369530917,
+      "median_rank": 70.0,
+      "recall_at_k": {
+        "1": 0.11309201610828948,
+        "3": 0.17328311969503277,
+        "5": 0.20725410481137255,
+        "10": 0.26245071731026887
+      },
+      "hit_at_k": {
+        "1": 0.11309201610828948,
+        "3": 0.17328311969503277,
+        "5": 0.20725410481137255,
+        "10": 0.26245071731026887
+      }
+    }
+  ]
+}

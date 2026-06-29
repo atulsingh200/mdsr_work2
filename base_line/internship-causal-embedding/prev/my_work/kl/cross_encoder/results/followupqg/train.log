@@ -1,0 +1,16 @@
+[train] dataset=followupqg total_steps=1090 warmup=65 batch_size=128 epochs=10 max_length=256  early_stop=(thresh 0.001, patience 2)
+[epoch 1/10]  train_loss=0.4390  val_AUC=0.9216  val_P@1=0.8280  (21s)
+  * new best val_AUC=0.9216, saved checkpoint_best.pt
+  step=   200/1090  loss=0.3437  lr=1.74e-05  epoch=2
+[epoch 2/10]  train_loss=0.3136  val_AUC=0.9239  val_P@1=0.8420  (42s)
+  * new best val_AUC=0.9239, saved checkpoint_best.pt
+[epoch 3/10]  train_loss=0.2435  val_AUC=0.9154  val_P@1=0.8380  (64s)
+  no improvement (best=0.9239, bad_epochs=1/2)
+  step=   400/1090  loss=0.1810  lr=1.35e-05  epoch=4
+[epoch 4/10]  train_loss=0.1901  val_AUC=0.9062  val_P@1=0.8220  (85s)
+  no improvement (best=0.9239, bad_epochs=2/2)
+[early stop] no val-AUC improvement for 2 epochs.
+
+[done]  best val_AUC=0.9239  stopped_early=True
+  best:   /mnt/localssd/base_line/my_work/kl/cross_encoder/results/followupqg/checkpoint_best.pt
+  latest: /mnt/localssd/base_line/my_work/kl/cross_encoder/results/followupqg/checkpoint_latest.pt

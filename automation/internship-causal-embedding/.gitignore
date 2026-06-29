@@ -1,0 +1,49 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Data caches: small datasets are committed for offline use; the very large
+# ones are excluded and re-downloaded on demand via `followup-data download`.
+.cache/
+
+# InfoQuest is ~13 GB raw and ~11 GB even as a pair-only export — too large
+# for git. Run `followup-data download infoquest` locally to fetch it.
+data/infoquest/
+
+# Embedded git repos and runtime caches inside cloned dataset folders.
+**/.git/
+**/__pycache__/
+**/*.pyc
+**/.DS_Store
+data/clarq_llm/ClarQ-LLM/log/
+data/clarq_llm/ClarQ-LLM/results/
+
+# OS
+.DS_Store
+
+# Model checkpoints — too large for git (258MB–14GB each)
+*.pt
+
+# Large corpus/raw data files
+data/comparison_test/aep_docs_collection_v_24-03-2026.json
+
+# Large dataset JSONL splits — manifests are still tracked
+data/aep_dataset/directional_train.jsonl
+data/aep_dataset/directional_val.jsonl
+data/aep_dataset/directional_test.jsonl
+data/aep_dataset_2/directional_train.jsonl
+data/aep_dataset_2/directional_val.jsonl
+data/aep_dataset_2/directional_test.jsonl
+data/aep_causal_classification/directional_train.jsonl
+data/comparison_test/original/directional_train.jsonl
+data/comparison_test/new/directional_train.jsonl
+
+# GritLM full fine-tune runs — 14 GB model files
+runs/gritlm_classifier/

@@ -1,0 +1,114 @@
+{
+  "results": [
+    {
+      "dataset": "aep_causal",
+      "checkpoint": "lorentz_enc_results_e5_time/aep_causal/lorentz_best.pt",
+      "backbone": "intfloat/e5-base-v2",
+      "space_dim": 768,
+      "time_dim": 32,
+      "n_test_pairs": 562,
+      "encoding_seconds": 3.669605016708374,
+      "auc": 0.9762089829156166,
+      "precision_at_1": 0.9395017793594306,
+      "mrr": 0.40691448703995886,
+      "mean_rank": 14.281138790035588,
+      "median_rank": 3.0,
+      "recall_at_k": {
+        "1": 0.21352313167259787,
+        "3": 0.5320284697508897,
+        "5": 0.6459074733096085,
+        "10": 0.7829181494661922
+      },
+      "hit_at_k": {
+        "1": 0.21352313167259787,
+        "3": 0.5320284697508897,
+        "5": 0.6459074733096085,
+        "10": 0.7829181494661922
+      },
+      "n_candidates_per_query": 562,
+      "directional_acc": 1.0,
+      "directional_margin": 0.6248037815093994,
+      "mrr_combined": 0.459042658399313,
+      "median_rank_combined": 3.0,
+      "recall_at_k_combined": {
+        "1": 0.29537366548042704,
+        "3": 0.5569395017793595,
+        "5": 0.6637010676156584,
+        "10": 0.7882562277580071
+      },
+      "beta_eval": 0.3
+    },
+    {
+      "dataset": "followupqg",
+      "checkpoint": "lorentz_enc_results_e5_time/followupqg/lorentz_best.pt",
+      "backbone": "intfloat/e5-base-v2",
+      "space_dim": 768,
+      "time_dim": 32,
+      "n_test_pairs": 501,
+      "encoding_seconds": 2.862269878387451,
+      "auc": 0.9913297158178652,
+      "precision_at_1": 0.9720558882235529,
+      "mrr": 0.6621820245002149,
+      "mean_rank": 5.127744510978044,
+      "median_rank": 2.0,
+      "recall_at_k": {
+        "1": 0.4810379241516966,
+        "3": 0.810379241516966,
+        "5": 0.874251497005988,
+        "10": 0.9241516966067864
+      },
+      "hit_at_k": {
+        "1": 0.4810379241516966,
+        "3": 0.810379241516966,
+        "5": 0.874251497005988,
+        "10": 0.9241516966067864
+      },
+      "n_candidates_per_query": 501,
+      "directional_acc": 1.0,
+      "directional_margin": 0.5189008116722107,
+      "mrr_combined": 0.7723528187671805,
+      "median_rank_combined": 1.0,
+      "recall_at_k_combined": {
+        "1": 0.6906187624750499,
+        "3": 0.8243512974051896,
+        "5": 0.8842315369261478,
+        "10": 0.9241516966067864
+      },
+      "beta_eval": 0.3
+    },
+    {
+      "dataset": "multiwoz_v24",
+      "error": "no checkpoint"
+    },
+    {
+      "dataset": "qrecc",
+      "error": "no checkpoint"
+    },
+    {
+      "dataset": "workflow",
+      "error": "no checkpoint"
+    }
+  ],
+  "baseline": {
+    "aep_causal": {
+      "mrr": 0.3525,
+      "auc": 0.9712
+    },
+    "followupqg": {
+      "mrr": 0.5844,
+      "auc": 0.9827
+    },
+    "multiwoz_v24": {
+      "mrr": 0.2493,
+      "auc": 0.9526
+    },
+    "qrecc": {
+      "mrr": 0.2758,
+      "auc": 0.9227
+    },
+    "workflow": {
+      "mrr": 0.55,
+      "auc": 0.9662
+    }
+  }
+}

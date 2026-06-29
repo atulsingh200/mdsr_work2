@@ -1,0 +1,22 @@
+[train] dataset=workflow total_steps=1485 warmup=89 batch_size=64 epochs=5 max_length=128 params=194,537,473  loss=listwise_softmax(group=5)  early_stop=(thresh 0.003, patience 2)
+  step=   200/1485  loss=0.9410  lr=1.84e-05  epoch=1
+[epoch 1/5]  train_loss=0.9812  val_AUC=0.9593  val_P@1=0.8810  (110s)
+  * new best val_P@1=0.8810, saved checkpoint_best.pt
+  step=   400/1485  loss=0.7276  lr=1.55e-05  epoch=2
+[epoch 2/5]  train_loss=0.6623  val_AUC=0.9633  val_P@1=0.8950  (221s)
+  * new best val_P@1=0.8950, saved checkpoint_best.pt
+  step=   600/1485  loss=0.4715  lr=1.27e-05  epoch=3
+  step=   800/1485  loss=0.6946  lr=9.81e-06  epoch=3
+[epoch 3/5]  train_loss=0.5454  val_AUC=0.9674  val_P@1=0.9020  (333s)
+  * new best val_P@1=0.9020, saved checkpoint_best.pt
+  step=  1000/1485  loss=0.5862  lr=6.95e-06  epoch=4
+[epoch 4/5]  train_loss=0.4614  val_AUC=0.9676  val_P@1=0.9060  (444s)
+  * new best val_P@1=0.9060, saved checkpoint_best.pt
+  step=  1200/1485  loss=0.4575  lr=4.08e-06  epoch=5
+  step=  1400/1485  loss=0.2983  lr=1.22e-06  epoch=5
+[epoch 5/5]  train_loss=0.3990  val_AUC=0.9673  val_P@1=0.9000  (555s)
+  no improvement (best_P@1=0.9060, bad_epochs=1/2)
+
+[done]  best val_P@1=0.9060  stopped_early=False
+  best:   /mnt/localssd/new_base_line/internship-causal-embedding/my_work/kl/cross_encoder_2x/results/workflow/checkpoint_best.pt
+  latest: /mnt/localssd/new_base_line/internship-causal-embedding/my_work/kl/cross_encoder_2x/results/workflow/checkpoint_latest.pt

@@ -1,0 +1,24 @@
+01:38:56 INFO run_dir=runs/crossencoder2x/new_aep_workflow_scrap  device=cuda  bf16=True
+01:38:57 INFO tokenizer <- google-bert/bert-base-uncased
+01:38:57 INFO scanning max joint token length across all splits …
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/mnt/localssd/automation/internship-causal-embedding/src/classifier/crossencoder/train_ce2x.py", line 354, in <module>
+    main()
+  File "/mnt/localssd/automation/internship-causal-embedding/src/classifier/crossencoder/train_ce2x.py", line 205, in main
+    mx = scan_max_seq_len(jsonls, tokenizer)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/localssd/automation/internship-causal-embedding/src/classifier/crossencoder/train_ce2x.py", line 66, in scan_max_seq_len
+    r = json.loads(ln)
+        ^^^^^^^^^^^^^^
+  File "/home/colligo/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/colligo/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/colligo/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting ':' delimiter: line 1 column 5 (char 4)

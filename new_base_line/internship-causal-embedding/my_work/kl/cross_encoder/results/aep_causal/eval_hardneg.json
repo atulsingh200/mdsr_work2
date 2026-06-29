@@ -1,0 +1,12 @@
+{
+  "model": "CrossEncoder",
+  "dataset": "aep_causal",
+  "checkpoint": "/mnt/localssd/base_line/my_work/kl/cross_encoder/results/aep_causal/checkpoint_best.pt",
+  "backbone": "google-bert/bert-base-uncased",
+  "n_test_pairs": 562,
+  "auc": 0.7112823102544295,
+  "precision_at_1": 0.4483985765124555,
+  "n_negatives": 4,
+  "eval_type": "semantic_hard_negatives",
+  "miner": "sentence-transformers/all-MiniLM-L6-v2"
+}

@@ -1,0 +1,9 @@
+{
+  "split": "test",
+  "n_pairs": 562,
+  "k": 8,
+  "miner": "sentence-transformers/all-MiniLM-L6-v2",
+  "enc_seconds": 0.6139507293701172,
+  "knn_seconds": 0.004625797271728516,
+  "hard_negatives_path": "/mnt/localssd/internship-causal-embedding-merge-followup/my_work/kl/results/aep_causal/test_hard_negatives_k8.npy"
+}

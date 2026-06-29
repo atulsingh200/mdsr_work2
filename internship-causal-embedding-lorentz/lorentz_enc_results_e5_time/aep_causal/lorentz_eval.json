@@ -1,0 +1,38 @@
+{
+  "dataset": "aep_causal",
+  "checkpoint": "lorentz_enc_results_e5_time/aep_causal/lorentz_best.pt",
+  "backbone": "intfloat/e5-base-v2",
+  "space_dim": 768,
+  "time_dim": 32,
+  "n_test_pairs": 562,
+  "encoding_seconds": 3.669605016708374,
+  "auc": 0.9762089829156166,
+  "precision_at_1": 0.9395017793594306,
+  "mrr": 0.40691448703995886,
+  "mean_rank": 14.281138790035588,
+  "median_rank": 3.0,
+  "recall_at_k": {
+    "1": 0.21352313167259787,
+    "3": 0.5320284697508897,
+    "5": 0.6459074733096085,
+    "10": 0.7829181494661922
+  },
+  "hit_at_k": {
+    "1": 0.21352313167259787,
+    "3": 0.5320284697508897,
+    "5": 0.6459074733096085,
+    "10": 0.7829181494661922
+  },
+  "n_candidates_per_query": 562,
+  "directional_acc": 1.0,
+  "directional_margin": 0.6248037815093994,
+  "mrr_combined": 0.459042658399313,
+  "median_rank_combined": 3.0,
+  "recall_at_k_combined": {
+    "1": 0.29537366548042704,
+    "3": 0.5569395017793595,
+    "5": 0.6637010676156584,
+    "10": 0.7882562277580071
+  },
+  "beta_eval": 0.3
+}

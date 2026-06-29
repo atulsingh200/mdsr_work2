@@ -1,0 +1,50 @@
+[
+  {
+    "label1": "t1",
+    "label2": "t2",
+    "text1": "In Journey Optimizer I design the email template for our summer sale. I lay out the layout, add a field that pulls in each customer's first name, and set up two image variants so the creative adapts to the recipient.",
+    "text2": "With the email ready, I create a campaign and attach that email to it. I pick the audience of customers who should receive the message and choose when the campaign should run.",
+    "score": 0.349609,
+    "pred": 0
+  },
+  {
+    "label1": "t1",
+    "label2": "t3",
+    "text1": "In Journey Optimizer I design the email template for our summer sale. I lay out the layout, add a field that pulls in each customer's first name, and set up two image variants so the creative adapts to the recipient.",
+    "text2": "Now that the campaign is sending the email to its audience, I open the reports to see how it performed, checking the open rate, click rate, and how many recipients converted on the offer.",
+    "score": 0.535156,
+    "pred": 1
+  },
+  {
+    "label1": "t2",
+    "label2": "t3",
+    "text1": "With the email ready, I create a campaign and attach that email to it. I pick the audience of customers who should receive the message and choose when the campaign should run.",
+    "text2": "Now that the campaign is sending the email to its audience, I open the reports to see how it performed, checking the open rate, click rate, and how many recipients converted on the offer.",
+    "score": 0.539062,
+    "pred": 1
+  },
+  {
+    "label1": "t2",
+    "label2": "t1",
+    "text1": "With the email ready, I create a campaign and attach that email to it. I pick the audience of customers who should receive the message and choose when the campaign should run.",
+    "text2": "In Journey Optimizer I design the email template for our summer sale. I lay out the layout, add a field that pulls in each customer's first name, and set up two image variants so the creative adapts to the recipient.",
+    "score": 0.492188,
+    "pred": 0
+  },
+  {
+    "label1": "t3",
+    "label2": "t1",
+    "text1": "Now that the campaign is sending the email to its audience, I open the reports to see how it performed, checking the open rate, click rate, and how many recipients converted on the offer.",
+    "text2": "In Journey Optimizer I design the email template for our summer sale. I lay out the layout, add a field that pulls in each customer's first name, and set up two image variants so the creative adapts to the recipient.",
+    "score": 0.388672,
+    "pred": 0
+  },
+  {
+    "label1": "t3",
+    "label2": "t2",
+    "text1": "Now that the campaign is sending the email to its audience, I open the reports to see how it performed, checking the open rate, click rate, and how many recipients converted on the offer.",
+    "text2": "With the email ready, I create a campaign and attach that email to it. I pick the audience of customers who should receive the message and choose when the campaign should run.",
+    "score": 0.341797,
+    "pred": 0
+  }
+]

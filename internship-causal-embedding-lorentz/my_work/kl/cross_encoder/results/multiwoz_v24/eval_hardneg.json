@@ -1,0 +1,12 @@
+{
+  "model": "CrossEncoder",
+  "dataset": "multiwoz_v24",
+  "checkpoint": "/mnt/localssd/base_line/my_work/kl/cross_encoder/results/multiwoz_v24/checkpoint_best.pt",
+  "backbone": "google-bert/bert-base-uncased",
+  "n_test_pairs": 7368,
+  "auc": 0.7444288869738965,
+  "precision_at_1": 0.46729098805646035,
+  "n_negatives": 4,
+  "eval_type": "semantic_hard_negatives",
+  "miner": "sentence-transformers/all-MiniLM-L6-v2"
+}

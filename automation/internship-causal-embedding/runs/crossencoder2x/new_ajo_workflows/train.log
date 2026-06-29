@@ -1,0 +1,170 @@
+14:31:11 INFO run_dir=runs/crossencoder2x/new_ajo_workflows  device=cuda  bf16=True
+14:31:11 INFO tokenizer <- google-bert/bert-base-uncased
+14:31:11 INFO scanning max joint token length across all splits …
+14:31:16 INFO   observed max=512  -> max_seq_len=512  (scan 4.8s)
+14:31:16 INFO loading datasets …
+14:31:16 INFO   train=21846  val=2470  test=2616
+14:31:16 INFO building CrossEncoder2x  backbone=google-bert/bert-base-uncased  n_layers=24 …
+14:31:20 INFO   total params=194,537,473
+14:31:20 INFO   total_steps=6830  warmup_steps=409
+14:34:08 INFO run_dir=runs/crossencoder2x/new_ajo_workflows  device=cuda  bf16=True
+14:34:08 INFO tokenizer <- google-bert/bert-base-uncased
+14:34:08 INFO scanning max joint token length across all splits …
+14:34:13 INFO   observed max=512  -> max_seq_len=512  (scan 4.9s)
+14:34:13 INFO loading datasets …
+14:34:14 INFO   train=21846  val=2470  test=2616
+14:34:14 INFO building CrossEncoder2x  backbone=google-bert/bert-base-uncased  n_layers=24 …
+14:34:17 INFO   total params=194,537,473
+14:34:17 INFO   total_steps=6830  warmup_steps=409
+14:34:27 INFO   e1 opt_step=50/6830  loss=0.6971  acc=0.5112  lr=2.44e-06
+14:34:37 INFO   e1 opt_step=100/6830  loss=0.6992  acc=0.5081  lr=4.89e-06
+14:34:46 INFO   e1 opt_step=150/6830  loss=0.6988  acc=0.5125  lr=7.33e-06
+14:34:55 INFO   e1 opt_step=200/6830  loss=0.6989  acc=0.5077  lr=9.78e-06
+14:35:03 INFO   e1 opt_step=250/6830  loss=0.6994  acc=0.5061  lr=1.22e-05
+14:35:13 INFO   e1 opt_step=300/6830  loss=0.6997  acc=0.5051  lr=1.47e-05
+14:35:22 INFO   e1 opt_step=350/6830  loss=0.6994  acc=0.5059  lr=1.71e-05
+14:35:31 INFO   e1 opt_step=400/6830  loss=0.6992  acc=0.5052  lr=1.96e-05
+14:35:40 INFO   e1 opt_step=450/6830  loss=0.6991  acc=0.5060  lr=1.99e-05
+14:35:49 INFO   e1 opt_step=500/6830  loss=0.6989  acc=0.5069  lr=1.97e-05
+14:35:58 INFO   e1 opt_step=550/6830  loss=0.6986  acc=0.5074  lr=1.96e-05
+14:36:07 INFO   e1 opt_step=600/6830  loss=0.6987  acc=0.5049  lr=1.94e-05
+14:36:16 INFO   e1 opt_step=650/6830  loss=0.6985  acc=0.5047  lr=1.92e-05
+14:36:28 INFO [epoch 1/10]  train_loss=0.6984  train_acc=0.5038  val_loss=0.7080  val_acc=0.5000  val_auc=0.5004  elapsed=130.3s
+14:36:30 INFO   * saved best.pt  val_acc=0.5000
+14:36:33 INFO   e2 opt_step=700/6830  loss=0.7005  acc=0.4982  lr=1.91e-05
+14:36:42 INFO   e2 opt_step=750/6830  loss=0.7006  acc=0.4799  lr=1.89e-05
+14:36:51 INFO   e2 opt_step=800/6830  loss=0.6980  acc=0.4979  lr=1.88e-05
+14:37:01 INFO   e2 opt_step=850/6830  loss=0.6980  acc=0.4974  lr=1.86e-05
+14:37:10 INFO   e2 opt_step=900/6830  loss=0.6974  acc=0.4983  lr=1.85e-05
+14:37:18 INFO   e2 opt_step=950/6830  loss=0.6971  acc=0.4958  lr=1.83e-05
+14:37:27 INFO   e2 opt_step=1000/6830  loss=0.6970  acc=0.4940  lr=1.82e-05
+14:37:36 INFO   e2 opt_step=1050/6830  loss=0.6967  acc=0.4928  lr=1.80e-05
+14:37:45 INFO   e2 opt_step=1100/6830  loss=0.6965  acc=0.4921  lr=1.78e-05
+14:37:54 INFO   e2 opt_step=1150/6830  loss=0.6963  acc=0.4914  lr=1.77e-05
+14:38:03 INFO   e2 opt_step=1200/6830  loss=0.6960  acc=0.4937  lr=1.75e-05
+14:38:12 INFO   e2 opt_step=1250/6830  loss=0.6958  acc=0.4952  lr=1.74e-05
+14:38:21 INFO   e2 opt_step=1300/6830  loss=0.6957  acc=0.4959  lr=1.72e-05
+14:38:32 INFO   e2 opt_step=1350/6830  loss=0.6956  acc=0.4966  lr=1.71e-05
+14:38:40 INFO [epoch 2/10]  train_loss=0.6955  train_acc=0.4971  val_loss=0.6939  val_acc=0.5000  val_auc=0.5028  elapsed=130.7s
+14:38:47 INFO   e3 opt_step=1400/6830  loss=0.6992  acc=0.4917  lr=1.69e-05
+14:38:56 INFO   e3 opt_step=1450/6830  loss=0.6957  acc=0.5071  lr=1.68e-05
+14:39:05 INFO   e3 opt_step=1500/6830  loss=0.6951  acc=0.5103  lr=1.66e-05
+14:39:15 INFO   e3 opt_step=1550/6830  loss=0.6961  acc=0.5003  lr=1.64e-05
+14:39:24 INFO   e3 opt_step=1600/6830  loss=0.6956  acc=0.5000  lr=1.63e-05
+14:39:33 INFO   e3 opt_step=1650/6830  loss=0.6954  acc=0.5004  lr=1.61e-05
+14:39:42 INFO   e3 opt_step=1700/6830  loss=0.6953  acc=0.4977  lr=1.60e-05
+14:39:51 INFO   e3 opt_step=1750/6830  loss=0.6950  acc=0.4990  lr=1.58e-05
+14:40:00 INFO   e3 opt_step=1800/6830  loss=0.6948  acc=0.5016  lr=1.57e-05
+14:40:09 INFO   e3 opt_step=1850/6830  loss=0.6948  acc=0.5009  lr=1.55e-05
+14:40:19 INFO   e3 opt_step=1900/6830  loss=0.6948  acc=0.5013  lr=1.54e-05
+14:40:28 INFO   e3 opt_step=1950/6830  loss=0.6946  acc=0.5025  lr=1.52e-05
+14:40:38 INFO   e3 opt_step=2000/6830  loss=0.6946  acc=0.5024  lr=1.50e-05
+14:40:52 INFO [epoch 3/10]  train_loss=0.6948  train_acc=0.5009  val_loss=0.6967  val_acc=0.5000  val_auc=0.5000  elapsed=131.1s
+14:40:54 INFO   e4 opt_step=2050/6830  loss=0.6788  acc=0.5938  lr=1.49e-05
+14:41:04 INFO   e4 opt_step=2100/6830  loss=0.6952  acc=0.4914  lr=1.47e-05
+14:41:12 INFO   e4 opt_step=2150/6830  loss=0.6948  acc=0.4969  lr=1.46e-05
+14:41:21 INFO   e4 opt_step=2200/6830  loss=0.6949  acc=0.4971  lr=1.44e-05
+14:41:31 INFO   e4 opt_step=2250/6830  loss=0.6946  acc=0.4986  lr=1.43e-05
+14:41:40 INFO   e4 opt_step=2300/6830  loss=0.6945  acc=0.5027  lr=1.41e-05
+14:41:49 INFO   e4 opt_step=2350/6830  loss=0.6944  acc=0.5012  lr=1.40e-05
+14:41:59 INFO   e4 opt_step=2400/6830  loss=0.6945  acc=0.5015  lr=1.38e-05
+14:42:08 INFO   e4 opt_step=2450/6830  loss=0.6943  acc=0.5026  lr=1.36e-05
+14:42:17 INFO   e4 opt_step=2500/6830  loss=0.6943  acc=0.5028  lr=1.35e-05
+14:42:26 INFO   e4 opt_step=2550/6830  loss=0.6944  acc=0.5024  lr=1.33e-05
+14:42:35 INFO   e4 opt_step=2600/6830  loss=0.6943  acc=0.5038  lr=1.32e-05
+14:42:44 INFO   e4 opt_step=2650/6830  loss=0.6943  acc=0.5033  lr=1.30e-05
+14:42:53 INFO   e4 opt_step=2700/6830  loss=0.6944  acc=0.5039  lr=1.29e-05
+14:43:04 INFO [epoch 4/10]  train_loss=0.6943  train_acc=0.5047  val_loss=0.6932  val_acc=0.5000  val_auc=0.5000  elapsed=130.7s
+14:43:09 INFO   e5 opt_step=2750/6830  loss=0.6945  acc=0.5052  lr=1.27e-05
+14:43:18 INFO   e5 opt_step=2800/6830  loss=0.6953  acc=0.5009  lr=1.26e-05
+14:43:27 INFO   e5 opt_step=2850/6830  loss=0.6949  acc=0.4976  lr=1.24e-05
+14:43:36 INFO   e5 opt_step=2900/6830  loss=0.6949  acc=0.4968  lr=1.22e-05
+14:43:45 INFO   e5 opt_step=2950/6830  loss=0.6947  acc=0.4960  lr=1.21e-05
+14:43:56 INFO   e5 opt_step=3000/6830  loss=0.6950  acc=0.4938  lr=1.19e-05
+14:44:05 INFO   e5 opt_step=3050/6830  loss=0.6948  acc=0.4954  lr=1.18e-05
+14:44:14 INFO   e5 opt_step=3100/6830  loss=0.6949  acc=0.4938  lr=1.16e-05
+14:44:22 INFO   e5 opt_step=3150/6830  loss=0.6947  acc=0.4963  lr=1.15e-05
+14:44:31 INFO   e5 opt_step=3200/6830  loss=0.6950  acc=0.4950  lr=1.13e-05
+14:44:40 INFO   e5 opt_step=3250/6830  loss=0.6951  acc=0.4968  lr=1.12e-05
+14:44:49 INFO   e5 opt_step=3300/6830  loss=0.6950  acc=0.4966  lr=1.10e-05
+14:44:58 INFO   e5 opt_step=3350/6830  loss=0.6949  acc=0.4969  lr=1.08e-05
+14:45:07 INFO   e5 opt_step=3400/6830  loss=0.6948  acc=0.4962  lr=1.07e-05
+14:45:15 INFO [epoch 5/10]  train_loss=0.6948  train_acc=0.4957  val_loss=0.6933  val_acc=0.5000  val_auc=0.5000  elapsed=129.7s
+14:45:23 INFO   e6 opt_step=3450/6830  loss=0.6959  acc=0.4982  lr=1.05e-05
+14:45:33 INFO   e6 opt_step=3500/6830  loss=0.6950  acc=0.4949  lr=1.04e-05
+14:45:43 INFO   e6 opt_step=3550/6830  loss=0.6945  acc=0.4981  lr=1.02e-05
+14:45:52 INFO   e6 opt_step=3600/6830  loss=0.6946  acc=0.4959  lr=1.01e-05
+14:46:02 INFO   e6 opt_step=3650/6830  loss=0.6945  acc=0.4957  lr=9.90e-06
+14:46:10 INFO   e6 opt_step=3700/6830  loss=0.6945  acc=0.4965  lr=9.75e-06
+14:46:19 INFO   e6 opt_step=3750/6830  loss=0.6943  acc=0.4977  lr=9.59e-06
+14:46:28 INFO   e6 opt_step=3800/6830  loss=0.6942  acc=0.4988  lr=9.44e-06
+14:46:37 INFO   e6 opt_step=3850/6830  loss=0.6942  acc=0.4976  lr=9.28e-06
+14:46:46 INFO   e6 opt_step=3900/6830  loss=0.6942  acc=0.4983  lr=9.13e-06
+14:46:55 INFO   e6 opt_step=3950/6830  loss=0.6942  acc=0.4992  lr=8.97e-06
+14:47:04 INFO   e6 opt_step=4000/6830  loss=0.6939  acc=0.5014  lr=8.81e-06
+14:47:13 INFO   e6 opt_step=4050/6830  loss=0.6940  acc=0.5012  lr=8.66e-06
+14:47:27 INFO [epoch 6/10]  train_loss=0.6940  train_acc=0.5008  val_loss=0.6932  val_acc=0.5000  val_auc=0.5000  elapsed=130.3s
+14:47:29 INFO   e7 opt_step=4100/6830  loss=0.6906  acc=0.5156  lr=8.50e-06
+14:47:38 INFO   e7 opt_step=4150/6830  loss=0.6954  acc=0.4724  lr=8.35e-06
+14:47:46 INFO   e7 opt_step=4200/6830  loss=0.6943  acc=0.4951  lr=8.19e-06
+14:47:55 INFO   e7 opt_step=4250/6830  loss=0.6939  acc=0.4938  lr=8.04e-06
+14:48:04 INFO   e7 opt_step=4300/6830  loss=0.6938  acc=0.4981  lr=7.88e-06
+14:48:14 INFO   e7 opt_step=4350/6830  loss=0.6940  acc=0.4981  lr=7.72e-06
+14:48:23 INFO   e7 opt_step=4400/6830  loss=0.6942  acc=0.4988  lr=7.57e-06
+14:48:32 INFO   e7 opt_step=4450/6830  loss=0.6942  acc=0.4960  lr=7.41e-06
+14:48:41 INFO   e7 opt_step=4500/6830  loss=0.6941  acc=0.4974  lr=7.26e-06
+14:48:50 INFO   e7 opt_step=4550/6830  loss=0.6940  acc=0.4982  lr=7.10e-06
+14:48:59 INFO   e7 opt_step=4600/6830  loss=0.6940  acc=0.4989  lr=6.95e-06
+14:49:09 INFO   e7 opt_step=4650/6830  loss=0.6941  acc=0.4962  lr=6.79e-06
+14:49:18 INFO   e7 opt_step=4700/6830  loss=0.6942  acc=0.4963  lr=6.63e-06
+14:49:27 INFO   e7 opt_step=4750/6830  loss=0.6941  acc=0.4965  lr=6.48e-06
+14:49:38 INFO [epoch 7/10]  train_loss=0.6941  train_acc=0.4965  val_loss=0.6933  val_acc=0.5000  val_auc=0.5000  elapsed=130.5s
+14:49:43 INFO   e8 opt_step=4800/6830  loss=0.6924  acc=0.4934  lr=6.32e-06
+14:49:52 INFO   e8 opt_step=4850/6830  loss=0.6943  acc=0.4864  lr=6.17e-06
+14:50:01 INFO   e8 opt_step=4900/6830  loss=0.6944  acc=0.4924  lr=6.01e-06
+14:50:11 INFO   e8 opt_step=4950/6830  loss=0.6941  acc=0.4928  lr=5.86e-06
+14:50:19 INFO   e8 opt_step=5000/6830  loss=0.6941  acc=0.4929  lr=5.70e-06
+14:50:28 INFO   e8 opt_step=5050/6830  loss=0.6936  acc=0.4961  lr=5.54e-06
+14:50:38 INFO   e8 opt_step=5100/6830  loss=0.6937  acc=0.4955  lr=5.39e-06
+14:50:47 INFO   e8 opt_step=5150/6830  loss=0.6937  acc=0.4953  lr=5.23e-06
+14:50:56 INFO   e8 opt_step=5200/6830  loss=0.6938  acc=0.4960  lr=5.08e-06
+14:51:04 INFO   e8 opt_step=5250/6830  loss=0.6940  acc=0.4933  lr=4.92e-06
+14:51:13 INFO   e8 opt_step=5300/6830  loss=0.6940  acc=0.4942  lr=4.77e-06
+14:51:22 INFO   e8 opt_step=5350/6830  loss=0.6939  acc=0.4943  lr=4.61e-06
+14:51:31 INFO   e8 opt_step=5400/6830  loss=0.6940  acc=0.4942  lr=4.45e-06
+14:51:41 INFO   e8 opt_step=5450/6830  loss=0.6940  acc=0.4944  lr=4.30e-06
+14:51:49 INFO [epoch 8/10]  train_loss=0.6939  train_acc=0.4950  val_loss=0.6932  val_acc=0.5000  val_auc=0.5020  elapsed=129.4s
+14:51:56 INFO   e9 opt_step=5500/6830  loss=0.6942  acc=0.4974  lr=4.14e-06
+14:52:06 INFO   e9 opt_step=5550/6830  loss=0.6936  acc=0.5055  lr=3.99e-06
+14:52:12 INFO   e9 opt_step=5600/6830  loss=0.6936  acc=0.5055  lr=3.83e-06
+14:52:22 INFO   e9 opt_step=5650/6830  loss=0.6940  acc=0.5007  lr=3.68e-06
+14:52:31 INFO   e9 opt_step=5700/6830  loss=0.6938  acc=0.5020  lr=3.52e-06
+14:52:40 INFO   e9 opt_step=5750/6830  loss=0.6938  acc=0.5003  lr=3.36e-06
+14:52:49 INFO   e9 opt_step=5800/6830  loss=0.6939  acc=0.5004  lr=3.21e-06
+14:52:57 INFO   e9 opt_step=5850/6830  loss=0.6938  acc=0.5001  lr=3.05e-06
+14:53:07 INFO   e9 opt_step=5900/6830  loss=0.6936  acc=0.5018  lr=2.90e-06
+14:53:16 INFO   e9 opt_step=5950/6830  loss=0.6936  acc=0.5019  lr=2.74e-06
+14:53:25 INFO   e9 opt_step=6000/6830  loss=0.6937  acc=0.4994  lr=2.59e-06
+14:53:34 INFO   e9 opt_step=6050/6830  loss=0.6936  acc=0.5006  lr=2.43e-06
+14:53:44 INFO   e9 opt_step=6100/6830  loss=0.6936  acc=0.5016  lr=2.27e-06
+14:53:58 INFO [epoch 9/10]  train_loss=0.6937  train_acc=0.5000  val_loss=0.6933  val_acc=0.5000  val_auc=0.5000  elapsed=127.9s
+14:54:00 INFO   e10 opt_step=6150/6830  loss=0.6959  acc=0.5104  lr=2.12e-06
+14:54:09 INFO   e10 opt_step=6200/6830  loss=0.6943  acc=0.5006  lr=1.96e-06
+14:54:19 INFO   e10 opt_step=6250/6830  loss=0.6948  acc=0.4927  lr=1.81e-06
+14:54:28 INFO   e10 opt_step=6300/6830  loss=0.6945  acc=0.4982  lr=1.65e-06
+14:54:38 INFO   e10 opt_step=6350/6830  loss=0.6945  acc=0.4978  lr=1.50e-06
+14:54:47 INFO   e10 opt_step=6400/6830  loss=0.6943  acc=0.5016  lr=1.34e-06
+14:54:56 INFO   e10 opt_step=6450/6830  loss=0.6942  acc=0.5018  lr=1.18e-06
+14:55:05 INFO   e10 opt_step=6500/6830  loss=0.6939  acc=0.5040  lr=1.03e-06
+14:55:15 INFO   e10 opt_step=6550/6830  loss=0.6937  acc=0.5058  lr=8.72e-07
+14:55:24 INFO   e10 opt_step=6600/6830  loss=0.6936  acc=0.5063  lr=7.16e-07
+14:55:33 INFO   e10 opt_step=6650/6830  loss=0.6935  acc=0.5070  lr=5.61e-07
+14:55:42 INFO   e10 opt_step=6700/6830  loss=0.6936  acc=0.5051  lr=4.05e-07
+14:55:50 INFO   e10 opt_step=6750/6830  loss=0.6936  acc=0.5047  lr=2.49e-07
+14:55:59 INFO   e10 opt_step=6800/6830  loss=0.6936  acc=0.5043  lr=9.34e-08
+14:56:10 INFO [epoch 10/10]  train_loss=0.6936  train_acc=0.5052  val_loss=0.6931  val_acc=0.5000  val_auc=0.5000  elapsed=130.9s
+14:56:12 INFO saved final.pt  total_time=1315s
+14:56:12 INFO loading best.pt for final val/test evaluation …
+14:56:19 INFO [val]  acc=0.5000  auc=0.5004  f1=0.6667
+14:56:21 INFO [test] loss=0.7080  acc=0.5000  auc=0.5000  f1=0.6667
+14:56:21 INFO [done] best_val_acc=0.5000  test_acc=0.5000  test_auc=0.5000  results in runs/crossencoder2x/new_ajo_workflows

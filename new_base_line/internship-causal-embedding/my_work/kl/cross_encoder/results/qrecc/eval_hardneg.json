@@ -1,0 +1,12 @@
+{
+  "model": "CrossEncoder",
+  "dataset": "qrecc",
+  "checkpoint": "/mnt/localssd/base_line/my_work/kl/cross_encoder/results/qrecc/checkpoint_best.pt",
+  "backbone": "google-bert/bert-base-uncased",
+  "n_test_pairs": 5204,
+  "auc": 0.6943339533357242,
+  "precision_at_1": 0.42621060722521137,
+  "n_negatives": 4,
+  "eval_type": "semantic_hard_negatives",
+  "miner": "sentence-transformers/all-MiniLM-L6-v2"
+}

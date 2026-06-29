@@ -1,0 +1,81 @@
+[device] cuda
+[out]    /mnt/localssd/base_line/my_work/kl/results/aep_causal
+[data] 5487 train pairs  K=4
+[data] 562 val pairs
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 8707.05it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[model] CDE  backbone=google-bert/bert-base-uncased  proj_dim=128  params=109,777,537
+
+==============================================================================
+CDE training  total_steps=2000  phase_A=500
+batch=32  K=4  backbone_lr=2e-05  head_lr=0.0001
+==============================================================================
+  step=   50/2000 [A]  loss=3.5903  info=3.5903  τ=0.0505  s+=-0.34  s-=-0.58  γ=-0.0000  δ=0.347
+  step=  100/2000 [A]  loss=2.5251  info=2.5251  τ=0.0528  s+=-0.35  s-=-0.74  γ=0.0004  δ=0.416
+  step=  150/2000 [A]  loss=2.7563  info=2.7563  τ=0.0554  s+=-0.34  s-=-0.72  γ=-0.0000  δ=0.409
+  step=  200/2000 [A]  loss=3.1157  info=3.1157  τ=0.0578  s+=-0.51  s-=-1.01  γ=-0.0004  δ=0.445
+  [val step=200]  MRR=0.3457  R@1=0.199  R@5=0.509  R@10=0.669  med_rank=5  * new best
+  step=  250/2000 [A]  loss=3.0810  info=3.0810  τ=0.0600  s+=-0.46  s-=-0.97  γ=0.0001  δ=0.452
+  step=  300/2000 [A]  loss=2.0641  info=2.0641  τ=0.0622  s+=-0.33  s-=-0.73  γ=0.0009  δ=0.377
+  step=  350/2000 [A]  loss=2.0009  info=2.0009  τ=0.0644  s+=-0.47  s-=-1.09  γ=0.0015  δ=0.404
+  step=  400/2000 [A]  loss=1.7383  info=1.7383  τ=0.0661  s+=-0.42  s-=-1.06  γ=0.0019  δ=0.416
+  [val step=400]  MRR=0.4074  R@1=0.260  R@5=0.580  R@10=0.737  med_rank=4  * new best
+  step=  450/2000 [A]  loss=1.4216  info=1.4216  τ=0.0679  s+=-0.48  s-=-1.40  γ=0.0011  δ=0.449
+  step=  500/2000 [A]  loss=2.2452  info=2.2452  τ=0.0699  s+=-0.52  s-=-1.14  γ=0.0014  δ=0.454
+  step=  550/2000 [B]  loss=2.9297  info=1.9144  ent=0.3788  anti=1.9547  τ=0.0717  s+=-0.58  s-=-1.45  γ=0.0021  δ=0.558
+  step=  600/2000 [B]  loss=2.3756  info=1.4308  ent=0.2711  anti=1.8355  τ=0.0739  s+=-0.75  s-=-1.99  γ=0.0034  δ=0.663
+  [val step=600]  MRR=0.4171  R@1=0.265  R@5=0.593  R@10=0.758  med_rank=4  * new best
+  step=  650/2000 [B]  loss=2.6188  info=1.6440  ent=0.3930  anti=1.8710  τ=0.0761  s+=-0.76  s-=-1.71  γ=0.0049  δ=0.792
+  step=  700/2000 [B]  loss=2.4385  info=1.6579  ent=0.2792  anti=1.5055  τ=0.0784  s+=-1.09  s-=-2.60  γ=0.0057  δ=1.011
+  step=  750/2000 [B]  loss=2.5544  info=1.8395  ent=0.2413  anti=1.3815  τ=0.0807  s+=-1.36  s-=-2.95  γ=0.0060  δ=1.328
+  step=  800/2000 [B]  loss=2.8070  info=2.2117  ent=0.1618  anti=1.1582  τ=0.0828  s+=-1.36  s-=-2.76  γ=0.0062  δ=1.319
+  [val step=800]  MRR=0.4010  R@1=0.246  R@5=0.591  R@10=0.738  med_rank=4  (patience 1/5)
+  step=  850/2000 [B]  loss=1.9919  info=1.4070  ent=0.1939  anti=1.1310  τ=0.0850  s+=-1.86  s-=-3.40  γ=0.0064  δ=1.650
+  step=  900/2000 [B]  loss=1.3590  info=0.9754  ent=0.1183  anti=0.7436  τ=0.0868  s+=-1.77  s-=-3.79  γ=0.0066  δ=1.595
+  step=  950/2000 [B]  loss=1.2689  info=0.8628  ent=0.1203  anti=0.7881  τ=0.0884  s+=-2.59  s-=-4.52  γ=0.0067  δ=2.083
+  step= 1000/2000 [B]  loss=1.7838  info=1.3466  ent=0.2873  anti=0.8168  τ=0.0901  s+=-2.34  s-=-3.95  γ=0.0069  δ=1.900
+  [val step=1000]  MRR=0.4280  R@1=0.285  R@5=0.596  R@10=0.749  med_rank=4  * new best
+  step= 1050/2000 [B]  loss=2.0312  info=1.6876  ent=0.1543  anti=0.6563  τ=0.0914  s+=-3.34  s-=-5.37  γ=0.0070  δ=2.331
+  step= 1100/2000 [B]  loss=1.1891  info=0.8150  ent=0.1676  anti=0.7147  τ=0.0926  s+=-3.77  s-=-5.80  γ=0.0070  δ=2.650
+  step= 1150/2000 [B]  loss=2.3927  info=2.1304  ent=0.1673  anti=0.4911  τ=0.0937  s+=-3.06  s-=-5.16  γ=0.0070  δ=2.261
+  step= 1200/2000 [B]  loss=1.4294  info=1.0418  ent=0.1119  anti=0.7528  τ=0.0947  s+=-3.66  s-=-5.58  γ=0.0070  δ=2.454
+  [val step=1200]  MRR=0.4072  R@1=0.253  R@5=0.591  R@10=0.749  med_rank=4  (patience 1/5)
+  step= 1250/2000 [B]  loss=1.1725  info=0.9727  ent=0.0707  anti=0.3855  τ=0.0954  s+=-3.79  s-=-6.03  γ=0.0070  δ=2.430
+  step= 1300/2000 [B]  loss=1.4729  info=1.2902  ent=0.0772  anti=0.3500  τ=0.0961  s+=-3.91  s-=-6.36  γ=0.0070  δ=2.467
+  step= 1350/2000 [B]  loss=1.2072  info=0.9484  ent=0.1123  anti=0.4952  τ=0.0968  s+=-3.31  s-=-5.49  γ=0.0071  δ=2.229
+  step= 1400/2000 [B]  loss=0.9322  info=0.7517  ent=0.0746  anti=0.3460  τ=0.0973  s+=-3.79  s-=-6.36  γ=0.0071  δ=2.449
+  [val step=1400]  MRR=0.4171  R@1=0.262  R@5=0.626  R@10=0.754  med_rank=4  (patience 2/5)
+  step= 1450/2000 [B]  loss=0.8302  info=0.7189  ent=0.0516  anti=0.2123  τ=0.0977  s+=-4.32  s-=-6.74  γ=0.0072  δ=2.684
+  step= 1500/2000 [B]  loss=1.0887  info=0.9419  ent=0.0440  anti=0.2847  τ=0.0981  s+=-3.65  s-=-6.51  γ=0.0071  δ=2.410
+  step= 1550/2000 [B]  loss=1.3823  info=1.1672  ent=0.1032  anti=0.4095  τ=0.0985  s+=-3.94  s-=-6.48  γ=0.0072  δ=2.462
+  step= 1600/2000 [B]  loss=0.7036  info=0.5895  ent=0.0629  anti=0.2156  τ=0.0987  s+=-4.23  s-=-6.98  γ=0.0072  δ=2.661
+  [val step=1600]  MRR=0.4248  R@1=0.272  R@5=0.616  R@10=0.760  med_rank=3  (patience 3/5)
+  step= 1650/2000 [B]  loss=1.1946  info=1.1083  ent=0.0224  anti=0.1682  τ=0.0989  s+=-4.56  s-=-7.34  γ=0.0072  δ=2.694
+  step= 1700/2000 [B]  loss=0.6642  info=0.4969  ent=0.1005  anti=0.3147  τ=0.0990  s+=-4.45  s-=-7.32  γ=0.0071  δ=2.661
+  step= 1750/2000 [B]  loss=1.3652  info=1.3075  ent=0.0572  anti=0.1041  τ=0.0991  s+=-4.51  s-=-7.21  γ=0.0071  δ=2.664
+  step= 1800/2000 [B]  loss=1.2815  info=1.1312  ent=0.1151  anti=0.2776  τ=0.0992  s+=-4.47  s-=-7.49  γ=0.0071  δ=2.640
+  [val step=1800]  MRR=0.4269  R@1=0.278  R@5=0.623  R@10=0.762  med_rank=4  (patience 4/5)
+  step= 1850/2000 [B]  loss=0.8265  info=0.7307  ent=0.0402  anti=0.1835  τ=0.0992  s+=-5.29  s-=-7.91  γ=0.0071  δ=3.041
+  step= 1900/2000 [B]  loss=0.8577  info=0.6058  ent=0.1268  anti=0.4784  τ=0.0993  s+=-5.23  s-=-7.90  γ=0.0071  δ=2.941
+  step= 1950/2000 [B]  loss=1.2748  info=1.1276  ent=0.0800  anti=0.2786  τ=0.0993  s+=-4.66  s-=-7.30  γ=0.0071  δ=2.827
+  step= 2000/2000 [B]  loss=1.1341  info=0.9915  ent=0.0763  anti=0.2699  τ=0.0993  s+=-4.66  s-=-7.40  γ=0.0071  δ=2.807
+  [val step=2000]  MRR=0.4272  R@1=0.279  R@5=0.621  R@10=0.760  med_rank=4  (patience 5/5)
+
+[early stop] no MRR improvement for 5 checks.
+
+==============================================================================
+[done]  best val MRR=0.4280
+  best checkpoint:  /mnt/localssd/base_line/my_work/kl/results/aep_causal/cde_best.pt
+  latest:           /mnt/localssd/base_line/my_work/kl/results/aep_causal/cde_latest.pt

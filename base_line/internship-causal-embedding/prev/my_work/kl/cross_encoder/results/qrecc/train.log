@@ -1,0 +1,41 @@
+[train] dataset=qrecc total_steps=19480 warmup=1168 batch_size=128 epochs=10 max_length=256  early_stop=(thresh 0.001, patience 2)
+  step=   200/19480  loss=0.5425  lr=3.42e-06  epoch=1
+  step=   400/19480  loss=0.4315  lr=6.85e-06  epoch=1
+  step=   600/19480  loss=0.4089  lr=1.03e-05  epoch=1
+  step=   800/19480  loss=0.4988  lr=1.37e-05  epoch=1
+  step=  1000/19480  loss=0.4627  lr=1.71e-05  epoch=1
+  step=  1200/19480  loss=0.4539  lr=2.00e-05  epoch=1
+  step=  1400/19480  loss=0.4891  lr=1.97e-05  epoch=1
+  step=  1600/19480  loss=0.3812  lr=1.95e-05  epoch=1
+  step=  1800/19480  loss=0.4118  lr=1.93e-05  epoch=1
+[epoch 1/10]  train_loss=0.4776  val_AUC=0.9040  val_P@1=0.7191  (337s)
+  * new best val_AUC=0.9040, saved checkpoint_best.pt
+  step=  2000/19480  loss=0.4381  lr=1.91e-05  epoch=2
+  step=  2200/19480  loss=0.4832  lr=1.89e-05  epoch=2
+  step=  2400/19480  loss=0.4395  lr=1.87e-05  epoch=2
+  step=  2600/19480  loss=0.4818  lr=1.84e-05  epoch=2
+  step=  2800/19480  loss=0.4272  lr=1.82e-05  epoch=2
+  step=  3000/19480  loss=0.3531  lr=1.80e-05  epoch=2
+  step=  3200/19480  loss=0.4453  lr=1.78e-05  epoch=2
+  step=  3400/19480  loss=0.4118  lr=1.76e-05  epoch=2
+  step=  3600/19480  loss=0.4817  lr=1.73e-05  epoch=2
+  step=  3800/19480  loss=0.4081  lr=1.71e-05  epoch=2
+[epoch 2/10]  train_loss=0.4374  val_AUC=0.9002  val_P@1=0.7054  (674s)
+  no improvement (best=0.9040, bad_epochs=1/2)
+  step=  4000/19480  loss=0.3467  lr=1.69e-05  epoch=3
+  step=  4200/19480  loss=0.4374  lr=1.67e-05  epoch=3
+  step=  4400/19480  loss=0.3659  lr=1.65e-05  epoch=3
+  step=  4600/19480  loss=0.4064  lr=1.63e-05  epoch=3
+  step=  4800/19480  loss=0.4031  lr=1.60e-05  epoch=3
+  step=  5000/19480  loss=0.4485  lr=1.58e-05  epoch=3
+  step=  5200/19480  loss=0.3822  lr=1.56e-05  epoch=3
+  step=  5400/19480  loss=0.3714  lr=1.54e-05  epoch=3
+  step=  5600/19480  loss=0.4896  lr=1.52e-05  epoch=3
+  step=  5800/19480  loss=0.4557  lr=1.49e-05  epoch=3
+[epoch 3/10]  train_loss=0.4063  val_AUC=0.8981  val_P@1=0.7050  (1012s)
+  no improvement (best=0.9040, bad_epochs=2/2)
+[early stop] no val-AUC improvement for 2 epochs.
+
+[done]  best val_AUC=0.9040  stopped_early=True
+  best:   /mnt/localssd/base_line/my_work/kl/cross_encoder/results/qrecc/checkpoint_best.pt
+  latest: /mnt/localssd/base_line/my_work/kl/cross_encoder/results/qrecc/checkpoint_latest.pt

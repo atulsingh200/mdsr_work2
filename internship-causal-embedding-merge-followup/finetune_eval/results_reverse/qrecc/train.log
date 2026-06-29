@@ -1,0 +1,12 @@
+[device] cuda
+[run dir] /mnt/localssd/internship-causal-embedding-merge-followup/finetune_eval/results_reverse/qrecc
+[data] train pairs ← /mnt/localssd/internship-causal-embedding-merge-followup/finetune_eval/results_reverse/qrecc/train_pairs.jsonl
+  15000 train pairs  (pairwise DPO-style loss: A→B preferred over B→A)
+Traceback (most recent call last):
+  File "/mnt/localssd/internship-causal-embedding-merge-followup/finetune_eval/train_finetune_reverse.py", line 413, in <module>
+    main()
+    ~~~~^^
+  File "/mnt/localssd/internship-causal-embedding-merge-followup/finetune_eval/train_finetune_reverse.py", line 204, in main
+    val_rows = [train_rows[i] for i in val_idx]
+                ~~~~~~~~~~^^^
+IndexError: list index out of range

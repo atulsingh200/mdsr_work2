@@ -1,0 +1,150 @@
+{
+  "config": {
+    "pool_size": 1000,
+    "n_negatives": 4,
+    "k_values": [
+      1,
+      3,
+      5,
+      10
+    ],
+    "seed": 0
+  },
+  "results": [
+    {
+      "dataset": "aep_causal",
+      "checkpoint": "/mnt/localssd/base_line/internship-causal-embedding/finetune_eval/results/aep_causal/checkpoint_best.pt",
+      "backbone": "google-bert/bert-base-uncased",
+      "pooling": "cls",
+      "n_test_pairs": 562,
+      "n_candidates_per_query": 562,
+      "encoding_seconds": 3.5163700580596924,
+      "auc": 0.9712160117019795,
+      "precision_at_1": 0.9128113879003559,
+      "n_negatives": 4,
+      "mrr": 0.35245125298068924,
+      "mean_rank": 16.818505338078293,
+      "median_rank": 4.0,
+      "recall_at_k": {
+        "1": 0.16370106761565836,
+        "3": 0.45729537366548045,
+        "5": 0.5854092526690391,
+        "10": 0.7153024911032029
+      },
+      "hit_at_k": {
+        "1": 0.16370106761565836,
+        "3": 0.45729537366548045,
+        "5": 0.5854092526690391,
+        "10": 0.7153024911032029
+      }
+    },
+    {
+      "dataset": "followupqg",
+      "checkpoint": "/mnt/localssd/base_line/internship-causal-embedding/finetune_eval/results/followupqg/checkpoint_best.pt",
+      "backbone": "google-bert/bert-base-uncased",
+      "pooling": "cls",
+      "n_test_pairs": 501,
+      "n_candidates_per_query": 501,
+      "encoding_seconds": 2.8541998863220215,
+      "auc": 0.9827102282461027,
+      "precision_at_1": 0.9540918163672655,
+      "n_negatives": 4,
+      "mrr": 0.5844363816016129,
+      "mean_rank": 8.530938123752495,
+      "median_rank": 2.0,
+      "recall_at_k": {
+        "1": 0.4031936127744511,
+        "3": 0.7305389221556886,
+        "5": 0.8063872255489022,
+        "10": 0.8542914171656687
+      },
+      "hit_at_k": {
+        "1": 0.4031936127744511,
+        "3": 0.7305389221556886,
+        "5": 0.8063872255489022,
+        "10": 0.8542914171656687
+      }
+    },
+    {
+      "dataset": "multiwoz_v24",
+      "checkpoint": "/mnt/localssd/base_line/internship-causal-embedding/finetune_eval/results/multiwoz_v24/checkpoint_best.pt",
+      "backbone": "google-bert/bert-base-uncased",
+      "pooling": "cls",
+      "n_test_pairs": 7368,
+      "n_candidates_per_query": 1000,
+      "encoding_seconds": 25.08771514892578,
+      "auc": 0.9525913335839992,
+      "precision_at_1": 0.8694353963083605,
+      "n_negatives": 4,
+      "mrr": 0.2493113905406143,
+      "mean_rank": 43.208740499457114,
+      "median_rank": 16.0,
+      "recall_at_k": {
+        "1": 0.16055917480998913,
+        "3": 0.26438653637350706,
+        "5": 0.3274972855591748,
+        "10": 0.4256243213897937
+      },
+      "hit_at_k": {
+        "1": 0.16055917480998913,
+        "3": 0.26438653637350706,
+        "5": 0.3274972855591748,
+        "10": 0.4256243213897937
+      }
+    },
+    {
+      "dataset": "qrecc",
+      "checkpoint": "/mnt/localssd/base_line/internship-causal-embedding/finetune_eval/results/qrecc/checkpoint_best.pt",
+      "backbone": "google-bert/bert-base-uncased",
+      "pooling": "cls",
+      "n_test_pairs": 5204,
+      "n_candidates_per_query": 1000,
+      "encoding_seconds": 16.045853853225708,
+      "auc": 0.9226630068899877,
+      "precision_at_1": 0.8112990007686395,
+      "n_negatives": 4,
+      "mrr": 0.27582828114776364,
+      "mean_rank": 68.9729054573405,
+      "median_rank": 14.0,
+      "recall_at_k": {
+        "1": 0.18216756341275941,
+        "3": 0.3061106840891622,
+        "5": 0.36529592621060725,
+        "10": 0.45695618754803996
+      },
+      "hit_at_k": {
+        "1": 0.18216756341275941,
+        "3": 0.3061106840891622,
+        "5": 0.36529592621060725,
+        "10": 0.45695618754803996
+      }
+    },
+    {
+      "dataset": "workflow",
+      "checkpoint": "/mnt/localssd/base_line/internship-causal-embedding/finetune_eval/results/workflow/checkpoint_best.pt",
+      "backbone": "google-bert/bert-base-uncased",
+      "pooling": "cls",
+      "n_test_pairs": 260487,
+      "n_candidates_per_query": 1000,
+      "encoding_seconds": 445.6309599876404,
+      "auc": 0.9662391409187563,
+      "precision_at_1": 0.9104216333252715,
+      "n_negatives": 4,
+      "mrr": 0.5500390494002073,
+      "mean_rank": 32.30279054233033,
+      "median_rank": 2.0,
+      "recall_at_k": {
+        "1": 0.46560480945306293,
+        "3": 0.5930583867908955,
+        "5": 0.6427998326212057,
+        "10": 0.7055400077547056
+      },
+      "hit_at_k": {
+        "1": 0.46560480945306293,
+        "3": 0.5930583867908955,
+        "5": 0.6427998326212057,
+        "10": 0.7055400077547056
+      }
+    }
+  ]
+}

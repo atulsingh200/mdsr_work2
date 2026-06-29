@@ -1,0 +1,16 @@
+06:17:54 INFO run_dir=runs/crossencoder2x_deberta/new_ajo_newstyle  device=cuda  bf16=True
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+06:17:55 INFO tokenizer <- microsoft/deberta-v3-large
+06:17:55 INFO scanning max joint token length across all splits …
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/mnt/localssd/automation/internship-causal-embedding/src/classifier/crossencoder/train_ce2x.py", line 360, in <module>
+    main()
+  File "/mnt/localssd/automation/internship-causal-embedding/src/classifier/crossencoder/train_ce2x.py", line 210, in main
+    mx = scan_max_seq_len(jsonls, tokenizer)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/localssd/automation/internship-causal-embedding/src/classifier/crossencoder/train_ce2x.py", line 64, in scan_max_seq_len
+    with open(p) as f:
+         ^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'data/ajo_newstyle/directional_train.jsonl'

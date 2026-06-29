@@ -1,0 +1,57 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[device] cuda
+[run dir] /mnt/localssd/internship-causal-embedding-merge-followup/finetune_eval/results_reverse/workflow
+[data] train pairs ← /mnt/localssd/internship-causal-embedding-merge-followup/finetune_eval/results_reverse/workflow/train_pairs.jsonl
+  20000 train pairs  K=1 hard neg (reverse direction)
+[data] val pairs ← /mnt/localssd/internship-causal-embedding-merge-followup/data_6/workflow/dev_pairs.jsonl  (2000)
+[model] BiEncoder('google-bert/bert-base-uncased', pooling='cls')
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 9723.40it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 8041.88it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+  params: 218,964,480
+
+==============================================================================
+training: 2 epochs · batch=32 · K=1 reverse hard neg · lr=2e-05
+steps/epoch=625 · total_steps=1250
+bf16=False  early_stop_min_delta=0.001
+==============================================================================
+
+epoch 1/2  (175s)
+  train loss=1.7739  τ=0.0464  pos=0.520  in-batch_neg=0.222  hard_neg=0.208
+  [end_of_epoch] step=625 epoch=1  MRR=0.4203  R@1=0.336  R@10=0.590  med_rank=5
+  -> new best MRR=0.4203  (saved)
+
+epoch 2/2  (174s)
+  train loss=1.1135  τ=0.0444  pos=0.452  in-batch_neg=0.187  hard_neg=0.160
+  [end_of_epoch] step=1250 epoch=2  MRR=0.4279  R@1=0.343  R@10=0.586  med_rank=4
+  -> new best MRR=0.4279  (saved)
+
+==============================================================================
+[done] best val MRR=0.4279
+  best:    /mnt/localssd/internship-causal-embedding-merge-followup/finetune_eval/results_reverse/workflow/checkpoint_best.pt
+  latest:  /mnt/localssd/internship-causal-embedding-merge-followup/finetune_eval/results_reverse/workflow/checkpoint_latest.pt

@@ -1,0 +1,47 @@
+Loading model + tokenizer...
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:00<00:00, 13.84it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00, 14.77it/s]
+`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`...
+/mnt/localssd/gritlm_test_env/lib/python3.10/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+trainable params: 41,943,040 || all params: 7,152,603,136 || trainable%: 0.5864
+train=5487  test=562  MAXLEN=512  B=4  ACCUM=2  effective_batch=8  EPOCHS=1
+
+=== PRE-finetune ===
+direction acc=0.521  score_pos=-1.134  score_neg=-1.185  margin=+0.051
+retrieval acc@1=0.020  MRR=0.083
+
+=== TRAIN ===
+  ep0 step   1  loss=1.8519 (rank=0.6807 bce=1.1712)  pos=-1.737  neg=-1.362  maxmem=17.8GB  t=4s
+  ep0 step  25  loss=1.3870 (rank=0.6099 bce=0.7771)  pos=-0.354  neg=-0.252  maxmem=17.8GB  t=88s
+  ep0 step  50  loss=0.8594 (rank=0.1829 bce=0.6765)  pos=+0.462  neg=-0.013  maxmem=17.8GB  t=175s
+  ep0 step  75  loss=0.8202 (rank=0.1437 bce=0.6765)  pos=+0.103  neg=-0.157  maxmem=17.8GB  t=263s
+  ep0 step 100  loss=0.7191 (rank=0.1727 bce=0.5464)  pos=+0.404  neg=-0.726  maxmem=17.8GB  t=351s
+  ep0 step 125  loss=0.7001 (rank=0.1080 bce=0.5921)  pos=+0.033  neg=-0.635  maxmem=17.8GB  t=439s
+  ep0 step 150  loss=0.6591 (rank=0.1086 bce=0.5505)  pos=-0.100  neg=-1.240  maxmem=17.8GB  t=527s
+  ep0 step 175  loss=0.6802 (rank=0.1963 bce=0.4839)  pos=+1.340  neg=-0.528  maxmem=17.8GB  t=614s
+  ep0 step 200  loss=0.8546 (rank=0.2247 bce=0.6299)  pos=+0.394  neg=-0.061  maxmem=17.8GB  t=703s
+  ep0 step 225  loss=0.7920 (rank=0.2842 bce=0.5079)  pos=+0.635  neg=-1.284  maxmem=17.8GB  t=791s
+  ep0 step 250  loss=0.4708 (rank=0.0055 bce=0.4652)  pos=+0.862  neg=-0.366  maxmem=17.8GB  t=879s
+  ep0 step 275  loss=0.8155 (rank=0.2570 bce=0.5585)  pos=+0.071  neg=-1.238  maxmem=17.8GB  t=967s
+  ep0 step 300  loss=0.3864 (rank=0.0103 bce=0.3761)  pos=+1.916  neg=-0.777  maxmem=17.8GB  t=1055s
+  ep0 step 325  loss=0.3839 (rank=0.0000 bce=0.3839)  pos=+2.060  neg=-0.388  maxmem=17.8GB  t=1143s
+  ep0 step 350  loss=0.4412 (rank=0.0000 bce=0.4412)  pos=+0.945  neg=-2.854  maxmem=17.8GB  t=1231s
+  ep0 step 375  loss=0.3719 (rank=0.0000 bce=0.3719)  pos=+1.146  neg=-0.686  maxmem=17.8GB  t=1318s
+  ep0 step 400  loss=0.6310 (rank=0.0347 bce=0.5963)  pos=-0.249  neg=-2.028  maxmem=17.8GB  t=1406s
+  ep0 step 425  loss=0.4535 (rank=0.1066 bce=0.3470)  pos=+0.995  neg=-1.267  maxmem=17.8GB  t=1494s
+  ep0 step 450  loss=0.6921 (rank=0.0706 bce=0.6215)  pos=+0.531  neg=+0.128  maxmem=17.8GB  t=1582s
+  ep0 step 475  loss=0.4733 (rank=0.0803 bce=0.3930)  pos=+1.488  neg=-0.771  maxmem=17.8GB  t=1670s
+  ep0 step 500  loss=0.4256 (rank=0.0000 bce=0.4256)  pos=+1.364  neg=-1.280  maxmem=17.8GB  t=1758s
+  ep0 step 525  loss=0.4259 (rank=0.0361 bce=0.3898)  pos=+1.007  neg=-1.120  maxmem=17.8GB  t=1846s
+  ep0 step 550  loss=0.6632 (rank=0.1556 bce=0.5076)  pos=+1.067  neg=-0.319  maxmem=17.8GB  t=1934s
+  ep0 step 575  loss=0.3754 (rank=0.0000 bce=0.3754)  pos=+0.803  neg=-1.560  maxmem=17.8GB  t=2022s
+  ep0 step 600  loss=0.4301 (rank=0.0370 bce=0.3932)  pos=+0.469  neg=-1.585  maxmem=17.8GB  t=2110s
+  ep0 step 625  loss=0.6434 (rank=0.1434 bce=0.5000)  pos=+0.838  neg=-1.101  maxmem=17.8GB  t=2198s
+  ep0 step 650  loss=0.6038 (rank=0.0000 bce=0.6038)  pos=-0.224  neg=-2.559  maxmem=17.8GB  t=2285s
+  ep0 step 675  loss=0.2483 (rank=0.0000 bce=0.2483)  pos=+2.155  neg=-1.352  maxmem=17.8GB  t=2373s
+
+=== POST-finetune ===
+direction acc=0.941  score_pos=+1.329  score_neg=-1.349  margin=+2.678
+retrieval acc@1=0.080  MRR=0.179
+
+DONE

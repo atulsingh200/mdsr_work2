@@ -1,0 +1,47 @@
+{
+  "source_wf": "/mnt/localssd/internship-causal-embedding-merge-followup/data_6/workflowllm/anchor_positive_pairs.jsonl",
+  "source_aep": "/mnt/localssd/automation/internship-causal-embedding/data/aep_causal_classification_34",
+  "seed": 42,
+  "total_wf_sampled": 100000,
+  "wf_split_target": {
+    "train": 80000,
+    "val": 10000,
+    "test": 10000
+  },
+  "wf_label_counts": {
+    "train": {
+      "label_1": 39896,
+      "label_0": 40104
+    },
+    "val": {
+      "label_1": 4995,
+      "label_0": 5005
+    },
+    "test": {
+      "label_1": 5132,
+      "label_0": 4868
+    }
+  },
+  "aep_counts": {
+    "train": 110775,
+    "val": 6004,
+    "test": 6004
+  },
+  "merged_counts": {
+    "train": {
+      "total": 190775,
+      "label_1": 95292,
+      "label_0": 95483
+    },
+    "val": {
+      "total": 16004,
+      "label_1": 8036,
+      "label_0": 7968
+    },
+    "test": {
+      "total": 16004,
+      "label_1": 8067,
+      "label_0": 7937
+    }
+  }
+}

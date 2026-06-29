@@ -1,0 +1,86 @@
+[
+  {
+    "dataset": "aep_causal",
+    "tag": "lorentz",
+    "n_test_pairs": 562,
+    "k_hard": 7,
+    "use_time": false,
+    "beta": 0.0,
+    "auc_hard_plus_reverse": 0.7059475959650967,
+    "p_at_1_hard_plus_reverse": 0.3113879003558719,
+    "p_at_1_hard_only": 0.37544483985765126,
+    "directional_acc_fwd_gt_rev": 0.7633451957295374,
+    "beta_sweep": [
+      {
+        "beta": 0.0,
+        "auc_hard_plus_reverse": 0.7059475959650967,
+        "p_at_1_hard_plus_reverse": 0.3113879003558719,
+        "p_at_1_hard_only": 0.37544483985765126,
+        "directional_acc_fwd_gt_rev": 0.7633451957295374
+      }
+    ]
+  },
+  {
+    "dataset": "followupqg",
+    "tag": "lorentz",
+    "n_test_pairs": 501,
+    "k_hard": 7,
+    "use_time": false,
+    "beta": 0.0,
+    "auc_hard_plus_reverse": 0.868071740750037,
+    "p_at_1_hard_plus_reverse": 0.7604790419161677,
+    "p_at_1_hard_only": 0.7864271457085829,
+    "directional_acc_fwd_gt_rev": 0.9700598802395209,
+    "beta_sweep": [
+      {
+        "beta": 0.0,
+        "auc_hard_plus_reverse": 0.868071740750037,
+        "p_at_1_hard_plus_reverse": 0.7604790419161677,
+        "p_at_1_hard_only": 0.7864271457085829,
+        "directional_acc_fwd_gt_rev": 0.9700598802395209
+      }
+    ]
+  },
+  {
+    "dataset": "multiwoz_v24",
+    "tag": "lorentz",
+    "n_test_pairs": 7368,
+    "k_hard": 7,
+    "use_time": false,
+    "beta": 0.0,
+    "auc_hard_plus_reverse": 0.5991151318489527,
+    "p_at_1_hard_plus_reverse": 0.21471226927252987,
+    "p_at_1_hard_only": 0.22271986970684038,
+    "directional_acc_fwd_gt_rev": 0.9571118349619978,
+    "beta_sweep": [
+      {
+        "beta": 0.0,
+        "auc_hard_plus_reverse": 0.5991151318489527,
+        "p_at_1_hard_plus_reverse": 0.21471226927252987,
+        "p_at_1_hard_only": 0.22271986970684038,
+        "directional_acc_fwd_gt_rev": 0.9571118349619978
+      }
+    ]
+  },
+  {
+    "dataset": "qrecc",
+    "tag": "lorentz",
+    "n_test_pairs": 5204,
+    "k_hard": 7,
+    "use_time": false,
+    "beta": 0.0,
+    "auc_hard_plus_reverse": 0.6164438659236584,
+    "p_at_1_hard_plus_reverse": 0.20983858570330516,
+    "p_at_1_hard_only": 0.22867025365103766,
+    "directional_acc_fwd_gt_rev": 0.9139123750960799,
+    "beta_sweep": [
+      {
+        "beta": 0.0,
+        "auc_hard_plus_reverse": 0.6164438659236584,
+        "p_at_1_hard_plus_reverse": 0.20983858570330516,
+        "p_at_1_hard_only": 0.22867025365103766,
+        "directional_acc_fwd_gt_rev": 0.9139123750960799
+      }
+    ]
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "dataset": "aep_causal",
+  "n_pairs": 5487,
+  "k_hard_negatives": 4,
+  "encoding_seconds": 4.295908212661743,
+  "knn_seconds": 0.03921365737915039,
+  "miner": "sentence-transformers/all-MiniLM-L6-v2",
+  "hard_negatives_path": "/mnt/localssd/base_line/internship-causal-embedding/finetune_eval/results/aep_causal/hard_negatives.npy",
+  "train_pairs_path": "/mnt/localssd/base_line/internship-causal-embedding/finetune_eval/results/aep_causal/train_pairs.jsonl"
+}

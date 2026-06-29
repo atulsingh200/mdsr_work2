@@ -1,0 +1,13 @@
+{
+  "dataset": "followupqg",
+  "checkpoint": "/mnt/localssd/internship-causal-embedding-merge-followup/finetune_eval/results_reverse/followupqg/checkpoint_best.pt",
+  "backbone": "google-bert/bert-base-uncased",
+  "pooling": "cls",
+  "n_test_pairs": 501,
+  "encoding_seconds": 5.739353179931641,
+  "auc": 1.0,
+  "precision_at_1": 1.0,
+  "mean_fwd_score": 0.6888521313667297,
+  "mean_rev_score": -0.2293018102645874,
+  "eval_type": "forward_vs_reverse_2candidates"
+}

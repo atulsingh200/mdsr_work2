@@ -1,0 +1,27 @@
+{
+  "dataset": "workflow",
+  "checkpoint": "/mnt/localssd/base_line/internship-causal-embedding/finetune_eval/results/workflow/checkpoint_best.pt",
+  "backbone": "google-bert/bert-base-uncased",
+  "pooling": "cls",
+  "n_test_pairs": 260487,
+  "n_candidates_per_query": 1000,
+  "encoding_seconds": 445.6309599876404,
+  "auc": 0.9662391409187563,
+  "precision_at_1": 0.9104216333252715,
+  "n_negatives": 4,
+  "mrr": 0.5500390494002073,
+  "mean_rank": 32.30279054233033,
+  "median_rank": 2.0,
+  "recall_at_k": {
+    "1": 0.46560480945306293,
+    "3": 0.5930583867908955,
+    "5": 0.6427998326212057,
+    "10": 0.7055400077547056
+  },
+  "hit_at_k": {
+    "1": 0.46560480945306293,
+    "3": 0.5930583867908955,
+    "5": 0.6427998326212057,
+    "10": 0.7055400077547056
+  }
+}

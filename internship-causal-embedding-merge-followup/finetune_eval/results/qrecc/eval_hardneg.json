@@ -1,0 +1,13 @@
+{
+  "dataset": "qrecc",
+  "checkpoint": "/mnt/localssd/base_line/internship-causal-embedding/finetune_eval/results/qrecc/checkpoint_best.pt",
+  "backbone": "google-bert/bert-base-uncased",
+  "pooling": "cls",
+  "n_test_pairs": 5204,
+  "n_negatives": 4,
+  "encoding_seconds": 16.077189445495605,
+  "auc": 0.6364924271875061,
+  "precision_at_1": 0.41372021521906227,
+  "eval_type": "semantic_hard_negatives",
+  "miner": "sentence-transformers/all-MiniLM-L6-v2"
+}

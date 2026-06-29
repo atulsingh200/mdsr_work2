@@ -1,0 +1,15 @@
+Loading model + tokenizer...
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:00,  9.01it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00, 11.30it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00, 11.01it/s]
+`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`...
+/mnt/localssd/gritlm_test_env/lib/python3.10/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+trainable params: 41,943,040 || all params: 7,152,603,136 || trainable%: 0.5864
+train=4000  test=562  MAXLEN=512  B=4  ACCUM=2  effective_batch=8  EPOCHS=1
+
+=== PRE-finetune ===
+direction acc=0.521  score_pos=-1.134  score_neg=-1.185  margin=+0.051
+retrieval acc@1=0.020  MRR=0.083
+
+=== TRAIN ===
+  ep0 step   1  loss=1.1123 (rank=0.2734 bce=0.8388)  pos=-0.734  neg=-0.990  maxmem=17.8GB  t=4s
+  ep0 step  25  loss=1.5864 (rank=0.5098 bce=1.0766)  pos=+1.083  neg=+0.132  maxmem=17.8GB  t=88s

@@ -1,0 +1,27 @@
+{
+  "dataset": "followupqg",
+  "checkpoint": "/mnt/localssd/base_line/internship-causal-embedding/finetune_eval/results/followupqg/checkpoint_best.pt",
+  "backbone": "google-bert/bert-base-uncased",
+  "pooling": "cls",
+  "n_test_pairs": 501,
+  "n_candidates_per_query": 501,
+  "encoding_seconds": 2.8541998863220215,
+  "auc": 0.9827102282461027,
+  "precision_at_1": 0.9540918163672655,
+  "n_negatives": 4,
+  "mrr": 0.5844363816016129,
+  "mean_rank": 8.530938123752495,
+  "median_rank": 2.0,
+  "recall_at_k": {
+    "1": 0.4031936127744511,
+    "3": 0.7305389221556886,
+    "5": 0.8063872255489022,
+    "10": 0.8542914171656687
+  },
+  "hit_at_k": {
+    "1": 0.4031936127744511,
+    "3": 0.7305389221556886,
+    "5": 0.8063872255489022,
+    "10": 0.8542914171656687
+  }
+}

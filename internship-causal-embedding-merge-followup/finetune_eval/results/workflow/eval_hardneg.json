@@ -1,0 +1,13 @@
+{
+  "dataset": "workflow",
+  "checkpoint": "/mnt/localssd/base_line/internship-causal-embedding/finetune_eval/results/workflow/checkpoint_best.pt",
+  "backbone": "google-bert/bert-base-uncased",
+  "pooling": "cls",
+  "n_test_pairs": 260487,
+  "n_negatives": 4,
+  "encoding_seconds": 445.99354791641235,
+  "auc": 0.6882576146475068,
+  "precision_at_1": 0.47634622841063085,
+  "eval_type": "semantic_hard_negatives",
+  "miner": "sentence-transformers/all-MiniLM-L6-v2"
+}

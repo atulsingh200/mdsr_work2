@@ -1,0 +1,8 @@
+{
+  "dataset": "aep_causal",
+  "checkpoint": "/mnt/localssd/new_base_line/internship-causal-embedding/my_work/kl/results/aep_causal/cde_v2_run5c_best.pt",
+  "backbone": "google-bert/bert-base-uncased",
+  "k": 4,
+  "n_train": 5487,
+  "out_dir": "/mnt/localssd/new_base_line/internship-causal-embedding/my_work/kl/cross_encoder/data_indomain/aep_causal"
+}

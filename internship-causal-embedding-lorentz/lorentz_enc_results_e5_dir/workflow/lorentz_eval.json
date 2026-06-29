@@ -1,0 +1,38 @@
+{
+  "dataset": "workflow",
+  "checkpoint": "lorentz_enc_results_e5_dir/workflow/lorentz_best.pt",
+  "backbone": "intfloat/e5-base-v2",
+  "space_dim": 768,
+  "time_dim": 32,
+  "n_test_pairs": 260487,
+  "encoding_seconds": 459.8912630081177,
+  "auc": 0.978494980675557,
+  "precision_at_1": 0.9361925931044544,
+  "mrr": 0.5969132685454475,
+  "mean_rank": 22.36202574408704,
+  "median_rank": 1.0,
+  "recall_at_k": {
+    "1": 0.5076644899745477,
+    "3": 0.6456905718903438,
+    "5": 0.6979235048198182,
+    "10": 0.76203802876919
+  },
+  "hit_at_k": {
+    "1": 0.5076644899745477,
+    "3": 0.6456905718903438,
+    "5": 0.6979235048198182,
+    "10": 0.76203802876919
+  },
+  "n_candidates_per_query": 1000,
+  "directional_acc": 0.47915250062942505,
+  "directional_margin": -0.0048028710298240185,
+  "mrr_combined": 0.5851860855690623,
+  "median_rank_combined": 2.0,
+  "recall_at_k_combined": {
+    "1": 0.4941014330849524,
+    "3": 0.6347648827004803,
+    "5": 0.6883452917036167,
+    "10": 0.7538725541005885
+  },
+  "beta_eval": 0.5
+}

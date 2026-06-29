@@ -1,0 +1,62 @@
+{
+  "dataset": "aep_causal",
+  "split": "test",
+  "n_pairs": 562,
+  "n_random_negatives": 4,
+  "n_hard_negatives": 4,
+  "hard_neg_miner": "sentence-transformers/all-MiniLM-L6-v2",
+  "hard_neg_file": "/mnt/localssd/internship-causal-embedding-merge-followup/my_work/kl/results/aep_causal/test_hard_negatives.npy",
+  "seed": 0,
+  "ce_dirs": [
+    "/mnt/localssd/internship-causal-embedding-merge-followup/my_work/kl/cross_encoder/results/aep_causal_rerank",
+    "/mnt/localssd/internship-causal-embedding-merge-followup/my_work/kl/cross_encoder/results/aep_causal_rerank_v2"
+  ],
+  "ce_labels": [
+    "CE#1 (semantic-negs)",
+    "CE#2 (in-domain-negs)"
+  ],
+  "systems": {
+    "CE#1 (semantic-negs)": {
+      "random_negatives": {
+        "auc": 0.8440377211534809,
+        "p_at_1": 0.6672597864768683,
+        "n_anchors": 562,
+        "n_neg_per_anchor": 4
+      },
+      "semantic_hard_negatives": {
+        "auc": 0.7133038778637555,
+        "p_at_1": 0.4412811387900356,
+        "n_anchors": 562,
+        "n_neg_per_anchor": 4
+      }
+    },
+    "CE#2 (in-domain-negs)": {
+      "random_negatives": {
+        "auc": 0.8177391370423372,
+        "p_at_1": 0.5925266903914591,
+        "n_anchors": 562,
+        "n_neg_per_anchor": 4
+      },
+      "semantic_hard_negatives": {
+        "auc": 0.6086283893314421,
+        "p_at_1": 0.2846975088967972,
+        "n_anchors": 562,
+        "n_neg_per_anchor": 4
+      }
+    },
+    "ENSEMBLE (mean z)": {
+      "random_negatives": {
+        "auc": 0.9152702758323729,
+        "p_at_1": 0.7224199288256228,
+        "n_anchors": 562,
+        "n_neg_per_anchor": 4
+      },
+      "semantic_hard_negatives": {
+        "auc": 0.7310551253150289,
+        "p_at_1": 0.4288256227758007,
+        "n_anchors": 562,
+        "n_neg_per_anchor": 4
+      }
+    }
+  }
+}

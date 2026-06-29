@@ -1,0 +1,44 @@
+[config] {'data_dir': '/mnt/localssd/automation/internship-causal-embedding/data/aep_dataset', 'out_dir': 'results/classification_aep_dataset', 'backbone': 'google-bert/bert-base-uncased', 'n_layers': 24, 'epochs': 5, 'batch_size': 32, 'val_batch_size': 64, 'lr': 2e-05, 'weight_decay': 0.01, 'warmup_ratio': 0.06, 'max_length': 256, 'grad_clip': 1.0, 'grad_accum': 2, 'num_workers': 4, 'log_every': 200, 'seed': 42, 'early_stop_patience': 2}
+[train] total_steps=5275  warmup=316  effective_batch=64
+  step=200/5275  loss=0.5131  lr=1.27e-05  epoch=1
+  step=400/5275  loss=0.1518  lr=1.97e-05  epoch=1
+  step=600/5275  loss=0.1400  lr=1.89e-05  epoch=1
+  step=800/5275  loss=0.1310  lr=1.80e-05  epoch=1
+  step=1000/5275  loss=0.0919  lr=1.72e-05  epoch=1
+[epoch 1/5]  train_loss=0.2814  val_AUC=0.9742  val_Acc=0.9187  (223s)
+  * new best val_AUC=0.9742
+  step=1200/5275  loss=0.0915  lr=1.64e-05  epoch=2
+  step=1400/5275  loss=0.0070  lr=1.56e-05  epoch=2
+  step=1600/5275  loss=0.0423  lr=1.48e-05  epoch=2
+  step=1800/5275  loss=0.0049  lr=1.40e-05  epoch=2
+  step=2000/5275  loss=0.0007  lr=1.32e-05  epoch=2
+[epoch 2/5]  train_loss=0.0475  val_AUC=0.9760  val_Acc=0.9310  (449s)
+  * new best val_AUC=0.9760
+  step=2200/5275  loss=0.0005  lr=1.24e-05  epoch=3
+  step=2400/5275  loss=0.0003  lr=1.16e-05  epoch=3
+  step=2600/5275  loss=0.0010  lr=1.08e-05  epoch=3
+  step=2800/5275  loss=0.0012  lr=9.98e-06  epoch=3
+  step=3000/5275  loss=0.0066  lr=9.18e-06  epoch=3
+[epoch 3/5]  train_loss=0.0160  val_AUC=0.9805  val_Acc=0.9377  (675s)
+  * new best val_AUC=0.9805
+  step=3200/5275  loss=0.0002  lr=8.37e-06  epoch=4
+  step=3400/5275  loss=0.0002  lr=7.56e-06  epoch=4
+  step=3600/5275  loss=0.1234  lr=6.76e-06  epoch=4
+  step=3800/5275  loss=0.0003  lr=5.95e-06  epoch=4
+  step=4000/5275  loss=0.0001  lr=5.14e-06  epoch=4
+  step=4200/5275  loss=0.0002  lr=4.34e-06  epoch=4
+[epoch 4/5]  train_loss=0.0066  val_AUC=0.9778  val_Acc=0.9417  (900s)
+  no improvement (best=0.9805, patience 1/2)
+  step=4400/5275  loss=0.0001  lr=3.53e-06  epoch=5
+  step=4600/5275  loss=0.2814  lr=2.72e-06  epoch=5
+  step=4800/5275  loss=0.0001  lr=1.92e-06  epoch=5
+  step=5000/5275  loss=0.0001  lr=1.11e-06  epoch=5
+  step=5200/5275  loss=0.0001  lr=3.02e-07  epoch=5
+[epoch 5/5]  train_loss=0.0026  val_AUC=0.9801  val_Acc=0.9428  (1123s)
+  no improvement (best=0.9805, patience 2/2)
+[early stop] triggered at epoch 5
+
+[test] loading checkpoint_best.pt ...
+[test]  AUC=0.9598  Acc=0.9102
+
+[done]  best_val_AUC=0.9805  test_AUC=0.9598  test_Acc=0.9102

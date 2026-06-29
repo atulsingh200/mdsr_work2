@@ -1,0 +1,331 @@
+04:46:25 INFO run_dir=runs/classifier/mlp_bge_small_new_seman
+04:46:25 INFO device=cuda  bf16=True
+04:46:25 INFO tokenizer <- BAAI/bge-small-en-v1.5
+04:46:35 INFO max_seq_len=524 (user-provided)
+04:46:35 INFO loading datasets
+04:46:36 INFO   train=110775  val=6004  test=6004
+04:46:36 INFO building DirectionalClassifier on BAAI/bge-small-en-v1.5  head_cfg={'head_type': 'mlp', 'hidden_dims': [512, 128], 'dropout': 0.1, 'activation': 'gelu', 'norm': 'layer'}  n_tiers=0
+04:46:37 INFO   hidden_size=384  trainable_params=67,577,089
+04:46:37 INFO   total_steps=10386  warmup_steps=1038
+04:46:44 INFO   e1 step    50/3462  loss=0.7800  acc=0.5519  lr0=9.63e-07 lr1=4.82e-05
+04:46:49 INFO   e1 step   100/3462  loss=0.7224  acc=0.5941  lr0=1.93e-06 lr1=9.63e-05
+04:46:53 INFO   e1 step   150/3462  loss=0.6692  acc=0.6367  lr0=2.89e-06 lr1=1.45e-04
+04:46:58 INFO   e1 step   200/3462  loss=0.6268  acc=0.6663  lr0=3.85e-06 lr1=1.93e-04
+04:47:03 INFO   e1 step   250/3462  loss=0.5942  acc=0.6915  lr0=4.82e-06 lr1=2.41e-04
+04:47:07 INFO   e1 step   300/3462  loss=0.5642  acc=0.7124  lr0=5.78e-06 lr1=2.89e-04
+04:47:11 INFO   e1 step   350/3462  loss=0.5391  acc=0.7288  lr0=6.74e-06 lr1=3.37e-04
+04:47:15 INFO   e1 step   400/3462  loss=0.5169  acc=0.7430  lr0=7.71e-06 lr1=3.85e-04
+04:47:19 INFO   e1 step   450/3462  loss=0.4969  acc=0.7553  lr0=8.67e-06 lr1=4.34e-04
+04:47:24 INFO   e1 step   500/3462  loss=0.4809  acc=0.7652  lr0=9.63e-06 lr1=4.82e-04
+04:47:29 INFO   e1 step   550/3462  loss=0.4644  acc=0.7748  lr0=1.06e-05 lr1=5.30e-04
+04:47:33 INFO   e1 step   600/3462  loss=0.4492  acc=0.7832  lr0=1.16e-05 lr1=5.78e-04
+04:47:38 INFO   e1 step   650/3462  loss=0.4362  acc=0.7907  lr0=1.25e-05 lr1=6.26e-04
+04:47:42 INFO   e1 step   700/3462  loss=0.4247  acc=0.7969  lr0=1.35e-05 lr1=6.74e-04
+04:47:47 INFO   e1 step   750/3462  loss=0.4117  acc=0.8040  lr0=1.45e-05 lr1=7.23e-04
+04:47:51 INFO   e1 step   800/3462  loss=0.4021  acc=0.8097  lr0=1.54e-05 lr1=7.71e-04
+04:47:55 INFO   e1 step   850/3462  loss=0.3925  acc=0.8151  lr0=1.64e-05 lr1=8.19e-04
+04:48:00 INFO   e1 step   900/3462  loss=0.3824  acc=0.8205  lr0=1.73e-05 lr1=8.67e-04
+04:48:04 INFO   e1 step   950/3462  loss=0.3730  acc=0.8251  lr0=1.83e-05 lr1=9.15e-04
+04:48:08 INFO   e1 step  1000/3462  loss=0.3637  acc=0.8300  lr0=1.93e-05 lr1=9.63e-04
+04:48:13 INFO   e1 step  1050/3462  loss=0.3556  acc=0.8341  lr0=2.00e-05 lr1=9.99e-04
+04:48:17 INFO   e1 step  1100/3462  loss=0.3480  acc=0.8382  lr0=1.99e-05 lr1=9.93e-04
+04:48:22 INFO   e1 step  1150/3462  loss=0.3402  acc=0.8418  lr0=1.98e-05 lr1=9.88e-04
+04:48:26 INFO   e1 step  1200/3462  loss=0.3329  acc=0.8454  lr0=1.97e-05 lr1=9.83e-04
+04:48:31 INFO   e1 step  1250/3462  loss=0.3256  acc=0.8494  lr0=1.95e-05 lr1=9.77e-04
+04:48:35 INFO   e1 step  1300/3462  loss=0.3189  acc=0.8528  lr0=1.94e-05 lr1=9.72e-04
+04:48:39 INFO   e1 step  1350/3462  loss=0.3126  acc=0.8561  lr0=1.93e-05 lr1=9.67e-04
+04:48:44 INFO   e1 step  1400/3462  loss=0.3069  acc=0.8592  lr0=1.92e-05 lr1=9.61e-04
+04:48:48 INFO   e1 step  1450/3462  loss=0.3008  acc=0.8625  lr0=1.91e-05 lr1=9.56e-04
+04:48:52 INFO   e1 step  1500/3462  loss=0.2957  acc=0.8651  lr0=1.90e-05 lr1=9.51e-04
+04:48:57 INFO   e1 step  1550/3462  loss=0.2898  acc=0.8680  lr0=1.89e-05 lr1=9.45e-04
+04:49:01 INFO   e1 step  1600/3462  loss=0.2841  acc=0.8709  lr0=1.88e-05 lr1=9.40e-04
+04:49:05 INFO   e1 step  1650/3462  loss=0.2787  acc=0.8736  lr0=1.87e-05 lr1=9.35e-04
+04:49:09 INFO   e1 step  1700/3462  loss=0.2742  acc=0.8760  lr0=1.86e-05 lr1=9.29e-04
+04:49:14 INFO   e1 step  1750/3462  loss=0.2692  acc=0.8784  lr0=1.85e-05 lr1=9.24e-04
+04:49:18 INFO   e1 step  1800/3462  loss=0.2645  acc=0.8807  lr0=1.84e-05 lr1=9.18e-04
+04:49:22 INFO   e1 step  1850/3462  loss=0.2603  acc=0.8828  lr0=1.83e-05 lr1=9.13e-04
+04:49:27 INFO   e1 step  1900/3462  loss=0.2554  acc=0.8852  lr0=1.82e-05 lr1=9.08e-04
+04:49:31 INFO   e1 step  1950/3462  loss=0.2513  acc=0.8873  lr0=1.80e-05 lr1=9.02e-04
+04:49:35 INFO   e1 step  2000/3462  loss=0.2473  acc=0.8892  lr0=1.79e-05 lr1=8.97e-04
+04:49:40 INFO   e1 step  2050/3462  loss=0.2436  acc=0.8910  lr0=1.78e-05 lr1=8.92e-04
+04:49:44 INFO   e1 step  2100/3462  loss=0.2397  acc=0.8930  lr0=1.77e-05 lr1=8.86e-04
+04:49:48 INFO   e1 step  2150/3462  loss=0.2362  acc=0.8946  lr0=1.76e-05 lr1=8.81e-04
+04:49:53 INFO   e1 step  2200/3462  loss=0.2326  acc=0.8963  lr0=1.75e-05 lr1=8.76e-04
+04:49:57 INFO   e1 step  2250/3462  loss=0.2291  acc=0.8980  lr0=1.74e-05 lr1=8.70e-04
+04:50:01 INFO   e1 step  2300/3462  loss=0.2255  acc=0.8996  lr0=1.73e-05 lr1=8.65e-04
+04:50:05 INFO   e1 step  2350/3462  loss=0.2224  acc=0.9012  lr0=1.72e-05 lr1=8.60e-04
+04:50:10 INFO   e1 step  2400/3462  loss=0.2195  acc=0.9026  lr0=1.71e-05 lr1=8.54e-04
+04:50:14 INFO   e1 step  2450/3462  loss=0.2165  acc=0.9041  lr0=1.70e-05 lr1=8.49e-04
+04:50:18 INFO   e1 step  2500/3462  loss=0.2136  acc=0.9054  lr0=1.69e-05 lr1=8.44e-04
+04:50:23 INFO   e1 step  2550/3462  loss=0.2104  acc=0.9068  lr0=1.68e-05 lr1=8.38e-04
+04:50:28 INFO   e1 step  2600/3462  loss=0.2076  acc=0.9082  lr0=1.67e-05 lr1=8.33e-04
+04:50:32 INFO   e1 step  2650/3462  loss=0.2049  acc=0.9094  lr0=1.66e-05 lr1=8.28e-04
+04:50:36 INFO   e1 step  2700/3462  loss=0.2024  acc=0.9106  lr0=1.64e-05 lr1=8.22e-04
+04:50:40 INFO   e1 step  2750/3462  loss=0.1998  acc=0.9118  lr0=1.63e-05 lr1=8.17e-04
+04:50:45 INFO   e1 step  2800/3462  loss=0.1972  acc=0.9130  lr0=1.62e-05 lr1=8.12e-04
+04:50:49 INFO   e1 step  2850/3462  loss=0.1945  acc=0.9142  lr0=1.61e-05 lr1=8.06e-04
+04:50:53 INFO   e1 step  2900/3462  loss=0.1920  acc=0.9153  lr0=1.60e-05 lr1=8.01e-04
+04:50:58 INFO   e1 step  2950/3462  loss=0.1898  acc=0.9164  lr0=1.59e-05 lr1=7.95e-04
+04:51:03 INFO   e1 step  3000/3462  loss=0.1874  acc=0.9174  lr0=1.58e-05 lr1=7.90e-04
+04:51:07 INFO   e1 step  3050/3462  loss=0.1851  acc=0.9184  lr0=1.57e-05 lr1=7.85e-04
+04:51:12 INFO   e1 step  3100/3462  loss=0.1829  acc=0.9194  lr0=1.56e-05 lr1=7.79e-04
+04:51:17 INFO   e1 step  3150/3462  loss=0.1808  acc=0.9203  lr0=1.55e-05 lr1=7.74e-04
+04:51:21 INFO   e1 step  3200/3462  loss=0.1787  acc=0.9212  lr0=1.54e-05 lr1=7.69e-04
+04:51:26 INFO   e1 step  3250/3462  loss=0.1766  acc=0.9222  lr0=1.53e-05 lr1=7.63e-04
+04:51:31 INFO   e1 step  3300/3462  loss=0.1748  acc=0.9230  lr0=1.52e-05 lr1=7.58e-04
+04:51:35 INFO   e1 step  3350/3462  loss=0.1732  acc=0.9237  lr0=1.51e-05 lr1=7.53e-04
+04:51:40 INFO   e1 step  3400/3462  loss=0.1711  acc=0.9247  lr0=1.49e-05 lr1=7.47e-04
+04:51:45 INFO   e1 step  3450/3462  loss=0.1693  acc=0.9255  lr0=1.48e-05 lr1=7.42e-04
+04:51:50 INFO [epoch 1] train_loss=0.1688 train_acc=0.9257  val_loss=0.8003 val_acc=0.8621 val_auc=0.9177  elapsed=312.4s
+04:51:50 INFO   saved best.pt  val_acc=0.8621
+04:51:55 INFO   e2 step    50/3462  loss=0.0472  acc=0.9794  lr0=1.47e-05 lr1=7.35e-04
+04:51:59 INFO   e2 step   100/3462  loss=0.0451  acc=0.9806  lr0=1.46e-05 lr1=7.30e-04
+04:52:03 INFO   e2 step   150/3462  loss=0.0409  acc=0.9823  lr0=1.45e-05 lr1=7.25e-04
+04:52:08 INFO   e2 step   200/3462  loss=0.0401  acc=0.9812  lr0=1.44e-05 lr1=7.19e-04
+04:52:12 INFO   e2 step   250/3462  loss=0.0394  acc=0.9811  lr0=1.43e-05 lr1=7.14e-04
+04:52:16 INFO   e2 step   300/3462  loss=0.0407  acc=0.9814  lr0=1.42e-05 lr1=7.09e-04
+04:52:20 INFO   e2 step   350/3462  loss=0.0403  acc=0.9819  lr0=1.41e-05 lr1=7.03e-04
+04:52:25 INFO   e2 step   400/3462  loss=0.0386  acc=0.9825  lr0=1.40e-05 lr1=6.98e-04
+04:52:29 INFO   e2 step   450/3462  loss=0.0410  acc=0.9822  lr0=1.39e-05 lr1=6.93e-04
+04:52:33 INFO   e2 step   500/3462  loss=0.0410  acc=0.9821  lr0=1.37e-05 lr1=6.87e-04
+04:52:38 INFO   e2 step   550/3462  loss=0.0411  acc=0.9823  lr0=1.36e-05 lr1=6.82e-04
+04:52:42 INFO   e2 step   600/3462  loss=0.0418  acc=0.9820  lr0=1.35e-05 lr1=6.77e-04
+04:52:46 INFO   e2 step   650/3462  loss=0.0413  acc=0.9823  lr0=1.34e-05 lr1=6.71e-04
+04:52:51 INFO   e2 step   700/3462  loss=0.0409  acc=0.9826  lr0=1.33e-05 lr1=6.66e-04
+04:52:55 INFO   e2 step   750/3462  loss=0.0414  acc=0.9824  lr0=1.32e-05 lr1=6.60e-04
+04:53:00 INFO   e2 step   800/3462  loss=0.0415  acc=0.9822  lr0=1.31e-05 lr1=6.55e-04
+04:53:05 INFO   e2 step   850/3462  loss=0.0418  acc=0.9820  lr0=1.30e-05 lr1=6.50e-04
+04:53:09 INFO   e2 step   900/3462  loss=0.0413  acc=0.9822  lr0=1.29e-05 lr1=6.44e-04
+04:53:13 INFO   e2 step   950/3462  loss=0.0406  acc=0.9823  lr0=1.28e-05 lr1=6.39e-04
+04:53:18 INFO   e2 step  1000/3462  loss=0.0402  acc=0.9824  lr0=1.27e-05 lr1=6.34e-04
+04:53:22 INFO   e2 step  1050/3462  loss=0.0397  acc=0.9826  lr0=1.26e-05 lr1=6.28e-04
+04:53:27 INFO   e2 step  1100/3462  loss=0.0391  acc=0.9827  lr0=1.25e-05 lr1=6.23e-04
+04:53:31 INFO   e2 step  1150/3462  loss=0.0384  acc=0.9829  lr0=1.24e-05 lr1=6.18e-04
+04:53:36 INFO   e2 step  1200/3462  loss=0.0384  acc=0.9827  lr0=1.22e-05 lr1=6.12e-04
+04:53:41 INFO   e2 step  1250/3462  loss=0.0384  acc=0.9827  lr0=1.21e-05 lr1=6.07e-04
+04:53:45 INFO   e2 step  1300/3462  loss=0.0378  acc=0.9827  lr0=1.20e-05 lr1=6.02e-04
+04:53:50 INFO   e2 step  1350/3462  loss=0.0375  acc=0.9828  lr0=1.19e-05 lr1=5.96e-04
+04:53:55 INFO   e2 step  1400/3462  loss=0.0373  acc=0.9830  lr0=1.18e-05 lr1=5.91e-04
+04:54:00 INFO   e2 step  1450/3462  loss=0.0371  acc=0.9831  lr0=1.17e-05 lr1=5.86e-04
+04:54:04 INFO   e2 step  1500/3462  loss=0.0368  acc=0.9831  lr0=1.16e-05 lr1=5.80e-04
+04:54:09 INFO   e2 step  1550/3462  loss=0.0367  acc=0.9833  lr0=1.15e-05 lr1=5.75e-04
+04:54:13 INFO   e2 step  1600/3462  loss=0.0361  acc=0.9836  lr0=1.14e-05 lr1=5.70e-04
+04:54:18 INFO   e2 step  1650/3462  loss=0.0358  acc=0.9836  lr0=1.13e-05 lr1=5.64e-04
+04:54:22 INFO   e2 step  1700/3462  loss=0.0355  acc=0.9838  lr0=1.12e-05 lr1=5.59e-04
+04:54:26 INFO   e2 step  1750/3462  loss=0.0356  acc=0.9837  lr0=1.11e-05 lr1=5.53e-04
+04:54:30 INFO   e2 step  1800/3462  loss=0.0353  acc=0.9836  lr0=1.10e-05 lr1=5.48e-04
+04:54:35 INFO   e2 step  1850/3462  loss=0.0353  acc=0.9836  lr0=1.09e-05 lr1=5.43e-04
+04:54:39 INFO   e2 step  1900/3462  loss=0.0352  acc=0.9836  lr0=1.07e-05 lr1=5.37e-04
+04:54:43 INFO   e2 step  1950/3462  loss=0.0349  acc=0.9837  lr0=1.06e-05 lr1=5.32e-04
+04:54:48 INFO   e2 step  2000/3462  loss=0.0345  acc=0.9838  lr0=1.05e-05 lr1=5.27e-04
+04:54:52 INFO   e2 step  2050/3462  loss=0.0344  acc=0.9839  lr0=1.04e-05 lr1=5.21e-04
+04:54:56 INFO   e2 step  2100/3462  loss=0.0344  acc=0.9839  lr0=1.03e-05 lr1=5.16e-04
+04:55:01 INFO   e2 step  2150/3462  loss=0.0343  acc=0.9839  lr0=1.02e-05 lr1=5.11e-04
+04:55:05 INFO   e2 step  2200/3462  loss=0.0339  acc=0.9841  lr0=1.01e-05 lr1=5.05e-04
+04:55:09 INFO   e2 step  2250/3462  loss=0.0337  acc=0.9841  lr0=1.00e-05 lr1=5.00e-04
+04:55:13 INFO   e2 step  2300/3462  loss=0.0338  acc=0.9842  lr0=9.89e-06 lr1=4.95e-04
+04:55:17 INFO   e2 step  2350/3462  loss=0.0338  acc=0.9843  lr0=9.79e-06 lr1=4.89e-04
+04:55:21 INFO   e2 step  2400/3462  loss=0.0336  acc=0.9843  lr0=9.68e-06 lr1=4.84e-04
+04:55:26 INFO   e2 step  2450/3462  loss=0.0336  acc=0.9843  lr0=9.57e-06 lr1=4.79e-04
+04:55:30 INFO   e2 step  2500/3462  loss=0.0336  acc=0.9844  lr0=9.47e-06 lr1=4.73e-04
+04:55:35 INFO   e2 step  2550/3462  loss=0.0336  acc=0.9843  lr0=9.36e-06 lr1=4.68e-04
+04:55:40 INFO   e2 step  2600/3462  loss=0.0335  acc=0.9843  lr0=9.25e-06 lr1=4.63e-04
+04:55:44 INFO   e2 step  2650/3462  loss=0.0332  acc=0.9844  lr0=9.14e-06 lr1=4.57e-04
+04:55:49 INFO   e2 step  2700/3462  loss=0.0331  acc=0.9844  lr0=9.04e-06 lr1=4.52e-04
+04:55:54 INFO   e2 step  2750/3462  loss=0.0330  acc=0.9845  lr0=8.93e-06 lr1=4.47e-04
+04:55:58 INFO   e2 step  2800/3462  loss=0.0328  acc=0.9846  lr0=8.82e-06 lr1=4.41e-04
+04:56:02 INFO   e2 step  2850/3462  loss=0.0327  acc=0.9846  lr0=8.72e-06 lr1=4.36e-04
+04:56:07 INFO   e2 step  2900/3462  loss=0.0328  acc=0.9845  lr0=8.61e-06 lr1=4.30e-04
+04:56:12 INFO   e2 step  2950/3462  loss=0.0327  acc=0.9845  lr0=8.50e-06 lr1=4.25e-04
+04:56:16 INFO   e2 step  3000/3462  loss=0.0326  acc=0.9845  lr0=8.40e-06 lr1=4.20e-04
+04:56:21 INFO   e2 step  3050/3462  loss=0.0326  acc=0.9845  lr0=8.29e-06 lr1=4.14e-04
+04:56:26 INFO   e2 step  3100/3462  loss=0.0326  acc=0.9845  lr0=8.18e-06 lr1=4.09e-04
+04:56:30 INFO   e2 step  3150/3462  loss=0.0325  acc=0.9845  lr0=8.07e-06 lr1=4.04e-04
+04:56:35 INFO   e2 step  3200/3462  loss=0.0322  acc=0.9846  lr0=7.97e-06 lr1=3.98e-04
+04:56:39 INFO   e2 step  3250/3462  loss=0.0322  acc=0.9847  lr0=7.86e-06 lr1=3.93e-04
+04:56:44 INFO   e2 step  3300/3462  loss=0.0319  acc=0.9848  lr0=7.75e-06 lr1=3.88e-04
+04:56:48 INFO   e2 step  3350/3462  loss=0.0318  acc=0.9847  lr0=7.65e-06 lr1=3.82e-04
+04:56:53 INFO   e2 step  3400/3462  loss=0.0318  acc=0.9848  lr0=7.54e-06 lr1=3.77e-04
+04:56:58 INFO   e2 step  3450/3462  loss=0.0317  acc=0.9848  lr0=7.43e-06 lr1=3.72e-04
+04:57:03 INFO [epoch 2] train_loss=0.0316 train_acc=0.9848  val_loss=0.9316 val_acc=0.8626 val_auc=0.9144  elapsed=312.8s
+04:57:04 INFO   saved best.pt  val_acc=0.8626
+04:57:08 INFO   e3 step    50/3462  loss=0.0212  acc=0.9881  lr0=7.30e-06 lr1=3.65e-04
+04:57:13 INFO   e3 step   100/3462  loss=0.0270  acc=0.9859  lr0=7.19e-06 lr1=3.60e-04
+04:57:18 INFO   e3 step   150/3462  loss=0.0240  acc=0.9867  lr0=7.09e-06 lr1=3.54e-04
+04:57:22 INFO   e3 step   200/3462  loss=0.0251  acc=0.9869  lr0=6.98e-06 lr1=3.49e-04
+04:57:27 INFO   e3 step   250/3462  loss=0.0232  acc=0.9880  lr0=6.87e-06 lr1=3.44e-04
+04:57:31 INFO   e3 step   300/3462  loss=0.0227  acc=0.9886  lr0=6.77e-06 lr1=3.38e-04
+04:57:36 INFO   e3 step   350/3462  loss=0.0229  acc=0.9883  lr0=6.66e-06 lr1=3.33e-04
+04:57:41 INFO   e3 step   400/3462  loss=0.0234  acc=0.9883  lr0=6.55e-06 lr1=3.28e-04
+04:57:45 INFO   e3 step   450/3462  loss=0.0233  acc=0.9881  lr0=6.44e-06 lr1=3.22e-04
+04:57:50 INFO   e3 step   500/3462  loss=0.0232  acc=0.9881  lr0=6.34e-06 lr1=3.17e-04
+04:57:55 INFO   e3 step   550/3462  loss=0.0233  acc=0.9880  lr0=6.23e-06 lr1=3.12e-04
+04:58:00 INFO   e3 step   600/3462  loss=0.0232  acc=0.9879  lr0=6.12e-06 lr1=3.06e-04
+04:58:04 INFO   e3 step   650/3462  loss=0.0230  acc=0.9881  lr0=6.02e-06 lr1=3.01e-04
+04:58:09 INFO   e3 step   700/3462  loss=0.0231  acc=0.9878  lr0=5.91e-06 lr1=2.95e-04
+04:58:14 INFO   e3 step   750/3462  loss=0.0230  acc=0.9877  lr0=5.80e-06 lr1=2.90e-04
+04:58:18 INFO   e3 step   800/3462  loss=0.0230  acc=0.9877  lr0=5.70e-06 lr1=2.85e-04
+04:58:23 INFO   e3 step   850/3462  loss=0.0228  acc=0.9876  lr0=5.59e-06 lr1=2.79e-04
+04:58:27 INFO   e3 step   900/3462  loss=0.0228  acc=0.9877  lr0=5.48e-06 lr1=2.74e-04
+04:58:32 INFO   e3 step   950/3462  loss=0.0227  acc=0.9879  lr0=5.37e-06 lr1=2.69e-04
+04:58:37 INFO   e3 step  1000/3462  loss=0.0224  acc=0.9879  lr0=5.27e-06 lr1=2.63e-04
+04:58:41 INFO   e3 step  1050/3462  loss=0.0224  acc=0.9878  lr0=5.16e-06 lr1=2.58e-04
+04:58:46 INFO   e3 step  1100/3462  loss=0.0223  acc=0.9878  lr0=5.05e-06 lr1=2.53e-04
+04:58:50 INFO   e3 step  1150/3462  loss=0.0221  acc=0.9879  lr0=4.95e-06 lr1=2.47e-04
+04:58:55 INFO   e3 step  1200/3462  loss=0.0217  acc=0.9879  lr0=4.84e-06 lr1=2.42e-04
+04:59:00 INFO   e3 step  1250/3462  loss=0.0217  acc=0.9880  lr0=4.73e-06 lr1=2.37e-04
+04:59:04 INFO   e3 step  1300/3462  loss=0.0215  acc=0.9881  lr0=4.63e-06 lr1=2.31e-04
+04:59:09 INFO   e3 step  1350/3462  loss=0.0215  acc=0.9881  lr0=4.52e-06 lr1=2.26e-04
+04:59:14 INFO   e3 step  1400/3462  loss=0.0213  acc=0.9881  lr0=4.41e-06 lr1=2.21e-04
+04:59:18 INFO   e3 step  1450/3462  loss=0.0214  acc=0.9881  lr0=4.30e-06 lr1=2.15e-04
+04:59:23 INFO   e3 step  1500/3462  loss=0.0213  acc=0.9882  lr0=4.20e-06 lr1=2.10e-04
+04:59:27 INFO   e3 step  1550/3462  loss=0.0214  acc=0.9881  lr0=4.09e-06 lr1=2.05e-04
+04:59:32 INFO   e3 step  1600/3462  loss=0.0213  acc=0.9882  lr0=3.98e-06 lr1=1.99e-04
+04:59:36 INFO   e3 step  1650/3462  loss=0.0212  acc=0.9882  lr0=3.88e-06 lr1=1.94e-04
+04:59:41 INFO   e3 step  1700/3462  loss=0.0214  acc=0.9880  lr0=3.77e-06 lr1=1.88e-04
+04:59:46 INFO   e3 step  1750/3462  loss=0.0213  acc=0.9880  lr0=3.66e-06 lr1=1.83e-04
+04:59:51 INFO   e3 step  1800/3462  loss=0.0212  acc=0.9881  lr0=3.56e-06 lr1=1.78e-04
+04:59:55 INFO   e3 step  1850/3462  loss=0.0210  acc=0.9882  lr0=3.45e-06 lr1=1.72e-04
+05:00:00 INFO   e3 step  1900/3462  loss=0.0209  acc=0.9882  lr0=3.34e-06 lr1=1.67e-04
+05:00:05 INFO   e3 step  1950/3462  loss=0.0210  acc=0.9882  lr0=3.23e-06 lr1=1.62e-04
+05:00:09 INFO   e3 step  2000/3462  loss=0.0208  acc=0.9883  lr0=3.13e-06 lr1=1.56e-04
+05:00:14 INFO   e3 step  2050/3462  loss=0.0209  acc=0.9882  lr0=3.02e-06 lr1=1.51e-04
+05:00:18 INFO   e3 step  2100/3462  loss=0.0210  acc=0.9882  lr0=2.91e-06 lr1=1.46e-04
+05:00:23 INFO   e3 step  2150/3462  loss=0.0209  acc=0.9882  lr0=2.81e-06 lr1=1.40e-04
+05:00:27 INFO   e3 step  2200/3462  loss=0.0210  acc=0.9882  lr0=2.70e-06 lr1=1.35e-04
+05:00:32 INFO   e3 step  2250/3462  loss=0.0210  acc=0.9882  lr0=2.59e-06 lr1=1.30e-04
+05:00:36 INFO   e3 step  2300/3462  loss=0.0210  acc=0.9882  lr0=2.49e-06 lr1=1.24e-04
+05:00:41 INFO   e3 step  2350/3462  loss=0.0210  acc=0.9881  lr0=2.38e-06 lr1=1.19e-04
+05:00:46 INFO   e3 step  2400/3462  loss=0.0209  acc=0.9882  lr0=2.27e-06 lr1=1.14e-04
+05:00:50 INFO   e3 step  2450/3462  loss=0.0208  acc=0.9882  lr0=2.17e-06 lr1=1.08e-04
+05:00:55 INFO   e3 step  2500/3462  loss=0.0208  acc=0.9883  lr0=2.06e-06 lr1=1.03e-04
+05:01:00 INFO   e3 step  2550/3462  loss=0.0208  acc=0.9883  lr0=1.95e-06 lr1=9.76e-05
+05:01:04 INFO   e3 step  2600/3462  loss=0.0207  acc=0.9883  lr0=1.84e-06 lr1=9.22e-05
+05:01:09 INFO   e3 step  2650/3462  loss=0.0207  acc=0.9883  lr0=1.74e-06 lr1=8.69e-05
+05:01:14 INFO   e3 step  2700/3462  loss=0.0206  acc=0.9883  lr0=1.63e-06 lr1=8.15e-05
+05:01:18 INFO   e3 step  2750/3462  loss=0.0205  acc=0.9884  lr0=1.52e-06 lr1=7.62e-05
+05:01:23 INFO   e3 step  2800/3462  loss=0.0205  acc=0.9884  lr0=1.42e-06 lr1=7.08e-05
+05:01:27 INFO   e3 step  2850/3462  loss=0.0205  acc=0.9884  lr0=1.31e-06 lr1=6.55e-05
+05:01:32 INFO   e3 step  2900/3462  loss=0.0205  acc=0.9883  lr0=1.20e-06 lr1=6.01e-05
+05:01:37 INFO   e3 step  2950/3462  loss=0.0204  acc=0.9883  lr0=1.10e-06 lr1=5.48e-05
+05:01:41 INFO   e3 step  3000/3462  loss=0.0206  acc=0.9883  lr0=9.88e-07 lr1=4.94e-05
+05:01:46 INFO   e3 step  3050/3462  loss=0.0206  acc=0.9883  lr0=8.81e-07 lr1=4.41e-05
+05:01:51 INFO   e3 step  3100/3462  loss=0.0206  acc=0.9882  lr0=7.74e-07 lr1=3.87e-05
+05:01:56 INFO   e3 step  3150/3462  loss=0.0205  acc=0.9883  lr0=6.68e-07 lr1=3.34e-05
+05:02:01 INFO   e3 step  3200/3462  loss=0.0204  acc=0.9883  lr0=5.61e-07 lr1=2.80e-05
+05:02:05 INFO   e3 step  3250/3462  loss=0.0205  acc=0.9883  lr0=4.54e-07 lr1=2.27e-05
+05:02:10 INFO   e3 step  3300/3462  loss=0.0204  acc=0.9883  lr0=3.47e-07 lr1=1.73e-05
+05:02:15 INFO   e3 step  3350/3462  loss=0.0204  acc=0.9883  lr0=2.40e-07 lr1=1.20e-05
+05:02:19 INFO   e3 step  3400/3462  loss=0.0204  acc=0.9883  lr0=1.33e-07 lr1=6.63e-06
+05:02:24 INFO   e3 step  3450/3462  loss=0.0203  acc=0.9883  lr0=2.57e-08 lr1=1.28e-06
+05:02:30 INFO [epoch 3] train_loss=0.0203 train_acc=0.9883  val_loss=1.1028 val_acc=0.8628 val_auc=0.9109  elapsed=326.2s
+05:02:30 INFO   saved best.pt  val_acc=0.8628
+05:02:31 INFO loading best.pt for test eval
+05:02:35 INFO [test] loss=0.9029  acc=0.8854  auc=0.9271  f1=0.8837
+05:02:35 INFO [test] per-tier-pair accuracy:
+05:02:35 INFO         T1-T2  n=    2  acc=0.5000
+05:02:35 INFO         T1-T3  n=   10  acc=0.7000
+05:02:35 INFO         T1-T4  n=    8  acc=0.8750
+05:02:35 INFO         T1-T5  n=   20  acc=0.7000
+05:02:35 INFO         T1-T6  n=   64  acc=0.9531
+05:02:35 INFO         T1-T7  n=    6  acc=1.0000
+05:02:35 INFO         T1-T8  n=   36  acc=1.0000
+05:02:35 INFO         T1-T9  n=   12  acc=1.0000
+05:02:35 INFO        T1-T10  n=    4  acc=1.0000
+05:02:35 INFO        T1-T11  n=   24  acc=1.0000
+05:02:35 INFO        T1-T12  n=    8  acc=1.0000
+05:02:35 INFO        T1-T13  n=    8  acc=1.0000
+05:02:35 INFO        T1-T14  n=    2  acc=1.0000
+05:02:35 INFO        T1-T15  n=   28  acc=1.0000
+05:02:35 INFO         T2-T3  n=    5  acc=1.0000
+05:02:35 INFO         T2-T4  n=    4  acc=1.0000
+05:02:35 INFO         T2-T5  n=   10  acc=1.0000
+05:02:35 INFO         T2-T6  n=   32  acc=1.0000
+05:02:35 INFO         T2-T7  n=    3  acc=1.0000
+05:02:35 INFO         T2-T8  n=   18  acc=1.0000
+05:02:35 INFO         T2-T9  n=    6  acc=1.0000
+05:02:35 INFO        T2-T10  n=    2  acc=1.0000
+05:02:35 INFO        T2-T11  n=   12  acc=1.0000
+05:02:35 INFO        T2-T12  n=    4  acc=1.0000
+05:02:35 INFO        T2-T13  n=    4  acc=1.0000
+05:02:35 INFO        T2-T14  n=    1  acc=1.0000
+05:02:35 INFO        T2-T15  n=   14  acc=1.0000
+05:02:35 INFO         T3-T4  n=   20  acc=0.6500
+05:02:35 INFO         T3-T5  n=   50  acc=0.6200
+05:02:35 INFO         T3-T6  n=  160  acc=0.7312
+05:02:35 INFO         T3-T7  n=   15  acc=0.8667
+05:02:35 INFO         T3-T8  n=   90  acc=0.7889
+05:02:35 INFO         T3-T9  n=   30  acc=0.8000
+05:02:35 INFO        T3-T10  n=   10  acc=0.8000
+05:02:35 INFO        T3-T11  n=   60  acc=0.7833
+05:02:35 INFO        T3-T12  n=   20  acc=0.8500
+05:02:35 INFO        T3-T13  n=   20  acc=0.8500
+05:02:35 INFO        T3-T14  n=    5  acc=0.8000
+05:02:35 INFO        T3-T15  n=   70  acc=0.9429
+05:02:35 INFO         T4-T5  n=   40  acc=0.7750
+05:02:35 INFO         T4-T6  n=  128  acc=0.7891
+05:02:35 INFO         T4-T7  n=   12  acc=0.9167
+05:02:35 INFO         T4-T8  n=   72  acc=0.7639
+05:02:35 INFO         T4-T9  n=   24  acc=0.8750
+05:02:35 INFO        T4-T10  n=    8  acc=1.0000
+05:02:35 INFO        T4-T11  n=   48  acc=1.0000
+05:02:35 INFO        T4-T12  n=   16  acc=1.0000
+05:02:35 INFO        T4-T13  n=   16  acc=1.0000
+05:02:35 INFO        T4-T14  n=    4  acc=0.7500
+05:02:35 INFO        T4-T15  n=   56  acc=1.0000
+05:02:35 INFO         T5-T6  n=  320  acc=0.8500
+05:02:35 INFO         T5-T7  n=   30  acc=0.9667
+05:02:35 INFO         T5-T8  n=  180  acc=0.9111
+05:02:35 INFO         T5-T9  n=   60  acc=0.9500
+05:02:35 INFO        T5-T10  n=   20  acc=0.9500
+05:02:35 INFO        T5-T11  n=  120  acc=0.9750
+05:02:35 INFO        T5-T12  n=   40  acc=1.0000
+05:02:35 INFO        T5-T13  n=   40  acc=1.0000
+05:02:35 INFO        T5-T14  n=   10  acc=1.0000
+05:02:35 INFO        T5-T15  n=  140  acc=1.0000
+05:02:35 INFO         T6-T7  n=   96  acc=0.8125
+05:02:35 INFO         T6-T8  n=  576  acc=0.8507
+05:02:35 INFO         T6-T9  n=  192  acc=0.8177
+05:02:35 INFO        T6-T10  n=   64  acc=0.9531
+05:02:35 INFO        T6-T11  n=  384  acc=0.9245
+05:02:35 INFO        T6-T12  n=  128  acc=1.0000
+05:02:35 INFO        T6-T13  n=  128  acc=1.0000
+05:02:35 INFO        T6-T14  n=   32  acc=0.8750
+05:02:35 INFO        T6-T15  n=  448  acc=0.9888
+05:02:35 INFO         T7-T8  n=   54  acc=0.3704
+05:02:35 INFO         T7-T9  n=   18  acc=0.4444
+05:02:35 INFO        T7-T10  n=    6  acc=0.6667
+05:02:35 INFO        T7-T11  n=   36  acc=0.6389
+05:02:35 INFO        T7-T12  n=   12  acc=0.6667
+05:02:35 INFO        T7-T13  n=   12  acc=0.6667
+05:02:35 INFO        T7-T14  n=    3  acc=0.3333
+05:02:35 INFO        T7-T15  n=   42  acc=0.8810
+05:02:35 INFO         T8-T9  n=  108  acc=0.5463
+05:02:35 INFO        T8-T10  n=   36  acc=1.0000
+05:02:35 INFO        T8-T11  n=  216  acc=0.9907
+05:02:35 INFO        T8-T12  n=   72  acc=1.0000
+05:02:35 INFO        T8-T13  n=   72  acc=1.0000
+05:02:35 INFO        T8-T14  n=   18  acc=0.1111
+05:02:35 INFO        T8-T15  n=  252  acc=1.0000
+05:02:35 INFO        T9-T10  n=   12  acc=1.0000
+05:02:35 INFO        T9-T11  n=   72  acc=0.9028
+05:02:35 INFO        T9-T12  n=   24  acc=1.0000
+05:02:35 INFO        T9-T13  n=   24  acc=0.9583
+05:02:35 INFO        T9-T14  n=    6  acc=0.3333
+05:02:35 INFO        T9-T15  n=   84  acc=0.9881
+05:02:35 INFO       T10-T11  n=   24  acc=0.7500
+05:02:35 INFO       T10-T12  n=    8  acc=1.0000
+05:02:35 INFO       T10-T13  n=    8  acc=1.0000
+05:02:35 INFO       T10-T14  n=    2  acc=0.0000
+05:02:35 INFO       T10-T15  n=   28  acc=0.9286
+05:02:35 INFO       T11-T12  n=   48  acc=1.0000
+05:02:35 INFO       T11-T13  n=   48  acc=0.8750
+05:02:35 INFO       T11-T14  n=   12  acc=0.0000
+05:02:35 INFO       T11-T15  n=  168  acc=0.8690
+05:02:35 INFO       T12-T13  n=   16  acc=0.7500
+05:02:35 INFO       T12-T14  n=    4  acc=0.0000
+05:02:35 INFO       T12-T15  n=   56  acc=0.7500
+05:02:35 INFO       T13-T14  n=    4  acc=0.0000
+05:02:35 INFO       T13-T15  n=   56  acc=0.7857
+05:02:35 INFO       T14-T15  n=   14  acc=1.0000
+05:02:35 INFO [done] results in runs/classifier/mlp_bge_small_new_seman

@@ -1,0 +1,631 @@
+[train] dataset=workflow total_steps=123996 warmup=7439 batch_size=256 epochs=3 max_length=128  early_stop=(thresh 0.005, patience 1)
+  step=   200/123996  loss=0.4681  lr=5.38e-07  epoch=1
+  step=   400/123996  loss=0.4575  lr=1.08e-06  epoch=1
+  step=   600/123996  loss=0.4723  lr=1.61e-06  epoch=1
+  step=   800/123996  loss=0.4824  lr=2.15e-06  epoch=1
+  step=  1000/123996  loss=0.5039  lr=2.69e-06  epoch=1
+  step=  1200/123996  loss=0.4744  lr=3.23e-06  epoch=1
+  step=  1400/123996  loss=0.4087  lr=3.76e-06  epoch=1
+  step=  1600/123996  loss=0.4729  lr=4.30e-06  epoch=1
+  step=  1800/123996  loss=0.4612  lr=4.84e-06  epoch=1
+  step=  2000/123996  loss=0.4250  lr=5.38e-06  epoch=1
+  step=  2200/123996  loss=0.3932  lr=5.91e-06  epoch=1
+  step=  2400/123996  loss=0.3880  lr=6.45e-06  epoch=1
+  step=  2600/123996  loss=0.4275  lr=6.99e-06  epoch=1
+  step=  2800/123996  loss=0.4475  lr=7.53e-06  epoch=1
+  step=  3000/123996  loss=0.4875  lr=8.07e-06  epoch=1
+  step=  3200/123996  loss=0.4266  lr=8.60e-06  epoch=1
+  step=  3400/123996  loss=0.4190  lr=9.14e-06  epoch=1
+  step=  3600/123996  loss=0.3917  lr=9.68e-06  epoch=1
+  step=  3800/123996  loss=0.4605  lr=1.02e-05  epoch=1
+  step=  4000/123996  loss=0.3966  lr=1.08e-05  epoch=1
+  step=  4200/123996  loss=0.4235  lr=1.13e-05  epoch=1
+  step=  4400/123996  loss=0.3606  lr=1.18e-05  epoch=1
+  step=  4600/123996  loss=0.4296  lr=1.24e-05  epoch=1
+  step=  4800/123996  loss=0.3966  lr=1.29e-05  epoch=1
+  step=  5000/123996  loss=0.3365  lr=1.34e-05  epoch=1
+  step=  5200/123996  loss=0.3963  lr=1.40e-05  epoch=1
+  step=  5400/123996  loss=0.4279  lr=1.45e-05  epoch=1
+  step=  5600/123996  loss=0.3807  lr=1.51e-05  epoch=1
+  step=  5800/123996  loss=0.4159  lr=1.56e-05  epoch=1
+  step=  6000/123996  loss=0.4244  lr=1.61e-05  epoch=1
+  step=  6200/123996  loss=0.3702  lr=1.67e-05  epoch=1
+  step=  6400/123996  loss=0.4179  lr=1.72e-05  epoch=1
+  step=  6600/123996  loss=0.3839  lr=1.77e-05  epoch=1
+  step=  6800/123996  loss=0.3974  lr=1.83e-05  epoch=1
+  step=  7000/123996  loss=0.4168  lr=1.88e-05  epoch=1
+  step=  7200/123996  loss=0.3824  lr=1.94e-05  epoch=1
+  step=  7400/123996  loss=0.3641  lr=1.99e-05  epoch=1
+  step=  7600/123996  loss=0.3956  lr=2.00e-05  epoch=1
+  step=  7800/123996  loss=0.3889  lr=1.99e-05  epoch=1
+  step=  8000/123996  loss=0.3636  lr=1.99e-05  epoch=1
+  step=  8200/123996  loss=0.4286  lr=1.99e-05  epoch=1
+  step=  8400/123996  loss=0.3345  lr=1.98e-05  epoch=1
+  step=  8600/123996  loss=0.3803  lr=1.98e-05  epoch=1
+  step=  8800/123996  loss=0.4332  lr=1.98e-05  epoch=1
+  step=  9000/123996  loss=0.3530  lr=1.97e-05  epoch=1
+  step=  9200/123996  loss=0.4331  lr=1.97e-05  epoch=1
+  step=  9400/123996  loss=0.3732  lr=1.97e-05  epoch=1
+  step=  9600/123996  loss=0.3235  lr=1.96e-05  epoch=1
+  step=  9800/123996  loss=0.3613  lr=1.96e-05  epoch=1
+  step= 10000/123996  loss=0.3963  lr=1.96e-05  epoch=1
+  step= 10200/123996  loss=0.3755  lr=1.95e-05  epoch=1
+  step= 10400/123996  loss=0.3386  lr=1.95e-05  epoch=1
+  step= 10600/123996  loss=0.3685  lr=1.95e-05  epoch=1
+  step= 10800/123996  loss=0.3585  lr=1.94e-05  epoch=1
+  step= 11000/123996  loss=0.3628  lr=1.94e-05  epoch=1
+  step= 11200/123996  loss=0.3879  lr=1.94e-05  epoch=1
+  step= 11400/123996  loss=0.3896  lr=1.93e-05  epoch=1
+  step= 11600/123996  loss=0.3672  lr=1.93e-05  epoch=1
+  step= 11800/123996  loss=0.3830  lr=1.93e-05  epoch=1
+  step= 12000/123996  loss=0.4370  lr=1.92e-05  epoch=1
+  step= 12200/123996  loss=0.3857  lr=1.92e-05  epoch=1
+  step= 12400/123996  loss=0.3802  lr=1.91e-05  epoch=1
+  step= 12600/123996  loss=0.4225  lr=1.91e-05  epoch=1
+  step= 12800/123996  loss=0.3523  lr=1.91e-05  epoch=1
+  step= 13000/123996  loss=0.3596  lr=1.90e-05  epoch=1
+  step= 13200/123996  loss=0.3473  lr=1.90e-05  epoch=1
+  step= 13400/123996  loss=0.4231  lr=1.90e-05  epoch=1
+  step= 13600/123996  loss=0.3219  lr=1.89e-05  epoch=1
+  step= 13800/123996  loss=0.3889  lr=1.89e-05  epoch=1
+  step= 14000/123996  loss=0.3981  lr=1.89e-05  epoch=1
+  step= 14200/123996  loss=0.3607  lr=1.88e-05  epoch=1
+  step= 14400/123996  loss=0.3473  lr=1.88e-05  epoch=1
+  step= 14600/123996  loss=0.4237  lr=1.88e-05  epoch=1
+  step= 14800/123996  loss=0.3634  lr=1.87e-05  epoch=1
+  step= 15000/123996  loss=0.4067  lr=1.87e-05  epoch=1
+  step= 15200/123996  loss=0.3979  lr=1.87e-05  epoch=1
+  step= 15400/123996  loss=0.3568  lr=1.86e-05  epoch=1
+  step= 15600/123996  loss=0.3500  lr=1.86e-05  epoch=1
+  step= 15800/123996  loss=0.3940  lr=1.86e-05  epoch=1
+  step= 16000/123996  loss=0.3774  lr=1.85e-05  epoch=1
+  step= 16200/123996  loss=0.3203  lr=1.85e-05  epoch=1
+  step= 16400/123996  loss=0.3911  lr=1.85e-05  epoch=1
+  step= 16600/123996  loss=0.3015  lr=1.84e-05  epoch=1
+  step= 16800/123996  loss=0.3804  lr=1.84e-05  epoch=1
+  step= 17000/123996  loss=0.3798  lr=1.84e-05  epoch=1
+  step= 17200/123996  loss=0.3883  lr=1.83e-05  epoch=1
+  step= 17400/123996  loss=0.3998  lr=1.83e-05  epoch=1
+  step= 17600/123996  loss=0.4045  lr=1.83e-05  epoch=1
+  step= 17800/123996  loss=0.4245  lr=1.82e-05  epoch=1
+  step= 18000/123996  loss=0.4142  lr=1.82e-05  epoch=1
+  step= 18200/123996  loss=0.3508  lr=1.82e-05  epoch=1
+  step= 18400/123996  loss=0.3493  lr=1.81e-05  epoch=1
+  step= 18600/123996  loss=0.4189  lr=1.81e-05  epoch=1
+  step= 18800/123996  loss=0.4051  lr=1.81e-05  epoch=1
+  step= 19000/123996  loss=0.3762  lr=1.80e-05  epoch=1
+  step= 19200/123996  loss=0.4035  lr=1.80e-05  epoch=1
+  step= 19400/123996  loss=0.3195  lr=1.79e-05  epoch=1
+  step= 19600/123996  loss=0.3798  lr=1.79e-05  epoch=1
+  step= 19800/123996  loss=0.4127  lr=1.79e-05  epoch=1
+  step= 20000/123996  loss=0.3896  lr=1.78e-05  epoch=1
+  step= 20200/123996  loss=0.3520  lr=1.78e-05  epoch=1
+  step= 20400/123996  loss=0.3902  lr=1.78e-05  epoch=1
+  step= 20600/123996  loss=0.3439  lr=1.77e-05  epoch=1
+  step= 20800/123996  loss=0.3220  lr=1.77e-05  epoch=1
+  step= 21000/123996  loss=0.3560  lr=1.77e-05  epoch=1
+  step= 21200/123996  loss=0.3933  lr=1.76e-05  epoch=1
+  step= 21400/123996  loss=0.3860  lr=1.76e-05  epoch=1
+  step= 21600/123996  loss=0.3670  lr=1.76e-05  epoch=1
+  step= 21800/123996  loss=0.3950  lr=1.75e-05  epoch=1
+  step= 22000/123996  loss=0.3812  lr=1.75e-05  epoch=1
+  step= 22200/123996  loss=0.3593  lr=1.75e-05  epoch=1
+  step= 22400/123996  loss=0.3736  lr=1.74e-05  epoch=1
+  step= 22600/123996  loss=0.3906  lr=1.74e-05  epoch=1
+  step= 22800/123996  loss=0.4046  lr=1.74e-05  epoch=1
+  step= 23000/123996  loss=0.4128  lr=1.73e-05  epoch=1
+  step= 23200/123996  loss=0.3559  lr=1.73e-05  epoch=1
+  step= 23400/123996  loss=0.4223  lr=1.73e-05  epoch=1
+  step= 23600/123996  loss=0.3906  lr=1.72e-05  epoch=1
+  step= 23800/123996  loss=0.3635  lr=1.72e-05  epoch=1
+  step= 24000/123996  loss=0.3584  lr=1.72e-05  epoch=1
+  step= 24200/123996  loss=0.2991  lr=1.71e-05  epoch=1
+  step= 24400/123996  loss=0.3158  lr=1.71e-05  epoch=1
+  step= 24600/123996  loss=0.3436  lr=1.71e-05  epoch=1
+  step= 24800/123996  loss=0.3558  lr=1.70e-05  epoch=1
+  step= 25000/123996  loss=0.3417  lr=1.70e-05  epoch=1
+  step= 25200/123996  loss=0.3702  lr=1.70e-05  epoch=1
+  step= 25400/123996  loss=0.3917  lr=1.69e-05  epoch=1
+  step= 25600/123996  loss=0.3547  lr=1.69e-05  epoch=1
+  step= 25800/123996  loss=0.3104  lr=1.68e-05  epoch=1
+  step= 26000/123996  loss=0.3070  lr=1.68e-05  epoch=1
+  step= 26200/123996  loss=0.3428  lr=1.68e-05  epoch=1
+  step= 26400/123996  loss=0.3301  lr=1.67e-05  epoch=1
+  step= 26600/123996  loss=0.3677  lr=1.67e-05  epoch=1
+  step= 26800/123996  loss=0.3905  lr=1.67e-05  epoch=1
+  step= 27000/123996  loss=0.3962  lr=1.66e-05  epoch=1
+  step= 27200/123996  loss=0.3849  lr=1.66e-05  epoch=1
+  step= 27400/123996  loss=0.3978  lr=1.66e-05  epoch=1
+  step= 27600/123996  loss=0.3612  lr=1.65e-05  epoch=1
+  step= 27800/123996  loss=0.3587  lr=1.65e-05  epoch=1
+  step= 28000/123996  loss=0.3788  lr=1.65e-05  epoch=1
+  step= 28200/123996  loss=0.3754  lr=1.64e-05  epoch=1
+  step= 28400/123996  loss=0.3793  lr=1.64e-05  epoch=1
+  step= 28600/123996  loss=0.3496  lr=1.64e-05  epoch=1
+  step= 28800/123996  loss=0.3515  lr=1.63e-05  epoch=1
+  step= 29000/123996  loss=0.3580  lr=1.63e-05  epoch=1
+  step= 29200/123996  loss=0.3409  lr=1.63e-05  epoch=1
+  step= 29400/123996  loss=0.3789  lr=1.62e-05  epoch=1
+  step= 29600/123996  loss=0.3601  lr=1.62e-05  epoch=1
+  step= 29800/123996  loss=0.3811  lr=1.62e-05  epoch=1
+  step= 30000/123996  loss=0.3631  lr=1.61e-05  epoch=1
+  step= 30200/123996  loss=0.3648  lr=1.61e-05  epoch=1
+  step= 30400/123996  loss=0.3391  lr=1.61e-05  epoch=1
+  step= 30600/123996  loss=0.3417  lr=1.60e-05  epoch=1
+  step= 30800/123996  loss=0.3781  lr=1.60e-05  epoch=1
+  step= 31000/123996  loss=0.3481  lr=1.60e-05  epoch=1
+  step= 31200/123996  loss=0.3563  lr=1.59e-05  epoch=1
+  step= 31400/123996  loss=0.3587  lr=1.59e-05  epoch=1
+  step= 31600/123996  loss=0.3742  lr=1.59e-05  epoch=1
+  step= 31800/123996  loss=0.3390  lr=1.58e-05  epoch=1
+  step= 32000/123996  loss=0.3484  lr=1.58e-05  epoch=1
+  step= 32200/123996  loss=0.3582  lr=1.58e-05  epoch=1
+  step= 32400/123996  loss=0.4116  lr=1.57e-05  epoch=1
+  step= 32600/123996  loss=0.4716  lr=1.57e-05  epoch=1
+  step= 32800/123996  loss=0.3843  lr=1.56e-05  epoch=1
+  step= 33000/123996  loss=0.3491  lr=1.56e-05  epoch=1
+  step= 33200/123996  loss=0.3341  lr=1.56e-05  epoch=1
+  step= 33400/123996  loss=0.3737  lr=1.55e-05  epoch=1
+  step= 33600/123996  loss=0.3456  lr=1.55e-05  epoch=1
+  step= 33800/123996  loss=0.4288  lr=1.55e-05  epoch=1
+  step= 34000/123996  loss=0.3741  lr=1.54e-05  epoch=1
+  step= 34200/123996  loss=0.3379  lr=1.54e-05  epoch=1
+  step= 34400/123996  loss=0.3362  lr=1.54e-05  epoch=1
+  step= 34600/123996  loss=0.3467  lr=1.53e-05  epoch=1
+  step= 34800/123996  loss=0.3052  lr=1.53e-05  epoch=1
+  step= 35000/123996  loss=0.3757  lr=1.53e-05  epoch=1
+  step= 35200/123996  loss=0.3725  lr=1.52e-05  epoch=1
+  step= 35400/123996  loss=0.3169  lr=1.52e-05  epoch=1
+  step= 35600/123996  loss=0.3752  lr=1.52e-05  epoch=1
+  step= 35800/123996  loss=0.3656  lr=1.51e-05  epoch=1
+  step= 36000/123996  loss=0.3795  lr=1.51e-05  epoch=1
+  step= 36200/123996  loss=0.3810  lr=1.51e-05  epoch=1
+  step= 36400/123996  loss=0.3711  lr=1.50e-05  epoch=1
+  step= 36600/123996  loss=0.3041  lr=1.50e-05  epoch=1
+  step= 36800/123996  loss=0.3674  lr=1.50e-05  epoch=1
+  step= 37000/123996  loss=0.3268  lr=1.49e-05  epoch=1
+  step= 37200/123996  loss=0.4169  lr=1.49e-05  epoch=1
+  step= 37400/123996  loss=0.3982  lr=1.49e-05  epoch=1
+  step= 37600/123996  loss=0.3491  lr=1.48e-05  epoch=1
+  step= 37800/123996  loss=0.3929  lr=1.48e-05  epoch=1
+  step= 38000/123996  loss=0.3801  lr=1.48e-05  epoch=1
+  step= 38200/123996  loss=0.3654  lr=1.47e-05  epoch=1
+  step= 38400/123996  loss=0.3776  lr=1.47e-05  epoch=1
+  step= 38600/123996  loss=0.3409  lr=1.47e-05  epoch=1
+  step= 38800/123996  loss=0.3504  lr=1.46e-05  epoch=1
+  step= 39000/123996  loss=0.4012  lr=1.46e-05  epoch=1
+  step= 39200/123996  loss=0.3621  lr=1.46e-05  epoch=1
+  step= 39400/123996  loss=0.3554  lr=1.45e-05  epoch=1
+  step= 39600/123996  loss=0.3843  lr=1.45e-05  epoch=1
+  step= 39800/123996  loss=0.3633  lr=1.44e-05  epoch=1
+  step= 40000/123996  loss=0.4088  lr=1.44e-05  epoch=1
+  step= 40200/123996  loss=0.4060  lr=1.44e-05  epoch=1
+  step= 40400/123996  loss=0.3846  lr=1.43e-05  epoch=1
+  step= 40600/123996  loss=0.4204  lr=1.43e-05  epoch=1
+  step= 40800/123996  loss=0.3482  lr=1.43e-05  epoch=1
+  step= 41000/123996  loss=0.3693  lr=1.42e-05  epoch=1
+  step= 41200/123996  loss=0.3382  lr=1.42e-05  epoch=1
+[epoch 1/3]  train_loss=0.3816  val_AUC=0.8722  val_P@1=0.6594  (6615s)
+  * new best val_AUC=0.8722, saved checkpoint_best.pt
+  step= 41400/123996  loss=0.3745  lr=1.42e-05  epoch=2
+  step= 41600/123996  loss=0.3797  lr=1.41e-05  epoch=2
+  step= 41800/123996  loss=0.3867  lr=1.41e-05  epoch=2
+  step= 42000/123996  loss=0.4335  lr=1.41e-05  epoch=2
+  step= 42200/123996  loss=0.3516  lr=1.40e-05  epoch=2
+  step= 42400/123996  loss=0.3376  lr=1.40e-05  epoch=2
+  step= 42600/123996  loss=0.3479  lr=1.40e-05  epoch=2
+  step= 42800/123996  loss=0.3087  lr=1.39e-05  epoch=2
+  step= 43000/123996  loss=0.3660  lr=1.39e-05  epoch=2
+  step= 43200/123996  loss=0.4148  lr=1.39e-05  epoch=2
+  step= 43400/123996  loss=0.3738  lr=1.38e-05  epoch=2
+  step= 43600/123996  loss=0.3536  lr=1.38e-05  epoch=2
+  step= 43800/123996  loss=0.3814  lr=1.38e-05  epoch=2
+  step= 44000/123996  loss=0.2837  lr=1.37e-05  epoch=2
+  step= 44200/123996  loss=0.3563  lr=1.37e-05  epoch=2
+  step= 44400/123996  loss=0.2925  lr=1.37e-05  epoch=2
+  step= 44600/123996  loss=0.3461  lr=1.36e-05  epoch=2
+  step= 44800/123996  loss=0.3371  lr=1.36e-05  epoch=2
+  step= 45000/123996  loss=0.3231  lr=1.36e-05  epoch=2
+  step= 45200/123996  loss=0.4052  lr=1.35e-05  epoch=2
+  step= 45400/123996  loss=0.3294  lr=1.35e-05  epoch=2
+  step= 45600/123996  loss=0.3847  lr=1.35e-05  epoch=2
+  step= 45800/123996  loss=0.3226  lr=1.34e-05  epoch=2
+  step= 46000/123996  loss=0.3552  lr=1.34e-05  epoch=2
+  step= 46200/123996  loss=0.2999  lr=1.33e-05  epoch=2
+  step= 46400/123996  loss=0.3811  lr=1.33e-05  epoch=2
+  step= 46600/123996  loss=0.2978  lr=1.33e-05  epoch=2
+  step= 46800/123996  loss=0.3513  lr=1.32e-05  epoch=2
+  step= 47000/123996  loss=0.2944  lr=1.32e-05  epoch=2
+  step= 47200/123996  loss=0.2817  lr=1.32e-05  epoch=2
+  step= 47400/123996  loss=0.3925  lr=1.31e-05  epoch=2
+  step= 47600/123996  loss=0.3602  lr=1.31e-05  epoch=2
+  step= 47800/123996  loss=0.3418  lr=1.31e-05  epoch=2
+  step= 48000/123996  loss=0.3551  lr=1.30e-05  epoch=2
+  step= 48200/123996  loss=0.3478  lr=1.30e-05  epoch=2
+  step= 48400/123996  loss=0.2996  lr=1.30e-05  epoch=2
+  step= 48600/123996  loss=0.3929  lr=1.29e-05  epoch=2
+  step= 48800/123996  loss=0.3726  lr=1.29e-05  epoch=2
+  step= 49000/123996  loss=0.4007  lr=1.29e-05  epoch=2
+  step= 49200/123996  loss=0.3327  lr=1.28e-05  epoch=2
+  step= 49400/123996  loss=0.3064  lr=1.28e-05  epoch=2
+  step= 49600/123996  loss=0.3425  lr=1.28e-05  epoch=2
+  step= 49800/123996  loss=0.3121  lr=1.27e-05  epoch=2
+  step= 50000/123996  loss=0.3223  lr=1.27e-05  epoch=2
+  step= 50200/123996  loss=0.3412  lr=1.27e-05  epoch=2
+  step= 50400/123996  loss=0.2784  lr=1.26e-05  epoch=2
+  step= 50600/123996  loss=0.4263  lr=1.26e-05  epoch=2
+  step= 50800/123996  loss=0.2973  lr=1.26e-05  epoch=2
+  step= 51000/123996  loss=0.3275  lr=1.25e-05  epoch=2
+  step= 51200/123996  loss=0.3079  lr=1.25e-05  epoch=2
+  step= 51400/123996  loss=0.3240  lr=1.25e-05  epoch=2
+  step= 51600/123996  loss=0.4304  lr=1.24e-05  epoch=2
+  step= 51800/123996  loss=0.3527  lr=1.24e-05  epoch=2
+  step= 52000/123996  loss=0.3275  lr=1.24e-05  epoch=2
+  step= 52200/123996  loss=0.3475  lr=1.23e-05  epoch=2
+  step= 52400/123996  loss=0.2928  lr=1.23e-05  epoch=2
+  step= 52600/123996  loss=0.3243  lr=1.23e-05  epoch=2
+  step= 52800/123996  loss=0.4122  lr=1.22e-05  epoch=2
+  step= 53000/123996  loss=0.3205  lr=1.22e-05  epoch=2
+  step= 53200/123996  loss=0.3222  lr=1.21e-05  epoch=2
+  step= 53400/123996  loss=0.3225  lr=1.21e-05  epoch=2
+  step= 53600/123996  loss=0.3369  lr=1.21e-05  epoch=2
+  step= 53800/123996  loss=0.3913  lr=1.20e-05  epoch=2
+  step= 54000/123996  loss=0.3792  lr=1.20e-05  epoch=2
+  step= 54200/123996  loss=0.3660  lr=1.20e-05  epoch=2
+  step= 54400/123996  loss=0.3823  lr=1.19e-05  epoch=2
+  step= 54600/123996  loss=0.3857  lr=1.19e-05  epoch=2
+  step= 54800/123996  loss=0.3904  lr=1.19e-05  epoch=2
+  step= 55000/123996  loss=0.3706  lr=1.18e-05  epoch=2
+  step= 55200/123996  loss=0.3263  lr=1.18e-05  epoch=2
+  step= 55400/123996  loss=0.2903  lr=1.18e-05  epoch=2
+  step= 55600/123996  loss=0.4019  lr=1.17e-05  epoch=2
+  step= 55800/123996  loss=0.2791  lr=1.17e-05  epoch=2
+  step= 56000/123996  loss=0.3073  lr=1.17e-05  epoch=2
+  step= 56200/123996  loss=0.3671  lr=1.16e-05  epoch=2
+  step= 56400/123996  loss=0.2996  lr=1.16e-05  epoch=2
+  step= 56600/123996  loss=0.3245  lr=1.16e-05  epoch=2
+  step= 56800/123996  loss=0.3848  lr=1.15e-05  epoch=2
+  step= 57000/123996  loss=0.4126  lr=1.15e-05  epoch=2
+  step= 57200/123996  loss=0.3807  lr=1.15e-05  epoch=2
+  step= 57400/123996  loss=0.3325  lr=1.14e-05  epoch=2
+  step= 57600/123996  loss=0.3305  lr=1.14e-05  epoch=2
+  step= 57800/123996  loss=0.3483  lr=1.14e-05  epoch=2
+  step= 58000/123996  loss=0.3250  lr=1.13e-05  epoch=2
+  step= 58200/123996  loss=0.3275  lr=1.13e-05  epoch=2
+  step= 58400/123996  loss=0.3122  lr=1.13e-05  epoch=2
+  step= 58600/123996  loss=0.3059  lr=1.12e-05  epoch=2
+  step= 58800/123996  loss=0.3471  lr=1.12e-05  epoch=2
+  step= 59000/123996  loss=0.3619  lr=1.12e-05  epoch=2
+  step= 59200/123996  loss=0.3777  lr=1.11e-05  epoch=2
+  step= 59400/123996  loss=0.3539  lr=1.11e-05  epoch=2
+  step= 59600/123996  loss=0.3849  lr=1.10e-05  epoch=2
+  step= 59800/123996  loss=0.3319  lr=1.10e-05  epoch=2
+  step= 60000/123996  loss=0.3423  lr=1.10e-05  epoch=2
+  step= 60200/123996  loss=0.3323  lr=1.09e-05  epoch=2
+  step= 60400/123996  loss=0.3374  lr=1.09e-05  epoch=2
+  step= 60600/123996  loss=0.3037  lr=1.09e-05  epoch=2
+  step= 60800/123996  loss=0.3663  lr=1.08e-05  epoch=2
+  step= 61000/123996  loss=0.3794  lr=1.08e-05  epoch=2
+  step= 61200/123996  loss=0.3597  lr=1.08e-05  epoch=2
+  step= 61400/123996  loss=0.3354  lr=1.07e-05  epoch=2
+  step= 61600/123996  loss=0.2778  lr=1.07e-05  epoch=2
+  step= 61800/123996  loss=0.3195  lr=1.07e-05  epoch=2
+  step= 62000/123996  loss=0.3708  lr=1.06e-05  epoch=2
+  step= 62200/123996  loss=0.3309  lr=1.06e-05  epoch=2
+  step= 62400/123996  loss=0.3887  lr=1.06e-05  epoch=2
+  step= 62600/123996  loss=0.3641  lr=1.05e-05  epoch=2
+  step= 62800/123996  loss=0.3727  lr=1.05e-05  epoch=2
+  step= 63000/123996  loss=0.3299  lr=1.05e-05  epoch=2
+  step= 63200/123996  loss=0.4228  lr=1.04e-05  epoch=2
+  step= 63400/123996  loss=0.3559  lr=1.04e-05  epoch=2
+  step= 63600/123996  loss=0.3528  lr=1.04e-05  epoch=2
+  step= 63800/123996  loss=0.3356  lr=1.03e-05  epoch=2
+  step= 64000/123996  loss=0.3416  lr=1.03e-05  epoch=2
+  step= 64200/123996  loss=0.3364  lr=1.03e-05  epoch=2
+  step= 64400/123996  loss=0.3560  lr=1.02e-05  epoch=2
+  step= 64600/123996  loss=0.3022  lr=1.02e-05  epoch=2
+  step= 64800/123996  loss=0.3851  lr=1.02e-05  epoch=2
+  step= 65000/123996  loss=0.3468  lr=1.01e-05  epoch=2
+  step= 65200/123996  loss=0.3777  lr=1.01e-05  epoch=2
+  step= 65400/123996  loss=0.3580  lr=1.01e-05  epoch=2
+  step= 65600/123996  loss=0.3890  lr=1.00e-05  epoch=2
+  step= 65800/123996  loss=0.3938  lr=9.99e-06  epoch=2
+  step= 66000/123996  loss=0.3041  lr=9.95e-06  epoch=2
+  step= 66200/123996  loss=0.2901  lr=9.92e-06  epoch=2
+  step= 66400/123996  loss=0.3317  lr=9.88e-06  epoch=2
+  step= 66600/123996  loss=0.3415  lr=9.85e-06  epoch=2
+  step= 66800/123996  loss=0.3455  lr=9.81e-06  epoch=2
+  step= 67000/123996  loss=0.3542  lr=9.78e-06  epoch=2
+  step= 67200/123996  loss=0.3614  lr=9.75e-06  epoch=2
+  step= 67400/123996  loss=0.2536  lr=9.71e-06  epoch=2
+  step= 67600/123996  loss=0.3571  lr=9.68e-06  epoch=2
+  step= 67800/123996  loss=0.2860  lr=9.64e-06  epoch=2
+  step= 68000/123996  loss=0.3021  lr=9.61e-06  epoch=2
+  step= 68200/123996  loss=0.3340  lr=9.57e-06  epoch=2
+  step= 68400/123996  loss=0.3243  lr=9.54e-06  epoch=2
+  step= 68600/123996  loss=0.3572  lr=9.51e-06  epoch=2
+  step= 68800/123996  loss=0.3239  lr=9.47e-06  epoch=2
+  step= 69000/123996  loss=0.3570  lr=9.44e-06  epoch=2
+  step= 69200/123996  loss=0.3362  lr=9.40e-06  epoch=2
+  step= 69400/123996  loss=0.3503  lr=9.37e-06  epoch=2
+  step= 69600/123996  loss=0.3915  lr=9.33e-06  epoch=2
+  step= 69800/123996  loss=0.4004  lr=9.30e-06  epoch=2
+  step= 70000/123996  loss=0.3524  lr=9.27e-06  epoch=2
+  step= 70200/123996  loss=0.2966  lr=9.23e-06  epoch=2
+  step= 70400/123996  loss=0.3567  lr=9.20e-06  epoch=2
+  step= 70600/123996  loss=0.3360  lr=9.16e-06  epoch=2
+  step= 70800/123996  loss=0.4032  lr=9.13e-06  epoch=2
+  step= 71000/123996  loss=0.3271  lr=9.09e-06  epoch=2
+  step= 71200/123996  loss=0.3256  lr=9.06e-06  epoch=2
+  step= 71400/123996  loss=0.3675  lr=9.02e-06  epoch=2
+  step= 71600/123996  loss=0.3165  lr=8.99e-06  epoch=2
+  step= 71800/123996  loss=0.3143  lr=8.96e-06  epoch=2
+  step= 72000/123996  loss=0.3463  lr=8.92e-06  epoch=2
+  step= 72200/123996  loss=0.3581  lr=8.89e-06  epoch=2
+  step= 72400/123996  loss=0.2865  lr=8.85e-06  epoch=2
+  step= 72600/123996  loss=0.2942  lr=8.82e-06  epoch=2
+  step= 72800/123996  loss=0.3406  lr=8.78e-06  epoch=2
+  step= 73000/123996  loss=0.3574  lr=8.75e-06  epoch=2
+  step= 73200/123996  loss=0.3579  lr=8.72e-06  epoch=2
+  step= 73400/123996  loss=0.3638  lr=8.68e-06  epoch=2
+  step= 73600/123996  loss=0.3520  lr=8.65e-06  epoch=2
+  step= 73800/123996  loss=0.4054  lr=8.61e-06  epoch=2
+  step= 74000/123996  loss=0.2889  lr=8.58e-06  epoch=2
+  step= 74200/123996  loss=0.3241  lr=8.54e-06  epoch=2
+  step= 74400/123996  loss=0.3677  lr=8.51e-06  epoch=2
+  step= 74600/123996  loss=0.3351  lr=8.48e-06  epoch=2
+  step= 74800/123996  loss=0.3015  lr=8.44e-06  epoch=2
+  step= 75000/123996  loss=0.3027  lr=8.41e-06  epoch=2
+  step= 75200/123996  loss=0.3473  lr=8.37e-06  epoch=2
+  step= 75400/123996  loss=0.3162  lr=8.34e-06  epoch=2
+  step= 75600/123996  loss=0.3333  lr=8.30e-06  epoch=2
+  step= 75800/123996  loss=0.3632  lr=8.27e-06  epoch=2
+  step= 76000/123996  loss=0.3385  lr=8.24e-06  epoch=2
+  step= 76200/123996  loss=0.3916  lr=8.20e-06  epoch=2
+  step= 76400/123996  loss=0.3260  lr=8.17e-06  epoch=2
+  step= 76600/123996  loss=0.3556  lr=8.13e-06  epoch=2
+  step= 76800/123996  loss=0.3841  lr=8.10e-06  epoch=2
+  step= 77000/123996  loss=0.3555  lr=8.06e-06  epoch=2
+  step= 77200/123996  loss=0.3517  lr=8.03e-06  epoch=2
+  step= 77400/123996  loss=0.3732  lr=8.00e-06  epoch=2
+  step= 77600/123996  loss=0.3160  lr=7.96e-06  epoch=2
+  step= 77800/123996  loss=0.3094  lr=7.93e-06  epoch=2
+  step= 78000/123996  loss=0.3430  lr=7.89e-06  epoch=2
+  step= 78200/123996  loss=0.3543  lr=7.86e-06  epoch=2
+  step= 78400/123996  loss=0.3512  lr=7.82e-06  epoch=2
+  step= 78600/123996  loss=0.2701  lr=7.79e-06  epoch=2
+  step= 78800/123996  loss=0.3829  lr=7.76e-06  epoch=2
+  step= 79000/123996  loss=0.3495  lr=7.72e-06  epoch=2
+  step= 79200/123996  loss=0.3027  lr=7.69e-06  epoch=2
+  step= 79400/123996  loss=0.3559  lr=7.65e-06  epoch=2
+  step= 79600/123996  loss=0.2707  lr=7.62e-06  epoch=2
+  step= 79800/123996  loss=0.3095  lr=7.58e-06  epoch=2
+  step= 80000/123996  loss=0.3250  lr=7.55e-06  epoch=2
+  step= 80200/123996  loss=0.3760  lr=7.51e-06  epoch=2
+  step= 80400/123996  loss=0.3059  lr=7.48e-06  epoch=2
+  step= 80600/123996  loss=0.4206  lr=7.45e-06  epoch=2
+  step= 80800/123996  loss=0.3075  lr=7.41e-06  epoch=2
+  step= 81000/123996  loss=0.3309  lr=7.38e-06  epoch=2
+  step= 81200/123996  loss=0.3554  lr=7.34e-06  epoch=2
+  step= 81400/123996  loss=0.3141  lr=7.31e-06  epoch=2
+  step= 81600/123996  loss=0.3897  lr=7.27e-06  epoch=2
+  step= 81800/123996  loss=0.3376  lr=7.24e-06  epoch=2
+  step= 82000/123996  loss=0.3919  lr=7.21e-06  epoch=2
+  step= 82200/123996  loss=0.3811  lr=7.17e-06  epoch=2
+  step= 82400/123996  loss=0.3242  lr=7.14e-06  epoch=2
+  step= 82600/123996  loss=0.3223  lr=7.10e-06  epoch=2
+[epoch 2/3]  train_loss=0.3437  val_AUC=0.8812  val_P@1=0.6731  (13181s)
+  * new best val_AUC=0.8812, saved checkpoint_best.pt
+  step= 82800/123996  loss=0.3287  lr=7.07e-06  epoch=3
+  step= 83000/123996  loss=0.3437  lr=7.03e-06  epoch=3
+  step= 83200/123996  loss=0.3388  lr=7.00e-06  epoch=3
+  step= 83400/123996  loss=0.3647  lr=6.97e-06  epoch=3
+  step= 83600/123996  loss=0.3486  lr=6.93e-06  epoch=3
+  step= 83800/123996  loss=0.2957  lr=6.90e-06  epoch=3
+  step= 84000/123996  loss=0.2996  lr=6.86e-06  epoch=3
+  step= 84200/123996  loss=0.3383  lr=6.83e-06  epoch=3
+  step= 84400/123996  loss=0.3557  lr=6.79e-06  epoch=3
+  step= 84600/123996  loss=0.3619  lr=6.76e-06  epoch=3
+  step= 84800/123996  loss=0.3568  lr=6.73e-06  epoch=3
+  step= 85000/123996  loss=0.3277  lr=6.69e-06  epoch=3
+  step= 85200/123996  loss=0.3064  lr=6.66e-06  epoch=3
+  step= 85400/123996  loss=0.3663  lr=6.62e-06  epoch=3
+  step= 85600/123996  loss=0.3977  lr=6.59e-06  epoch=3
+  step= 85800/123996  loss=0.3482  lr=6.55e-06  epoch=3
+  step= 86000/123996  loss=0.3661  lr=6.52e-06  epoch=3
+  step= 86200/123996  loss=0.3513  lr=6.49e-06  epoch=3
+  step= 86400/123996  loss=0.3659  lr=6.45e-06  epoch=3
+  step= 86600/123996  loss=0.3869  lr=6.42e-06  epoch=3
+  step= 86800/123996  loss=0.3482  lr=6.38e-06  epoch=3
+  step= 87000/123996  loss=0.3638  lr=6.35e-06  epoch=3
+  step= 87200/123996  loss=0.2771  lr=6.31e-06  epoch=3
+  step= 87400/123996  loss=0.4226  lr=6.28e-06  epoch=3
+  step= 87600/123996  loss=0.2969  lr=6.25e-06  epoch=3
+  step= 87800/123996  loss=0.3497  lr=6.21e-06  epoch=3
+  step= 88000/123996  loss=0.3216  lr=6.18e-06  epoch=3
+  step= 88200/123996  loss=0.3717  lr=6.14e-06  epoch=3
+  step= 88400/123996  loss=0.3333  lr=6.11e-06  epoch=3
+  step= 88600/123996  loss=0.4088  lr=6.07e-06  epoch=3
+  step= 88800/123996  loss=0.2933  lr=6.04e-06  epoch=3
+  step= 89000/123996  loss=0.2658  lr=6.00e-06  epoch=3
+  step= 89200/123996  loss=0.2648  lr=5.97e-06  epoch=3
+  step= 89400/123996  loss=0.3656  lr=5.94e-06  epoch=3
+  step= 89600/123996  loss=0.3017  lr=5.90e-06  epoch=3
+  step= 89800/123996  loss=0.2779  lr=5.87e-06  epoch=3
+  step= 90000/123996  loss=0.3132  lr=5.83e-06  epoch=3
+  step= 90200/123996  loss=0.2631  lr=5.80e-06  epoch=3
+  step= 90400/123996  loss=0.3194  lr=5.76e-06  epoch=3
+  step= 90600/123996  loss=0.2989  lr=5.73e-06  epoch=3
+  step= 90800/123996  loss=0.2547  lr=5.70e-06  epoch=3
+  step= 91000/123996  loss=0.3276  lr=5.66e-06  epoch=3
+  step= 91200/123996  loss=0.2713  lr=5.63e-06  epoch=3
+  step= 91400/123996  loss=0.4068  lr=5.59e-06  epoch=3
+  step= 91600/123996  loss=0.3200  lr=5.56e-06  epoch=3
+  step= 91800/123996  loss=0.3439  lr=5.52e-06  epoch=3
+  step= 92000/123996  loss=0.3581  lr=5.49e-06  epoch=3
+  step= 92200/123996  loss=0.3503  lr=5.46e-06  epoch=3
+  step= 92400/123996  loss=0.2792  lr=5.42e-06  epoch=3
+  step= 92600/123996  loss=0.3628  lr=5.39e-06  epoch=3
+  step= 92800/123996  loss=0.3031  lr=5.35e-06  epoch=3
+  step= 93000/123996  loss=0.3328  lr=5.32e-06  epoch=3
+  step= 93200/123996  loss=0.3884  lr=5.28e-06  epoch=3
+  step= 93400/123996  loss=0.3646  lr=5.25e-06  epoch=3
+  step= 93600/123996  loss=0.3546  lr=5.22e-06  epoch=3
+  step= 93800/123996  loss=0.3422  lr=5.18e-06  epoch=3
+  step= 94000/123996  loss=0.3233  lr=5.15e-06  epoch=3
+  step= 94200/123996  loss=0.3417  lr=5.11e-06  epoch=3
+  step= 94400/123996  loss=0.2906  lr=5.08e-06  epoch=3
+  step= 94600/123996  loss=0.3499  lr=5.04e-06  epoch=3
+  step= 94800/123996  loss=0.3021  lr=5.01e-06  epoch=3
+  step= 95000/123996  loss=0.3157  lr=4.98e-06  epoch=3
+  step= 95200/123996  loss=0.2787  lr=4.94e-06  epoch=3
+  step= 95400/123996  loss=0.3430  lr=4.91e-06  epoch=3
+  step= 95600/123996  loss=0.3332  lr=4.87e-06  epoch=3
+  step= 95800/123996  loss=0.3313  lr=4.84e-06  epoch=3
+  step= 96000/123996  loss=0.3013  lr=4.80e-06  epoch=3
+  step= 96200/123996  loss=0.3460  lr=4.77e-06  epoch=3
+  step= 96400/123996  loss=0.2752  lr=4.74e-06  epoch=3
+  step= 96600/123996  loss=0.3692  lr=4.70e-06  epoch=3
+  step= 96800/123996  loss=0.2602  lr=4.67e-06  epoch=3
+  step= 97000/123996  loss=0.3161  lr=4.63e-06  epoch=3
+  step= 97200/123996  loss=0.3121  lr=4.60e-06  epoch=3
+  step= 97400/123996  loss=0.3189  lr=4.56e-06  epoch=3
+  step= 97600/123996  loss=0.3587  lr=4.53e-06  epoch=3
+  step= 97800/123996  loss=0.3184  lr=4.49e-06  epoch=3
+  step= 98000/123996  loss=0.3557  lr=4.46e-06  epoch=3
+  step= 98200/123996  loss=0.3179  lr=4.43e-06  epoch=3
+  step= 98400/123996  loss=0.3449  lr=4.39e-06  epoch=3
+  step= 98600/123996  loss=0.3361  lr=4.36e-06  epoch=3
+  step= 98800/123996  loss=0.2804  lr=4.32e-06  epoch=3
+  step= 99000/123996  loss=0.3713  lr=4.29e-06  epoch=3
+  step= 99200/123996  loss=0.3742  lr=4.25e-06  epoch=3
+  step= 99400/123996  loss=0.3688  lr=4.22e-06  epoch=3
+  step= 99600/123996  loss=0.2901  lr=4.19e-06  epoch=3
+  step= 99800/123996  loss=0.3535  lr=4.15e-06  epoch=3
+  step=100000/123996  loss=0.3095  lr=4.12e-06  epoch=3
+  step=100200/123996  loss=0.3426  lr=4.08e-06  epoch=3
+  step=100400/123996  loss=0.3111  lr=4.05e-06  epoch=3
+  step=100600/123996  loss=0.3431  lr=4.01e-06  epoch=3
+  step=100800/123996  loss=0.3637  lr=3.98e-06  epoch=3
+  step=101000/123996  loss=0.3205  lr=3.95e-06  epoch=3
+  step=101200/123996  loss=0.3314  lr=3.91e-06  epoch=3
+  step=101400/123996  loss=0.3176  lr=3.88e-06  epoch=3
+  step=101600/123996  loss=0.3334  lr=3.84e-06  epoch=3
+  step=101800/123996  loss=0.4188  lr=3.81e-06  epoch=3
+  step=102000/123996  loss=0.3647  lr=3.77e-06  epoch=3
+  step=102200/123996  loss=0.3221  lr=3.74e-06  epoch=3
+  step=102400/123996  loss=0.2972  lr=3.71e-06  epoch=3
+  step=102600/123996  loss=0.3718  lr=3.67e-06  epoch=3
+  step=102800/123996  loss=0.3247  lr=3.64e-06  epoch=3
+  step=103000/123996  loss=0.3225  lr=3.60e-06  epoch=3
+  step=103200/123996  loss=0.3201  lr=3.57e-06  epoch=3
+  step=103400/123996  loss=0.3142  lr=3.53e-06  epoch=3
+  step=103600/123996  loss=0.2964  lr=3.50e-06  epoch=3
+  step=103800/123996  loss=0.3534  lr=3.47e-06  epoch=3
+  step=104000/123996  loss=0.3196  lr=3.43e-06  epoch=3
+  step=104200/123996  loss=0.3251  lr=3.40e-06  epoch=3
+  step=104400/123996  loss=0.3603  lr=3.36e-06  epoch=3
+  step=104600/123996  loss=0.2990  lr=3.33e-06  epoch=3
+  step=104800/123996  loss=0.3529  lr=3.29e-06  epoch=3
+  step=105000/123996  loss=0.2900  lr=3.26e-06  epoch=3
+  step=105200/123996  loss=0.3340  lr=3.23e-06  epoch=3
+  step=105400/123996  loss=0.3029  lr=3.19e-06  epoch=3
+  step=105600/123996  loss=0.3076  lr=3.16e-06  epoch=3
+  step=105800/123996  loss=0.2936  lr=3.12e-06  epoch=3
+  step=106000/123996  loss=0.3662  lr=3.09e-06  epoch=3
+  step=106200/123996  loss=0.3418  lr=3.05e-06  epoch=3
+  step=106400/123996  loss=0.3072  lr=3.02e-06  epoch=3
+  step=106600/123996  loss=0.2513  lr=2.98e-06  epoch=3
+  step=106800/123996  loss=0.3215  lr=2.95e-06  epoch=3
+  step=107000/123996  loss=0.3187  lr=2.92e-06  epoch=3
+  step=107200/123996  loss=0.3200  lr=2.88e-06  epoch=3
+  step=107400/123996  loss=0.3421  lr=2.85e-06  epoch=3
+  step=107600/123996  loss=0.3241  lr=2.81e-06  epoch=3
+  step=107800/123996  loss=0.3259  lr=2.78e-06  epoch=3
+  step=108000/123996  loss=0.3024  lr=2.74e-06  epoch=3
+  step=108200/123996  loss=0.3058  lr=2.71e-06  epoch=3
+  step=108400/123996  loss=0.3086  lr=2.68e-06  epoch=3
+  step=108600/123996  loss=0.2952  lr=2.64e-06  epoch=3
+  step=108800/123996  loss=0.3237  lr=2.61e-06  epoch=3
+  step=109000/123996  loss=0.3117  lr=2.57e-06  epoch=3
+  step=109200/123996  loss=0.2987  lr=2.54e-06  epoch=3
+  step=109400/123996  loss=0.3654  lr=2.50e-06  epoch=3
+  step=109600/123996  loss=0.3311  lr=2.47e-06  epoch=3
+  step=109800/123996  loss=0.2775  lr=2.44e-06  epoch=3
+  step=110000/123996  loss=0.3368  lr=2.40e-06  epoch=3
+  step=110200/123996  loss=0.2837  lr=2.37e-06  epoch=3
+  step=110400/123996  loss=0.3249  lr=2.33e-06  epoch=3
+  step=110600/123996  loss=0.3054  lr=2.30e-06  epoch=3
+  step=110800/123996  loss=0.3329  lr=2.26e-06  epoch=3
+  step=111000/123996  loss=0.3625  lr=2.23e-06  epoch=3
+  step=111200/123996  loss=0.3459  lr=2.20e-06  epoch=3
+  step=111400/123996  loss=0.3442  lr=2.16e-06  epoch=3
+  step=111600/123996  loss=0.2889  lr=2.13e-06  epoch=3
+  step=111800/123996  loss=0.3171  lr=2.09e-06  epoch=3
+  step=112000/123996  loss=0.3051  lr=2.06e-06  epoch=3
+  step=112200/123996  loss=0.3618  lr=2.02e-06  epoch=3
+  step=112400/123996  loss=0.2978  lr=1.99e-06  epoch=3
+  step=112600/123996  loss=0.2906  lr=1.96e-06  epoch=3
+  step=112800/123996  loss=0.3045  lr=1.92e-06  epoch=3
+  step=113000/123996  loss=0.3021  lr=1.89e-06  epoch=3
+  step=113200/123996  loss=0.3071  lr=1.85e-06  epoch=3
+  step=113400/123996  loss=0.3215  lr=1.82e-06  epoch=3
+  step=113600/123996  loss=0.3339  lr=1.78e-06  epoch=3
+  step=113800/123996  loss=0.3921  lr=1.75e-06  epoch=3
+  step=114000/123996  loss=0.2875  lr=1.72e-06  epoch=3
+  step=114200/123996  loss=0.3656  lr=1.68e-06  epoch=3
+  step=114400/123996  loss=0.3021  lr=1.65e-06  epoch=3
+  step=114600/123996  loss=0.2806  lr=1.61e-06  epoch=3
+  step=114800/123996  loss=0.3305  lr=1.58e-06  epoch=3
+  step=115000/123996  loss=0.2915  lr=1.54e-06  epoch=3
+  step=115200/123996  loss=0.3013  lr=1.51e-06  epoch=3
+  step=115400/123996  loss=0.2833  lr=1.47e-06  epoch=3
+  step=115600/123996  loss=0.3013  lr=1.44e-06  epoch=3
+  step=115800/123996  loss=0.2618  lr=1.41e-06  epoch=3
+  step=116000/123996  loss=0.3400  lr=1.37e-06  epoch=3
+  step=116200/123996  loss=0.2942  lr=1.34e-06  epoch=3
+  step=116400/123996  loss=0.2821  lr=1.30e-06  epoch=3
+  step=116600/123996  loss=0.3301  lr=1.27e-06  epoch=3
+  step=116800/123996  loss=0.3651  lr=1.23e-06  epoch=3
+  step=117000/123996  loss=0.3402  lr=1.20e-06  epoch=3
+  step=117200/123996  loss=0.3149  lr=1.17e-06  epoch=3
+  step=117400/123996  loss=0.3142  lr=1.13e-06  epoch=3
+  step=117600/123996  loss=0.3110  lr=1.10e-06  epoch=3
+  step=117800/123996  loss=0.3098  lr=1.06e-06  epoch=3
+  step=118000/123996  loss=0.3330  lr=1.03e-06  epoch=3
+  step=118200/123996  loss=0.3349  lr=9.95e-07  epoch=3
+  step=118400/123996  loss=0.2854  lr=9.60e-07  epoch=3
+  step=118600/123996  loss=0.3252  lr=9.26e-07  epoch=3
+  step=118800/123996  loss=0.3243  lr=8.92e-07  epoch=3
+  step=119000/123996  loss=0.3823  lr=8.57e-07  epoch=3
+  step=119200/123996  loss=0.2624  lr=8.23e-07  epoch=3
+  step=119400/123996  loss=0.2880  lr=7.89e-07  epoch=3
+  step=119600/123996  loss=0.3261  lr=7.54e-07  epoch=3
+  step=119800/123996  loss=0.3174  lr=7.20e-07  epoch=3
+  step=120000/123996  loss=0.3183  lr=6.86e-07  epoch=3
+  step=120200/123996  loss=0.3078  lr=6.51e-07  epoch=3
+  step=120400/123996  loss=0.3117  lr=6.17e-07  epoch=3
+  step=120600/123996  loss=0.3359  lr=5.83e-07  epoch=3
+  step=120800/123996  loss=0.3224  lr=5.48e-07  epoch=3
+  step=121000/123996  loss=0.3003  lr=5.14e-07  epoch=3
+  step=121200/123996  loss=0.3375  lr=4.80e-07  epoch=3
+  step=121400/123996  loss=0.3169  lr=4.45e-07  epoch=3
+  step=121600/123996  loss=0.3249  lr=4.11e-07  epoch=3
+  step=121800/123996  loss=0.3371  lr=3.77e-07  epoch=3
+  step=122000/123996  loss=0.3287  lr=3.42e-07  epoch=3
+  step=122200/123996  loss=0.3127  lr=3.08e-07  epoch=3
+  step=122400/123996  loss=0.3201  lr=2.74e-07  epoch=3
+  step=122600/123996  loss=0.3080  lr=2.40e-07  epoch=3
+  step=122800/123996  loss=0.3131  lr=2.05e-07  epoch=3
+  step=123000/123996  loss=0.3573  lr=1.71e-07  epoch=3
+  step=123200/123996  loss=0.3754  lr=1.37e-07  epoch=3
+  step=123400/123996  loss=0.3293  lr=1.02e-07  epoch=3
+  step=123600/123996  loss=0.3216  lr=6.79e-08  epoch=3
+  step=123800/123996  loss=0.3433  lr=3.36e-08  epoch=3
+[epoch 3/3]  train_loss=0.3262  val_AUC=0.8834  val_P@1=0.6752  (19741s)
+  no improvement (best=0.8812, bad_epochs=1/1)
+[early stop] no val-AUC improvement for 1 epochs.
+
+[done]  best val_AUC=0.8812  stopped_early=True
+  best:   /mnt/localssd/base_line/my_work/kl/cross_encoder/results/workflow/checkpoint_best.pt
+  latest: /mnt/localssd/base_line/my_work/kl/cross_encoder/results/workflow/checkpoint_latest.pt

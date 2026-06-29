@@ -1,0 +1,8 @@
+{
+  "dataset": "workflow",
+  "split": "train",
+  "n_pairs": 20000,
+  "hard_neg_type": "reverse_direction (hard_neg = anchor)",
+  "elapsed_seconds": 10.109979152679443,
+  "pairs_path": "/mnt/localssd/internship-causal-embedding-merge-followup/finetune_eval/results_reverse/workflow/train_pairs.jsonl"
+}

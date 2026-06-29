@@ -1,0 +1,8 @@
+{
+  "dataset": "aep_causal",
+  "split": "train",
+  "n_pairs": 5487,
+  "hard_neg_type": "reverse_direction (hard_neg = anchor)",
+  "elapsed_seconds": 0.18219304084777832,
+  "pairs_path": "/mnt/localssd/internship-causal-embedding-merge-followup/finetune_eval/results_reverse/aep_causal/train_pairs.jsonl"
+}

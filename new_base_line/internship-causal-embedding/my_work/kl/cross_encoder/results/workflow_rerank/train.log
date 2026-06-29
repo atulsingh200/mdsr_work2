@@ -1,0 +1,28 @@
+[train] dataset=workflow total_steps=2972 warmup=178 batch_size=128 epochs=4 max_length=256  early_stop=(thresh 0.001, patience 2)
+  step=   200/2972  loss=0.3831  lr=1.98e-05  epoch=1
+  step=   400/2972  loss=0.3380  lr=1.84e-05  epoch=1
+  step=   600/2972  loss=0.3882  lr=1.70e-05  epoch=1
+[epoch 1/4]  train_loss=0.3956  val_AUC=0.9465  val_P@1=0.8430  (190s)
+  * new best val_AUC=0.9465, saved checkpoint_best.pt
+  step=   800/2972  loss=0.3546  lr=1.55e-05  epoch=2
+  step=  1000/2972  loss=0.4136  lr=1.41e-05  epoch=2
+  step=  1200/2972  loss=0.3301  lr=1.27e-05  epoch=2
+  step=  1400/2972  loss=0.3476  lr=1.13e-05  epoch=2
+[epoch 2/4]  train_loss=0.3147  val_AUC=0.9510  val_P@1=0.8520  (379s)
+  * new best val_AUC=0.9510, saved checkpoint_best.pt
+  step=  1600/2972  loss=0.2306  lr=9.82e-06  epoch=3
+  step=  1800/2972  loss=0.3243  lr=8.39e-06  epoch=3
+  step=  2000/2972  loss=0.2176  lr=6.96e-06  epoch=3
+  step=  2200/2972  loss=0.1804  lr=5.53e-06  epoch=3
+[epoch 3/4]  train_loss=0.2751  val_AUC=0.9493  val_P@1=0.8480  (558s)
+  no improvement (best=0.9510, bad_epochs=1/2)
+  step=  2400/2972  loss=0.1551  lr=4.09e-06  epoch=4
+  step=  2600/2972  loss=0.2193  lr=2.66e-06  epoch=4
+  step=  2800/2972  loss=0.2742  lr=1.23e-06  epoch=4
+[epoch 4/4]  train_loss=0.2451  val_AUC=0.9457  val_P@1=0.8350  (731s)
+  no improvement (best=0.9510, bad_epochs=2/2)
+[early stop] no val-AUC improvement for 2 epochs.
+
+[done]  best val_AUC=0.9510  stopped_early=True
+  best:   my_work/kl/cross_encoder/results/workflow_rerank/checkpoint_best.pt
+  latest: my_work/kl/cross_encoder/results/workflow_rerank/checkpoint_latest.pt

@@ -1,0 +1,13 @@
+{
+  "dataset": "multiwoz_v24",
+  "checkpoint": "/mnt/localssd/base_line/internship-causal-embedding/finetune_eval/results/multiwoz_v24/checkpoint_best.pt",
+  "backbone": "google-bert/bert-base-uncased",
+  "pooling": "cls",
+  "n_test_pairs": 7368,
+  "n_negatives": 4,
+  "encoding_seconds": 25.334771156311035,
+  "auc": 0.6222510461170528,
+  "precision_at_1": 0.41096634093376766,
+  "eval_type": "semantic_hard_negatives",
+  "miner": "sentence-transformers/all-MiniLM-L6-v2"
+}

@@ -1,0 +1,193 @@
+00:53:22 INFO run_dir=runs/classifier/ajo_doc_not_tier1
+00:53:22 INFO device=cuda  bf16=True
+00:53:22 INFO tokenizer <- BAAI/bge-base-en-v1.5
+00:53:23 INFO max_seq_len=524 exceeds model cap 512; clamping to 512
+00:53:23 INFO max_seq_len=512 (user-provided)
+00:53:23 INFO loading datasets
+00:53:25 INFO   train=88000  val=11200  test=11200
+00:53:25 INFO building DirectionalClassifier on BAAI/bge-base-en-v1.5  head_cfg={'head_type': 'mlp', 'hidden_dims': [512, 128], 'dropout': 0.1, 'activation': 'gelu', 'norm': 'layer'}  n_tiers=0
+00:53:26 INFO   hidden_size=768  trainable_params=220,611,073
+00:53:26 INFO   total_steps=8250  warmup_steps=825
+00:53:34 INFO   e1 step    50/2750  loss=0.8101  acc=0.5288  lr0=1.21e-06 lr1=6.06e-05
+00:53:40 INFO   e1 step   100/2750  loss=0.7725  acc=0.5231  lr0=2.42e-06 lr1=1.21e-04
+00:53:47 INFO   e1 step   150/2750  loss=0.7392  acc=0.5471  lr0=3.64e-06 lr1=1.82e-04
+00:53:53 INFO   e1 step   200/2750  loss=0.7111  acc=0.5719  lr0=4.85e-06 lr1=2.42e-04
+00:54:00 INFO   e1 step   250/2750  loss=0.6945  acc=0.5894  lr0=6.06e-06 lr1=3.03e-04
+00:54:06 INFO   e1 step   300/2750  loss=0.6602  acc=0.6173  lr0=7.27e-06 lr1=3.64e-04
+00:54:13 INFO   e1 step   350/2750  loss=0.6273  acc=0.6445  lr0=8.48e-06 lr1=4.24e-04
+00:54:19 INFO   e1 step   400/2750  loss=0.5946  acc=0.6680  lr0=9.70e-06 lr1=4.85e-04
+00:54:26 INFO   e1 step   450/2750  loss=0.5627  acc=0.6899  lr0=1.09e-05 lr1=5.45e-04
+00:54:32 INFO   e1 step   500/2750  loss=0.5306  acc=0.7103  lr0=1.21e-05 lr1=6.06e-04
+00:54:39 INFO   e1 step   550/2750  loss=0.5033  acc=0.7287  lr0=1.33e-05 lr1=6.67e-04
+00:54:46 INFO   e1 step   600/2750  loss=0.4780  acc=0.7447  lr0=1.45e-05 lr1=7.27e-04
+00:54:52 INFO   e1 step   650/2750  loss=0.4551  acc=0.7590  lr0=1.58e-05 lr1=7.88e-04
+00:54:59 INFO   e1 step   700/2750  loss=0.4333  acc=0.7721  lr0=1.70e-05 lr1=8.48e-04
+00:55:06 INFO   e1 step   750/2750  loss=0.4131  acc=0.7839  lr0=1.82e-05 lr1=9.09e-04
+00:55:12 INFO   e1 step   800/2750  loss=0.3943  acc=0.7946  lr0=1.94e-05 lr1=9.70e-04
+00:55:19 INFO   e1 step   850/2750  loss=0.3767  acc=0.8050  lr0=1.99e-05 lr1=9.97e-04
+00:55:25 INFO   e1 step   900/2750  loss=0.3621  acc=0.8137  lr0=1.98e-05 lr1=9.90e-04
+00:55:32 INFO   e1 step   950/2750  loss=0.3463  acc=0.8224  lr0=1.97e-05 lr1=9.83e-04
+00:55:39 INFO   e1 step  1000/2750  loss=0.3328  acc=0.8301  lr0=1.95e-05 lr1=9.76e-04
+00:55:45 INFO   e1 step  1050/2750  loss=0.3204  acc=0.8371  lr0=1.94e-05 lr1=9.70e-04
+00:55:52 INFO   e1 step  1100/2750  loss=0.3093  acc=0.8434  lr0=1.93e-05 lr1=9.63e-04
+00:55:58 INFO   e1 step  1150/2750  loss=0.2974  acc=0.8498  lr0=1.91e-05 lr1=9.56e-04
+00:56:05 INFO   e1 step  1200/2750  loss=0.2874  acc=0.8554  lr0=1.90e-05 lr1=9.49e-04
+00:56:11 INFO   e1 step  1250/2750  loss=0.2772  acc=0.8608  lr0=1.89e-05 lr1=9.43e-04
+00:56:18 INFO   e1 step  1300/2750  loss=0.2673  acc=0.8658  lr0=1.87e-05 lr1=9.36e-04
+00:56:24 INFO   e1 step  1350/2750  loss=0.2583  acc=0.8705  lr0=1.86e-05 lr1=9.29e-04
+00:56:31 INFO   e1 step  1400/2750  loss=0.2499  acc=0.8749  lr0=1.85e-05 lr1=9.23e-04
+00:56:37 INFO   e1 step  1450/2750  loss=0.2421  acc=0.8790  lr0=1.83e-05 lr1=9.16e-04
+00:56:44 INFO   e1 step  1500/2750  loss=0.2350  acc=0.8828  lr0=1.82e-05 lr1=9.09e-04
+00:56:51 INFO   e1 step  1550/2750  loss=0.2283  acc=0.8863  lr0=1.80e-05 lr1=9.02e-04
+00:56:57 INFO   e1 step  1600/2750  loss=0.2216  acc=0.8897  lr0=1.79e-05 lr1=8.96e-04
+00:57:04 INFO   e1 step  1650/2750  loss=0.2155  acc=0.8929  lr0=1.78e-05 lr1=8.89e-04
+00:57:10 INFO   e1 step  1700/2750  loss=0.2095  acc=0.8960  lr0=1.76e-05 lr1=8.82e-04
+00:57:17 INFO   e1 step  1750/2750  loss=0.2036  acc=0.8989  lr0=1.75e-05 lr1=8.75e-04
+00:57:24 INFO   e1 step  1800/2750  loss=0.1981  acc=0.9016  lr0=1.74e-05 lr1=8.69e-04
+00:57:31 INFO   e1 step  1850/2750  loss=0.1930  acc=0.9042  lr0=1.72e-05 lr1=8.62e-04
+00:57:37 INFO   e1 step  1900/2750  loss=0.1881  acc=0.9067  lr0=1.71e-05 lr1=8.55e-04
+00:57:44 INFO   e1 step  1950/2750  loss=0.1835  acc=0.9090  lr0=1.70e-05 lr1=8.48e-04
+00:57:51 INFO   e1 step  2000/2750  loss=0.1791  acc=0.9112  lr0=1.68e-05 lr1=8.42e-04
+00:57:58 INFO   e1 step  2050/2750  loss=0.1752  acc=0.9133  lr0=1.67e-05 lr1=8.35e-04
+00:58:04 INFO   e1 step  2100/2750  loss=0.1712  acc=0.9153  lr0=1.66e-05 lr1=8.28e-04
+00:58:11 INFO   e1 step  2150/2750  loss=0.1676  acc=0.9172  lr0=1.64e-05 lr1=8.22e-04
+00:58:18 INFO   e1 step  2200/2750  loss=0.1639  acc=0.9190  lr0=1.63e-05 lr1=8.15e-04
+00:58:24 INFO   e1 step  2250/2750  loss=0.1605  acc=0.9208  lr0=1.62e-05 lr1=8.08e-04
+00:58:31 INFO   e1 step  2300/2750  loss=0.1570  acc=0.9225  lr0=1.60e-05 lr1=8.01e-04
+00:58:38 INFO   e1 step  2350/2750  loss=0.1540  acc=0.9241  lr0=1.59e-05 lr1=7.95e-04
+00:58:45 INFO   e1 step  2400/2750  loss=0.1511  acc=0.9256  lr0=1.58e-05 lr1=7.88e-04
+00:58:51 INFO   e1 step  2450/2750  loss=0.1482  acc=0.9270  lr0=1.56e-05 lr1=7.81e-04
+00:58:58 INFO   e1 step  2500/2750  loss=0.1453  acc=0.9285  lr0=1.55e-05 lr1=7.74e-04
+00:59:05 INFO   e1 step  2550/2750  loss=0.1427  acc=0.9298  lr0=1.54e-05 lr1=7.68e-04
+00:59:11 INFO   e1 step  2600/2750  loss=0.1401  acc=0.9311  lr0=1.52e-05 lr1=7.61e-04
+00:59:18 INFO   e1 step  2650/2750  loss=0.1377  acc=0.9323  lr0=1.51e-05 lr1=7.54e-04
+00:59:25 INFO   e1 step  2700/2750  loss=0.1353  acc=0.9336  lr0=1.49e-05 lr1=7.47e-04
+00:59:31 INFO   e1 step  2750/2750  loss=0.1329  acc=0.9347  lr0=1.48e-05 lr1=7.41e-04
+00:59:44 INFO [epoch 1] train_loss=0.1329 train_acc=0.9347  val_loss=0.0977 val_acc=0.9809 val_auc=0.9943  elapsed=377.8s
+00:59:45 INFO   saved best.pt  val_acc=0.9809
+00:59:52 INFO   e2 step    50/2750  loss=0.0097  acc=0.9969  lr0=1.47e-05 lr1=7.34e-04
+00:59:58 INFO   e2 step   100/2750  loss=0.0051  acc=0.9984  lr0=1.45e-05 lr1=7.27e-04
+01:00:05 INFO   e2 step   150/2750  loss=0.0040  acc=0.9985  lr0=1.44e-05 lr1=7.21e-04
+01:00:11 INFO   e2 step   200/2750  loss=0.0031  acc=0.9989  lr0=1.43e-05 lr1=7.14e-04
+01:00:18 INFO   e2 step   250/2750  loss=0.0027  acc=0.9990  lr0=1.41e-05 lr1=7.07e-04
+01:00:25 INFO   e2 step   300/2750  loss=0.0042  acc=0.9988  lr0=1.40e-05 lr1=7.00e-04
+01:00:31 INFO   e2 step   350/2750  loss=0.0043  acc=0.9988  lr0=1.39e-05 lr1=6.94e-04
+01:00:38 INFO   e2 step   400/2750  loss=0.0044  acc=0.9988  lr0=1.37e-05 lr1=6.87e-04
+01:00:44 INFO   e2 step   450/2750  loss=0.0056  acc=0.9987  lr0=1.36e-05 lr1=6.80e-04
+01:00:51 INFO   e2 step   500/2750  loss=0.0060  acc=0.9985  lr0=1.35e-05 lr1=6.73e-04
+01:00:57 INFO   e2 step   550/2750  loss=0.0061  acc=0.9985  lr0=1.33e-05 lr1=6.67e-04
+01:01:04 INFO   e2 step   600/2750  loss=0.0060  acc=0.9985  lr0=1.32e-05 lr1=6.60e-04
+01:01:11 INFO   e2 step   650/2750  loss=0.0058  acc=0.9986  lr0=1.31e-05 lr1=6.53e-04
+01:01:17 INFO   e2 step   700/2750  loss=0.0065  acc=0.9983  lr0=1.29e-05 lr1=6.46e-04
+01:01:24 INFO   e2 step   750/2750  loss=0.0065  acc=0.9983  lr0=1.28e-05 lr1=6.40e-04
+01:01:31 INFO   e2 step   800/2750  loss=0.0067  acc=0.9983  lr0=1.27e-05 lr1=6.33e-04
+01:01:37 INFO   e2 step   850/2750  loss=0.0067  acc=0.9983  lr0=1.25e-05 lr1=6.26e-04
+01:01:44 INFO   e2 step   900/2750  loss=0.0064  acc=0.9983  lr0=1.24e-05 lr1=6.20e-04
+01:01:51 INFO   e2 step   950/2750  loss=0.0062  acc=0.9983  lr0=1.23e-05 lr1=6.13e-04
+01:01:57 INFO   e2 step  1000/2750  loss=0.0060  acc=0.9983  lr0=1.21e-05 lr1=6.06e-04
+01:02:04 INFO   e2 step  1050/2750  loss=0.0062  acc=0.9983  lr0=1.20e-05 lr1=5.99e-04
+01:02:10 INFO   e2 step  1100/2750  loss=0.0060  acc=0.9983  lr0=1.19e-05 lr1=5.93e-04
+01:02:17 INFO   e2 step  1150/2750  loss=0.0059  acc=0.9983  lr0=1.17e-05 lr1=5.86e-04
+01:02:24 INFO   e2 step  1200/2750  loss=0.0058  acc=0.9983  lr0=1.16e-05 lr1=5.79e-04
+01:02:30 INFO   e2 step  1250/2750  loss=0.0056  acc=0.9984  lr0=1.14e-05 lr1=5.72e-04
+01:02:37 INFO   e2 step  1300/2750  loss=0.0057  acc=0.9983  lr0=1.13e-05 lr1=5.66e-04
+01:02:44 INFO   e2 step  1350/2750  loss=0.0056  acc=0.9984  lr0=1.12e-05 lr1=5.59e-04
+01:02:50 INFO   e2 step  1400/2750  loss=0.0054  acc=0.9984  lr0=1.10e-05 lr1=5.52e-04
+01:02:57 INFO   e2 step  1450/2750  loss=0.0054  acc=0.9984  lr0=1.09e-05 lr1=5.45e-04
+01:03:04 INFO   e2 step  1500/2750  loss=0.0054  acc=0.9984  lr0=1.08e-05 lr1=5.39e-04
+01:03:10 INFO   e2 step  1550/2750  loss=0.0053  acc=0.9985  lr0=1.06e-05 lr1=5.32e-04
+01:03:17 INFO   e2 step  1600/2750  loss=0.0052  acc=0.9985  lr0=1.05e-05 lr1=5.25e-04
+01:03:23 INFO   e2 step  1650/2750  loss=0.0051  acc=0.9985  lr0=1.04e-05 lr1=5.19e-04
+01:03:30 INFO   e2 step  1700/2750  loss=0.0051  acc=0.9985  lr0=1.02e-05 lr1=5.12e-04
+01:03:37 INFO   e2 step  1750/2750  loss=0.0049  acc=0.9985  lr0=1.01e-05 lr1=5.05e-04
+01:03:43 INFO   e2 step  1800/2750  loss=0.0048  acc=0.9986  lr0=9.97e-06 lr1=4.98e-04
+01:03:50 INFO   e2 step  1850/2750  loss=0.0047  acc=0.9986  lr0=9.83e-06 lr1=4.92e-04
+01:03:56 INFO   e2 step  1900/2750  loss=0.0046  acc=0.9986  lr0=9.70e-06 lr1=4.85e-04
+01:04:03 INFO   e2 step  1950/2750  loss=0.0045  acc=0.9987  lr0=9.56e-06 lr1=4.78e-04
+01:04:10 INFO   e2 step  2000/2750  loss=0.0044  acc=0.9987  lr0=9.43e-06 lr1=4.71e-04
+01:04:17 INFO   e2 step  2050/2750  loss=0.0043  acc=0.9987  lr0=9.29e-06 lr1=4.65e-04
+01:04:24 INFO   e2 step  2100/2750  loss=0.0043  acc=0.9987  lr0=9.16e-06 lr1=4.58e-04
+01:04:31 INFO   e2 step  2150/2750  loss=0.0042  acc=0.9988  lr0=9.02e-06 lr1=4.51e-04
+01:04:37 INFO   e2 step  2200/2750  loss=0.0041  acc=0.9988  lr0=8.89e-06 lr1=4.44e-04
+01:04:44 INFO   e2 step  2250/2750  loss=0.0042  acc=0.9988  lr0=8.75e-06 lr1=4.38e-04
+01:04:51 INFO   e2 step  2300/2750  loss=0.0041  acc=0.9988  lr0=8.62e-06 lr1=4.31e-04
+01:04:58 INFO   e2 step  2350/2750  loss=0.0041  acc=0.9988  lr0=8.48e-06 lr1=4.24e-04
+01:05:04 INFO   e2 step  2400/2750  loss=0.0040  acc=0.9988  lr0=8.35e-06 lr1=4.18e-04
+01:05:11 INFO   e2 step  2450/2750  loss=0.0039  acc=0.9989  lr0=8.22e-06 lr1=4.11e-04
+01:05:18 INFO   e2 step  2500/2750  loss=0.0040  acc=0.9989  lr0=8.08e-06 lr1=4.04e-04
+01:05:24 INFO   e2 step  2550/2750  loss=0.0039  acc=0.9989  lr0=7.95e-06 lr1=3.97e-04
+01:05:31 INFO   e2 step  2600/2750  loss=0.0040  acc=0.9989  lr0=7.81e-06 lr1=3.91e-04
+01:05:38 INFO   e2 step  2650/2750  loss=0.0042  acc=0.9988  lr0=7.68e-06 lr1=3.84e-04
+01:05:44 INFO   e2 step  2700/2750  loss=0.0042  acc=0.9988  lr0=7.54e-06 lr1=3.77e-04
+01:05:51 INFO   e2 step  2750/2750  loss=0.0042  acc=0.9988  lr0=7.41e-06 lr1=3.70e-04
+01:06:02 INFO [epoch 2] train_loss=0.0042 train_acc=0.9988  val_loss=0.1102 val_acc=0.9846 val_auc=0.9923  elapsed=377.2s
+01:06:04 INFO   saved best.pt  val_acc=0.9846
+01:06:11 INFO   e3 step    50/2750  loss=0.0007  acc=1.0000  lr0=7.27e-06 lr1=3.64e-04
+01:06:17 INFO   e3 step   100/2750  loss=0.0016  acc=0.9997  lr0=7.14e-06 lr1=3.57e-04
+01:06:24 INFO   e3 step   150/2750  loss=0.0012  acc=0.9998  lr0=7.00e-06 lr1=3.50e-04
+01:06:31 INFO   e3 step   200/2750  loss=0.0013  acc=0.9997  lr0=6.87e-06 lr1=3.43e-04
+01:06:37 INFO   e3 step   250/2750  loss=0.0013  acc=0.9996  lr0=6.73e-06 lr1=3.37e-04
+01:06:44 INFO   e3 step   300/2750  loss=0.0017  acc=0.9994  lr0=6.60e-06 lr1=3.30e-04
+01:06:50 INFO   e3 step   350/2750  loss=0.0015  acc=0.9995  lr0=6.46e-06 lr1=3.23e-04
+01:06:57 INFO   e3 step   400/2750  loss=0.0014  acc=0.9995  lr0=6.33e-06 lr1=3.16e-04
+01:07:04 INFO   e3 step   450/2750  loss=0.0013  acc=0.9995  lr0=6.20e-06 lr1=3.10e-04
+01:07:10 INFO   e3 step   500/2750  loss=0.0011  acc=0.9996  lr0=6.06e-06 lr1=3.03e-04
+01:07:17 INFO   e3 step   550/2750  loss=0.0016  acc=0.9995  lr0=5.93e-06 lr1=2.96e-04
+01:07:23 INFO   e3 step   600/2750  loss=0.0015  acc=0.9996  lr0=5.79e-06 lr1=2.90e-04
+01:07:30 INFO   e3 step   650/2750  loss=0.0014  acc=0.9996  lr0=5.66e-06 lr1=2.83e-04
+01:07:37 INFO   e3 step   700/2750  loss=0.0013  acc=0.9996  lr0=5.52e-06 lr1=2.76e-04
+01:07:44 INFO   e3 step   750/2750  loss=0.0012  acc=0.9997  lr0=5.39e-06 lr1=2.69e-04
+01:07:50 INFO   e3 step   800/2750  loss=0.0012  acc=0.9997  lr0=5.25e-06 lr1=2.63e-04
+01:07:57 INFO   e3 step   850/2750  loss=0.0013  acc=0.9997  lr0=5.12e-06 lr1=2.56e-04
+01:08:04 INFO   e3 step   900/2750  loss=0.0015  acc=0.9997  lr0=4.98e-06 lr1=2.49e-04
+01:08:10 INFO   e3 step   950/2750  loss=0.0014  acc=0.9997  lr0=4.85e-06 lr1=2.42e-04
+01:08:17 INFO   e3 step  1000/2750  loss=0.0013  acc=0.9997  lr0=4.71e-06 lr1=2.36e-04
+01:08:24 INFO   e3 step  1050/2750  loss=0.0015  acc=0.9997  lr0=4.58e-06 lr1=2.29e-04
+01:08:31 INFO   e3 step  1100/2750  loss=0.0015  acc=0.9997  lr0=4.44e-06 lr1=2.22e-04
+01:08:37 INFO   e3 step  1150/2750  loss=0.0014  acc=0.9997  lr0=4.31e-06 lr1=2.15e-04
+01:08:44 INFO   e3 step  1200/2750  loss=0.0013  acc=0.9997  lr0=4.18e-06 lr1=2.09e-04
+01:08:51 INFO   e3 step  1250/2750  loss=0.0013  acc=0.9997  lr0=4.04e-06 lr1=2.02e-04
+01:08:57 INFO   e3 step  1300/2750  loss=0.0012  acc=0.9997  lr0=3.91e-06 lr1=1.95e-04
+01:09:04 INFO   e3 step  1350/2750  loss=0.0012  acc=0.9997  lr0=3.77e-06 lr1=1.89e-04
+01:09:11 INFO   e3 step  1400/2750  loss=0.0012  acc=0.9998  lr0=3.64e-06 lr1=1.82e-04
+01:09:18 INFO   e3 step  1450/2750  loss=0.0011  acc=0.9998  lr0=3.50e-06 lr1=1.75e-04
+01:09:24 INFO   e3 step  1500/2750  loss=0.0011  acc=0.9998  lr0=3.37e-06 lr1=1.68e-04
+01:09:31 INFO   e3 step  1550/2750  loss=0.0011  acc=0.9998  lr0=3.23e-06 lr1=1.62e-04
+01:09:38 INFO   e3 step  1600/2750  loss=0.0010  acc=0.9998  lr0=3.10e-06 lr1=1.55e-04
+01:09:44 INFO   e3 step  1650/2750  loss=0.0010  acc=0.9998  lr0=2.96e-06 lr1=1.48e-04
+01:09:51 INFO   e3 step  1700/2750  loss=0.0011  acc=0.9998  lr0=2.83e-06 lr1=1.41e-04
+01:09:58 INFO   e3 step  1750/2750  loss=0.0012  acc=0.9998  lr0=2.69e-06 lr1=1.35e-04
+01:10:05 INFO   e3 step  1800/2750  loss=0.0011  acc=0.9998  lr0=2.56e-06 lr1=1.28e-04
+01:10:11 INFO   e3 step  1850/2750  loss=0.0011  acc=0.9998  lr0=2.42e-06 lr1=1.21e-04
+01:10:18 INFO   e3 step  1900/2750  loss=0.0011  acc=0.9998  lr0=2.29e-06 lr1=1.14e-04
+01:10:25 INFO   e3 step  1950/2750  loss=0.0010  acc=0.9998  lr0=2.15e-06 lr1=1.08e-04
+01:10:32 INFO   e3 step  2000/2750  loss=0.0010  acc=0.9998  lr0=2.02e-06 lr1=1.01e-04
+01:10:39 INFO   e3 step  2050/2750  loss=0.0010  acc=0.9998  lr0=1.89e-06 lr1=9.43e-05
+01:10:45 INFO   e3 step  2100/2750  loss=0.0010  acc=0.9998  lr0=1.75e-06 lr1=8.75e-05
+01:10:52 INFO   e3 step  2150/2750  loss=0.0010  acc=0.9998  lr0=1.62e-06 lr1=8.08e-05
+01:10:59 INFO   e3 step  2200/2750  loss=0.0009  acc=0.9998  lr0=1.48e-06 lr1=7.41e-05
+01:11:05 INFO   e3 step  2250/2750  loss=0.0009  acc=0.9998  lr0=1.35e-06 lr1=6.73e-05
+01:11:12 INFO   e3 step  2300/2750  loss=0.0009  acc=0.9998  lr0=1.21e-06 lr1=6.06e-05
+01:11:19 INFO   e3 step  2350/2750  loss=0.0009  acc=0.9998  lr0=1.08e-06 lr1=5.39e-05
+01:11:25 INFO   e3 step  2400/2750  loss=0.0009  acc=0.9998  lr0=9.43e-07 lr1=4.71e-05
+01:11:32 INFO   e3 step  2450/2750  loss=0.0008  acc=0.9998  lr0=8.08e-07 lr1=4.04e-05
+01:11:39 INFO   e3 step  2500/2750  loss=0.0008  acc=0.9998  lr0=6.73e-07 lr1=3.37e-05
+01:11:45 INFO   e3 step  2550/2750  loss=0.0008  acc=0.9998  lr0=5.39e-07 lr1=2.69e-05
+01:11:52 INFO   e3 step  2600/2750  loss=0.0008  acc=0.9998  lr0=4.04e-07 lr1=2.02e-05
+01:11:59 INFO   e3 step  2650/2750  loss=0.0008  acc=0.9998  lr0=2.69e-07 lr1=1.35e-05
+01:12:06 INFO   e3 step  2700/2750  loss=0.0008  acc=0.9998  lr0=1.35e-07 lr1=6.73e-06
+01:12:12 INFO   e3 step  2750/2750  loss=0.0008  acc=0.9999  lr0=0.00e+00 lr1=0.00e+00
+01:12:24 INFO [epoch 3] train_loss=0.0008 train_acc=0.9999  val_loss=0.1008 val_acc=0.9874 val_auc=0.9940  elapsed=380.3s
+01:12:25 INFO   saved best.pt  val_acc=0.9874
+01:12:26 INFO loading best.pt for test eval
+01:12:39 INFO [test] loss=0.0457  acc=0.9919  auc=0.9977  f1=0.9920
+01:12:39 INFO [test] per-tier-pair accuracy:
+01:12:39 INFO         T2-T3  n= 1400  acc=0.9993
+01:12:39 INFO         T3-T4  n= 1400  acc=0.9814
+01:12:39 INFO         T4-T5  n= 1400  acc=0.9757
+01:12:39 INFO         T5-T6  n= 1400  acc=0.9893
+01:12:39 INFO         T6-T7  n= 1400  acc=1.0000
+01:12:39 INFO         T7-T8  n= 1400  acc=1.0000
+01:12:39 INFO         T8-T9  n= 1400  acc=1.0000
+01:12:39 INFO        T9-T10  n= 1400  acc=0.9893
+01:12:39 INFO [done] results in runs/classifier/ajo_doc_not_tier1

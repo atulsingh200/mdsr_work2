@@ -1,0 +1,21 @@
+[train] dataset=aep_causal total_steps=1716 warmup=102 batch_size=64 epochs=4 max_length=256  early_stop=(thresh 0.001, patience 2)
+  step=   200/1716  loss=0.4529  lr=1.88e-05  epoch=1
+  step=   400/1716  loss=0.5610  lr=1.63e-05  epoch=1
+[epoch 1/4]  train_loss=0.5136  val_AUC=0.6473  val_P@1=0.3665  (69s)
+  * new best val_AUC=0.6473, saved checkpoint_best.pt
+  step=   600/1716  loss=0.5555  lr=1.38e-05  epoch=2
+  step=   800/1716  loss=0.4042  lr=1.14e-05  epoch=2
+[epoch 2/4]  train_loss=0.4956  val_AUC=0.6981  val_P@1=0.3950  (138s)
+  * new best val_AUC=0.6981, saved checkpoint_best.pt
+  step=  1000/1716  loss=0.5256  lr=8.87e-06  epoch=3
+  step=  1200/1716  loss=0.4671  lr=6.39e-06  epoch=3
+[epoch 3/4]  train_loss=0.4868  val_AUC=0.7157  val_P@1=0.4110  (207s)
+  * new best val_AUC=0.7157, saved checkpoint_best.pt
+  step=  1400/1716  loss=0.4967  lr=3.92e-06  epoch=4
+  step=  1600/1716  loss=0.4286  lr=1.44e-06  epoch=4
+[epoch 4/4]  train_loss=0.4705  val_AUC=0.7251  val_P@1=0.4502  (277s)
+  * new best val_AUC=0.7251, saved checkpoint_best.pt
+
+[done]  best val_AUC=0.7251  stopped_early=False
+  best:   my_work/kl/cross_encoder/results/aep_causal_rerank/checkpoint_best.pt
+  latest: my_work/kl/cross_encoder/results/aep_causal_rerank/checkpoint_latest.pt

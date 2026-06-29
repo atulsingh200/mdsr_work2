@@ -1,0 +1,12 @@
+{
+  "model": "CrossEncoder",
+  "dataset": "workflow",
+  "checkpoint": "/mnt/localssd/base_line/my_work/kl/cross_encoder/results/workflow/checkpoint_best.pt",
+  "backbone": "google-bert/bert-base-uncased",
+  "n_test_pairs": 260487,
+  "auc": 0.8800561631980998,
+  "precision_at_1": 0.6692195771765962,
+  "n_negatives": 4,
+  "eval_type": "semantic_hard_negatives",
+  "miner": "sentence-transformers/all-MiniLM-L6-v2"
+}

@@ -1,0 +1,36 @@
+{
+  "dataset": "aep_causal_cls",
+  "checkpoint": "/mnt/localssd/internship-causal-embedding-merge-followup/finetune_eval/results_reverse/aep_causal_cls/checkpoint_best.pt",
+  "backbone": "google-bert/bert-base-uncased",
+  "pooling": "cls",
+  "n_test": 6004,
+  "n_test_pos": 2935,
+  "n_test_neg": 3069,
+  "encoding_seconds": 33.3057656288147,
+  "auc": 0.8900048459536287,
+  "val_threshold": 0.30190199613571167,
+  "val_tuned_accuracy": 0.8477681545636242,
+  "test": {
+    "threshold": 0.30190199613571167,
+    "accuracy": 0.8347768154563624,
+    "precision": 0.8602150537634409,
+    "recall": 0.7904599659284497,
+    "f1": 0.8238636363636364,
+    "tp": 2320,
+    "tn": 2692,
+    "fp": 377,
+    "fn": 615
+  },
+  "test_oracle": {
+    "threshold": 0.23451587557792664,
+    "accuracy": 0.8376082611592272,
+    "precision": 0.8319783197831978,
+    "recall": 0.8367972742759796,
+    "f1": 0.8343808391370816,
+    "tp": 2456,
+    "tn": 2573,
+    "fp": 496,
+    "fn": 479
+  },
+  "eval_type": "directed_score_threshold_classification"
+}

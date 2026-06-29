@@ -1,0 +1,27 @@
+{
+  "dataset": "multiwoz_v24",
+  "checkpoint": "finetune_eval/results/multiwoz_v24_no_inbatch/checkpoint_best.pt",
+  "backbone": "google-bert/bert-base-uncased",
+  "pooling": "cls",
+  "n_test_pairs": 7368,
+  "n_candidates_per_query": 1000,
+  "encoding_seconds": 24.477632761001587,
+  "auc": 0.5703759401072336,
+  "precision_at_1": 0.30293159609120524,
+  "n_negatives": 4,
+  "mrr": 0.023062453901540488,
+  "mean_rank": 415.2417209554832,
+  "median_rank": 380.0,
+  "recall_at_k": {
+    "1": 0.007871878393051032,
+    "3": 0.016286644951140065,
+    "5": 0.0251085776330076,
+    "10": 0.04234527687296417
+  },
+  "hit_at_k": {
+    "1": 0.007871878393051032,
+    "3": 0.016286644951140065,
+    "5": 0.0251085776330076,
+    "10": 0.04234527687296417
+  }
+}

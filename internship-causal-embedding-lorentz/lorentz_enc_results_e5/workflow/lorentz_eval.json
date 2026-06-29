@@ -1,0 +1,27 @@
+{
+  "dataset": "workflow",
+  "checkpoint": "lorentz_enc_results_e5/workflow/lorentz_best.pt",
+  "backbone": "intfloat/e5-base-v2",
+  "space_dim": 768,
+  "time_dim": 20,
+  "n_test_pairs": 260487,
+  "encoding_seconds": 463.6945004463196,
+  "auc": 0.9812043686563985,
+  "precision_at_1": 0.9410335256653883,
+  "mrr": 0.6344777715615858,
+  "mean_rank": 21.30700572389409,
+  "median_rank": 1.0,
+  "recall_at_k": {
+    "1": 0.5514593818501499,
+    "3": 0.6816770126724174,
+    "5": 0.7291150805990319,
+    "10": 0.7851831377381597
+  },
+  "hit_at_k": {
+    "1": 0.5514593818501499,
+    "3": 0.6816770126724174,
+    "5": 0.7291150805990319,
+    "10": 0.7851831377381597
+  },
+  "n_candidates_per_query": 1000
+}

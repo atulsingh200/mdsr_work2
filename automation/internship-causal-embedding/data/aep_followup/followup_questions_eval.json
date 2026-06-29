@@ -1,0 +1,1911 @@
+{
+  "metadata": {
+    "num_queries": 100,
+    "follow_ups_per_query": 3,
+    "total_follow_ups": 300,
+    "model": "us.anthropic.claude-3-5-haiku-20241022-v1:0",
+    "generated_at": "2026-04-14 16:39:25"
+  },
+  "queries": [
+    {
+      "query_id": 0,
+      "topic": "XDM schemas and data modeling",
+      "source_question": "How do I create a custom XDM schema for our e-commerce customer data that includes both standard and unique attributes?",
+      "follow_ups": [
+        {
+          "id": 0,
+          "text": "What are the best practices for extending standard XDM classes for my specific business needs?"
+        },
+        {
+          "id": 1,
+          "text": "How can I ensure my custom schema is compatible with other Experience Platform services?"
+        },
+        {
+          "id": 2,
+          "text": "Can you show me how to add custom field groups to my XDM schema?"
+        }
+      ]
+    },
+    {
+      "query_id": 1,
+      "topic": "Data ingestion (batch and streaming)",
+      "source_question": "What's the most efficient way to get our daily sales data from our data warehouse into Adobe Experience Platform?",
+      "follow_ups": [
+        {
+          "id": 3,
+          "text": "How can I set up data validation and error handling during the ingestion process?"
+        },
+        {
+          "id": 4,
+          "text": "What are the performance considerations for batch vs streaming ingestion?"
+        },
+        {
+          "id": 5,
+          "text": "Can I monitor the status and track errors of my data ingestion jobs?"
+        }
+      ]
+    },
+    {
+      "query_id": 2,
+      "topic": "Source connectors (cloud storage, CRM, databases)",
+      "source_question": "We need to bring in customer data from Salesforce and our AWS S3 data lake - what source connectors should I use?",
+      "follow_ups": [
+        {
+          "id": 6,
+          "text": "How do I configure authentication and access credentials for these source connectors?"
+        },
+        {
+          "id": 7,
+          "text": "Can I schedule recurring data flows from these sources?"
+        },
+        {
+          "id": 8,
+          "text": "What transformations can I apply during the data ingestion process?"
+        }
+      ]
+    },
+    {
+      "query_id": 3,
+      "topic": "Identity Service and identity namespaces",
+      "source_question": "How do I set up cross-channel identity resolution for our customers across email, phone, and loyalty ID?",
+      "follow_ups": [
+        {
+          "id": 9,
+          "text": "What are the different types of identity namespaces I can use?"
+        },
+        {
+          "id": 10,
+          "text": "How does the identity graph work in combining different identifiers?"
+        },
+        {
+          "id": 11,
+          "text": "What privacy considerations should I be aware of when setting up identity resolution?"
+        }
+      ]
+    },
+    {
+      "query_id": 4,
+      "topic": "Real-Time Customer Profile",
+      "source_question": "How can I verify that my ingested data is correctly populating the Real-Time Customer Profile?",
+      "follow_ups": [
+        {
+          "id": 12,
+          "text": "What is the maximum number of records I can have in a customer profile?"
+        },
+        {
+          "id": 13,
+          "text": "How do I view and explore individual customer profiles?"
+        },
+        {
+          "id": 14,
+          "text": "Can I export profile data for external analysis?"
+        }
+      ]
+    },
+    {
+      "query_id": 5,
+      "topic": "Merge policies and profile merging",
+      "source_question": "We have multiple data sources with customer information - how do I create a merge policy to combine this data effectively?",
+      "follow_ups": [
+        {
+          "id": 15,
+          "text": "What are the different merge strategies available?"
+        },
+        {
+          "id": 16,
+          "text": "How do I prioritize data from different sources in my merge policy?"
+        },
+        {
+          "id": 17,
+          "text": "Can I create multiple merge policies for different use cases?"
+        }
+      ]
+    },
+    {
+      "query_id": 6,
+      "topic": "Segmentation Service and audience creation",
+      "source_question": "I want to create a segment of high-value customers who have made multiple purchases in the last 30 days - how do I do this?",
+      "follow_ups": [
+        {
+          "id": 18,
+          "text": "What kind of attributes and events can I use to define complex segment rules?"
+        },
+        {
+          "id": 19,
+          "text": "How can I estimate the size of my segment before activation?"
+        },
+        {
+          "id": 20,
+          "text": "What is the difference between batch and streaming segmentation?"
+        }
+      ]
+    },
+    {
+      "query_id": 7,
+      "topic": "Segment Builder and rule-based segments",
+      "source_question": "Can you walk me through creating a segment that targets customers who abandoned their cart but have not made a purchase in the last 7 days?",
+      "follow_ups": [
+        {
+          "id": 21,
+          "text": "How do I use sequential events in segment definition?"
+        },
+        {
+          "id": 22,
+          "text": "Can I create segments based on calculated metrics?"
+        },
+        {
+          "id": 23,
+          "text": "What are some best practices for building efficient segment rules?"
+        }
+      ]
+    },
+    {
+      "query_id": 8,
+      "topic": "Streaming segmentation and edge segmentation",
+      "source_question": "We need real-time audience updates for our personalization engine - how can streaming segmentation help?",
+      "follow_ups": [
+        {
+          "id": 24,
+          "text": "What are the performance implications of streaming segmentation?"
+        },
+        {
+          "id": 25,
+          "text": "How quickly are segment memberships updated with streaming segmentation?"
+        },
+        {
+          "id": 26,
+          "text": "What types of segments are supported by edge segmentation?"
+        }
+      ]
+    },
+    {
+      "query_id": 9,
+      "topic": "Destinations and audience activation",
+      "source_question": "How do I activate my customer segments to marketing platforms like Google Ads and Facebook?",
+      "follow_ups": [
+        {
+          "id": 27,
+          "text": "What types of destination connections are available?"
+        },
+        {
+          "id": 28,
+          "text": "How can I map profile attributes when sending segments to destinations?"
+        },
+        {
+          "id": 29,
+          "text": "What compliance and consent considerations should I be aware of during audience activation?"
+        }
+      ]
+    },
+    {
+      "query_id": 10,
+      "topic": "Data governance and DULE labels",
+      "source_question": "How can I restrict certain sensitive customer fields from being used in marketing campaigns?",
+      "follow_ups": [
+        {
+          "id": 30,
+          "text": "What specific DULE label should I apply to personally identifiable information?"
+        },
+        {
+          "id": 31,
+          "text": "Can I set up automatic blocking if someone tries to export restricted data?"
+        },
+        {
+          "id": 32,
+          "text": "How do I audit which datasets currently have sensitive data labels?"
+        }
+      ]
+    },
+    {
+      "query_id": 11,
+      "topic": "Privacy and consent management",
+      "source_question": "I need to ensure our data collection complies with GDPR requirements for customer consent tracking in Experience Platform.",
+      "follow_ups": [
+        {
+          "id": 33,
+          "text": "How can I configure consent signals from different data sources?"
+        },
+        {
+          "id": 34,
+          "text": "What are the steps to implement a consent workflow for new profile data?"
+        },
+        {
+          "id": 35,
+          "text": "Can I generate reports showing customer consent status across our datasets?"
+        }
+      ]
+    },
+    {
+      "query_id": 12,
+      "topic": "Datasets and data management",
+      "source_question": "What's the best way to handle batch ingestion for large historical customer data files?",
+      "follow_ups": [
+        {
+          "id": 36,
+          "text": "How do I configure partial batch ingestion with error diagnostics?"
+        },
+        {
+          "id": 37,
+          "text": "What are the recommended file size limits for batch ingestion?"
+        },
+        {
+          "id": 38,
+          "text": "Can I set up automated data validation rules during dataset creation?"
+        }
+      ]
+    },
+    {
+      "query_id": 13,
+      "topic": "Data Prep and mapping functions",
+      "source_question": "I'm trying to transform and clean customer email addresses during data ingestion. What mapping functions can help me?",
+      "follow_ups": [
+        {
+          "id": 39,
+          "text": "How do I use regular expressions to standardize email formats?"
+        },
+        {
+          "id": 40,
+          "text": "Can I create custom mapping functions for complex transformations?"
+        },
+        {
+          "id": 41,
+          "text": "What are the performance implications of complex data mapping?"
+        }
+      ]
+    },
+    {
+      "query_id": 14,
+      "topic": "Query Service and SQL analytics",
+      "source_question": "How can I perform complex customer segmentation analysis using SQL in Experience Platform?",
+      "follow_ups": [
+        {
+          "id": 42,
+          "text": "What are the best practices for optimizing long-running analytical queries?"
+        },
+        {
+          "id": 43,
+          "text": "Can I connect external BI tools to Query Service?"
+        },
+        {
+          "id": 44,
+          "text": "How do I schedule and automate recurring SQL query outputs?"
+        }
+      ]
+    },
+    {
+      "query_id": 15,
+      "topic": "Dataflows and monitoring",
+      "source_question": "I want to set up comprehensive monitoring for our data ingestion and activation workflows in Platform.",
+      "follow_ups": [
+        {
+          "id": 45,
+          "text": "What metrics should I track to ensure data pipeline health?"
+        },
+        {
+          "id": 46,
+          "text": "How can I configure alerts for ingestion failures?"
+        },
+        {
+          "id": 47,
+          "text": "Can I create custom dashboards for tracking dataflow performance?"
+        }
+      ]
+    },
+    {
+      "query_id": 16,
+      "topic": "Sandboxes and environment management",
+      "source_question": "How do I manage multiple development environments for different marketing teams using Platform sandboxes?",
+      "follow_ups": [
+        {
+          "id": 48,
+          "text": "What are the best practices for sandbox access control?"
+        },
+        {
+          "id": 49,
+          "text": "How can I clone configurations between production and development sandboxes?"
+        },
+        {
+          "id": 50,
+          "text": "What are the limitations on the number of sandboxes per organization?"
+        }
+      ]
+    },
+    {
+      "query_id": 17,
+      "topic": "Access control and permissions",
+      "source_question": "I need to implement role-based access for our marketing and analytics teams in Experience Platform.",
+      "follow_ups": [
+        {
+          "id": 51,
+          "text": "How granular can permission settings be for different user roles?"
+        },
+        {
+          "id": 52,
+          "text": "Can I create custom roles with specific dataset access?"
+        },
+        {
+          "id": 53,
+          "text": "What's the process for auditing and reviewing user permissions?"
+        }
+      ]
+    },
+    {
+      "query_id": 18,
+      "topic": "Adobe Journey Optimizer campaigns",
+      "source_question": "What's the most effective way to create personalized email marketing campaigns using Journey Optimizer?",
+      "follow_ups": [
+        {
+          "id": 54,
+          "text": "How can I leverage real-time customer profile data in campaign targeting?"
+        },
+        {
+          "id": 55,
+          "text": "What AI-powered personalization features are available?"
+        },
+        {
+          "id": 56,
+          "text": "How do I track and measure campaign performance metrics?"
+        }
+      ]
+    },
+    {
+      "query_id": 19,
+      "topic": "Journey Optimizer journeys and orchestration",
+      "source_question": "I want to design a complex multi-channel customer journey with conditional logic and personalized touchpoints.",
+      "follow_ups": [
+        {
+          "id": 57,
+          "text": "What are the best practices for creating dynamic journey segments?"
+        },
+        {
+          "id": 58,
+          "text": "How can I implement real-time decision branching in customer journeys?"
+        },
+        {
+          "id": 59,
+          "text": "What limitations exist for journey complexity and event-triggered actions?"
+        }
+      ]
+    },
+    {
+      "query_id": 20,
+      "topic": "Journey Optimizer push notifications",
+      "source_question": "How can I configure push notifications to target specific audience segments in Journey Optimizer?",
+      "follow_ups": [
+        {
+          "id": 60,
+          "text": "What are the best practices for personalizing push notification content?"
+        },
+        {
+          "id": 61,
+          "text": "How do I track and measure the performance of my push notification campaigns?"
+        },
+        {
+          "id": 62,
+          "text": "Can I set up frequency capping to prevent notification fatigue?"
+        }
+      ]
+    },
+    {
+      "query_id": 21,
+      "topic": "Journey Optimizer in-app messaging",
+      "source_question": "What triggers can I use to display in-app messages in my mobile application?",
+      "follow_ups": [
+        {
+          "id": 63,
+          "text": "How can I design responsive in-app messages that work across different device sizes?"
+        },
+        {
+          "id": 64,
+          "text": "What analytics are available to understand user interaction with in-app messages?"
+        },
+        {
+          "id": 65,
+          "text": "Can I create conditional logic for when and how in-app messages are displayed?"
+        }
+      ]
+    },
+    {
+      "query_id": 22,
+      "topic": "Journey Optimizer email authoring",
+      "source_question": "How can I create dynamic email content that adapts to individual customer attributes?",
+      "follow_ups": [
+        {
+          "id": 66,
+          "text": "What are the best ways to optimize email deliverability rates?"
+        },
+        {
+          "id": 67,
+          "text": "Can I set up A/B testing for email subject lines and content?"
+        },
+        {
+          "id": 68,
+          "text": "How do I integrate email campaign performance with my overall customer journey analytics?"
+        }
+      ]
+    },
+    {
+      "query_id": 23,
+      "topic": "Decision Management and offers",
+      "source_question": "How can I use Decision Management to automatically select the best offer for each customer?",
+      "follow_ups": [
+        {
+          "id": 69,
+          "text": "What machine learning algorithms are used to determine offer relevance?"
+        },
+        {
+          "id": 70,
+          "text": "How do I set up complex offer eligibility rules?"
+        },
+        {
+          "id": 71,
+          "text": "Can I track the performance and conversion rates of different offer variations?"
+        }
+      ]
+    },
+    {
+      "query_id": 24,
+      "topic": "Tags and event forwarding",
+      "source_question": "How can I use Adobe Tags to send data to multiple marketing and analytics platforms?",
+      "follow_ups": [
+        {
+          "id": 72,
+          "text": "What are the best practices for minimizing data collection overhead?"
+        },
+        {
+          "id": 73,
+          "text": "How do I set up server-side event forwarding for enhanced data privacy?"
+        },
+        {
+          "id": 74,
+          "text": "Can I create custom extensions for unique data routing requirements?"
+        }
+      ]
+    },
+    {
+      "query_id": 25,
+      "topic": "Web SDK implementation",
+      "source_question": "What are the key steps to implement Adobe Experience Platform Web SDK on my website?",
+      "follow_ups": [
+        {
+          "id": 75,
+          "text": "How do I configure data layers and map custom events?"
+        },
+        {
+          "id": 76,
+          "text": "What performance considerations should I be aware of during implementation?"
+        },
+        {
+          "id": 77,
+          "text": "How can I validate and debug my Web SDK configuration?"
+        }
+      ]
+    },
+    {
+      "query_id": 26,
+      "topic": "Mobile SDK implementation",
+      "source_question": "How do I integrate the Adobe Experience Platform Mobile SDK into my iOS and Android applications?",
+      "follow_ups": [
+        {
+          "id": 78,
+          "text": "What are the differences in implementation between iOS and Android?"
+        },
+        {
+          "id": 79,
+          "text": "How can I track user behaviors and lifecycle events?"
+        },
+        {
+          "id": 80,
+          "text": "What privacy and consent management features are available?"
+        }
+      ]
+    },
+    {
+      "query_id": 27,
+      "topic": "Edge Network and datastreams",
+      "source_question": "How do datastreams help me manage data collection and routing in Adobe Experience Platform?",
+      "follow_ups": [
+        {
+          "id": 81,
+          "text": "What configuration options exist for data transformation in datastreams?"
+        },
+        {
+          "id": 82,
+          "text": "How can I set up different datastreams for development and production environments?"
+        },
+        {
+          "id": 83,
+          "text": "What security measures are in place to protect data during transmission?"
+        }
+      ]
+    },
+    {
+      "query_id": 28,
+      "topic": "Customer Journey Analytics",
+      "source_question": "How can I create cross-channel journey visualizations that connect online and offline interactions?",
+      "follow_ups": [
+        {
+          "id": 84,
+          "text": "What data sources can I integrate into my journey analysis?"
+        },
+        {
+          "id": 85,
+          "text": "How do I set up attribution models to understand customer touchpoints?"
+        },
+        {
+          "id": 86,
+          "text": "Can I create predictive models based on historical journey data?"
+        }
+      ]
+    },
+    {
+      "query_id": 29,
+      "topic": "B2B edition and account profiles",
+      "source_question": "How does the B2B edition help me manage and analyze multi-level account relationships?",
+      "follow_ups": [
+        {
+          "id": 87,
+          "text": "What are the key differences between B2B and B2C profile management?"
+        },
+        {
+          "id": 88,
+          "text": "How can I create account hierarchies and map complex organizational structures?"
+        },
+        {
+          "id": 89,
+          "text": "What reporting and insights are available for B2B account intelligence?"
+        }
+      ]
+    },
+    {
+      "query_id": 30,
+      "topic": "Computed attributes",
+      "source_question": "How can I create a computed attribute that calculates the total lifetime value of a customer across all purchases?",
+      "follow_ups": [
+        {
+          "id": 90,
+          "text": "What are the performance implications of using complex computed attributes in real-time customer profiles?"
+        },
+        {
+          "id": 91,
+          "text": "Can I use computed attributes in segmentation rules for my marketing campaigns?"
+        },
+        {
+          "id": 92,
+          "text": "How do I set up backfilling for a newly created computed attribute?"
+        }
+      ]
+    },
+    {
+      "query_id": 31,
+      "topic": "Alerts and monitoring",
+      "source_question": "I need to set up alerts for when my data ingestion jobs fail or exceed certain processing thresholds. What's the best way to configure this in AEP?",
+      "follow_ups": [
+        {
+          "id": 93,
+          "text": "Can I customize alert notifications to be sent to different teams based on the type of error?"
+        },
+        {
+          "id": 94,
+          "text": "How can I integrate these alerts with my existing monitoring dashboard?"
+        },
+        {
+          "id": 95,
+          "text": "What specific metrics trigger the most common alerts in Experience Platform?"
+        }
+      ]
+    },
+    {
+      "query_id": 32,
+      "topic": "API authentication and developer tools",
+      "source_question": "I'm struggling to generate the correct JWT token for accessing Adobe Experience Platform APIs. Can you walk me through the authentication process?",
+      "follow_ups": [
+        {
+          "id": 96,
+          "text": "What are the best practices for securely managing API credentials in a production environment?"
+        },
+        {
+          "id": 97,
+          "text": "Are there any developer tools that can help me debug API connection issues?"
+        },
+        {
+          "id": 98,
+          "text": "How often do I need to refresh my authentication tokens?"
+        }
+      ]
+    },
+    {
+      "query_id": 33,
+      "topic": "Experience Data Model field groups",
+      "source_question": "I want to extend the standard XDM Profile schema with some custom fields for our healthcare use case. What's the recommended approach?",
+      "follow_ups": [
+        {
+          "id": 99,
+          "text": "How do I ensure my custom field group maintains compatibility with existing AEP workflows?"
+        },
+        {
+          "id": 100,
+          "text": "What are the governance implications of adding custom fields to a sensitive data schema?"
+        },
+        {
+          "id": 101,
+          "text": "Can I create a reusable field group that can be applied to multiple schemas?"
+        }
+      ]
+    },
+    {
+      "query_id": 34,
+      "topic": "Real-Time CDP partner data and prospecting",
+      "source_question": "We want to leverage third-party data segments for audience expansion in Real-Time CDP. What partner data sources are most effective?",
+      "follow_ups": [
+        {
+          "id": 102,
+          "text": "How do I evaluate the quality and match rates of potential partner data segments?"
+        },
+        {
+          "id": 103,
+          "text": "What are the compliance considerations when using external audience data?"
+        },
+        {
+          "id": 104,
+          "text": "Can I preview and test partner data segments before full activation?"
+        }
+      ]
+    },
+    {
+      "query_id": 35,
+      "topic": "Federated Audience Composition",
+      "source_question": "How can I use Federated Audience Composition to create complex audience segments that combine data from multiple sources?",
+      "follow_ups": [
+        {
+          "id": 105,
+          "text": "What are the performance considerations when building large, complex federated audiences?"
+        },
+        {
+          "id": 106,
+          "text": "How do consent and privacy settings impact federated audience creation?"
+        },
+        {
+          "id": 107,
+          "text": "Can I set up automated audience refinement and optimization rules?"
+        }
+      ]
+    },
+    {
+      "query_id": 36,
+      "topic": "Data Distiller and derived datasets",
+      "source_question": "I need to create a derived dataset that aggregates customer interaction data across multiple channels. How can Data Distiller help me with this?",
+      "follow_ups": [
+        {
+          "id": 108,
+          "text": "What are the query performance optimizations available in Data Distiller?"
+        },
+        {
+          "id": 109,
+          "text": "How long can I retain derived datasets, and what are the storage implications?"
+        },
+        {
+          "id": 110,
+          "text": "Can I schedule automated refreshes for my derived datasets?"
+        }
+      ]
+    },
+    {
+      "query_id": 37,
+      "topic": "Observability Insights",
+      "source_question": "What metrics and insights can I get from the Observability Insights feature to understand my platform's data processing performance?",
+      "follow_ups": [
+        {
+          "id": 111,
+          "text": "How can I set up custom dashboards to track specific performance indicators?"
+        },
+        {
+          "id": 112,
+          "text": "What are the most common bottlenecks revealed by Observability Insights?"
+        },
+        {
+          "id": 113,
+          "text": "Can I set up automated alerts based on specific observability metrics?"
+        }
+      ]
+    },
+    {
+      "query_id": 38,
+      "topic": "Catalog Service and data discovery",
+      "source_question": "I'm looking to understand what datasets are available in our organization and their metadata. How can Catalog Service help me?",
+      "follow_ups": [
+        {
+          "id": 114,
+          "text": "Can I set up automated data lineage tracking using Catalog Service?"
+        },
+        {
+          "id": 115,
+          "text": "How do I manage and tag datasets to improve discoverability?"
+        },
+        {
+          "id": 116,
+          "text": "What governance controls are available for dataset metadata?"
+        }
+      ]
+    },
+    {
+      "query_id": 39,
+      "topic": "Flow Service API and source connections",
+      "source_question": "We want to set up an automated data ingestion pipeline from our CRM system to Adobe Experience Platform. How can I use the Flow Service API to accomplish this?",
+      "follow_ups": [
+        {
+          "id": 117,
+          "text": "What are the best practices for handling incremental data updates?"
+        },
+        {
+          "id": 118,
+          "text": "How do I configure error handling and retry mechanisms for source connections?"
+        },
+        {
+          "id": 119,
+          "text": "Can I monitor the performance and health of my source data flows in real-time?"
+        }
+      ]
+    },
+    {
+      "query_id": 40,
+      "topic": "Data governance and DULE labels",
+      "source_question": "How do I restrict sensitive customer data from being used for certain marketing purposes in Experience Platform?",
+      "follow_ups": [
+        {
+          "id": 120,
+          "text": "Can I create custom DULE labels for my specific compliance requirements?"
+        },
+        {
+          "id": 121,
+          "text": "What happens if a user tries to export data that violates my governance policies?"
+        },
+        {
+          "id": 122,
+          "text": "How can I audit which datasets have been labeled with specific restrictions?"
+        }
+      ]
+    },
+    {
+      "query_id": 41,
+      "topic": "Privacy and consent management",
+      "source_question": "I need to ensure our data collection complies with GDPR and allows customers to withdraw consent - how can Experience Platform help me?",
+      "follow_ups": [
+        {
+          "id": 123,
+          "text": "What automated workflows exist for handling customer privacy requests?"
+        },
+        {
+          "id": 124,
+          "text": "Can I track and report on individual consent statuses across different channels?"
+        },
+        {
+          "id": 125,
+          "text": "How does consent management integrate with our existing customer profile data?"
+        }
+      ]
+    },
+    {
+      "query_id": 42,
+      "topic": "Datasets and data management",
+      "source_question": "What's the best way to organize and manage multiple marketing datasets in Platform?",
+      "follow_ups": [
+        {
+          "id": 126,
+          "text": "How can I set up batch ingestion for large historical datasets?"
+        },
+        {
+          "id": 127,
+          "text": "What are the performance implications of having many small versus few large datasets?"
+        },
+        {
+          "id": 128,
+          "text": "Can I create relationships between datasets from different sources?"
+        }
+      ]
+    },
+    {
+      "query_id": 43,
+      "topic": "Data Prep and mapping functions",
+      "source_question": "How can I transform and clean customer data during the ingestion process in Experience Platform?",
+      "follow_ups": [
+        {
+          "id": 129,
+          "text": "What complex transformation functions are available in Data Prep?"
+        },
+        {
+          "id": 130,
+          "text": "Can I preview my data transformations before applying them?"
+        },
+        {
+          "id": 131,
+          "text": "How do I handle missing or inconsistent data during mapping?"
+        }
+      ]
+    },
+    {
+      "query_id": 44,
+      "topic": "Query Service and SQL analytics",
+      "source_question": "I want to run complex analytical queries on my customer data directly in Platform - what capabilities does Query Service offer?",
+      "follow_ups": [
+        {
+          "id": 132,
+          "text": "Can I connect third-party BI tools to Query Service?"
+        },
+        {
+          "id": 133,
+          "text": "How are long-running queries managed and optimized?"
+        },
+        {
+          "id": 134,
+          "text": "What types of machine learning integrations exist with Query Service?"
+        }
+      ]
+    },
+    {
+      "query_id": 45,
+      "topic": "Dataflows and monitoring",
+      "source_question": "How can I track the status and performance of my data ingestion and processing workflows?",
+      "follow_ups": [
+        {
+          "id": 135,
+          "text": "What specific metrics are available for monitoring dataflow health?"
+        },
+        {
+          "id": 136,
+          "text": "Can I set up automated alerts for ingestion failures?"
+        },
+        {
+          "id": 137,
+          "text": "How do I troubleshoot specific errors in my dataflows?"
+        }
+      ]
+    },
+    {
+      "query_id": 46,
+      "topic": "Sandboxes and environment management",
+      "source_question": "We need to separate our development, staging, and production environments in Experience Platform - how should we approach this?",
+      "follow_ups": [
+        {
+          "id": 138,
+          "text": "What are the limitations on number of sandboxes per organization?"
+        },
+        {
+          "id": 139,
+          "text": "How can I clone configurations between sandboxes?"
+        },
+        {
+          "id": 140,
+          "text": "What's the process for promoting changes from development to production?"
+        }
+      ]
+    },
+    {
+      "query_id": 47,
+      "topic": "Access control and permissions",
+      "source_question": "How do I manage user roles and ensure the right people have appropriate access to Platform features?",
+      "follow_ups": [
+        {
+          "id": 141,
+          "text": "Can I create custom roles with granular permissions?"
+        },
+        {
+          "id": 142,
+          "text": "How do I audit current user access and permissions?"
+        },
+        {
+          "id": 143,
+          "text": "What integration exists with our corporate identity management system?"
+        }
+      ]
+    },
+    {
+      "query_id": 48,
+      "topic": "Adobe Journey Optimizer campaigns",
+      "source_question": "What capabilities exist for creating personalized multi-channel marketing campaigns in Journey Optimizer?",
+      "follow_ups": [
+        {
+          "id": 144,
+          "text": "How can I leverage real-time customer profile data in my campaigns?"
+        },
+        {
+          "id": 145,
+          "text": "What A/B testing features are available for campaign optimization?"
+        },
+        {
+          "id": 146,
+          "text": "Can I track campaign performance across different channels?"
+        }
+      ]
+    },
+    {
+      "query_id": 49,
+      "topic": "Journey Optimizer journeys and orchestration",
+      "source_question": "I want to create a complex, multi-step customer journey that adapts based on real-time interactions - what can Journey Optimizer do?",
+      "follow_ups": [
+        {
+          "id": 147,
+          "text": "How do I handle conditional branching in journey workflows?"
+        },
+        {
+          "id": 148,
+          "text": "Can I integrate external systems and custom actions into my journeys?"
+        },
+        {
+          "id": 149,
+          "text": "What reporting and analytics are available for journey performance?"
+        }
+      ]
+    },
+    {
+      "query_id": 50,
+      "topic": "Journey Optimizer push notifications",
+      "source_question": "How can I set up personalized push notifications that trigger based on specific customer behaviors in Journey Optimizer?",
+      "follow_ups": [
+        {
+          "id": 150,
+          "text": "What are the best practices for segmenting audiences for push notification campaigns?"
+        },
+        {
+          "id": 151,
+          "text": "How do I track and measure the performance of my push notification journeys?"
+        },
+        {
+          "id": 152,
+          "text": "Can I set up A/B testing for different push notification content and designs?"
+        }
+      ]
+    },
+    {
+      "query_id": 51,
+      "topic": "Journey Optimizer in-app messaging",
+      "source_question": "I want to create contextual in-app messages for my mobile app - what targeting capabilities does Journey Optimizer offer?",
+      "follow_ups": [
+        {
+          "id": 153,
+          "text": "How can I control the frequency and timing of in-app messages to avoid user fatigue?"
+        },
+        {
+          "id": 154,
+          "text": "What types of triggers can I use to display in-app messages?"
+        },
+        {
+          "id": 155,
+          "text": "How do I design responsive in-app messages that work across different device sizes?"
+        }
+      ]
+    },
+    {
+      "query_id": 52,
+      "topic": "Journey Optimizer email authoring",
+      "source_question": "What dynamic content capabilities exist in Journey Optimizer for creating personalized email templates?",
+      "follow_ups": [
+        {
+          "id": 156,
+          "text": "How can I implement AI-powered content recommendations in my email templates?"
+        },
+        {
+          "id": 157,
+          "text": "What are the best practices for email deliverability in Journey Optimizer?"
+        },
+        {
+          "id": 158,
+          "text": "Can I create reusable email content fragments across multiple campaigns?"
+        }
+      ]
+    },
+    {
+      "query_id": 53,
+      "topic": "Decision Management and offers",
+      "source_question": "How can I use Decision Management to automatically select the best offer for individual customers across different channels?",
+      "follow_ups": [
+        {
+          "id": 159,
+          "text": "What machine learning models can help optimize offer selection?"
+        },
+        {
+          "id": 160,
+          "text": "How do I set up complex eligibility rules for offer distribution?"
+        },
+        {
+          "id": 161,
+          "text": "Can I track the performance and conversion rates of individual offers?"
+        }
+      ]
+    },
+    {
+      "query_id": 54,
+      "topic": "Tags and event forwarding",
+      "source_question": "What's the most efficient way to implement Adobe Tags and forward events to multiple marketing platforms?",
+      "follow_ups": [
+        {
+          "id": 162,
+          "text": "How can I validate my tag configurations and debug event forwarding?"
+        },
+        {
+          "id": 163,
+          "text": "What are the performance implications of forwarding events to multiple destinations?"
+        },
+        {
+          "id": 164,
+          "text": "How do I manage data privacy and consent during event forwarding?"
+        }
+      ]
+    },
+    {
+      "query_id": 55,
+      "topic": "Web SDK implementation",
+      "source_question": "What are the key steps to implement Adobe Experience Platform Web SDK on a complex, multi-page website?",
+      "follow_ups": [
+        {
+          "id": 165,
+          "text": "How do I configure data layers and map custom events?"
+        },
+        {
+          "id": 166,
+          "text": "What performance optimization techniques exist for Web SDK?"
+        },
+        {
+          "id": 167,
+          "text": "How can I handle consent management during Web SDK implementation?"
+        }
+      ]
+    },
+    {
+      "query_id": 56,
+      "topic": "Mobile SDK implementation",
+      "source_question": "I need to integrate the AEP Mobile SDK into our iOS and Android apps - what configuration steps are essential?",
+      "follow_ups": [
+        {
+          "id": 168,
+          "text": "How do I handle cross-platform tracking and user identity?"
+        },
+        {
+          "id": 169,
+          "text": "What are the best practices for minimizing SDK performance overhead?"
+        },
+        {
+          "id": 170,
+          "text": "How can I implement custom tracking and lifecycle events?"
+        }
+      ]
+    },
+    {
+      "query_id": 57,
+      "topic": "Edge Network and datastreams",
+      "source_question": "How do I configure datastreams to route data between different Adobe Experience Platform services efficiently?",
+      "follow_ups": [
+        {
+          "id": 171,
+          "text": "What are the data governance controls available in datastream configuration?"
+        },
+        {
+          "id": 172,
+          "text": "How can I monitor and troubleshoot data flow through Edge Network?"
+        },
+        {
+          "id": 173,
+          "text": "What strategies exist for handling data transformation during routing?"
+        }
+      ]
+    },
+    {
+      "query_id": 58,
+      "topic": "Customer Journey Analytics",
+      "source_question": "What advanced analysis techniques can I use in Customer Journey Analytics to understand complex customer behaviors?",
+      "follow_ups": [
+        {
+          "id": 174,
+          "text": "How do I create cross-channel attribution models?"
+        },
+        {
+          "id": 175,
+          "text": "What machine learning capabilities exist for predictive analytics?"
+        },
+        {
+          "id": 176,
+          "text": "How can I build custom visualizations to represent complex journey data?"
+        }
+      ]
+    },
+    {
+      "query_id": 59,
+      "topic": "B2B edition and account profiles",
+      "source_question": "How can I leverage Adobe's B2B edition to create comprehensive account-level customer profiles?",
+      "follow_ups": [
+        {
+          "id": 177,
+          "text": "What data sources can be integrated into B2B account profiles?"
+        },
+        {
+          "id": 178,
+          "text": "How do I set up account-based marketing workflows?"
+        },
+        {
+          "id": 179,
+          "text": "What reporting capabilities exist for analyzing account-level interactions?"
+        }
+      ]
+    },
+    {
+      "query_id": 60,
+      "topic": "Computed attributes",
+      "source_question": "How can I create a computed attribute that calculates a customer's total lifetime purchase value across all transactions?",
+      "follow_ups": [
+        {
+          "id": 180,
+          "text": "What are the performance implications of using complex computed attributes in my real-time customer profile?"
+        },
+        {
+          "id": 181,
+          "text": "Can I use computed attributes for segmentation in Journey Optimizer?"
+        },
+        {
+          "id": 182,
+          "text": "How do I set up a computed attribute that updates automatically when new transaction data comes in?"
+        }
+      ]
+    },
+    {
+      "query_id": 61,
+      "topic": "Alerts and monitoring",
+      "source_question": "I need to set up alerts for when my data ingestion pipeline fails or experiences significant latency. What's the best way to do this in AEP?",
+      "follow_ups": [
+        {
+          "id": 183,
+          "text": "Can I customize alert notifications to be sent to specific team members or Slack channels?"
+        },
+        {
+          "id": 184,
+          "text": "How can I track the historical performance of my data ingestion jobs?"
+        },
+        {
+          "id": 185,
+          "text": "What specific metrics should I be monitoring for optimal data pipeline health?"
+        }
+      ]
+    },
+    {
+      "query_id": 62,
+      "topic": "API authentication and developer tools",
+      "source_question": "I'm trying to generate the right credentials to access the Adobe Experience Platform APIs. What steps do I need to take?",
+      "follow_ups": [
+        {
+          "id": 186,
+          "text": "How do I manage and rotate my API credentials securely?"
+        },
+        {
+          "id": 187,
+          "text": "What are the different permission levels I can set for API access?"
+        },
+        {
+          "id": 188,
+          "text": "Can I use Postman or similar tools to test my AEP API integrations?"
+        }
+      ]
+    },
+    {
+      "query_id": 63,
+      "topic": "Experience Data Model field groups",
+      "source_question": "I want to extend the standard XDM profile schema with some custom fields for our specific business requirements. How do I do this?",
+      "follow_ups": [
+        {
+          "id": 189,
+          "text": "What are the best practices for creating custom field groups without breaking existing data models?"
+        },
+        {
+          "id": 190,
+          "text": "How can I ensure my custom field groups are compatible with Adobe's standard schemas?"
+        },
+        {
+          "id": 191,
+          "text": "Can I reuse custom field groups across multiple schemas?"
+        }
+      ]
+    },
+    {
+      "query_id": 64,
+      "topic": "Real-Time CDP partner data and prospecting",
+      "source_question": "How can I leverage third-party data segments for audience expansion in Real-Time CDP?",
+      "follow_ups": [
+        {
+          "id": 192,
+          "text": "What are the compliance considerations when using partner data?"
+        },
+        {
+          "id": 193,
+          "text": "How do I evaluate the quality and match rates of third-party audience segments?"
+        },
+        {
+          "id": 194,
+          "text": "Can I create lookalike audiences based on partner data insights?"
+        }
+      ]
+    },
+    {
+      "query_id": 65,
+      "topic": "Federated Audience Composition",
+      "source_question": "What is Federated Audience Composition, and how can it help me create more sophisticated audience segments?",
+      "follow_ups": [
+        {
+          "id": 195,
+          "text": "How does Federated Audience Composition differ from traditional audience segmentation?"
+        },
+        {
+          "id": 196,
+          "text": "Can I use machine learning models in my audience composition process?"
+        },
+        {
+          "id": 197,
+          "text": "What are the performance limitations of complex federated audience rules?"
+        }
+      ]
+    },
+    {
+      "query_id": 66,
+      "topic": "Data Distiller and derived datasets",
+      "source_question": "I want to create a derived dataset that aggregates customer behavior data without copying the entire raw dataset. How can Data Distiller help me?",
+      "follow_ups": [
+        {
+          "id": 198,
+          "text": "What are the storage and compute costs associated with creating derived datasets?"
+        },
+        {
+          "id": 199,
+          "text": "Can I use derived datasets for predictive analytics?"
+        },
+        {
+          "id": 200,
+          "text": "How do I ensure data lineage and auditability with derived datasets?"
+        }
+      ]
+    },
+    {
+      "query_id": 67,
+      "topic": "Observability Insights",
+      "source_question": "How can I use Observability Insights to get a comprehensive view of my platform's data and workflow performance?",
+      "follow_ups": [
+        {
+          "id": 201,
+          "text": "What specific metrics and KPIs does Observability Insights track?"
+        },
+        {
+          "id": 202,
+          "text": "Can I set up custom dashboards for my observability metrics?"
+        },
+        {
+          "id": 203,
+          "text": "How does Observability Insights help with troubleshooting data ingestion issues?"
+        }
+      ]
+    },
+    {
+      "query_id": 68,
+      "topic": "Catalog Service and data discovery",
+      "source_question": "I'm looking for an efficient way to discover and inventory all the datasets in my Experience Platform instance. How can Catalog Service help me?",
+      "follow_ups": [
+        {
+          "id": 204,
+          "text": "Can I use Catalog Service to track data lineage and transformations?"
+        },
+        {
+          "id": 205,
+          "text": "How do I set up metadata tags for better data discovery?"
+        },
+        {
+          "id": 206,
+          "text": "What API methods are available for querying the Catalog Service?"
+        }
+      ]
+    },
+    {
+      "query_id": 69,
+      "topic": "Flow Service API and source connections",
+      "source_question": "I need to create an automated data ingestion connection from our Salesforce CRM to Adobe Experience Platform. How do I use the Flow Service API?",
+      "follow_ups": [
+        {
+          "id": 207,
+          "text": "What are the authentication methods supported for Salesforce source connections?"
+        },
+        {
+          "id": 208,
+          "text": "How can I monitor the health and performance of my source data flows?"
+        },
+        {
+          "id": 209,
+          "text": "Can I set up incremental data updates to minimize data transfer overhead?"
+        }
+      ]
+    },
+    {
+      "query_id": 70,
+      "topic": "XDM schemas and data modeling",
+      "source_question": "How do I create a custom XDM schema for our retail customer data that includes both online and in-store purchase information?",
+      "follow_ups": [
+        {
+          "id": 210,
+          "text": "What are the best practices for creating field groups that can be reused across multiple schemas?"
+        },
+        {
+          "id": 211,
+          "text": "How can I enforce data validation rules within my custom schema?"
+        },
+        {
+          "id": 212,
+          "text": "Can I see a preview of how my schema will look in the data lake before fully implementing it?"
+        }
+      ]
+    },
+    {
+      "query_id": 71,
+      "topic": "Data ingestion (batch and streaming)",
+      "source_question": "What's the most efficient way to ingest our daily sales data from multiple sources into Adobe Experience Platform?",
+      "follow_ups": [
+        {
+          "id": 213,
+          "text": "How can I monitor the data ingestion process and check for any errors?"
+        },
+        {
+          "id": 214,
+          "text": "What are the performance differences between batch and streaming ingestion?"
+        },
+        {
+          "id": 215,
+          "text": "How do I set up data transformation during the ingestion process?"
+        }
+      ]
+    },
+    {
+      "query_id": 72,
+      "topic": "Source connectors (cloud storage, CRM, databases)",
+      "source_question": "I need to set up a connector from our Salesforce CRM to pull customer interaction data into Platform. What steps should I follow?",
+      "follow_ups": [
+        {
+          "id": 216,
+          "text": "How do I configure field mappings when importing data from Salesforce?"
+        },
+        {
+          "id": 217,
+          "text": "What authentication methods are supported for Salesforce connectors?"
+        },
+        {
+          "id": 218,
+          "text": "Can I set up incremental data pulls to avoid duplicating existing data?"
+        }
+      ]
+    },
+    {
+      "query_id": 73,
+      "topic": "Identity Service and identity namespaces",
+      "source_question": "How can I create a custom identity namespace for our unique customer identifier that isn't covered by standard namespaces?",
+      "follow_ups": [
+        {
+          "id": 219,
+          "text": "What are the performance implications of using multiple identity namespaces?"
+        },
+        {
+          "id": 220,
+          "text": "How do I configure cross-device identity stitching?"
+        },
+        {
+          "id": 221,
+          "text": "Can I see a visualization of how identities are being linked across my datasets?"
+        }
+      ]
+    },
+    {
+      "query_id": 74,
+      "topic": "Real-Time Customer Profile",
+      "source_question": "How do I configure Real-Time Customer Profile to ensure our customer data is always up-to-date across all our channels?",
+      "follow_ups": [
+        {
+          "id": 222,
+          "text": "What is the maximum number of profile fragments I can merge?"
+        },
+        {
+          "id": 223,
+          "text": "How can I optimize profile performance for large datasets?"
+        },
+        {
+          "id": 224,
+          "text": "What metrics can I use to monitor my Real-Time Customer Profile configuration?"
+        }
+      ]
+    },
+    {
+      "query_id": 75,
+      "topic": "Merge policies and profile merging",
+      "source_question": "We have multiple data sources with potentially conflicting customer information. How can I create a merge policy that prioritizes our most recent and accurate data?",
+      "follow_ups": [
+        {
+          "id": 225,
+          "text": "How do I test my merge policy to ensure it's working as expected?"
+        },
+        {
+          "id": 226,
+          "text": "Can I create different merge policies for different types of data sources?"
+        },
+        {
+          "id": 227,
+          "text": "What are the best practices for resolving identity conflicts?"
+        }
+      ]
+    },
+    {
+      "query_id": 76,
+      "topic": "Segmentation Service and audience creation",
+      "source_question": "I want to create a segment of high-value customers who have made purchases over $500 in the last 30 days. How can I do this in Platform?",
+      "follow_ups": [
+        {
+          "id": 228,
+          "text": "How can I estimate the size of my segment before activation?"
+        },
+        {
+          "id": 229,
+          "text": "What are the limits on the complexity of segment definitions?"
+        },
+        {
+          "id": 230,
+          "text": "How quickly can segments be updated and refreshed?"
+        }
+      ]
+    },
+    {
+      "query_id": 77,
+      "topic": "Segment Builder and rule-based segments",
+      "source_question": "Can you walk me through how to build a complex segment that combines multiple conditions across different experience events?",
+      "follow_ups": [
+        {
+          "id": 231,
+          "text": "How can I use sequential event logic in my segment definition?"
+        },
+        {
+          "id": 232,
+          "text": "What are the performance considerations for complex segment rules?"
+        },
+        {
+          "id": 233,
+          "text": "Can I preview individual profiles that match my segment definition?"
+        }
+      ]
+    },
+    {
+      "query_id": 78,
+      "topic": "Streaming segmentation and edge segmentation",
+      "source_question": "We need real-time audience updates for our personalization engine. How can streaming segmentation help us achieve this?",
+      "follow_ups": [
+        {
+          "id": 234,
+          "text": "What are the latency differences between streaming and batch segmentation?"
+        },
+        {
+          "id": 235,
+          "text": "How many streaming segments can I create in a single sandbox?"
+        },
+        {
+          "id": 236,
+          "text": "What additional infrastructure do I need to support streaming segmentation?"
+        }
+      ]
+    },
+    {
+      "query_id": 79,
+      "topic": "Destinations and audience activation",
+      "source_question": "I want to activate our high-value customer segment to multiple marketing platforms. What destinations are available in Adobe Experience Platform?",
+      "follow_ups": [
+        {
+          "id": 237,
+          "text": "How do I configure consent and data governance for my destination activations?"
+        },
+        {
+          "id": 238,
+          "text": "What are the differences between streaming and batch destination exports?"
+        },
+        {
+          "id": 239,
+          "text": "Can I set up real-time audience synchronization with my marketing platforms?"
+        }
+      ]
+    },
+    {
+      "query_id": 80,
+      "topic": "Data governance and DULE labels",
+      "source_question": "How can I restrict certain sensitive customer data from being exported to third-party destinations?",
+      "follow_ups": [
+        {
+          "id": 240,
+          "text": "What specific DULE labels should I use for different types of personally identifiable information?"
+        },
+        {
+          "id": 241,
+          "text": "Can I create custom governance policies to automatically block data sharing?"
+        },
+        {
+          "id": 242,
+          "text": "How do I audit and track which datasets have specific data usage restrictions?"
+        }
+      ]
+    },
+    {
+      "query_id": 81,
+      "topic": "Privacy and consent management",
+      "source_question": "I need to implement GDPR compliance for our customer data in Adobe Experience Platform. Where do I start?",
+      "follow_ups": [
+        {
+          "id": 243,
+          "text": "How can I configure consent collection across different Adobe Experience Cloud applications?"
+        },
+        {
+          "id": 244,
+          "text": "What are the best practices for managing customer consent preferences?"
+        },
+        {
+          "id": 245,
+          "text": "Can I automatically delete customer data based on their consent withdrawal?"
+        }
+      ]
+    },
+    {
+      "query_id": 82,
+      "topic": "Datasets and data management",
+      "source_question": "What's the most efficient way to batch import large customer transaction datasets into Platform?",
+      "follow_ups": [
+        {
+          "id": 246,
+          "text": "How can I validate and check the quality of my imported datasets?"
+        },
+        {
+          "id": 247,
+          "text": "What are the best practices for handling incremental dataset updates?"
+        },
+        {
+          "id": 248,
+          "text": "Can I set up automatic archiving or expiration for older datasets?"
+        }
+      ]
+    },
+    {
+      "query_id": 83,
+      "topic": "Data Prep and mapping functions",
+      "source_question": "I'm struggling to transform complex nested JSON data during ingestion. What mapping techniques can help me?",
+      "follow_ups": [
+        {
+          "id": 249,
+          "text": "How do I handle data type conversions during mapping?"
+        },
+        {
+          "id": 250,
+          "text": "Are there any recommended functions for cleaning and standardizing customer data?"
+        },
+        {
+          "id": 251,
+          "text": "Can I create custom mapping functions for complex transformations?"
+        }
+      ]
+    },
+    {
+      "query_id": 84,
+      "topic": "Query Service and SQL analytics",
+      "source_question": "How can I perform complex customer segmentation analysis using SQL in Adobe Experience Platform?",
+      "follow_ups": [
+        {
+          "id": 252,
+          "text": "What are the performance optimization techniques for large dataset queries?"
+        },
+        {
+          "id": 253,
+          "text": "Can I schedule and automate recurring SQL queries?"
+        },
+        {
+          "id": 254,
+          "text": "How do I connect external BI tools to Query Service?"
+        }
+      ]
+    },
+    {
+      "query_id": 85,
+      "topic": "Dataflows and monitoring",
+      "source_question": "What's the best way to track and troubleshoot data ingestion issues in real-time?",
+      "follow_ups": [
+        {
+          "id": 255,
+          "text": "How can I set up alerts for failed dataflows?"
+        },
+        {
+          "id": 256,
+          "text": "What metrics should I monitor to ensure data pipeline health?"
+        },
+        {
+          "id": 257,
+          "text": "Can I create custom dashboards for dataflow performance?"
+        }
+      ]
+    },
+    {
+      "query_id": 86,
+      "topic": "Sandboxes and environment management",
+      "source_question": "How do I manage multiple development environments for different teams in Adobe Experience Platform?",
+      "follow_ups": [
+        {
+          "id": 258,
+          "text": "What are the best practices for sandbox lifecycle management?"
+        },
+        {
+          "id": 259,
+          "text": "How can I clone and reset sandboxes without losing configuration?"
+        },
+        {
+          "id": 260,
+          "text": "Can I control cross-sandbox data access and permissions?"
+        }
+      ]
+    },
+    {
+      "query_id": 87,
+      "topic": "Access control and permissions",
+      "source_question": "I need to implement role-based access control for our marketing and analytics teams. What's the recommended approach?",
+      "follow_ups": [
+        {
+          "id": 261,
+          "text": "How granular can I make permission settings in Platform?"
+        },
+        {
+          "id": 262,
+          "text": "Can I create custom roles with specific dataset access?"
+        },
+        {
+          "id": 263,
+          "text": "What audit logs are available to track user access and actions?"
+        }
+      ]
+    },
+    {
+      "query_id": 88,
+      "topic": "Adobe Journey Optimizer campaigns",
+      "source_question": "What strategies can I use to personalize email campaigns at scale using Journey Optimizer?",
+      "follow_ups": [
+        {
+          "id": 264,
+          "text": "How do I leverage real-time customer profile data in campaign creation?"
+        },
+        {
+          "id": 265,
+          "text": "What A/B testing capabilities are available in Journey Optimizer?"
+        },
+        {
+          "id": 266,
+          "text": "Can I track and measure campaign performance across multiple channels?"
+        }
+      ]
+    },
+    {
+      "query_id": 89,
+      "topic": "Journey Optimizer journeys and orchestration",
+      "source_question": "How can I create a complex, multi-step customer journey with conditional logic and personalization?",
+      "follow_ups": [
+        {
+          "id": 267,
+          "text": "What are the best practices for managing customer context and decision points?"
+        },
+        {
+          "id": 268,
+          "text": "How do I handle real-time audience segmentation during journey execution?"
+        },
+        {
+          "id": 269,
+          "text": "Can I integrate external systems and custom actions into journey workflows?"
+        }
+      ]
+    },
+    {
+      "query_id": 90,
+      "topic": "Experience Platform Web SDK",
+      "source_question": "How do I set up the Platform Web SDK to collect web interactions and send data to Adobe Experience Platform?",
+      "follow_ups": [
+        {
+          "id": 270,
+          "text": "What are the key configuration parameters I need to specify in the Web SDK implementation?"
+        },
+        {
+          "id": 271,
+          "text": "How can I validate that my web data is being correctly collected and sent to Platform?"
+        },
+        {
+          "id": 272,
+          "text": "Can you show me an example of how to map custom web events to XDM schema fields?"
+        }
+      ]
+    },
+    {
+      "query_id": 91,
+      "topic": "Machine Learning Models",
+      "source_question": "Is it possible to use Adobe's Data Science Workspace to build custom machine learning models that predict customer behavior?",
+      "follow_ups": [
+        {
+          "id": 273,
+          "text": "What kind of machine learning algorithms are supported in Data Science Workspace?"
+        },
+        {
+          "id": 274,
+          "text": "How do I integrate a trained model's predictions back into Real-Time Customer Profile?"
+        },
+        {
+          "id": 275,
+          "text": "What are the steps to deploy a machine learning model for scoring customer data?"
+        }
+      ]
+    },
+    {
+      "query_id": 92,
+      "topic": "Edge Network and Data Collection",
+      "source_question": "How does the Adobe Experience Platform Edge Network help optimize data collection and routing across different Adobe services?",
+      "follow_ups": [
+        {
+          "id": 276,
+          "text": "What are the performance benefits of using the Edge Network compared to traditional data collection?"
+        },
+        {
+          "id": 277,
+          "text": "Can you explain how data is processed and forwarded in real-time through the Edge Network?"
+        },
+        {
+          "id": 278,
+          "text": "What configuration options exist for controlling data flow and service routing?"
+        }
+      ]
+    },
+    {
+      "query_id": 93,
+      "topic": "Customer AI",
+      "source_question": "How can Customer AI help me predict customer churn and likelihood to convert?",
+      "follow_ups": [
+        {
+          "id": 279,
+          "text": "What types of input data are recommended for training a Customer AI model?"
+        },
+        {
+          "id": 280,
+          "text": "How do I interpret and act on the propensity scores generated by Customer AI?"
+        },
+        {
+          "id": 281,
+          "text": "Can Customer AI models be customized for specific industry or business use cases?"
+        }
+      ]
+    },
+    {
+      "query_id": 94,
+      "topic": "API Authentication",
+      "source_question": "What's the process for generating authentication credentials to access Adobe Experience Platform APIs?",
+      "follow_ups": [
+        {
+          "id": 282,
+          "text": "How do I create a technical account and generate JWT tokens for API access?"
+        },
+        {
+          "id": 283,
+          "text": "What are the different permission levels and scopes available for API credentials?"
+        },
+        {
+          "id": 284,
+          "text": "Can you explain the steps to rotate API credentials securely?"
+        }
+      ]
+    },
+    {
+      "query_id": 95,
+      "topic": "B2B Profile and Account Enrichment",
+      "source_question": "How does Adobe Experience Platform support B2B data modeling and profile enrichment?",
+      "follow_ups": [
+        {
+          "id": 285,
+          "text": "What are the key differences between B2B and B2C data schemas in Platform?"
+        },
+        {
+          "id": 286,
+          "text": "How can I link individual contacts to their associated company accounts?"
+        },
+        {
+          "id": 287,
+          "text": "What methods exist for enriching B2B profiles with additional firmographic data?"
+        }
+      ]
+    },
+    {
+      "query_id": 96,
+      "topic": "Computed Attributes",
+      "source_question": "Can I create derived or calculated attributes dynamically in Real-Time Customer Profile?",
+      "follow_ups": [
+        {
+          "id": 288,
+          "text": "What types of calculations and transformations are supported by computed attributes?"
+        },
+        {
+          "id": 289,
+          "text": "How do computed attributes impact query performance and profile update latency?"
+        },
+        {
+          "id": 290,
+          "text": "What are best practices for designing complex computed attribute rules?"
+        }
+      ]
+    },
+    {
+      "query_id": 97,
+      "topic": "External Audience Sharing",
+      "source_question": "How can I share Adobe Experience Platform segments with external marketing platforms and advertising networks?",
+      "follow_ups": [
+        {
+          "id": 291,
+          "text": "What destination types are available for audience activation?"
+        },
+        {
+          "id": 292,
+          "text": "How does consent and data governance impact audience sharing?"
+        },
+        {
+          "id": 293,
+          "text": "Can I set up real-time audience synchronization with third-party platforms?"
+        }
+      ]
+    },
+    {
+      "query_id": 98,
+      "topic": "Event-Driven Workflows",
+      "source_question": "What options exist in Adobe Experience Platform for creating event-triggered data processing and marketing workflows?",
+      "follow_ups": [
+        {
+          "id": 294,
+          "text": "How can I set up real-time data transformation using Adobe's workflow orchestration tools?"
+        },
+        {
+          "id": 295,
+          "text": "What are the differences between batch and streaming workflow processing?"
+        },
+        {
+          "id": 296,
+          "text": "Can I create complex, multi-step workflows with conditional logic?"
+        }
+      ]
+    },
+    {
+      "query_id": 99,
+      "topic": "Data Lake Exploration",
+      "source_question": "How can I explore and analyze large datasets stored in the Adobe Experience Platform data lake?",
+      "follow_ups": [
+        {
+          "id": 297,
+          "text": "What tools are available for running complex SQL queries on Platform data?"
+        },
+        {
+          "id": 298,
+          "text": "How do I optimize query performance when working with large datasets?"
+        },
+        {
+          "id": 299,
+          "text": "Can I export query results to external business intelligence tools?"
+        }
+      ]
+    }
+  ]
+}

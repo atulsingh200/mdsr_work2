@@ -1,0 +1,366 @@
+================================================================================
+v6 TEST METRICS ANALYSIS — Sentence-based MLP Fine-tune
+================================================================================
+
+Checkpoint: classification/checkpoints/v6_sent_mlp_finetune/
+Data:       classification/data_v6_sent/
+Model:      2x BGE-small-en-v1.5 (untied) + MLP [512,128] head
+Training:   3 epochs, lr_encoder=2e-5, lr_head=1e-3, batch=32
+
+--------------------------------------------------------------------------------
+1. OVERALL TEST METRICS
+--------------------------------------------------------------------------------
+  Loss:     1.4861
+  Accuracy: 0.8226
+  F1:       0.8172
+  N:        6,004
+
+--------------------------------------------------------------------------------
+2. ADJACENT TIER-PAIR ACCURACY (14 pairs, gap=1)
+--------------------------------------------------------------------------------
+  Pair       Train    Test_n     Acc
+  ------     -----    ------   ------
+  T1-T2        112         2   1.0000
+  T2-T3        344         5   1.0000
+  T3-T4      1,333        20   0.7500
+  T4-T5      1,500        40   0.5000
+  T5-T6      1,500       320   0.9625
+  T6-T7      1,500        96   0.8646
+  T7-T8      1,500        54   0.4074  *worst
+  T8-T9      1,500       108   0.9074
+  T9-T10       931        12   0.8333
+  T10-T11    1,500        24   0.5417
+  T11-T12    1,500        48   0.8958
+  T12-T13    1,056        16   0.5625
+  T13-T14      160         4   0.5000
+  T14-T15      555        14   0.7857
+
+  Adjacent micro accuracy:  0.8401
+  Adjacent macro accuracy:  0.7508
+
+  Notes:
+    - T1-T2 and T2-T3 are perfect but have very small test sets (2 and 5)
+    - T7-T8 is worst at 0.41 despite 1,500 train samples
+    - T4-T5, T10-T11, T12-T13, T13-T14 are near random (0.50-0.56)
+    - Strong pairs: T5-T6 (0.96), T8-T9 (0.91), T11-T12 (0.90)
+
+--------------------------------------------------------------------------------
+3. NON-ADJACENT TIER-PAIR ACCURACY (91 pairs)
+--------------------------------------------------------------------------------
+  Pair       Train    Test_n     Acc    Gap
+  ------     -----    ------   ------   ---
+  T1-T3        602        10   1.0000     2
+  T1-T4        434         8   1.0000     3
+  T1-T5      1,176        20   1.0000     4
+  T1-T6      1,500        64   1.0000     5
+  T1-T7        308         6   1.0000     6
+  T1-T8      1,500        36   1.0000     7
+  T1-T9        686        12   1.0000     8
+  T1-T10       266         4   1.0000     9
+  T1-T11     1,414        24   1.0000    10
+  T1-T12       462         8   1.0000    11
+  T1-T13       448         8   1.0000    12
+  T1-T14        70         2   1.0000    13
+  T1-T15     1,500        28   1.0000    14
+  T2-T4        248         4   1.0000     2
+  T2-T5        672        10   1.0000     3
+  T2-T6      1,500        32   1.0000     4
+  T2-T7        176         3   1.0000     5
+  T2-T8      1,112        18   1.0000     6
+  T2-T9        392         6   1.0000     7
+  T2-T10       152         2   1.0000     8
+  T2-T11       808        12   1.0000     9
+  T2-T12       264         4   1.0000    10
+  T2-T13       256         4   1.0000    11
+  T2-T14        40         1   1.0000    12
+  T2-T15       888        14   1.0000    13
+  T3-T5      1,500        50   0.6800     2
+  T3-T6      1,500       160   0.8000     3
+  T3-T7        946        15   0.8667     4
+  T3-T8      1,500        90   0.8000     5
+  T3-T9      1,500        30   0.8000     6
+  T3-T10       817        10   0.9000     7
+  T3-T11     1,500        60   0.8500     8
+  T3-T12     1,419        20   0.9500     9
+  T3-T13     1,376        20   0.9500    10
+  T3-T14       215         5   0.8000    11
+  T3-T15     1,500        70   0.9286    12
+  T4-T6      1,500       128   0.7500     2
+  T4-T7        682        12   0.9167     3
+  T4-T8      1,500        72   0.9028     4
+  T4-T9      1,500        24   0.9583     5
+  T4-T10       589         8   1.0000     6
+  T4-T11     1,500        48   0.7500     7
+  T4-T12     1,023        16   1.0000     8
+  T4-T13       992        16   0.9375     9
+  T4-T14       155         4   1.0000    10
+  T4-T15     1,500        56   0.8750    11
+  T5-T7      1,500        30   1.0000     2
+  T5-T8      1,500       180   0.9944     3
+  T5-T9      1,500        60   1.0000     4
+  T5-T10     1,500        20   1.0000     5
+  T5-T11     1,500       120   0.8917     6
+  T5-T12     1,500        40   1.0000     7
+  T5-T13     1,500        40   1.0000     8
+  T5-T14       420        10   1.0000     9
+  T5-T15     1,500       140   0.9214    10
+  T6-T8      1,500       576   0.8490     2
+  T6-T9      1,500       192   0.8802     3
+  T6-T10     1,500        64   0.9062     4
+  T6-T11     1,500       384   0.6823     5
+  T6-T12     1,500       128   0.9375     6
+  T6-T13     1,500       128   0.9062     7
+  T6-T14     1,300        32   0.6250     8
+  T6-T15     1,500       448   0.8259     9
+  T7-T9      1,078        18   0.6111     2
+  T7-T10       418         6   0.8333     3
+  T7-T11     1,500        36   0.4167     4
+  T7-T12       726        12   0.5000     5
+  T7-T13       704        12   0.5833     6
+  T7-T14       110         3   0.0000     7
+  T7-T15     1,500        42   0.7381     8
+  T8-T10     1,500        36   0.9167     2
+  T8-T11     1,500       216   0.6389     3
+  T8-T12     1,500        72   0.8056     4
+  T8-T13     1,500        72   0.6667     5
+  T8-T14       695        18   0.1111     6
+  T8-T15     1,500       252   0.7659     7
+  T9-T11     1,500        72   0.6667     2
+  T9-T12     1,500        24   0.7917     3
+  T9-T13     1,500        24   0.7500     4
+  T9-T14       245         6   0.0000     5
+  T9-T15     1,500        84   0.7143     6
+  T10-T12      627         8   0.7500     2
+  T10-T13      608         8   0.6250     3
+  T10-T14       95         2   0.0000     4
+  T10-T15    1,500        28   0.7143     5
+  T11-T13    1,500        48   0.8333     2
+  T11-T14      505        12   0.3333     3
+  T11-T15    1,500       168   0.7679     4
+  T12-T14      165         4   0.2500     2
+  T12-T15    1,500        56   0.6964     3
+  T13-T15    1,500        56   0.7500     2
+
+  Non-adjacent micro accuracy:  0.8201
+  Non-adjacent macro accuracy:  0.8249
+
+--------------------------------------------------------------------------------
+4. ACCURACY BY TIER GAP
+--------------------------------------------------------------------------------
+  Gap   #Pairs   Test_n   Micro    Macro
+  ---   ------   ------   ------   ------
+    1       14      763   0.8401   0.7508
+    2       13    1,040   0.8115   0.7736
+    3       12      884   0.8088   0.7925
+    4       11      565   0.8283   0.7651
+    5       10      703   0.7368   0.7322
+    6        9      424   0.8302   0.7820
+    7        8      523   0.8337   0.7903
+    8        7      204   0.8431   0.8876
+    9        6      510   0.8431   0.9522
+   10        5      192   0.9375   0.9743
+   11        4       73   0.8904   0.9187
+   12        3       79   0.9367   0.9762
+   13        2       16   1.0000   1.0000
+   14        1       28   1.0000   1.0000
+
+  Trend: Accuracy generally increases with tier gap — the model finds it
+  easier to distinguish tiers that are far apart in the dependency hierarchy.
+  Gap 5 is an anomaly (0.73 micro) driven by T6-T11 (0.68) and T7-T12 (0.50).
+  Gaps 13-14 are perfect (all T1/T2 pairs — trivially separable).
+
+--------------------------------------------------------------------------------
+5. MICRO & MACRO ACCURACY SUMMARY
+--------------------------------------------------------------------------------
+                     Micro    Macro    #Pairs   #Samples
+                     ------   ------   ------   --------
+  Adjacent           0.8401   0.7508       14        763
+  Non-adjacent       0.8201   0.8249       91      5,241
+  Overall            0.8226   0.8150      105      6,004
+
+  Notes:
+    - Adjacent micro (0.84) > non-adjacent micro (0.82) because adjacent
+      test set is dominated by easy pairs (T5-T6 with 320 samples at 0.96)
+    - Adjacent macro (0.75) < non-adjacent macro (0.82) because several
+      adjacent pairs are near random, pulling the unweighted average down
+    - The gap between micro and macro (0.82 vs 0.81 overall) is small,
+      indicating performance is fairly consistent across pairs by sample count
+
+--------------------------------------------------------------------------------
+6. PER-TIER ACCURACY (aggregated across all pairs involving each tier)
+--------------------------------------------------------------------------------
+  Tier   Test_n    Acc     Docs   Segments
+  ----   ------   ------   ----   --------
+  T1        232   1.0000      5         18
+  T2        117   1.0000      1         10
+  T3        565   0.8283      7         53
+  T4        456   0.8114      6         39
+  T5      1,080   0.9324     16        104
+  T6      2,752   0.8412     41        299
+  T7        345   0.7043      6         28
+  T8      1,800   0.8061     30        175
+  T9        672   0.8304     13         61
+  T10       232   0.8319      4         23
+  T11     1,272   0.7248     18        125
+  T12       456   0.8509      5         41
+  T13       456   0.8180     10         40
+  T14       117   0.5214      1          7
+  T15     1,456   0.8104     13        139
+
+  Best:  T1 (1.00), T2 (1.00), T5 (0.93) — foundational tiers, clearly distinct
+  Worst: T14 (0.52), T7 (0.70), T11 (0.72) — confused with neighboring tiers
+
+  T14 is catastrophic (0.52, barely above random) — only 1 doc and 7 segments
+  T7 struggles despite 6 docs — its content overlaps heavily with T8 and T11
+  T11 has 18 docs but still underperforms — confused with T6, T8, and T15
+
+--------------------------------------------------------------------------------
+7. BOTTOM 10 TIER-PAIRS
+--------------------------------------------------------------------------------
+  Pair       Acc    Test_n   Train   Gap   Adj?
+  ------   ------   ------   -----   ---   ----
+  T7-T14   0.0000        3     110     7
+  T9-T14   0.0000        6     245     5
+  T10-T14  0.0000        2      95     4
+  T8-T14   0.1111       18     695     6
+  T12-T14  0.2500        4     165     2
+  T11-T14  0.3333       12     505     3
+  T7-T8    0.4074       54   1,500     1   ADJ
+  T7-T11   0.4167       36   1,500     4
+  T4-T5    0.5000       40   1,500     1   ADJ
+  T7-T12   0.5000       12     726     5
+
+  6 of the bottom 10 involve T14 (1 doc, 7 segments) — structural data limit
+  T7-T8 is worst non-T14 pair despite full 1,500 train samples
+  T7 appears 3 times in bottom 10 — systematically problematic tier
+
+--------------------------------------------------------------------------------
+8. PAIRS AT OR NEAR RANDOM (accuracy <= 0.55)
+--------------------------------------------------------------------------------
+  Pair       Acc    Test_n   Train   Gap   Adj?
+  ------   ------   ------   -----   ---   ----
+  T7-T14   0.0000        3     110     7
+  T9-T14   0.0000        6     245     5
+  T10-T14  0.0000        2      95     4
+  T8-T14   0.1111       18     695     6
+  T12-T14  0.2500        4     165     2
+  T11-T14  0.3333       12     505     3
+  T7-T8    0.4074       54   1,500     1   ADJ
+  T7-T11   0.4167       36   1,500     4
+  T4-T5    0.5000       40   1,500     1   ADJ
+  T7-T12   0.5000       12     726     5
+  T13-T14  0.5000        4     160     1   ADJ
+  T10-T11  0.5417       24   1,500     1   ADJ
+
+  12 pairs at or near random. Two categories:
+    (a) T14-involved (6 pairs): data-starved, only 1 doc — structural limit
+    (b) Non-T14 (6 pairs): T7-T8, T7-T11, T4-T5, T7-T12, T10-T11 have
+        1,500 train samples but still fail — genuine content overlap between
+        these tiers makes them hard to distinguish
+
+  4 of 14 adjacent pairs are at/near random (29%)
+
+--------------------------------------------------------------------------------
+9. TRAINING SAMPLE COUNT vs TEST ACCURACY CORRELATION
+--------------------------------------------------------------------------------
+  Spearman rank correlation (rho):
+    All 105 pairs:    rho = -0.0967
+    Adjacent 14 only: rho = -0.1297
+
+  Interpretation:
+    Essentially zero correlation — more training samples do NOT reliably
+    predict better test accuracy. This confirms that the bottleneck is
+    content distinguishability, not data volume. Pairs like T7-T8 have
+    max training data (1,500) but perform worst (0.41), while T1-T14 has
+    minimal data (70 train) but achieves perfect accuracy.
+
+    The negative sign is driven by T14 pairs: they have low train counts
+    AND low accuracy, but many high-train-count pairs also have low accuracy
+    (T7-T8, T4-T5, T10-T11), creating noise in the correlation.
+
+--------------------------------------------------------------------------------
+10. KEY FINDINGS
+--------------------------------------------------------------------------------
+  1. OVERALL: 82.3% accuracy, 81.5% macro — solid but with clear weak spots
+
+  2. MONOTONIC GAP TREND: Accuracy increases with tier gap (0.75 at gap=1
+     to 1.00 at gap=14), confirming the model learns real ordinal signal
+
+  3. T14 IS A BLACK HOLE: 0.52 per-tier accuracy, 6 of bottom 10 pairs
+     involve T14. With 1 doc and 7 segments, it's statistically unlearnable.
+     Removing T14 pairs would boost overall macro significantly.
+
+  4. T7 IS SYSTEMATICALLY CONFUSED: 0.70 per-tier accuracy despite 6 docs.
+     T7 content (channel configuration) overlaps with T8 (messaging) and
+     T11 (reporting/monitoring). T7-T8 at 0.41 is the worst non-T14 pair.
+
+  5. TRAINING DATA DOESN'T FIX CONTENT OVERLAP: Zero correlation between
+     train count and test accuracy. The hard pairs (T7-T8, T4-T5, T10-T11)
+     have maximum training data but remain near random.
+
+  6. ADJACENT PAIRS ARE HARDEST: Macro 0.75 for adjacent vs 0.82 for
+     non-adjacent. 4 of 14 adjacent pairs are at/near random.
+
+  7. T1 AND T2 ARE TRIVIALLY SEPARABLE: Perfect 1.00 accuracy across all
+     pairs — foundational/introductory content is lexically distinct.
+
+  8. WHACK-A-MOLE PATTERN: Within the T6-T11 cluster, improving one pair
+     tends to degrade another across training runs, suggesting shared
+     vocabulary forces the model into trade-offs in embedding space.
+
+--------------------------------------------------------------------------------
+11. v5 vs v6 COMPARISON — ADJACENT TIER-PAIRS
+--------------------------------------------------------------------------------
+  v5: MLP fine-tune on chunk-based data (v4), adjacent pairs only, cap 3,000
+      train=29,202  val=1,490  test=1,490
+  v6: MLP fine-tune on sentence-based data, all 105 pairs, cap 1,500
+      train=110,775  val=6,004  test=6,004
+
+  Adjacent tier-pair accuracy:
+    Pair       v5 Acc (n)       v6 Acc (n)       Delta
+    ------     ----------       ----------       ------
+    T1-T2      0.8333 (  6)     1.0000 (  2)     +0.167
+    T2-T3      1.0000 ( 10)     1.0000 (  5)      0.000
+    T3-T4      0.9750 ( 40)     0.7500 ( 20)     -0.225
+    T4-T5      1.0000 ( 88)     0.5000 ( 40)     -0.500
+    T5-T6      0.8555 (616)     0.9625 (320)     +0.107
+    T6-T7      0.5119 (168)     0.8646 ( 96)     +0.353
+    T7-T8      0.5588 (102)     0.4074 ( 54)     -0.151
+    T8-T9      0.6569 (204)     0.9074 (108)     +0.251
+    T9-T10     0.7222 ( 36)     0.8333 ( 12)     +0.111
+    T10-T11    0.8182 ( 66)     0.5417 ( 24)     -0.277
+    T11-T12    0.9318 ( 88)     0.8958 ( 48)     -0.036
+    T12-T13    0.6875 ( 32)     0.5625 ( 16)     -0.125
+    T13-T14    0.7500 (  8)     0.5000 (  4)     -0.250
+    T14-T15    0.9231 ( 26)     0.7857 ( 14)     -0.137
+
+  Aggregate:
+                        v5         v6        Delta
+                      ------     ------     ------
+    Adj micro         0.7785     0.8401     +0.062
+    Adj macro         0.8017     0.7508     -0.051
+    Overall acc       0.7785     0.8226     +0.044
+    Overall F1        0.7767     0.8172     +0.041
+
+  Analysis:
+    v6 IMPROVES micro (+6.2pp) but DEGRADES macro (-5.1pp).
+
+    Micro improves because v6 does much better on high-volume pairs:
+      T5-T6 (+10.7pp, n=320), T6-T7 (+35.3pp), T8-T9 (+25.1pp)
+    These large test-set pairs dominate the weighted average.
+
+    Macro degrades because v6 loses several pairs badly:
+      T4-T5 dropped from 1.00 to 0.50 (-50pp)
+      T10-T11 dropped from 0.82 to 0.54 (-28pp)
+      T3-T4 dropped from 0.98 to 0.75 (-23pp)
+      T13-T14 dropped from 0.75 to 0.50 (-25pp)
+
+    Root cause: v5 trained on adjacent pairs only (each pair ~10% of data).
+    v6 trains on all 105 pairs — each adjacent pair is only ~1.4% of data.
+    The all-pairs training teaches coarse ordinal signal well but dilutes
+    fine-grained adjacent discrimination.
+
+    The whack-a-mole pattern is visible across versions:
+      v5 strong, v6 weak: T4-T5, T3-T4, T10-T11, T13-T14
+      v5 weak, v6 strong: T6-T7, T8-T9, T5-T6
+    Different training distributions cause different pairs to win/lose.

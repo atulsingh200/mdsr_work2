@@ -1,0 +1,28 @@
+{
+  "dataset": "aep_causal",
+  "checkpoint": "/mnt/localssd/internship-causal-embedding-lorentz/lorentz_enc_results/aep_causal/lorentz_best.pt",
+  "backbone": "google-bert/bert-base-uncased",
+  "space_dim": 768,
+  "time_dim": 20,
+  "n_test_pairs": 562,
+  "encoding_seconds": 3.5584049224853516,
+  "auc": 0.9712405491318499,
+  "precision_at_1": 0.9145907473309609,
+  "mrr": 0.37592044252470785,
+  "mean_rank": 16.68861209964413,
+  "median_rank": 4.0,
+  "recall_at_k": {
+    "1": 0.20462633451957296,
+    "3": 0.4626334519572954,
+    "5": 0.5960854092526691,
+    "10": 0.7206405693950177
+  },
+  "hit_at_k": {
+    "1": 0.20462633451957296,
+    "3": 0.4626334519572954,
+    "5": 0.5960854092526691,
+    "10": 0.7206405693950177
+  },
+  "n_candidates_per_query": 562,
+  "use_time": false
+}

@@ -1,0 +1,74 @@
+{
+  "config": {
+    "eval_type": "semantic_hard_negatives_only",
+    "n_negatives_per_anchor": 4,
+    "miner": "sentence-transformers/all-MiniLM-L6-v2"
+  },
+  "results": [
+    {
+      "dataset": "aep_causal",
+      "checkpoint": "finetune_eval/results/aep_causal_no_inbatch/checkpoint_best.pt",
+      "backbone": "google-bert/bert-base-uncased",
+      "pooling": "cls",
+      "n_test_pairs": 562,
+      "n_negatives": 4,
+      "encoding_seconds": 3.9917449951171875,
+      "auc": 0.6776122072922076,
+      "precision_at_1": 0.4750889679715303,
+      "eval_type": "semantic_hard_negatives",
+      "miner": "sentence-transformers/all-MiniLM-L6-v2"
+    },
+    {
+      "dataset": "followupqg",
+      "checkpoint": "finetune_eval/results/followupqg_no_inbatch/checkpoint_best.pt",
+      "backbone": "google-bert/bert-base-uncased",
+      "pooling": "cls",
+      "n_test_pairs": 501,
+      "n_negatives": 4,
+      "encoding_seconds": 2.7819812297821045,
+      "auc": 0.8347058378253474,
+      "precision_at_1": 0.7425149700598802,
+      "eval_type": "semantic_hard_negatives",
+      "miner": "sentence-transformers/all-MiniLM-L6-v2"
+    },
+    {
+      "dataset": "multiwoz_v24",
+      "checkpoint": "finetune_eval/results/multiwoz_v24_no_inbatch/checkpoint_best.pt",
+      "backbone": "google-bert/bert-base-uncased",
+      "pooling": "cls",
+      "n_test_pairs": 7368,
+      "n_negatives": 4,
+      "encoding_seconds": 24.607687950134277,
+      "auc": 0.5912266255256466,
+      "precision_at_1": 0.379343105320304,
+      "eval_type": "semantic_hard_negatives",
+      "miner": "sentence-transformers/all-MiniLM-L6-v2"
+    },
+    {
+      "dataset": "qrecc",
+      "checkpoint": "finetune_eval/results/qrecc_no_inbatch/checkpoint_best.pt",
+      "backbone": "google-bert/bert-base-uncased",
+      "pooling": "cls",
+      "n_test_pairs": 5204,
+      "n_negatives": 4,
+      "encoding_seconds": 15.649718046188354,
+      "auc": 0.6533212789074331,
+      "precision_at_1": 0.4657955418908532,
+      "eval_type": "semantic_hard_negatives",
+      "miner": "sentence-transformers/all-MiniLM-L6-v2"
+    },
+    {
+      "dataset": "workflow",
+      "checkpoint": "finetune_eval/results/workflow_no_inbatch/checkpoint_best.pt",
+      "backbone": "google-bert/bert-base-uncased",
+      "pooling": "cls",
+      "n_test_pairs": 260487,
+      "n_negatives": 4,
+      "encoding_seconds": 432.29664063453674,
+      "auc": 0.6998421488312483,
+      "precision_at_1": 0.48893802761750105,
+      "eval_type": "semantic_hard_negatives",
+      "miner": "sentence-transformers/all-MiniLM-L6-v2"
+    }
+  ]
+}

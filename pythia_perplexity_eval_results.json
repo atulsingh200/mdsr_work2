@@ -1,0 +1,5113 @@
+{
+  "config": {
+    "score": "raw_full_sequence_perplexity",
+    "direction_rule": "lower PPL('text_i text_j') => i precedes j",
+    "join": "space",
+    "device": "cuda:0",
+    "dtype": "torch.bfloat16"
+  },
+  "models": {
+    "pythia-410m-20ep": {
+      "model_path": "/mnt/localssd/automation/internship-causal-embedding/pythia_train/output",
+      "thirty_sample": {
+        "order_accuracy": 0.2333,
+        "n_correct": 7,
+        "n_total": 30,
+        "pairwise_direction_accuracy": 0.6222,
+        "per_sample": [
+          {
+            "id": 1,
+            "predicted_order": [
+              "t1",
+              "t3",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 32.3772,
+                "t3": 38.1845
+              },
+              "t2": {
+                "t1": 37.9227,
+                "t2": null,
+                "t3": 31.4531
+              },
+              "t3": {
+                "t1": 41.8011,
+                "t2": 30.4739,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 2,
+            "predicted_order": [
+              "t1",
+              "t3",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 52.9643,
+                "t3": 44.3885
+              },
+              "t2": {
+                "t1": 77.1283,
+                "t2": null,
+                "t3": 63.8249
+              },
+              "t3": {
+                "t1": 47.743,
+                "t2": 53.1923,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 3,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 28.135,
+                "t3": 44.3807
+              },
+              "t2": {
+                "t1": 35.4972,
+                "t2": null,
+                "t3": 29.7465
+              },
+              "t3": {
+                "t1": 47.9305,
+                "t2": 31.2839,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 4,
+            "predicted_order": [
+              "t1",
+              "t3",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 41.0427,
+                "t3": 42.1996
+              },
+              "t2": {
+                "t1": 53.3412,
+                "t2": null,
+                "t3": 84.803
+              },
+              "t3": {
+                "t1": 42.2689,
+                "t2": 58.6069,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 5,
+            "predicted_order": [
+              "t1",
+              "t3",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 29.4017,
+                "t3": 41.0237
+              },
+              "t2": {
+                "t1": 33.0286,
+                "t2": null,
+                "t3": 35.7344
+              },
+              "t3": {
+                "t1": 40.9111,
+                "t2": 36.9931,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 6,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 33.826,
+                "t3": 42.2289
+              },
+              "t2": {
+                "t1": 48.245,
+                "t2": null,
+                "t3": 37.6896
+              },
+              "t3": {
+                "t1": 53.3071,
+                "t2": 41.4731,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 7,
+            "predicted_order": [
+              "t3",
+              "t1",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 53.6123,
+                "t3": 39.689
+              },
+              "t2": {
+                "t1": 56.3105,
+                "t2": null,
+                "t3": 58.3033
+              },
+              "t3": {
+                "t1": 36.8386,
+                "t2": 51.9787,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 8,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 33.7134,
+                "t3": 41.4048
+              },
+              "t2": {
+                "t1": 43.7155,
+                "t2": null,
+                "t3": 43.4242
+              },
+              "t3": {
+                "t1": 45.5823,
+                "t2": 44.1884,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 9,
+            "predicted_order": [
+              "t3",
+              "t1",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 38.0305,
+                "t3": 26.9828
+              },
+              "t2": {
+                "t1": 39.7158,
+                "t2": null,
+                "t3": 24.4583
+              },
+              "t3": {
+                "t1": 25.8948,
+                "t2": 23.7736,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 10,
+            "predicted_order": [
+              "t3",
+              "t1",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 57.012,
+                "t3": 51.518
+              },
+              "t2": {
+                "t1": 57.8887,
+                "t2": null,
+                "t3": 51.77
+              },
+              "t3": {
+                "t1": 49.8257,
+                "t2": 46.5028,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 11,
+            "predicted_order": [
+              "t1",
+              "t3",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 39.1489,
+                "t3": 33.6121
+              },
+              "t2": {
+                "t1": 46.7245,
+                "t2": null,
+                "t3": 53.8021
+              },
+              "t3": {
+                "t1": 35.0637,
+                "t2": 43.4683,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 12,
+            "predicted_order": [
+              "t2",
+              "t3",
+              "t1"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 36.8134,
+                "t3": 58.5846
+              },
+              "t2": {
+                "t1": 34.3451,
+                "t2": null,
+                "t3": 48.0426
+              },
+              "t3": {
+                "t1": 54.4807,
+                "t2": 50.5837,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 13,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 39.9306,
+                "t3": 42.7389
+              },
+              "t2": {
+                "t1": 46.6662,
+                "t2": null,
+                "t3": 66.6046
+              },
+              "t3": {
+                "t1": 44.6069,
+                "t2": 68.3481,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 14,
+            "predicted_order": [
+              "t3",
+              "t1",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 36.956,
+                "t3": 34.5899
+              },
+              "t2": {
+                "t1": 48.7145,
+                "t2": null,
+                "t3": 23.4464
+              },
+              "t3": {
+                "t1": 34.1933,
+                "t2": 21.5143,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 15,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 31.7518,
+                "t3": 31.8501
+              },
+              "t2": {
+                "t1": 36.6114,
+                "t2": null,
+                "t3": 25.5938
+              },
+              "t3": {
+                "t1": 32.4151,
+                "t2": 30.9159,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 16,
+            "predicted_order": [
+              "t1",
+              "t3",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 23.448,
+                "t3": 33.8298
+              },
+              "t2": {
+                "t1": 28.3819,
+                "t2": null,
+                "t3": 26.718
+              },
+              "t3": {
+                "t1": 34.7772,
+                "t2": 24.9249,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 17,
+            "predicted_order": [
+              "t1",
+              "t3",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 30.9669,
+                "t3": 24.6675
+              },
+              "t2": {
+                "t1": 33.6779,
+                "t2": null,
+                "t3": 27.2247
+              },
+              "t3": {
+                "t1": 24.9751,
+                "t2": 26.0319,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 18,
+            "predicted_order": [
+              "t1",
+              "t3",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 39.1533,
+                "t3": 30.6734
+              },
+              "t2": {
+                "t1": 46.9174,
+                "t2": null,
+                "t3": 28.1599
+              },
+              "t3": {
+                "t1": 31.8406,
+                "t2": 21.9976,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 19,
+            "predicted_order": [
+              "t3",
+              "t1",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 34.9323,
+                "t3": 52.9854
+              },
+              "t2": {
+                "t1": 36.2254,
+                "t2": null,
+                "t3": 38.3296
+              },
+              "t3": {
+                "t1": 48.0887,
+                "t2": 37.0495,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 20,
+            "predicted_order": [
+              "t3",
+              "t1",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 38.2023,
+                "t3": 28.7152
+              },
+              "t2": {
+                "t1": 42.7708,
+                "t2": null,
+                "t3": 33.4027
+              },
+              "t3": {
+                "t1": 27.8812,
+                "t2": 31.0588,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 21,
+            "predicted_order": [
+              "t1",
+              "t3",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 36.4796,
+                "t3": 53.4761
+              },
+              "t2": {
+                "t1": 43.3191,
+                "t2": null,
+                "t3": 46.9862
+              },
+              "t3": {
+                "t1": 57.1293,
+                "t2": 35.1511,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 22,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 63.3382,
+                "t3": 41.0398
+              },
+              "t2": {
+                "t1": 65.419,
+                "t2": null,
+                "t3": 64.2749
+              },
+              "t3": {
+                "t1": 46.2882,
+                "t2": 66.1476,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 23,
+            "predicted_order": [
+              "t3",
+              "t1",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 72.4399,
+                "t3": 72.3805
+              },
+              "t2": {
+                "t1": 85.3775,
+                "t2": null,
+                "t3": 64.0165
+              },
+              "t3": {
+                "t1": 60.2817,
+                "t2": 54.1051,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 24,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 28.7963,
+                "t3": 37.4152
+              },
+              "t2": {
+                "t1": 36.6516,
+                "t2": null,
+                "t3": 38.586
+              },
+              "t3": {
+                "t1": 45.9109,
+                "t2": 43.2458,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 25,
+            "predicted_order": [
+              "t3",
+              "t1",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 48.7138,
+                "t3": 44.7763
+              },
+              "t2": {
+                "t1": 52.8741,
+                "t2": null,
+                "t3": 51.3717
+              },
+              "t3": {
+                "t1": 42.0999,
+                "t2": 50.5116,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 26,
+            "predicted_order": [
+              "t2",
+              "t3",
+              "t1"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 29.6642,
+                "t3": 59.7632
+              },
+              "t2": {
+                "t1": 28.4719,
+                "t2": null,
+                "t3": 29.5858
+              },
+              "t3": {
+                "t1": 58.9849,
+                "t2": 36.7035,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 27,
+            "predicted_order": [
+              "t2",
+              "t3",
+              "t1"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 36.2378,
+                "t3": 28.5359
+              },
+              "t2": {
+                "t1": 37.0056,
+                "t2": null,
+                "t3": 34.0508
+              },
+              "t3": {
+                "t1": 26.1562,
+                "t2": 36.3128,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 28,
+            "predicted_order": [
+              "t1",
+              "t3",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 50.5718,
+                "t3": 39.2671
+              },
+              "t2": {
+                "t1": 54.2451,
+                "t2": null,
+                "t3": 39.2957
+              },
+              "t3": {
+                "t1": 42.8728,
+                "t2": 39.0146,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 29,
+            "predicted_order": [
+              "t1",
+              "t3",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 33.2344,
+                "t3": 33.1317
+              },
+              "t2": {
+                "t1": 37.7541,
+                "t2": null,
+                "t3": 31.725
+              },
+              "t3": {
+                "t1": 32.5609,
+                "t2": 32.7882,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 30,
+            "predicted_order": [
+              "t3",
+              "t1",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 40.2568,
+                "t3": 38.6348
+              },
+              "t2": {
+                "t1": 46.7343,
+                "t2": null,
+                "t3": 50.5265
+              },
+              "t3": {
+                "t1": 38.1849,
+                "t2": 41.0318,
+                "t3": null
+              }
+            }
+          }
+        ]
+      },
+      "six_step": {
+        "predicted_order": [
+          "t3",
+          "t1",
+          "t5",
+          "t2",
+          "t4",
+          "t6"
+        ],
+        "correct_order": [
+          "t1",
+          "t2",
+          "t3",
+          "t4",
+          "t5",
+          "t6"
+        ],
+        "exact_match": false,
+        "pairwise_direction_accuracy": 0.6667,
+        "kendall_tau": 0.4667,
+        "perplexity_matrix": {
+          "t1": {
+            "t1": null,
+            "t2": 74.6559,
+            "t3": 77.2005,
+            "t4": 63.3146,
+            "t5": 98.3096,
+            "t6": 58.7999
+          },
+          "t2": {
+            "t1": 76.195,
+            "t2": null,
+            "t3": 67.952,
+            "t4": 57.6386,
+            "t5": 90.8425,
+            "t6": 63.1882
+          },
+          "t3": {
+            "t1": 76.2668,
+            "t2": 65.0959,
+            "t3": null,
+            "t4": 52.6834,
+            "t5": 96.453,
+            "t6": 52.2737
+          },
+          "t4": {
+            "t1": 62.0721,
+            "t2": 60.0202,
+            "t3": 54.1209,
+            "t4": null,
+            "t5": 80.5955,
+            "t6": 40.328
+          },
+          "t5": {
+            "t1": 103.4319,
+            "t2": 87.9587,
+            "t3": 103.1862,
+            "t4": 79.0871,
+            "t5": null,
+            "t6": 82.8875
+          },
+          "t6": {
+            "t1": 62.0697,
+            "t2": 68.431,
+            "t3": 58.3977,
+            "t4": 42.0635,
+            "t5": 92.5671,
+            "t6": null
+          }
+        }
+      }
+    },
+    "pythia-410m-40ep": {
+      "model_path": "/mnt/localssd/automation/internship-causal-embedding/pythia_train/output_40ep",
+      "thirty_sample": {
+        "order_accuracy": 0.3,
+        "n_correct": 9,
+        "n_total": 30,
+        "pairwise_direction_accuracy": 0.6333,
+        "per_sample": [
+          {
+            "id": 1,
+            "predicted_order": [
+              "t1",
+              "t3",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 32.9943,
+                "t3": 36.9613
+              },
+              "t2": {
+                "t1": 37.3896,
+                "t2": null,
+                "t3": 33.0373
+              },
+              "t3": {
+                "t1": 39.9088,
+                "t2": 30.3687,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 2,
+            "predicted_order": [
+              "t1",
+              "t3",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 50.985,
+                "t3": 43.9414
+              },
+              "t2": {
+                "t1": 73.9091,
+                "t2": null,
+                "t3": 64.1554
+              },
+              "t3": {
+                "t1": 47.4076,
+                "t2": 54.3137,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 3,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 28.5728,
+                "t3": 45.8672
+              },
+              "t2": {
+                "t1": 36.9862,
+                "t2": null,
+                "t3": 29.7772
+              },
+              "t3": {
+                "t1": 48.0321,
+                "t2": 30.497,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 4,
+            "predicted_order": [
+              "t3",
+              "t1",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 40.9734,
+                "t3": 40.4873
+              },
+              "t2": {
+                "t1": 51.1184,
+                "t2": null,
+                "t3": 79.5056
+              },
+              "t3": {
+                "t1": 39.4126,
+                "t2": 57.4245,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 5,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 29.0812,
+                "t3": 39.6269
+              },
+              "t2": {
+                "t1": 32.0692,
+                "t2": null,
+                "t3": 33.8251
+              },
+              "t3": {
+                "t1": 39.3337,
+                "t2": 36.5747,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 6,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 32.3728,
+                "t3": 40.8546
+              },
+              "t2": {
+                "t1": 46.2105,
+                "t2": null,
+                "t3": 36.0542
+              },
+              "t3": {
+                "t1": 50.463,
+                "t2": 41.5226,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 7,
+            "predicted_order": [
+              "t3",
+              "t1",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 50.2569,
+                "t3": 39.0379
+              },
+              "t2": {
+                "t1": 52.6013,
+                "t2": null,
+                "t3": 59.9016
+              },
+              "t3": {
+                "t1": 36.6504,
+                "t2": 52.4912,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 8,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 32.8412,
+                "t3": 41.0624
+              },
+              "t2": {
+                "t1": 40.9836,
+                "t2": null,
+                "t3": 41.4963
+              },
+              "t3": {
+                "t1": 44.9498,
+                "t2": 44.7416,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 9,
+            "predicted_order": [
+              "t3",
+              "t1",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 35.9561,
+                "t3": 25.2984
+              },
+              "t2": {
+                "t1": 40.4249,
+                "t2": null,
+                "t3": 24.775
+              },
+              "t3": {
+                "t1": 25.2911,
+                "t2": 23.3805,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 10,
+            "predicted_order": [
+              "t3",
+              "t2",
+              "t1"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 55.8608,
+                "t3": 50.126
+              },
+              "t2": {
+                "t1": 55.1043,
+                "t2": null,
+                "t3": 51.4457
+              },
+              "t3": {
+                "t1": 48.9237,
+                "t2": 47.329,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 11,
+            "predicted_order": [
+              "t1",
+              "t3",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 38.4424,
+                "t3": 34.6116
+              },
+              "t2": {
+                "t1": 47.3495,
+                "t2": null,
+                "t3": 57.5302
+              },
+              "t3": {
+                "t1": 36.7971,
+                "t2": 42.4008,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 12,
+            "predicted_order": [
+              "t2",
+              "t3",
+              "t1"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 35.3948,
+                "t3": 56.9805
+              },
+              "t2": {
+                "t1": 34.8838,
+                "t2": null,
+                "t3": 49.8097
+              },
+              "t3": {
+                "t1": 54.1752,
+                "t2": 51.9115,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 13,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 39.6919,
+                "t3": 42.412
+              },
+              "t2": {
+                "t1": 49.0736,
+                "t2": null,
+                "t3": 65.8658
+              },
+              "t3": {
+                "t1": 45.8719,
+                "t2": 69.3315,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 14,
+            "predicted_order": [
+              "t1",
+              "t3",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 34.8972,
+                "t3": 33.7611
+              },
+              "t2": {
+                "t1": 48.5456,
+                "t2": null,
+                "t3": 23.9005
+              },
+              "t3": {
+                "t1": 34.1664,
+                "t2": 21.9784,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 15,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 31.4033,
+                "t3": 32.3556
+              },
+              "t2": {
+                "t1": 36.4991,
+                "t2": null,
+                "t3": 27.1679
+              },
+              "t3": {
+                "t1": 33.937,
+                "t2": 32.6784,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 16,
+            "predicted_order": [
+              "t1",
+              "t3",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 22.9647,
+                "t3": 33.0528
+              },
+              "t2": {
+                "t1": 26.8377,
+                "t2": null,
+                "t3": 26.1522
+              },
+              "t3": {
+                "t1": 34.3509,
+                "t2": 25.5532,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 17,
+            "predicted_order": [
+              "t1",
+              "t3",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 29.5391,
+                "t3": 24.1577
+              },
+              "t2": {
+                "t1": 31.4924,
+                "t2": null,
+                "t3": 26.5247
+              },
+              "t3": {
+                "t1": 25.2897,
+                "t2": 26.5074,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 18,
+            "predicted_order": [
+              "t1",
+              "t3",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 36.9163,
+                "t3": 29.373
+              },
+              "t2": {
+                "t1": 46.4497,
+                "t2": null,
+                "t3": 27.4038
+              },
+              "t3": {
+                "t1": 29.7101,
+                "t2": 21.8271,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 19,
+            "predicted_order": [
+              "t3",
+              "t1",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 33.9388,
+                "t3": 51.3157
+              },
+              "t2": {
+                "t1": 34.9324,
+                "t2": null,
+                "t3": 39.5593
+              },
+              "t3": {
+                "t1": 45.4758,
+                "t2": 35.2945,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 20,
+            "predicted_order": [
+              "t3",
+              "t1",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 38.049,
+                "t3": 29.2373
+              },
+              "t2": {
+                "t1": 41.9259,
+                "t2": null,
+                "t3": 33.3164
+              },
+              "t3": {
+                "t1": 28.0582,
+                "t2": 31.6902,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 21,
+            "predicted_order": [
+              "t1",
+              "t3",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 35.5598,
+                "t3": 52.9061
+              },
+              "t2": {
+                "t1": 42.7162,
+                "t2": null,
+                "t3": 47.2554
+              },
+              "t3": {
+                "t1": 56.4018,
+                "t2": 35.256,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 22,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 59.9103,
+                "t3": 41.9136
+              },
+              "t2": {
+                "t1": 64.3186,
+                "t2": null,
+                "t3": 62.4761
+              },
+              "t3": {
+                "t1": 46.3491,
+                "t2": 64.9001,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 23,
+            "predicted_order": [
+              "t3",
+              "t1",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 70.6009,
+                "t3": 70.0424
+              },
+              "t2": {
+                "t1": 81.1516,
+                "t2": null,
+                "t3": 61.4307
+              },
+              "t3": {
+                "t1": 59.0243,
+                "t2": 53.3447,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 24,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 28.9847,
+                "t3": 40.4591
+              },
+              "t2": {
+                "t1": 38.9236,
+                "t2": null,
+                "t3": 41.0843
+              },
+              "t3": {
+                "t1": 48.9277,
+                "t2": 45.5589,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 25,
+            "predicted_order": [
+              "t3",
+              "t1",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 48.3109,
+                "t3": 46.0075
+              },
+              "t2": {
+                "t1": 51.0395,
+                "t2": null,
+                "t3": 52.1308
+              },
+              "t3": {
+                "t1": 43.049,
+                "t2": 49.0131,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 26,
+            "predicted_order": [
+              "t2",
+              "t1",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 30.2204,
+                "t3": 60.6906
+              },
+              "t2": {
+                "t1": 28.9159,
+                "t2": null,
+                "t3": 29.6478
+              },
+              "t3": {
+                "t1": 61.7222,
+                "t2": 35.7129,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 27,
+            "predicted_order": [
+              "t2",
+              "t3",
+              "t1"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 36.8468,
+                "t3": 28.4846
+              },
+              "t2": {
+                "t1": 37.5647,
+                "t2": null,
+                "t3": 34.4912
+              },
+              "t3": {
+                "t1": 26.2365,
+                "t2": 37.5855,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 28,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 49.4439,
+                "t3": 37.582
+              },
+              "t2": {
+                "t1": 54.5133,
+                "t2": null,
+                "t3": 39.7998
+              },
+              "t3": {
+                "t1": 43.5552,
+                "t2": 40.9511,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 29,
+            "predicted_order": [
+              "t1",
+              "t3",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 34.1482,
+                "t3": 33.3666
+              },
+              "t2": {
+                "t1": 38.9319,
+                "t2": null,
+                "t3": 30.5252
+              },
+              "t3": {
+                "t1": 32.6841,
+                "t2": 33.147,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 30,
+            "predicted_order": [
+              "t3",
+              "t1",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 38.0097,
+                "t3": 39.0394
+              },
+              "t2": {
+                "t1": 44.9413,
+                "t2": null,
+                "t3": 50.2638
+              },
+              "t3": {
+                "t1": 38.6293,
+                "t2": 40.8557,
+                "t3": null
+              }
+            }
+          }
+        ]
+      },
+      "six_step": {
+        "predicted_order": [
+          "t3",
+          "t4",
+          "t1",
+          "t2",
+          "t5",
+          "t6"
+        ],
+        "correct_order": [
+          "t1",
+          "t2",
+          "t3",
+          "t4",
+          "t5",
+          "t6"
+        ],
+        "exact_match": false,
+        "pairwise_direction_accuracy": 0.6667,
+        "kendall_tau": 0.4667,
+        "perplexity_matrix": {
+          "t1": {
+            "t1": null,
+            "t2": 70.8441,
+            "t3": 76.1216,
+            "t4": 61.4025,
+            "t5": 93.302,
+            "t6": 56.3645
+          },
+          "t2": {
+            "t1": 75.5385,
+            "t2": null,
+            "t3": 67.831,
+            "t4": 56.7345,
+            "t5": 89.0393,
+            "t6": 62.4597
+          },
+          "t3": {
+            "t1": 72.3669,
+            "t2": 65.0292,
+            "t3": null,
+            "t4": 51.9084,
+            "t5": 90.7223,
+            "t6": 49.3774
+          },
+          "t4": {
+            "t1": 59.9498,
+            "t2": 57.397,
+            "t3": 50.3202,
+            "t4": null,
+            "t5": 75.2645,
+            "t6": 37.9132
+          },
+          "t5": {
+            "t1": 100.3318,
+            "t2": 87.8476,
+            "t3": 98.9972,
+            "t4": 80.2738,
+            "t5": null,
+            "t6": 78.0038
+          },
+          "t6": {
+            "t1": 60.5794,
+            "t2": 68.5835,
+            "t3": 57.5417,
+            "t4": 41.8057,
+            "t5": 88.1838,
+            "t6": null
+          }
+        }
+      }
+    },
+    "gpt2-medium": {
+      "model_path": "/mnt/localssd/automation/internship-causal-embedding/pythia_train/output_gpt2",
+      "thirty_sample": {
+        "order_accuracy": 0.3333,
+        "n_correct": 10,
+        "n_total": 30,
+        "pairwise_direction_accuracy": 0.6111,
+        "per_sample": [
+          {
+            "id": 1,
+            "predicted_order": [
+              "t2",
+              "t3",
+              "t1"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 40.2152,
+                "t3": 43.5246
+              },
+              "t2": {
+                "t1": 40.24,
+                "t2": null,
+                "t3": 33.8146
+              },
+              "t3": {
+                "t1": 42.3588,
+                "t2": 35.3134,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 2,
+            "predicted_order": [
+              "t1",
+              "t3",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 72.7269,
+                "t3": 54.2372
+              },
+              "t2": {
+                "t1": 82.4813,
+                "t2": null,
+                "t3": 52.6077
+              },
+              "t3": {
+                "t1": 54.8866,
+                "t2": 48.3015,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 3,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 33.5046,
+                "t3": 47.0529
+              },
+              "t2": {
+                "t1": 37.9571,
+                "t2": null,
+                "t3": 33.4589
+              },
+              "t3": {
+                "t1": 66.0534,
+                "t2": 38.0685,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 4,
+            "predicted_order": [
+              "t1",
+              "t3",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 50.5396,
+                "t3": 41.4007
+              },
+              "t2": {
+                "t1": 54.4612,
+                "t2": null,
+                "t3": 67.2853
+              },
+              "t3": {
+                "t1": 42.7824,
+                "t2": 60.2124,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 5,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 40.5661,
+                "t3": 51.1862
+              },
+              "t2": {
+                "t1": 46.634,
+                "t2": null,
+                "t3": 43.7187
+              },
+              "t3": {
+                "t1": 56.6229,
+                "t2": 50.5558,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 6,
+            "predicted_order": [
+              "t1",
+              "t3",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 48.222,
+                "t3": 45.0017
+              },
+              "t2": {
+                "t1": 58.1641,
+                "t2": null,
+                "t3": 44.9732
+              },
+              "t3": {
+                "t1": 43.2661,
+                "t2": 48.4006,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 7,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 62.5084,
+                "t3": 37.9371
+              },
+              "t2": {
+                "t1": 67.6295,
+                "t2": null,
+                "t3": 56.1646
+              },
+              "t3": {
+                "t1": 40.5173,
+                "t2": 58.5782,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 8,
+            "predicted_order": [
+              "t1",
+              "t3",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 44.38,
+                "t3": 43.4126
+              },
+              "t2": {
+                "t1": 57.778,
+                "t2": null,
+                "t3": 56.2813
+              },
+              "t3": {
+                "t1": 46.0653,
+                "t2": 49.7219,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 9,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 42.6199,
+                "t3": 27.8119
+              },
+              "t2": {
+                "t1": 47.8255,
+                "t2": null,
+                "t3": 26.0836
+              },
+              "t3": {
+                "t1": 29.9642,
+                "t2": 27.1101,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 10,
+            "predicted_order": [
+              "t3",
+              "t1",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 77.0703,
+                "t3": 62.9822
+              },
+              "t2": {
+                "t1": 81.5216,
+                "t2": null,
+                "t3": 67.4477
+              },
+              "t3": {
+                "t1": 54.9987,
+                "t2": 52.1188,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 11,
+            "predicted_order": [
+              "t3",
+              "t1",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 42.0692,
+                "t3": 30.8884
+              },
+              "t2": {
+                "t1": 45.911,
+                "t2": null,
+                "t3": 42.1869
+              },
+              "t3": {
+                "t1": 29.0901,
+                "t2": 41.7327,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 12,
+            "predicted_order": [
+              "t3",
+              "t2",
+              "t1"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 48.2084,
+                "t3": 76.0827
+              },
+              "t2": {
+                "t1": 45.5967,
+                "t2": null,
+                "t3": 63.4691
+              },
+              "t3": {
+                "t1": 67.4858,
+                "t2": 56.5727,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 13,
+            "predicted_order": [
+              "t3",
+              "t1",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 49.3693,
+                "t3": 50.5795
+              },
+              "t2": {
+                "t1": 55.234,
+                "t2": null,
+                "t3": 74.0697
+              },
+              "t3": {
+                "t1": 50.4185,
+                "t2": 66.5633,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 14,
+            "predicted_order": [
+              "t1",
+              "t3",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 41.306,
+                "t3": 34.6852
+              },
+              "t2": {
+                "t1": 54.0706,
+                "t2": null,
+                "t3": 28.89
+              },
+              "t3": {
+                "t1": 38.8821,
+                "t2": 25.8384,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 15,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 36.6145,
+                "t3": 39.7774
+              },
+              "t2": {
+                "t1": 37.9494,
+                "t2": null,
+                "t3": 31.3509
+              },
+              "t3": {
+                "t1": 46.9523,
+                "t2": 35.1582,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 16,
+            "predicted_order": [
+              "t3",
+              "t1",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 31.1877,
+                "t3": 39.5525
+              },
+              "t2": {
+                "t1": 34.273,
+                "t2": null,
+                "t3": 30.3785
+              },
+              "t3": {
+                "t1": 38.5573,
+                "t2": 30.0477,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 17,
+            "predicted_order": [
+              "t3",
+              "t2",
+              "t1"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 44.209,
+                "t3": 32.0456
+              },
+              "t2": {
+                "t1": 41.0011,
+                "t2": null,
+                "t3": 31.9862
+              },
+              "t3": {
+                "t1": 31.7506,
+                "t2": 29.482,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 18,
+            "predicted_order": [
+              "t3",
+              "t1",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 43.9074,
+                "t3": 37.9935
+              },
+              "t2": {
+                "t1": 52.3286,
+                "t2": null,
+                "t3": 27.7786
+              },
+              "t3": {
+                "t1": 36.652,
+                "t2": 26.3193,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 19,
+            "predicted_order": [
+              "t3",
+              "t1",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 45.1655,
+                "t3": 59.4343
+              },
+              "t2": {
+                "t1": 48.648,
+                "t2": null,
+                "t3": 37.4223
+              },
+              "t3": {
+                "t1": 53.6522,
+                "t2": 36.8348,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 20,
+            "predicted_order": [
+              "t3",
+              "t1",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 36.7361,
+                "t3": 35.6672
+              },
+              "t2": {
+                "t1": 48.475,
+                "t2": null,
+                "t3": 36.6029
+              },
+              "t3": {
+                "t1": 35.4397,
+                "t2": 30.7267,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 21,
+            "predicted_order": [
+              "t1",
+              "t3",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 46.0152,
+                "t3": 61.3656
+              },
+              "t2": {
+                "t1": 57.9876,
+                "t2": null,
+                "t3": 57.4961
+              },
+              "t3": {
+                "t1": 70.6299,
+                "t2": 46.2192,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 22,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 66.614,
+                "t3": 45.5056
+              },
+              "t2": {
+                "t1": 76.9829,
+                "t2": null,
+                "t3": 70.2309
+              },
+              "t3": {
+                "t1": 49.6907,
+                "t2": 75.9505,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 23,
+            "predicted_order": [
+              "t3",
+              "t1",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 73.567,
+                "t3": 64.9294
+              },
+              "t2": {
+                "t1": 87.6909,
+                "t2": null,
+                "t3": 60.0282
+              },
+              "t3": {
+                "t1": 60.0982,
+                "t2": 58.0466,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 24,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 31.4969,
+                "t3": 40.9391
+              },
+              "t2": {
+                "t1": 38.0565,
+                "t2": null,
+                "t3": 43.9898
+              },
+              "t3": {
+                "t1": 43.0085,
+                "t2": 45.651,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 25,
+            "predicted_order": [
+              "t3",
+              "t2",
+              "t1"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 49.453,
+                "t3": 48.4258
+              },
+              "t2": {
+                "t1": 44.8956,
+                "t2": null,
+                "t3": 51.9379
+              },
+              "t3": {
+                "t1": 47.244,
+                "t2": 50.6349,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 26,
+            "predicted_order": [
+              "t2",
+              "t1",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 22.7349,
+                "t3": 57.3117
+              },
+              "t2": {
+                "t1": 24.8939,
+                "t2": null,
+                "t3": 26.2005
+              },
+              "t3": {
+                "t1": 56.212,
+                "t2": 33.0,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 27,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 37.938,
+                "t3": 31.4921
+              },
+              "t2": {
+                "t1": 42.8361,
+                "t2": null,
+                "t3": 46.0998
+              },
+              "t3": {
+                "t1": 33.712,
+                "t2": 54.0137,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 28,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 40.8909,
+                "t3": 35.3586
+              },
+              "t2": {
+                "t1": 48.2017,
+                "t2": null,
+                "t3": 38.9326
+              },
+              "t3": {
+                "t1": 36.8374,
+                "t2": 39.5842,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 29,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 36.3681,
+                "t3": 31.0163
+              },
+              "t2": {
+                "t1": 39.8491,
+                "t2": null,
+                "t3": 27.278
+              },
+              "t3": {
+                "t1": 37.0854,
+                "t2": 30.264,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 30,
+            "predicted_order": [
+              "t2",
+              "t3",
+              "t1"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 48.6112,
+                "t3": 44.2732
+              },
+              "t2": {
+                "t1": 46.8016,
+                "t2": null,
+                "t3": 52.4668
+              },
+              "t3": {
+                "t1": 43.552,
+                "t2": 55.0015,
+                "t3": null
+              }
+            }
+          }
+        ]
+      },
+      "six_step": {
+        "predicted_order": [
+          "t2",
+          "t3",
+          "t1",
+          "t4",
+          "t5",
+          "t6"
+        ],
+        "correct_order": [
+          "t1",
+          "t2",
+          "t3",
+          "t4",
+          "t5",
+          "t6"
+        ],
+        "exact_match": false,
+        "pairwise_direction_accuracy": 0.8,
+        "kendall_tau": 0.7333,
+        "perplexity_matrix": {
+          "t1": {
+            "t1": null,
+            "t2": 88.1265,
+            "t3": 96.098,
+            "t4": 69.4606,
+            "t5": 133.7827,
+            "t6": 65.0783
+          },
+          "t2": {
+            "t1": 85.6549,
+            "t2": null,
+            "t3": 66.1987,
+            "t4": 58.0293,
+            "t5": 93.263,
+            "t6": 65.1514
+          },
+          "t3": {
+            "t1": 96.0041,
+            "t2": 67.4956,
+            "t3": null,
+            "t4": 53.9669,
+            "t5": 128.7757,
+            "t6": 54.7241
+          },
+          "t4": {
+            "t1": 69.584,
+            "t2": 64.4475,
+            "t3": 57.0215,
+            "t4": null,
+            "t5": 84.0237,
+            "t6": 39.9313
+          },
+          "t5": {
+            "t1": 139.6583,
+            "t2": 106.6381,
+            "t3": 129.1559,
+            "t4": 84.6647,
+            "t5": null,
+            "t6": 86.9406
+          },
+          "t6": {
+            "t1": 64.3162,
+            "t2": 73.3194,
+            "t3": 59.7367,
+            "t4": 42.4265,
+            "t5": 91.4695,
+            "t6": null
+          }
+        }
+      }
+    },
+    "gpt2-stable": {
+      "model_path": "/mnt/localssd/automation/internship-causal-embedding/pythia_train/output_gpt2_stable",
+      "thirty_sample": {
+        "order_accuracy": 0.3667,
+        "n_correct": 11,
+        "n_total": 30,
+        "pairwise_direction_accuracy": 0.6667,
+        "per_sample": [
+          {
+            "id": 1,
+            "predicted_order": [
+              "t3",
+              "t1",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 44.0089,
+                "t3": 47.4014
+              },
+              "t2": {
+                "t1": 44.0289,
+                "t2": null,
+                "t3": 37.3033
+              },
+              "t3": {
+                "t1": 43.9352,
+                "t2": 35.9455,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 2,
+            "predicted_order": [
+              "t1",
+              "t3",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 73.6231,
+                "t3": 57.0208
+              },
+              "t2": {
+                "t1": 90.4174,
+                "t2": null,
+                "t3": 56.0862
+              },
+              "t3": {
+                "t1": 59.0951,
+                "t2": 48.8152,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 3,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 33.6325,
+                "t3": 48.3665
+              },
+              "t2": {
+                "t1": 37.4973,
+                "t2": null,
+                "t3": 33.2905
+              },
+              "t3": {
+                "t1": 62.9434,
+                "t2": 36.106,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 4,
+            "predicted_order": [
+              "t1",
+              "t3",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 55.136,
+                "t3": 44.4293
+              },
+              "t2": {
+                "t1": 56.7845,
+                "t2": null,
+                "t3": 73.4657
+              },
+              "t3": {
+                "t1": 46.7432,
+                "t2": 65.3674,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 5,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 42.954,
+                "t3": 54.8015
+              },
+              "t2": {
+                "t1": 48.6963,
+                "t2": null,
+                "t3": 46.5983
+              },
+              "t3": {
+                "t1": 60.4149,
+                "t2": 53.3321,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 6,
+            "predicted_order": [
+              "t1",
+              "t3",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 49.4992,
+                "t3": 46.1614
+              },
+              "t2": {
+                "t1": 60.5495,
+                "t2": null,
+                "t3": 45.3145
+              },
+              "t3": {
+                "t1": 45.0715,
+                "t2": 48.7339,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 7,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 64.5523,
+                "t3": 40.0452
+              },
+              "t2": {
+                "t1": 66.5082,
+                "t2": null,
+                "t3": 52.8368
+              },
+              "t3": {
+                "t1": 42.7905,
+                "t2": 60.8266,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 8,
+            "predicted_order": [
+              "t1",
+              "t3",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 46.6585,
+                "t3": 45.0872
+              },
+              "t2": {
+                "t1": 60.4274,
+                "t2": null,
+                "t3": 58.4366
+              },
+              "t3": {
+                "t1": 47.578,
+                "t2": 51.5255,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 9,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 44.0333,
+                "t3": 28.9432
+              },
+              "t2": {
+                "t1": 49.8531,
+                "t2": null,
+                "t3": 27.0696
+              },
+              "t3": {
+                "t1": 32.0403,
+                "t2": 27.355,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 10,
+            "predicted_order": [
+              "t3",
+              "t1",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 77.2769,
+                "t3": 62.9029
+              },
+              "t2": {
+                "t1": 87.1026,
+                "t2": null,
+                "t3": 68.9601
+              },
+              "t3": {
+                "t1": 58.4964,
+                "t2": 56.3753,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 11,
+            "predicted_order": [
+              "t3",
+              "t1",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 44.4105,
+                "t3": 31.7021
+              },
+              "t2": {
+                "t1": 47.6052,
+                "t2": null,
+                "t3": 43.5044
+              },
+              "t3": {
+                "t1": 31.239,
+                "t2": 42.759,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 12,
+            "predicted_order": [
+              "t3",
+              "t2",
+              "t1"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 49.422,
+                "t3": 79.7197
+              },
+              "t2": {
+                "t1": 47.1076,
+                "t2": null,
+                "t3": 64.3968
+              },
+              "t3": {
+                "t1": 69.5163,
+                "t2": 56.3378,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 13,
+            "predicted_order": [
+              "t1",
+              "t3",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 49.9894,
+                "t3": 49.8867
+              },
+              "t2": {
+                "t1": 56.6766,
+                "t2": null,
+                "t3": 75.802
+              },
+              "t3": {
+                "t1": 52.6717,
+                "t2": 70.5124,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 14,
+            "predicted_order": [
+              "t1",
+              "t3",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 42.8316,
+                "t3": 36.2414
+              },
+              "t2": {
+                "t1": 54.4211,
+                "t2": null,
+                "t3": 29.0443
+              },
+              "t3": {
+                "t1": 41.5269,
+                "t2": 27.5348,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 15,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 37.2448,
+                "t3": 41.6595
+              },
+              "t2": {
+                "t1": 39.8821,
+                "t2": null,
+                "t3": 31.2654
+              },
+              "t3": {
+                "t1": 50.8814,
+                "t2": 35.5032,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 16,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 32.4776,
+                "t3": 39.1325
+              },
+              "t2": {
+                "t1": 34.8599,
+                "t2": null,
+                "t3": 30.8407
+              },
+              "t3": {
+                "t1": 40.7093,
+                "t2": 31.3426,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 17,
+            "predicted_order": [
+              "t2",
+              "t3",
+              "t1"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 46.1682,
+                "t3": 32.9228
+              },
+              "t2": {
+                "t1": 42.924,
+                "t2": null,
+                "t3": 31.8136
+              },
+              "t3": {
+                "t1": 33.4757,
+                "t2": 30.9896,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 18,
+            "predicted_order": [
+              "t3",
+              "t1",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 45.2447,
+                "t3": 38.2445
+              },
+              "t2": {
+                "t1": 51.9905,
+                "t2": null,
+                "t3": 27.5018
+              },
+              "t3": {
+                "t1": 37.7341,
+                "t2": 26.6967,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 19,
+            "predicted_order": [
+              "t3",
+              "t1",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 47.3943,
+                "t3": 57.3844
+              },
+              "t2": {
+                "t1": 51.5681,
+                "t2": null,
+                "t3": 39.6454
+              },
+              "t3": {
+                "t1": 54.9831,
+                "t2": 38.32,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 20,
+            "predicted_order": [
+              "t3",
+              "t1",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 39.6672,
+                "t3": 37.7139
+              },
+              "t2": {
+                "t1": 48.2854,
+                "t2": null,
+                "t3": 37.8823
+              },
+              "t3": {
+                "t1": 37.2022,
+                "t2": 31.5906,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 21,
+            "predicted_order": [
+              "t1",
+              "t3",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 47.9436,
+                "t3": 63.3383
+              },
+              "t2": {
+                "t1": 62.602,
+                "t2": null,
+                "t3": 60.81
+              },
+              "t3": {
+                "t1": 73.3273,
+                "t2": 49.1186,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 22,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 66.2165,
+                "t3": 44.7635
+              },
+              "t2": {
+                "t1": 76.2818,
+                "t2": null,
+                "t3": 71.7993
+              },
+              "t3": {
+                "t1": 53.2353,
+                "t2": 79.254,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 23,
+            "predicted_order": [
+              "t3",
+              "t1",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 79.0759,
+                "t3": 65.6271
+              },
+              "t2": {
+                "t1": 91.094,
+                "t2": null,
+                "t3": 63.7248
+              },
+              "t3": {
+                "t1": 63.6713,
+                "t2": 62.4871,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 24,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 31.7117,
+                "t3": 40.9769
+              },
+              "t2": {
+                "t1": 38.0846,
+                "t2": null,
+                "t3": 44.3476
+              },
+              "t3": {
+                "t1": 45.278,
+                "t2": 48.2116,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 25,
+            "predicted_order": [
+              "t2",
+              "t3",
+              "t1"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 50.9093,
+                "t3": 50.9774
+              },
+              "t2": {
+                "t1": 46.8754,
+                "t2": null,
+                "t3": 52.6913
+              },
+              "t3": {
+                "t1": 50.8191,
+                "t2": 54.8495,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 26,
+            "predicted_order": [
+              "t2",
+              "t1",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 23.7316,
+                "t3": 60.2233
+              },
+              "t2": {
+                "t1": 26.7567,
+                "t2": null,
+                "t3": 28.8827
+              },
+              "t3": {
+                "t1": 58.4299,
+                "t2": 36.0376,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 27,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 38.7918,
+                "t3": 30.4958
+              },
+              "t2": {
+                "t1": 42.9227,
+                "t2": null,
+                "t3": 44.8899
+              },
+              "t3": {
+                "t1": 35.7784,
+                "t2": 59.882,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 28,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 42.1397,
+                "t3": 36.8335
+              },
+              "t2": {
+                "t1": 48.2126,
+                "t2": null,
+                "t3": 37.5987
+              },
+              "t3": {
+                "t1": 38.2067,
+                "t2": 41.3432,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 29,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 36.2222,
+                "t3": 31.6347
+              },
+              "t2": {
+                "t1": 39.2112,
+                "t2": null,
+                "t3": 28.3012
+              },
+              "t3": {
+                "t1": 37.4296,
+                "t2": 32.5,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 30,
+            "predicted_order": [
+              "t2",
+              "t1",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 49.6647,
+                "t3": 44.6356
+              },
+              "t2": {
+                "t1": 47.9485,
+                "t2": null,
+                "t3": 54.0491
+              },
+              "t3": {
+                "t1": 45.2986,
+                "t2": 56.2636,
+                "t3": null
+              }
+            }
+          }
+        ]
+      },
+      "six_step": {
+        "predicted_order": [
+          "t3",
+          "t2",
+          "t1",
+          "t5",
+          "t4",
+          "t6"
+        ],
+        "correct_order": [
+          "t1",
+          "t2",
+          "t3",
+          "t4",
+          "t5",
+          "t6"
+        ],
+        "exact_match": false,
+        "pairwise_direction_accuracy": 0.7333,
+        "kendall_tau": 0.4667,
+        "perplexity_matrix": {
+          "t1": {
+            "t1": null,
+            "t2": 92.511,
+            "t3": 100.9631,
+            "t4": 71.8062,
+            "t5": 144.7045,
+            "t6": 66.1786
+          },
+          "t2": {
+            "t1": 91.8433,
+            "t2": null,
+            "t3": 71.8874,
+            "t4": 62.3481,
+            "t5": 104.9194,
+            "t6": 68.2406
+          },
+          "t3": {
+            "t1": 98.3897,
+            "t2": 71.2448,
+            "t3": null,
+            "t4": 54.5373,
+            "t5": 139.0607,
+            "t6": 55.3902
+          },
+          "t4": {
+            "t1": 73.3795,
+            "t2": 70.0827,
+            "t3": 61.1603,
+            "t4": null,
+            "t5": 92.327,
+            "t6": 40.7993
+          },
+          "t5": {
+            "t1": 148.3762,
+            "t2": 115.9054,
+            "t3": 145.6799,
+            "t4": 90.632,
+            "t5": null,
+            "t6": 94.9419
+          },
+          "t6": {
+            "t1": 67.7727,
+            "t2": 75.095,
+            "t3": 61.9513,
+            "t4": 42.8986,
+            "t5": 98.8964,
+            "t6": null
+          }
+        }
+      }
+    },
+    "gpt2-smooth": {
+      "model_path": "/mnt/localssd/automation/internship-causal-embedding/pythia_train/output_gpt2_smooth",
+      "thirty_sample": {
+        "order_accuracy": 0.3333,
+        "n_correct": 10,
+        "n_total": 30,
+        "pairwise_direction_accuracy": 0.6333,
+        "per_sample": [
+          {
+            "id": 1,
+            "predicted_order": [
+              "t2",
+              "t3",
+              "t1"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 42.7852,
+                "t3": 45.4149
+              },
+              "t2": {
+                "t1": 41.4749,
+                "t2": null,
+                "t3": 35.6752
+              },
+              "t3": {
+                "t1": 44.4662,
+                "t2": 35.7733,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 2,
+            "predicted_order": [
+              "t3",
+              "t1",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 73.5813,
+                "t3": 56.4452
+              },
+              "t2": {
+                "t1": 84.3847,
+                "t2": null,
+                "t3": 53.6786
+              },
+              "t3": {
+                "t1": 56.3184,
+                "t2": 49.5084,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 3,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 33.6399,
+                "t3": 47.1679
+              },
+              "t2": {
+                "t1": 37.8445,
+                "t2": null,
+                "t3": 34.1985
+              },
+              "t3": {
+                "t1": 62.1972,
+                "t2": 38.8624,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 4,
+            "predicted_order": [
+              "t1",
+              "t3",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 53.3122,
+                "t3": 44.0295
+              },
+              "t2": {
+                "t1": 54.3938,
+                "t2": null,
+                "t3": 69.5067
+              },
+              "t3": {
+                "t1": 44.9259,
+                "t2": 62.7692,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 5,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 41.8109,
+                "t3": 52.6424
+              },
+              "t2": {
+                "t1": 47.2167,
+                "t2": null,
+                "t3": 44.8233
+              },
+              "t3": {
+                "t1": 57.0848,
+                "t2": 51.261,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 6,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 48.8897,
+                "t3": 45.05
+              },
+              "t2": {
+                "t1": 61.1098,
+                "t2": null,
+                "t3": 46.216
+              },
+              "t3": {
+                "t1": 45.6638,
+                "t2": 47.5171,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 7,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 63.1975,
+                "t3": 39.0156
+              },
+              "t2": {
+                "t1": 65.6177,
+                "t2": null,
+                "t3": 52.1267
+              },
+              "t3": {
+                "t1": 42.5288,
+                "t2": 57.7968,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 8,
+            "predicted_order": [
+              "t1",
+              "t3",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 45.627,
+                "t3": 43.0637
+              },
+              "t2": {
+                "t1": 58.0376,
+                "t2": null,
+                "t3": 56.9257
+              },
+              "t3": {
+                "t1": 47.4838,
+                "t2": 50.993,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 9,
+            "predicted_order": [
+              "t1",
+              "t3",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 42.821,
+                "t3": 28.4508
+              },
+              "t2": {
+                "t1": 49.8271,
+                "t2": null,
+                "t3": 26.7754
+              },
+              "t3": {
+                "t1": 30.421,
+                "t2": 26.3446,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 10,
+            "predicted_order": [
+              "t3",
+              "t1",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 76.6285,
+                "t3": 62.2766
+              },
+              "t2": {
+                "t1": 82.1991,
+                "t2": null,
+                "t3": 67.448
+              },
+              "t3": {
+                "t1": 56.7723,
+                "t2": 56.6473,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 11,
+            "predicted_order": [
+              "t1",
+              "t3",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 44.144,
+                "t3": 31.4979
+              },
+              "t2": {
+                "t1": 46.5382,
+                "t2": null,
+                "t3": 42.2517
+              },
+              "t3": {
+                "t1": 31.1263,
+                "t2": 43.2594,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 12,
+            "predicted_order": [
+              "t3",
+              "t2",
+              "t1"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 47.7597,
+                "t3": 77.3123
+              },
+              "t2": {
+                "t1": 46.2171,
+                "t2": null,
+                "t3": 63.0518
+              },
+              "t3": {
+                "t1": 67.3903,
+                "t2": 55.995,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 13,
+            "predicted_order": [
+              "t3",
+              "t1",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 50.4482,
+                "t3": 51.0798
+              },
+              "t2": {
+                "t1": 55.166,
+                "t2": null,
+                "t3": 75.1699
+              },
+              "t3": {
+                "t1": 50.6119,
+                "t2": 68.8863,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 14,
+            "predicted_order": [
+              "t1",
+              "t3",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 41.5433,
+                "t3": 34.7451
+              },
+              "t2": {
+                "t1": 54.7165,
+                "t2": null,
+                "t3": 29.5289
+              },
+              "t3": {
+                "t1": 40.191,
+                "t2": 26.8334,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 15,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 35.8999,
+                "t3": 40.2892
+              },
+              "t2": {
+                "t1": 40.1304,
+                "t2": null,
+                "t3": 30.9829
+              },
+              "t3": {
+                "t1": 47.8719,
+                "t2": 34.2151,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 16,
+            "predicted_order": [
+              "t1",
+              "t3",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 31.6221,
+                "t3": 38.3737
+              },
+              "t2": {
+                "t1": 34.8222,
+                "t2": null,
+                "t3": 30.5215
+              },
+              "t3": {
+                "t1": 38.4833,
+                "t2": 30.1437,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 17,
+            "predicted_order": [
+              "t2",
+              "t3",
+              "t1"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 44.8534,
+                "t3": 32.4129
+              },
+              "t2": {
+                "t1": 42.0138,
+                "t2": null,
+                "t3": 32.0755
+              },
+              "t3": {
+                "t1": 33.8014,
+                "t2": 30.5117,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 18,
+            "predicted_order": [
+              "t3",
+              "t1",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 45.5895,
+                "t3": 38.0999
+              },
+              "t2": {
+                "t1": 52.6243,
+                "t2": null,
+                "t3": 28.496
+              },
+              "t3": {
+                "t1": 37.1641,
+                "t2": 27.1,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 19,
+            "predicted_order": [
+              "t3",
+              "t1",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 46.1584,
+                "t3": 56.5257
+              },
+              "t2": {
+                "t1": 51.0485,
+                "t2": null,
+                "t3": 37.7725
+              },
+              "t3": {
+                "t1": 55.1963,
+                "t2": 37.0394,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 20,
+            "predicted_order": [
+              "t3",
+              "t1",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 39.0633,
+                "t3": 36.9945
+              },
+              "t2": {
+                "t1": 48.8289,
+                "t2": null,
+                "t3": 36.2744
+              },
+              "t3": {
+                "t1": 35.7928,
+                "t2": 31.0802,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 21,
+            "predicted_order": [
+              "t1",
+              "t3",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 46.9636,
+                "t3": 63.3222
+              },
+              "t2": {
+                "t1": 61.572,
+                "t2": null,
+                "t3": 56.2609
+              },
+              "t3": {
+                "t1": 70.1554,
+                "t2": 48.1756,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 22,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 64.4935,
+                "t3": 45.8723
+              },
+              "t2": {
+                "t1": 76.5432,
+                "t2": null,
+                "t3": 69.7707
+              },
+              "t3": {
+                "t1": 52.2061,
+                "t2": 77.9398,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 23,
+            "predicted_order": [
+              "t3",
+              "t1",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 77.065,
+                "t3": 63.4349
+              },
+              "t2": {
+                "t1": 88.2656,
+                "t2": null,
+                "t3": 61.5537
+              },
+              "t3": {
+                "t1": 62.7764,
+                "t2": 61.0949,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 24,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 31.9703,
+                "t3": 41.2914
+              },
+              "t2": {
+                "t1": 37.9427,
+                "t2": null,
+                "t3": 45.0284
+              },
+              "t3": {
+                "t1": 44.0566,
+                "t2": 46.2089,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 25,
+            "predicted_order": [
+              "t2",
+              "t3",
+              "t1"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 51.9062,
+                "t3": 51.6208
+              },
+              "t2": {
+                "t1": 45.7625,
+                "t2": null,
+                "t3": 53.0608
+              },
+              "t3": {
+                "t1": 49.918,
+                "t2": 55.9308,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 26,
+            "predicted_order": [
+              "t2",
+              "t1",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 23.3385,
+                "t3": 57.8459
+              },
+              "t2": {
+                "t1": 24.9927,
+                "t2": null,
+                "t3": 27.924
+              },
+              "t3": {
+                "t1": 56.3581,
+                "t2": 34.7922,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 27,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 38.2209,
+                "t3": 31.677
+              },
+              "t2": {
+                "t1": 42.871,
+                "t2": null,
+                "t3": 47.0056
+              },
+              "t3": {
+                "t1": 35.1148,
+                "t2": 57.894,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 28,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 41.8831,
+                "t3": 35.7922
+              },
+              "t2": {
+                "t1": 45.5642,
+                "t2": null,
+                "t3": 37.8969
+              },
+              "t3": {
+                "t1": 40.0652,
+                "t2": 39.8124,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 29,
+            "predicted_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": true,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 37.381,
+                "t3": 31.459
+              },
+              "t2": {
+                "t1": 40.5983,
+                "t2": null,
+                "t3": 26.8526
+              },
+              "t3": {
+                "t1": 37.8012,
+                "t2": 31.6282,
+                "t3": null
+              }
+            }
+          },
+          {
+            "id": 30,
+            "predicted_order": [
+              "t2",
+              "t3",
+              "t1"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3"
+            ],
+            "order_correct": false,
+            "perplexity_matrix": {
+              "t1": {
+                "t1": null,
+                "t2": 48.4577,
+                "t3": 44.3947
+              },
+              "t2": {
+                "t1": 48.1522,
+                "t2": null,
+                "t3": 55.2515
+              },
+              "t3": {
+                "t1": 44.0258,
+                "t2": 55.8729,
+                "t3": null
+              }
+            }
+          }
+        ]
+      },
+      "six_step": {
+        "predicted_order": [
+          "t2",
+          "t3",
+          "t1",
+          "t4",
+          "t5",
+          "t6"
+        ],
+        "correct_order": [
+          "t1",
+          "t2",
+          "t3",
+          "t4",
+          "t5",
+          "t6"
+        ],
+        "exact_match": false,
+        "pairwise_direction_accuracy": 0.8667,
+        "kendall_tau": 0.7333,
+        "perplexity_matrix": {
+          "t1": {
+            "t1": null,
+            "t2": 89.5199,
+            "t3": 98.0242,
+            "t4": 71.3794,
+            "t5": 139.2498,
+            "t6": 65.7578
+          },
+          "t2": {
+            "t1": 88.5369,
+            "t2": null,
+            "t3": 68.1328,
+            "t4": 60.6178,
+            "t5": 98.6266,
+            "t6": 65.1959
+          },
+          "t3": {
+            "t1": 100.2899,
+            "t2": 69.111,
+            "t3": null,
+            "t4": 54.597,
+            "t5": 129.6271,
+            "t6": 55.1052
+          },
+          "t4": {
+            "t1": 69.9087,
+            "t2": 67.08,
+            "t3": 58.6285,
+            "t4": null,
+            "t5": 85.142,
+            "t6": 39.5482
+          },
+          "t5": {
+            "t1": 146.67,
+            "t2": 111.5204,
+            "t3": 138.8921,
+            "t4": 87.1297,
+            "t5": null,
+            "t6": 90.7958
+          },
+          "t6": {
+            "t1": 68.6786,
+            "t2": 74.2493,
+            "t3": 58.606,
+            "t4": 43.3141,
+            "t5": 93.1484,
+            "t6": null
+          }
+        }
+      }
+    }
+  },
+  "summary": [
+    {
+      "model": "pythia-410m-20ep",
+      "thirty_order_acc": 0.2333,
+      "thirty_pairwise_acc": 0.6222,
+      "six_pairwise_acc": 0.6667,
+      "six_kendall_tau": 0.4667,
+      "six_exact": false
+    },
+    {
+      "model": "pythia-410m-40ep",
+      "thirty_order_acc": 0.3,
+      "thirty_pairwise_acc": 0.6333,
+      "six_pairwise_acc": 0.6667,
+      "six_kendall_tau": 0.4667,
+      "six_exact": false
+    },
+    {
+      "model": "gpt2-medium",
+      "thirty_order_acc": 0.3333,
+      "thirty_pairwise_acc": 0.6111,
+      "six_pairwise_acc": 0.8,
+      "six_kendall_tau": 0.7333,
+      "six_exact": false
+    },
+    {
+      "model": "gpt2-stable",
+      "thirty_order_acc": 0.3667,
+      "thirty_pairwise_acc": 0.6667,
+      "six_pairwise_acc": 0.7333,
+      "six_kendall_tau": 0.4667,
+      "six_exact": false
+    },
+    {
+      "model": "gpt2-smooth",
+      "thirty_order_acc": 0.3333,
+      "thirty_pairwise_acc": 0.6333,
+      "six_pairwise_acc": 0.8667,
+      "six_kendall_tau": 0.7333,
+      "six_exact": false
+    }
+  ]
+}

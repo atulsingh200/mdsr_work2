@@ -1,0 +1,1458 @@
+{
+  "tier_table": {
+    "2a": 1,
+    "2b": 1,
+    "17a": 2,
+    "17c": 2,
+    "14a": 3,
+    "14b": 3,
+    "14c": 3,
+    "8a": 4,
+    "8b": 4,
+    "8c": 4,
+    "10a": 5,
+    "10b": 5,
+    "10c": 5,
+    "10d": 5,
+    "10e": 5,
+    "10f": 5,
+    "10g": 5,
+    "9a": 6,
+    "9b": 6,
+    "9c": 6,
+    "9d": 6,
+    "9e": 6,
+    "9f": 6,
+    "9g": 6,
+    "9h": 6,
+    "9i": 6,
+    "9j": 6,
+    "9k": 6,
+    "4a": 6,
+    "4b": 6,
+    "4c": 6,
+    "5a": 7,
+    "5b": 7,
+    "11a": 8,
+    "11b": 8,
+    "13a": 8,
+    "13b": 8,
+    "13c": 8,
+    "5c": 9,
+    "12a": 9,
+    "12b": 9,
+    "7a": 10,
+    "7b": 10,
+    "16a": 11,
+    "16b": 11,
+    "16c": 11,
+    "17b": 11,
+    "18a": 12,
+    "18b": 12,
+    "18c": 12,
+    "15a": 13,
+    "15b": 13,
+    "15c": 13,
+    "15d": 13,
+    "15e": 13,
+    "19a": 14,
+    "19b": 14,
+    "2c": 14,
+    "6": 15,
+    "20a": 15,
+    "20b": 15,
+    "20c": 15,
+    "20d": 15,
+    "21a": 15,
+    "21b": 15,
+    "22": 15
+  },
+  "unit": "sentence",
+  "window": null,
+  "stride": null,
+  "min_paragraph_tokens": null,
+  "min_sentences": 2,
+  "max_sentences": 5,
+  "tokenizer": "sentence-transformers/all-mpnet-base-v2",
+  "pair_scope": "all",
+  "single_direction": true,
+  "split_level": "chunk_tier",
+  "max_doc_pairs_per_tier_pair": null,
+  "max_chunk_pairs_per_tier_pair": 1500,
+  "cap_splits": "all",
+  "cap_seed": 42,
+  "seed": 42,
+  "val_frac": 0.1,
+  "test_frac": 0.1,
+  "n_docs_resolved": 376,
+  "n_url_misses": 233,
+  "n_subchapter_misses": 0,
+  "docs_per_tier": {
+    "1": 39,
+    "2": 34,
+    "3": 17,
+    "4": 37,
+    "6": 73,
+    "7": 32,
+    "8": 44,
+    "9": 22,
+    "10": 9,
+    "11": 69
+  },
+  "split_doc_counts": {
+    "test": 392,
+    "val": 392,
+    "train": 3155
+  },
+  "sample_counts": {
+    "train": 67500,
+    "val": 8460,
+    "test": 8460
+  },
+  "pre_cap_counts": {
+    "T1-T2/train": 73305,
+    "T1-T2/val": 1100,
+    "T1-T2/test": 1100,
+    "T1-T3/train": 68040,
+    "T1-T3/val": 1050,
+    "T1-T3/test": 1050,
+    "T1-T4/train": 125145,
+    "T1-T4/val": 1900,
+    "T1-T4/test": 1900,
+    "T1-T6/train": 224775,
+    "T1-T6/val": 3450,
+    "T1-T6/test": 3450,
+    "T1-T7/train": 158760,
+    "T1-T7/val": 2450,
+    "T1-T7/test": 2450,
+    "T1-T8/train": 140130,
+    "T1-T8/val": 2150,
+    "T1-T8/test": 2150,
+    "T1-T9/train": 75330,
+    "T1-T9/val": 1150,
+    "T1-T9/test": 1150,
+    "T1-T10/train": 34425,
+    "T1-T10/val": 550,
+    "T1-T10/test": 550,
+    "T1-T11/train": 213840,
+    "T1-T11/val": 3300,
+    "T1-T11/test": 3300,
+    "T2-T3/train": 30408,
+    "T2-T3/val": 462,
+    "T2-T3/test": 462,
+    "T2-T4/train": 55929,
+    "T2-T4/val": 836,
+    "T2-T4/test": 836,
+    "T2-T6/train": 100455,
+    "T2-T6/val": 1518,
+    "T2-T6/test": 1518,
+    "T2-T7/train": 70952,
+    "T2-T7/val": 1078,
+    "T2-T7/test": 1078,
+    "T2-T8/train": 62626,
+    "T2-T8/val": 946,
+    "T2-T8/test": 946,
+    "T2-T9/train": 33666,
+    "T2-T9/val": 506,
+    "T2-T9/test": 506,
+    "T2-T10/train": 15385,
+    "T2-T10/val": 242,
+    "T2-T10/test": 242,
+    "T2-T11/train": 95568,
+    "T2-T11/val": 1452,
+    "T2-T11/test": 1452,
+    "T3-T4/train": 51912,
+    "T3-T4/val": 798,
+    "T3-T4/test": 798,
+    "T3-T6/train": 93240,
+    "T3-T6/val": 1449,
+    "T3-T6/test": 1449,
+    "T3-T7/train": 65856,
+    "T3-T7/val": 1029,
+    "T3-T7/test": 1029,
+    "T3-T8/train": 58128,
+    "T3-T8/val": 903,
+    "T3-T8/test": 903,
+    "T3-T9/train": 31248,
+    "T3-T9/val": 483,
+    "T3-T9/test": 483,
+    "T3-T10/train": 14280,
+    "T3-T10/val": 231,
+    "T3-T10/test": 231,
+    "T3-T11/train": 88704,
+    "T3-T11/val": 1386,
+    "T3-T11/test": 1386,
+    "T4-T6/train": 171495,
+    "T4-T6/val": 2622,
+    "T4-T6/test": 2622,
+    "T4-T7/train": 121128,
+    "T4-T7/val": 1862,
+    "T4-T7/test": 1862,
+    "T4-T8/train": 106914,
+    "T4-T8/val": 1634,
+    "T4-T8/test": 1634,
+    "T4-T9/train": 57474,
+    "T4-T9/val": 874,
+    "T4-T9/test": 874,
+    "T4-T10/train": 26265,
+    "T4-T10/val": 418,
+    "T4-T10/test": 418,
+    "T4-T11/train": 163152,
+    "T4-T11/val": 2508,
+    "T4-T11/test": 2508,
+    "T6-T7/train": 217560,
+    "T6-T7/val": 3381,
+    "T6-T7/test": 3381,
+    "T6-T8/train": 192030,
+    "T6-T8/val": 2967,
+    "T6-T8/test": 2967,
+    "T6-T9/train": 103230,
+    "T6-T9/val": 1587,
+    "T6-T9/test": 1587,
+    "T6-T10/train": 47175,
+    "T6-T10/val": 759,
+    "T6-T10/test": 759,
+    "T6-T11/train": 293040,
+    "T6-T11/val": 4554,
+    "T6-T11/test": 4554,
+    "T7-T8/train": 135632,
+    "T7-T8/val": 2107,
+    "T7-T8/test": 2107,
+    "T7-T9/train": 72912,
+    "T7-T9/val": 1127,
+    "T7-T9/test": 1127,
+    "T7-T10/train": 33320,
+    "T7-T10/val": 539,
+    "T7-T10/test": 539,
+    "T7-T11/train": 206976,
+    "T7-T11/val": 3234,
+    "T7-T11/test": 3234,
+    "T8-T9/train": 64356,
+    "T8-T9/val": 989,
+    "T8-T9/test": 989,
+    "T8-T10/train": 29410,
+    "T8-T10/val": 473,
+    "T8-T10/test": 473,
+    "T8-T11/train": 182688,
+    "T8-T11/val": 2838,
+    "T8-T11/test": 2838,
+    "T9-T10/train": 15810,
+    "T9-T10/val": 253,
+    "T9-T10/test": 253,
+    "T9-T11/train": 98208,
+    "T9-T11/val": 1518,
+    "T9-T11/test": 1518,
+    "T10-T11/train": 44880,
+    "T10-T11/val": 726,
+    "T10-T11/test": 726
+  },
+  "post_cap_counts": {
+    "T1-T2/train": 1500,
+    "T1-T2/val": 188,
+    "T1-T2/test": 188,
+    "T1-T3/train": 1500,
+    "T1-T3/val": 188,
+    "T1-T3/test": 188,
+    "T1-T4/train": 1500,
+    "T1-T4/val": 188,
+    "T1-T4/test": 188,
+    "T1-T6/train": 1500,
+    "T1-T6/val": 188,
+    "T1-T6/test": 188,
+    "T1-T7/train": 1500,
+    "T1-T7/val": 188,
+    "T1-T7/test": 188,
+    "T1-T8/train": 1500,
+    "T1-T8/val": 188,
+    "T1-T8/test": 188,
+    "T1-T9/train": 1500,
+    "T1-T9/val": 188,
+    "T1-T9/test": 188,
+    "T1-T10/train": 1500,
+    "T1-T10/val": 188,
+    "T1-T10/test": 188,
+    "T1-T11/train": 1500,
+    "T1-T11/val": 188,
+    "T1-T11/test": 188,
+    "T2-T3/train": 1500,
+    "T2-T3/val": 188,
+    "T2-T3/test": 188,
+    "T2-T4/train": 1500,
+    "T2-T4/val": 188,
+    "T2-T4/test": 188,
+    "T2-T6/train": 1500,
+    "T2-T6/val": 188,
+    "T2-T6/test": 188,
+    "T2-T7/train": 1500,
+    "T2-T7/val": 188,
+    "T2-T7/test": 188,
+    "T2-T8/train": 1500,
+    "T2-T8/val": 188,
+    "T2-T8/test": 188,
+    "T2-T9/train": 1500,
+    "T2-T9/val": 188,
+    "T2-T9/test": 188,
+    "T2-T10/train": 1500,
+    "T2-T10/val": 188,
+    "T2-T10/test": 188,
+    "T2-T11/train": 1500,
+    "T2-T11/val": 188,
+    "T2-T11/test": 188,
+    "T3-T4/train": 1500,
+    "T3-T4/val": 188,
+    "T3-T4/test": 188,
+    "T3-T6/train": 1500,
+    "T3-T6/val": 188,
+    "T3-T6/test": 188,
+    "T3-T7/train": 1500,
+    "T3-T7/val": 188,
+    "T3-T7/test": 188,
+    "T3-T8/train": 1500,
+    "T3-T8/val": 188,
+    "T3-T8/test": 188,
+    "T3-T9/train": 1500,
+    "T3-T9/val": 188,
+    "T3-T9/test": 188,
+    "T3-T10/train": 1500,
+    "T3-T10/val": 188,
+    "T3-T10/test": 188,
+    "T3-T11/train": 1500,
+    "T3-T11/val": 188,
+    "T3-T11/test": 188,
+    "T4-T6/train": 1500,
+    "T4-T6/val": 188,
+    "T4-T6/test": 188,
+    "T4-T7/train": 1500,
+    "T4-T7/val": 188,
+    "T4-T7/test": 188,
+    "T4-T8/train": 1500,
+    "T4-T8/val": 188,
+    "T4-T8/test": 188,
+    "T4-T9/train": 1500,
+    "T4-T9/val": 188,
+    "T4-T9/test": 188,
+    "T4-T10/train": 1500,
+    "T4-T10/val": 188,
+    "T4-T10/test": 188,
+    "T4-T11/train": 1500,
+    "T4-T11/val": 188,
+    "T4-T11/test": 188,
+    "T6-T7/train": 1500,
+    "T6-T7/val": 188,
+    "T6-T7/test": 188,
+    "T6-T8/train": 1500,
+    "T6-T8/val": 188,
+    "T6-T8/test": 188,
+    "T6-T9/train": 1500,
+    "T6-T9/val": 188,
+    "T6-T9/test": 188,
+    "T6-T10/train": 1500,
+    "T6-T10/val": 188,
+    "T6-T10/test": 188,
+    "T6-T11/train": 1500,
+    "T6-T11/val": 188,
+    "T6-T11/test": 188,
+    "T7-T8/train": 1500,
+    "T7-T8/val": 188,
+    "T7-T8/test": 188,
+    "T7-T9/train": 1500,
+    "T7-T9/val": 188,
+    "T7-T9/test": 188,
+    "T7-T10/train": 1500,
+    "T7-T10/val": 188,
+    "T7-T10/test": 188,
+    "T7-T11/train": 1500,
+    "T7-T11/val": 188,
+    "T7-T11/test": 188,
+    "T8-T9/train": 1500,
+    "T8-T9/val": 188,
+    "T8-T9/test": 188,
+    "T8-T10/train": 1500,
+    "T8-T10/val": 188,
+    "T8-T10/test": 188,
+    "T8-T11/train": 1500,
+    "T8-T11/val": 188,
+    "T8-T11/test": 188,
+    "T9-T10/train": 1500,
+    "T9-T10/val": 188,
+    "T9-T10/test": 188,
+    "T9-T11/train": 1500,
+    "T9-T11/val": 188,
+    "T9-T11/test": 188,
+    "T10-T11/train": 1500,
+    "T10-T11/val": 188,
+    "T10-T11/test": 188
+  },
+  "chunk_pairs_per_tier_pair": {
+    "T1-T2/train": 1500,
+    "T1-T2/val": 188,
+    "T1-T2/test": 188,
+    "T1-T3/train": 1500,
+    "T1-T3/val": 188,
+    "T1-T3/test": 188,
+    "T1-T4/train": 1500,
+    "T1-T4/val": 188,
+    "T1-T4/test": 188,
+    "T1-T6/train": 1500,
+    "T1-T6/val": 188,
+    "T1-T6/test": 188,
+    "T1-T7/train": 1500,
+    "T1-T7/val": 188,
+    "T1-T7/test": 188,
+    "T1-T8/train": 1500,
+    "T1-T8/val": 188,
+    "T1-T8/test": 188,
+    "T1-T9/train": 1500,
+    "T1-T9/val": 188,
+    "T1-T9/test": 188,
+    "T1-T10/train": 1500,
+    "T1-T10/val": 188,
+    "T1-T10/test": 188,
+    "T1-T11/train": 1500,
+    "T1-T11/val": 188,
+    "T1-T11/test": 188,
+    "T2-T3/train": 1500,
+    "T2-T3/val": 188,
+    "T2-T3/test": 188,
+    "T2-T4/train": 1500,
+    "T2-T4/val": 188,
+    "T2-T4/test": 188,
+    "T2-T6/train": 1500,
+    "T2-T6/val": 188,
+    "T2-T6/test": 188,
+    "T2-T7/train": 1500,
+    "T2-T7/val": 188,
+    "T2-T7/test": 188,
+    "T2-T8/train": 1500,
+    "T2-T8/val": 188,
+    "T2-T8/test": 188,
+    "T2-T9/train": 1500,
+    "T2-T9/val": 188,
+    "T2-T9/test": 188,
+    "T2-T10/train": 1500,
+    "T2-T10/val": 188,
+    "T2-T10/test": 188,
+    "T2-T11/train": 1500,
+    "T2-T11/val": 188,
+    "T2-T11/test": 188,
+    "T3-T4/train": 1500,
+    "T3-T4/val": 188,
+    "T3-T4/test": 188,
+    "T3-T6/train": 1500,
+    "T3-T6/val": 188,
+    "T3-T6/test": 188,
+    "T3-T7/train": 1500,
+    "T3-T7/val": 188,
+    "T3-T7/test": 188,
+    "T3-T8/train": 1500,
+    "T3-T8/val": 188,
+    "T3-T8/test": 188,
+    "T3-T9/train": 1500,
+    "T3-T9/val": 188,
+    "T3-T9/test": 188,
+    "T3-T10/train": 1500,
+    "T3-T10/val": 188,
+    "T3-T10/test": 188,
+    "T3-T11/train": 1500,
+    "T3-T11/val": 188,
+    "T3-T11/test": 188,
+    "T4-T6/train": 1500,
+    "T4-T6/val": 188,
+    "T4-T6/test": 188,
+    "T4-T7/train": 1500,
+    "T4-T7/val": 188,
+    "T4-T7/test": 188,
+    "T4-T8/train": 1500,
+    "T4-T8/val": 188,
+    "T4-T8/test": 188,
+    "T4-T9/train": 1500,
+    "T4-T9/val": 188,
+    "T4-T9/test": 188,
+    "T4-T10/train": 1500,
+    "T4-T10/val": 188,
+    "T4-T10/test": 188,
+    "T4-T11/train": 1500,
+    "T4-T11/val": 188,
+    "T4-T11/test": 188,
+    "T6-T7/train": 1500,
+    "T6-T7/val": 188,
+    "T6-T7/test": 188,
+    "T6-T8/train": 1500,
+    "T6-T8/val": 188,
+    "T6-T8/test": 188,
+    "T6-T9/train": 1500,
+    "T6-T9/val": 188,
+    "T6-T9/test": 188,
+    "T6-T10/train": 1500,
+    "T6-T10/val": 188,
+    "T6-T10/test": 188,
+    "T6-T11/train": 1500,
+    "T6-T11/val": 188,
+    "T6-T11/test": 188,
+    "T7-T8/train": 1500,
+    "T7-T8/val": 188,
+    "T7-T8/test": 188,
+    "T7-T9/train": 1500,
+    "T7-T9/val": 188,
+    "T7-T9/test": 188,
+    "T7-T10/train": 1500,
+    "T7-T10/val": 188,
+    "T7-T10/test": 188,
+    "T7-T11/train": 1500,
+    "T7-T11/val": 188,
+    "T7-T11/test": 188,
+    "T8-T9/train": 1500,
+    "T8-T9/val": 188,
+    "T8-T9/test": 188,
+    "T8-T10/train": 1500,
+    "T8-T10/val": 188,
+    "T8-T10/test": 188,
+    "T8-T11/train": 1500,
+    "T8-T11/val": 188,
+    "T8-T11/test": 188,
+    "T9-T10/train": 1500,
+    "T9-T10/val": 188,
+    "T9-T10/test": 188,
+    "T9-T11/train": 1500,
+    "T9-T11/val": 188,
+    "T9-T11/test": 188,
+    "T10-T11/train": 1500,
+    "T10-T11/val": 188,
+    "T10-T11/test": 188
+  },
+  "url_misses": [
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/video/platform-overview",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/video/customer-experience",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/video/customer-experience-bts",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/end-to-end-tutorial",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/video/key-capabilities",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/video/platform-use-cases",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/video/platform-architecture",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/video/roles-project-phases",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/ui-guide",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/video/platform-ui",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/workflows",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/browser-language-support",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/self-identification",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/api-guide",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/api-authentication",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/api-fundamentals",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/postman",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://www.adobe.com/go/platform-api-reference-en",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/application-services",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/video/application-intelligent-services",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/docs/customer-journey-analytics.html",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/docs/journey-optimizer.html",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/docs/journey-orchestration.html",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/docs/mix-modeler.html",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/video/experience-cloud-integrations",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/governance-privacy-security/audit-logs/api/overview",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/governance-privacy-security/audit-logs/api/getting-started",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/governance-privacy-security/audit-logs/api/events",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/governance-privacy-security/audit-logs/api/export",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/license-usage-and-guardrails/data-management-best-practices",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/license-usage-and-guardrails/license-usage-dashboard",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/license-usage-and-guardrails/capacity",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/license-usage-and-guardrails/total-data-volume",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/ui/browse",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/ui/labels",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/ui/permissions",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/ui/policies",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/ui/roles",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/ui/sandboxes",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/ui/users",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permission-manager/overview",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permission-manager/permissions",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/api/overview",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/api/getting-started",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/api/roles",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/api/policies",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/api/products",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://www.adobe.io/experience-platform-apis/references/access-control/",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/sandboxes/home",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/sandboxes/ui/overview",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/sandboxes/ui/user-guide",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/sandboxes/ui/sandbox-tooling",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/sandboxes/ui/sharing-packages-across-orgs",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/sandboxes/api/overview",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/sandboxes/api/getting-started",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/sandboxes/api/available",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/sandboxes/api/sandboxes",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/sandboxes/api/types",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/sandboxes/api/appendix",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/sandboxes/sandbox-tooling-api/overview",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/sandboxes/sandbox-tooling-api/getting-started",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/sandboxes/sandbox-tooling-api/packages",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/sandboxes/sandbox-tooling-api/tools",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/sandboxes/sandbox-tooling-api/appendix",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/sandboxes/use-cases/backup-object-configuration",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/sandboxes/use-cases/center-of-excellence",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/sandboxes/troubleshooting-guide",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://www.adobe.io/experience-platform-apis/references/sandbox",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/collection/identity/overview",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/collection/identity/identity-map",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/collection/identity/fpid",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/collection/identity/cross-domain-sharing",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/collection/identity/mobile-to-web",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/collection/identity/consent",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/collection/identity/troubleshooting",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/release-notes",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/ingestion/streaming-ingestion/overview",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/ingestion/streaming-ingestion/kafka",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/ingestion/streaming-ingestion/troubleshooting",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/ingestion/batch-ingestion/getting-started",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/ingestion/batch-ingestion/overview",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/ingestion/batch-ingestion/api-overview",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/ingestion/batch-ingestion/partial",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/ingestion/batch-ingestion/troubleshooting",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://www.adobe.io/experience-platform-apis/references/catalog/",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/configure-dynamic-datastream",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dataflows/ui/monitor-edge",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://www.adobe.io/experience-platform-apis/references/flow-service/",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/identity-service/home",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/identity-service/identity-and-profile",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/identity-service/features/namespaces",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/identity-service/features/identity-linking-logic",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/identity-service/features/identity-graph-viewer",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/identity-service/features/deletion",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/identity-service/identity-graph-linking-rules/overview",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/identity-service/identity-graph-linking-rules/identity-optimization-algorithm",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/identity-service/identity-graph-linking-rules/implementation-guide",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/identity-service/identity-graph-linking-rules/example-configurations",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/identity-service/identity-graph-linking-rules/troubleshooting",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/identity-service/identity-graph-linking-rules/namespace-priority",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/identity-service/identity-graph-linking-rules/graph-simulation",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/identity-service/identity-graph-linking-rules/identity-settings-ui",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/identity-service/implementation",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/identity-service/guardrails",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/identity-service/api/getting-started",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/identity-service/api/list-cluster-identites",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/identity-service/api/list-cluster-history",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/identity-service/api/list-identity-mappings",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/identity-service/api/list-namespaces",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/identity-service/api/create-custom-namespace",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/identity-service/api/list-native-id",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://www.adobe.io/experience-platform-apis/references/identity-service",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/identity-service/privacy",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/identity-service/troubleshooting-guide",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/profile/video/profile-overview",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/profile/ui/profile-dashboard",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/profile/api/merge-policies",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/profile/video/create-merge-policies",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/profile/ui/union-schema",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/profile/video/union-schemas-overview",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://www.adobe.com/go/profile-apis-en",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/video/create-segment",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/video/create-a-dynamic-segment",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/video/create-multi-entity-segments",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://www.adobe.io/experience-platform-apis/references/segmentation/",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/query-service/home",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/query-service/packaging",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/query-service/guardrails",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/query-service/get-started/prerequisites",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/query-service/data-distiller/overview",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/query-service/data-distiller/license-usage",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activation-overview",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate-segment-streaming-destinations",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate-streaming-profile-destinations",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate-batch-profile-destinations",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate-edge-personalization-destinations",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate-edge-profile-lookup",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate-curated-destinations",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate-prospect-audiences",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate-account-audiences",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/export-file-now",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/export-datasets",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/dataset-expiration-update",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate-last-qualification-time",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/export-arrays-maps-objects",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/data-transformations-calculated-fields",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/overview",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/get-started",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/home-page-dashboards",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/b2b-overview",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/b2b-use-case",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/b2b-tutorial",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/b2b-guardrails",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/b2b-architecture-upgrade",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/rtcdp-mcp",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/aam-to-rtcdp",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/accounts/account-profile-overview",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/accounts/account-profile-ui-guide",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/administration/admin-overview",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/segmentation/custom-objects",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/segmentation/multi-entity-segmentation",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/profile/identities-overview",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/profile/merge-policies",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/b2b-ai-ml-services/related-accounts",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/b2b-ai-ml-services/lead-to-account-matching",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/b2b-ai-ml-services/manage-predictive-lead-and-account-scoring",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/use-case-guides/overview",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/use-case-guides/business-use-case-framework",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/partner-data/prospecting",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/partner-data/onsite-personalization",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/partner-data/offsite-retargeting",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/partner-data/unauthenticated-retargeting",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/partner-data/supplement-first-party-profiles",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/evolve-one-time-value-to-lifetime-value",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://www.adobe.io/experience-platform-apis/references/policy-service/",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/privacy-service/home",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/privacy-service/permissions",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/privacy-service/experience-cloud-apps",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/privacy-service/identity-data",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/privacy-service/js-library",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/privacy-service/api/overview",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/privacy-service/api/getting-started",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/privacy-service/api/privacy-jobs",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/privacy-service/api/consent",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/privacy-service/api/content",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/privacy-service/api/error-codes",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/privacy-service/api/appendix",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/privacy-service/ui/overview",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/privacy-service/ui/user-guide",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/privacy-service/privacy-events",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/privacy-service/regulations/overview",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/privacy-service/regulations/faq",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/privacy-service/regulations/terminology",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/privacy-service/best-practices",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/privacy-service/troubleshooting-guide",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://www.adobe.io/experience-platform-apis/references/privacy-service/",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/privacy-service/release-notes",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://www.adobe.io/experience-platform-apis/references/observability-insights/",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/run-and-operate/overview",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/run-and-operate/job-schedules",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/run-and-operate/job-schedules-details",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/run-and-operate/job-schedules-anti-patterns",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/run-and-operate/health-checks",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/ai-assistant/new-features/customer-support",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/assurance/views/event-transactions",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/assurance/views/extension-versions",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/assurance/views/edge-delivery",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/assurance/views/in-app-messaging",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/assurance/views/on-device-views",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/assurance/views/places-service",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/assurance/views/push-debug-view",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/assurance/views/validation-summary",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/assurance/views/adobe-analytics",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/assurance/views/adobe-analytics-streaming-media",
+      "reason": "not in corpus"
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/hygiene/home",
+      "reason": "not in corpus"
+    }
+  ],
+  "subchapter_misses": []
+}

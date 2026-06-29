@@ -1,0 +1,6 @@
+  2790 pairs — train_pairs.jsonl
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 8838.60it/s]
+  encoded in 2.0s  dim=384
+  kNN in 0.0s
+  saved /mnt/localssd/base_line/internship-causal-embedding/ce2x_data/followupqg/hard_negatives.npy  shape=(2790, 4)

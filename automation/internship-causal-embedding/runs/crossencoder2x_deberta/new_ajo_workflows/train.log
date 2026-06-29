@@ -1,0 +1,43 @@
+02:35:38 INFO run_dir=runs/crossencoder2x_deberta/new_ajo_workflows  device=cuda  bf16=True
+02:35:39 INFO tokenizer <- microsoft/deberta-v3-large
+02:35:39 INFO scanning max joint token length across all splits …
+02:39:57 INFO run_dir=runs/crossencoder2x_deberta/new_ajo_workflows  device=cuda  bf16=True
+02:39:58 INFO tokenizer <- microsoft/deberta-v3-large
+02:39:58 INFO scanning max joint token length across all splits …
+02:40:02 INFO   observed max=512  -> max_seq_len=512  (scan 4.0s)
+02:40:02 INFO loading datasets …
+02:40:02 INFO   train=21846  val=2470  test=2616
+02:40:02 INFO building CrossEncoder2x  backbone=microsoft/deberta-v3-large  n_layers=24  native=True …
+02:40:04 INFO   total params=434,013,185
+02:40:04 INFO   total_steps=1023  warmup_steps=102
+02:40:34 INFO   e1 opt_step=50/1023  loss=0.7045  acc=0.4953  lr=4.90e-06
+02:41:03 INFO   e1 opt_step=100/1023  loss=0.7005  acc=0.5023  lr=9.80e-06
+02:41:32 INFO   e1 opt_step=150/1023  loss=0.7005  acc=0.5011  lr=9.48e-06
+02:42:01 INFO   e1 opt_step=200/1023  loss=0.6988  acc=0.5074  lr=8.94e-06
+02:42:29 INFO   e1 opt_step=250/1023  loss=0.6922  acc=0.5243  lr=8.39e-06
+02:42:57 INFO   e1 opt_step=300/1023  loss=0.6848  acc=0.5395  lr=7.85e-06
+02:43:32 INFO [epoch 1/3]  train_loss=0.6796  train_acc=0.5502  val_loss=0.6247  val_acc=0.6397  val_auc=0.6987  elapsed=208.4s
+02:43:37 INFO   * saved best.pt  val_acc=0.6397
+02:43:43 INFO   e2 opt_step=350/1023  loss=0.6053  acc=0.6823  lr=7.31e-06
+02:44:11 INFO   e2 opt_step=400/1023  loss=0.5792  acc=0.6999  lr=6.76e-06
+02:44:38 INFO   e2 opt_step=450/1023  loss=0.5712  acc=0.7063  lr=6.22e-06
+02:45:06 INFO   e2 opt_step=500/1023  loss=0.5697  acc=0.7070  lr=5.68e-06
+02:45:35 INFO   e2 opt_step=550/1023  loss=0.5630  acc=0.7099  lr=5.14e-06
+02:46:02 INFO   e2 opt_step=600/1023  loss=0.5582  acc=0.7142  lr=4.59e-06
+02:46:30 INFO   e2 opt_step=650/1023  loss=0.5494  acc=0.7207  lr=4.05e-06
+02:46:58 INFO [epoch 2/3]  train_loss=0.5428  train_acc=0.7253  val_loss=0.6786  val_acc=0.6660  val_auc=0.7376  elapsed=200.4s
+02:47:03 INFO   * saved best.pt  val_acc=0.6660
+02:47:14 INFO   e3 opt_step=700/1023  loss=0.3795  acc=0.8359  lr=3.51e-06
+02:47:43 INFO   e3 opt_step=750/1023  loss=0.3938  acc=0.8261  lr=2.96e-06
+02:48:14 INFO   e3 opt_step=800/1023  loss=0.4039  acc=0.8212  lr=2.42e-06
+02:48:43 INFO   e3 opt_step=850/1023  loss=0.3965  acc=0.8250  lr=1.88e-06
+02:49:12 INFO   e3 opt_step=900/1023  loss=0.3910  acc=0.8278  lr=1.34e-06
+02:49:43 INFO   e3 opt_step=950/1023  loss=0.3856  acc=0.8313  lr=7.93e-07
+02:50:11 INFO   e3 opt_step=1000/1023  loss=0.3840  acc=0.8325  lr=2.50e-07
+02:50:34 INFO [epoch 3/3]  train_loss=0.3822  train_acc=0.8336  val_loss=0.7463  val_acc=0.6717  val_auc=0.7445  elapsed=211.5s
+02:50:40 INFO   * saved best.pt  val_acc=0.6717
+02:50:42 INFO saved final.pt  total_time=638s
+02:50:42 INFO loading best.pt for final val/test evaluation …
+02:50:53 INFO [val]  acc=0.6717  auc=0.7445  f1=0.6647
+02:51:01 INFO [test] loss=0.6430  acc=0.7255  auc=0.7971  f1=0.7206
+02:51:01 INFO [done] best_val_acc=0.6717  test_acc=0.7255  test_auc=0.7971  results in runs/crossencoder2x_deberta/new_ajo_workflows

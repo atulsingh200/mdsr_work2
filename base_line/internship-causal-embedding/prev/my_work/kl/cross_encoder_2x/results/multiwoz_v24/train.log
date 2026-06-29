@@ -1,0 +1,59 @@
+[train] dataset=multiwoz_v24 total_steps=5570 warmup=334 batch_size=128 grad_accum=1 effective_batch=128 epochs=10 max_length=256 params=194,537,473  early_stop=(thresh 0.001, patience 2)
+  opt_step=   200/5570  loss=0.5748  lr=1.20e-05  epoch=1
+  opt_step=   400/5570  loss=0.4644  lr=1.97e-05  epoch=1
+[epoch 1/10]  train_loss=0.5046  val_AUC=0.7084  val_P@1=0.4587  (191s)
+  * new best val_AUC=0.7084, saved checkpoint_best.pt
+  opt_step=   600/5570  loss=0.4953  lr=1.90e-05  epoch=2
+  opt_step=   800/5570  loss=0.4752  lr=1.82e-05  epoch=2
+  opt_step=  1000/5570  loss=0.4427  lr=1.75e-05  epoch=2
+[epoch 2/10]  train_loss=0.4871  val_AUC=0.7670  val_P@1=0.5013  (383s)
+  * new best val_AUC=0.7670, saved checkpoint_best.pt
+  opt_step=  1200/5570  loss=0.4991  lr=1.67e-05  epoch=3
+  opt_step=  1400/5570  loss=0.4377  lr=1.59e-05  epoch=3
+  opt_step=  1600/5570  loss=0.4928  lr=1.52e-05  epoch=3
+[epoch 3/10]  train_loss=0.4678  val_AUC=0.8113  val_P@1=0.5573  (576s)
+  * new best val_AUC=0.8113, saved checkpoint_best.pt
+  opt_step=  1800/5570  loss=0.4117  lr=1.44e-05  epoch=4
+  opt_step=  2000/5570  loss=0.4661  lr=1.36e-05  epoch=4
+  opt_step=  2200/5570  loss=0.4409  lr=1.29e-05  epoch=4
+[epoch 4/10]  train_loss=0.4431  val_AUC=0.8578  val_P@1=0.6080  (769s)
+  * new best val_AUC=0.8578, saved checkpoint_best.pt
+  opt_step=  2400/5570  loss=0.4229  lr=1.21e-05  epoch=5
+  opt_step=  2600/5570  loss=0.4296  lr=1.13e-05  epoch=5
+[epoch 5/10]  train_loss=0.4157  val_AUC=0.8416  val_P@1=0.5893  (962s)
+  no improvement (best=0.8578, bad_epochs=1/2)
+  opt_step=  2800/5570  loss=0.3305  lr=1.06e-05  epoch=6
+  opt_step=  3000/5570  loss=0.3442  lr=9.82e-06  epoch=6
+  opt_step=  3200/5570  loss=0.4038  lr=9.05e-06  epoch=6
+[epoch 6/10]  train_loss=0.3887  val_AUC=0.8575  val_P@1=0.6213  (1154s)
+  no improvement (best=0.8578, bad_epochs=2/2)
+[early stop] no val-AUC improvement for 2 epochs.
+
+[done]  best val_AUC=0.8578  stopped_early=True
+  best:   my_work/kl/cross_encoder_2x/results/multiwoz_v24/checkpoint_best.pt
+  latest: my_work/kl/cross_encoder_2x/results/multiwoz_v24/checkpoint_latest.pt
+ved checkpoint_best.pt
+  opt_step=  1200/5570  loss=0.4991  lr=1.67e-05  epoch=3
+  opt_step=  1400/5570  loss=0.4377  lr=1.59e-05  epoch=3
+  opt_step=  1600/5570  loss=0.4928  lr=1.52e-05  epoch=3
+[epoch 3/10]  train_loss=0.4678  val_AUC=0.8113  val_P@1=0.5573  (576s)
+  * new best val_AUC=0.8113, saved checkpoint_best.pt
+  opt_step=  1800/5570  loss=0.4117  lr=1.44e-05  epoch=4
+  opt_step=  2000/5570  loss=0.4661  lr=1.36e-05  epoch=4
+  opt_step=  2200/5570  loss=0.4409  lr=1.29e-05  epoch=4
+[epoch 4/10]  train_loss=0.4431  val_AUC=0.8578  val_P@1=0.6080  (769s)
+  * new best val_AUC=0.8578, saved checkpoint_best.pt
+  opt_step=  2400/5570  loss=0.4229  lr=1.21e-05  epoch=5
+  opt_step=  2600/5570  loss=0.4296  lr=1.13e-05  epoch=5
+[epoch 5/10]  train_loss=0.4157  val_AUC=0.8416  val_P@1=0.5893  (962s)
+  no improvement (best=0.8578, bad_epochs=1/2)
+  opt_step=  2800/5570  loss=0.3305  lr=1.06e-05  epoch=6
+  opt_step=  3000/5570  loss=0.3442  lr=9.82e-06  epoch=6
+  opt_step=  3200/5570  loss=0.4038  lr=9.05e-06  epoch=6
+[epoch 6/10]  train_loss=0.3887  val_AUC=0.8575  val_P@1=0.6213  (1154s)
+  no improvement (best=0.8578, bad_epochs=2/2)
+[early stop] no val-AUC improvement for 2 epochs.
+
+[done]  best val_AUC=0.8578  stopped_early=True
+  best:   my_work/kl/cross_encoder_2x/results/multiwoz_v24/checkpoint_best.pt
+  latest: my_work/kl/cross_encoder_2x/results/multiwoz_v24/checkpoint_latest.pt

@@ -1,0 +1,8 @@
+{
+  "dataset": "qrecc",
+  "split": "train",
+  "n_pairs": 15000,
+  "hard_neg_type": "reverse_direction (hard_neg = anchor)",
+  "elapsed_seconds": 0.48838329315185547,
+  "pairs_path": "/mnt/localssd/internship-causal-embedding-merge-followup/finetune_eval/results_reverse/qrecc/train_pairs.jsonl"
+}

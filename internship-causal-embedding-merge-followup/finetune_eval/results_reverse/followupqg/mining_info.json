@@ -1,0 +1,8 @@
+{
+  "dataset": "followupqg",
+  "split": "train",
+  "n_pairs": 2790,
+  "hard_neg_type": "reverse_direction (hard_neg = anchor)",
+  "elapsed_seconds": 0.0415644645690918,
+  "pairs_path": "/mnt/localssd/internship-causal-embedding-merge-followup/finetune_eval/results_reverse/followupqg/train_pairs.jsonl"
+}

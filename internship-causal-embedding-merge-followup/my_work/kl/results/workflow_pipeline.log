@@ -1,0 +1,227 @@
+========================================================
+  Dataset: workflow   GPU: 3   Wed Jun  3 11:35:46 PDT 2026
+========================================================
+
+[step 0] stage data
+  copied train_pairs.jsonl
+  copied test_pairs.jsonl
+  copied hard_negatives.npy
+  copied test_hard_negatives.npy
+  no val split — holding out 10% of train
+  val=2000  train=18000
+
+[step 1] mine K=8 hard negatives (train + test)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[miner] sentence-transformers/all-MiniLM-L6-v2  K=8
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 7640.03it/s]
+
+[train] loading /mnt/localssd/internship-causal-embedding-merge-followup/my_work/kl/results/workflow/train_pairs.jsonl
+  18000 pairs
+  encoding 18000 positives …
+  encoded in 3.9s  dim=384
+  k-NN (8 per anchor) on cuda  chunk=1024 …
+  k-NN done in 0.1s
+  saved /mnt/localssd/internship-causal-embedding-merge-followup/my_work/kl/results/workflow/hard_negatives_k8.npy
+
+[test] loading /mnt/localssd/internship-causal-embedding-merge-followup/my_work/kl/results/workflow/test_pairs.jsonl
+  260487 pairs
+  encoding 260487 positives …
+  encoded in 42.2s  dim=384
+  k-NN (8 per anchor) on cuda  chunk=1024 …
+  k-NN done in 4.4s
+  saved /mnt/localssd/internship-causal-embedding-merge-followup/my_work/kl/results/workflow/test_hard_negatives_k8.npy
+
+[done]
+
+[step 2] train CDEv2 retriever
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[device] cuda
+[out]    /mnt/localssd/internship-causal-embedding-merge-followup/my_work/kl/results/workflow
+[data] 18000 train pairs  K=8
+[data] 2000 val pairs
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 8319.29it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 7382.25it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[warm-start] from /mnt/localssd/internship-causal-embedding-merge-followup/finetune_eval/results/workflow/checkpoint_best.pt
+  [warm-start] loaded 199 anchor tensors -> cause_enc, 199 positive tensors -> effect_enc (missing=0, unexpected=0)
+[model] shared_encoder=False  kl_scale=dim  init_cos_weight=1.0  pooling=cls  mu_identity=True  log_sigma_init=3.0
+[model] CDEv2  backbone=google-bert/bert-base-uncased  proj_dim=768  params=226,059,268
+
+================================================================================
+CDEv2 training  total=3000  phA=3000  phB_end=3000
+batch=64  K=8  bf16=True  backbone_lr=2e-05  head_lr=0.0001
+================================================================================
+  step=   50/3000 [A]  loss=1.3975  info=1.3975  τ=0.0497  λcos=1.001  s+=0.467  s-=0.132  γ=0.0004
+  step=  100/3000 [A]  loss=1.3876  info=1.3876  τ=0.0487  λcos=1.002  s+=0.419  s-=0.057  γ=0.0021
+  step=  150/3000 [A]  loss=1.1613  info=1.1613  τ=0.0473  λcos=1.005  s+=0.379  s-=0.008  γ=0.0054
+  step=  200/3000 [A]  loss=1.7114  info=1.7114  τ=0.0460  λcos=1.008  s+=0.329  s-=-0.008  γ=0.0069
+  [val step=200]  MRR=0.5758  R@1=0.492  R@5=0.674  R@10=0.736  med=2  * new best
+  step=  250/3000 [A]  loss=1.4074  info=1.4074  τ=0.0452  λcos=1.010  s+=0.332  s-=-0.024  γ=0.0074
+  step=  300/3000 [A]  loss=1.1082  info=1.1082  τ=0.0440  λcos=1.013  s+=0.342  s-=-0.060  γ=0.0080
+  step=  350/3000 [A]  loss=1.0374  info=1.0374  τ=0.0425  λcos=1.016  s+=0.348  s-=-0.085  γ=0.0085
+  step=  400/3000 [A]  loss=1.0670  info=1.0670  τ=0.0415  λcos=1.019  s+=0.312  s-=-0.092  γ=0.0093
+  [val step=400]  MRR=0.5649  R@1=0.480  R@5=0.656  R@10=0.729  med=2  (patience 1/6)
+  step=  450/3000 [A]  loss=1.0101  info=1.0101  τ=0.0406  λcos=1.021  s+=0.320  s-=-0.078  γ=0.0100
+  step=  500/3000 [A]  loss=0.9698  info=0.9698  τ=0.0398  λcos=1.023  s+=0.323  s-=-0.066  γ=0.0104
+  step=  550/3000 [A]  loss=1.1077  info=1.1077  τ=0.0392  λcos=1.025  s+=0.322  s-=-0.114  γ=0.0107
+  step=  600/3000 [A]  loss=0.9243  info=0.9243  τ=0.0378  λcos=1.028  s+=0.332  s-=-0.100  γ=0.0107
+  [val step=600]  MRR=0.5598  R@1=0.477  R@5=0.650  R@10=0.718  med=2  (patience 2/6)
+  step=  650/3000 [A]  loss=0.8204  info=0.8204  τ=0.0366  λcos=1.031  s+=0.292  s-=-0.109  γ=0.0115
+  step=  700/3000 [A]  loss=0.8266  info=0.8266  τ=0.0357  λcos=1.034  s+=0.291  s-=-0.123  γ=0.0119
+  step=  750/3000 [A]  loss=1.0573  info=1.0573  τ=0.0349  λcos=1.036  s+=0.283  s-=-0.125  γ=0.0123
+  step=  800/3000 [A]  loss=0.7544  info=0.7544  τ=0.0342  λcos=1.038  s+=0.333  s-=-0.121  γ=0.0125
+  [val step=800]  MRR=0.5530  R@1=0.465  R@5=0.648  R@10=0.716  med=2  (patience 3/6)
+  step=  850/3000 [A]  loss=0.6569  info=0.6569  τ=0.0337  λcos=1.040  s+=0.300  s-=-0.131  γ=0.0126
+  step=  900/3000 [A]  loss=0.8127  info=0.8127  τ=0.0326  λcos=1.043  s+=0.312  s-=-0.135  γ=0.0130
+  step=  950/3000 [A]  loss=0.5314  info=0.5314  τ=0.0318  λcos=1.046  s+=0.314  s-=-0.151  γ=0.0135
+  step= 1000/3000 [A]  loss=0.6173  info=0.6173  τ=0.0310  λcos=1.048  s+=0.285  s-=-0.178  γ=0.0136
+  [val step=1000]  MRR=0.5503  R@1=0.458  R@5=0.652  R@10=0.713  med=2  (patience 4/6)
+  step= 1050/3000 [A]  loss=0.5286  info=0.5286  τ=0.0304  λcos=1.050  s+=0.284  s-=-0.154  γ=0.0140
+  step= 1100/3000 [A]  loss=0.6230  info=0.6230  τ=0.0299  λcos=1.052  s+=0.295  s-=-0.145  γ=0.0145
+  step= 1150/3000 [A]  loss=0.2368  info=0.2368  τ=0.0293  λcos=1.054  s+=0.317  s-=-0.178  γ=0.0145
+  step= 1200/3000 [A]  loss=0.5749  info=0.5749  τ=0.0287  λcos=1.056  s+=0.277  s-=-0.186  γ=0.0144
+  [val step=1200]  MRR=0.5487  R@1=0.461  R@5=0.646  R@10=0.709  med=2  (patience 5/6)
+  step= 1250/3000 [A]  loss=0.2977  info=0.2977  τ=0.0282  λcos=1.058  s+=0.305  s-=-0.236  γ=0.0145
+  step= 1300/3000 [A]  loss=0.3152  info=0.3152  τ=0.0277  λcos=1.060  s+=0.300  s-=-0.205  γ=0.0154
+  step= 1350/3000 [A]  loss=0.2871  info=0.2871  τ=0.0275  λcos=1.061  s+=0.291  s-=-0.231  γ=0.0159
+  step= 1400/3000 [A]  loss=0.7526  info=0.7526  τ=0.0272  λcos=1.062  s+=0.249  s-=-0.196  γ=0.0156
+  [val step=1400]  MRR=0.5472  R@1=0.459  R@5=0.649  R@10=0.710  med=2  (patience 6/6)
+
+[early stop] no MRR improvement for 6 checks.
+
+================================================================================
+[done]  best val MRR=0.5758
+  best:   /mnt/localssd/internship-causal-embedding-merge-followup/my_work/kl/results/workflow/cde_v2_run5c_best.pt
+  latest: /mnt/localssd/internship-causal-embedding-merge-followup/my_work/kl/results/workflow/cde_v2_run5c_latest.pt
+
+[step 3] train cross-encoder reranker
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[data] train from finetune_eval/results/workflow/train_pairs.jsonl
+        20000 train pairs
+        hard negatives (20000, 4)
+[data] no mined val split for workflow; holding out 5% of train as val
+        train=19000  val=1000
+        flattened: train rows=95000  val rows=5000
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 9705.09it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[model] backbone=google-bert/bert-base-uncased  params=109,483,009
+[train] dataset=workflow total_steps=2972 warmup=178 batch_size=128 epochs=4 max_length=256  early_stop=(thresh 0.001, patience 2)
+  step=   200/2972  loss=0.3610  lr=1.98e-05  epoch=1
+  step=   400/2972  loss=0.3522  lr=1.84e-05  epoch=1
+  step=   600/2972  loss=0.3718  lr=1.70e-05  epoch=1
+[epoch 1/4]  train_loss=0.3957  val_AUC=0.9457  val_P@1=0.8490  (82s)
+  * new best val_AUC=0.9457, saved checkpoint_best.pt
+  step=   800/2972  loss=0.3646  lr=1.55e-05  epoch=2
+  step=  1000/2972  loss=0.3769  lr=1.41e-05  epoch=2
+  step=  1200/2972  loss=0.3189  lr=1.27e-05  epoch=2
+  step=  1400/2972  loss=0.2969  lr=1.13e-05  epoch=2
+[epoch 2/4]  train_loss=0.3139  val_AUC=0.9507  val_P@1=0.8530  (163s)
+  * new best val_AUC=0.9507, saved checkpoint_best.pt
+  step=  1600/2972  loss=0.2313  lr=9.82e-06  epoch=3
+  step=  1800/2972  loss=0.3355  lr=8.39e-06  epoch=3
+  step=  2000/2972  loss=0.1988  lr=6.96e-06  epoch=3
+  step=  2200/2972  loss=0.1839  lr=5.53e-06  epoch=3
+[epoch 3/4]  train_loss=0.2742  val_AUC=0.9501  val_P@1=0.8440  (244s)
+  no improvement (best=0.9507, bad_epochs=1/2)
+  step=  2400/2972  loss=0.1704  lr=4.09e-06  epoch=4
+  step=  2600/2972  loss=0.2357  lr=2.66e-06  epoch=4
+  step=  2800/2972  loss=0.3012  lr=1.23e-06  epoch=4
+[epoch 4/4]  train_loss=0.2451  val_AUC=0.9475  val_P@1=0.8450  (326s)
+  no improvement (best=0.9507, bad_epochs=2/2)
+[early stop] no val-AUC improvement for 2 epochs.
+
+[done]  best val_AUC=0.9507  stopped_early=True
+  best:   my_work/kl/cross_encoder/results/workflow_rerank/checkpoint_best.pt
+  latest: my_work/kl/cross_encoder/results/workflow_rerank/checkpoint_latest.pt
+
+[step 4a] rerank eval on VAL (sweep pool/blend)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[rerank] 2000 pairs  retriever=cde  device=cuda
+[rerank] using random candidate pool of 1000 per query (full N=2000 would OOM)
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 6239.56it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 5828.96it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Traceback (most recent call last):
+  File "/mnt/localssd/internship-causal-embedding-merge-followup/my_work/kl/v2/rerank_eval.py", line 382, in <module>
+    main()
+    ~~~~^^
+  File "/mnt/localssd/internship-causal-embedding-merge-followup/my_work/kl/v2/rerank_eval.py", line 213, in main
+    base_ranks = ranks_from_scores(S_retr)
+  File "/mnt/localssd/internship-causal-embedding-merge-followup/my_work/kl/v2/rerank_eval.py", line 63, in ranks_from_scores
+    return (score_mat > diag).sum(axis=1).astype(np.float64) + 1.0
+            ^^^^^^^^^^^^^^^^
+ValueError: operands could not be broadcast together with shapes (2000,1000) (1000,1) 
+otes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Traceback (most recent call last):
+  File "/mnt/localssd/internship-causal-embedding-merge-followup/my_work/kl/v2/rerank_eval.py", line 382, in <module>
+    main()
+    ~~~~^^
+  File "/mnt/localssd/internship-causal-embedding-merge-followup/my_work/kl/v2/rerank_eval.py", line 213, in main
+    base_ranks = ranks_from_scores(S_retr)
+  File "/mnt/localssd/internship-causal-embedding-merge-followup/my_work/kl/v2/rerank_eval.py", line 63, in ranks_from_scores
+    return (score_mat > diag).sum(axis=1).astype(np.float64) + 1.0
+            ^^^^^^^^^^^^^^^^
+ValueError: operands could not be broadcast together with shapes (2000,1000) (1000,1) 

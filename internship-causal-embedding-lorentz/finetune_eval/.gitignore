@@ -1,0 +1,6 @@
+# Trained checkpoints are large (~800MB each) — kept locally only.
+# Re-create with train_finetune.py from the mined hard_negatives.npy.
+results/*/checkpoint_*.pt
+
+# Training logs are reproducible; only commit summarized history JSON.
+results/*/train.log

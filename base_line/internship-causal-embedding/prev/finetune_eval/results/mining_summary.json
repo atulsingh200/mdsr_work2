@@ -1,0 +1,52 @@
+[
+  {
+    "dataset": "aep_causal",
+    "n_pairs": 5487,
+    "k_hard_negatives": 4,
+    "encoding_seconds": 4.295908212661743,
+    "knn_seconds": 0.03921365737915039,
+    "miner": "sentence-transformers/all-MiniLM-L6-v2",
+    "hard_negatives_path": "/mnt/localssd/base_line/internship-causal-embedding/finetune_eval/results/aep_causal/hard_negatives.npy",
+    "train_pairs_path": "/mnt/localssd/base_line/internship-causal-embedding/finetune_eval/results/aep_causal/train_pairs.jsonl"
+  },
+  {
+    "dataset": "followupqg",
+    "n_pairs": 2790,
+    "k_hard_negatives": 4,
+    "encoding_seconds": 1.7571847438812256,
+    "knn_seconds": 0.001514434814453125,
+    "miner": "sentence-transformers/all-MiniLM-L6-v2",
+    "hard_negatives_path": "/mnt/localssd/base_line/internship-causal-embedding/finetune_eval/results/followupqg/hard_negatives.npy",
+    "train_pairs_path": "/mnt/localssd/base_line/internship-causal-embedding/finetune_eval/results/followupqg/train_pairs.jsonl"
+  },
+  {
+    "dataset": "multiwoz_v24",
+    "n_pairs": 15000,
+    "k_hard_negatives": 4,
+    "encoding_seconds": 2.231595993041992,
+    "knn_seconds": 0.020319223403930664,
+    "miner": "sentence-transformers/all-MiniLM-L6-v2",
+    "hard_negatives_path": "/mnt/localssd/base_line/internship-causal-embedding/finetune_eval/results/multiwoz_v24/hard_negatives.npy",
+    "train_pairs_path": "/mnt/localssd/base_line/internship-causal-embedding/finetune_eval/results/multiwoz_v24/train_pairs.jsonl"
+  },
+  {
+    "dataset": "qrecc",
+    "n_pairs": 15000,
+    "k_hard_negatives": 4,
+    "encoding_seconds": 1.152890920639038,
+    "knn_seconds": 0.0201570987701416,
+    "miner": "sentence-transformers/all-MiniLM-L6-v2",
+    "hard_negatives_path": "/mnt/localssd/base_line/internship-causal-embedding/finetune_eval/results/qrecc/hard_negatives.npy",
+    "train_pairs_path": "/mnt/localssd/base_line/internship-causal-embedding/finetune_eval/results/qrecc/train_pairs.jsonl"
+  },
+  {
+    "dataset": "workflow",
+    "n_pairs": 20000,
+    "k_hard_negatives": 4,
+    "encoding_seconds": 2.9960620403289795,
+    "knn_seconds": 0.03327798843383789,
+    "miner": "sentence-transformers/all-MiniLM-L6-v2",
+    "hard_negatives_path": "/mnt/localssd/base_line/internship-causal-embedding/finetune_eval/results/workflow/hard_negatives.npy",
+    "train_pairs_path": "/mnt/localssd/base_line/internship-causal-embedding/finetune_eval/results/workflow/train_pairs.jsonl"
+  }
+]

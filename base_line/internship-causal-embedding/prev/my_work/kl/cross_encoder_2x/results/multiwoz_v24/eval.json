@@ -1,0 +1,30 @@
+{
+  "model": "CrossEncoder2x",
+  "n_params": 194537473,
+  "n_layers": 24,
+  "dataset": "multiwoz_v24",
+  "checkpoint": "my_work/kl/cross_encoder_2x/results/multiwoz_v24/checkpoint_best.pt",
+  "backbone": "google-bert/bert-base-uncased",
+  "n_test_pairs": 7368,
+  "auc": 0.8686073638343939,
+  "precision_at_1": 0.6468512486427795,
+  "n_negatives": 4,
+  "eval_type": "random_negatives",
+  "n_candidates_per_query": 1000,
+  "n_queries": 2000,
+  "mrr": 0.11485252831590458,
+  "mean_rank": 138.885,
+  "median_rank": 78.0,
+  "recall_at_k": {
+    "1": 0.0635,
+    "3": 0.1165,
+    "5": 0.151,
+    "10": 0.212
+  },
+  "hit_at_k": {
+    "1": 0.0635,
+    "3": 0.1165,
+    "5": 0.151,
+    "10": 0.212
+  }
+}

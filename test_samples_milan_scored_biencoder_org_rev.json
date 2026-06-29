@@ -1,0 +1,242 @@
+[
+  {
+    "label1": "t1",
+    "label2": "t2",
+    "text1": "I need to set up the audience in AEP by defining lapsed customers (no purchase or interaction in 90+ days) and high-value criteria (lifetime value >= $500), then apply email consent filters, preview the size estimate, name it appropriately, and choose between batch or streaming evaluation.",
+    "text2": "Now I'm moving to AJO to build a personalized offer for \"20% Off - July 4th\" valid from June 28 through July 7, 2026, with channel-specific representations for email and display media. I'll set the eligibility rule to target the lapsed high-value audience, configure priority and capping limits, then create a fallback offer and decision collection.",
+    "score": 0.996094,
+    "pred": 1
+  },
+  {
+    "label1": "t1",
+    "label2": "t3",
+    "text1": "I need to set up the audience in AEP by defining lapsed customers (no purchase or interaction in 90+ days) and high-value criteria (lifetime value >= $500), then apply email consent filters, preview the size estimate, name it appropriately, and choose between batch or streaming evaluation.",
+    "text2": "I'm creating a scheduled campaign in AJO that links to the audience from Phase 1 and sets the launch date for July 4th, 2026.",
+    "score": 0.003708,
+    "pred": 0
+  },
+  {
+    "label1": "t1",
+    "label2": "t4",
+    "text1": "I need to set up the audience in AEP by defining lapsed customers (no purchase or interaction in 90+ days) and high-value criteria (lifetime value >= $500), then apply email consent filters, preview the size estimate, name it appropriately, and choose between batch or streaming evaluation.",
+    "text2": "I'm adding an email action to the campaign with a July 4th-themed template that includes personalized elements like the customer's name and their unique 20% off code. I'll configure the subject line, sender details, unsubscribe link, and tracking for opens and clicks, then preview and test before sending.",
+    "score": 0.015869,
+    "pred": 0
+  },
+  {
+    "label1": "t1",
+    "label2": "t5",
+    "text1": "I need to set up the audience in AEP by defining lapsed customers (no purchase or interaction in 90+ days) and high-value criteria (lifetime value >= $500), then apply email consent filters, preview the size estimate, name it appropriately, and choose between batch or streaming evaluation.",
+    "text2": "I'm activating the lapsed high-value audience to paid media destinations like Google Ads Customer Match and Meta Ads by mapping identity attributes and scheduling the sync to occur before July 4th.",
+    "score": 0.917969,
+    "pred": 1
+  },
+  {
+    "label1": "t1",
+    "label2": "t6",
+    "text1": "I need to set up the audience in AEP by defining lapsed customers (no purchase or interaction in 90+ days) and high-value criteria (lifetime value >= $500), then apply email consent filters, preview the size estimate, name it appropriately, and choose between batch or streaming evaluation.",
+    "text2": "Before going live, I need to QA the email and creative assets, verify the audience size is statistically significant, set up tracking for open rates, click-through rates, conversions, and revenue lift, then get final approval to launch.",
+    "score": 0.037354,
+    "pred": 0
+  },
+  {
+    "label1": "t2",
+    "label2": "t1",
+    "text1": "Now I'm moving to AJO to build a personalized offer for \"20% Off - July 4th\" valid from June 28 through July 7, 2026, with channel-specific representations for email and display media. I'll set the eligibility rule to target the lapsed high-value audience, configure priority and capping limits, then create a fallback offer and decision collection.",
+    "text2": "I need to set up the audience in AEP by defining lapsed customers (no purchase or interaction in 90+ days) and high-value criteria (lifetime value >= $500), then apply email consent filters, preview the size estimate, name it appropriately, and choose between batch or streaming evaluation.",
+    "score": 0.359375,
+    "pred": 0
+  },
+  {
+    "label1": "t2",
+    "label2": "t3",
+    "text1": "Now I'm moving to AJO to build a personalized offer for \"20% Off - July 4th\" valid from June 28 through July 7, 2026, with channel-specific representations for email and display media. I'll set the eligibility rule to target the lapsed high-value audience, configure priority and capping limits, then create a fallback offer and decision collection.",
+    "text2": "I'm creating a scheduled campaign in AJO that links to the audience from Phase 1 and sets the launch date for July 4th, 2026.",
+    "score": 1.7e-05,
+    "pred": 0
+  },
+  {
+    "label1": "t2",
+    "label2": "t4",
+    "text1": "Now I'm moving to AJO to build a personalized offer for \"20% Off - July 4th\" valid from June 28 through July 7, 2026, with channel-specific representations for email and display media. I'll set the eligibility rule to target the lapsed high-value audience, configure priority and capping limits, then create a fallback offer and decision collection.",
+    "text2": "I'm adding an email action to the campaign with a July 4th-themed template that includes personalized elements like the customer's name and their unique 20% off code. I'll configure the subject line, sender details, unsubscribe link, and tracking for opens and clicks, then preview and test before sending.",
+    "score": 1.7e-05,
+    "pred": 0
+  },
+  {
+    "label1": "t2",
+    "label2": "t5",
+    "text1": "Now I'm moving to AJO to build a personalized offer for \"20% Off - July 4th\" valid from June 28 through July 7, 2026, with channel-specific representations for email and display media. I'll set the eligibility rule to target the lapsed high-value audience, configure priority and capping limits, then create a fallback offer and decision collection.",
+    "text2": "I'm activating the lapsed high-value audience to paid media destinations like Google Ads Customer Match and Meta Ads by mapping identity attributes and scheduling the sync to occur before July 4th.",
+    "score": 0.000261,
+    "pred": 0
+  },
+  {
+    "label1": "t2",
+    "label2": "t6",
+    "text1": "Now I'm moving to AJO to build a personalized offer for \"20% Off - July 4th\" valid from June 28 through July 7, 2026, with channel-specific representations for email and display media. I'll set the eligibility rule to target the lapsed high-value audience, configure priority and capping limits, then create a fallback offer and decision collection.",
+    "text2": "Before going live, I need to QA the email and creative assets, verify the audience size is statistically significant, set up tracking for open rates, click-through rates, conversions, and revenue lift, then get final approval to launch.",
+    "score": 3.8e-05,
+    "pred": 0
+  },
+  {
+    "label1": "t3",
+    "label2": "t1",
+    "text1": "I'm creating a scheduled campaign in AJO that links to the audience from Phase 1 and sets the launch date for July 4th, 2026.",
+    "text2": "I need to set up the audience in AEP by defining lapsed customers (no purchase or interaction in 90+ days) and high-value criteria (lifetime value >= $500), then apply email consent filters, preview the size estimate, name it appropriately, and choose between batch or streaming evaluation.",
+    "score": 1.0,
+    "pred": 1
+  },
+  {
+    "label1": "t3",
+    "label2": "t2",
+    "text1": "I'm creating a scheduled campaign in AJO that links to the audience from Phase 1 and sets the launch date for July 4th, 2026.",
+    "text2": "Now I'm moving to AJO to build a personalized offer for \"20% Off - July 4th\" valid from June 28 through July 7, 2026, with channel-specific representations for email and display media. I'll set the eligibility rule to target the lapsed high-value audience, configure priority and capping limits, then create a fallback offer and decision collection.",
+    "score": 1.0,
+    "pred": 1
+  },
+  {
+    "label1": "t3",
+    "label2": "t4",
+    "text1": "I'm creating a scheduled campaign in AJO that links to the audience from Phase 1 and sets the launch date for July 4th, 2026.",
+    "text2": "I'm adding an email action to the campaign with a July 4th-themed template that includes personalized elements like the customer's name and their unique 20% off code. I'll configure the subject line, sender details, unsubscribe link, and tracking for opens and clicks, then preview and test before sending.",
+    "score": 0.992188,
+    "pred": 1
+  },
+  {
+    "label1": "t3",
+    "label2": "t5",
+    "text1": "I'm creating a scheduled campaign in AJO that links to the audience from Phase 1 and sets the launch date for July 4th, 2026.",
+    "text2": "I'm activating the lapsed high-value audience to paid media destinations like Google Ads Customer Match and Meta Ads by mapping identity attributes and scheduling the sync to occur before July 4th.",
+    "score": 1.0,
+    "pred": 1
+  },
+  {
+    "label1": "t3",
+    "label2": "t6",
+    "text1": "I'm creating a scheduled campaign in AJO that links to the audience from Phase 1 and sets the launch date for July 4th, 2026.",
+    "text2": "Before going live, I need to QA the email and creative assets, verify the audience size is statistically significant, set up tracking for open rates, click-through rates, conversions, and revenue lift, then get final approval to launch.",
+    "score": 0.000418,
+    "pred": 0
+  },
+  {
+    "label1": "t4",
+    "label2": "t1",
+    "text1": "I'm adding an email action to the campaign with a July 4th-themed template that includes personalized elements like the customer's name and their unique 20% off code. I'll configure the subject line, sender details, unsubscribe link, and tracking for opens and clicks, then preview and test before sending.",
+    "text2": "I need to set up the audience in AEP by defining lapsed customers (no purchase or interaction in 90+ days) and high-value criteria (lifetime value >= $500), then apply email consent filters, preview the size estimate, name it appropriately, and choose between batch or streaming evaluation.",
+    "score": 1.0,
+    "pred": 1
+  },
+  {
+    "label1": "t4",
+    "label2": "t2",
+    "text1": "I'm adding an email action to the campaign with a July 4th-themed template that includes personalized elements like the customer's name and their unique 20% off code. I'll configure the subject line, sender details, unsubscribe link, and tracking for opens and clicks, then preview and test before sending.",
+    "text2": "Now I'm moving to AJO to build a personalized offer for \"20% Off - July 4th\" valid from June 28 through July 7, 2026, with channel-specific representations for email and display media. I'll set the eligibility rule to target the lapsed high-value audience, configure priority and capping limits, then create a fallback offer and decision collection.",
+    "score": 1.0,
+    "pred": 1
+  },
+  {
+    "label1": "t4",
+    "label2": "t3",
+    "text1": "I'm adding an email action to the campaign with a July 4th-themed template that includes personalized elements like the customer's name and their unique 20% off code. I'll configure the subject line, sender details, unsubscribe link, and tracking for opens and clicks, then preview and test before sending.",
+    "text2": "I'm creating a scheduled campaign in AJO that links to the audience from Phase 1 and sets the launch date for July 4th, 2026.",
+    "score": 0.988281,
+    "pred": 1
+  },
+  {
+    "label1": "t4",
+    "label2": "t5",
+    "text1": "I'm adding an email action to the campaign with a July 4th-themed template that includes personalized elements like the customer's name and their unique 20% off code. I'll configure the subject line, sender details, unsubscribe link, and tracking for opens and clicks, then preview and test before sending.",
+    "text2": "I'm activating the lapsed high-value audience to paid media destinations like Google Ads Customer Match and Meta Ads by mapping identity attributes and scheduling the sync to occur before July 4th.",
+    "score": 1.0,
+    "pred": 1
+  },
+  {
+    "label1": "t4",
+    "label2": "t6",
+    "text1": "I'm adding an email action to the campaign with a July 4th-themed template that includes personalized elements like the customer's name and their unique 20% off code. I'll configure the subject line, sender details, unsubscribe link, and tracking for opens and clicks, then preview and test before sending.",
+    "text2": "Before going live, I need to QA the email and creative assets, verify the audience size is statistically significant, set up tracking for open rates, click-through rates, conversions, and revenue lift, then get final approval to launch.",
+    "score": 0.017456,
+    "pred": 0
+  },
+  {
+    "label1": "t5",
+    "label2": "t1",
+    "text1": "I'm activating the lapsed high-value audience to paid media destinations like Google Ads Customer Match and Meta Ads by mapping identity attributes and scheduling the sync to occur before July 4th.",
+    "text2": "I need to set up the audience in AEP by defining lapsed customers (no purchase or interaction in 90+ days) and high-value criteria (lifetime value >= $500), then apply email consent filters, preview the size estimate, name it appropriately, and choose between batch or streaming evaluation.",
+    "score": 8e-06,
+    "pred": 0
+  },
+  {
+    "label1": "t5",
+    "label2": "t2",
+    "text1": "I'm activating the lapsed high-value audience to paid media destinations like Google Ads Customer Match and Meta Ads by mapping identity attributes and scheduling the sync to occur before July 4th.",
+    "text2": "Now I'm moving to AJO to build a personalized offer for \"20% Off - July 4th\" valid from June 28 through July 7, 2026, with channel-specific representations for email and display media. I'll set the eligibility rule to target the lapsed high-value audience, configure priority and capping limits, then create a fallback offer and decision collection.",
+    "score": 1.0,
+    "pred": 1
+  },
+  {
+    "label1": "t5",
+    "label2": "t3",
+    "text1": "I'm activating the lapsed high-value audience to paid media destinations like Google Ads Customer Match and Meta Ads by mapping identity attributes and scheduling the sync to occur before July 4th.",
+    "text2": "I'm creating a scheduled campaign in AJO that links to the audience from Phase 1 and sets the launch date for July 4th, 2026.",
+    "score": 5e-06,
+    "pred": 0
+  },
+  {
+    "label1": "t5",
+    "label2": "t4",
+    "text1": "I'm activating the lapsed high-value audience to paid media destinations like Google Ads Customer Match and Meta Ads by mapping identity attributes and scheduling the sync to occur before July 4th.",
+    "text2": "I'm adding an email action to the campaign with a July 4th-themed template that includes personalized elements like the customer's name and their unique 20% off code. I'll configure the subject line, sender details, unsubscribe link, and tracking for opens and clicks, then preview and test before sending.",
+    "score": 7e-05,
+    "pred": 0
+  },
+  {
+    "label1": "t5",
+    "label2": "t6",
+    "text1": "I'm activating the lapsed high-value audience to paid media destinations like Google Ads Customer Match and Meta Ads by mapping identity attributes and scheduling the sync to occur before July 4th.",
+    "text2": "Before going live, I need to QA the email and creative assets, verify the audience size is statistically significant, set up tracking for open rates, click-through rates, conversions, and revenue lift, then get final approval to launch.",
+    "score": 2.3e-05,
+    "pred": 0
+  },
+  {
+    "label1": "t6",
+    "label2": "t1",
+    "text1": "Before going live, I need to QA the email and creative assets, verify the audience size is statistically significant, set up tracking for open rates, click-through rates, conversions, and revenue lift, then get final approval to launch.",
+    "text2": "I need to set up the audience in AEP by defining lapsed customers (no purchase or interaction in 90+ days) and high-value criteria (lifetime value >= $500), then apply email consent filters, preview the size estimate, name it appropriately, and choose between batch or streaming evaluation.",
+    "score": 1.0,
+    "pred": 1
+  },
+  {
+    "label1": "t6",
+    "label2": "t2",
+    "text1": "Before going live, I need to QA the email and creative assets, verify the audience size is statistically significant, set up tracking for open rates, click-through rates, conversions, and revenue lift, then get final approval to launch.",
+    "text2": "Now I'm moving to AJO to build a personalized offer for \"20% Off - July 4th\" valid from June 28 through July 7, 2026, with channel-specific representations for email and display media. I'll set the eligibility rule to target the lapsed high-value audience, configure priority and capping limits, then create a fallback offer and decision collection.",
+    "score": 1.0,
+    "pred": 1
+  },
+  {
+    "label1": "t6",
+    "label2": "t3",
+    "text1": "Before going live, I need to QA the email and creative assets, verify the audience size is statistically significant, set up tracking for open rates, click-through rates, conversions, and revenue lift, then get final approval to launch.",
+    "text2": "I'm creating a scheduled campaign in AJO that links to the audience from Phase 1 and sets the launch date for July 4th, 2026.",
+    "score": 1.0,
+    "pred": 1
+  },
+  {
+    "label1": "t6",
+    "label2": "t4",
+    "text1": "Before going live, I need to QA the email and creative assets, verify the audience size is statistically significant, set up tracking for open rates, click-through rates, conversions, and revenue lift, then get final approval to launch.",
+    "text2": "I'm adding an email action to the campaign with a July 4th-themed template that includes personalized elements like the customer's name and their unique 20% off code. I'll configure the subject line, sender details, unsubscribe link, and tracking for opens and clicks, then preview and test before sending.",
+    "score": 1.0,
+    "pred": 1
+  },
+  {
+    "label1": "t6",
+    "label2": "t5",
+    "text1": "Before going live, I need to QA the email and creative assets, verify the audience size is statistically significant, set up tracking for open rates, click-through rates, conversions, and revenue lift, then get final approval to launch.",
+    "text2": "I'm activating the lapsed high-value audience to paid media destinations like Google Ads Customer Match and Meta Ads by mapping identity attributes and scheduling the sync to occur before July 4th.",
+    "score": 1.0,
+    "pred": 1
+  }
+]

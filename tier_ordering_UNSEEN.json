@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "t1": "First, there is a confirmation action. This happens if the form is submitted successfully. We can select to either redirect the user to another page. For example, a homepage. Display a confirmation text or redirect to a sub page.",
+    "t2": "We’ll add the label. And select the WhatsApp configuration. And click Save. Now that the journey is all set up, let’s go back and add the messages to each of the WhatsApp actions on the canvas. Let’s go ahead and click the Trip confirmation action and Edit content.",
+    "t3": "These are all checked closely because they are indicators of reputation of the sender, be it good or bad. Think of it this way. It is like letting a stranger in your home. Would you have reservations about someone you have never met enter your home? The answer, most likely, is yes.",
+    "_tiers": [
+      4,
+      6,
+      11
+    ]
+  },
+  {
+    "id": 2,
+    "t1": "The ability to evaluate audiences on demand is for these urgent use cases. Let’s imagine I work for a sports franchise. There’s a big game tomorrow that was just cancelled due to weather. I want to notify all of the ticket holders as soon as possible. First I can create a batch audience called Bought Tickets to the Big Game.",
+    "t2": "This looks good. Let’s go ahead and publish the Journey. And there you go. So, your Journey has been published and your first WhatsApp message is on its way. Note, after your Journey is published, you can click reports to view out of the box reporting, including delivery reports, error logs, bounce reasons, and even read receipts.",
+    "t3": "So, let’s go in and edit the content. Now, I only have a download the app in there. This is obviously not the SMS content that I’m going to use. And to make my life a bit easier, I am going to use the AI assistant to help me create the content. So, you can either click here or we can click here.",
+    "_tiers": [
+      4,
+      6,
+      15
+    ]
+  },
+  {
+    "id": 3,
+    "t1": "Once I break inheritance, that means any updates that I perform to the original fragment won’t apply to this new fragment. So I can just change this to a new instance of it. So if I break the inheritance here, it asks me if I for sure want to do that. Then I can change this to a different month. So once I’m ready to go, I can save my email campaign.",
+    "t2": "The type, AEP, the namespace that we set, email, and the channel data. For the email channel is email, for SMS the phone number, and for push the ECID. The user ID is required, and here you see the context data. In our case, we added the URL. So I made sure to populate the URL field so that we could use the URL in our email communication.",
+    "t3": "These are all checked closely because they are indicators of reputation of the sender, be it good or bad. Think of it this way. It is like letting a stranger in your home. Would you have reservations about someone you have never met enter your home? The answer, most likely, is yes.",
+    "_tiers": [
+      5,
+      6,
+      11
+    ]
+  },
+  {
+    "id": 4,
+    "t1": "First, give your campaign a name. You can also add a description and tags to help organize and categorize it. These details make it easier to manage campaigns later. Next move to the actions tab. This is where you decide what happens when the campaign is triggered.",
+    "t2": "Now let’s add another European one, DMX. I’ll add three domains as well. Now I just have to add the NinoLane with the warmup data to the plan. Save the file as CSV. And now I can re-upload the plan in Journey Optimizer.",
+    "t3": "Now my package can be imported into another sandbox. So let me go ahead and do that. Playbook packages can only be imported into development sandboxes. This is to help enforce best practices so that you really test them out with your actual schemas, and test data before you move them into your production environment. I’ll choose my target sandbox and select next.",
+    "_tiers": [
+      6,
+      11,
+      15
+    ]
+  },
+  {
+    "id": 5,
+    "t1": "The ability to evaluate audiences on demand is for these urgent use cases. Let’s imagine I work for a sports franchise. There’s a big game tomorrow that was just cancelled due to weather. I want to notify all of the ticket holders as soon as possible. First I can create a batch audience called Bought Tickets to the Big Game.",
+    "t2": "If you’d like to increase this limit, you can use the capping API, which is documented on our website to increase that throughput to match whatever you are comfortable with. Thanks and we look forward to using data sources in a later video. - recommendation-more-help 7e382214-bd30-4de2-bc8b-f6f6e7182305",
+    "t3": "Bye. See the product documentation for more information on and how to in Journey Optimizer. data governance work with consent policies recommendation-more-help 7e382214-bd30-4de2-bc8b-f6f6e7182305",
+    "_tiers": [
+      4,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 6,
+    "t1": "So, when I do that, then I want to just edit my text with some styling on this text to center it for example, put as an H3 heading, then I want to, not put it in bold. Okay, so I have my styling here. I can just start duplicating it and moving it around. I remove this text in here, okay. Now, one thing I might want to do is to add some margins of patterns, more precisely.",
+    "t2": "And now I just need to select which model I want to use. So I’ll select the one that we just created, brand and test model. And I can see a summary of the change that I made that the ranking method is now brand and test model for this decision. And I can click finish and it has updated successfully. recommendation-more-help 7e382214-bd30-4de2-bc8b-f6f6e7182305",
+    "t3": "Lastly, here on the left-hand side, there’s a table of contents where you can quickly navigate to sections of the report you care about. Thank you for watching. See the for more information about this feature. product documentation recommendation-more-help 7e382214-bd30-4de2-bc8b-f6f6e7182305",
+    "_tiers": [
+      6,
+      8,
+      13
+    ]
+  },
+  {
+    "id": 7,
+    "t1": "First, there is a confirmation action. This happens if the form is submitted successfully. We can select to either redirect the user to another page. For example, a homepage. Display a confirmation text or redirect to a sub page.",
+    "t2": "First, give your campaign a name. You can also add a description and tags to help organize and categorize it. These details make it easier to manage campaigns later. Next move to the actions tab. This is where you decide what happens when the campaign is triggered.",
+    "t3": "Bye. See the product documentation for more information on and how to in Journey Optimizer. data governance work with consent policies recommendation-more-help 7e382214-bd30-4de2-bc8b-f6f6e7182305",
+    "_tiers": [
+      4,
+      6,
+      12
+    ]
+  },
+  {
+    "id": 8,
+    "t1": "We also covered how to preview your emails against test profiles to assess how content is being personalized, and how to send proofs to verify quality using real-world clients. Thanks for watching. recommendation-more-help 7e382214-bd30-4de2-bc8b-f6f6e7182305",
+    "t2": "That is not a requirement. But what is a requirement is that there is an ID in here. And so if I go and I look for my identifier, I’ll see that there’s actually an orchestration event ID in here. As well as let’s go back over here. This ECID.",
+    "t3": "We’re currently looking at the last seven days. This view changes based on the specific metrics selected in the breakdown table below. We’ll get to that shortly. Latency over time provides a similar view, but for the latency metrics. Next, we have a breakdown of Custom Action metrics in a specific hierarchy.",
+    "_tiers": [
+      6,
+      11,
+      13
+    ]
+  }
+]

@@ -1,0 +1,39 @@
+[train] dataset=multiwoz_v24 total_steps=4460 warmup=267 batch_size=32 epochs=10 max_length=256 params=194,537,473  loss=listwise_softmax(group=5)  early_stop=(thresh 0.002, patience 3)
+  step=   200/4460  loss=1.2862  lr=1.50e-05  epoch=1
+  step=   400/4460  loss=1.1416  lr=1.94e-05  epoch=1
+[epoch 1/10]  train_loss=1.3193  val_AUC=0.9291  val_P@1=0.7880  (177s)
+  * new best val_P@1=0.7880, saved checkpoint_best.pt
+  step=   600/4460  loss=0.9679  lr=1.84e-05  epoch=2
+  step=   800/4460  loss=1.0546  lr=1.75e-05  epoch=2
+[epoch 2/10]  train_loss=1.0553  val_AUC=0.9468  val_P@1=0.8093  (355s)
+  * new best val_P@1=0.8093, saved checkpoint_best.pt
+  step=  1000/4460  loss=0.8737  lr=1.65e-05  epoch=3
+  step=  1200/4460  loss=0.9821  lr=1.55e-05  epoch=3
+[epoch 3/10]  train_loss=0.9162  val_AUC=0.9454  val_P@1=0.7907  (533s)
+  no improvement (best_P@1=0.8093, bad_epochs=1/3)
+  step=  1400/4460  loss=0.9199  lr=1.46e-05  epoch=4
+  step=  1600/4460  loss=0.8034  lr=1.36e-05  epoch=4
+[epoch 4/10]  train_loss=0.7995  val_AUC=0.9485  val_P@1=0.8227  (709s)
+  * new best val_P@1=0.8227, saved checkpoint_best.pt
+  step=  1800/4460  loss=0.9824  lr=1.27e-05  epoch=5
+  step=  2000/4460  loss=0.6165  lr=1.17e-05  epoch=5
+  step=  2200/4460  loss=0.6582  lr=1.08e-05  epoch=5
+[epoch 5/10]  train_loss=0.7131  val_AUC=0.9534  val_P@1=0.8373  (888s)
+  * new best val_P@1=0.8373, saved checkpoint_best.pt
+  step=  2400/4460  loss=0.7004  lr=9.83e-06  epoch=6
+  step=  2600/4460  loss=0.6761  lr=8.87e-06  epoch=6
+[epoch 6/10]  train_loss=0.6392  val_AUC=0.9502  val_P@1=0.8267  (1066s)
+  no improvement (best_P@1=0.8373, bad_epochs=1/3)
+  step=  2800/4460  loss=0.4363  lr=7.92e-06  epoch=7
+  step=  3000/4460  loss=0.4356  lr=6.96e-06  epoch=7
+[epoch 7/10]  train_loss=0.5781  val_AUC=0.9506  val_P@1=0.8320  (1243s)
+  no improvement (best_P@1=0.8373, bad_epochs=2/3)
+  step=  3200/4460  loss=0.5992  lr=6.01e-06  epoch=8
+  step=  3400/4460  loss=0.3286  lr=5.06e-06  epoch=8
+[epoch 8/10]  train_loss=0.5330  val_AUC=0.9506  val_P@1=0.8200  (1420s)
+  no improvement (best_P@1=0.8373, bad_epochs=3/3)
+[early stop] no val-P@1 improvement for 3 epochs.
+
+[done]  best val_P@1=0.8373  stopped_early=True
+  best:   /mnt/localssd/new_base_line/internship-causal-embedding/my_work/kl/cross_encoder_2x/results/multiwoz_v24/checkpoint_best.pt
+  latest: /mnt/localssd/new_base_line/internship-causal-embedding/my_work/kl/cross_encoder_2x/results/multiwoz_v24/checkpoint_latest.pt

@@ -1,0 +1,58 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[device] cuda
+[run dir] /mnt/localssd/internship-causal-embedding-merge-followup/finetune_eval/results_reverse/multiwoz_v24
+[data] train pairs ← /mnt/localssd/internship-causal-embedding-merge-followup/finetune_eval/results_reverse/multiwoz_v24/train_pairs.jsonl
+  15000 train pairs  (pairwise DPO-style loss: A→B preferred over B→A)
+[data] val pairs ← /mnt/localssd/internship-causal-embedding-merge-followup/data_6/multiwoz_v24/val.jsonl  (2000)
+[model] BiEncoder('google-bert/bert-base-uncased', pooling='cls')
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 9801.85it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 8271.07it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+  params: 218,964,480
+
+==============================================================================
+training: 2 epochs · batch=32 · pairwise DPO loss · lr=2e-05
+  loss = -log σ( (s(A,B) - s(B,A)) / τ )   τ_init=0.05
+steps/epoch=468 · total_steps=936
+bf16=False  early_stop_min_delta=0.001
+==============================================================================
+
+epoch 1/2  (293s)
+  train loss=0.0703  τ=0.0495  s(A→B)=12.227  s(B→A)=-5.553  margin=17.780
+  [end_of_epoch] step=468 epoch=1  MRR=0.0141  R@1=0.004  R@10=0.025  med_rank=686
+  -> new best MRR=0.0141  (saved)
+
+epoch 2/2  (292s)
+  train loss=0.0028  τ=0.0493  s(A→B)=11.682  s(B→A)=-6.524  margin=18.206
+  [end_of_epoch] step=936 epoch=2  MRR=0.0137  R@1=0.004  R@10=0.023  med_rank=643
+  -> no improvement (best=0.0141, patience 1/2)
+
+==============================================================================
+[done] best val MRR=0.0141
+  best:    /mnt/localssd/internship-causal-embedding-merge-followup/finetune_eval/results_reverse/multiwoz_v24/checkpoint_best.pt
+  latest:  /mnt/localssd/internship-causal-embedding-merge-followup/finetune_eval/results_reverse/multiwoz_v24/checkpoint_latest.pt

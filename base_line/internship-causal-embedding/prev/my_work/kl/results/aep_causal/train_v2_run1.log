@@ -1,0 +1,120 @@
+[device] cuda
+[out]    /mnt/localssd/internship-causal-embedding-merge-followup/my_work/kl/results/aep_causal
+[data] 5487 train pairs  K=8
+[data] 562 val pairs
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 10163.24it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 9918.09it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[model] CDEv2  backbone=google-bert/bert-base-uncased  proj_dim=256  params=221,594,882
+
+================================================================================
+CDEv2 training  total=5000  phA=1000  phB_end=3000
+batch=64  K=8  bf16=True  backbone_lr=2e-05  head_lr=0.0001
+================================================================================
+  step=   50/5000 [A]  loss=4.0237  info=4.0237  τ=0.0500  λcos=1.000  s+=-0.303  s-=-0.325  γ=0.0002
+  step=  100/5000 [A]  loss=3.0272  info=3.0272  τ=0.0499  λcos=1.000  s+=0.026  s-=-0.130  γ=0.0000
+  step=  150/5000 [A]  loss=3.0208  info=3.0208  τ=0.0499  λcos=1.001  s+=-0.012  s-=-0.222  γ=0.0003
+  step=  200/5000 [A]  loss=2.5222  info=2.5222  τ=0.0501  λcos=1.001  s+=0.050  s-=-0.225  γ=0.0008
+  [val step=200]  MRR=0.2514  R@1=0.125  R@5=0.368  R@10=0.527  med=9  * new best
+  step=  250/5000 [A]  loss=2.7423  info=2.7423  τ=0.0507  λcos=1.000  s+=0.099  s-=-0.148  γ=0.0016
+  step=  300/5000 [A]  loss=2.4422  info=2.4422  τ=0.0504  λcos=1.001  s+=0.044  s-=-0.281  γ=0.0014
+  step=  350/5000 [A]  loss=1.9551  info=1.9551  τ=0.0504  λcos=1.002  s+=0.113  s-=-0.323  γ=0.0016
+  step=  400/5000 [A]  loss=2.0781  info=2.0781  τ=0.0497  λcos=1.003  s+=0.109  s-=-0.294  γ=0.0010
+  [val step=400]  MRR=0.2937  R@1=0.160  R@5=0.418  R@10=0.585  med=8  * new best
+  step=  450/5000 [A]  loss=1.4287  info=1.4287  τ=0.0487  λcos=1.005  s+=0.069  s-=-0.471  γ=-0.0002
+  step=  500/5000 [A]  loss=1.7205  info=1.7205  τ=0.0482  λcos=1.006  s+=0.128  s-=-0.366  γ=-0.0006
+  step=  550/5000 [A]  loss=1.6669  info=1.6669  τ=0.0467  λcos=1.009  s+=0.095  s-=-0.422  γ=-0.0026
+  step=  600/5000 [A]  loss=1.2292  info=1.2292  τ=0.0461  λcos=1.010  s+=0.094  s-=-0.476  γ=-0.0033
+  [val step=600]  MRR=0.3307  R@1=0.181  R@5=0.498  R@10=0.648  med=6  * new best
+  step=  650/5000 [A]  loss=1.6146  info=1.6146  τ=0.0447  λcos=1.013  s+=0.004  s-=-0.572  γ=-0.0054
+  step=  700/5000 [A]  loss=0.9968  info=0.9968  τ=0.0442  λcos=1.014  s+=0.033  s-=-0.667  γ=-0.0064
+  step=  750/5000 [A]  loss=1.3278  info=1.3278  τ=0.0437  λcos=1.015  s+=0.090  s-=-0.527  γ=-0.0073
+  step=  800/5000 [A]  loss=1.0338  info=1.0338  τ=0.0429  λcos=1.017  s+=0.070  s-=-0.620  γ=-0.0086
+  [val step=800]  MRR=0.3209  R@1=0.181  R@5=0.470  R@10=0.614  med=6  (patience 1/6)
+  step=  850/5000 [A]  loss=1.0924  info=1.0924  τ=0.0425  λcos=1.018  s+=0.095  s-=-0.600  γ=-0.0092
+  step=  900/5000 [A]  loss=0.9715  info=0.9715  τ=0.0418  λcos=1.020  s+=0.050  s-=-0.670  γ=-0.0105
+  step=  950/5000 [A]  loss=0.8884  info=0.8884  τ=0.0414  λcos=1.021  s+=0.018  s-=-0.806  γ=-0.0118
+  step= 1000/5000 [A]  loss=0.9734  info=0.9734  τ=0.0411  λcos=1.022  s+=0.025  s-=-0.713  γ=-0.0123
+  [val step=1000]  MRR=0.3147  R@1=0.174  R@5=0.463  R@10=0.610  med=6  (patience 2/6)
+  step= 1050/5000 [B]  loss=1.5459  info=1.0834  ent=0.0000  anti=0.9249  slb=0.0000  τ=0.0435  λcos=1.024  s+=-1.226  s-=-2.281  γ=-0.0122
+  step= 1100/5000 [B]  loss=1.4287  info=1.1372  ent=0.0000  anti=0.5831  slb=0.0000  τ=0.0453  λcos=1.027  s+=-1.167  s-=-2.128  γ=-0.0142
+  step= 1150/5000 [B]  loss=1.1052  info=0.8082  ent=0.0000  anti=0.5939  slb=0.0000  τ=0.0469  λcos=1.028  s+=-1.049  s-=-2.045  γ=-0.0159
+  step= 1200/5000 [B]  loss=0.8939  info=0.6458  ent=0.0000  anti=0.4963  slb=0.0000  τ=0.0485  λcos=1.030  s+=-2.972  s-=-4.501  γ=-0.0171
+  [val step=1200]  MRR=0.3047  R@1=0.171  R@5=0.445  R@10=0.577  med=8  (patience 3/6)
+  step= 1250/5000 [B]  loss=0.8968  info=0.7361  ent=0.0000  anti=0.3213  slb=0.0000  τ=0.0499  λcos=1.031  s+=-1.644  s-=-2.895  γ=-0.0180
+  step= 1300/5000 [B]  loss=0.7187  info=0.6506  ent=0.0000  anti=0.1362  slb=0.0000  τ=0.0511  λcos=1.032  s+=-1.805  s-=-3.146  γ=-0.0191
+  step= 1350/5000 [B]  loss=0.7281  info=0.6233  ent=0.0000  anti=0.2095  slb=0.0000  τ=0.0524  λcos=1.033  s+=-1.923  s-=-3.202  γ=-0.0192
+  step= 1400/5000 [B]  loss=0.7770  info=0.7048  ent=0.0000  anti=0.1443  slb=0.0000  τ=0.0533  λcos=1.034  s+=-2.183  s-=-3.562  γ=-0.0201
+  [val step=1400]  MRR=0.3403  R@1=0.212  R@5=0.477  R@10=0.628  med=6  * new best
+  step= 1450/5000 [B]  loss=0.7205  info=0.6489  ent=0.0589  anti=0.1314  slb=0.0000  τ=0.0543  λcos=1.035  s+=-2.580  s-=-4.058  γ=-0.0204
+  step= 1500/5000 [B]  loss=0.6802  info=0.6117  ent=0.0000  anti=0.1370  slb=0.0000  τ=0.0551  λcos=1.035  s+=-1.827  s-=-3.083  γ=-0.0206
+  step= 1550/5000 [B]  loss=0.8395  info=0.7685  ent=0.0000  anti=0.1419  slb=0.0000  τ=0.0561  λcos=1.036  s+=-1.912  s-=-3.274  γ=-0.0208
+  step= 1600/5000 [B]  loss=0.4696  info=0.4491  ent=0.0000  anti=0.0410  slb=0.0000  τ=0.0570  λcos=1.037  s+=-2.186  s-=-3.730  γ=-0.0213
+  [val step=1600]  MRR=0.3300  R@1=0.194  R@5=0.486  R@10=0.632  med=6  (patience 1/6)
+  step= 1650/5000 [B]  loss=0.4857  info=0.4462  ent=0.0000  anti=0.0790  slb=0.0000  τ=0.0580  λcos=1.037  s+=-2.326  s-=-3.839  γ=-0.0213
+  step= 1700/5000 [B]  loss=0.6279  info=0.5465  ent=0.0000  anti=0.1628  slb=0.0000  τ=0.0587  λcos=1.038  s+=-3.171  s-=-4.838  γ=-0.0220
+  step= 1750/5000 [B]  loss=0.5968  info=0.5896  ent=0.0000  anti=0.0144  slb=0.0000  τ=0.0593  λcos=1.038  s+=-3.525  s-=-5.229  γ=-0.0222
+  step= 1800/5000 [B]  loss=0.5955  info=0.5626  ent=0.0000  anti=0.0658  slb=0.0000  τ=0.0601  λcos=1.039  s+=-3.467  s-=-5.277  γ=-0.0222
+  [val step=1800]  MRR=0.3420  R@1=0.212  R@5=0.489  R@10=0.617  med=6  * new best
+  step= 1850/5000 [B]  loss=0.5899  info=0.5576  ent=0.0000  anti=0.0645  slb=0.0000  τ=0.0608  λcos=1.039  s+=-2.493  s-=-4.002  γ=-0.0222
+  step= 1900/5000 [B]  loss=0.4798  info=0.4781  ent=0.0000  anti=0.0034  slb=0.0000  τ=0.0615  λcos=1.040  s+=-1.637  s-=-3.061  γ=-0.0224
+  step= 1950/5000 [B]  loss=0.6653  info=0.6462  ent=0.0000  anti=0.0382  slb=0.0000  τ=0.0620  λcos=1.040  s+=-3.117  s-=-4.871  γ=-0.0226
+  step= 2000/5000 [B]  loss=0.5152  info=0.4817  ent=0.0000  anti=0.0669  slb=0.0000  τ=0.0625  λcos=1.041  s+=-2.829  s-=-4.479  γ=-0.0226
+  [val step=2000]  MRR=0.3138  R@1=0.173  R@5=0.457  R@10=0.607  med=6  (patience 1/6)
+  step= 2050/5000 [B]  loss=0.3503  info=0.3503  ent=0.0000  anti=0.0000  slb=0.0000  τ=0.0631  λcos=1.041  s+=-2.694  s-=-4.480  γ=-0.0229
+  step= 2100/5000 [B]  loss=0.4539  info=0.4522  ent=0.0000  anti=0.0034  slb=0.0000  τ=0.0639  λcos=1.042  s+=-2.304  s-=-3.998  γ=-0.0226
+  step= 2150/5000 [B]  loss=0.5685  info=0.5470  ent=0.0000  anti=0.0429  slb=0.0000  τ=0.0643  λcos=1.042  s+=-4.110  s-=-6.227  γ=-0.0231
+  step= 2200/5000 [B]  loss=0.3775  info=0.3694  ent=0.0000  anti=0.0161  slb=0.0000  τ=0.0649  λcos=1.042  s+=-4.188  s-=-6.174  γ=-0.0232
+  [val step=2200]  MRR=0.3332  R@1=0.212  R@5=0.464  R@10=0.601  med=7  (patience 2/6)
+  step= 2250/5000 [B]  loss=0.4109  info=0.4109  ent=0.0000  anti=0.0000  slb=0.0000  τ=0.0653  λcos=1.043  s+=-3.421  s-=-5.324  γ=-0.0234
+  step= 2300/5000 [B]  loss=0.3242  info=0.3242  ent=0.0000  anti=0.0000  slb=0.0000  τ=0.0658  λcos=1.043  s+=-3.507  s-=-5.477  γ=-0.0233
+  step= 2350/5000 [B]  loss=0.3439  info=0.3424  ent=0.0000  anti=0.0030  slb=0.0000  τ=0.0662  λcos=1.044  s+=-4.299  s-=-6.506  γ=-0.0235
+  step= 2400/5000 [B]  loss=0.3710  info=0.3687  ent=0.0000  anti=0.0047  slb=0.0000  τ=0.0665  λcos=1.044  s+=-4.509  s-=-6.762  γ=-0.0237
+  [val step=2400]  MRR=0.3334  R@1=0.199  R@5=0.477  R@10=0.598  med=6  (patience 3/6)
+  step= 2450/5000 [B]  loss=0.4378  info=0.4333  ent=0.0000  anti=0.0091  slb=0.0000  τ=0.0669  λcos=1.044  s+=-3.508  s-=-5.659  γ=-0.0237
+  step= 2500/5000 [B]  loss=0.4967  info=0.4967  ent=0.0000  anti=0.0000  slb=0.0000  τ=0.0672  λcos=1.044  s+=-3.223  s-=-5.142  γ=-0.0237
+  step= 2550/5000 [B]  loss=0.5436  info=0.5433  ent=0.0000  anti=0.0006  slb=0.0000  τ=0.0676  λcos=1.044  s+=-3.438  s-=-5.404  γ=-0.0237
+  step= 2600/5000 [B]  loss=0.3169  info=0.3166  ent=0.0000  anti=0.0005  slb=0.0000  τ=0.0680  λcos=1.045  s+=-4.188  s-=-6.483  γ=-0.0237
+  [val step=2600]  MRR=0.3328  R@1=0.201  R@5=0.477  R@10=0.632  med=6  (patience 4/6)
+  step= 2650/5000 [B]  loss=0.2861  info=0.2861  ent=0.0000  anti=0.0000  slb=0.0000  τ=0.0681  λcos=1.045  s+=-4.104  s-=-6.452  γ=-0.0241
+  step= 2700/5000 [B]  loss=0.5811  info=0.5715  ent=0.0000  anti=0.0191  slb=0.0000  τ=0.0685  λcos=1.045  s+=-4.177  s-=-6.511  γ=-0.0240
+  step= 2750/5000 [B]  loss=0.3408  info=0.3408  ent=0.0000  anti=0.0000  slb=0.0000  τ=0.0688  λcos=1.045  s+=-3.325  s-=-5.400  γ=-0.0239
+  step= 2800/5000 [B]  loss=0.4054  info=0.3944  ent=0.0000  anti=0.0220  slb=0.0000  τ=0.0691  λcos=1.045  s+=-4.311  s-=-6.639  γ=-0.0241
+  [val step=2800]  MRR=0.3355  R@1=0.201  R@5=0.480  R@10=0.621  med=6  (patience 5/6)
+  step= 2850/5000 [B]  loss=0.4000  info=0.3958  ent=0.0000  anti=0.0084  slb=0.0000  τ=0.0693  λcos=1.046  s+=-4.280  s-=-6.627  γ=-0.0242
+  step= 2900/5000 [B]  loss=0.3622  info=0.3622  ent=0.0000  anti=0.0000  slb=0.0000  τ=0.0695  λcos=1.046  s+=-4.250  s-=-6.551  γ=-0.0243
+  step= 2950/5000 [B]  loss=0.2485  info=0.2485  ent=0.0000  anti=0.0000  slb=0.0000  τ=0.0696  λcos=1.046  s+=-4.164  s-=-6.617  γ=-0.0243
+  step= 3000/5000 [B]  loss=0.2831  info=0.2782  ent=0.0000  anti=0.0096  slb=0.0000  τ=0.0698  λcos=1.046  s+=-3.767  s-=-6.078  γ=-0.0243
+  [val step=3000]  MRR=0.3380  R@1=0.210  R@5=0.491  R@10=0.623  med=6  (patience 6/6)
+
+[early stop] no MRR improvement for 6 checks.
+
+================================================================================
+[done]  best val MRR=0.3420
+  best:   /mnt/localssd/internship-causal-embedding-merge-followup/my_work/kl/results/aep_causal/cde_v2_best.pt
+  latest: /mnt/localssd/internship-causal-embedding-merge-followup/my_work/kl/results/aep_causal/cde_v2_latest.pt

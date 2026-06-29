@@ -1,0 +1,21 @@
+{
+  "dataset": "multiwoz_v24",
+  "backbone": "google-bert/bert-base-uncased",
+  "pooling": "cls",
+  "max_seq_length": 256,
+  "batch_size": 32,
+  "epochs": 2,
+  "lr": 2e-05,
+  "temperature_lr": 0.001,
+  "temperature_init": 0.05,
+  "weight_decay": 0.01,
+  "warmup_ratio": 0.1,
+  "grad_clip": 1.0,
+  "val_frac": 0.1,
+  "max_val_samples": 2000,
+  "seed": 42,
+  "n_train": 15000,
+  "n_val": 2000,
+  "k_hard_negs": 4,
+  "device": "cuda"
+}

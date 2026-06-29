@@ -1,0 +1,74 @@
+{
+  "config": {
+    "eval_type": "semantic_hard_negatives_only",
+    "n_negatives_per_anchor": 4,
+    "miner": "sentence-transformers/all-MiniLM-L6-v2"
+  },
+  "results": [
+    {
+      "dataset": "aep_causal",
+      "checkpoint": "/mnt/localssd/base_line/internship-causal-embedding/finetune_eval/results/aep_causal/checkpoint_best.pt",
+      "backbone": "google-bert/bert-base-uncased",
+      "pooling": "cls",
+      "n_test_pairs": 562,
+      "n_negatives": 4,
+      "encoding_seconds": 3.557169198989868,
+      "auc": 0.7156848000911843,
+      "precision_at_1": 0.5177935943060499,
+      "eval_type": "semantic_hard_negatives",
+      "miner": "sentence-transformers/all-MiniLM-L6-v2"
+    },
+    {
+      "dataset": "followupqg",
+      "checkpoint": "/mnt/localssd/base_line/internship-causal-embedding/finetune_eval/results/followupqg/checkpoint_best.pt",
+      "backbone": "google-bert/bert-base-uncased",
+      "pooling": "cls",
+      "n_test_pairs": 501,
+      "n_negatives": 4,
+      "encoding_seconds": 2.8703551292419434,
+      "auc": 0.8369767451125691,
+      "precision_at_1": 0.7365269461077845,
+      "eval_type": "semantic_hard_negatives",
+      "miner": "sentence-transformers/all-MiniLM-L6-v2"
+    },
+    {
+      "dataset": "multiwoz_v24",
+      "checkpoint": "/mnt/localssd/base_line/internship-causal-embedding/finetune_eval/results/multiwoz_v24/checkpoint_best.pt",
+      "backbone": "google-bert/bert-base-uncased",
+      "pooling": "cls",
+      "n_test_pairs": 7368,
+      "n_negatives": 4,
+      "encoding_seconds": 25.334771156311035,
+      "auc": 0.6222510461170528,
+      "precision_at_1": 0.41096634093376766,
+      "eval_type": "semantic_hard_negatives",
+      "miner": "sentence-transformers/all-MiniLM-L6-v2"
+    },
+    {
+      "dataset": "qrecc",
+      "checkpoint": "/mnt/localssd/base_line/internship-causal-embedding/finetune_eval/results/qrecc/checkpoint_best.pt",
+      "backbone": "google-bert/bert-base-uncased",
+      "pooling": "cls",
+      "n_test_pairs": 5204,
+      "n_negatives": 4,
+      "encoding_seconds": 16.077189445495605,
+      "auc": 0.6364924271875061,
+      "precision_at_1": 0.41372021521906227,
+      "eval_type": "semantic_hard_negatives",
+      "miner": "sentence-transformers/all-MiniLM-L6-v2"
+    },
+    {
+      "dataset": "workflow",
+      "checkpoint": "/mnt/localssd/base_line/internship-causal-embedding/finetune_eval/results/workflow/checkpoint_best.pt",
+      "backbone": "google-bert/bert-base-uncased",
+      "pooling": "cls",
+      "n_test_pairs": 260487,
+      "n_negatives": 4,
+      "encoding_seconds": 445.99354791641235,
+      "auc": 0.6882576146475068,
+      "precision_at_1": 0.47634622841063085,
+      "eval_type": "semantic_hard_negatives",
+      "miner": "sentence-transformers/all-MiniLM-L6-v2"
+    }
+  ]
+}

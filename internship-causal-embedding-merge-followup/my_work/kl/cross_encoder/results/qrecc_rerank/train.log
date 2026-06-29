@@ -1,0 +1,25 @@
+[train] dataset=qrecc total_steps=2228 warmup=133 batch_size=128 epochs=4 max_length=256  early_stop=(thresh 0.001, patience 2)
+  step=   200/2228  loss=0.4136  lr=1.94e-05  epoch=1
+  step=   400/2228  loss=0.5256  lr=1.75e-05  epoch=1
+[epoch 1/4]  train_loss=0.4704  val_AUC=0.9133  val_P@1=0.7373  (96s)
+  * new best val_AUC=0.9133, saved checkpoint_best.pt
+  step=   600/2228  loss=0.4617  lr=1.55e-05  epoch=2
+  step=   800/2228  loss=0.3709  lr=1.36e-05  epoch=2
+  step=  1000/2228  loss=0.4407  lr=1.17e-05  epoch=2
+[epoch 2/4]  train_loss=0.4153  val_AUC=0.9178  val_P@1=0.7427  (193s)
+  * new best val_AUC=0.9178, saved checkpoint_best.pt
+  step=  1200/2228  loss=0.4443  lr=9.81e-06  epoch=3
+  step=  1400/2228  loss=0.3161  lr=7.90e-06  epoch=3
+  step=  1600/2228  loss=0.3557  lr=6.00e-06  epoch=3
+[epoch 3/4]  train_loss=0.3758  val_AUC=0.9154  val_P@1=0.7467  (290s)
+  no improvement (best=0.9178, bad_epochs=1/2)
+  step=  1800/2228  loss=0.3019  lr=4.09e-06  epoch=4
+  step=  2000/2228  loss=0.3907  lr=2.18e-06  epoch=4
+  step=  2200/2228  loss=0.3281  lr=2.67e-07  epoch=4
+[epoch 4/4]  train_loss=0.3428  val_AUC=0.9105  val_P@1=0.7360  (387s)
+  no improvement (best=0.9178, bad_epochs=2/2)
+[early stop] no val-AUC improvement for 2 epochs.
+
+[done]  best val_AUC=0.9178  stopped_early=True
+  best:   my_work/kl/cross_encoder/results/qrecc_rerank/checkpoint_best.pt
+  latest: my_work/kl/cross_encoder/results/qrecc_rerank/checkpoint_latest.pt

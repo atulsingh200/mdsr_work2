@@ -1,0 +1,161 @@
+{
+  "results": [
+    {
+      "dataset": "aep_causal",
+      "checkpoint": "lorentz_enc_results_e5/aep_causal/lorentz_best.pt",
+      "backbone": "intfloat/e5-base-v2",
+      "space_dim": 768,
+      "time_dim": 20,
+      "n_test_pairs": 562,
+      "encoding_seconds": 3.687608480453491,
+      "auc": 0.9763285039449855,
+      "precision_at_1": 0.9377224199288257,
+      "mrr": 0.405630846311877,
+      "mean_rank": 14.47864768683274,
+      "median_rank": 3.0,
+      "recall_at_k": {
+        "1": 0.2188612099644128,
+        "3": 0.5142348754448398,
+        "5": 0.6405693950177936,
+        "10": 0.7775800711743772
+      },
+      "hit_at_k": {
+        "1": 0.2188612099644128,
+        "3": 0.5142348754448398,
+        "5": 0.6405693950177936,
+        "10": 0.7775800711743772
+      },
+      "n_candidates_per_query": 562
+    },
+    {
+      "dataset": "followupqg",
+      "checkpoint": "lorentz_enc_results_e5/followupqg/lorentz_best.pt",
+      "backbone": "intfloat/e5-base-v2",
+      "space_dim": 768,
+      "time_dim": 20,
+      "n_test_pairs": 501,
+      "encoding_seconds": 2.9043805599212646,
+      "auc": 0.9920179600878084,
+      "precision_at_1": 0.9780439121756487,
+      "mrr": 0.6868968981163066,
+      "mean_rank": 4.778443113772455,
+      "median_rank": 1.0,
+      "recall_at_k": {
+        "1": 0.5249500998003992,
+        "3": 0.8263473053892215,
+        "5": 0.8802395209580839,
+        "10": 0.9281437125748503
+      },
+      "hit_at_k": {
+        "1": 0.5249500998003992,
+        "3": 0.8263473053892215,
+        "5": 0.8802395209580839,
+        "10": 0.9281437125748503
+      },
+      "n_candidates_per_query": 501
+    },
+    {
+      "dataset": "multiwoz_v24",
+      "checkpoint": "lorentz_enc_results_e5/multiwoz_v24/lorentz_best.pt",
+      "backbone": "intfloat/e5-base-v2",
+      "space_dim": 768,
+      "time_dim": 20,
+      "n_test_pairs": 7368,
+      "encoding_seconds": 25.564852476119995,
+      "auc": 0.9714677311820875,
+      "precision_at_1": 0.8926438653637351,
+      "mrr": 0.3201257599740799,
+      "mean_rank": 34.85884907709012,
+      "median_rank": 9.0,
+      "recall_at_k": {
+        "1": 0.21959826275787186,
+        "3": 0.3497557003257329,
+        "5": 0.4157166123778502,
+        "10": 0.5160152008686211
+      },
+      "hit_at_k": {
+        "1": 0.21959826275787186,
+        "3": 0.3497557003257329,
+        "5": 0.4157166123778502,
+        "10": 0.5160152008686211
+      },
+      "n_candidates_per_query": 1000
+    },
+    {
+      "dataset": "qrecc",
+      "checkpoint": "lorentz_enc_results_e5/qrecc/lorentz_best.pt",
+      "backbone": "intfloat/e5-base-v2",
+      "space_dim": 768,
+      "time_dim": 20,
+      "n_test_pairs": 5204,
+      "encoding_seconds": 16.70124912261963,
+      "auc": 0.9546186193246371,
+      "precision_at_1": 0.8562644119907763,
+      "mrr": 0.3435563368896079,
+      "mean_rank": 48.41352805534204,
+      "median_rank": 8.0,
+      "recall_at_k": {
+        "1": 0.23847040737893926,
+        "3": 0.3835511145272867,
+        "5": 0.45484242890084553,
+        "10": 0.5514988470407379
+      },
+      "hit_at_k": {
+        "1": 0.23847040737893926,
+        "3": 0.3835511145272867,
+        "5": 0.45484242890084553,
+        "10": 0.5514988470407379
+      },
+      "n_candidates_per_query": 1000
+    },
+    {
+      "dataset": "workflow",
+      "checkpoint": "lorentz_enc_results_e5/workflow/lorentz_best.pt",
+      "backbone": "intfloat/e5-base-v2",
+      "space_dim": 768,
+      "time_dim": 20,
+      "n_test_pairs": 260487,
+      "encoding_seconds": 463.6945004463196,
+      "auc": 0.9812043686563985,
+      "precision_at_1": 0.9410335256653883,
+      "mrr": 0.6344777715615858,
+      "mean_rank": 21.30700572389409,
+      "median_rank": 1.0,
+      "recall_at_k": {
+        "1": 0.5514593818501499,
+        "3": 0.6816770126724174,
+        "5": 0.7291150805990319,
+        "10": 0.7851831377381597
+      },
+      "hit_at_k": {
+        "1": 0.5514593818501499,
+        "3": 0.6816770126724174,
+        "5": 0.7291150805990319,
+        "10": 0.7851831377381597
+      },
+      "n_candidates_per_query": 1000
+    }
+  ],
+  "baseline": {
+    "aep_causal": {
+      "mrr": 0.3525,
+      "auc": 0.9712
+    },
+    "followupqg": {
+      "mrr": 0.5844,
+      "auc": 0.9827
+    },
+    "multiwoz_v24": {
+      "mrr": 0.2493,
+      "auc": 0.9526
+    },
+    "qrecc": {
+      "mrr": 0.2758,
+      "auc": 0.9227
+    },
+    "workflow": {
+      "mrr": 0.55,
+      "auc": 0.9662
+    }
+  }
+}

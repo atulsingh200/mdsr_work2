@@ -1,0 +1,13 @@
+{
+  "dataset": "aep_causal",
+  "checkpoint": "/mnt/localssd/base_line/internship-causal-embedding/finetune_eval/results/aep_causal/checkpoint_best.pt",
+  "backbone": "google-bert/bert-base-uncased",
+  "pooling": "cls",
+  "n_test_pairs": 562,
+  "n_negatives": 4,
+  "encoding_seconds": 3.557169198989868,
+  "auc": 0.7156848000911843,
+  "precision_at_1": 0.5177935943060499,
+  "eval_type": "semantic_hard_negatives",
+  "miner": "sentence-transformers/all-MiniLM-L6-v2"
+}

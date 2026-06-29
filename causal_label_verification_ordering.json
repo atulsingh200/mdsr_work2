@@ -1,0 +1,302 @@
+[
+  {
+    "sample_id": 1,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 is a specific mid-workflow publishing step while text_2 is a high-level AJO business intro, so text_2 naturally precedes text_1 in documentation flow."
+  },
+  {
+    "sample_id": 2,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "text_1 is a conceptual AJO capabilities intro while text_2 is a specific 'Next' step in a dataset export tutorial, so the intro-level text_1 plausibly precedes the procedural text_2."
+  },
+  {
+    "sample_id": 3,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 is a sandbox tutorial intro and text_2 is a broader AJO value overview, so text_2 (the higher-level AJO overview) would naturally precede text_1 (a domain-specific sandbox intro)."
+  },
+  {
+    "sample_id": 4,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "text_1 is the AJO what-it-is introduction while text_2 is a hands-on content editing demo step, so the foundational intro (text_1) naturally precedes the hands-on demo (text_2)."
+  },
+  {
+    "sample_id": 5,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "text_1 is an AJO capability overview and text_2 is a specific 'Next' S3 configuration step, so the overview (text_1) plausibly precedes the specific procedural step (text_2) in learning flow."
+  },
+  {
+    "sample_id": 6,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 is a mid-demo dataset export step while text_2 is an AJO personas/UI overview, so text_2 (overview) naturally precedes text_1 (specific demo step)."
+  },
+  {
+    "sample_id": 7,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 is a late-stage source connector config step ('Finally...') while text_2 is AJO key capabilities intro, so text_2 (intro) naturally precedes text_1 (late tutorial step)."
+  },
+  {
+    "sample_id": 8,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "text_1 is the AJO foundational introduction while text_2 is a late-stage 'Finally' source connector config step, so the intro (text_1) naturally precedes the specific late-step (text_2)."
+  },
+  {
+    "sample_id": 9,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "text_1 is AJO's what-it-is intro while text_2 is a continuation mid-demo step ('Now that was already pretty cool, but let's take this a step further'), implying prior content has been covered, so text_1 (intro) precedes text_2 (mid-demo continuation)."
+  },
+  {
+    "sample_id": 10,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 is a mid-tutorial data ingestion step ('Further down...') while text_2 is an AJO real-time capabilities intro, so text_2 (intro) naturally precedes text_1 (specific tutorial step)."
+  },
+  {
+    "sample_id": 11,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 is a hands-on editing demo mid-step ('While I have some nice out of the box options...') while text_2 is AJO real-time capabilities intro, so text_2 (intro) naturally precedes text_1 (demo step)."
+  },
+  {
+    "sample_id": 12,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "text_1 is the AJO foundational introduction while text_2 is the closing 'Thank you' of a Dynamic Media integration tutorial, so the intro (text_1) naturally precedes the tutorial conclusion (text_2)."
+  },
+  {
+    "sample_id": 13,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 is a mid-demo fragment creation step while text_2 is AJO key capabilities intro, so text_2 (intro) naturally precedes text_1 (specific demo step)."
+  },
+  {
+    "sample_id": 14,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 is a specific subscription list creation step ('I've already pre-created two...') while text_2 is an AJO omnichannel capability overview, so text_2 (overview) naturally precedes text_1 (specific tutorial step)."
+  },
+  {
+    "sample_id": 15,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "text_1 is AJO business context and challenges intro while text_2 is a hands-on schema browser UI step ('Let's create our new schema'), so the business intro (text_1) naturally precedes the technical hands-on step (text_2)."
+  },
+  {
+    "sample_id": 16,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "text_1 is a mobile/messaging capabilities overview while text_2 is a specific 'I'm going to create a journey' hands-on demo step with multilingual options, so the overview (text_1) naturally precedes the hands-on demo (text_2)."
+  },
+  {
+    "sample_id": 17,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 is a late-step in a landing page/journey tutorial ('save the message and publish it... create the confirmation journey') while text_2 is the AJO foundational introduction, so text_2 (intro) naturally precedes text_1 (late tutorial step)."
+  },
+  {
+    "sample_id": 18,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "text_1 is the AJO key capabilities intro while text_2 is a sandbox reset operational procedure, so the capabilities overview (text_1) naturally precedes the sandbox management procedure (text_2)."
+  },
+  {
+    "sample_id": 19,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 is a specific admin procedure about the Permissions tab and roles while text_2 is AJO capabilities and personas overview, so text_2 (overview) naturally precedes text_1 (specific admin procedure)."
+  },
+  {
+    "sample_id": 20,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 is a specific dataset export context passage ('Monitor health... cloud storage destinations...') while text_2 is the AJO high-level business intro, so text_2 (intro) naturally precedes text_1 (specific feature context)."
+  },
+  {
+    "sample_id": 21,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 is a mid-step export scheduling tutorial ('Next, I will schedule the export...') while text_2 is AJO capabilities and personas overview, so text_2 (overview) naturally precedes text_1 (specific tutorial step)."
+  },
+  {
+    "sample_id": 22,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "text_1 is the AJO key capabilities intro while text_2 is a tutorial overview about identity labeling and namespaces, so the AJO capabilities overview (text_1) naturally precedes the identity mapping tutorial (text_2)."
+  },
+  {
+    "sample_id": 23,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 is the start of an audience rule builder tutorial while text_2 is an AJO identity resolution and capabilities overview, so text_2 (conceptual overview) naturally precedes text_1 (hands-on tutorial start)."
+  },
+  {
+    "sample_id": 24,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "text_1 is a mobile personalization capabilities overview while text_2 is a specific hands-on step of adding assets in a demo, so the overview (text_1) naturally precedes the specific demo step (text_2)."
+  },
+  {
+    "sample_id": 25,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "text_1 is a brief AJO high-level overview sentence while text_2 is a specific technical Postman/sandbox API demo, so the overview (text_1) naturally precedes the technical demo (text_2)."
+  },
+  {
+    "sample_id": 26,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "text_1 is a mobile/messaging capabilities overview while text_2 is a specific step in a translation workflow ('So this will tell us, hey, is my provider translating this?'), so the overview (text_1) naturally precedes the specific workflow step (text_2)."
+  },
+  {
+    "sample_id": 27,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 is a late-step in a data ingestion tutorial ('And once I verify all... I'll click finish') while text_2 is the AJO high-level marketer overview, so text_2 (overview) naturally precedes text_1 (late tutorial step)."
+  },
+  {
+    "sample_id": 28,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 is a mid-demo explanation of content locking modes while text_2 is AJO personas overview, so text_2 (personas overview) naturally precedes text_1 (specific feature demo)."
+  },
+  {
+    "sample_id": 29,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "text_1 is an AJO real-time and campaign capabilities overview while text_2 is a late-step in a multilingual messaging demo ('I'll also take a look at Spanish... press Publish'), so the overview (text_1) naturally precedes the specific demo step (text_2)."
+  },
+  {
+    "sample_id": 30,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "text_1 is AJO personas overview (Marketer, Data Architect) while text_2 is a hands-on demo step creating an expression fragment, so the personas overview (text_1) naturally precedes the hands-on demo (text_2)."
+  },
+  {
+    "sample_id": 31,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "text_1 is the AJO foundational introduction while text_2 is a specific subscription list setup step about start/end dates, so the intro (text_1) naturally precedes the specific configuration step (text_2)."
+  },
+  {
+    "sample_id": 32,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 is the beginning of a schema creation tutorial while text_2 is an AJO capabilities and personas overview, so text_2 (AJO overview) naturally precedes text_1 (domain-specific schema tutorial)."
+  },
+  {
+    "sample_id": 33,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "text_1 is a high-level AJO marketer overview while text_2 is a specific landing page URL configuration step, so the overview (text_1) naturally precedes the specific config step (text_2)."
+  },
+  {
+    "sample_id": 34,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "text_1 is a mobile/messaging capabilities overview while text_2 is a specific mid-demo explanation of content template locking options, so the overview (text_1) naturally precedes the specific demo explanation (text_2)."
+  },
+  {
+    "sample_id": 35,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "text_1 is an AJO capabilities overview (identity resolution, Journey Canvas, message designer) while text_2 is a hands-on schema creation workflow step, so the capabilities overview (text_1) naturally precedes the hands-on schema creation step (text_2)."
+  },
+  {
+    "sample_id": 36,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "text_1 is a high-level AJO overview for marketers while text_2 is a specific hands-on Gen Studio content import and editing demo step, so the overview (text_1) naturally precedes the hands-on demo (text_2)."
+  },
+  {
+    "sample_id": 37,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 is a mid-demo Gen Studio tutorial step ('So at this point I could go ahead and publish...') while text_2 is AJO capabilities and personas overview, so text_2 (overview) naturally precedes text_1 (specific demo step)."
+  },
+  {
+    "sample_id": 38,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 is a specific admin procedure about the Permissions tab and roles while text_2 is the AJO business intro ('consumer expectations are higher than ever'), so text_2 (intro) naturally precedes text_1 (specific admin procedure)."
+  },
+  {
+    "sample_id": 39,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "text_1 is the AJO foundational introduction while text_2 is the intro to an AEM Dynamic Media integration tutorial, so the broad AJO intro (text_1) naturally precedes a specific integration tutorial intro (text_2)."
+  },
+  {
+    "sample_id": 40,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 is a mid-demo brand creation step in Gen Studio ('I want to now also set up my Rebel Coffee brand...') while text_2 is an AJO admin personas and UI overview, so text_2 (overview) naturally precedes text_1 (specific tool demo step)."
+  },
+  {
+    "sample_id": 41,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 is a specific field mapping step in a source connector tutorial while text_2 is the AJO foundational introduction, so text_2 (intro) naturally precedes text_1 (specific tutorial step)."
+  },
+  {
+    "sample_id": 42,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 is a hands-on Gen Studio AI content generation step ('I'm just going to give a simple prompt... before I hit generate') while text_2 is AJO personas overview, so text_2 (personas overview) naturally precedes text_1 (specific hands-on step)."
+  },
+  {
+    "sample_id": 43,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 is the start of an Audience Rule Builder tutorial while text_2 is the AJO foundational introduction, so text_2 (AJO intro) naturally precedes text_1 (specific feature tutorial)."
+  },
+  {
+    "sample_id": 44,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "text_1 is an AJO mobile personalization capabilities overview while text_2 is a numbered schema setup step ('Second, you need access...'), so the capabilities overview (text_1) naturally precedes the specific schema tutorial step (text_2)."
+  },
+  {
+    "sample_id": 45,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "text_1 is the AJO foundational introduction while text_2 is a mid-step in a dataset export tutorial ('Next, I will schedule the export'), so the intro (text_1) naturally precedes the specific tutorial step (text_2)."
+  },
+  {
+    "sample_id": 46,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 is a specific schema creation workflow step ('When I click Create Schema, I enter a workflow...') while text_2 is AJO capabilities and personas overview, so text_2 (overview) naturally precedes text_1 (specific tutorial step)."
+  },
+  {
+    "sample_id": 47,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 is a late-step in a fragments tutorial ('But I can also open and view the fragment itself...') while text_2 is the AJO foundational introduction, so text_2 (intro) naturally precedes text_1 (late tutorial step)."
+  },
+  {
+    "sample_id": 48,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 is the concluding step of a dataset creation tutorial ('And now, you know how to create a dataset...') while text_2 is an AJO mobile capabilities overview, so text_2 (capabilities overview) naturally precedes text_1 (specific tutorial conclusion)."
+  },
+  {
+    "sample_id": 49,
+    "assigned_label": 1,
+    "label_correct": true,
+    "reasoning": "text_1 is the AJO business context and consumer expectations intro while text_2 is a specific 'Next' step in a dataset export scheduling tutorial, so the intro (text_1) naturally precedes the specific procedural step (text_2)."
+  },
+  {
+    "sample_id": 50,
+    "assigned_label": 0,
+    "label_correct": true,
+    "reasoning": "text_1 is a specific landing page content designer tutorial step while text_2 is an AJO real-time capabilities overview, so text_2 (capabilities overview) naturally precedes text_1 (specific tutorial step)."
+  }
+]

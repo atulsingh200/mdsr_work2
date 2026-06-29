@@ -1,0 +1,47 @@
+Loading model + tokenizer...
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:00,  9.07it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00, 11.98it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00, 11.60it/s]
+`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`...
+/mnt/localssd/gritlm_test_env/lib/python3.10/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+train pairs=5487  test pairs=562  MAXLEN=256 B=8 epochs=1
+
+=== PRE-finetune ===
+direction acc=0.575  fwd=+0.6264 rev=+0.6240 margin=+0.0024
+retrieval acc@1=0.400 MRR=0.557
+trainable params: 41,943,040 || all params: 7,152,603,136 || trainable%: 0.5864
+
+=== TRAIN ===
+  ep0 step   1  loss=7.4805 (info=7.4363 dir=0.0442) fwd=+0.616 rev=+0.610 maxmem=27.6GB t=3s
+  ep0 step  25  loss=1.6503 (info=1.6014 dir=0.0489) fwd=+0.963 rev=+0.962 maxmem=27.6GB t=85s
+  ep0 step  50  loss=1.6728 (info=1.6219 dir=0.0509) fwd=+0.954 rev=+0.955 maxmem=27.6GB t=170s
+  ep0 step  75  loss=1.4437 (info=1.3943 dir=0.0493) fwd=+0.977 rev=+0.976 maxmem=27.6GB t=255s
+  ep0 step 100  loss=1.6533 (info=1.6053 dir=0.0480) fwd=+0.975 rev=+0.973 maxmem=27.6GB t=340s
+  ep0 step 125  loss=1.9149 (info=1.8670 dir=0.0479) fwd=+0.954 rev=+0.952 maxmem=27.6GB t=425s
+  ep0 step 150  loss=1.5262 (info=1.4768 dir=0.0494) fwd=+0.980 rev=+0.980 maxmem=27.6GB t=510s
+  ep0 step 175  loss=1.3441 (info=1.2957 dir=0.0484) fwd=+0.979 rev=+0.977 maxmem=27.6GB t=595s
+  ep0 step 200  loss=2.6460 (info=2.5987 dir=0.0473) fwd=+0.926 rev=+0.923 maxmem=27.6GB t=681s
+  ep0 step 225  loss=1.7579 (info=1.7127 dir=0.0453) fwd=+0.965 rev=+0.961 maxmem=27.6GB t=766s
+  ep0 step 250  loss=1.6298 (info=1.5808 dir=0.0490) fwd=+0.949 rev=+0.948 maxmem=27.6GB t=851s
+  ep0 step 275  loss=1.5985 (info=1.5724 dir=0.0261) fwd=+0.887 rev=+0.845 maxmem=27.6GB t=936s
+  ep0 step 300  loss=1.1573 (info=1.1458 dir=0.0114) fwd=+0.874 rev=+0.805 maxmem=27.6GB t=1021s
+  ep0 step 325  loss=1.1961 (info=1.1709 dir=0.0252) fwd=+0.820 rev=+0.708 maxmem=27.6GB t=1106s
+  ep0 step 350  loss=1.0572 (info=1.0398 dir=0.0174) fwd=+0.824 rev=+0.643 maxmem=27.6GB t=1191s
+  ep0 step 375  loss=1.1378 (info=1.1325 dir=0.0053) fwd=+0.842 rev=+0.734 maxmem=27.6GB t=1276s
+  ep0 step 400  loss=1.1137 (info=1.1036 dir=0.0101) fwd=+0.901 rev=+0.825 maxmem=27.6GB t=1361s
+  ep0 step 425  loss=0.9374 (info=0.9339 dir=0.0034) fwd=+0.866 rev=+0.795 maxmem=27.6GB t=1446s
+  ep0 step 450  loss=1.3901 (info=1.3585 dir=0.0316) fwd=+0.802 rev=+0.714 maxmem=27.6GB t=1531s
+  ep0 step 475  loss=1.2332 (info=1.2165 dir=0.0167) fwd=+0.844 rev=+0.780 maxmem=27.6GB t=1616s
+  ep0 step 500  loss=0.8973 (info=0.8973 dir=0.0000) fwd=+0.844 rev=+0.698 maxmem=27.6GB t=1701s
+  ep0 step 525  loss=1.2985 (info=1.2703 dir=0.0282) fwd=+0.874 rev=+0.797 maxmem=27.6GB t=1786s
+  ep0 step 550  loss=1.3547 (info=1.3348 dir=0.0199) fwd=+0.695 rev=+0.619 maxmem=27.6GB t=1871s
+  ep0 step 575  loss=1.0888 (info=1.0738 dir=0.0150) fwd=+0.859 rev=+0.754 maxmem=27.6GB t=1956s
+  ep0 step 600  loss=1.4162 (info=1.4009 dir=0.0153) fwd=+0.885 rev=+0.798 maxmem=27.6GB t=2041s
+  ep0 step 625  loss=0.8330 (info=0.8232 dir=0.0099) fwd=+0.773 rev=+0.608 maxmem=27.6GB t=2126s
+  ep0 step 650  loss=1.0274 (info=1.0147 dir=0.0127) fwd=+0.864 rev=+0.744 maxmem=27.6GB t=2211s
+  ep0 step 675  loss=0.7121 (info=0.7102 dir=0.0019) fwd=+0.795 rev=+0.569 maxmem=27.6GB t=2296s
+
+=== POST-finetune ===
+direction acc=0.805  fwd=+0.7822 rev=+0.6732 margin=+0.1089
+retrieval acc@1=0.160 MRR=0.282
+
+DONE

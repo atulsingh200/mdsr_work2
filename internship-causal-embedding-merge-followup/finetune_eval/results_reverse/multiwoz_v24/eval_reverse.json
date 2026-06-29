@@ -1,0 +1,13 @@
+{
+  "dataset": "multiwoz_v24",
+  "checkpoint": "/mnt/localssd/internship-causal-embedding-merge-followup/finetune_eval/results_reverse/multiwoz_v24/checkpoint_best.pt",
+  "backbone": "google-bert/bert-base-uncased",
+  "pooling": "cls",
+  "n_test_pairs": 7368,
+  "encoding_seconds": 50.73730778694153,
+  "auc": 0.997557003257329,
+  "precision_at_1": 0.997557003257329,
+  "mean_fwd_score": 0.6291519999504089,
+  "mean_rev_score": -0.3450109362602234,
+  "eval_type": "forward_vs_reverse_2candidates"
+}

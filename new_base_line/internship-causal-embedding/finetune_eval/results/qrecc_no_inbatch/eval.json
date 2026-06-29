@@ -1,0 +1,27 @@
+{
+  "dataset": "qrecc",
+  "checkpoint": "finetune_eval/results/qrecc_no_inbatch/checkpoint_best.pt",
+  "backbone": "google-bert/bert-base-uncased",
+  "pooling": "cls",
+  "n_test_pairs": 5204,
+  "n_candidates_per_query": 1000,
+  "encoding_seconds": 15.67585563659668,
+  "auc": 0.7380386661564067,
+  "precision_at_1": 0.5086471944657955,
+  "n_negatives": 4,
+  "mrr": 0.1636590642844036,
+  "mean_rank": 267.4054573405073,
+  "median_rank": 152.0,
+  "recall_at_k": {
+    "1": 0.11491160645657186,
+    "3": 0.17986164488854728,
+    "5": 0.2086856264411991,
+    "10": 0.24769408147578786
+  },
+  "hit_at_k": {
+    "1": 0.11491160645657186,
+    "3": 0.17986164488854728,
+    "5": 0.2086856264411991,
+    "10": 0.24769408147578786
+  }
+}

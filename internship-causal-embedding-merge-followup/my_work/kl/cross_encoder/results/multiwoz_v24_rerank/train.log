@@ -1,0 +1,24 @@
+[train] dataset=multiwoz_v24 total_steps=2228 warmup=133 batch_size=128 epochs=4 max_length=256  early_stop=(thresh 0.001, patience 2)
+  step=   200/2228  loss=0.4535  lr=1.94e-05  epoch=1
+  step=   400/2228  loss=0.5491  lr=1.75e-05  epoch=1
+[epoch 1/4]  train_loss=0.5040  val_AUC=0.7677  val_P@1=0.4987  (97s)
+  * new best val_AUC=0.7677, saved checkpoint_best.pt
+  step=   600/2228  loss=0.5193  lr=1.55e-05  epoch=2
+  step=   800/2228  loss=0.4242  lr=1.36e-05  epoch=2
+  step=  1000/2228  loss=0.4661  lr=1.17e-05  epoch=2
+[epoch 2/4]  train_loss=0.4652  val_AUC=0.8088  val_P@1=0.5427  (194s)
+  * new best val_AUC=0.8088, saved checkpoint_best.pt
+  step=  1200/2228  loss=0.4596  lr=9.81e-06  epoch=3
+  step=  1400/2228  loss=0.3671  lr=7.90e-06  epoch=3
+  step=  1600/2228  loss=0.4820  lr=6.00e-06  epoch=3
+[epoch 3/4]  train_loss=0.4365  val_AUC=0.8235  val_P@1=0.5627  (293s)
+  * new best val_AUC=0.8235, saved checkpoint_best.pt
+  step=  1800/2228  loss=0.5242  lr=4.09e-06  epoch=4
+  step=  2000/2228  loss=0.4136  lr=2.18e-06  epoch=4
+  step=  2200/2228  loss=0.3738  lr=2.67e-07  epoch=4
+[epoch 4/4]  train_loss=0.4135  val_AUC=0.8287  val_P@1=0.5787  (391s)
+  * new best val_AUC=0.8287, saved checkpoint_best.pt
+
+[done]  best val_AUC=0.8287  stopped_early=False
+  best:   my_work/kl/cross_encoder/results/multiwoz_v24_rerank/checkpoint_best.pt
+  latest: my_work/kl/cross_encoder/results/multiwoz_v24_rerank/checkpoint_latest.pt

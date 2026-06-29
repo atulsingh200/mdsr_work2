@@ -1,0 +1,313 @@
+[23:55:25] ========== STEP 1: Prepare capped splits ==========
+[23:55:25] --- Preparing aep_causal ---
+[23:55:25]   [aep_causal] train
+  kept all 5487 rows (< cap 200000)
+[23:55:25]   [aep_causal] val
+  kept all 562 rows (< cap 20000)
+[23:55:26]   [aep_causal] test
+  kept all 562 rows (< cap 20000)
+[23:55:26] --- Preparing followupqg ---
+[23:55:26]   [followupqg] train
+  kept all 2790 rows (< cap 200000)
+[23:55:26]   [followupqg] val
+  kept all 500 rows (< cap 20000)
+[23:55:26]   [followupqg] test
+  kept all 501 rows (< cap 20000)
+[23:55:26] --- Preparing multiwoz_v24 ---
+[23:55:26]   [multiwoz_v24] train
+  kept all 56719 rows (< cap 200000)
+[23:55:27]   [multiwoz_v24] val
+  kept all 7374 rows (< cap 20000)
+[23:55:27]   [multiwoz_v24] test
+  kept all 7368 rows (< cap 20000)
+[23:55:27] --- Preparing qrecc ---
+[23:55:27]   [qrecc] train
+  kept all 52481 rows (< cap 200000)
+[23:55:28]   [qrecc] val — no source; train script will hold out 5% of train
+[23:55:28]   [qrecc] test
+  kept all 5204 rows (< cap 20000)
+[23:55:28] --- Preparing workflow ---
+[23:55:28]   [workflow] train
+  sampled 200000 / 2116157 rows
+[23:55:56]   [workflow] val
+  sampled 20000 / 261049 rows
+[23:56:00]   [workflow] test
+  sampled 20000 / 260487 rows
+[23:56:03] Step 1 done.
+[23:56:03] ========== STEP 2: Mine semantic hard negatives ==========
+[23:56:03] --- Mining aep_causal ---
+[23:56:03]   [aep_causal/train] mining → /mnt/localssd/base_line/internship-causal-embedding/ce2x_data/aep_causal/hard_negatives.npy
+  5487 pairs — train_pairs.jsonl
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 8133.24it/s]
+  encoded in 3.9s  dim=384
+  kNN in 0.0s
+  saved /mnt/localssd/base_line/internship-causal-embedding/ce2x_data/aep_causal/hard_negatives.npy  shape=(5487, 4)
+[23:56:16]   [aep_causal/val] mining → /mnt/localssd/base_line/internship-causal-embedding/ce2x_data/aep_causal/val_hard_negatives.npy
+  562 pairs — val_pairs.jsonl
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 8319.63it/s]
+  encoded in 0.7s  dim=384
+  kNN in 0.0s
+  saved /mnt/localssd/base_line/internship-causal-embedding/ce2x_data/aep_causal/val_hard_negatives.npy  shape=(562, 4)
+[23:56:25]   [aep_causal/test] mining → /mnt/localssd/base_line/internship-causal-embedding/ce2x_data/aep_causal/test_hard_negatives.npy
+  562 pairs — test_pairs.jsonl
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 8894.84it/s]
+  encoded in 0.7s  dim=384
+  kNN in 0.0s
+  saved /mnt/localssd/base_line/internship-causal-embedding/ce2x_data/aep_causal/test_hard_negatives.npy  shape=(562, 4)
+[23:56:37] --- Mining followupqg ---
+[23:56:37]   [followupqg/train] mining → /mnt/localssd/base_line/internship-causal-embedding/ce2x_data/followupqg/hard_negatives.npy
+  2790 pairs — train_pairs.jsonl
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 8838.60it/s]
+  encoded in 2.0s  dim=384
+  kNN in 0.0s
+  saved /mnt/localssd/base_line/internship-causal-embedding/ce2x_data/followupqg/hard_negatives.npy  shape=(2790, 4)
+[23:56:47]   [followupqg/val] mining → /mnt/localssd/base_line/internship-causal-embedding/ce2x_data/followupqg/val_hard_negatives.npy
+  500 pairs — val_pairs.jsonl
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 8374.79it/s]
+  encoded in 0.6s  dim=384
+  kNN in 0.0s
+  saved /mnt/localssd/base_line/internship-causal-embedding/ce2x_data/followupqg/val_hard_negatives.npy  shape=(500, 4)
+[23:56:56]   [followupqg/test] mining → /mnt/localssd/base_line/internship-causal-embedding/ce2x_data/followupqg/test_hard_negatives.npy
+  501 pairs — test_pairs.jsonl
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 8399.37it/s]
+  encoded in 0.6s  dim=384
+  kNN in 0.0s
+  saved /mnt/localssd/base_line/internship-causal-embedding/ce2x_data/followupqg/test_hard_negatives.npy  shape=(501, 4)
+[23:57:06] --- Mining multiwoz_v24 ---
+[23:57:06]   [multiwoz_v24/train] mining → /mnt/localssd/base_line/internship-causal-embedding/ce2x_data/multiwoz_v24/hard_negatives.npy
+  56719 pairs — train_pairs.jsonl
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 8727.19it/s]
+  encoded in 8.2s  dim=384
+  kNN in 0.2s
+  saved /mnt/localssd/base_line/internship-causal-embedding/ce2x_data/multiwoz_v24/hard_negatives.npy  shape=(56719, 4)
+[23:57:23]   [multiwoz_v24/val] mining → /mnt/localssd/base_line/internship-causal-embedding/ce2x_data/multiwoz_v24/val_hard_negatives.npy
+  7374 pairs — val_pairs.jsonl
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 8749.46it/s]
+  encoded in 2.9s  dim=384
+  kNN in 0.0s
+  saved /mnt/localssd/base_line/internship-causal-embedding/ce2x_data/multiwoz_v24/val_hard_negatives.npy  shape=(7374, 4)
+[23:57:34]   [multiwoz_v24/test] mining → /mnt/localssd/base_line/internship-causal-embedding/ce2x_data/multiwoz_v24/test_hard_negatives.npy
+  7368 pairs — test_pairs.jsonl
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 8461.23it/s]
+  encoded in 1.3s  dim=384
+  kNN in 0.0s
+  saved /mnt/localssd/base_line/internship-causal-embedding/ce2x_data/multiwoz_v24/test_hard_negatives.npy  shape=(7368, 4)
+[23:57:44] --- Mining qrecc ---
+[23:57:44]   [qrecc/train] mining → /mnt/localssd/base_line/internship-causal-embedding/ce2x_data/qrecc/hard_negatives.npy
+  52481 pairs — train_pairs.jsonl
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 8168.61it/s]
+  encoded in 4.2s  dim=384
+  kNN in 0.2s
+  saved /mnt/localssd/base_line/internship-causal-embedding/ce2x_data/qrecc/hard_negatives.npy  shape=(52481, 4)
+[23:57:57]   [qrecc/val] no file — skip
+[23:57:57]   [qrecc/test] mining → /mnt/localssd/base_line/internship-causal-embedding/ce2x_data/qrecc/test_hard_negatives.npy
+  5204 pairs — test_pairs.jsonl
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 8644.76it/s]
+  encoded in 0.8s  dim=384
+  kNN in 0.0s
+  saved /mnt/localssd/base_line/internship-causal-embedding/ce2x_data/qrecc/test_hard_negatives.npy  shape=(5204, 4)
+[23:58:07] --- Mining workflow ---
+[23:58:07]   [workflow/train] mining → /mnt/localssd/base_line/internship-causal-embedding/ce2x_data/workflow/hard_negatives.npy
+  200000 pairs — train_pairs.jsonl
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 9047.97it/s]
+  encoded in 29.8s  dim=384
+  kNN in 2.5s
+  saved /mnt/localssd/base_line/internship-causal-embedding/ce2x_data/workflow/hard_negatives.npy  shape=(200000, 4)
+[23:58:50]   [workflow/val] mining → /mnt/localssd/base_line/internship-causal-embedding/ce2x_data/workflow/val_hard_negatives.npy
+  20000 pairs — val_pairs.jsonl
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 6879.96it/s]
+  encoded in 3.4s  dim=384
+  kNN in 0.1s
+  saved /mnt/localssd/base_line/internship-causal-embedding/ce2x_data/workflow/val_hard_negatives.npy  shape=(20000, 4)
+[23:59:04]   [workflow/test] mining → /mnt/localssd/base_line/internship-causal-embedding/ce2x_data/workflow/test_hard_negatives.npy
+  20000 pairs — test_pairs.jsonl
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 6220.14it/s]
+  encoded in 3.3s  dim=384
+  kNN in 0.1s
+  saved /mnt/localssd/base_line/internship-causal-embedding/ce2x_data/workflow/test_hard_negatives.npy  shape=(20000, 4)
+[23:59:16] Step 2 done.
+[23:59:16] ========== STEP 3: Generate random negative index files ==========
+[23:59:16] --- Random indices: aep_causal ---
+[23:59:16]   [aep_causal/train] generating random negative indices → /mnt/localssd/base_line/internship-causal-embedding/ce2x_data_random/aep_causal/hard_negatives.npy
+  saved /mnt/localssd/base_line/internship-causal-embedding/ce2x_data_random/aep_causal/hard_negatives.npy  shape=(5487, 4)
+[23:59:17]   [aep_causal/val] generating random negative indices → /mnt/localssd/base_line/internship-causal-embedding/ce2x_data_random/aep_causal/val_hard_negatives.npy
+  saved /mnt/localssd/base_line/internship-causal-embedding/ce2x_data_random/aep_causal/val_hard_negatives.npy  shape=(562, 4)
+[23:59:18]   [aep_causal/test] generating random negative indices → /mnt/localssd/base_line/internship-causal-embedding/ce2x_data_random/aep_causal/test_hard_negatives.npy
+  saved /mnt/localssd/base_line/internship-causal-embedding/ce2x_data_random/aep_causal/test_hard_negatives.npy  shape=(562, 4)
+[23:59:18] --- Random indices: followupqg ---
+[23:59:18]   [followupqg/train] generating random negative indices → /mnt/localssd/base_line/internship-causal-embedding/ce2x_data_random/followupqg/hard_negatives.npy
+  saved /mnt/localssd/base_line/internship-causal-embedding/ce2x_data_random/followupqg/hard_negatives.npy  shape=(2790, 4)
+[23:59:19]   [followupqg/val] generating random negative indices → /mnt/localssd/base_line/internship-causal-embedding/ce2x_data_random/followupqg/val_hard_negatives.npy
+  saved /mnt/localssd/base_line/internship-causal-embedding/ce2x_data_random/followupqg/val_hard_negatives.npy  shape=(500, 4)
+[23:59:19]   [followupqg/test] generating random negative indices → /mnt/localssd/base_line/internship-causal-embedding/ce2x_data_random/followupqg/test_hard_negatives.npy
+  saved /mnt/localssd/base_line/internship-causal-embedding/ce2x_data_random/followupqg/test_hard_negatives.npy  shape=(501, 4)
+[23:59:19] --- Random indices: multiwoz_v24 ---
+[23:59:19]   [multiwoz_v24/train] generating random negative indices → /mnt/localssd/base_line/internship-causal-embedding/ce2x_data_random/multiwoz_v24/hard_negatives.npy
+  saved /mnt/localssd/base_line/internship-causal-embedding/ce2x_data_random/multiwoz_v24/hard_negatives.npy  shape=(56719, 4)
+[00:02:15]   [multiwoz_v24/val] generating random negative indices → /mnt/localssd/base_line/internship-causal-embedding/ce2x_data_random/multiwoz_v24/val_hard_negatives.npy
+  saved /mnt/localssd/base_line/internship-causal-embedding/ce2x_data_random/multiwoz_v24/val_hard_negatives.npy  shape=(7374, 4)
+[00:02:18]   [multiwoz_v24/test] generating random negative indices → /mnt/localssd/base_line/internship-causal-embedding/ce2x_data_random/multiwoz_v24/test_hard_negatives.npy
+  saved /mnt/localssd/base_line/internship-causal-embedding/ce2x_data_random/multiwoz_v24/test_hard_negatives.npy  shape=(7368, 4)
+[00:02:21] --- Random indices: qrecc ---
+[00:02:21]   [qrecc/train] generating random negative indices → /mnt/localssd/base_line/internship-causal-embedding/ce2x_data_random/qrecc/hard_negatives.npy
+  saved /mnt/localssd/base_line/internship-causal-embedding/ce2x_data_random/qrecc/hard_negatives.npy  shape=(52481, 4)
+[00:17:13] ========== STEP 1: Prepare capped splits ==========
+[00:17:13] --- Preparing aep_causal ---
+[00:17:13]   [aep_causal] train
+  kept all 5487 rows (< cap 200000)
+[00:17:13]   [aep_causal] val
+  kept all 562 rows (< cap 20000)
+[00:17:13]   [aep_causal] test
+  kept all 562 rows (< cap 20000)
+[00:17:13] --- Preparing followupqg ---
+[00:17:13]   [followupqg] train
+  kept all 2790 rows (< cap 200000)
+[00:17:14]   [followupqg] val
+  kept all 500 rows (< cap 20000)
+[00:17:14]   [followupqg] test
+  kept all 501 rows (< cap 20000)
+[00:17:14] --- Preparing multiwoz_v24 ---
+[00:17:14]   [multiwoz_v24] train
+  kept all 56719 rows (< cap 200000)
+[00:17:15]   [multiwoz_v24] val
+  kept all 7374 rows (< cap 20000)
+[00:17:15]   [multiwoz_v24] test
+  kept all 7368 rows (< cap 20000)
+[00:17:15] --- Preparing qrecc ---
+[00:17:15]   [qrecc] train
+  kept all 52481 rows (< cap 200000)
+[00:17:16]   [qrecc] val — no source; train script will hold out 5% of train
+[00:17:16]   [qrecc] test
+  kept all 5204 rows (< cap 20000)
+[00:17:16] --- Preparing workflow ---
+[00:17:16]   [workflow] train
+  sampled 200000 / 2116157 rows
+[00:17:43]   [workflow] val
+  sampled 20000 / 261049 rows
+[00:17:46]   [workflow] test
+  sampled 20000 / 260487 rows
+[00:17:50] Step 1 done.
+[00:17:50] ========== STEP 2: Mine semantic hard negatives ==========
+[00:17:50] --- Mining aep_causal ---
+[00:17:50]   [aep_causal/train] already mined — skip
+[00:17:50]   [aep_causal/val] already mined — skip
+[00:17:50]   [aep_causal/test] already mined — skip
+[00:17:50] --- Mining followupqg ---
+[00:17:50]   [followupqg/train] already mined — skip
+[00:17:50]   [followupqg/val] already mined — skip
+[00:17:50]   [followupqg/test] already mined — skip
+[00:17:50] --- Mining multiwoz_v24 ---
+[00:17:50]   [multiwoz_v24/train] already mined — skip
+[00:17:50]   [multiwoz_v24/val] already mined — skip
+[00:17:50]   [multiwoz_v24/test] already mined — skip
+[00:17:50] --- Mining qrecc ---
+[00:17:50]   [qrecc/train] already mined — skip
+[00:17:50]   [qrecc/val] no file — skip
+[00:17:50]   [qrecc/test] already mined — skip
+[00:17:50] --- Mining workflow ---
+[00:17:50]   [workflow/train] already mined — skip
+[00:17:50]   [workflow/val] already mined — skip
+[00:17:50]   [workflow/test] already mined — skip
+[00:17:50] Step 2 done.
+[00:17:50] ========== STEP 3: Generate random negative index files ==========
+[00:17:50] --- Random indices: aep_causal ---
+[00:17:50]   [aep_causal/train] random .npy exists — skip
+[00:17:50]   [aep_causal/val] random .npy exists — skip
+[00:17:50]   [aep_causal/test] random .npy exists — skip
+[00:17:50] --- Random indices: followupqg ---
+[00:17:50]   [followupqg/train] random .npy exists — skip
+[00:17:50]   [followupqg/val] random .npy exists — skip
+[00:17:50]   [followupqg/test] random .npy exists — skip
+[00:17:50] --- Random indices: multiwoz_v24 ---
+[00:17:50]   [multiwoz_v24/train] random .npy exists — skip
+[00:17:50]   [multiwoz_v24/val] random .npy exists — skip
+[00:17:50]   [multiwoz_v24/test] random .npy exists — skip
+[00:17:50] --- Random indices: qrecc ---
+[00:17:50]   [qrecc/train] random .npy exists — skip
+[00:21:42] ========== STEP 1: Prepare capped splits ==========
+[00:21:42] --- Preparing aep_causal ---
+[00:21:42]   [aep_causal] train
+  kept all 5487 rows (< cap 200000)
+[00:21:43]   [aep_causal] val
+  kept all 562 rows (< cap 20000)
+[00:21:43]   [aep_causal] test
+  kept all 562 rows (< cap 20000)
+[00:21:43] --- Preparing followupqg ---
+[00:21:43]   [followupqg] train
+  kept all 2790 rows (< cap 200000)
+[00:21:43]   [followupqg] val
+  kept all 500 rows (< cap 20000)
+[00:21:44]   [followupqg] test
+  kept all 501 rows (< cap 20000)
+[00:21:44] --- Preparing multiwoz_v24 ---
+[00:21:44]   [multiwoz_v24] train
+  kept all 56719 rows (< cap 200000)
+[00:21:44]   [multiwoz_v24] val
+  kept all 7374 rows (< cap 20000)
+[00:21:45]   [multiwoz_v24] test
+  kept all 7368 rows (< cap 20000)
+[00:21:45] --- Preparing qrecc ---
+[00:21:45]   [qrecc] train
+  kept all 52481 rows (< cap 200000)
+[00:21:45]   [qrecc] val — no source; train script will hold out 5% of train
+[00:21:45]   [qrecc] test
+  kept all 5204 rows (< cap 20000)
+[00:21:46] --- Preparing workflow ---
+[00:21:46]   [workflow] train
+  sampled 200000 / 2116157 rows (reservoir)
+[00:22:01]   [workflow] val
+  sampled 20000 / 261049 rows (reservoir)
+[00:22:03]   [workflow] test
+  sampled 20000 / 260487 rows (reservoir)
+[00:22:05] Step 1 done.
+[00:22:05] ========== STEP 2: Mine semantic hard negatives ==========
+[00:22:05] --- Mining aep_causal ---
+[00:22:05]   [aep_causal/train] already mined — skip
+[00:22:05]   [aep_causal/val] already mined — skip
+[00:22:05]   [aep_causal/test] already mined — skip
+[00:22:05] --- Mining followupqg ---
+[00:22:05]   [followupqg/train] already mined — skip
+[00:22:05]   [followupqg/val] already mined — skip
+[00:22:05]   [followupqg/test] already mined — skip
+[00:22:05] --- Mining multiwoz_v24 ---
+[00:22:05]   [multiwoz_v24/train] already mined — skip
+[00:22:05]   [multiwoz_v24/val] already mined — skip
+[00:22:05]   [multiwoz_v24/test] already mined — skip
+[00:22:05] --- Mining qrecc ---
+[00:22:05]   [qrecc/train] already mined — skip
+[00:22:05]   [qrecc/val] no file — skip
+[00:22:05]   [qrecc/test] already mined — skip
+[00:22:05] --- Mining workflow ---
+[00:22:05]   [workflow/train] already mined — skip
+[00:22:05]   [workflow/val] already mined — skip
+[00:22:05]   [workflow/test] already mined — skip
+[00:22:05] Step 2 done.
+[00:22:05] ========== STEP 3: Generate random negative index files ==========
+[00:22:05] --- Random indices: aep_causal ---
+[00:22:05]   [aep_causal/train] random .npy exists — skip
+[00:22:05]   [aep_causal/val] random .npy exists — skip
+[00:22:05]   [aep_causal/test] random .npy exists — skip
+[00:22:05] --- Random indices: followupqg ---
+[00:22:05]   [followupqg/train] random .npy exists — skip
+[00:22:05]   [followupqg/val] random .npy exists — skip
+[00:22:05]   [followupqg/test] random .npy exists — skip
+[00:22:05] --- Random indices: multiwoz_v24 ---
+[00:22:05]   [multiwoz_v24/train] random .npy exists — skip
+[00:22:05]   [multiwoz_v24/val] random .npy exists — skip
+[00:22:05]   [multiwoz_v24/test] random .npy exists — skip
+[00:22:05] --- Random indices: qrecc ---
+[00:22:05]   [qrecc/train] random .npy exists — skip

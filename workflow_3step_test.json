@@ -1,0 +1,74 @@
+{
+  "description": "3-step AEP/AJO onboarding workflow: concept introduction → sandbox preparation → data ingestion. There is exactly one correct order (step1 → step2 → step3). All other orderings are wrong.",
+  "source_dataset": "aep_causal_classification_34",
+  "tiers": [1, 2, 3],
+  "subs": ["2b", "17c", "14b"],
+
+  "steps": {
+    "step1": {
+      "tier": 1,
+      "sub": "2b",
+      "label": "Concept: What AJO mobile personalisation can do",
+      "text": "Journey Optimizer can personalize in-app messages based on profile attributes, app usage history, and device location to help you go from a one-size-fits-all app experience to a rich, context-aware experience. You can also author SMS text messages natively in Journey Optimizer and connect to an SMS aggregator such as Synch to seamlessly deliver personalized text messages as part of the customer journey. With Journey Optimizer, you're not just sending generic mobile messages. The Journey Canvas lets you easily visualize the customer journey so that each mobile interaction is tailored to the individual and included as part of the broader customer life cycle. Whether you're connecting with fans at a live event, engaging with shoppers in your store, or building relationships with loyalty members, Adobe Journey Optimizer facilitates contextual mobile engagement at every stage of the customer journey."
+    },
+    "step2": {
+      "tier": 2,
+      "sub": "17c",
+      "label": "Environment setup: Reset development sandbox to clean state",
+      "text": "We could just methodically delete these unneeded assets one by one, but since we're working in a development sandbox, we have the option to reset the entire sandbox and start from a clean slate instead. If we've been granted sandbox reset permissions through our assigned role, we can go to Sandboxes in the left nav and select the sandbox that we want to reset for the list. After selecting Sandbox Reset, we're warned that this will delete all user-created resources in the sandbox and that this cannot be undone. To confirm our choice, we'll need to manually type the name of the sandbox here, and once we hit reset, our sandbox will be returned to its original, pristine state. If we have sandbox administration permissions for platform, we can also use the Sandboxes tab to edit the basic details for a sandbox."
+    },
+    "step3": {
+      "tier": 3,
+      "sub": "14b",
+      "label": "Data ingestion: Configure source connector dataflow and verify batch run",
+      "text": "The error of threshold specifies the percentage of acceptable errors before the entire batch fails and is set to 5% by default. Finally, we can review the source configuration details and save our new data flow. Once our data flow has had time to run, we see a successful run status. We can click into the target dataset for more details about the batch of data that was ingested. Finally, going back to Sources, in addition to the catalog of available source connectors, you can also click on Dataflows to view and manage the dataflows you've already set up or on Accounts to view and manage the connections to your accounts in various sources."
+    }
+  },
+
+  "correct_order": ["step1", "step2", "step3"],
+
+  "all_pairs": [
+    {
+      "text_1_id": "step1", "text_2_id": "step2",
+      "correct": true,
+      "reasoning": "You learn what AJO can do (concept) before setting up your environment (sandbox reset).",
+      "text_1": "Journey Optimizer can personalize in-app messages based on profile attributes, app usage history, and device location to help you go from a one-size-fits-all app experience to a rich, context-aware experience. You can also author SMS text messages natively in Journey Optimizer and connect to an SMS aggregator such as Synch to seamlessly deliver personalized text messages as part of the customer journey. With Journey Optimizer, you're not just sending generic mobile messages. The Journey Canvas lets you easily visualize the customer journey so that each mobile interaction is tailored to the individual and included as part of the broader customer life cycle. Whether you're connecting with fans at a live event, engaging with shoppers in your store, or building relationships with loyalty members, Adobe Journey Optimizer facilitates contextual mobile engagement at every stage of the customer journey.",
+      "text_2": "We could just methodically delete these unneeded assets one by one, but since we're working in a development sandbox, we have the option to reset the entire sandbox and start from a clean slate instead. If we've been granted sandbox reset permissions through our assigned role, we can go to Sandboxes in the left nav and select the sandbox that we want to reset for the list. After selecting Sandbox Reset, we're warned that this will delete all user-created resources in the sandbox and that this cannot be undone. To confirm our choice, we'll need to manually type the name of the sandbox here, and once we hit reset, our sandbox will be returned to its original, pristine state. If we have sandbox administration permissions for platform, we can also use the Sandboxes tab to edit the basic details for a sandbox."
+    },
+    {
+      "text_1_id": "step2", "text_2_id": "step1",
+      "correct": false,
+      "reasoning": "Sandbox reset does not precede learning the concept — wrong order.",
+      "text_1": "We could just methodically delete these unneeded assets one by one, but since we're working in a development sandbox, we have the option to reset the entire sandbox and start from a clean slate instead. If we've been granted sandbox reset permissions through our assigned role, we can go to Sandboxes in the left nav and select the sandbox that we want to reset for the list. After selecting Sandbox Reset, we're warned that this will delete all user-created resources in the sandbox and that this cannot be undone. To confirm our choice, we'll need to manually type the name of the sandbox here, and once we hit reset, our sandbox will be returned to its original, pristine state. If we have sandbox administration permissions for platform, we can also use the Sandboxes tab to edit the basic details for a sandbox.",
+      "text_2": "Journey Optimizer can personalize in-app messages based on profile attributes, app usage history, and device location to help you go from a one-size-fits-all app experience to a rich, context-aware experience. You can also author SMS text messages natively in Journey Optimizer and connect to an SMS aggregator such as Synch to seamlessly deliver personalized text messages as part of the customer journey. With Journey Optimizer, you're not just sending generic mobile messages. The Journey Canvas lets you easily visualize the customer journey so that each mobile interaction is tailored to the individual and included as part of the broader customer life cycle. Whether you're connecting with fans at a live event, engaging with shoppers in your store, or building relationships with loyalty members, Adobe Journey Optimizer facilitates contextual mobile engagement at every stage of the customer journey."
+    },
+    {
+      "text_1_id": "step2", "text_2_id": "step3",
+      "correct": true,
+      "reasoning": "You reset/prepare the sandbox before configuring dataflows and ingesting data.",
+      "text_1": "We could just methodically delete these unneeded assets one by one, but since we're working in a development sandbox, we have the option to reset the entire sandbox and start from a clean slate instead. If we've been granted sandbox reset permissions through our assigned role, we can go to Sandboxes in the left nav and select the sandbox that we want to reset for the list. After selecting Sandbox Reset, we're warned that this will delete all user-created resources in the sandbox and that this cannot be undone. To confirm our choice, we'll need to manually type the name of the sandbox here, and once we hit reset, our sandbox will be returned to its original, pristine state. If we have sandbox administration permissions for platform, we can also use the Sandboxes tab to edit the basic details for a sandbox.",
+      "text_2": "The error of threshold specifies the percentage of acceptable errors before the entire batch fails and is set to 5% by default. Finally, we can review the source configuration details and save our new data flow. Once our data flow has had time to run, we see a successful run status. We can click into the target dataset for more details about the batch of data that was ingested. Finally, going back to Sources, in addition to the catalog of available source connectors, you can also click on Dataflows to view and manage the dataflows you've already set up or on Accounts to view and manage the connections to your accounts in various sources."
+    },
+    {
+      "text_1_id": "step3", "text_2_id": "step2",
+      "correct": false,
+      "reasoning": "Ingesting data does not come before resetting the sandbox — wrong order.",
+      "text_1": "The error of threshold specifies the percentage of acceptable errors before the entire batch fails and is set to 5% by default. Finally, we can review the source configuration details and save our new data flow. Once our data flow has had time to run, we see a successful run status. We can click into the target dataset for more details about the batch of data that was ingested. Finally, going back to Sources, in addition to the catalog of available source connectors, you can also click on Dataflows to view and manage the dataflows you've already set up or on Accounts to view and manage the connections to your accounts in various sources.",
+      "text_2": "We could just methodically delete these unneeded assets one by one, but since we're working in a development sandbox, we have the option to reset the entire sandbox and start from a clean slate instead. If we've been granted sandbox reset permissions through our assigned role, we can go to Sandboxes in the left nav and select the sandbox that we want to reset for the list. After selecting Sandbox Reset, we're warned that this will delete all user-created resources in the sandbox and that this cannot be undone. To confirm our choice, we'll need to manually type the name of the sandbox here, and once we hit reset, our sandbox will be returned to its original, pristine state. If we have sandbox administration permissions for platform, we can also use the Sandboxes tab to edit the basic details for a sandbox."
+    },
+    {
+      "text_1_id": "step1", "text_2_id": "step3",
+      "correct": true,
+      "reasoning": "Concept introduction precedes data ingestion (non-adjacent but still correct direction).",
+      "text_1": "Journey Optimizer can personalize in-app messages based on profile attributes, app usage history, and device location to help you go from a one-size-fits-all app experience to a rich, context-aware experience. You can also author SMS text messages natively in Journey Optimizer and connect to an SMS aggregator such as Synch to seamlessly deliver personalized text messages as part of the customer journey. With Journey Optimizer, you're not just sending generic mobile messages. The Journey Canvas lets you easily visualize the customer journey so that each mobile interaction is tailored to the individual and included as part of the broader customer life cycle. Whether you're connecting with fans at a live event, engaging with shoppers in your store, or building relationships with loyalty members, Adobe Journey Optimizer facilitates contextual mobile engagement at every stage of the customer journey.",
+      "text_2": "The error of threshold specifies the percentage of acceptable errors before the entire batch fails and is set to 5% by default. Finally, we can review the source configuration details and save our new data flow. Once our data flow has had time to run, we see a successful run status. We can click into the target dataset for more details about the batch of data that was ingested. Finally, going back to Sources, in addition to the catalog of available source connectors, you can also click on Dataflows to view and manage the dataflows you've already set up or on Accounts to view and manage the connections to your accounts in various sources."
+    },
+    {
+      "text_1_id": "step3", "text_2_id": "step1",
+      "correct": false,
+      "reasoning": "Data ingestion does not precede the concept introduction — wrong order.",
+      "text_1": "The error of threshold specifies the percentage of acceptable errors before the entire batch fails and is set to 5% by default. Finally, we can review the source configuration details and save our new data flow. Once our data flow has had time to run, we see a successful run status. We can click into the target dataset for more details about the batch of data that was ingested. Finally, going back to Sources, in addition to the catalog of available source connectors, you can also click on Dataflows to view and manage the dataflows you've already set up or on Accounts to view and manage the connections to your accounts in various sources.",
+      "text_2": "Journey Optimizer can personalize in-app messages based on profile attributes, app usage history, and device location to help you go from a one-size-fits-all app experience to a rich, context-aware experience. You can also author SMS text messages natively in Journey Optimizer and connect to an SMS aggregator such as Synch to seamlessly deliver personalized text messages as part of the customer journey. With Journey Optimizer, you're not just sending generic mobile messages. The Journey Canvas lets you easily visualize the customer journey so that each mobile interaction is tailored to the individual and included as part of the broader customer life cycle. Whether you're connecting with fans at a live event, engaging with shoppers in your store, or building relationships with loyalty members, Adobe Journey Optimizer facilitates contextual mobile engagement at every stage of the customer journey."
+    }
+  ]
+}

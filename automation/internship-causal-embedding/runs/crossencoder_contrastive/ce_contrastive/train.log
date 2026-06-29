@@ -1,0 +1,268 @@
+10:45:13 INFO run_dir=runs/crossencoder_contrastive/ce_contrastive
+10:45:13 INFO device=cuda  bf16=True  tau=0.07
+10:45:13 INFO tokenizer <- bert-base-uncased
+10:45:14 INFO scanning max JOINT token length ...
+10:51:54 INFO   observed max=775  -> max_seq_len=512  (scan 400.5s)
+10:51:54 INFO loading grouped training dataset
+10:52:02 INFO   train groups: 109322
+10:52:02 INFO   group size (inferred): 6
+10:52:02 INFO loading val/test datasets (original binary labels)
+10:52:02 INFO   val=6004  test=6004
+10:52:02 INFO building CrossEncoderClassifier on bert-base-uncased
+10:52:03 INFO   hidden_size=768  trainable_params=109,483,009
+10:52:03 INFO   total_steps=10251  warmup_steps=1025
+10:52:06 INFO run_dir=runs/crossencoder_contrastive/ce_contrastive
+10:52:06 INFO device=cuda  bf16=True  tau=0.07
+10:52:06 INFO tokenizer <- bert-base-uncased
+10:52:07 INFO scanning max JOINT token length ...
+10:52:32 INFO   e1 step    50/3417  loss=8.2471  pos_rank1=0.1406  lr0=9.76e-07 lr1=4.88e-05
+10:53:00 INFO   e1 step   100/3417  loss=6.9386  pos_rank1=0.1641  lr0=1.95e-06 lr1=9.76e-05
+10:53:28 INFO   e1 step   150/3417  loss=5.9055  pos_rank1=0.1904  lr0=2.93e-06 lr1=1.46e-04
+10:53:56 INFO   e1 step   200/3417  loss=4.9489  pos_rank1=0.2308  lr0=3.90e-06 lr1=1.95e-04
+10:54:23 INFO   e1 step   250/3417  loss=4.2319  pos_rank1=0.2903  lr0=4.88e-06 lr1=2.44e-04
+10:54:45 INFO run_dir=runs/crossencoder_contrastive/ce_contrastive
+10:54:45 INFO device=cuda  bf16=True  tau=0.07
+10:54:45 INFO tokenizer <- bert-base-uncased
+10:54:46 INFO scanning max JOINT token length ...
+10:58:52 INFO   observed max=512  -> max_seq_len=512  (scan 405.4s)
+10:58:52 INFO loading grouped training dataset
+10:59:00 INFO   train groups: 109322
+10:59:00 INFO   group size (inferred): 6
+10:59:00 INFO loading val/test datasets (original binary labels)
+10:59:00 INFO   val=6004  test=6004
+10:59:00 INFO building CrossEncoderClassifier on bert-base-uncased
+10:59:51 INFO run_dir=runs/crossencoder_contrastive/ce_contrastive
+10:59:51 INFO device=cuda  bf16=True  tau=0.07
+10:59:51 INFO tokenizer <- bert-base-uncased
+10:59:51 INFO scanning max JOINT token length ...
+11:01:05 INFO run_dir=runs/crossencoder_contrastive/ce_contrastive
+11:01:05 INFO device=cuda  bf16=True  tau=0.07
+11:01:05 INFO tokenizer <- bert-base-uncased
+11:01:06 INFO scanning max JOINT token length ...
+11:02:10 INFO run_dir=runs/crossencoder_contrastive/ce_contrastive
+11:02:10 INFO device=cuda  bf16=True  tau=0.07
+11:02:10 INFO tokenizer <- bert-base-uncased
+11:02:10 INFO scanning max JOINT token length ...
+11:08:54 INFO   observed max=512  -> max_seq_len=512  (scan 403.8s)
+11:08:54 INFO loading grouped training dataset
+11:09:02 INFO   train groups: 109322
+11:09:02 INFO   group size (inferred): 6
+11:09:02 INFO loading val/test datasets (original binary labels)
+11:09:02 INFO   val=6004  test=6004
+11:09:02 INFO building CrossEncoderClassifier on bert-base-uncased
+11:09:03 INFO   hidden_size=768  trainable_params=109,483,009
+11:09:03 INFO   total_steps=10251  warmup_steps=1025
+11:09:32 INFO   e1 step    50/3417  loss=8.2494  pos_rank1=0.1412  lr0=9.76e-07 lr1=4.88e-05
+11:09:59 INFO   e1 step   100/3417  loss=6.9395  pos_rank1=0.1644  lr0=1.95e-06 lr1=9.76e-05
+11:10:28 INFO   e1 step   150/3417  loss=5.9054  pos_rank1=0.1906  lr0=2.93e-06 lr1=1.46e-04
+11:10:55 INFO   e1 step   200/3417  loss=4.9489  pos_rank1=0.2303  lr0=3.90e-06 lr1=1.95e-04
+11:11:23 INFO   e1 step   250/3417  loss=4.2319  pos_rank1=0.2899  lr0=4.88e-06 lr1=2.44e-04
+11:11:50 INFO   e1 step   300/3417  loss=3.6966  pos_rank1=0.3495  lr0=5.85e-06 lr1=2.93e-04
+11:12:18 INFO   e1 step   350/3417  loss=3.2920  pos_rank1=0.3997  lr0=6.83e-06 lr1=3.41e-04
+11:12:46 INFO   e1 step   400/3417  loss=2.9663  pos_rank1=0.4452  lr0=7.80e-06 lr1=3.90e-04
+11:13:14 INFO   e1 step   450/3417  loss=2.7018  pos_rank1=0.4855  lr0=8.78e-06 lr1=4.39e-04
+11:13:42 INFO   e1 step   500/3417  loss=2.4845  pos_rank1=0.5208  lr0=9.76e-06 lr1=4.88e-04
+11:14:10 INFO   e1 step   550/3417  loss=2.3046  pos_rank1=0.5491  lr0=1.07e-05 lr1=5.37e-04
+11:14:37 INFO   e1 step   600/3417  loss=2.1493  pos_rank1=0.5742  lr0=1.17e-05 lr1=5.85e-04
+11:15:05 INFO   e1 step   650/3417  loss=2.0136  pos_rank1=0.5961  lr0=1.27e-05 lr1=6.34e-04
+11:15:33 INFO   e1 step   700/3417  loss=1.9028  pos_rank1=0.6140  lr0=1.37e-05 lr1=6.83e-04
+11:16:01 INFO   e1 step   750/3417  loss=1.8049  pos_rank1=0.6302  lr0=1.46e-05 lr1=7.32e-04
+11:16:28 INFO   e1 step   800/3417  loss=1.7170  pos_rank1=0.6456  lr0=1.56e-05 lr1=7.80e-04
+11:16:56 INFO   e1 step   850/3417  loss=1.6371  pos_rank1=0.6593  lr0=1.66e-05 lr1=8.29e-04
+11:17:24 INFO   e1 step   900/3417  loss=1.5642  pos_rank1=0.6722  lr0=1.76e-05 lr1=8.78e-04
+11:17:52 INFO   e1 step   950/3417  loss=1.4991  pos_rank1=0.6839  lr0=1.85e-05 lr1=9.27e-04
+11:18:20 INFO   e1 step  1000/3417  loss=1.4408  pos_rank1=0.6942  lr0=1.95e-05 lr1=9.76e-04
+11:18:48 INFO   e1 step  1050/3417  loss=1.3885  pos_rank1=0.7029  lr0=1.99e-05 lr1=9.97e-04
+11:19:15 INFO   e1 step  1100/3417  loss=1.3396  pos_rank1=0.7119  lr0=1.98e-05 lr1=9.92e-04
+11:19:43 INFO   e1 step  1150/3417  loss=1.2951  pos_rank1=0.7196  lr0=1.97e-05 lr1=9.86e-04
+11:20:10 INFO   e1 step  1200/3417  loss=1.2525  pos_rank1=0.7274  lr0=1.96e-05 lr1=9.81e-04
+11:20:38 INFO   e1 step  1250/3417  loss=1.2145  pos_rank1=0.7341  lr0=1.95e-05 lr1=9.76e-04
+11:21:06 INFO   e1 step  1300/3417  loss=1.1785  pos_rank1=0.7405  lr0=1.94e-05 lr1=9.70e-04
+11:21:34 INFO   e1 step  1350/3417  loss=1.1436  pos_rank1=0.7470  lr0=1.93e-05 lr1=9.65e-04
+11:22:02 INFO   e1 step  1400/3417  loss=1.1123  pos_rank1=0.7526  lr0=1.92e-05 lr1=9.59e-04
+11:22:30 INFO   e1 step  1450/3417  loss=1.0814  pos_rank1=0.7585  lr0=1.91e-05 lr1=9.54e-04
+11:22:57 INFO   e1 step  1500/3417  loss=1.0533  pos_rank1=0.7640  lr0=1.90e-05 lr1=9.49e-04
+11:23:25 INFO   e1 step  1550/3417  loss=1.0264  pos_rank1=0.7691  lr0=1.89e-05 lr1=9.43e-04
+11:23:53 INFO   e1 step  1600/3417  loss=1.0016  pos_rank1=0.7740  lr0=1.88e-05 lr1=9.38e-04
+11:24:21 INFO   e1 step  1650/3417  loss=0.9773  pos_rank1=0.7788  lr0=1.86e-05 lr1=9.32e-04
+11:24:48 INFO   e1 step  1700/3417  loss=0.9543  pos_rank1=0.7835  lr0=1.85e-05 lr1=9.27e-04
+11:25:15 INFO   e1 step  1750/3417  loss=0.9328  pos_rank1=0.7878  lr0=1.84e-05 lr1=9.21e-04
+11:25:43 INFO   e1 step  1800/3417  loss=0.9118  pos_rank1=0.7920  lr0=1.83e-05 lr1=9.16e-04
+11:26:11 INFO   e1 step  1850/3417  loss=0.8926  pos_rank1=0.7958  lr0=1.82e-05 lr1=9.11e-04
+11:26:39 INFO   e1 step  1900/3417  loss=0.8740  pos_rank1=0.7995  lr0=1.81e-05 lr1=9.05e-04
+11:27:07 INFO   e1 step  1950/3417  loss=0.8557  pos_rank1=0.8032  lr0=1.80e-05 lr1=9.00e-04
+11:27:35 INFO   e1 step  2000/3417  loss=0.8395  pos_rank1=0.8066  lr0=1.79e-05 lr1=8.94e-04
+11:28:03 INFO   e1 step  2050/3417  loss=0.8225  pos_rank1=0.8101  lr0=1.78e-05 lr1=8.89e-04
+11:28:31 INFO   e1 step  2100/3417  loss=0.8064  pos_rank1=0.8135  lr0=1.77e-05 lr1=8.83e-04
+11:28:59 INFO   e1 step  2150/3417  loss=0.7915  pos_rank1=0.8166  lr0=1.76e-05 lr1=8.78e-04
+11:29:27 INFO   e1 step  2200/3417  loss=0.7775  pos_rank1=0.8195  lr0=1.75e-05 lr1=8.73e-04
+11:29:55 INFO   e1 step  2250/3417  loss=0.7632  pos_rank1=0.8227  lr0=1.73e-05 lr1=8.67e-04
+11:30:22 INFO   e1 step  2300/3417  loss=0.7500  pos_rank1=0.8255  lr0=1.72e-05 lr1=8.62e-04
+11:30:50 INFO   e1 step  2350/3417  loss=0.7369  pos_rank1=0.8282  lr0=1.71e-05 lr1=8.56e-04
+11:31:17 INFO   e1 step  2400/3417  loss=0.7243  pos_rank1=0.8308  lr0=1.70e-05 lr1=8.51e-04
+11:31:46 INFO   e1 step  2450/3417  loss=0.7122  pos_rank1=0.8334  lr0=1.69e-05 lr1=8.46e-04
+11:32:13 INFO   e1 step  2500/3417  loss=0.7002  pos_rank1=0.8360  lr0=1.68e-05 lr1=8.40e-04
+11:32:41 INFO   e1 step  2550/3417  loss=0.6890  pos_rank1=0.8386  lr0=1.67e-05 lr1=8.35e-04
+11:33:09 INFO   e1 step  2600/3417  loss=0.6776  pos_rank1=0.8410  lr0=1.66e-05 lr1=8.29e-04
+11:33:37 INFO   e1 step  2650/3417  loss=0.6668  pos_rank1=0.8435  lr0=1.65e-05 lr1=8.24e-04
+11:34:05 INFO   e1 step  2700/3417  loss=0.6565  pos_rank1=0.8456  lr0=1.64e-05 lr1=8.18e-04
+11:34:33 INFO   e1 step  2750/3417  loss=0.6467  pos_rank1=0.8477  lr0=1.63e-05 lr1=8.13e-04
+11:35:01 INFO   e1 step  2800/3417  loss=0.6372  pos_rank1=0.8497  lr0=1.62e-05 lr1=8.08e-04
+11:35:29 INFO   e1 step  2850/3417  loss=0.6280  pos_rank1=0.8517  lr0=1.60e-05 lr1=8.02e-04
+11:35:56 INFO   e1 step  2900/3417  loss=0.6189  pos_rank1=0.8536  lr0=1.59e-05 lr1=7.97e-04
+11:36:24 INFO   e1 step  2950/3417  loss=0.6102  pos_rank1=0.8555  lr0=1.58e-05 lr1=7.91e-04
+11:36:51 INFO   e1 step  3000/3417  loss=0.6020  pos_rank1=0.8572  lr0=1.57e-05 lr1=7.86e-04
+11:37:19 INFO   e1 step  3050/3417  loss=0.5941  pos_rank1=0.8589  lr0=1.56e-05 lr1=7.81e-04
+11:37:47 INFO   e1 step  3100/3417  loss=0.5865  pos_rank1=0.8606  lr0=1.55e-05 lr1=7.75e-04
+11:38:15 INFO   e1 step  3150/3417  loss=0.5789  pos_rank1=0.8622  lr0=1.54e-05 lr1=7.70e-04
+11:38:43 INFO   e1 step  3200/3417  loss=0.5710  pos_rank1=0.8639  lr0=1.53e-05 lr1=7.64e-04
+11:39:11 INFO   e1 step  3250/3417  loss=0.5637  pos_rank1=0.8655  lr0=1.52e-05 lr1=7.59e-04
+11:39:39 INFO   e1 step  3300/3417  loss=0.5567  pos_rank1=0.8671  lr0=1.51e-05 lr1=7.53e-04
+11:40:07 INFO   e1 step  3350/3417  loss=0.5498  pos_rank1=0.8686  lr0=1.50e-05 lr1=7.48e-04
+11:40:35 INFO   e1 step  3400/3417  loss=0.5433  pos_rank1=0.8700  lr0=1.49e-05 lr1=7.43e-04
+11:40:49 INFO [epoch 1] train_loss=0.5412  train_pos_rank1=0.8705  val_loss=0.5187  val_acc=0.7195  val_auc=0.8297  elapsed=1905.9s
+11:40:49 INFO   saved best.pt  val_acc=0.7195
+11:41:18 INFO   e2 step    50/3417  loss=0.0882  pos_rank1=0.9762  lr0=1.47e-05 lr1=7.35e-04
+11:41:46 INFO   e2 step   100/3417  loss=0.0882  pos_rank1=0.9725  lr0=1.46e-05 lr1=7.30e-04
+11:42:13 INFO   e2 step   150/3417  loss=0.0899  pos_rank1=0.9694  lr0=1.45e-05 lr1=7.24e-04
+11:42:41 INFO   e2 step   200/3417  loss=0.0920  pos_rank1=0.9681  lr0=1.44e-05 lr1=7.19e-04
+11:43:08 INFO   e2 step   250/3417  loss=0.0925  pos_rank1=0.9680  lr0=1.43e-05 lr1=7.14e-04
+11:43:36 INFO   e2 step   300/3417  loss=0.0880  pos_rank1=0.9695  lr0=1.42e-05 lr1=7.08e-04
+11:44:04 INFO   e2 step   350/3417  loss=0.0894  pos_rank1=0.9688  lr0=1.41e-05 lr1=7.03e-04
+11:44:32 INFO   e2 step   400/3417  loss=0.0903  pos_rank1=0.9688  lr0=1.39e-05 lr1=6.97e-04
+11:44:59 INFO   e2 step   450/3417  loss=0.0896  pos_rank1=0.9689  lr0=1.38e-05 lr1=6.92e-04
+11:45:27 INFO   e2 step   500/3417  loss=0.0888  pos_rank1=0.9694  lr0=1.37e-05 lr1=6.87e-04
+11:45:54 INFO   e2 step   550/3417  loss=0.0882  pos_rank1=0.9694  lr0=1.36e-05 lr1=6.81e-04
+11:46:22 INFO   e2 step   600/3417  loss=0.0880  pos_rank1=0.9697  lr0=1.35e-05 lr1=6.76e-04
+11:46:50 INFO   e2 step   650/3417  loss=0.0869  pos_rank1=0.9703  lr0=1.34e-05 lr1=6.70e-04
+11:47:18 INFO   e2 step   700/3417  loss=0.0869  pos_rank1=0.9702  lr0=1.33e-05 lr1=6.65e-04
+11:47:46 INFO   e2 step   750/3417  loss=0.0859  pos_rank1=0.9710  lr0=1.32e-05 lr1=6.59e-04
+11:48:13 INFO   e2 step   800/3417  loss=0.0844  pos_rank1=0.9713  lr0=1.31e-05 lr1=6.54e-04
+11:48:41 INFO   e2 step   850/3417  loss=0.0850  pos_rank1=0.9708  lr0=1.30e-05 lr1=6.49e-04
+11:49:09 INFO   e2 step   900/3417  loss=0.0845  pos_rank1=0.9709  lr0=1.29e-05 lr1=6.43e-04
+11:49:37 INFO   e2 step   950/3417  loss=0.0838  pos_rank1=0.9711  lr0=1.28e-05 lr1=6.38e-04
+11:50:04 INFO   e2 step  1000/3417  loss=0.0844  pos_rank1=0.9709  lr0=1.26e-05 lr1=6.32e-04
+11:50:32 INFO   e2 step  1050/3417  loss=0.0841  pos_rank1=0.9708  lr0=1.25e-05 lr1=6.27e-04
+11:51:00 INFO   e2 step  1100/3417  loss=0.0838  pos_rank1=0.9710  lr0=1.24e-05 lr1=6.22e-04
+11:51:28 INFO   e2 step  1150/3417  loss=0.0830  pos_rank1=0.9711  lr0=1.23e-05 lr1=6.16e-04
+11:51:55 INFO   e2 step  1200/3417  loss=0.0825  pos_rank1=0.9710  lr0=1.22e-05 lr1=6.11e-04
+11:52:23 INFO   e2 step  1250/3417  loss=0.0819  pos_rank1=0.9710  lr0=1.21e-05 lr1=6.05e-04
+11:52:51 INFO   e2 step  1300/3417  loss=0.0819  pos_rank1=0.9709  lr0=1.20e-05 lr1=6.00e-04
+11:53:19 INFO   e2 step  1350/3417  loss=0.0821  pos_rank1=0.9709  lr0=1.19e-05 lr1=5.94e-04
+11:53:47 INFO   e2 step  1400/3417  loss=0.0815  pos_rank1=0.9711  lr0=1.18e-05 lr1=5.89e-04
+11:54:14 INFO   e2 step  1450/3417  loss=0.0817  pos_rank1=0.9712  lr0=1.17e-05 lr1=5.84e-04
+11:54:42 INFO   e2 step  1500/3417  loss=0.0817  pos_rank1=0.9714  lr0=1.16e-05 lr1=5.78e-04
+11:55:09 INFO   e2 step  1550/3417  loss=0.0813  pos_rank1=0.9713  lr0=1.15e-05 lr1=5.73e-04
+11:55:37 INFO   e2 step  1600/3417  loss=0.0807  pos_rank1=0.9715  lr0=1.13e-05 lr1=5.67e-04
+11:56:05 INFO   e2 step  1650/3417  loss=0.0810  pos_rank1=0.9714  lr0=1.12e-05 lr1=5.62e-04
+11:56:33 INFO   e2 step  1700/3417  loss=0.0805  pos_rank1=0.9715  lr0=1.11e-05 lr1=5.56e-04
+11:57:01 INFO   e2 step  1750/3417  loss=0.0800  pos_rank1=0.9716  lr0=1.10e-05 lr1=5.51e-04
+11:57:29 INFO   e2 step  1800/3417  loss=0.0798  pos_rank1=0.9717  lr0=1.09e-05 lr1=5.46e-04
+11:57:57 INFO   e2 step  1850/3417  loss=0.0799  pos_rank1=0.9716  lr0=1.08e-05 lr1=5.40e-04
+11:58:25 INFO   e2 step  1900/3417  loss=0.0801  pos_rank1=0.9716  lr0=1.07e-05 lr1=5.35e-04
+11:58:53 INFO   e2 step  1950/3417  loss=0.0797  pos_rank1=0.9717  lr0=1.06e-05 lr1=5.29e-04
+11:59:21 INFO   e2 step  2000/3417  loss=0.0793  pos_rank1=0.9719  lr0=1.05e-05 lr1=5.24e-04
+11:59:49 INFO   e2 step  2050/3417  loss=0.0791  pos_rank1=0.9720  lr0=1.04e-05 lr1=5.19e-04
+12:00:17 INFO   e2 step  2100/3417  loss=0.0784  pos_rank1=0.9722  lr0=1.03e-05 lr1=5.13e-04
+12:00:45 INFO   e2 step  2150/3417  loss=0.0779  pos_rank1=0.9723  lr0=1.02e-05 lr1=5.08e-04
+12:01:14 INFO   e2 step  2200/3417  loss=0.0777  pos_rank1=0.9723  lr0=1.00e-05 lr1=5.02e-04
+12:01:41 INFO   e2 step  2250/3417  loss=0.0776  pos_rank1=0.9725  lr0=9.94e-06 lr1=4.97e-04
+12:02:09 INFO   e2 step  2300/3417  loss=0.0776  pos_rank1=0.9725  lr0=9.83e-06 lr1=4.91e-04
+12:02:38 INFO   e2 step  2350/3417  loss=0.0768  pos_rank1=0.9727  lr0=9.72e-06 lr1=4.86e-04
+12:03:06 INFO   e2 step  2400/3417  loss=0.0764  pos_rank1=0.9728  lr0=9.61e-06 lr1=4.81e-04
+12:03:33 INFO   e2 step  2450/3417  loss=0.0761  pos_rank1=0.9728  lr0=9.50e-06 lr1=4.75e-04
+12:04:01 INFO   e2 step  2500/3417  loss=0.0759  pos_rank1=0.9729  lr0=9.40e-06 lr1=4.70e-04
+12:04:29 INFO   e2 step  2550/3417  loss=0.0756  pos_rank1=0.9730  lr0=9.29e-06 lr1=4.64e-04
+12:04:56 INFO   e2 step  2600/3417  loss=0.0750  pos_rank1=0.9732  lr0=9.18e-06 lr1=4.59e-04
+12:05:24 INFO   e2 step  2650/3417  loss=0.0747  pos_rank1=0.9733  lr0=9.07e-06 lr1=4.54e-04
+12:05:52 INFO   e2 step  2700/3417  loss=0.0744  pos_rank1=0.9734  lr0=8.96e-06 lr1=4.48e-04
+12:06:20 INFO   e2 step  2750/3417  loss=0.0742  pos_rank1=0.9735  lr0=8.85e-06 lr1=4.43e-04
+12:06:48 INFO   e2 step  2800/3417  loss=0.0739  pos_rank1=0.9736  lr0=8.74e-06 lr1=4.37e-04
+12:07:16 INFO   e2 step  2850/3417  loss=0.0740  pos_rank1=0.9735  lr0=8.64e-06 lr1=4.32e-04
+12:07:43 INFO   e2 step  2900/3417  loss=0.0738  pos_rank1=0.9736  lr0=8.53e-06 lr1=4.26e-04
+12:08:11 INFO   e2 step  2950/3417  loss=0.0739  pos_rank1=0.9735  lr0=8.42e-06 lr1=4.21e-04
+12:08:39 INFO   e2 step  3000/3417  loss=0.0735  pos_rank1=0.9736  lr0=8.31e-06 lr1=4.16e-04
+12:09:07 INFO   e2 step  3050/3417  loss=0.0734  pos_rank1=0.9737  lr0=8.20e-06 lr1=4.10e-04
+12:09:35 INFO   e2 step  3100/3417  loss=0.0731  pos_rank1=0.9737  lr0=8.09e-06 lr1=4.05e-04
+12:10:03 INFO   e2 step  3150/3417  loss=0.0729  pos_rank1=0.9738  lr0=7.99e-06 lr1=3.99e-04
+12:10:31 INFO   e2 step  3200/3417  loss=0.0727  pos_rank1=0.9738  lr0=7.88e-06 lr1=3.94e-04
+12:10:59 INFO   e2 step  3250/3417  loss=0.0728  pos_rank1=0.9737  lr0=7.77e-06 lr1=3.88e-04
+12:11:27 INFO   e2 step  3300/3417  loss=0.0726  pos_rank1=0.9738  lr0=7.66e-06 lr1=3.83e-04
+12:11:54 INFO   e2 step  3350/3417  loss=0.0725  pos_rank1=0.9739  lr0=7.55e-06 lr1=3.78e-04
+12:12:22 INFO   e2 step  3400/3417  loss=0.0724  pos_rank1=0.9739  lr0=7.44e-06 lr1=3.72e-04
+12:12:37 INFO [epoch 2] train_loss=0.0723  train_pos_rank1=0.9739  val_loss=0.4727  val_acc=0.7412  val_auc=0.8586  elapsed=1907.3s
+12:12:37 INFO   saved best.pt  val_acc=0.7412
+12:13:06 INFO   e3 step    50/3417  loss=0.0476  pos_rank1=0.9825  lr0=7.30e-06 lr1=3.65e-04
+12:13:34 INFO   e3 step   100/3417  loss=0.0519  pos_rank1=0.9825  lr0=7.19e-06 lr1=3.60e-04
+12:14:02 INFO   e3 step   150/3417  loss=0.0555  pos_rank1=0.9821  lr0=7.08e-06 lr1=3.54e-04
+12:14:29 INFO   e3 step   200/3417  loss=0.0541  pos_rank1=0.9805  lr0=6.97e-06 lr1=3.49e-04
+12:14:57 INFO   e3 step   250/3417  loss=0.0513  pos_rank1=0.9808  lr0=6.87e-06 lr1=3.43e-04
+12:15:25 INFO   e3 step   300/3417  loss=0.0513  pos_rank1=0.9799  lr0=6.76e-06 lr1=3.38e-04
+12:15:52 INFO   e3 step   350/3417  loss=0.0501  pos_rank1=0.9800  lr0=6.65e-06 lr1=3.32e-04
+12:16:21 INFO   e3 step   400/3417  loss=0.0516  pos_rank1=0.9798  lr0=6.54e-06 lr1=3.27e-04
+12:16:49 INFO   e3 step   450/3417  loss=0.0505  pos_rank1=0.9799  lr0=6.43e-06 lr1=3.22e-04
+12:17:17 INFO   e3 step   500/3417  loss=0.0489  pos_rank1=0.9803  lr0=6.32e-06 lr1=3.16e-04
+12:17:44 INFO   e3 step   550/3417  loss=0.0481  pos_rank1=0.9808  lr0=6.22e-06 lr1=3.11e-04
+12:18:12 INFO   e3 step   600/3417  loss=0.0479  pos_rank1=0.9806  lr0=6.11e-06 lr1=3.05e-04
+12:18:40 INFO   e3 step   650/3417  loss=0.0483  pos_rank1=0.9803  lr0=6.00e-06 lr1=3.00e-04
+12:19:08 INFO   e3 step   700/3417  loss=0.0471  pos_rank1=0.9807  lr0=5.89e-06 lr1=2.94e-04
+12:19:36 INFO   e3 step   750/3417  loss=0.0480  pos_rank1=0.9803  lr0=5.78e-06 lr1=2.89e-04
+12:20:04 INFO   e3 step   800/3417  loss=0.0478  pos_rank1=0.9802  lr0=5.67e-06 lr1=2.84e-04
+12:20:31 INFO   e3 step   850/3417  loss=0.0477  pos_rank1=0.9803  lr0=5.56e-06 lr1=2.78e-04
+12:20:59 INFO   e3 step   900/3417  loss=0.0480  pos_rank1=0.9803  lr0=5.46e-06 lr1=2.73e-04
+12:21:27 INFO   e3 step   950/3417  loss=0.0482  pos_rank1=0.9801  lr0=5.35e-06 lr1=2.67e-04
+12:21:55 INFO   e3 step  1000/3417  loss=0.0487  pos_rank1=0.9800  lr0=5.24e-06 lr1=2.62e-04
+12:22:23 INFO   e3 step  1050/3417  loss=0.0483  pos_rank1=0.9801  lr0=5.13e-06 lr1=2.57e-04
+12:22:50 INFO   e3 step  1100/3417  loss=0.0487  pos_rank1=0.9799  lr0=5.02e-06 lr1=2.51e-04
+12:23:18 INFO   e3 step  1150/3417  loss=0.0486  pos_rank1=0.9799  lr0=4.91e-06 lr1=2.46e-04
+12:23:46 INFO   e3 step  1200/3417  loss=0.0489  pos_rank1=0.9798  lr0=4.81e-06 lr1=2.40e-04
+12:24:14 INFO   e3 step  1250/3417  loss=0.0493  pos_rank1=0.9796  lr0=4.70e-06 lr1=2.35e-04
+12:24:41 INFO   e3 step  1300/3417  loss=0.0489  pos_rank1=0.9798  lr0=4.59e-06 lr1=2.29e-04
+12:25:09 INFO   e3 step  1350/3417  loss=0.0491  pos_rank1=0.9799  lr0=4.48e-06 lr1=2.24e-04
+12:25:37 INFO   e3 step  1400/3417  loss=0.0490  pos_rank1=0.9799  lr0=4.37e-06 lr1=2.19e-04
+12:26:05 INFO   e3 step  1450/3417  loss=0.0486  pos_rank1=0.9801  lr0=4.26e-06 lr1=2.13e-04
+12:26:32 INFO   e3 step  1500/3417  loss=0.0484  pos_rank1=0.9803  lr0=4.16e-06 lr1=2.08e-04
+12:27:00 INFO   e3 step  1550/3417  loss=0.0484  pos_rank1=0.9804  lr0=4.05e-06 lr1=2.02e-04
+12:27:28 INFO   e3 step  1600/3417  loss=0.0483  pos_rank1=0.9804  lr0=3.94e-06 lr1=1.97e-04
+12:28:09 INFO   e3 step  1650/3417  loss=0.0487  pos_rank1=0.9802  lr0=3.83e-06 lr1=1.92e-04
+12:29:09 INFO   e3 step  1700/3417  loss=0.0487  pos_rank1=0.9801  lr0=3.72e-06 lr1=1.86e-04
+12:30:10 INFO   e3 step  1750/3417  loss=0.0484  pos_rank1=0.9803  lr0=3.61e-06 lr1=1.81e-04
+12:31:10 INFO   e3 step  1800/3417  loss=0.0481  pos_rank1=0.9804  lr0=3.51e-06 lr1=1.75e-04
+12:31:57 INFO   e3 step  1850/3417  loss=0.0480  pos_rank1=0.9804  lr0=3.40e-06 lr1=1.70e-04
+12:32:25 INFO   e3 step  1900/3417  loss=0.0480  pos_rank1=0.9804  lr0=3.29e-06 lr1=1.64e-04
+12:32:52 INFO   e3 step  1950/3417  loss=0.0480  pos_rank1=0.9805  lr0=3.18e-06 lr1=1.59e-04
+12:33:20 INFO   e3 step  2000/3417  loss=0.0479  pos_rank1=0.9805  lr0=3.07e-06 lr1=1.54e-04
+12:33:48 INFO   e3 step  2050/3417  loss=0.0481  pos_rank1=0.9805  lr0=2.96e-06 lr1=1.48e-04
+12:34:15 INFO   e3 step  2100/3417  loss=0.0482  pos_rank1=0.9805  lr0=2.85e-06 lr1=1.43e-04
+12:34:43 INFO   e3 step  2150/3417  loss=0.0482  pos_rank1=0.9805  lr0=2.75e-06 lr1=1.37e-04
+12:35:11 INFO   e3 step  2200/3417  loss=0.0481  pos_rank1=0.9804  lr0=2.64e-06 lr1=1.32e-04
+12:35:39 INFO   e3 step  2250/3417  loss=0.0477  pos_rank1=0.9806  lr0=2.53e-06 lr1=1.26e-04
+12:36:06 INFO   e3 step  2300/3417  loss=0.0476  pos_rank1=0.9806  lr0=2.42e-06 lr1=1.21e-04
+12:36:34 INFO   e3 step  2350/3417  loss=0.0473  pos_rank1=0.9807  lr0=2.31e-06 lr1=1.16e-04
+12:37:02 INFO   e3 step  2400/3417  loss=0.0470  pos_rank1=0.9809  lr0=2.20e-06 lr1=1.10e-04
+12:37:30 INFO   e3 step  2450/3417  loss=0.0466  pos_rank1=0.9810  lr0=2.10e-06 lr1=1.05e-04
+12:37:58 INFO   e3 step  2500/3417  loss=0.0465  pos_rank1=0.9811  lr0=1.99e-06 lr1=9.94e-05
+12:38:25 INFO   e3 step  2550/3417  loss=0.0466  pos_rank1=0.9811  lr0=1.88e-06 lr1=9.40e-05
+12:38:53 INFO   e3 step  2600/3417  loss=0.0465  pos_rank1=0.9811  lr0=1.77e-06 lr1=8.86e-05
+12:39:21 INFO   e3 step  2650/3417  loss=0.0464  pos_rank1=0.9811  lr0=1.66e-06 lr1=8.31e-05
+12:39:49 INFO   e3 step  2700/3417  loss=0.0462  pos_rank1=0.9812  lr0=1.55e-06 lr1=7.77e-05
+12:40:17 INFO   e3 step  2750/3417  loss=0.0462  pos_rank1=0.9811  lr0=1.45e-06 lr1=7.23e-05
+12:40:44 INFO   e3 step  2800/3417  loss=0.0460  pos_rank1=0.9812  lr0=1.34e-06 lr1=6.69e-05
+12:41:12 INFO   e3 step  2850/3417  loss=0.0460  pos_rank1=0.9812  lr0=1.23e-06 lr1=6.15e-05
+12:41:40 INFO   e3 step  2900/3417  loss=0.0459  pos_rank1=0.9813  lr0=1.12e-06 lr1=5.60e-05
+12:42:07 INFO   e3 step  2950/3417  loss=0.0456  pos_rank1=0.9813  lr0=1.01e-06 lr1=5.06e-05
+12:42:35 INFO   e3 step  3000/3417  loss=0.0457  pos_rank1=0.9813  lr0=9.04e-07 lr1=4.52e-05
+12:43:03 INFO   e3 step  3050/3417  loss=0.0458  pos_rank1=0.9813  lr0=7.96e-07 lr1=3.98e-05
+12:43:31 INFO   e3 step  3100/3417  loss=0.0456  pos_rank1=0.9813  lr0=6.87e-07 lr1=3.44e-05
+12:43:59 INFO   e3 step  3150/3417  loss=0.0453  pos_rank1=0.9814  lr0=5.79e-07 lr1=2.89e-05
+12:44:26 INFO   e3 step  3200/3417  loss=0.0454  pos_rank1=0.9814  lr0=4.70e-07 lr1=2.35e-05
+12:44:54 INFO   e3 step  3250/3417  loss=0.0453  pos_rank1=0.9815  lr0=3.62e-07 lr1=1.81e-05
+12:45:22 INFO   e3 step  3300/3417  loss=0.0452  pos_rank1=0.9815  lr0=2.54e-07 lr1=1.27e-05
+12:45:50 INFO   e3 step  3350/3417  loss=0.0453  pos_rank1=0.9815  lr0=1.45e-07 lr1=7.26e-06
+12:46:18 INFO   e3 step  3400/3417  loss=0.0453  pos_rank1=0.9815  lr0=3.69e-08 lr1=1.84e-06
+12:46:32 INFO [epoch 3] train_loss=0.0453  train_pos_rank1=0.9815  val_loss=0.4488  val_acc=0.7567  val_auc=0.8706  elapsed=2034.6s
+12:46:33 INFO   saved best.pt  val_acc=0.7567
+12:46:33 INFO loading best.pt for val/test eval
+12:46:39 INFO [val] acc=0.7567  auc=0.8706  f1=0.7455
+12:46:45 INFO [test] loss=0.4740  acc=0.7480  auc=0.8542  f1=0.7176
+12:46:45 INFO [done] results in runs/crossencoder_contrastive/ce_contrastive

@@ -1,0 +1,13 @@
+{
+  "dataset": "aep_causal",
+  "checkpoint": "/mnt/localssd/internship-causal-embedding-merge-followup/finetune_eval/results_reverse/aep_causal/checkpoint_best.pt",
+  "backbone": "google-bert/bert-base-uncased",
+  "pooling": "cls",
+  "n_test_pairs": 562,
+  "encoding_seconds": 6.911819219589233,
+  "auc": 0.8861209964412812,
+  "precision_at_1": 0.8861209964412812,
+  "mean_fwd_score": 0.45192644000053406,
+  "mean_rev_score": 0.15285639464855194,
+  "eval_type": "forward_vs_reverse_2candidates"
+}

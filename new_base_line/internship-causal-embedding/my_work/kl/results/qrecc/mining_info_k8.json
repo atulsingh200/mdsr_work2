@@ -1,0 +1,9 @@
+{
+  "split": "train",
+  "n_pairs": 13500,
+  "k": 8,
+  "miner": "sentence-transformers/all-MiniLM-L6-v2",
+  "enc_seconds": 2.1307175159454346,
+  "knn_seconds": 0.0953211784362793,
+  "hard_negatives_path": "/mnt/localssd/new_base_line/internship-causal-embedding/my_work/kl/results/qrecc/hard_negatives_k8.npy"
+}

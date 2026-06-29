@@ -1,0 +1,50 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[data] train from my_work/kl/cross_encoder/data_indomain/aep_causal/train_pairs.jsonl
+        5487 train pairs
+        hard negatives (5487, 8)
+[data] val from   my_work/kl/cross_encoder/data_indomain/aep_causal/val_pairs.jsonl    562 pairs
+        flattened: train rows=49383  val rows=2810
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 9366.59it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[model] backbone=google-bert/bert-base-uncased  params=109,483,009
+[train] dataset=aep_causal total_steps=4632 warmup=277 batch_size=64 epochs=6 max_length=256  early_stop=(thresh 0.001, patience 2)
+  step=   200/4632  loss=0.3897  lr=1.44e-05  epoch=1
+  step=   400/4632  loss=0.3261  lr=1.94e-05  epoch=1
+  step=   600/4632  loss=0.2775  lr=1.85e-05  epoch=1
+[epoch 1/6]  train_loss=0.3632  val_AUC=0.6093  val_P@1=0.2865  (128s)
+  * new best val_AUC=0.6093, saved checkpoint_best.pt
+  step=   800/4632  loss=0.2650  lr=1.76e-05  epoch=2
+  step=  1000/4632  loss=0.3041  lr=1.67e-05  epoch=2
+  step=  1200/4632  loss=0.2378  lr=1.58e-05  epoch=2
+  step=  1400/4632  loss=0.3043  lr=1.48e-05  epoch=2
+[epoch 2/6]  train_loss=0.3355  val_AUC=0.6231  val_P@1=0.2936  (250s)
+  * new best val_AUC=0.6231, saved checkpoint_best.pt
+  step=  1600/4632  loss=0.3102  lr=1.39e-05  epoch=3
+  step=  1800/4632  loss=0.3844  lr=1.30e-05  epoch=3
+  step=  2000/4632  loss=0.2903  lr=1.21e-05  epoch=3
+  step=  2200/4632  loss=0.3162  lr=1.12e-05  epoch=3
+[epoch 3/6]  train_loss=0.3220  val_AUC=0.5883  val_P@1=0.2420  (377s)
+  no improvement (best=0.6231, bad_epochs=1/2)
+  step=  2400/4632  loss=0.3521  lr=1.03e-05  epoch=4
+  step=  2600/4632  loss=0.3649  lr=9.33e-06  epoch=4
+  step=  2800/4632  loss=0.2826  lr=8.41e-06  epoch=4
+  step=  3000/4632  loss=0.3187  lr=7.49e-06  epoch=4
+[epoch 4/6]  train_loss=0.3062  val_AUC=0.6143  val_P@1=0.2794  (497s)
+  no improvement (best=0.6231, bad_epochs=2/2)
+[early stop] no val-AUC improvement for 2 epochs.
+
+[done]  best val_AUC=0.6231  stopped_early=True
+  best:   my_work/kl/cross_encoder/results/aep_causal_rerank_v2/checkpoint_best.pt
+  latest: my_work/kl/cross_encoder/results/aep_causal_rerank_v2/checkpoint_latest.pt

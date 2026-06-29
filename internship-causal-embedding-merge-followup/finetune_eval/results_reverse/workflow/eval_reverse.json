@@ -1,0 +1,13 @@
+{
+  "dataset": "workflow",
+  "checkpoint": "/mnt/localssd/internship-causal-embedding-merge-followup/finetune_eval/results_reverse/workflow/checkpoint_best.pt",
+  "backbone": "google-bert/bert-base-uncased",
+  "pooling": "cls",
+  "n_test_pairs": 260487,
+  "encoding_seconds": 895.8866848945618,
+  "auc": 0.8851612556480746,
+  "precision_at_1": 0.8851612556480746,
+  "mean_fwd_score": 0.5205186605453491,
+  "mean_rev_score": 0.13706940412521362,
+  "eval_type": "forward_vs_reverse_2candidates"
+}

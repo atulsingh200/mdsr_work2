@@ -1,0 +1,38 @@
+{
+  "dataset": "multiwoz_v24",
+  "checkpoint": "lorentz_enc_results_e5_dir/multiwoz_v24/lorentz_best.pt",
+  "backbone": "intfloat/e5-base-v2",
+  "space_dim": 768,
+  "time_dim": 32,
+  "n_test_pairs": 7368,
+  "encoding_seconds": 25.422003984451294,
+  "auc": 0.9579420065133317,
+  "precision_at_1": 0.880971769815418,
+  "mrr": 0.2893258350341631,
+  "mean_rank": 38.38192182410423,
+  "median_rank": 12.0,
+  "recall_at_k": {
+    "1": 0.19353963083604778,
+    "3": 0.3133821932681867,
+    "5": 0.373914223669924,
+    "10": 0.4831704668838219
+  },
+  "hit_at_k": {
+    "1": 0.19353963083604778,
+    "3": 0.3133821932681867,
+    "5": 0.373914223669924,
+    "10": 0.4831704668838219
+  },
+  "n_candidates_per_query": 1000,
+  "directional_acc": 0.3853148818016052,
+  "directional_margin": -0.02498534321784973,
+  "mrr_combined": 0.27691388668121675,
+  "median_rank_combined": 12.0,
+  "recall_at_k_combined": {
+    "1": 0.18200325732899023,
+    "3": 0.2945168295331162,
+    "5": 0.36577090119435396,
+    "10": 0.46919109663409336
+  },
+  "beta_eval": 0.5
+}

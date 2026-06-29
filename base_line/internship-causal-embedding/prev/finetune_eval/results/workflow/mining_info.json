@@ -1,0 +1,10 @@
+{
+  "dataset": "workflow",
+  "n_pairs": 20000,
+  "k_hard_negatives": 4,
+  "encoding_seconds": 2.9960620403289795,
+  "knn_seconds": 0.03327798843383789,
+  "miner": "sentence-transformers/all-MiniLM-L6-v2",
+  "hard_negatives_path": "/mnt/localssd/base_line/internship-causal-embedding/finetune_eval/results/workflow/hard_negatives.npy",
+  "train_pairs_path": "/mnt/localssd/base_line/internship-causal-embedding/finetune_eval/results/workflow/train_pairs.jsonl"
+}

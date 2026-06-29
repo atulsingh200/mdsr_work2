@@ -1,0 +1,27 @@
+{
+  "dataset": "aep_causal",
+  "checkpoint": "/mnt/localssd/base_line/internship-causal-embedding/finetune_eval/results/aep_causal/checkpoint_best.pt",
+  "backbone": "google-bert/bert-base-uncased",
+  "pooling": "cls",
+  "n_test_pairs": 562,
+  "n_candidates_per_query": 562,
+  "encoding_seconds": 3.5163700580596924,
+  "auc": 0.9712160117019795,
+  "precision_at_1": 0.9128113879003559,
+  "n_negatives": 4,
+  "mrr": 0.35245125298068924,
+  "mean_rank": 16.818505338078293,
+  "median_rank": 4.0,
+  "recall_at_k": {
+    "1": 0.16370106761565836,
+    "3": 0.45729537366548045,
+    "5": 0.5854092526690391,
+    "10": 0.7153024911032029
+  },
+  "hit_at_k": {
+    "1": 0.16370106761565836,
+    "3": 0.45729537366548045,
+    "5": 0.5854092526690391,
+    "10": 0.7153024911032029
+  }
+}

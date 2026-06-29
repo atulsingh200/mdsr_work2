@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/mnt/localssd/automation/internship-causal-embedding/src/classifier/crossencoder/ensemble_eval.py", line 163, in <module>
+    main()
+  File "/mnt/localssd/automation/internship-causal-embedding/src/classifier/crossencoder/ensemble_eval.py", line 90, in main
+    align(sem_val, ind_val)
+  File "/mnt/localssd/automation/internship-causal-embedding/src/classifier/crossencoder/ensemble_eval.py", line 71, in align
+    raise AssertionError(f"row {i} misaligned between the two runs")
+AssertionError: row 6008 misaligned between the two runs

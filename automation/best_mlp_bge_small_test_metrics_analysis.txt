@@ -1,0 +1,588 @@
+================================================================================
+best_mlp_bge_small TEST METRICS ANALYSIS — AJO Chunk-level MLP Fine-tune
+================================================================================
+
+Checkpoint: runs/classifier/best_mlp_bge_small/
+Data:       data/aep_causal_classification/  (AJO documentation — same corpus as v6)
+Model:      2x BGE-small-en-v1.5 (untied) + MLP [512,128] head
+Training:   3 epochs, lr_encoder=2e-5, lr_head=1e-3, batch=32, seed=42
+            warmup=10%, weight_decay=0.01, grad_clip=1.0, bf16, max_seq_len=524
+
+Training progression:
+  Epoch 1:  train_loss=0.1671  train_acc=0.9271  val_loss=0.7209  val_acc=0.8718  val_auc=0.9271
+  Epoch 2:  train_loss=0.0291  train_acc=0.9876  val_loss=0.8319  val_acc=0.8841  val_auc=0.9258
+  Epoch 3:  train_loss=0.0172  train_acc=0.9907  val_loss=0.8747  val_acc=0.8904  val_auc=0.9318  *best
+
+Dataset splits:
+  Train: 110,775   Val: 6,004   Test: 6,004
+
+--------------------------------------------------------------------------------
+1. OVERALL TEST METRICS
+--------------------------------------------------------------------------------
+  Loss:     1.1182
+  Accuracy: 0.8571
+  AUC:      0.9031
+  F1:       0.8558
+  N:        6,004
+
+--------------------------------------------------------------------------------
+2. ADJACENT TIER-PAIR ACCURACY (14 pairs, gap=1)
+--------------------------------------------------------------------------------
+  Pair       Train    Test_n     Acc
+  ------     -----    ------   ------
+  T1-T2        112         2   0.0000  *worst (n=2: meaningless)
+  T2-T3        344         5   1.0000
+  T3-T4      1,333        20   0.8500
+  T4-T5      1,500        40   0.3500  *worst reliable
+  T5-T6      1,500       320   0.7875
+  T6-T7      1,500        96   0.9479
+  T7-T8      1,500        54   0.6111
+  T8-T9      1,500       108   0.8148
+  T9-T10       931        12   0.7500
+  T10-T11    1,500        24   0.7917
+  T11-T12    1,500        48   0.8333
+  T12-T13    1,056        16   1.0000
+  T13-T14      160         4   0.0000  (n=4: barely reliable)
+  T14-T15      555        14   0.9286
+
+  Adjacent micro accuracy:  0.7824
+  Adjacent macro accuracy:  0.6904
+
+  Notes:
+    - T1-T2 (0.00) and T13-T14 (0.00) have n=2 and n=4 — statistically meaningless
+    - T4-T5 is worst reliable pair at 0.35 despite 1,500 train samples
+    - T5-T6 at 0.79 is surprisingly weak for a high-volume pair (n=320)
+    - Strong pairs: T6-T7 (0.95), T12-T13 (1.00), T14-T15 (0.93)
+
+--------------------------------------------------------------------------------
+3. NON-ADJACENT TIER-PAIR ACCURACY (91 pairs)
+--------------------------------------------------------------------------------
+  Pair       Train    Test_n     Acc    Gap
+  ------     -----    ------   ------   ---
+  T1-T3        602        10   0.5000     2
+  T2-T4        248         4   1.0000     2
+  T3-T5      1,500        50   0.7000     2
+  T4-T6      1,500       128   0.4688     2
+  T5-T7      1,500        30   0.9667     2
+  T6-T8      1,500       576   0.9306     2
+  T7-T9      1,078        18   0.6111     2
+  T8-T10     1,500        36   0.7500     2
+  T9-T11     1,500        72   0.7361     2
+  T10-T12      627         8   1.0000     2
+  T11-T13    1,500        48   1.0000     2
+  T12-T14      165         4   0.0000     2
+  T13-T15    1,500        56   0.7321     2
+  T1-T4        434         8   0.7500     3
+  T2-T5        672        10   1.0000     3
+  T3-T6      1,500       160   0.7500     3
+  T4-T7        682        12   0.8333     3
+  T5-T8      1,500       180   0.9944     3
+  T6-T9      1,500       192   0.9479     3
+  T7-T10       418         6   0.5000     3
+  T8-T11     1,500       216   0.8426     3
+  T9-T12     1,500        24   0.9583     3
+  T10-T13      608         8   1.0000     3
+  T11-T14      505        12   0.0833     3
+  T12-T15    1,500        56   0.7857     3
+  T1-T5      1,176        20   0.5000     4
+  T2-T6      1,500        32   1.0000     4
+  T3-T7        946        15   0.8000     4
+  T4-T8      1,500        72   0.6806     4
+  T5-T9      1,500        60   1.0000     4
+  T6-T10     1,500        64   0.8750     4
+  T7-T11     1,500        36   0.6111     4
+  T8-T12     1,500        72   0.9861     4
+  T9-T13     1,500        24   1.0000     4
+  T10-T14       95         2   0.0000     4
+  T11-T15    1,500       168   0.8631     4
+  T1-T6      1,500        64   0.6875     5
+  T2-T7        176         3   1.0000     5
+  T3-T8      1,500        90   0.7444     5
+  T4-T9      1,500        24   0.7083     5
+  T5-T10     1,500        20   1.0000     5
+  T6-T11     1,500       384   0.8828     5
+  T7-T12       726        12   0.6667     5
+  T8-T13     1,500        72   0.9861     5
+  T9-T14       245         6   0.0000     5
+  T10-T15    1,500        28   0.9286     5
+  T1-T7        308         6   1.0000     6
+  T2-T8      1,112        18   1.0000     6
+  T3-T9      1,500        30   0.6667     6
+  T4-T10       589         8   0.6250     6
+  T5-T11     1,500       120   0.9500     6
+  T6-T12     1,500       128   0.9922     6
+  T7-T13       704        12   0.6667     6
+  T8-T14       695        18   0.0556     6
+  T9-T15     1,500        84   0.8452     6
+  T1-T8      1,500        36   0.9167     7
+  T2-T9        392         6   1.0000     7
+  T3-T10       817        10   0.6000     7
+  T4-T11     1,500        48   0.7500     7
+  T5-T12     1,500        40   1.0000     7
+  T6-T13     1,500       128   1.0000     7
+  T7-T14       110         3   0.3333     7
+  T8-T15     1,500       252   0.8254     7
+  T1-T9        686        12   1.0000     8
+  T2-T10       152         2   1.0000     8
+  T3-T11     1,500        60   0.8833     8
+  T4-T12     1,023        16   1.0000     8
+  T5-T13     1,500        40   1.0000     8
+  T6-T14     1,300        32   0.9063     8
+  T7-T15     1,500        42   0.7619     8
+  T1-T10       266         4   1.0000     9
+  T2-T11       808        12   1.0000     9
+  T3-T12     1,419        20   1.0000     9
+  T4-T13       992        16   0.9375     9
+  T5-T14       420        10   1.0000     9
+  T6-T15     1,500       448   0.9174     9
+  T1-T11     1,414        24   0.9583    10
+  T2-T12       264         4   1.0000    10
+  T3-T13     1,376        20   1.0000    10
+  T4-T14       155         4   0.5000    10
+  T5-T15     1,500       140   0.9357    10
+  T1-T12       462         8   1.0000    11
+  T2-T13       256         4   1.0000    11
+  T3-T14       215         5   0.8000    11
+  T4-T15     1,500        56   0.8571    11
+  T1-T13       448         8   1.0000    12
+  T2-T14        40         1   1.0000    12
+  T3-T15     1,500        70   0.9714    12
+  T1-T14        70         2   1.0000    13
+  T2-T15       888        14   1.0000    13
+  T1-T15     1,500        28   0.9643    14
+
+  Non-adjacent micro accuracy:  0.8680
+  Non-adjacent macro accuracy:  0.8174
+
+--------------------------------------------------------------------------------
+4. ACCURACY BY TIER GAP
+--------------------------------------------------------------------------------
+  Gap   #Pairs   Test_n   Micro    Macro
+  ---   ------   ------   ------   ------
+    1       14      763   0.7824   0.6904
+    2       13    1,040   0.8240   0.7227
+    3       12      884   0.8688   0.7871
+    4       11      565   0.8513   0.7560
+    5       10      703   0.8464   0.7604
+    6        9      424   0.8726   0.7557
+    7        8      523   0.8757   0.8032
+    8        7      204   0.9020   0.9359
+    9        6      510   0.9255   0.9758
+   10        5      192   0.9375   0.8788
+   11        4       73   0.8767   0.9143
+   12        3       79   0.9747   0.9905
+   13        2       16   1.0000   1.0000
+   14        1       28   0.9643   0.9643
+
+  Trend: Accuracy generally increases with tier gap — the model finds it easier
+  to distinguish tiers that are far apart. Gaps 1-3 are clustered low (0.69-0.79
+  macro); gaps 8-14 are clustered high (0.88-1.00). Gaps 10-11 dip slightly below
+  gap 9 in macro because T4-T14 (0.50) and T3-T14 (0.80) pull the average down —
+  both involve T14 which is the problematic tier.
+
+--------------------------------------------------------------------------------
+5. MICRO & MACRO ACCURACY SUMMARY
+--------------------------------------------------------------------------------
+                     Micro    Macro    #Pairs   #Samples
+                     ------   ------   ------   --------
+  Adjacent           0.7824   0.6904       14        763
+  Non-adjacent       0.8680   0.8174       91      5,241
+  Overall            0.8571   0.8004      105      6,004
+
+  Notes:
+    - Adjacent micro (0.78) < non-adjacent micro (0.87): adjacent pairs are harder
+    - Adjacent macro (0.69) << non-adjacent macro (0.82): several adjacent pairs
+      are near-random, pulling the unweighted average way down
+    - The gap between overall micro (0.86) and macro (0.80) is larger than in v6,
+      driven by T14-involved pairs collapsing and a few large pairs (T6-T8, T6-T15)
+      performing well and inflating the micro average
+
+--------------------------------------------------------------------------------
+6. PER-TIER ACCURACY (aggregated across all pairs involving each tier)
+--------------------------------------------------------------------------------
+  Tier   Test_n    Acc
+  ----   ------   ------
+  T1        232   0.8103
+  T2        117   0.9829
+  T3        565   0.8000
+  T4        456   0.6557
+  T5      1,080   0.8741
+  T6      2,752   0.8746
+  T7        345   0.7797
+  T8      1,800   0.8683
+  T9        672   0.8571
+  T10       232   0.8319
+  T11     1,272   0.8546
+  T12       456   0.9320
+  T13       456   0.9452
+  T14       117   0.5470
+  T15     1,456   0.8784
+
+  Best:  T2 (0.98), T13 (0.95), T12 (0.93) — well-differentiated tiers
+  Worst: T14 (0.55), T4 (0.66), T7 (0.78)
+
+  T14 (AI agents & assistants) is catastrophic at 0.55 — its tutorial language
+  overlaps with nearly every surrounding tier. 6 of the bottom 10 pairs involve T14.
+  T4 (Profiles, audiences & subscriptions) at 0.66 is structurally confused with
+  T5 and T6, both of which deal with profiles and content/channels in AJO.
+  T7 (Journeys core) at 0.78 is consistently problematic — journey language bleeds
+  into T8 (personalization), T9 (advanced journey patterns), and T11 (admin config).
+
+--------------------------------------------------------------------------------
+7. BOTTOM 10 TIER-PAIRS
+--------------------------------------------------------------------------------
+  Pair       Acc    Test_n   Train   Gap   Adj?
+  ------   ------   ------   -----   ---   ----
+  T1-T2    0.0000        2     112     1   ADJ   (n=2: noise)
+  T13-T14  0.0000        4     160     1   ADJ   (n=4: barely reliable)
+  T12-T14  0.0000        4     165     2
+  T10-T14  0.0000        2      95     4         (n=2: noise)
+  T9-T14   0.0000        6     245     5
+  T8-T14   0.0556       18     695     6
+  T11-T14  0.0833       12     505     3
+  T7-T14   0.3333        3     110     7         (n=3: noise)
+  T4-T5    0.3500       40   1,500     1   ADJ   *worst reliable pair
+  T4-T6    0.4688      128   1,500     2
+
+  6 of bottom 10 involve T14 — same structural data problem as v6
+  T4-T5 is the worst reliable pair: 1,500 train samples, n=40, still 0.35
+  T4-T6 has n=128 but sits at 0.47 — large enough to be a genuine failure
+
+--------------------------------------------------------------------------------
+8. PAIRS AT OR NEAR RANDOM (accuracy <= 0.55)
+--------------------------------------------------------------------------------
+  Pair       Acc    Test_n   Train   Gap   Adj?
+  ------   ------   ------   -----   ---   ----
+  T1-T2    0.0000        2     112     1   ADJ
+  T13-T14  0.0000        4     160     1   ADJ
+  T12-T14  0.0000        4     165     2
+  T10-T14  0.0000        2      95     4
+  T9-T14   0.0000        6     245     5
+  T8-T14   0.0556       18     695     6
+  T11-T14  0.0833       12     505     3
+  T7-T14   0.3333        3     110     7
+  T4-T5    0.3500       40   1,500     1   ADJ
+  T4-T6    0.4688      128   1,500     2
+  T1-T3    0.5000       10     602     2         (n=10: small)
+  T7-T10   0.5000        6     418     3         (n=6: small)
+  T1-T5    0.5000       20   1,176     4
+  T4-T14   0.5000        4     155    10         (n=4: noise)
+
+  14 pairs at/near random (same count as v6). Two categories:
+    (a) T14-involved (7 pairs): same root cause as v6 — T14 has sparse data
+        and its AI-assistant language borrows from all surrounding tiers
+    (b) Non-T14 (4 reliable pairs): T4-T5, T4-T6, T1-T5 and T4-T8 (0.68)
+        show that the T4-T5-T6 cluster is genuinely confused — profiles,
+        content authoring, and channel setup are described together in AJO docs
+    (c) Small-n noise: T1-T2, T7-T10, T4-T14 have n ≤ 6 and are unreliable
+
+  2 of 14 adjacent pairs are reliable and at/near random (T4-T5, T13-T14-ish)
+
+--------------------------------------------------------------------------------
+9. TRAINING SAMPLE COUNT vs TEST ACCURACY CORRELATION
+--------------------------------------------------------------------------------
+  Spearman rank correlation (rho):
+    All 105 pairs:    rho = -0.0307
+    Adjacent 14 only: rho =  0.0776
+
+  Interpretation:
+    Essentially zero correlation — more training samples do NOT reliably predict
+    better test accuracy. This confirms the same finding as v6: the bottleneck
+    is content distinguishability, not data volume. T4-T5 and T4-T6 have the
+    maximum 1,500 training samples but sit at 0.35 and 0.47 respectively.
+    Meanwhile T1-T7 has only 308 train samples but achieves 1.00.
+
+    Adjacent rho flips positive (vs -0.13 in v6) because T1-T2 (n=112, acc=0.00)
+    and T13-T14 (n=160, acc=0.00) are low-train AND low-accuracy, shifting the
+    correlation. This is a sampling artifact from n=2/4 test sizes, not real signal.
+
+--------------------------------------------------------------------------------
+10. KEY FINDINGS
+--------------------------------------------------------------------------------
+  1. OVERALL: 85.7% accuracy, 80.0% macro — improved micro over v6 but macro
+     is similar. The gap between micro (0.857) and macro (0.800) is larger here
+     than in v6, revealing distributional imbalance in the test set.
+
+  2. MONOTONIC GAP TREND: Accuracy increases broadly with tier gap (0.69 macro
+     at gap=1 to 1.00 at gap=13), confirming the model learns ordinal signal.
+     Gap 10-11 are minor anomalies driven by T14 pairs with small test sets.
+
+  3. T14 IS STILL A BLACK HOLE: 0.55 per-tier accuracy, 6+ bottom pairs involve
+     T14. The AI Agents tier has sparse training data (max 1,300 for T6-T14) and
+     its language is indistinguishable from adjacent tiers. Removing T14 pairs
+     would substantially boost both micro and macro.
+
+  4. T4-T5-T6 CLUSTER IS BROKEN: T4-T5 (0.35), T4-T6 (0.47) have max training
+     data but perform near or below random. This is a content overlap problem, not
+     a data problem. Profiles/audiences (T4), content authoring (T5), and channels
+     (T6) are described together in AJO tutorials — the tier boundary is artificial.
+
+  5. TRAINING DATA COUNT DOES NOT PREDICT ACCURACY: rho ≈ 0 for both all-pairs and
+     adjacent-only. Same conclusion as v6.
+
+  6. ADJACENT PAIRS ARE THE HARDEST: Macro 0.69 for adjacent vs 0.82 for
+     non-adjacent. The model struggles most precisely where it needs to be sharpest.
+
+  7. T7 (JOURNEYS CORE) IS SYSTEMATICALLY WEAK: Per-tier acc 0.78. Journey-building
+     language permeates AJO documentation across all tiers. T7-T8 at 0.61 despite
+     1,500 train samples reflects genuine semantic indistinguishability.
+
+  8. T2 IS PERFECTLY SEPARABLE: Per-tier acc 0.98. Admin floor content has
+     distinctive vocabulary (user management, permissions, access control) that
+     is lexically unlike any other tier.
+
+--------------------------------------------------------------------------------
+11. HONEST ANALYSIS — WHY IS THIS MODEL'S ACCURACY (0.8571) HIGHER THAN v6 (0.8226)?
+    AND DID WE MAKE ANY MISTAKES?
+--------------------------------------------------------------------------------
+
+  SHORT ANSWER: The dataset is effectively the same. The model is identical.
+  The accuracy difference comes from better training configuration — NOT from
+  any real algorithmic or data improvement. And yes, there are real concerns.
+
+  ── WHAT IS ACTUALLY DIFFERENT ──────────────────────────────────────────────
+
+  Both models:
+    - Same model architecture: 2x BGE-small-en-v1.5 (untied) + MLP [512,128]
+    - Same hyperparameters: 3 epochs, lr_encoder=2e-5, lr_head=1e-3, batch=32
+    - Same per-pair train counts: T1-T2=112, T1-T3=602, ... (verified identical)
+    - Same total sizes: train=110,775, val=6,004, test=6,004
+
+  Only best_mlp_bge_small specifies:
+    - warmup_frac = 0.10   (10% of steps used for linear LR warm-up)
+    - weight_decay = 0.01  (L2 regularization)
+    - grad_clip = 1.0      (gradient clipping)
+    - bf16 = True          (bfloat16 mixed precision)
+    - seed = 42            (fixed random seed)
+    - max_seq_len = 524    (auto-detected from data scan; v6 may have used 512)
+
+  The v6 report does not state whether these were used. If v6 trained without
+  warmup, weight decay, or gradient clipping, the optimizer would be less
+  stable — especially for fine-tuning a pretrained encoder where the early steps
+  can destroy pretrained representations with too-large gradient updates.
+
+  ── WHAT ACTUALLY IMPROVED vs DEGRADED ──────────────────────────────────────
+
+  Adjacent tier-pairs (the hardest, most important metric):
+    v6  adj micro = 0.8401 → this model = 0.7824  DEGRADED  -5.8pp
+    v6  adj macro = 0.7508 → this model = 0.6904  DEGRADED  -6.0pp
+
+  Non-adjacent tier-pairs (easier pairs the model already handles well):
+    v6  non-adj micro = 0.8201 → this model = 0.8680  IMPROVED  +4.8pp
+    v6  non-adj macro = 0.8249 → this model = 0.8174  ESSENTIALLY SAME  -0.8pp
+
+  Overall micro improved (+3.5pp) but ONLY because the large-volume non-adjacent
+  pairs got better and they dominate the weighted count. On the core task —
+  distinguishing adjacent tiers — this model is WORSE than v6.
+
+  Per-pair regressions (adjacent, reliable n):
+    T4-T5:   v6 0.5000 → now 0.3500  (-15pp, n=40)
+    T5-T6:   v6 0.9625 → now 0.7875  (-17.5pp, n=320) ← largest regression
+    T8-T9:   v6 0.9074 → now 0.8148  (-9.3pp, n=108)
+    T11-T12: v6 0.8958 → now 0.8333  (-6.3pp, n=48)
+
+  Per-pair improvements (adjacent):
+    T6-T7:   v6 0.8646 → now 0.9479  (+8.3pp, n=96)
+    T7-T8:   v6 0.4074 → now 0.6111  (+20.4pp, n=54)
+    T10-T11: v6 0.5417 → now 0.7917  (+25.0pp, n=24)
+    T12-T13: v6 0.5625 → now 1.0000  (+43.8pp, n=16)
+    T14-T15: v6 0.7857 → now 0.9286  (+14.3pp, n=14)
+
+  This whack-a-mole pattern — some pairs improve while others degrade — is
+  exactly what v6 showed vs v5. The model does not genuinely improve on all
+  adjacent pairs; it redistributes performance across them.
+
+  ── REAL MISTAKES AND CONCERNS ───────────────────────────────────────────────
+
+  1. THE CORE PROBLEM: THE TWO RESULTS ARE NOT MEANINGFULLY COMPARABLE.
+     The v6 report explicitly calls its data "sentence-based data (data_v6_sent)".
+     This run uses "aep_causal_classification" — but the per-pair train counts are
+     BYTE-FOR-BYTE IDENTICAL (verified). Either (a) the datasets are literally
+     the same files under different directory names, or (b) they were generated
+     by the same pipeline with the same settings and the text lengths match.
+     Either way: if the data is the same and the model is the same, the ONLY
+     explanation for the accuracy difference is training-config variation.
+     This should be verified: run diff or md5 on the two datasets.
+
+  2. THE ACCURACY GAIN IS MISLEADING AS "BETTER".
+     Overall micro went up (+3.5pp) but adjacent macro went DOWN (-6.0pp).
+     The overall number improved because the model got better at non-adjacent
+     pairs — the easier task — while getting worse at adjacent pairs, which is
+     where the actual challenge lies. Reporting "85.7% > 82.3%" as an improvement
+     without qualification overstates the progress.
+
+  3. OVERFITTING IS SEVERE AND GETTING WORSE.
+     Train loss at epoch 3 is 0.0172 while val loss is 0.8747 — a 51× gap.
+     In the AEP companion run, the ratio was 26×. This model is memorizing
+     training pairs, not learning generalizable tier signals. Val accuracy still
+     rises (0.87 → 0.89) because the task's difficulty level allows the memorized
+     patterns to transfer, but this is fragile. The encoder has essentially been
+     fine-tuned into a lookup table for seen (doc, tier) combinations.
+
+  4. TRAIN/TEST CONTAMINATION RISK.
+     Both train and test contain pairs formed from the same document pool.
+     Split is at chunk_tier level — meaning the same document chunk can appear
+     in train for one tier-pair (e.g., T5-T6) and in test for a different pair
+     (e.g., T5-T7). After 3 epochs of fine-tuning, the encoder has seen the
+     actual text of chunks that appear in the test set, just in different pairings.
+     This inflates test accuracy — the encoder recognizes familiar text and
+     assigns it a tier embedding it learned during training. The true generalization
+     performance to unseen AJO documents is likely lower than 85.7%.
+
+  5. T5-T6 REGRESSED BADLY ON n=320 — NOT A SMALL-SAMPLE FLUKE.
+     Going from 0.9625 to 0.7875 on 320 test samples is a genuine regression,
+     not statistical noise. T5-T6 (Content authoring foundations vs Channels +
+     campaigns) was one of the strongest pairs in v6 and is now merely average.
+     Something about the training configuration change disrupted this pair's
+     learned boundary.
+
+  6. T1-T2 AND T13-T14 AT 0.00 LOOK ALARMING BUT ARE NOISE.
+     T1-T2 has n=2; both predictions were wrong. T13-T14 has n=4. These numbers
+     (0 of 2, 0 of 4 correct) are not informative about the model. Comparing
+     v6's "T1-T2 = 1.00" to this model's "T1-T2 = 0.00" is comparing 2 correct
+     vs 2 incorrect flips of a coin — ignore both numbers.
+
+  ── WHAT TO DO ────────────────────────────────────────────────────────────────
+
+  (a) Verify the datasets: run md5sum on directional_test.jsonl for both
+      aep_causal_classification and data_v6_sent. If they match, the 0.8226→0.8571
+      gap is purely a training-config artifact and the v6 report should be updated.
+
+  (b) Focus on adjacent-pair macro as the primary metric, not overall micro.
+      This model's adjacent macro (0.69) is WORSE than v6 (0.75). Overall micro
+      improvements driven by large non-adjacent pairs are not meaningful progress.
+
+  (c) Add early stopping on val_loss, not val_acc. The model is overfitting hard
+      by epoch 3. Stopping at epoch 1 (val_loss=0.72) might give better
+      calibration even if val_acc is slightly lower.
+
+  (d) Use a held-out document set for test — documents whose chunks never appear
+      in any training pair. The current split cannot guarantee this. Without it,
+      the test accuracy is an optimistic upper bound.
+
+================================================================================
+12. v6 vs best_mlp_bge_small COMPARISON — ADJACENT TIER-PAIRS
+================================================================================
+  v6:   sentence-based data (data_v6_sent/), all 105 pairs, cap 1,500
+        train=110,775  val=6,004  test=6,004
+  best: chunk-level data (aep_causal_classification/), same counts (data identical?)
+        train=110,775  val=6,004  test=6,004
+        + warmup=10%, weight_decay=0.01, grad_clip=1.0, bf16, seed=42
+
+  Adjacent tier-pair accuracy:
+    Pair       v6 Acc (n)        best Acc (n)     Delta
+    ------     ----------        ------------     ------
+    T1-T2      1.0000 (  2)      0.0000 (  2)     -1.000  (NOISE: n=2 both)
+    T2-T3      1.0000 (  5)      1.0000 (  5)      0.000
+    T3-T4      0.7500 ( 20)      0.8500 ( 20)     +0.100
+    T4-T5      0.5000 ( 40)      0.3500 ( 40)     -0.150
+    T5-T6      0.9625 (320)      0.7875 (320)     -0.175  *worst regression, large n
+    T6-T7      0.8646 ( 96)      0.9479 ( 96)     +0.083
+    T7-T8      0.4074 ( 54)      0.6111 ( 54)     +0.204  *best improvement
+    T8-T9      0.9074 (108)      0.8148 (108)     -0.093
+    T9-T10     0.8333 ( 12)      0.7500 ( 12)     -0.083
+    T10-T11    0.5417 ( 24)      0.7917 ( 24)     +0.250
+    T11-T12    0.8958 ( 48)      0.8333 ( 48)     -0.063
+    T12-T13    0.5625 ( 16)      1.0000 ( 16)     +0.375
+    T13-T14    0.5000 (  4)      0.0000 (  4)     -0.500  (NOISE: n=4 both)
+    T14-T15    0.7857 ( 14)      0.9286 ( 14)     +0.143
+
+  Aggregate:
+                        v6         best       Delta
+                      ------      ------     ------
+    Adj micro         0.8401      0.7824     -0.058  DEGRADED
+    Adj macro         0.7508      0.6904     -0.060  DEGRADED
+    Overall acc       0.8226      0.8571     +0.034  (inflated by non-adjacent)
+    Overall F1        0.8172      0.8558     +0.039
+    Overall macro     0.8150      0.8004     -0.015  SLIGHTLY DEGRADED
+
+  Conclusion:
+    "best_mlp_bge_small" is NOT better than v6 on the task that matters —
+    distinguishing adjacent tiers. It is worse by -6pp on adjacent macro.
+    The higher headline accuracy is an artifact of doing better on non-adjacent
+    pairs, which are already easy. The name "best" appears to reflect a
+    comparison against some other checkpoint, not against v6's full results.
+
+    The whack-a-mole pattern continues:
+      best > v6: T3-T4, T6-T7, T7-T8, T10-T11, T12-T13, T14-T15
+      best < v6: T4-T5, T5-T6, T8-T9, T9-T10, T11-T12
+    Different training configs shift which pairs win and lose but do not
+    globally solve the content-overlap problem.
+
+--------------------------------------------------------------------------------
+13. SAMPLE PAIRS — CLOSE TIERS (hard) vs DISTANT TIERS (easy)
+--------------------------------------------------------------------------------
+  Core illustration of the gap-vs-accuracy finding (Section 4). When two
+  segments come from ADJACENT tiers (gap=1), their documentation vocabulary
+  overlaps heavily and the model is near random. When they come from DISTANT
+  tiers (large gap), the vocabularies are disjoint and the model is near perfect.
+  All examples are verbatim rows from directional_test.jsonl.
+
+  ===== CLOSE TIERS (gap = 1) — model struggles =====
+
+  [A] T4 vs T5   pair acc = 0.35  (worst reliable pair)   label = 1
+      text_1 (T4, Profiles/audiences):
+        "...I've received the email. Let me click on the link. And here's my
+         unsubscription page and the confirmation page as well..."
+      text_2 (T5, Content authoring):
+        "...let's look for a profile attribute that we want to add. For example,
+         the first name. We can also build conditional content..."
+      WHY HARD: both discuss profile attributes inside message content; the
+      T4/T5 boundary is barely reflected in the language.
+
+  [B] T5 vs T6   pair acc = 0.79  (n=320, large regression)   label = 1
+      text_1 (T5, Content authoring):
+        "...look for a profile attribute we want to add... build conditional content..."
+      text_2 (T6, Channels + campaigns):
+        "...In Journey Optimizer, under Journey Management > Campaigns, we're
+         going to create a new campaign..."
+      WHY HARD: content authoring and channel/campaign setup are described
+      together in AJO tutorials.
+
+  [C] T7 vs T8   pair acc = 0.61   label = 0
+      text_1 (T8, Personalization):
+        "...personalize content using the expression editor... add our customer's
+         first name to the message..."
+      text_2 (T7, Journeys core):
+        "...navigate directly to Journey Optimize... identify unused journeys..."
+      WHY HARD: journey-building language permeates personalization docs.
+
+  ===== DISTANT TIERS (large gap) — model is confident =====
+
+  [D] T1 vs T10   gap = 9   pair acc = 1.00   label = 0
+      text_1 (T10, Conflict mgmt / quiet hours):
+        "Quiet Hours rules can be applied to SMS, push, email, and WhatsApp
+         messages in journeys or campaigns..."
+      text_2 (T1, Orientation):
+        "...Adobe Experience Manager Assets Essentials, a lightweight digital
+         asset manager embedded into Journey Optimizer..."
+      WHY EASY: frequency/quiet-hours vocabulary vs "what AJO is" — no overlap.
+
+  [E] T2 vs T15   gap = 13 (max)   pair acc = 1.00   label = 1
+      text_1 (T2, Admin floor):
+        "Using sandboxes, you can develop, test, and experiment with platform
+         features without affecting your production environment..."
+      text_2 (T15, Capstones):
+        "...created custom identity namespaces... offline purchases schema
+         captures in-store orders using the loyalty ID as the primary..."
+      WHY EASY: admin setup vs an end-to-end capstone — clearly different stages.
+
+  [F] T3 vs T13   gap = 10   pair acc = 1.00   label = 1
+      text_1 (T3, Data foundations):
+        "...Configure source connectors. Learn about source connectors and how
+         to configure..."
+      text_2 (T13, Reporting/monitoring):
+        "...an alert related to a source's flow run failing. I can click the
+         notification and be taken to the flow run details..."
+      WHY EASY: setting up data sources vs monitoring/alerting — distinct vocab.
+
+  ----- Accuracy vs gap (from Section 4), the one-line summary -----
+    gap=1  -> macro 0.69   (CLOSE: hardest; T4-T5=0.35, T7-T8=0.61)
+    gap=3  -> macro 0.79
+    gap=8  -> macro 0.94
+    gap=13 -> macro 1.00   (DISTANT: easiest)
+
+  TAKEAWAY: difficulty is inversely proportional to tier distance. Adjacent
+  tiers share near-identical vocabulary (acc 0.35-0.79 despite 1,500 train
+  samples); distant tiers have disjoint vocabulary (acc -> 1.00). The bottleneck
+  is semantic separability of neighbouring tiers, not data volume.

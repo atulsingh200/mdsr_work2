@@ -1,0 +1,41 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[load] my_work/kl/cross_encoder_2x/results/workflow/checkpoint_best.pt
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 7806.46it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+  backbone=google-bert/bert-base-uncased  layers=24  params=194,537,473  device=cuda
+  test pairs: 260487    hard-neg matrix: (260487, 4)
+
+[score] positive pairs …
+  done in 151.4s  pos_mean=0.094
+
+[score] 1,041,948 pairs vs RANDOM negatives …
+  done in 590.3s
+  AUC(random)=0.9462  P@1(random)=0.8340
+
+[score] 1,041,948 pairs vs SEMANTIC HARD negatives …
+  done in 588.8s
+  AUC(hardneg)=0.7504  P@1(hardneg)=0.4930
+
+[retrieve] sampled 2000 of 260487 anchors  (pool_size=1000)
+  [pool] scoring 2,000,000 (anchor, candidate) pairs …
+  [pool] done in 1076.3s
+  MRR=0.4413  mean_rank=60.30  median_rank=5.0
+  Recall@1  0.3665
+  Recall@3  0.4735
+  Recall@5  0.5195
+  Recall@10 0.5810
+
+[saved] my_work/kl/cross_encoder_2x/results/workflow/eval.json
+[saved] my_work/kl/cross_encoder_2x/results/workflow/eval_hardneg.json

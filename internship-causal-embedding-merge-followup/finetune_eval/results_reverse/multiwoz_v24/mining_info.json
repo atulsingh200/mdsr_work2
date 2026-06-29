@@ -1,0 +1,8 @@
+{
+  "dataset": "multiwoz_v24",
+  "split": "train",
+  "n_pairs": 15000,
+  "hard_neg_type": "reverse_direction (hard_neg = anchor)",
+  "elapsed_seconds": 0.38269662857055664,
+  "pairs_path": "/mnt/localssd/internship-causal-embedding-merge-followup/finetune_eval/results_reverse/multiwoz_v24/train_pairs.jsonl"
+}

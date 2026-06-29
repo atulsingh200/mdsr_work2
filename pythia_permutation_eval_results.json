@@ -1,0 +1,3981 @@
+{
+  "config": {
+    "score": "raw_full_sequence_perplexity",
+    "method": "all-permutations, lowest perplexity wins",
+    "separators": {
+      "space": "single space",
+      "eos": "training doc separator <|endoftext|>"
+    },
+    "device": "cuda:0",
+    "dtype": "torch.bfloat16"
+  },
+  "models": {
+    "pythia-410m-20ep": {
+      "model_path": "/mnt/localssd/automation/internship-causal-embedding/pythia_train/output",
+      "separators": {
+        "space": {
+          "three_step": {
+            "n_correct": 14,
+            "n_total": 30,
+            "order_accuracy": 0.4667,
+            "per_sample": [
+              {
+                "id": 1,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 27.6937,
+                "gold_perplexity": 27.6937,
+                "order_correct": true
+              },
+              {
+                "id": 2,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 44.0226,
+                "gold_perplexity": 44.0226,
+                "order_correct": true
+              },
+              {
+                "id": 3,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 27.878,
+                "gold_perplexity": 27.878,
+                "order_correct": true
+              },
+              {
+                "id": 4,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 39.3718,
+                "gold_perplexity": 39.4317,
+                "order_correct": false
+              },
+              {
+                "id": 5,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 29.9836,
+                "gold_perplexity": 29.9836,
+                "order_correct": true
+              },
+              {
+                "id": 6,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 30.1291,
+                "gold_perplexity": 30.1291,
+                "order_correct": true
+              },
+              {
+                "id": 7,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 39.4545,
+                "gold_perplexity": 41.4975,
+                "order_correct": false
+              },
+              {
+                "id": 8,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 32.7978,
+                "gold_perplexity": 32.7978,
+                "order_correct": true
+              },
+              {
+                "id": 9,
+                "best_order": [
+                  "t3",
+                  "t2",
+                  "t1"
+                ],
+                "best_perplexity": 25.3264,
+                "gold_perplexity": 27.3157,
+                "order_correct": false
+              },
+              {
+                "id": 10,
+                "best_order": [
+                  "t3",
+                  "t2",
+                  "t1"
+                ],
+                "best_perplexity": 43.2837,
+                "gold_perplexity": 47.3242,
+                "order_correct": false
+              },
+              {
+                "id": 11,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 30.846,
+                "gold_perplexity": 32.787,
+                "order_correct": false
+              },
+              {
+                "id": 12,
+                "best_order": [
+                  "t2",
+                  "t3",
+                  "t1"
+                ],
+                "best_perplexity": 38.1662,
+                "gold_perplexity": 41.2312,
+                "order_correct": false
+              },
+              {
+                "id": 13,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 42.4227,
+                "gold_perplexity": 42.4227,
+                "order_correct": true
+              },
+              {
+                "id": 14,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 26.4327,
+                "gold_perplexity": 26.4837,
+                "order_correct": false
+              },
+              {
+                "id": 15,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 27.4303,
+                "gold_perplexity": 27.4303,
+                "order_correct": true
+              },
+              {
+                "id": 16,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 24.1174,
+                "gold_perplexity": 24.1174,
+                "order_correct": true
+              },
+              {
+                "id": 17,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 22.6896,
+                "gold_perplexity": 22.6896,
+                "order_correct": true
+              },
+              {
+                "id": 18,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 26.6524,
+                "gold_perplexity": 28.4748,
+                "order_correct": false
+              },
+              {
+                "id": 19,
+                "best_order": [
+                  "t3",
+                  "t2",
+                  "t1"
+                ],
+                "best_perplexity": 33.8544,
+                "gold_perplexity": 36.242,
+                "order_correct": false
+              },
+              {
+                "id": 20,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 27.9883,
+                "gold_perplexity": 32.0033,
+                "order_correct": false
+              },
+              {
+                "id": 21,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 36.9814,
+                "gold_perplexity": 38.4973,
+                "order_correct": false
+              },
+              {
+                "id": 22,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 46.626,
+                "gold_perplexity": 46.626,
+                "order_correct": true
+              },
+              {
+                "id": 23,
+                "best_order": [
+                  "t3",
+                  "t2",
+                  "t1"
+                ],
+                "best_perplexity": 56.6993,
+                "gold_perplexity": 62.8287,
+                "order_correct": false
+              },
+              {
+                "id": 24,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 27.828,
+                "gold_perplexity": 27.828,
+                "order_correct": true
+              },
+              {
+                "id": 25,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 42.3215,
+                "gold_perplexity": 43.2737,
+                "order_correct": false
+              },
+              {
+                "id": 26,
+                "best_order": [
+                  "t2",
+                  "t1",
+                  "t3"
+                ],
+                "best_perplexity": 32.0372,
+                "gold_perplexity": 34.3729,
+                "order_correct": false
+              },
+              {
+                "id": 27,
+                "best_order": [
+                  "t2",
+                  "t3",
+                  "t1"
+                ],
+                "best_perplexity": 27.0394,
+                "gold_perplexity": 27.7692,
+                "order_correct": false
+              },
+              {
+                "id": 28,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 34.0776,
+                "gold_perplexity": 34.0776,
+                "order_correct": true
+              },
+              {
+                "id": 29,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 27.8139,
+                "gold_perplexity": 27.8139,
+                "order_correct": true
+              },
+              {
+                "id": 30,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 36.1275,
+                "gold_perplexity": 37.7405,
+                "order_correct": false
+              }
+            ]
+          },
+          "six_step": {
+            "best_order": [
+              "t4",
+              "t6",
+              "t1",
+              "t5",
+              "t3",
+              "t2"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3",
+              "t4",
+              "t5",
+              "t6"
+            ],
+            "exact_match": false,
+            "best_perplexity": 41.6434,
+            "gold_perplexity": 42.9237,
+            "rank_of_gold": 133,
+            "n_permutations": 720,
+            "kendall_tau_best_vs_gold": -0.3333,
+            "top5_orders": [
+              [
+                "t4->t6->t1->t5->t3->t2",
+                41.6434
+              ],
+              [
+                "t1->t3->t6->t5->t2->t4",
+                41.6487
+              ],
+              [
+                "t1->t2->t6->t3->t4->t5",
+                41.7012
+              ],
+              [
+                "t4->t6->t3->t1->t5->t2",
+                41.746
+              ],
+              [
+                "t4->t6->t1->t2->t3->t5",
+                41.7463
+              ]
+            ]
+          }
+        },
+        "eos": {
+          "three_step": {
+            "n_correct": 5,
+            "n_total": 30,
+            "order_accuracy": 0.1667,
+            "per_sample": [
+              {
+                "id": 1,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 39.6597,
+                "gold_perplexity": 39.7952,
+                "order_correct": false
+              },
+              {
+                "id": 2,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 57.8102,
+                "gold_perplexity": 59.1112,
+                "order_correct": false
+              },
+              {
+                "id": 3,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 38.0302,
+                "gold_perplexity": 38.4827,
+                "order_correct": false
+              },
+              {
+                "id": 4,
+                "best_order": [
+                  "t3",
+                  "t2",
+                  "t1"
+                ],
+                "best_perplexity": 57.5823,
+                "gold_perplexity": 60.3192,
+                "order_correct": false
+              },
+              {
+                "id": 5,
+                "best_order": [
+                  "t3",
+                  "t2",
+                  "t1"
+                ],
+                "best_perplexity": 39.6683,
+                "gold_perplexity": 42.6032,
+                "order_correct": false
+              },
+              {
+                "id": 6,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 43.5022,
+                "gold_perplexity": 43.5022,
+                "order_correct": true
+              },
+              {
+                "id": 7,
+                "best_order": [
+                  "t3",
+                  "t2",
+                  "t1"
+                ],
+                "best_perplexity": 55.921,
+                "gold_perplexity": 59.5423,
+                "order_correct": false
+              },
+              {
+                "id": 8,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 45.5269,
+                "gold_perplexity": 46.2315,
+                "order_correct": false
+              },
+              {
+                "id": 9,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 32.1434,
+                "gold_perplexity": 33.3784,
+                "order_correct": false
+              },
+              {
+                "id": 10,
+                "best_order": [
+                  "t3",
+                  "t2",
+                  "t1"
+                ],
+                "best_perplexity": 53.3922,
+                "gold_perplexity": 58.3661,
+                "order_correct": false
+              },
+              {
+                "id": 11,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 43.7442,
+                "gold_perplexity": 46.2996,
+                "order_correct": false
+              },
+              {
+                "id": 12,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 52.3109,
+                "gold_perplexity": 56.0287,
+                "order_correct": false
+              },
+              {
+                "id": 13,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 50.5958,
+                "gold_perplexity": 50.9595,
+                "order_correct": false
+              },
+              {
+                "id": 14,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 34.8575,
+                "gold_perplexity": 34.8575,
+                "order_correct": true
+              },
+              {
+                "id": 15,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 31.0114,
+                "gold_perplexity": 31.5128,
+                "order_correct": false
+              },
+              {
+                "id": 16,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 27.7297,
+                "gold_perplexity": 27.7297,
+                "order_correct": true
+              },
+              {
+                "id": 17,
+                "best_order": [
+                  "t3",
+                  "t2",
+                  "t1"
+                ],
+                "best_perplexity": 30.8735,
+                "gold_perplexity": 31.9688,
+                "order_correct": false
+              },
+              {
+                "id": 18,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 31.836,
+                "gold_perplexity": 33.8384,
+                "order_correct": false
+              },
+              {
+                "id": 19,
+                "best_order": [
+                  "t3",
+                  "t2",
+                  "t1"
+                ],
+                "best_perplexity": 44.9908,
+                "gold_perplexity": 45.3796,
+                "order_correct": false
+              },
+              {
+                "id": 20,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 34.2937,
+                "gold_perplexity": 35.2033,
+                "order_correct": false
+              },
+              {
+                "id": 21,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 44.1853,
+                "gold_perplexity": 47.4964,
+                "order_correct": false
+              },
+              {
+                "id": 22,
+                "best_order": [
+                  "t3",
+                  "t2",
+                  "t1"
+                ],
+                "best_perplexity": 57.9786,
+                "gold_perplexity": 60.9161,
+                "order_correct": false
+              },
+              {
+                "id": 23,
+                "best_order": [
+                  "t2",
+                  "t1",
+                  "t3"
+                ],
+                "best_perplexity": 72.9539,
+                "gold_perplexity": 73.0418,
+                "order_correct": false
+              },
+              {
+                "id": 24,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 36.9158,
+                "gold_perplexity": 36.9158,
+                "order_correct": true
+              },
+              {
+                "id": 25,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 50.8398,
+                "gold_perplexity": 52.2563,
+                "order_correct": false
+              },
+              {
+                "id": 26,
+                "best_order": [
+                  "t3",
+                  "t2",
+                  "t1"
+                ],
+                "best_perplexity": 41.4003,
+                "gold_perplexity": 41.8205,
+                "order_correct": false
+              },
+              {
+                "id": 27,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 36.131,
+                "gold_perplexity": 37.9382,
+                "order_correct": false
+              },
+              {
+                "id": 28,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 47.2372,
+                "gold_perplexity": 47.593,
+                "order_correct": false
+              },
+              {
+                "id": 29,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 35.9013,
+                "gold_perplexity": 35.9013,
+                "order_correct": true
+              },
+              {
+                "id": 30,
+                "best_order": [
+                  "t3",
+                  "t2",
+                  "t1"
+                ],
+                "best_perplexity": 40.6037,
+                "gold_perplexity": 43.9382,
+                "order_correct": false
+              }
+            ]
+          },
+          "six_step": {
+            "best_order": [
+              "t1",
+              "t5",
+              "t3",
+              "t2",
+              "t6",
+              "t4"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3",
+              "t4",
+              "t5",
+              "t6"
+            ],
+            "exact_match": false,
+            "best_perplexity": 59.5238,
+            "gold_perplexity": 67.0312,
+            "rank_of_gold": 597,
+            "n_permutations": 720,
+            "kendall_tau_best_vs_gold": 0.3333,
+            "top5_orders": [
+              [
+                "t1->t5->t3->t2->t6->t4",
+                59.5238
+              ],
+              [
+                "t1->t6->t4->t3->t2->t5",
+                59.6139
+              ],
+              [
+                "t1->t6->t4->t3->t5->t2",
+                59.6139
+              ],
+              [
+                "t1->t3->t5->t2->t4->t6",
+                59.6928
+              ],
+              [
+                "t1->t3->t5->t2->t6->t4",
+                59.776
+              ]
+            ]
+          }
+        }
+      }
+    },
+    "pythia-410m-40ep": {
+      "model_path": "/mnt/localssd/automation/internship-causal-embedding/pythia_train/output_40ep",
+      "separators": {
+        "space": {
+          "three_step": {
+            "n_correct": 10,
+            "n_total": 30,
+            "order_accuracy": 0.3333,
+            "per_sample": [
+              {
+                "id": 1,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 27.0354,
+                "gold_perplexity": 27.6447,
+                "order_correct": false
+              },
+              {
+                "id": 2,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 42.6361,
+                "gold_perplexity": 42.6361,
+                "order_correct": true
+              },
+              {
+                "id": 3,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 28.9042,
+                "gold_perplexity": 28.9042,
+                "order_correct": true
+              },
+              {
+                "id": 4,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 37.2517,
+                "gold_perplexity": 38.5302,
+                "order_correct": false
+              },
+              {
+                "id": 5,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 29.6049,
+                "gold_perplexity": 29.6049,
+                "order_correct": true
+              },
+              {
+                "id": 6,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 29.4856,
+                "gold_perplexity": 29.4856,
+                "order_correct": true
+              },
+              {
+                "id": 7,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 38.4033,
+                "gold_perplexity": 41.5363,
+                "order_correct": false
+              },
+              {
+                "id": 8,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 32.1872,
+                "gold_perplexity": 32.1872,
+                "order_correct": true
+              },
+              {
+                "id": 9,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 24.9748,
+                "gold_perplexity": 26.357,
+                "order_correct": false
+              },
+              {
+                "id": 10,
+                "best_order": [
+                  "t3",
+                  "t2",
+                  "t1"
+                ],
+                "best_perplexity": 43.0422,
+                "gold_perplexity": 47.6033,
+                "order_correct": false
+              },
+              {
+                "id": 11,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 30.609,
+                "gold_perplexity": 31.9716,
+                "order_correct": false
+              },
+              {
+                "id": 12,
+                "best_order": [
+                  "t2",
+                  "t3",
+                  "t1"
+                ],
+                "best_perplexity": 38.719,
+                "gold_perplexity": 40.161,
+                "order_correct": false
+              },
+              {
+                "id": 13,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 43.0637,
+                "gold_perplexity": 43.0637,
+                "order_correct": true
+              },
+              {
+                "id": 14,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 25.647,
+                "gold_perplexity": 26.3723,
+                "order_correct": false
+              },
+              {
+                "id": 15,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 27.7431,
+                "gold_perplexity": 27.7431,
+                "order_correct": true
+              },
+              {
+                "id": 16,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 23.4979,
+                "gold_perplexity": 24.1601,
+                "order_correct": false
+              },
+              {
+                "id": 17,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 22.1844,
+                "gold_perplexity": 22.1844,
+                "order_correct": true
+              },
+              {
+                "id": 18,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 25.9251,
+                "gold_perplexity": 28.6986,
+                "order_correct": false
+              },
+              {
+                "id": 19,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 32.7877,
+                "gold_perplexity": 36.1272,
+                "order_correct": false
+              },
+              {
+                "id": 20,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 28.0671,
+                "gold_perplexity": 31.7557,
+                "order_correct": false
+              },
+              {
+                "id": 21,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 35.7149,
+                "gold_perplexity": 38.0855,
+                "order_correct": false
+              },
+              {
+                "id": 22,
+                "best_order": [
+                  "t2",
+                  "t1",
+                  "t3"
+                ],
+                "best_perplexity": 46.2909,
+                "gold_perplexity": 48.6092,
+                "order_correct": false
+              },
+              {
+                "id": 23,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 54.9185,
+                "gold_perplexity": 62.4434,
+                "order_correct": false
+              },
+              {
+                "id": 24,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 28.1287,
+                "gold_perplexity": 28.1287,
+                "order_correct": true
+              },
+              {
+                "id": 25,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 41.1591,
+                "gold_perplexity": 42.4329,
+                "order_correct": false
+              },
+              {
+                "id": 26,
+                "best_order": [
+                  "t2",
+                  "t1",
+                  "t3"
+                ],
+                "best_perplexity": 32.3722,
+                "gold_perplexity": 34.3158,
+                "order_correct": false
+              },
+              {
+                "id": 27,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 27.1336,
+                "gold_perplexity": 27.6375,
+                "order_correct": false
+              },
+              {
+                "id": 28,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 33.8089,
+                "gold_perplexity": 33.8089,
+                "order_correct": true
+              },
+              {
+                "id": 29,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 27.5396,
+                "gold_perplexity": 28.8948,
+                "order_correct": false
+              },
+              {
+                "id": 30,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 36.1984,
+                "gold_perplexity": 36.8746,
+                "order_correct": false
+              }
+            ]
+          },
+          "six_step": {
+            "best_order": [
+              "t1",
+              "t2",
+              "t3",
+              "t6",
+              "t4",
+              "t5"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3",
+              "t4",
+              "t5",
+              "t6"
+            ],
+            "exact_match": false,
+            "best_perplexity": 39.8128,
+            "gold_perplexity": 40.8091,
+            "rank_of_gold": 18,
+            "n_permutations": 720,
+            "kendall_tau_best_vs_gold": 0.7333,
+            "top5_orders": [
+              [
+                "t1->t2->t3->t6->t4->t5",
+                39.8128
+              ],
+              [
+                "t1->t2->t6->t3->t4->t5",
+                40.0734
+              ],
+              [
+                "t1->t2->t6->t3->t5->t4",
+                40.2356
+              ],
+              [
+                "t4->t6->t1->t5->t3->t2",
+                40.3621
+              ],
+              [
+                "t1->t2->t3->t6->t5->t4",
+                40.4026
+              ]
+            ]
+          }
+        },
+        "eos": {
+          "three_step": {
+            "n_correct": 9,
+            "n_total": 30,
+            "order_accuracy": 0.3,
+            "per_sample": [
+              {
+                "id": 1,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 39.516,
+                "gold_perplexity": 40.0473,
+                "order_correct": false
+              },
+              {
+                "id": 2,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 58.518,
+                "gold_perplexity": 59.4049,
+                "order_correct": false
+              },
+              {
+                "id": 3,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 39.5011,
+                "gold_perplexity": 39.5011,
+                "order_correct": true
+              },
+              {
+                "id": 4,
+                "best_order": [
+                  "t3",
+                  "t2",
+                  "t1"
+                ],
+                "best_perplexity": 57.3473,
+                "gold_perplexity": 63.2457,
+                "order_correct": false
+              },
+              {
+                "id": 5,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 39.7302,
+                "gold_perplexity": 42.4374,
+                "order_correct": false
+              },
+              {
+                "id": 6,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 43.9947,
+                "gold_perplexity": 43.9947,
+                "order_correct": true
+              },
+              {
+                "id": 7,
+                "best_order": [
+                  "t3",
+                  "t2",
+                  "t1"
+                ],
+                "best_perplexity": 57.0806,
+                "gold_perplexity": 60.6549,
+                "order_correct": false
+              },
+              {
+                "id": 8,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 45.0492,
+                "gold_perplexity": 47.0989,
+                "order_correct": false
+              },
+              {
+                "id": 9,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 32.2991,
+                "gold_perplexity": 33.2618,
+                "order_correct": false
+              },
+              {
+                "id": 10,
+                "best_order": [
+                  "t3",
+                  "t2",
+                  "t1"
+                ],
+                "best_perplexity": 51.9806,
+                "gold_perplexity": 59.9274,
+                "order_correct": false
+              },
+              {
+                "id": 11,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 44.7973,
+                "gold_perplexity": 47.8818,
+                "order_correct": false
+              },
+              {
+                "id": 12,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 52.4872,
+                "gold_perplexity": 56.5487,
+                "order_correct": false
+              },
+              {
+                "id": 13,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 53.1039,
+                "gold_perplexity": 53.1039,
+                "order_correct": true
+              },
+              {
+                "id": 14,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 35.2226,
+                "gold_perplexity": 35.2226,
+                "order_correct": true
+              },
+              {
+                "id": 15,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 31.9033,
+                "gold_perplexity": 32.2118,
+                "order_correct": false
+              },
+              {
+                "id": 16,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 27.998,
+                "gold_perplexity": 27.998,
+                "order_correct": true
+              },
+              {
+                "id": 17,
+                "best_order": [
+                  "t3",
+                  "t2",
+                  "t1"
+                ],
+                "best_perplexity": 30.4416,
+                "gold_perplexity": 31.6068,
+                "order_correct": false
+              },
+              {
+                "id": 18,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 31.475,
+                "gold_perplexity": 33.7093,
+                "order_correct": false
+              },
+              {
+                "id": 19,
+                "best_order": [
+                  "t3",
+                  "t2",
+                  "t1"
+                ],
+                "best_perplexity": 45.2743,
+                "gold_perplexity": 46.2612,
+                "order_correct": false
+              },
+              {
+                "id": 20,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 33.6102,
+                "gold_perplexity": 35.8321,
+                "order_correct": false
+              },
+              {
+                "id": 21,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 43.5256,
+                "gold_perplexity": 47.7984,
+                "order_correct": false
+              },
+              {
+                "id": 22,
+                "best_order": [
+                  "t3",
+                  "t2",
+                  "t1"
+                ],
+                "best_perplexity": 58.5709,
+                "gold_perplexity": 63.9963,
+                "order_correct": false
+              },
+              {
+                "id": 23,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 71.3131,
+                "gold_perplexity": 71.3131,
+                "order_correct": true
+              },
+              {
+                "id": 24,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 38.8413,
+                "gold_perplexity": 38.8413,
+                "order_correct": true
+              },
+              {
+                "id": 25,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 51.0981,
+                "gold_perplexity": 51.29,
+                "order_correct": false
+              },
+              {
+                "id": 26,
+                "best_order": [
+                  "t3",
+                  "t2",
+                  "t1"
+                ],
+                "best_perplexity": 41.0195,
+                "gold_perplexity": 42.9951,
+                "order_correct": false
+              },
+              {
+                "id": 27,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 36.8859,
+                "gold_perplexity": 38.0142,
+                "order_correct": false
+              },
+              {
+                "id": 28,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 49.9891,
+                "gold_perplexity": 49.9891,
+                "order_correct": true
+              },
+              {
+                "id": 29,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 37.6878,
+                "gold_perplexity": 37.6878,
+                "order_correct": true
+              },
+              {
+                "id": 30,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 41.9777,
+                "gold_perplexity": 43.8923,
+                "order_correct": false
+              }
+            ]
+          },
+          "six_step": {
+            "best_order": [
+              "t1",
+              "t3",
+              "t5",
+              "t2",
+              "t4",
+              "t6"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3",
+              "t4",
+              "t5",
+              "t6"
+            ],
+            "exact_match": false,
+            "best_perplexity": 58.5653,
+            "gold_perplexity": 65.055,
+            "rank_of_gold": 426,
+            "n_permutations": 720,
+            "kendall_tau_best_vs_gold": 0.6,
+            "top5_orders": [
+              [
+                "t1->t3->t5->t2->t4->t6",
+                58.5653
+              ],
+              [
+                "t1->t6->t4->t3->t5->t2",
+                58.6479
+              ],
+              [
+                "t1->t5->t3->t2->t4->t6",
+                58.9737
+              ],
+              [
+                "t1->t6->t4->t3->t2->t5",
+                59.0322
+              ],
+              [
+                "t1->t3->t5->t2->t6->t4",
+                59.0943
+              ]
+            ]
+          }
+        }
+      }
+    },
+    "gpt2-medium": {
+      "model_path": "/mnt/localssd/automation/internship-causal-embedding/pythia_train/output_gpt2",
+      "separators": {
+        "space": {
+          "three_step": {
+            "n_correct": 14,
+            "n_total": 30,
+            "order_accuracy": 0.4667,
+            "per_sample": [
+              {
+                "id": 1,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 32.3245,
+                "gold_perplexity": 32.3245,
+                "order_correct": true
+              },
+              {
+                "id": 2,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 49.1521,
+                "gold_perplexity": 49.1521,
+                "order_correct": true
+              },
+              {
+                "id": 3,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 31.0541,
+                "gold_perplexity": 31.0541,
+                "order_correct": true
+              },
+              {
+                "id": 4,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 41.371,
+                "gold_perplexity": 41.371,
+                "order_correct": true
+              },
+              {
+                "id": 5,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 39.8512,
+                "gold_perplexity": 39.8512,
+                "order_correct": true
+              },
+              {
+                "id": 6,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 37.0739,
+                "gold_perplexity": 37.0739,
+                "order_correct": true
+              },
+              {
+                "id": 7,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 42.5056,
+                "gold_perplexity": 42.5056,
+                "order_correct": true
+              },
+              {
+                "id": 8,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 39.2413,
+                "gold_perplexity": 39.3883,
+                "order_correct": false
+              },
+              {
+                "id": 9,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 27.9527,
+                "gold_perplexity": 29.18,
+                "order_correct": false
+              },
+              {
+                "id": 10,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 52.741,
+                "gold_perplexity": 58.6772,
+                "order_correct": false
+              },
+              {
+                "id": 11,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 29.9133,
+                "gold_perplexity": 30.7854,
+                "order_correct": false
+              },
+              {
+                "id": 12,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 46.4213,
+                "gold_perplexity": 51.8028,
+                "order_correct": false
+              },
+              {
+                "id": 13,
+                "best_order": [
+                  "t3",
+                  "t2",
+                  "t1"
+                ],
+                "best_perplexity": 49.9182,
+                "gold_perplexity": 51.7266,
+                "order_correct": false
+              },
+              {
+                "id": 14,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 29.2104,
+                "gold_perplexity": 29.8307,
+                "order_correct": false
+              },
+              {
+                "id": 15,
+                "best_order": [
+                  "t2",
+                  "t3",
+                  "t1"
+                ],
+                "best_perplexity": 32.7567,
+                "gold_perplexity": 33.7866,
+                "order_correct": false
+              },
+              {
+                "id": 16,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 29.2902,
+                "gold_perplexity": 30.6427,
+                "order_correct": false
+              },
+              {
+                "id": 17,
+                "best_order": [
+                  "t3",
+                  "t2",
+                  "t1"
+                ],
+                "best_perplexity": 28.2442,
+                "gold_perplexity": 29.5502,
+                "order_correct": false
+              },
+              {
+                "id": 18,
+                "best_order": [
+                  "t3",
+                  "t2",
+                  "t1"
+                ],
+                "best_perplexity": 30.4269,
+                "gold_perplexity": 31.357,
+                "order_correct": false
+              },
+              {
+                "id": 19,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 36.5956,
+                "gold_perplexity": 38.3712,
+                "order_correct": false
+              },
+              {
+                "id": 20,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 31.1865,
+                "gold_perplexity": 32.7667,
+                "order_correct": false
+              },
+              {
+                "id": 21,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 46.1315,
+                "gold_perplexity": 46.1315,
+                "order_correct": true
+              },
+              {
+                "id": 22,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 49.4927,
+                "gold_perplexity": 49.4927,
+                "order_correct": true
+              },
+              {
+                "id": 23,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 56.7969,
+                "gold_perplexity": 56.7969,
+                "order_correct": true
+              },
+              {
+                "id": 24,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 31.7718,
+                "gold_perplexity": 31.7718,
+                "order_correct": true
+              },
+              {
+                "id": 25,
+                "best_order": [
+                  "t2",
+                  "t1",
+                  "t3"
+                ],
+                "best_perplexity": 41.9404,
+                "gold_perplexity": 46.0494,
+                "order_correct": false
+              },
+              {
+                "id": 26,
+                "best_order": [
+                  "t2",
+                  "t3",
+                  "t1"
+                ],
+                "best_perplexity": 27.8056,
+                "gold_perplexity": 28.1303,
+                "order_correct": false
+              },
+              {
+                "id": 27,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 30.8434,
+                "gold_perplexity": 30.8434,
+                "order_correct": true
+              },
+              {
+                "id": 28,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 30.125,
+                "gold_perplexity": 30.125,
+                "order_correct": true
+              },
+              {
+                "id": 29,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 27.7127,
+                "gold_perplexity": 27.7127,
+                "order_correct": true
+              },
+              {
+                "id": 30,
+                "best_order": [
+                  "t2",
+                  "t1",
+                  "t3"
+                ],
+                "best_perplexity": 40.1308,
+                "gold_perplexity": 41.2574,
+                "order_correct": false
+              }
+            ]
+          },
+          "six_step": {
+            "best_order": [
+              "t2",
+              "t1",
+              "t3",
+              "t4",
+              "t5",
+              "t6"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3",
+              "t4",
+              "t5",
+              "t6"
+            ],
+            "exact_match": false,
+            "best_perplexity": 46.4657,
+            "gold_perplexity": 47.8673,
+            "rank_of_gold": 59,
+            "n_permutations": 720,
+            "kendall_tau_best_vs_gold": 0.8667,
+            "top5_orders": [
+              [
+                "t2->t1->t3->t4->t5->t6",
+                46.4657
+              ],
+              [
+                "t2->t1->t3->t6->t5->t4",
+                46.7341
+              ],
+              [
+                "t2->t1->t3->t6->t4->t5",
+                46.7785
+              ],
+              [
+                "t1->t3->t5->t6->t2->t4",
+                46.8987
+              ],
+              [
+                "t2->t1->t3->t4->t6->t5",
+                46.901
+              ]
+            ]
+          }
+        },
+        "eos": {
+          "three_step": {
+            "n_correct": 6,
+            "n_total": 30,
+            "order_accuracy": 0.2,
+            "per_sample": [
+              {
+                "id": 1,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 47.4819,
+                "gold_perplexity": 47.9551,
+                "order_correct": false
+              },
+              {
+                "id": 2,
+                "best_order": [
+                  "t2",
+                  "t3",
+                  "t1"
+                ],
+                "best_perplexity": 63.4754,
+                "gold_perplexity": 65.0833,
+                "order_correct": false
+              },
+              {
+                "id": 3,
+                "best_order": [
+                  "t2",
+                  "t1",
+                  "t3"
+                ],
+                "best_perplexity": 44.4931,
+                "gold_perplexity": 47.6599,
+                "order_correct": false
+              },
+              {
+                "id": 4,
+                "best_order": [
+                  "t3",
+                  "t2",
+                  "t1"
+                ],
+                "best_perplexity": 59.8538,
+                "gold_perplexity": 68.2478,
+                "order_correct": false
+              },
+              {
+                "id": 5,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 56.7197,
+                "gold_perplexity": 57.0225,
+                "order_correct": false
+              },
+              {
+                "id": 6,
+                "best_order": [
+                  "t2",
+                  "t3",
+                  "t1"
+                ],
+                "best_perplexity": 51.8691,
+                "gold_perplexity": 55.0128,
+                "order_correct": false
+              },
+              {
+                "id": 7,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 62.6775,
+                "gold_perplexity": 63.4633,
+                "order_correct": false
+              },
+              {
+                "id": 8,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 50.8497,
+                "gold_perplexity": 53.854,
+                "order_correct": false
+              },
+              {
+                "id": 9,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 37.5815,
+                "gold_perplexity": 38.8403,
+                "order_correct": false
+              },
+              {
+                "id": 10,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 67.3275,
+                "gold_perplexity": 71.479,
+                "order_correct": false
+              },
+              {
+                "id": 11,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 43.2004,
+                "gold_perplexity": 44.7382,
+                "order_correct": false
+              },
+              {
+                "id": 12,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 64.3245,
+                "gold_perplexity": 67.9781,
+                "order_correct": false
+              },
+              {
+                "id": 13,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 61.828,
+                "gold_perplexity": 61.828,
+                "order_correct": true
+              },
+              {
+                "id": 14,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 42.0222,
+                "gold_perplexity": 42.4852,
+                "order_correct": false
+              },
+              {
+                "id": 15,
+                "best_order": [
+                  "t2",
+                  "t3",
+                  "t1"
+                ],
+                "best_perplexity": 41.0678,
+                "gold_perplexity": 41.1986,
+                "order_correct": false
+              },
+              {
+                "id": 16,
+                "best_order": [
+                  "t3",
+                  "t2",
+                  "t1"
+                ],
+                "best_perplexity": 35.5395,
+                "gold_perplexity": 37.284,
+                "order_correct": false
+              },
+              {
+                "id": 17,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 37.9898,
+                "gold_perplexity": 37.9898,
+                "order_correct": true
+              },
+              {
+                "id": 18,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 40.8058,
+                "gold_perplexity": 40.8058,
+                "order_correct": true
+              },
+              {
+                "id": 19,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 52.1909,
+                "gold_perplexity": 53.2755,
+                "order_correct": false
+              },
+              {
+                "id": 20,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 39.4304,
+                "gold_perplexity": 40.7551,
+                "order_correct": false
+              },
+              {
+                "id": 21,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 59.3333,
+                "gold_perplexity": 61.2512,
+                "order_correct": false
+              },
+              {
+                "id": 22,
+                "best_order": [
+                  "t3",
+                  "t2",
+                  "t1"
+                ],
+                "best_perplexity": 68.5254,
+                "gold_perplexity": 69.8106,
+                "order_correct": false
+              },
+              {
+                "id": 23,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 76.3083,
+                "gold_perplexity": 76.3083,
+                "order_correct": true
+              },
+              {
+                "id": 24,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 41.9945,
+                "gold_perplexity": 42.3548,
+                "order_correct": false
+              },
+              {
+                "id": 25,
+                "best_order": [
+                  "t2",
+                  "t3",
+                  "t1"
+                ],
+                "best_perplexity": 54.9298,
+                "gold_perplexity": 56.2912,
+                "order_correct": false
+              },
+              {
+                "id": 26,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 37.925,
+                "gold_perplexity": 38.1581,
+                "order_correct": false
+              },
+              {
+                "id": 27,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 42.7438,
+                "gold_perplexity": 42.7438,
+                "order_correct": true
+              },
+              {
+                "id": 28,
+                "best_order": [
+                  "t3",
+                  "t2",
+                  "t1"
+                ],
+                "best_perplexity": 46.2461,
+                "gold_perplexity": 47.0142,
+                "order_correct": false
+              },
+              {
+                "id": 29,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 37.9939,
+                "gold_perplexity": 37.9939,
+                "order_correct": true
+              },
+              {
+                "id": 30,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 53.1661,
+                "gold_perplexity": 54.4717,
+                "order_correct": false
+              }
+            ]
+          },
+          "six_step": {
+            "best_order": [
+              "t6",
+              "t1",
+              "t5",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3",
+              "t4",
+              "t5",
+              "t6"
+            ],
+            "exact_match": false,
+            "best_perplexity": 70.1792,
+            "gold_perplexity": 75.7334,
+            "rank_of_gold": 245,
+            "n_permutations": 720,
+            "kendall_tau_best_vs_gold": -0.0667,
+            "top5_orders": [
+              [
+                "t6->t1->t5->t2->t3->t4",
+                70.1792
+              ],
+              [
+                "t6->t1->t5->t4->t2->t3",
+                70.2267
+              ],
+              [
+                "t6->t1->t3->t5->t2->t4",
+                70.7585
+              ],
+              [
+                "t6->t1->t4->t5->t2->t3",
+                71.1264
+              ],
+              [
+                "t3->t2->t5->t4->t6->t1",
+                71.2596
+              ]
+            ]
+          }
+        }
+      }
+    },
+    "gpt2-stable": {
+      "model_path": "/mnt/localssd/automation/internship-causal-embedding/pythia_train/output_gpt2_stable",
+      "separators": {
+        "space": {
+          "three_step": {
+            "n_correct": 17,
+            "n_total": 30,
+            "order_accuracy": 0.5667,
+            "per_sample": [
+              {
+                "id": 1,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 33.8837,
+                "gold_perplexity": 33.8837,
+                "order_correct": true
+              },
+              {
+                "id": 2,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 50.5744,
+                "gold_perplexity": 50.5744,
+                "order_correct": true
+              },
+              {
+                "id": 3,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 31.0347,
+                "gold_perplexity": 31.0347,
+                "order_correct": true
+              },
+              {
+                "id": 4,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 44.7068,
+                "gold_perplexity": 44.7068,
+                "order_correct": true
+              },
+              {
+                "id": 5,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 40.0148,
+                "gold_perplexity": 40.0148,
+                "order_correct": true
+              },
+              {
+                "id": 6,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 39.0644,
+                "gold_perplexity": 39.0644,
+                "order_correct": true
+              },
+              {
+                "id": 7,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 43.8164,
+                "gold_perplexity": 43.8164,
+                "order_correct": true
+              },
+              {
+                "id": 8,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 40.9959,
+                "gold_perplexity": 41.7776,
+                "order_correct": false
+              },
+              {
+                "id": 9,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 27.2927,
+                "gold_perplexity": 28.8476,
+                "order_correct": false
+              },
+              {
+                "id": 10,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 53.9136,
+                "gold_perplexity": 59.2682,
+                "order_correct": false
+              },
+              {
+                "id": 11,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 31.6726,
+                "gold_perplexity": 31.6726,
+                "order_correct": true
+              },
+              {
+                "id": 12,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 47.1772,
+                "gold_perplexity": 51.7486,
+                "order_correct": false
+              },
+              {
+                "id": 13,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 51.0121,
+                "gold_perplexity": 51.0121,
+                "order_correct": true
+              },
+              {
+                "id": 14,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 29.7587,
+                "gold_perplexity": 30.1056,
+                "order_correct": false
+              },
+              {
+                "id": 15,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 33.0916,
+                "gold_perplexity": 34.2277,
+                "order_correct": false
+              },
+              {
+                "id": 16,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 29.9253,
+                "gold_perplexity": 31.0,
+                "order_correct": false
+              },
+              {
+                "id": 17,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 29.4822,
+                "gold_perplexity": 29.4822,
+                "order_correct": true
+              },
+              {
+                "id": 18,
+                "best_order": [
+                  "t3",
+                  "t2",
+                  "t1"
+                ],
+                "best_perplexity": 31.2295,
+                "gold_perplexity": 31.7412,
+                "order_correct": false
+              },
+              {
+                "id": 19,
+                "best_order": [
+                  "t3",
+                  "t2",
+                  "t1"
+                ],
+                "best_perplexity": 38.7075,
+                "gold_perplexity": 39.269,
+                "order_correct": false
+              },
+              {
+                "id": 20,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 31.0585,
+                "gold_perplexity": 33.6213,
+                "order_correct": false
+              },
+              {
+                "id": 21,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 46.6836,
+                "gold_perplexity": 46.6836,
+                "order_correct": true
+              },
+              {
+                "id": 22,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 49.8991,
+                "gold_perplexity": 49.8991,
+                "order_correct": true
+              },
+              {
+                "id": 23,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 58.5156,
+                "gold_perplexity": 60.3391,
+                "order_correct": false
+              },
+              {
+                "id": 24,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 32.4907,
+                "gold_perplexity": 32.4907,
+                "order_correct": true
+              },
+              {
+                "id": 25,
+                "best_order": [
+                  "t2",
+                  "t1",
+                  "t3"
+                ],
+                "best_perplexity": 42.3795,
+                "gold_perplexity": 46.1775,
+                "order_correct": false
+              },
+              {
+                "id": 26,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 28.3016,
+                "gold_perplexity": 28.3016,
+                "order_correct": true
+              },
+              {
+                "id": 27,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 30.6938,
+                "gold_perplexity": 30.6938,
+                "order_correct": true
+              },
+              {
+                "id": 28,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 30.9837,
+                "gold_perplexity": 30.9837,
+                "order_correct": true
+              },
+              {
+                "id": 29,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 28.4923,
+                "gold_perplexity": 28.4923,
+                "order_correct": true
+              },
+              {
+                "id": 30,
+                "best_order": [
+                  "t2",
+                  "t1",
+                  "t3"
+                ],
+                "best_perplexity": 40.1867,
+                "gold_perplexity": 42.3149,
+                "order_correct": false
+              }
+            ]
+          },
+          "six_step": {
+            "best_order": [
+              "t2",
+              "t1",
+              "t3",
+              "t4",
+              "t5",
+              "t6"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3",
+              "t4",
+              "t5",
+              "t6"
+            ],
+            "exact_match": false,
+            "best_perplexity": 49.0652,
+            "gold_perplexity": 50.5834,
+            "rank_of_gold": 150,
+            "n_permutations": 720,
+            "kendall_tau_best_vs_gold": 0.8667,
+            "top5_orders": [
+              [
+                "t2->t1->t3->t4->t5->t6",
+                49.0652
+              ],
+              [
+                "t2->t3->t4->t6->t1->t5",
+                49.2545
+              ],
+              [
+                "t3->t1->t5->t2->t4->t6",
+                49.292
+              ],
+              [
+                "t1->t2->t6->t3->t4->t5",
+                49.3343
+              ],
+              [
+                "t3->t1->t5->t2->t6->t4",
+                49.3387
+              ]
+            ]
+          }
+        },
+        "eos": {
+          "three_step": {
+            "n_correct": 7,
+            "n_total": 30,
+            "order_accuracy": 0.2333,
+            "per_sample": [
+              {
+                "id": 1,
+                "best_order": [
+                  "t2",
+                  "t3",
+                  "t1"
+                ],
+                "best_perplexity": 50.0672,
+                "gold_perplexity": 50.3824,
+                "order_correct": false
+              },
+              {
+                "id": 2,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 66.2323,
+                "gold_perplexity": 66.3987,
+                "order_correct": false
+              },
+              {
+                "id": 3,
+                "best_order": [
+                  "t2",
+                  "t1",
+                  "t3"
+                ],
+                "best_perplexity": 44.011,
+                "gold_perplexity": 47.6295,
+                "order_correct": false
+              },
+              {
+                "id": 4,
+                "best_order": [
+                  "t3",
+                  "t2",
+                  "t1"
+                ],
+                "best_perplexity": 65.3589,
+                "gold_perplexity": 74.7199,
+                "order_correct": false
+              },
+              {
+                "id": 5,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 59.3901,
+                "gold_perplexity": 60.2053,
+                "order_correct": false
+              },
+              {
+                "id": 6,
+                "best_order": [
+                  "t2",
+                  "t3",
+                  "t1"
+                ],
+                "best_perplexity": 55.9175,
+                "gold_perplexity": 56.1757,
+                "order_correct": false
+              },
+              {
+                "id": 7,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 64.3154,
+                "gold_perplexity": 68.2151,
+                "order_correct": false
+              },
+              {
+                "id": 8,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 55.8198,
+                "gold_perplexity": 56.0458,
+                "order_correct": false
+              },
+              {
+                "id": 9,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 37.1048,
+                "gold_perplexity": 39.2098,
+                "order_correct": false
+              },
+              {
+                "id": 10,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 67.3782,
+                "gold_perplexity": 72.5748,
+                "order_correct": false
+              },
+              {
+                "id": 11,
+                "best_order": [
+                  "t2",
+                  "t3",
+                  "t1"
+                ],
+                "best_perplexity": 46.8498,
+                "gold_perplexity": 47.8361,
+                "order_correct": false
+              },
+              {
+                "id": 12,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 65.5929,
+                "gold_perplexity": 69.7458,
+                "order_correct": false
+              },
+              {
+                "id": 13,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 64.2785,
+                "gold_perplexity": 64.2785,
+                "order_correct": true
+              },
+              {
+                "id": 14,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 42.6599,
+                "gold_perplexity": 42.6599,
+                "order_correct": true
+              },
+              {
+                "id": 15,
+                "best_order": [
+                  "t2",
+                  "t3",
+                  "t1"
+                ],
+                "best_perplexity": 42.6852,
+                "gold_perplexity": 43.3446,
+                "order_correct": false
+              },
+              {
+                "id": 16,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 36.5562,
+                "gold_perplexity": 37.5176,
+                "order_correct": false
+              },
+              {
+                "id": 17,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 39.4049,
+                "gold_perplexity": 40.5283,
+                "order_correct": false
+              },
+              {
+                "id": 18,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 42.5159,
+                "gold_perplexity": 42.8359,
+                "order_correct": false
+              },
+              {
+                "id": 19,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 55.2952,
+                "gold_perplexity": 56.1042,
+                "order_correct": false
+              },
+              {
+                "id": 20,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 41.7139,
+                "gold_perplexity": 42.4263,
+                "order_correct": false
+              },
+              {
+                "id": 21,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 60.1349,
+                "gold_perplexity": 65.9026,
+                "order_correct": false
+              },
+              {
+                "id": 22,
+                "best_order": [
+                  "t3",
+                  "t2",
+                  "t1"
+                ],
+                "best_perplexity": 71.6552,
+                "gold_perplexity": 73.6463,
+                "order_correct": false
+              },
+              {
+                "id": 23,
+                "best_order": [
+                  "t2",
+                  "t1",
+                  "t3"
+                ],
+                "best_perplexity": 80.1472,
+                "gold_perplexity": 80.9148,
+                "order_correct": false
+              },
+              {
+                "id": 24,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 42.2142,
+                "gold_perplexity": 42.2142,
+                "order_correct": true
+              },
+              {
+                "id": 25,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 57.7582,
+                "gold_perplexity": 57.7582,
+                "order_correct": true
+              },
+              {
+                "id": 26,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 38.9979,
+                "gold_perplexity": 38.9979,
+                "order_correct": true
+              },
+              {
+                "id": 27,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 43.3388,
+                "gold_perplexity": 43.3388,
+                "order_correct": true
+              },
+              {
+                "id": 28,
+                "best_order": [
+                  "t3",
+                  "t2",
+                  "t1"
+                ],
+                "best_perplexity": 48.9712,
+                "gold_perplexity": 52.0968,
+                "order_correct": false
+              },
+              {
+                "id": 29,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 40.3547,
+                "gold_perplexity": 40.3547,
+                "order_correct": true
+              },
+              {
+                "id": 30,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 56.824,
+                "gold_perplexity": 57.5791,
+                "order_correct": false
+              }
+            ]
+          },
+          "six_step": {
+            "best_order": [
+              "t6",
+              "t1",
+              "t5",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3",
+              "t4",
+              "t5",
+              "t6"
+            ],
+            "exact_match": false,
+            "best_perplexity": 74.0054,
+            "gold_perplexity": 79.9773,
+            "rank_of_gold": 216,
+            "n_permutations": 720,
+            "kendall_tau_best_vs_gold": -0.0667,
+            "top5_orders": [
+              [
+                "t6->t1->t5->t2->t3->t4",
+                74.0054
+              ],
+              [
+                "t6->t1->t3->t5->t2->t4",
+                74.3762
+              ],
+              [
+                "t1->t5->t2->t3->t4->t6",
+                74.4518
+              ],
+              [
+                "t6->t1->t5->t4->t2->t3",
+                74.7454
+              ],
+              [
+                "t6->t1->t4->t5->t2->t3",
+                74.7986
+              ]
+            ]
+          }
+        }
+      }
+    },
+    "gpt2-smooth": {
+      "model_path": "/mnt/localssd/automation/internship-causal-embedding/pythia_train/output_gpt2_smooth",
+      "separators": {
+        "space": {
+          "three_step": {
+            "n_correct": 15,
+            "n_total": 30,
+            "order_accuracy": 0.5,
+            "per_sample": [
+              {
+                "id": 1,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 32.73,
+                "gold_perplexity": 32.73,
+                "order_correct": true
+              },
+              {
+                "id": 2,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 50.1215,
+                "gold_perplexity": 50.1215,
+                "order_correct": true
+              },
+              {
+                "id": 3,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 31.6508,
+                "gold_perplexity": 31.6508,
+                "order_correct": true
+              },
+              {
+                "id": 4,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 43.9794,
+                "gold_perplexity": 43.9794,
+                "order_correct": true
+              },
+              {
+                "id": 5,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 39.4059,
+                "gold_perplexity": 39.4059,
+                "order_correct": true
+              },
+              {
+                "id": 6,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 37.8398,
+                "gold_perplexity": 37.8398,
+                "order_correct": true
+              },
+              {
+                "id": 7,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 43.2988,
+                "gold_perplexity": 43.2988,
+                "order_correct": true
+              },
+              {
+                "id": 8,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 39.0674,
+                "gold_perplexity": 39.2618,
+                "order_correct": false
+              },
+              {
+                "id": 9,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 27.4016,
+                "gold_perplexity": 28.6691,
+                "order_correct": false
+              },
+              {
+                "id": 10,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 53.0653,
+                "gold_perplexity": 61.5389,
+                "order_correct": false
+              },
+              {
+                "id": 11,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 30.411,
+                "gold_perplexity": 31.1041,
+                "order_correct": false
+              },
+              {
+                "id": 12,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 47.8506,
+                "gold_perplexity": 53.3594,
+                "order_correct": false
+              },
+              {
+                "id": 13,
+                "best_order": [
+                  "t3",
+                  "t2",
+                  "t1"
+                ],
+                "best_perplexity": 49.0479,
+                "gold_perplexity": 52.4127,
+                "order_correct": false
+              },
+              {
+                "id": 14,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 29.7347,
+                "gold_perplexity": 30.2789,
+                "order_correct": false
+              },
+              {
+                "id": 15,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 32.8104,
+                "gold_perplexity": 32.8104,
+                "order_correct": true
+              },
+              {
+                "id": 16,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 29.2871,
+                "gold_perplexity": 30.7128,
+                "order_correct": false
+              },
+              {
+                "id": 17,
+                "best_order": [
+                  "t2",
+                  "t1",
+                  "t3"
+                ],
+                "best_perplexity": 29.3763,
+                "gold_perplexity": 29.5519,
+                "order_correct": false
+              },
+              {
+                "id": 18,
+                "best_order": [
+                  "t3",
+                  "t2",
+                  "t1"
+                ],
+                "best_perplexity": 31.0433,
+                "gold_perplexity": 31.3094,
+                "order_correct": false
+              },
+              {
+                "id": 19,
+                "best_order": [
+                  "t3",
+                  "t2",
+                  "t1"
+                ],
+                "best_perplexity": 36.9813,
+                "gold_perplexity": 39.9649,
+                "order_correct": false
+              },
+              {
+                "id": 20,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 30.7592,
+                "gold_perplexity": 31.7814,
+                "order_correct": false
+              },
+              {
+                "id": 21,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 46.8087,
+                "gold_perplexity": 46.8087,
+                "order_correct": true
+              },
+              {
+                "id": 22,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 48.2521,
+                "gold_perplexity": 48.2521,
+                "order_correct": true
+              },
+              {
+                "id": 23,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 57.3301,
+                "gold_perplexity": 57.3301,
+                "order_correct": true
+              },
+              {
+                "id": 24,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 31.7859,
+                "gold_perplexity": 31.7859,
+                "order_correct": true
+              },
+              {
+                "id": 25,
+                "best_order": [
+                  "t2",
+                  "t1",
+                  "t3"
+                ],
+                "best_perplexity": 42.6302,
+                "gold_perplexity": 46.0748,
+                "order_correct": false
+              },
+              {
+                "id": 26,
+                "best_order": [
+                  "t2",
+                  "t3",
+                  "t1"
+                ],
+                "best_perplexity": 28.2555,
+                "gold_perplexity": 28.8258,
+                "order_correct": false
+              },
+              {
+                "id": 27,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 29.7596,
+                "gold_perplexity": 29.7596,
+                "order_correct": true
+              },
+              {
+                "id": 28,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 30.429,
+                "gold_perplexity": 30.429,
+                "order_correct": true
+              },
+              {
+                "id": 29,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 28.933,
+                "gold_perplexity": 28.933,
+                "order_correct": true
+              },
+              {
+                "id": 30,
+                "best_order": [
+                  "t2",
+                  "t1",
+                  "t3"
+                ],
+                "best_perplexity": 40.1134,
+                "gold_perplexity": 42.0833,
+                "order_correct": false
+              }
+            ]
+          },
+          "six_step": {
+            "best_order": [
+              "t2",
+              "t1",
+              "t3",
+              "t4",
+              "t6",
+              "t5"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3",
+              "t4",
+              "t5",
+              "t6"
+            ],
+            "exact_match": false,
+            "best_perplexity": 47.4572,
+            "gold_perplexity": 48.5232,
+            "rank_of_gold": 19,
+            "n_permutations": 720,
+            "kendall_tau_best_vs_gold": 0.7333,
+            "top5_orders": [
+              [
+                "t2->t1->t3->t4->t6->t5",
+                47.4572
+              ],
+              [
+                "t2->t1->t6->t3->t4->t5",
+                47.5556
+              ],
+              [
+                "t2->t1->t3->t4->t5->t6",
+                47.7705
+              ],
+              [
+                "t2->t1->t3->t5->t4->t6",
+                48.0021
+              ],
+              [
+                "t2->t1->t3->t6->t4->t5",
+                48.0384
+              ]
+            ]
+          }
+        },
+        "eos": {
+          "three_step": {
+            "n_correct": 8,
+            "n_total": 30,
+            "order_accuracy": 0.2667,
+            "per_sample": [
+              {
+                "id": 1,
+                "best_order": [
+                  "t2",
+                  "t3",
+                  "t1"
+                ],
+                "best_perplexity": 48.8577,
+                "gold_perplexity": 48.8697,
+                "order_correct": false
+              },
+              {
+                "id": 2,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 64.9074,
+                "gold_perplexity": 67.5973,
+                "order_correct": false
+              },
+              {
+                "id": 3,
+                "best_order": [
+                  "t2",
+                  "t1",
+                  "t3"
+                ],
+                "best_perplexity": 44.6404,
+                "gold_perplexity": 46.3366,
+                "order_correct": false
+              },
+              {
+                "id": 4,
+                "best_order": [
+                  "t3",
+                  "t2",
+                  "t1"
+                ],
+                "best_perplexity": 62.0575,
+                "gold_perplexity": 71.3461,
+                "order_correct": false
+              },
+              {
+                "id": 5,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 57.087,
+                "gold_perplexity": 57.087,
+                "order_correct": true
+              },
+              {
+                "id": 6,
+                "best_order": [
+                  "t2",
+                  "t3",
+                  "t1"
+                ],
+                "best_perplexity": 54.9727,
+                "gold_perplexity": 55.0252,
+                "order_correct": false
+              },
+              {
+                "id": 7,
+                "best_order": [
+                  "t3",
+                  "t1",
+                  "t2"
+                ],
+                "best_perplexity": 63.3684,
+                "gold_perplexity": 66.5814,
+                "order_correct": false
+              },
+              {
+                "id": 8,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 53.2032,
+                "gold_perplexity": 54.7364,
+                "order_correct": false
+              },
+              {
+                "id": 9,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 36.9291,
+                "gold_perplexity": 38.6553,
+                "order_correct": false
+              },
+              {
+                "id": 10,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 68.9006,
+                "gold_perplexity": 72.9638,
+                "order_correct": false
+              },
+              {
+                "id": 11,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 44.0324,
+                "gold_perplexity": 46.8986,
+                "order_correct": false
+              },
+              {
+                "id": 12,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 65.3037,
+                "gold_perplexity": 71.1511,
+                "order_correct": false
+              },
+              {
+                "id": 13,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 63.198,
+                "gold_perplexity": 63.4288,
+                "order_correct": false
+              },
+              {
+                "id": 14,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 43.2219,
+                "gold_perplexity": 43.2219,
+                "order_correct": true
+              },
+              {
+                "id": 15,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 41.5693,
+                "gold_perplexity": 41.5693,
+                "order_correct": true
+              },
+              {
+                "id": 16,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 35.5593,
+                "gold_perplexity": 37.1162,
+                "order_correct": false
+              },
+              {
+                "id": 17,
+                "best_order": [
+                  "t3",
+                  "t2",
+                  "t1"
+                ],
+                "best_perplexity": 37.6481,
+                "gold_perplexity": 39.0201,
+                "order_correct": false
+              },
+              {
+                "id": 18,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 41.3645,
+                "gold_perplexity": 41.3645,
+                "order_correct": true
+              },
+              {
+                "id": 19,
+                "best_order": [
+                  "t2",
+                  "t3",
+                  "t1"
+                ],
+                "best_perplexity": 54.9781,
+                "gold_perplexity": 55.8134,
+                "order_correct": false
+              },
+              {
+                "id": 20,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 39.1821,
+                "gold_perplexity": 40.6371,
+                "order_correct": false
+              },
+              {
+                "id": 21,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 59.9101,
+                "gold_perplexity": 64.2453,
+                "order_correct": false
+              },
+              {
+                "id": 22,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 71.0819,
+                "gold_perplexity": 71.5751,
+                "order_correct": false
+              },
+              {
+                "id": 23,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 75.7185,
+                "gold_perplexity": 75.7185,
+                "order_correct": true
+              },
+              {
+                "id": 24,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 42.2104,
+                "gold_perplexity": 42.2104,
+                "order_correct": true
+              },
+              {
+                "id": 25,
+                "best_order": [
+                  "t2",
+                  "t1",
+                  "t3"
+                ],
+                "best_perplexity": 56.3376,
+                "gold_perplexity": 58.048,
+                "order_correct": false
+              },
+              {
+                "id": 26,
+                "best_order": [
+                  "t2",
+                  "t3",
+                  "t1"
+                ],
+                "best_perplexity": 38.4957,
+                "gold_perplexity": 39.4311,
+                "order_correct": false
+              },
+              {
+                "id": 27,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 42.2289,
+                "gold_perplexity": 42.2289,
+                "order_correct": true
+              },
+              {
+                "id": 28,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 48.3271,
+                "gold_perplexity": 50.8675,
+                "order_correct": false
+              },
+              {
+                "id": 29,
+                "best_order": [
+                  "t1",
+                  "t2",
+                  "t3"
+                ],
+                "best_perplexity": 39.1532,
+                "gold_perplexity": 39.1532,
+                "order_correct": true
+              },
+              {
+                "id": 30,
+                "best_order": [
+                  "t1",
+                  "t3",
+                  "t2"
+                ],
+                "best_perplexity": 54.7168,
+                "gold_perplexity": 56.8017,
+                "order_correct": false
+              }
+            ]
+          },
+          "six_step": {
+            "best_order": [
+              "t6",
+              "t1",
+              "t5",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "correct_order": [
+              "t1",
+              "t2",
+              "t3",
+              "t4",
+              "t5",
+              "t6"
+            ],
+            "exact_match": false,
+            "best_perplexity": 71.0481,
+            "gold_perplexity": 77.3988,
+            "rank_of_gold": 205,
+            "n_permutations": 720,
+            "kendall_tau_best_vs_gold": -0.0667,
+            "top5_orders": [
+              [
+                "t6->t1->t5->t2->t3->t4",
+                71.0481
+              ],
+              [
+                "t6->t1->t5->t3->t2->t4",
+                71.3572
+              ],
+              [
+                "t6->t1->t3->t5->t2->t4",
+                71.4397
+              ],
+              [
+                "t1->t5->t2->t3->t4->t6",
+                71.6881
+              ],
+              [
+                "t6->t1->t5->t4->t2->t3",
+                71.6902
+              ]
+            ]
+          }
+        }
+      }
+    }
+  },
+  "summary": [
+    {
+      "model": "pythia-410m-20ep",
+      "separator": "space",
+      "three_acc": 0.4667,
+      "three_correct": 14,
+      "six_exact": false,
+      "six_rank_of_gold": 133,
+      "six_tau": -0.3333
+    },
+    {
+      "model": "pythia-410m-20ep",
+      "separator": "eos",
+      "three_acc": 0.1667,
+      "three_correct": 5,
+      "six_exact": false,
+      "six_rank_of_gold": 597,
+      "six_tau": 0.3333
+    },
+    {
+      "model": "pythia-410m-40ep",
+      "separator": "space",
+      "three_acc": 0.3333,
+      "three_correct": 10,
+      "six_exact": false,
+      "six_rank_of_gold": 18,
+      "six_tau": 0.7333
+    },
+    {
+      "model": "pythia-410m-40ep",
+      "separator": "eos",
+      "three_acc": 0.3,
+      "three_correct": 9,
+      "six_exact": false,
+      "six_rank_of_gold": 426,
+      "six_tau": 0.6
+    },
+    {
+      "model": "gpt2-medium",
+      "separator": "space",
+      "three_acc": 0.4667,
+      "three_correct": 14,
+      "six_exact": false,
+      "six_rank_of_gold": 59,
+      "six_tau": 0.8667
+    },
+    {
+      "model": "gpt2-medium",
+      "separator": "eos",
+      "three_acc": 0.2,
+      "three_correct": 6,
+      "six_exact": false,
+      "six_rank_of_gold": 245,
+      "six_tau": -0.0667
+    },
+    {
+      "model": "gpt2-stable",
+      "separator": "space",
+      "three_acc": 0.5667,
+      "three_correct": 17,
+      "six_exact": false,
+      "six_rank_of_gold": 150,
+      "six_tau": 0.8667
+    },
+    {
+      "model": "gpt2-stable",
+      "separator": "eos",
+      "three_acc": 0.2333,
+      "three_correct": 7,
+      "six_exact": false,
+      "six_rank_of_gold": 216,
+      "six_tau": -0.0667
+    },
+    {
+      "model": "gpt2-smooth",
+      "separator": "space",
+      "three_acc": 0.5,
+      "three_correct": 15,
+      "six_exact": false,
+      "six_rank_of_gold": 19,
+      "six_tau": 0.7333
+    },
+    {
+      "model": "gpt2-smooth",
+      "separator": "eos",
+      "three_acc": 0.2667,
+      "three_correct": 8,
+      "six_exact": false,
+      "six_rank_of_gold": 205,
+      "six_tau": -0.0667
+    }
+  ]
+}

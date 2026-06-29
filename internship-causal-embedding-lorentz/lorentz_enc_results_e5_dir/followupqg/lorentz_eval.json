@@ -1,0 +1,38 @@
+{
+  "dataset": "followupqg",
+  "checkpoint": "lorentz_enc_results_e5_dir/followupqg/lorentz_best.pt",
+  "backbone": "intfloat/e5-base-v2",
+  "space_dim": 768,
+  "time_dim": 32,
+  "n_test_pairs": 501,
+  "encoding_seconds": 2.8680169582366943,
+  "auc": 0.9921036171170632,
+  "precision_at_1": 0.9780439121756487,
+  "mrr": 0.6790988798884594,
+  "mean_rank": 4.582834331337326,
+  "median_rank": 1.0,
+  "recall_at_k": {
+    "1": 0.5149700598802395,
+    "3": 0.8163672654690619,
+    "5": 0.8762475049900199,
+    "10": 0.9161676646706587
+  },
+  "hit_at_k": {
+    "1": 0.5149700598802395,
+    "3": 0.8163672654690619,
+    "5": 0.8762475049900199,
+    "10": 0.9161676646706587
+  },
+  "n_candidates_per_query": 501,
+  "directional_acc": 0.401197612285614,
+  "directional_margin": -0.017779354006052017,
+  "mrr_combined": 0.7473342073034585,
+  "median_rank_combined": 1.0,
+  "recall_at_k_combined": {
+    "1": 0.656686626746507,
+    "3": 0.8043912175648703,
+    "5": 0.8642714570858283,
+    "10": 0.9161676646706587
+  },
+  "beta_eval": 0.5
+}

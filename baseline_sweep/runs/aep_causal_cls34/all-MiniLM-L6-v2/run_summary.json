@@ -1,0 +1,18 @@
+{
+  "dataset_slug": "aep_causal_cls34",
+  "model_slug": "all-MiniLM-L6-v2",
+  "base_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "schema": "standard",
+  "best_val_acc": 0.88974,
+  "best_val_auc": 0.93487,
+  "test_acc": 0.874417,
+  "test_auc": 0.919706,
+  "test_f1": 0.87216,
+  "test_loss": 0.939102,
+  "n_train": 110775,
+  "n_val": 6004,
+  "n_test": 6004,
+  "epochs": 4,
+  "batch_size": 64,
+  "max_seq_len": 512
+}

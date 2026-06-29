@@ -1,0 +1,8 @@
+{
+  "dataset": "qrecc",
+  "checkpoint": "/mnt/localssd/new_base_line/internship-causal-embedding/my_work/kl/results/qrecc/cde_v2_run5c_best.pt",
+  "backbone": "google-bert/bert-base-uncased",
+  "k": 4,
+  "n_train": 13500,
+  "out_dir": "/mnt/localssd/new_base_line/internship-causal-embedding/my_work/kl/cross_encoder/data_indomain/qrecc"
+}

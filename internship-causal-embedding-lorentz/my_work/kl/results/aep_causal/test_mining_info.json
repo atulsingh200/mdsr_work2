@@ -1,0 +1,10 @@
+{
+  "split": "test",
+  "n_pairs": 562,
+  "k": 4,
+  "miner": "sentence-transformers/all-MiniLM-L6-v2",
+  "enc_seconds": 0.39312052726745605,
+  "knn_seconds": 0.0004258155822753906,
+  "hard_negatives_path": "/mnt/localssd/base_line/my_work/kl/results/aep_causal/test_hard_negatives.npy",
+  "pairs_path": "/mnt/localssd/base_line/my_work/kl/results/aep_causal/test_pairs.jsonl"
+}

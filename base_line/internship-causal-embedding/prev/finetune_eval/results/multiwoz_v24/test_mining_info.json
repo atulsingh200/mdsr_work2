@@ -1,0 +1,11 @@
+{
+  "dataset": "multiwoz_v24",
+  "split": "test",
+  "n_pairs": 7368,
+  "k_hard_negatives": 4,
+  "encoding_seconds": 1.625845193862915,
+  "knn_seconds": 0.04056954383850098,
+  "miner": "sentence-transformers/all-MiniLM-L6-v2",
+  "hard_negatives_path": "/mnt/localssd/base_line/internship-causal-embedding/finetune_eval/results/multiwoz_v24/test_hard_negatives.npy",
+  "pairs_path": "/mnt/localssd/base_line/internship-causal-embedding/finetune_eval/results/multiwoz_v24/test_pairs.jsonl"
+}

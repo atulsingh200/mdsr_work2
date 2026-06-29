@@ -1,0 +1,72 @@
+{
+  "config": {
+    "eval_type": "forward_vs_reverse_2candidates"
+  },
+  "results": [
+    {
+      "dataset": "aep_causal",
+      "checkpoint": "/mnt/localssd/internship-causal-embedding-merge-followup/finetune_eval/results_reverse/aep_causal/checkpoint_best.pt",
+      "backbone": "google-bert/bert-base-uncased",
+      "pooling": "cls",
+      "n_test_pairs": 562,
+      "encoding_seconds": 6.911819219589233,
+      "auc": 0.8861209964412812,
+      "precision_at_1": 0.8861209964412812,
+      "mean_fwd_score": 0.45192644000053406,
+      "mean_rev_score": 0.15285639464855194,
+      "eval_type": "forward_vs_reverse_2candidates"
+    },
+    {
+      "dataset": "followupqg",
+      "checkpoint": "/mnt/localssd/internship-causal-embedding-merge-followup/finetune_eval/results_reverse/followupqg/checkpoint_best.pt",
+      "backbone": "google-bert/bert-base-uncased",
+      "pooling": "cls",
+      "n_test_pairs": 501,
+      "encoding_seconds": 5.739353179931641,
+      "auc": 1.0,
+      "precision_at_1": 1.0,
+      "mean_fwd_score": 0.6888521313667297,
+      "mean_rev_score": -0.2293018102645874,
+      "eval_type": "forward_vs_reverse_2candidates"
+    },
+    {
+      "dataset": "multiwoz_v24",
+      "checkpoint": "/mnt/localssd/internship-causal-embedding-merge-followup/finetune_eval/results_reverse/multiwoz_v24/checkpoint_best.pt",
+      "backbone": "google-bert/bert-base-uncased",
+      "pooling": "cls",
+      "n_test_pairs": 7368,
+      "encoding_seconds": 50.73730778694153,
+      "auc": 0.997557003257329,
+      "precision_at_1": 0.997557003257329,
+      "mean_fwd_score": 0.6291519999504089,
+      "mean_rev_score": -0.3450109362602234,
+      "eval_type": "forward_vs_reverse_2candidates"
+    },
+    {
+      "dataset": "qrecc",
+      "checkpoint": "/mnt/localssd/internship-causal-embedding-merge-followup/finetune_eval/results_reverse/qrecc/checkpoint_best.pt",
+      "backbone": "google-bert/bert-base-uncased",
+      "pooling": "cls",
+      "n_test_pairs": 5204,
+      "encoding_seconds": 32.39451789855957,
+      "auc": 0.9861644888547272,
+      "precision_at_1": 0.9861644888547272,
+      "mean_fwd_score": 0.5074262022972107,
+      "mean_rev_score": -0.10634811967611313,
+      "eval_type": "forward_vs_reverse_2candidates"
+    },
+    {
+      "dataset": "workflow",
+      "checkpoint": "/mnt/localssd/internship-causal-embedding-merge-followup/finetune_eval/results_reverse/workflow/checkpoint_best.pt",
+      "backbone": "google-bert/bert-base-uncased",
+      "pooling": "cls",
+      "n_test_pairs": 260487,
+      "encoding_seconds": 895.8866848945618,
+      "auc": 0.8851612556480746,
+      "precision_at_1": 0.8851612556480746,
+      "mean_fwd_score": 0.5205186605453491,
+      "mean_rev_score": 0.13706940412521362,
+      "eval_type": "forward_vs_reverse_2candidates"
+    }
+  ]
+}

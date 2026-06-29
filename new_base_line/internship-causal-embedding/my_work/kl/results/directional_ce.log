@@ -1,0 +1,81 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[data] train=110775 val=6004 test=6004  arch=ce
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 9426.47it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[model] params=109,483,009
+  ep1 0/3462 loss=0.7256 acc=0.5000
+  ep1 200/3462 loss=0.6796 acc=0.5222
+  ep1 400/3462 loss=0.6730 acc=0.6001
+  ep1 600/3462 loss=0.3711 acc=0.6814
+  ep1 800/3462 loss=0.0444 acc=0.7370
+  ep1 1000/3462 loss=0.0772 acc=0.7730
+  ep1 1200/3462 loss=0.0291 acc=0.8000
+  ep1 1400/3462 loss=0.2753 acc=0.8207
+  ep1 1600/3462 loss=0.4919 acc=0.8374
+  ep1 1800/3462 loss=0.1318 acc=0.8509
+  ep1 2000/3462 loss=0.0698 acc=0.8628
+  ep1 2200/3462 loss=0.0109 acc=0.8725
+  ep1 2400/3462 loss=0.0740 acc=0.8809
+  ep1 2600/3462 loss=0.0280 acc=0.8884
+  ep1 2800/3462 loss=0.0550 acc=0.8949
+  ep1 3000/3462 loss=0.0145 acc=0.9005
+  ep1 3200/3462 loss=0.0524 acc=0.9055
+  ep1 3400/3462 loss=0.0010 acc=0.9099
+[epoch 1] train_acc=0.9113 val_acc=0.8684 val_auc=0.9115 val_f1=0.8714 (309s)
+  * new best val_acc=0.8684
+  ep2 0/3462 loss=0.1418 acc=0.9688
+  ep2 200/3462 loss=0.0003 acc=0.9849
+  ep2 400/3462 loss=0.2947 acc=0.9853
+  ep2 600/3462 loss=0.0201 acc=0.9849
+  ep2 800/3462 loss=0.0167 acc=0.9852
+  ep2 1000/3462 loss=0.0420 acc=0.9855
+  ep2 1200/3462 loss=0.0276 acc=0.9859
+  ep2 1400/3462 loss=0.0002 acc=0.9863
+  ep2 1600/3462 loss=0.0022 acc=0.9865
+  ep2 1800/3462 loss=0.0001 acc=0.9867
+  ep2 2000/3462 loss=0.0000 acc=0.9869
+  ep2 2200/3462 loss=0.0002 acc=0.9869
+  ep2 2400/3462 loss=0.0171 acc=0.9869
+  ep2 2600/3462 loss=0.0000 acc=0.9872
+  ep2 2800/3462 loss=0.0032 acc=0.9874
+  ep2 3000/3462 loss=0.0001 acc=0.9875
+  ep2 3200/3462 loss=0.1897 acc=0.9876
+  ep2 3400/3462 loss=0.0001 acc=0.9878
+[epoch 2] train_acc=0.9879 val_acc=0.8784 val_auc=0.9120 val_f1=0.8807 (309s)
+  * new best val_acc=0.8784
+  ep3 0/3462 loss=0.0000 acc=1.0000
+  ep3 200/3462 loss=0.0612 acc=0.9916
+  ep3 400/3462 loss=0.0001 acc=0.9908
+  ep3 600/3462 loss=0.0158 acc=0.9910
+  ep3 800/3462 loss=0.0460 acc=0.9908
+  ep3 1000/3462 loss=0.0183 acc=0.9908
+  ep3 1200/3462 loss=0.0000 acc=0.9908
+  ep3 1400/3462 loss=0.0001 acc=0.9907
+  ep3 1600/3462 loss=0.0000 acc=0.9907
+  ep3 1800/3462 loss=0.0165 acc=0.9908
+  ep3 2000/3462 loss=0.0003 acc=0.9906
+  ep3 2200/3462 loss=0.0012 acc=0.9907
+  ep3 2400/3462 loss=0.0000 acc=0.9908
+  ep3 2600/3462 loss=0.0000 acc=0.9908
+  ep3 2800/3462 loss=0.0005 acc=0.9909
+  ep3 3000/3462 loss=0.0208 acc=0.9910
+  ep3 3200/3462 loss=0.0000 acc=0.9911
+  ep3 3400/3462 loss=0.0000 acc=0.9910
+[epoch 3] train_acc=0.9910 val_acc=0.8824 val_auc=0.9127 val_f1=0.8842 (309s)
+  * new best val_acc=0.8824
+
+[TEST ce]  acc=0.8553  AUC=0.8892  F1=0.8528
+[reference bge-small]  acc=0.8571  AUC=0.9031  F1=0.8558  | acc delta -0.2%
+[saved] /mnt/localssd/internship-causal-embedding-merge-followup/my_work/kl/results/directional/ce

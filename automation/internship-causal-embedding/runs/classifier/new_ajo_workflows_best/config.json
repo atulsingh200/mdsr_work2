@@ -1,0 +1,37 @@
+{
+  "base_model": "BAAI/bge-small-en-v1.5",
+  "data_dir": "data/new_ajo_workflows",
+  "run_name": "new_ajo_workflows_best",
+  "lr_encoder": 2e-05,
+  "lr_head": 0.001,
+  "batch_size": 32,
+  "eval_batch_size": 64,
+  "epochs": 10,
+  "warmup_frac": 0.1,
+  "weight_decay": 0.01,
+  "grad_clip": 1.0,
+  "seed": 42,
+  "max_seq_len": 512,
+  "device": "cuda",
+  "bf16": true,
+  "n_train": 21846,
+  "n_val": 2470,
+  "n_test": 2616,
+  "pool": "cls",
+  "l2_normalize": true,
+  "concat_form": "[A; B; A-B; A*B]",
+  "head_cfg": {
+    "head_type": "mlp",
+    "hidden_dims": [
+      512,
+      128
+    ],
+    "dropout": 0.1,
+    "activation": "gelu",
+    "norm": "layer"
+  },
+  "head": "MLP(4d->512->128->1, act=gelu, norm=layer, dropout=0.1)",
+  "freeze_encoders": false,
+  "tier_aux_weight": 0.0,
+  "n_tiers": 0
+}

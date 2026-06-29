@@ -1,0 +1,18 @@
+{
+  "dataset_slug": "aep_causal_cls34",
+  "model_slug": "bge-base-en-v1.5",
+  "base_model": "BAAI/bge-base-en-v1.5",
+  "schema": "standard",
+  "best_val_acc": 0.9004,
+  "best_val_auc": 0.936023,
+  "test_acc": 0.860926,
+  "test_auc": 0.906406,
+  "test_f1": 0.856505,
+  "test_loss": 1.088076,
+  "n_train": 110775,
+  "n_val": 6004,
+  "n_test": 6004,
+  "epochs": 4,
+  "batch_size": 64,
+  "max_seq_len": 512
+}

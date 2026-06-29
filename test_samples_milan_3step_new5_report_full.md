@@ -1,0 +1,233 @@
+# Bi-Encoder Sorting Results — Full Text Examples
+
+**Model:** BGE-small dual-encoder (`runs/classifier/best_mlp_bge_small_aep`)
+**Overall accuracy: 2 / 5**
+
+---
+
+## Workflow 1 — Schema → Dataset → Data Ingestion ✅ CORRECT
+
+**Given order:** t1 → t2 → t3
+**Predicted order:** t1 → t2 → t3
+
+**True sequence:** Define XDM Schema → Create Dataset from Schema → Ingest Data via Sources
+**Predicted sequence:** Define XDM Schema → Create Dataset from Schema → Ingest Data via Sources
+
+### True Sequence
+
+#### t1 — Define XDM Schema
+Before any data can be stored or queried in Adobe Experience Platform, you must define the structure of that data using an Experience Data Model (XDM) schema. To create a schema, navigate to Data Management in the left rail and select Schemas. Click Create schema and choose a base class such as XDM Individual Profile or XDM ExperienceEvent depending on whether you are modeling record data or time-series events. You can then add field groups — reusable collections of fields — to describe attributes like personal details, loyalty program membership, or web interaction data. Once all required fields are configured and the schema is enabled for Real-Time Customer Profile, you can save it and it becomes available as the structural blueprint for any dataset you create.
+
+#### t2 — Create Dataset from Schema
+With your XDM schema defined and saved, you can now create a dataset to hold the actual data records. Go to Data Management and select Datasets, then click Create dataset. Choose the option to create a dataset from an existing schema and select the schema you just built. Give the dataset a descriptive name and, if you want the records to contribute to the unified customer profile, toggle the Profile toggle on. Once created, the dataset appears in your dataset catalog and is ready to accept data. At this point no records exist yet — the dataset is an empty container whose structure is enforced by the schema you selected.
+
+#### t3 — Ingest Data via Sources
+Now that the dataset exists and the schema governs its structure, you are ready to bring data into Platform through batch ingestion. Navigate to Sources and browse the connector catalog or choose to upload a local file. For a CSV file upload, drag the file onto the upload area and Platform will attempt to auto-map each CSV column to the corresponding XDM field in your schema. Review the column mappings carefully — any unmapped required fields will cause the batch to fail. Set an error threshold, which defines the percentage of malformed records allowed before the entire batch is rejected, and configure a schedule if you want this ingestion to recur automatically. Once you confirm and save the dataflow, Platform kicks off the ingestion job and you can monitor its progress in the Sources Dataflows tab. A green success status confirms that records have landed in your dataset.
+
+### Predicted Sequence
+
+#### Step 1 — Define XDM Schema
+Before any data can be stored or queried in Adobe Experience Platform, you must define the structure of that data using an Experience Data Model (XDM) schema. To create a schema, navigate to Data Management in the left rail and select Schemas. Click Create schema and choose a base class such as XDM Individual Profile or XDM ExperienceEvent depending on whether you are modeling record data or time-series events. You can then add field groups — reusable collections of fields — to describe attributes like personal details, loyalty program membership, or web interaction data. Once all required fields are configured and the schema is enabled for Real-Time Customer Profile, you can save it and it becomes available as the structural blueprint for any dataset you create.
+
+#### Step 2 — Create Dataset from Schema
+With your XDM schema defined and saved, you can now create a dataset to hold the actual data records. Go to Data Management and select Datasets, then click Create dataset. Choose the option to create a dataset from an existing schema and select the schema you just built. Give the dataset a descriptive name and, if you want the records to contribute to the unified customer profile, toggle the Profile toggle on. Once created, the dataset appears in your dataset catalog and is ready to accept data. At this point no records exist yet — the dataset is an empty container whose structure is enforced by the schema you selected.
+
+#### Step 3 — Ingest Data via Sources
+Now that the dataset exists and the schema governs its structure, you are ready to bring data into Platform through batch ingestion. Navigate to Sources and browse the connector catalog or choose to upload a local file. For a CSV file upload, drag the file onto the upload area and Platform will attempt to auto-map each CSV column to the corresponding XDM field in your schema. Review the column mappings carefully — any unmapped required fields will cause the batch to fail. Set an error threshold, which defines the percentage of malformed records allowed before the entire batch is rejected, and configure a schedule if you want this ingestion to recur automatically. Once you confirm and save the dataflow, Platform kicks off the ingestion job and you can monitor its progress in the Sources Dataflows tab. A green success status confirms that records have landed in your dataset.
+
+### Pairwise Scores
+
+| Pair | Score | Pred |
+|------|-------|------|
+| t1 → t2 | 0.9961 | 1 |
+| t1 → t3 | 1.0000 | 1 |
+| t2 → t3 | 0.9219 | 1 |
+| t2 → t1 | 0.0010 | 0 |
+| t3 → t1 | 0.0001 | 0 |
+| t3 → t2 | 0.0002 | 0 |
+
+---
+
+## Workflow 2 — Segment Definition → Audience Activation → Destination Mapping ✅ CORRECT
+
+**Given order:** t1 → t2 → t3
+**Predicted order:** t1 → t2 → t3
+
+**True sequence:** Build Audience Segment → Activate Segment to a Destination → Map Profile Attributes to Destination Fields
+**Predicted sequence:** Build Audience Segment → Activate Segment to a Destination → Map Profile Attributes to Destination Fields
+
+### True Sequence
+
+#### t1 — Build Audience Segment
+To target a specific group of customers, you first need to define an audience segment using Platform's Segment Builder. Go to Customer in the left navigation and select Audiences, then click Create audience. In the Segment Builder canvas, drag attribute tiles and event tiles from the left panel onto the rule area to specify the conditions a profile must meet. For example, you might combine a loyalty tier attribute equal to Gold with a purchase event within the last 30 days. As you add rules, the estimated audience size updates in real time, giving you a preview of how many profiles qualify. When your rules reflect the audience you want, give the segment a name and click Save and close. The segment is now defined but has not yet been sent anywhere — it exists only as a saved rule set within Platform.
+
+#### t2 — Activate Segment to a Destination
+With your audience segment saved, the next step is to activate it — that is, to configure Platform to send the qualifying profile records to an external system such as an advertising platform, email service provider, or CRM. Navigate to Connections in the left rail and select Destinations, then find the destination you want to use from the catalog, for example Adobe Target or a cloud storage bucket. Click Set up or Activate audiences on an already-connected destination. In the activation workflow, select the audience you just built from the list of available segments and choose a schedule — either a one-time export or a recurring daily sync. Click Next to proceed to the field mapping step where you will specify exactly which profile attributes should be included in the export payload.
+
+#### t3 — Map Profile Attributes to Destination Fields
+In the field mapping step of the activation workflow, you specify which XDM profile attributes should be exported and what name they should carry in the destination system. The source column lists every field available on your unified profile — such as email address, first name, loyalty points balance, or last purchase date. For each field you want to export, add a mapping row and provide the target field name that the destination expects. Some destinations have required fields; Platform will warn you if a mandatory mapping is missing. You can also add a transformation, for instance converting a date format or concatenating first and last name into a single string. Once all mappings look correct, click Finish. Platform will begin evaluating the audience on the configured schedule and push the mapped attributes to the destination system automatically.
+
+### Predicted Sequence
+
+#### Step 1 — Build Audience Segment
+To target a specific group of customers, you first need to define an audience segment using Platform's Segment Builder. Go to Customer in the left navigation and select Audiences, then click Create audience. In the Segment Builder canvas, drag attribute tiles and event tiles from the left panel onto the rule area to specify the conditions a profile must meet. For example, you might combine a loyalty tier attribute equal to Gold with a purchase event within the last 30 days. As you add rules, the estimated audience size updates in real time, giving you a preview of how many profiles qualify. When your rules reflect the audience you want, give the segment a name and click Save and close. The segment is now defined but has not yet been sent anywhere — it exists only as a saved rule set within Platform.
+
+#### Step 2 — Activate Segment to a Destination
+With your audience segment saved, the next step is to activate it — that is, to configure Platform to send the qualifying profile records to an external system such as an advertising platform, email service provider, or CRM. Navigate to Connections in the left rail and select Destinations, then find the destination you want to use from the catalog, for example Adobe Target or a cloud storage bucket. Click Set up or Activate audiences on an already-connected destination. In the activation workflow, select the audience you just built from the list of available segments and choose a schedule — either a one-time export or a recurring daily sync. Click Next to proceed to the field mapping step where you will specify exactly which profile attributes should be included in the export payload.
+
+#### Step 3 — Map Profile Attributes to Destination Fields
+In the field mapping step of the activation workflow, you specify which XDM profile attributes should be exported and what name they should carry in the destination system. The source column lists every field available on your unified profile — such as email address, first name, loyalty points balance, or last purchase date. For each field you want to export, add a mapping row and provide the target field name that the destination expects. Some destinations have required fields; Platform will warn you if a mandatory mapping is missing. You can also add a transformation, for instance converting a date format or concatenating first and last name into a single string. Once all mappings look correct, click Finish. Platform will begin evaluating the audience on the configured schedule and push the mapped attributes to the destination system automatically.
+
+### Pairwise Scores
+
+| Pair | Score | Pred |
+|------|-------|------|
+| t1 → t2 | 1.0000 | 1 |
+| t1 → t3 | 1.0000 | 1 |
+| t2 → t3 | 1.0000 | 1 |
+| t2 → t1 | 0.0000 | 0 |
+| t3 → t1 | 0.0000 | 0 |
+| t3 → t2 | 0.0037 | 0 |
+
+---
+
+## Workflow 3 — Identity Namespace → Identity Graph → Profile Merge ❌ WRONG
+
+**Given order:** t1 → t2 → t3
+**Predicted order:** t2 → t1 → t3
+
+**True sequence:** Create Custom Identity Namespace → Inspect Identity Graph Stitching → Configure Merge Policy
+**Predicted sequence:** Inspect Identity Graph Stitching → Create Custom Identity Namespace → Configure Merge Policy
+
+### True Sequence
+
+#### t1 — Create Custom Identity Namespace
+Identity resolution in Adobe Experience Platform begins with namespaces — labels that give meaning to an identity value. Standard namespaces such as Email, Phone, and ECID are provided out of the box, but if your organization uses a proprietary identifier like a loyalty card number or a CRM ID, you must create a custom namespace first. Go to Customer in the left navigation, select Identities, and click Create identity namespace. Choose a display name, a unique symbol that will be used in API calls, and an identity type such as Cross-device ID for a persistent identifier that tracks an individual across multiple devices. Save the namespace. It is now recognized by Platform and can be included in data ingestion payloads so that incoming records carry this identifier alongside others.
+
+#### t2 — Inspect Identity Graph Stitching
+Once custom namespaces are configured and data carrying those identities has been ingested, Platform's Identity Service begins building an identity graph for each individual. An identity graph links all the known identifiers for a single person — for example, an ECID from a web session, an email address from a login event, and a CRM ID from a loyalty sign-up — into a single connected graph. You can inspect any graph by going to Customer then Identities and searching for a specific identity value. The graph viewer shows each linked namespace as a node and each association as an edge, revealing how Platform has connected events from different touchpoints to the same underlying person. When a new event arrives carrying an identifier that matches an existing node, Platform automatically extends the graph, keeping the unified identity up to date in real time.
+
+#### t3 — Configure Merge Policy
+With identity graphs assembled, you can now control how Platform collapses multiple profile fragments — records from different source datasets that belong to the same person — into a single unified profile. This is done through merge policies. Navigate to Customer then Profiles and select the Merge Policies tab. Click Create merge policy and give it a name. Choose an identity stitching option: Private Graph uses only your organization's own identity graph, while Shared Device Graph includes a shared co-op graph if your organization participates in one. Next, select the attribute merge method: Timestamp ordered picks the most recently updated value for each field, while Dataset precedence lets you rank datasets so that the CRM dataset's email always wins over a web analytics dataset's email when they conflict. Save the merge policy and set it as the default if you want it applied across all segmentation and activation workflows.
+
+### Predicted Sequence
+
+#### Step 1 — Inspect Identity Graph Stitching
+Once custom namespaces are configured and data carrying those identities has been ingested, Platform's Identity Service begins building an identity graph for each individual. An identity graph links all the known identifiers for a single person — for example, an ECID from a web session, an email address from a login event, and a CRM ID from a loyalty sign-up — into a single connected graph. You can inspect any graph by going to Customer then Identities and searching for a specific identity value. The graph viewer shows each linked namespace as a node and each association as an edge, revealing how Platform has connected events from different touchpoints to the same underlying person. When a new event arrives carrying an identifier that matches an existing node, Platform automatically extends the graph, keeping the unified identity up to date in real time.
+
+#### Step 2 — Create Custom Identity Namespace
+Identity resolution in Adobe Experience Platform begins with namespaces — labels that give meaning to an identity value. Standard namespaces such as Email, Phone, and ECID are provided out of the box, but if your organization uses a proprietary identifier like a loyalty card number or a CRM ID, you must create a custom namespace first. Go to Customer in the left navigation, select Identities, and click Create identity namespace. Choose a display name, a unique symbol that will be used in API calls, and an identity type such as Cross-device ID for a persistent identifier that tracks an individual across multiple devices. Save the namespace. It is now recognized by Platform and can be included in data ingestion payloads so that incoming records carry this identifier alongside others.
+
+#### Step 3 — Configure Merge Policy
+With identity graphs assembled, you can now control how Platform collapses multiple profile fragments — records from different source datasets that belong to the same person — into a single unified profile. This is done through merge policies. Navigate to Customer then Profiles and select the Merge Policies tab. Click Create merge policy and give it a name. Choose an identity stitching option: Private Graph uses only your organization's own identity graph, while Shared Device Graph includes a shared co-op graph if your organization participates in one. Next, select the attribute merge method: Timestamp ordered picks the most recently updated value for each field, while Dataset precedence lets you rank datasets so that the CRM dataset's email always wins over a web analytics dataset's email when they conflict. Save the merge policy and set it as the default if you want it applied across all segmentation and activation workflows.
+
+### Pairwise Scores
+
+| Pair | Score | Pred | Note |
+|------|-------|------|------|
+| t1 → t2 | 0.3496 | 0 | ❌ should be 1 |
+| t1 → t3 | 0.9883 | 1 | ✅ |
+| t2 → t3 | 0.9766 | 1 | ✅ |
+| t2 → t1 | 1.0000 | 1 | ❌ should be 0 |
+| t3 → t1 | 0.0002 | 0 | ✅ |
+| t3 → t2 | 0.0008 | 0 | ✅ |
+
+---
+
+## Workflow 4 — Datastream → Event Forwarding → Reporting Dataset ❌ WRONG
+
+**Given order:** t1 → t2 → t3
+**Predicted order:** t2 → t3 → t1
+
+**True sequence:** Configure Web SDK Datastream → Set Up Event Forwarding Rules → Verify Data in Reporting Dataset
+**Predicted sequence:** Set Up Event Forwarding Rules → Verify Data in Reporting Dataset → Configure Web SDK Datastream
+
+### True Sequence
+
+#### t1 — Configure Web SDK Datastream
+To collect behavioral data from your website using the Adobe Experience Platform Web SDK, you must first create a datastream — a server-side configuration that tells the Edge Network what to do with the events it receives. In the Data Collection UI, navigate to Datastreams and click New Datastream. Give it a name and select the XDM event schema that your web events will conform to. Then enable the Platform service and select the dataset where streaming hits should land. You can also enable Adobe Analytics, Adobe Target, or Audience Manager services on the same datastream if you want those solutions to receive the data as well. Save the datastream; it generates a unique datastream ID that you will reference in your Web SDK tag extension configuration. No events are flowing yet — this configuration just defines the routing rules that the Edge Network will follow.
+
+#### t2 — Set Up Event Forwarding Rules
+With the datastream configured, you can now set up event forwarding rules to enrich or route events before they land in Platform datasets. Event forwarding runs on the Edge Network server side, meaning it fires before the event reaches the browser or any client-side rule. In the Tags UI, navigate to your Event Forwarding property and create a new rule. Define the trigger condition — for example, fire whenever a purchase event arrives — and then add an action such as sending a custom payload to a third-party analytics endpoint or appending a calculated field to the XDM object. Because event forwarding runs in milliseconds on Adobe's edge nodes, you can transform or enrich events with virtually no latency penalty. Once the rule is published to your Edge environment, it activates immediately for all subsequent events that match the trigger conditions.
+
+#### t3 — Verify Data in Reporting Dataset
+After the datastream is live and event forwarding rules are published, events begin arriving in the Platform dataset you designated. To verify the pipeline end to end, go to Data Management and open the target dataset. The Activity tab shows a timeline of batches or streaming micro-batches arriving over time. Click into a recent batch to see a sample of the raw records and confirm that your XDM fields are populated correctly — for instance that the commerce.order.priceTotal field contains the expected numeric value and that identityMap carries both the ECID and any authenticated CRM ID. If you enabled Profile on the dataset, those events are also being stitched into unified profiles in real time. Use the Profile Viewer — available under Customer then Profiles — to search for a specific ECID and verify that the purchase event appears in the profile's event timeline.
+
+### Predicted Sequence
+
+#### Step 1 — Set Up Event Forwarding Rules
+With the datastream configured, you can now set up event forwarding rules to enrich or route events before they land in Platform datasets. Event forwarding runs on the Edge Network server side, meaning it fires before the event reaches the browser or any client-side rule. In the Tags UI, navigate to your Event Forwarding property and create a new rule. Define the trigger condition — for example, fire whenever a purchase event arrives — and then add an action such as sending a custom payload to a third-party analytics endpoint or appending a calculated field to the XDM object. Because event forwarding runs in milliseconds on Adobe's edge nodes, you can transform or enrich events with virtually no latency penalty. Once the rule is published to your Edge environment, it activates immediately for all subsequent events that match the trigger conditions.
+
+#### Step 2 — Verify Data in Reporting Dataset
+After the datastream is live and event forwarding rules are published, events begin arriving in the Platform dataset you designated. To verify the pipeline end to end, go to Data Management and open the target dataset. The Activity tab shows a timeline of batches or streaming micro-batches arriving over time. Click into a recent batch to see a sample of the raw records and confirm that your XDM fields are populated correctly — for instance that the commerce.order.priceTotal field contains the expected numeric value and that identityMap carries both the ECID and any authenticated CRM ID. If you enabled Profile on the dataset, those events are also being stitched into unified profiles in real time. Use the Profile Viewer — available under Customer then Profiles — to search for a specific ECID and verify that the purchase event appears in the profile's event timeline.
+
+#### Step 3 — Configure Web SDK Datastream
+To collect behavioral data from your website using the Adobe Experience Platform Web SDK, you must first create a datastream — a server-side configuration that tells the Edge Network what to do with the events it receives. In the Data Collection UI, navigate to Datastreams and click New Datastream. Give it a name and select the XDM event schema that your web events will conform to. Then enable the Platform service and select the dataset where streaming hits should land. You can also enable Adobe Analytics, Adobe Target, or Audience Manager services on the same datastream if you want those solutions to receive the data as well. Save the datastream; it generates a unique datastream ID that you will reference in your Web SDK tag extension configuration. No events are flowing yet — this configuration just defines the routing rules that the Edge Network will follow.
+
+### Pairwise Scores
+
+| Pair | Score | Pred | Note |
+|------|-------|------|------|
+| t1 → t2 | 0.0000 | 0 | ❌ should be 1 |
+| t1 → t3 | 0.0000 | 0 | ❌ should be 1 |
+| t2 → t3 | 0.1260 | 0 | ❌ should be 1 |
+| t2 → t1 | 1.0000 | 1 | ❌ should be 0 |
+| t3 → t1 | 1.0000 | 1 | ❌ should be 0 |
+| t3 → t2 | 0.0020 | 0 | ✅ |
+
+---
+
+## Workflow 5 — Journey Trigger → Journey Canvas Design → Journey Publishing ❌ WRONG
+
+**Given order:** t1 → t2 → t3
+**Predicted order:** t2 → t1 → t3
+
+**True sequence:** Configure Entry Event Trigger → Design Journey Canvas → Publish Journey
+**Predicted sequence:** Design Journey Canvas → Configure Entry Event Trigger → Publish Journey
+
+### True Sequence
+
+#### t1 — Configure Entry Event Trigger
+Every journey in Adobe Journey Optimizer starts with an entry event — the signal that qualifies a customer to enter the journey. Before you open the Journey Canvas, you must configure this trigger. In Journey Optimizer, go to Administration then Events and click Add event. Choose Unitary event if a single customer action such as a purchase confirmation or form submission should trigger the journey, or choose Segment qualification if you want customers to enter whenever they join or leave a defined audience segment. For a unitary event, select the event schema, identify the profile identity field that will link the event to the correct customer profile, and optionally add a condition to filter which events qualify — for example, only purchase events where the order total exceeds one hundred dollars. Save the event configuration. It now appears as a selectable entry point when you build your journey canvas.
+
+#### t2 — Design Journey Canvas
+With the entry event defined, open the Journey Canvas by navigating to Journey Management then Journeys and clicking Create journey. Drag the event you just configured onto the canvas as the starting node — this represents the moment the customer enters the journey. From there, add orchestration nodes to shape the experience: a Wait node introduces a delay before the next action fires, an Email node sends a personalized message using a pre-built content template, and a Condition node splits the path based on a profile attribute or a previous interaction — for example, sending loyalty gold members down one branch and standard members down another. Each node connects to the next with a directed arrow that represents the flow of time. You can also add a End node to cleanly close a branch so that customers who reach it are removed from the journey. As you build, the canvas provides a live preview of the journey structure and flags any configuration errors in red.
+
+#### t3 — Publish Journey
+Once all canvas nodes are connected and every configuration error has been resolved, your journey is ready to go live. Click the Publish button in the top-right corner of the Journey Canvas. Journey Optimizer performs a final validation sweep — checking that all required fields in email nodes are filled, that condition branches have a default path, and that the entry event is reachable. If validation passes, the journey status changes from Draft to Live. From this point forward, any customer who triggers the entry event will be enrolled in the journey and progress through the nodes in real time. You can monitor the journey's performance on the Journey Report tab, which displays entry counts, completion rates, and per-node drop-off metrics. If you need to make a change after publishing, you can create a new version of the journey — existing customers in the live version are not affected until they re-enter or you explicitly stop the current version.
+
+### Predicted Sequence
+
+#### Step 1 — Design Journey Canvas
+With the entry event defined, open the Journey Canvas by navigating to Journey Management then Journeys and clicking Create journey. Drag the event you just configured onto the canvas as the starting node — this represents the moment the customer enters the journey. From there, add orchestration nodes to shape the experience: a Wait node introduces a delay before the next action fires, an Email node sends a personalized message using a pre-built content template, and a Condition node splits the path based on a profile attribute or a previous interaction — for example, sending loyalty gold members down one branch and standard members down another. Each node connects to the next with a directed arrow that represents the flow of time. You can also add a End node to cleanly close a branch so that customers who reach it are removed from the journey. As you build, the canvas provides a live preview of the journey structure and flags any configuration errors in red.
+
+#### Step 2 — Configure Entry Event Trigger
+Every journey in Adobe Journey Optimizer starts with an entry event — the signal that qualifies a customer to enter the journey. Before you open the Journey Canvas, you must configure this trigger. In Journey Optimizer, go to Administration then Events and click Add event. Choose Unitary event if a single customer action such as a purchase confirmation or form submission should trigger the journey, or choose Segment qualification if you want customers to enter whenever they join or leave a defined audience segment. For a unitary event, select the event schema, identify the profile identity field that will link the event to the correct customer profile, and optionally add a condition to filter which events qualify — for example, only purchase events where the order total exceeds one hundred dollars. Save the event configuration. It now appears as a selectable entry point when you build your journey canvas.
+
+#### Step 3 — Publish Journey
+Once all canvas nodes are connected and every configuration error has been resolved, your journey is ready to go live. Click the Publish button in the top-right corner of the Journey Canvas. Journey Optimizer performs a final validation sweep — checking that all required fields in email nodes are filled, that condition branches have a default path, and that the entry event is reachable. If validation passes, the journey status changes from Draft to Live. From this point forward, any customer who triggers the entry event will be enrolled in the journey and progress through the nodes in real time. You can monitor the journey's performance on the Journey Report tab, which displays entry counts, completion rates, and per-node drop-off metrics. If you need to make a change after publishing, you can create a new version of the journey — existing customers in the live version are not affected until they re-enter or you explicitly stop the current version.
+
+### Pairwise Scores
+
+| Pair | Score | Pred | Note |
+|------|-------|------|------|
+| t1 → t2 | 0.0003 | 0 | ❌ should be 1 |
+| t1 → t3 | 1.0000 | 1 | ✅ |
+| t2 → t3 | 1.0000 | 1 | ✅ |
+| t2 → t1 | 1.0000 | 1 | ❌ should be 0 |
+| t3 → t1 | 0.0510 | 0 | ✅ |
+| t3 → t2 | 0.0001 | 0 | ✅ |
+
+---
+
+## Summary
+
+| # | Workflow | Given | Predicted | Result |
+|---|----------|-------|-----------|--------|
+| 1 | Schema → Dataset → Data Ingestion | t1 → t2 → t3 | t1 → t2 → t3 | ✅ |
+| 2 | Segment Definition → Activation → Mapping | t1 → t2 → t3 | t1 → t2 → t3 | ✅ |
+| 3 | Identity Namespace → Graph → Merge | t1 → t2 → t3 | t2 → t1 → t3 | ❌ |
+| 4 | Datastream → Event Forwarding → Dataset | t1 → t2 → t3 | t2 → t3 → t1 | ❌ |
+| 5 | Journey Trigger → Canvas → Publishing | t1 → t2 → t3 | t2 → t1 → t3 | ❌ |
+
+**Sorting accuracy: 2 / 5 (40%)**

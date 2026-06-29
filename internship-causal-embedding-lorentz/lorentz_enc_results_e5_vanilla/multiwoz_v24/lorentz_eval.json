@@ -1,0 +1,27 @@
+{
+  "dataset": "multiwoz_v24",
+  "checkpoint": "lorentz_enc_results_e5_vanilla/multiwoz_v24/lorentz_best.pt",
+  "backbone": "intfloat/e5-base-v2",
+  "space_dim": 768,
+  "time_dim": 20,
+  "n_test_pairs": 7368,
+  "encoding_seconds": 25.56194019317627,
+  "auc": 0.9606163045238617,
+  "precision_at_1": 0.8949511400651465,
+  "mrr": 0.32292262387460446,
+  "mean_rank": 34.819761129207386,
+  "median_rank": 9.0,
+  "recall_at_k": {
+    "1": 0.2244842562432139,
+    "3": 0.3512486427795874,
+    "5": 0.4172095548317047,
+    "10": 0.5183224755700325
+  },
+  "hit_at_k": {
+    "1": 0.2244842562432139,
+    "3": 0.3512486427795874,
+    "5": 0.4172095548317047,
+    "10": 0.5183224755700325
+  },
+  "n_candidates_per_query": 1000
+}

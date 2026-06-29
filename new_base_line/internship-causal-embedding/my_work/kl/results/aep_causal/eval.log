@@ -1,0 +1,75 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[test]  562 pairs
+[test]  loaded hard negatives ((562, 4))
+
+[CDE]  loading /mnt/localssd/base_line/my_work/kl/results/aep_causal/cde_best.pt
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 8797.45it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+  backbone=google-bert/bert-base-uncased  proj_dim=128  device=cuda
+  encoded 1124 texts in 3.5s
+  AUC=0.8078  P@1(rand)=0.9181
+  AUC(HN)=0.6111  P@1(HN)=0.5231
+  MRR=0.4062  mean_rank=19.08  median_rank=4.0
+  Recall@1  0.2544
+  Recall@3  0.4858
+  Recall@5  0.5747
+  Recall@10 0.7028
+
+[BiEncoder]  loading /mnt/localssd/base_line/internship-causal-embedding/finetune_eval/results/aep_causal/checkpoint_best.pt
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 8629.18it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 7382.44it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+  backbone=google-bert/bert-base-uncased  pooling=cls
+  encoded 1124 texts in 3.3s
+  AUC=0.9712  P@1(rand)=0.9128
+  AUC(HN)=0.7157  P@1(HN)=0.5089
+  MRR=0.4012  mean_rank=16.55  median_rank=4.0
+  Recall@1  0.2438
+  Recall@3  0.4875
+  Recall@5  0.5961
+  Recall@10 0.7171
+
+[saved]  /mnt/localssd/base_line/my_work/kl/results/aep_causal/cde_eval.json
+
+====================================================================================================
+model                        N     AUC     P@1   AUC_HN   P@1_HN   R@1   R@3   R@5   R@10      MRR   median
+----------------------------------------------------------------------------------------------------
+CDE                        562  0.8078  0.9181   0.6111   0.5231  0.254  0.486  0.575  0.703   0.4062      4.0
+BiEncoder (two-tower)      562  0.9712  0.9128   0.7157   0.5089  0.244  0.488  0.596  0.717   0.4012      4.0

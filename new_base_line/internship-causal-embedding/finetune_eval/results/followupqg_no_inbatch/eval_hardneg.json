@@ -1,0 +1,13 @@
+{
+  "dataset": "followupqg",
+  "checkpoint": "finetune_eval/results/followupqg_no_inbatch/checkpoint_best.pt",
+  "backbone": "google-bert/bert-base-uncased",
+  "pooling": "cls",
+  "n_test_pairs": 501,
+  "n_negatives": 4,
+  "encoding_seconds": 2.7819812297821045,
+  "auc": 0.8347058378253474,
+  "precision_at_1": 0.7425149700598802,
+  "eval_type": "semantic_hard_negatives",
+  "miner": "sentence-transformers/all-MiniLM-L6-v2"
+}

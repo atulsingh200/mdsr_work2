@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "t1": "Next, fill in the name, description, bucket name, and folder path fields. The last two fields specify which area and path of the S3 account the data set files will be stored. There’s two options for file type, JSON and Parquet. I’ll choose JSON. There’s an option for compression format, and that’s relative to the file type selected.",
+    "t2": "Note templates show in the Journey Optimizer UI only after they are approved by meta. Although usually faster, it can take up to 24 hours for a message template to be approved. Once approved, I will find and select the template. And look at that. Now we have a nice preview of our WhatsApp messages.",
+    "t3": "You can easily search to locate a collection. Let’s do this by searching for our women’s collection. Also, by selecting a collection, such as the LUMA collection we have here, we can see its offers. Now we’re ready to create a new collection. To create a collection, select Create Collection in the top right."
+  },
+  {
+    "id": 2,
+    "t1": "It’s very straightforward to export data sets. After this, you would connect to the S3 bucket to confirm you see the files there. Thank you for watching this video. recommendation-more-help 7e382214-bd30-4de2-bc8b-f6f6e7182305",
+    "t2": "So here I am in our drag and drop interface. For this fragment, I’m going to drag over some text. And I am going to paste some text in here and adjust it stylistically how I want it. Looking good. So now that I’m ready to use this fragment in my campaign or journey, I will have to save my fragment.",
+    "t3": "You now know what an Action is and how to create custom Actions in AJO. Visit the product documentation for more information on how to . configure a custom action recommendation-more-help 7e382214-bd30-4de2-bc8b-f6f6e7182305"
+  },
+  {
+    "id": 3,
+    "t1": "I will change it to red. And, of course, we still need to modify the text. This can be done from the form content tab. Of course you can preview this page, but I will simply save it because we will test everything later on in the journey. You also have the option to preview and test the whole landing page before publishing.",
+    "t2": "For this, we check if the program ID exists. If it exists, the profile is a member of the loyalty program. Next, we’ll create a rule for the gold members. For this, we will check if the status is gold. Now let’s rename the rules to make sure the gold member rule is checked.",
+    "t3": "Obviously, for a text message, I do prefer a shorter text. So, let me see everything. I could add brand assets, but I’m not going to add these today. And let me just generate and see what the system comes up with. So, the AI assistant is generating several variations."
+  },
+  {
+    "id": 4,
+    "t1": "But I can also open and view the fragment itself. This is what it contains. This is the fragment ID if I wanted to search for it. If I wanted to just edit the contents of the fragment straight from here without updating the original, I can paste the fragment and edit it that way. recommendation-more-help 7e382214-bd30-4de2-bc8b-f6f6e7182305",
+    "t2": "In the placement box, use the dropdown menu to select one of your existing placements. You can also search for placements by name, or filter them by channel and or content type. Select a placement to see additional metadata about the placement. We can now turn to evaluation criteria. This determines which offers will be shown or delivered in the placement.",
+    "t3": "You would want to get to know this person and their motives. Do they mean harm? Are they a threat? ISPs do the same. This process of examining these data points cannot be achieved in a day or two."
+  },
+  {
+    "id": 5,
+    "t1": "Here is a loyalty field group. Perfect. I can quickly add that to my schema. If I don’t want some of the fields, again I can use the Manage Related Fields option to open the group and remove individual fields. Business users at Luma prefer to call it Member Since instead of Join Date.",
+    "t2": "In summary, the use of decisioning in your push messages is a powerful way to personalize and optimize the content of your push communications. Thanks! recommendation-more-help 7e382214-bd30-4de2-bc8b-f6f6e7182305",
+    "t3": "There’s a legal issue here, for example. You can also refine, you can rephrase it, tell them what you would like to refine, change the tone, etc. So, you can really fine tune the messaging that the AI assistant offers you here. Nonetheless, I’m just going to select this variant. And what I need to do now is I need to add the URL."
+  },
+  {
+    "id": 6,
+    "t1": "Oh, I have one small alert. I forgot to or haven’t added an opt out link, but that is absolutely okay for our purposes right now. So everything’s fine. The properties, audience, actions, schedule. Now down here, the curl request.",
+    "t2": "And if that equals US, then we’ll go ahead and continue our journey. All right, let’s test our journey. I’ll put it into test mode and I’ll grab our events. Here’s our first event. We have P1, my email address, which is going to be the primary identity and baseball glove is the product.",
+    "t3": "I can provide some of this out of the box for two. Let’s say this is Travis’s template. I can give a description why I might want to use this for my channels. This is a web use case within AGO. You select AGO here from the use cases, and then you pick the activity type."
+  },
+  {
+    "id": 7,
+    "t1": "I’ve already, pre-created two. We will be using one of them in this video. To create a new subscription list, simply click on to create a subscription list button. You will need to give the subscription list a name and a description. The name needs to be without spaces.",
+    "t2": "Go and click Submit to save. Now, we’ve wrapped up our configurations. recommendation-more-help 7e382214-bd30-4de2-bc8b-f6f6e7182305",
+    "t3": "Obviously, for a text message, I do prefer a shorter text. So, let me see everything. I could add brand assets, but I’m not going to add these today. And let me just generate and see what the system comes up with. So, the AI assistant is generating several variations."
+  },
+  {
+    "id": 8,
+    "t1": "I’ll also take a look at Spanish and see how we look there. Looks like it might be the same case. But for the most part, my translations have been put in the correct spaces in my email. So I’ll go back here and press Publish. And rather than having to copy paste every line, this will automatically paste these things into AJL.",
+    "t2": "Let’s create a journey. You now know how to create a campaign. We will create a journey using SMS. Just going to call it SMS demo. Okay.",
+    "t3": "Contract labels, identity labels, and sensitive labels. You can even create a new label from within. This workflow will apply an AI one label to indicate that email address is directly identified. Label Data. Click Save."
+  },
+  {
+    "id": 9,
+    "t1": "It’s very straightforward to export data sets. After this, you would connect to the S3 bucket to confirm you see the files there. Thank you for watching this video. recommendation-more-help 7e382214-bd30-4de2-bc8b-f6f6e7182305",
+    "t2": "And it’s the same as before. So I’m going to just keep it very simple. I’ll put the first name in anyway. There we go. Save.",
+    "t3": "Would you have reservations about someone you have never met enter your home? The answer, most likely, is yes. You would want to get to know this person and their motives. Do they mean harm? Are they a threat?"
+  },
+  {
+    "id": 10,
+    "t1": "So let’s go ahead and send that and see how this looks. The user gets a push notification down there at the bottom. “New fall favorites are in stock. Stop by for free coffee while you shop.” Great! That looks great! Let’s try this again with a different device that I have linked to a Spanish profile.",
+    "t2": "And let’s go ahead and pick particular schema. So we’ll search for web. Let me see. Event retail v1.2, I believe it was. You’ll note that this is enabled for profile.",
+    "t3": "Obviously, for a text message, I do prefer a shorter text. So, let me see everything. I could add brand assets, but I’m not going to add these today. And let me just generate and see what the system comes up with. So, the AI assistant is generating several variations."
+  }
+]

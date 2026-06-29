@@ -1,0 +1,4555 @@
+{
+  "product": "Journey Optimizer",
+  "tiers": [
+    {
+      "id": 1,
+      "title": "Orientation",
+      "rationale": "What Journey Optimizer is, core concepts, terminology and the workspace \u2014 required before anything else."
+    },
+    {
+      "id": 2,
+      "title": "Audiences, profiles & data foundations",
+      "rationale": "Who you target and the data behind them; profiles and audiences underpin every journey, campaign and message."
+    },
+    {
+      "id": 3,
+      "title": "Content authoring core",
+      "rationale": "Building reusable content, personalization and templates \u2014 the raw material every channel delivers."
+    },
+    {
+      "id": 4,
+      "title": "Communication channels",
+      "rationale": "Per-channel message creation and design, building on content and audience skills."
+    },
+    {
+      "id": 5,
+      "title": "Journeys",
+      "rationale": "Event-driven orchestration that sends the channel messages built earlier."
+    },
+    {
+      "id": 6,
+      "title": "Campaigns",
+      "rationale": "Batch and API-triggered campaign orchestration, an alternative delivery model alongside journeys."
+    },
+    {
+      "id": 7,
+      "title": "Decision capabilities",
+      "rationale": "Offer decisioning and ranking layered on top of content and orchestration."
+    },
+    {
+      "id": 8,
+      "title": "Test, approve & deliver",
+      "rationale": "Validating, approving and conflict-managing what was built before it goes live."
+    },
+    {
+      "id": 9,
+      "title": "Reporting & monitoring",
+      "rationale": "Measuring and troubleshooting live executions \u2014 only meaningful after delivery."
+    },
+    {
+      "id": 10,
+      "title": "Configuration & administration",
+      "rationale": "Channel, journey, system, access and privacy setup \u2014 advanced, cross-cutting governance work."
+    }
+  ],
+  "subchapters": [
+    {
+      "code": "1a",
+      "tier": 1,
+      "title": "Documentation home"
+    },
+    {
+      "code": "1b",
+      "tier": 1,
+      "title": "Get started"
+    },
+    {
+      "code": "1c",
+      "tier": 1,
+      "title": "Roles & learning paths"
+    },
+    {
+      "code": "1d",
+      "tier": 1,
+      "title": "Working in the interface"
+    },
+    {
+      "code": "2a",
+      "tier": 2,
+      "title": "Audiences, profiles & identity overview"
+    },
+    {
+      "code": "2b",
+      "tier": 2,
+      "title": "Audiences"
+    },
+    {
+      "code": "2c",
+      "tier": 2,
+      "title": "Profiles & identity"
+    },
+    {
+      "code": "2d",
+      "tier": 2,
+      "title": "Data management"
+    },
+    {
+      "code": "3a",
+      "tier": 3,
+      "title": "Content management overview"
+    },
+    {
+      "code": "3b",
+      "tier": 3,
+      "title": "Personalization"
+    },
+    {
+      "code": "3c",
+      "tier": 3,
+      "title": "Personalization functions"
+    },
+    {
+      "code": "3d",
+      "tier": 3,
+      "title": "Personalization use cases"
+    },
+    {
+      "code": "3e",
+      "tier": 3,
+      "title": "Content templates"
+    },
+    {
+      "code": "3f",
+      "tier": 3,
+      "title": "Content fragments"
+    },
+    {
+      "code": "3g",
+      "tier": 3,
+      "title": "Dynamic content"
+    },
+    {
+      "code": "3h",
+      "tier": 3,
+      "title": "Landing pages"
+    },
+    {
+      "code": "3i",
+      "tier": 3,
+      "title": "Multilingual content"
+    },
+    {
+      "code": "3j",
+      "tier": 3,
+      "title": "AI content generation"
+    },
+    {
+      "code": "3k",
+      "tier": 3,
+      "title": "Cross-solution content integrations"
+    },
+    {
+      "code": "3l",
+      "tier": 3,
+      "title": "Content optimization & experiments"
+    },
+    {
+      "code": "4a",
+      "tier": 4,
+      "title": "Channels overview"
+    },
+    {
+      "code": "4b",
+      "tier": 4,
+      "title": "Email channel"
+    },
+    {
+      "code": "4c",
+      "tier": 4,
+      "title": "In-app channel"
+    },
+    {
+      "code": "4d",
+      "tier": 4,
+      "title": "Push channel"
+    },
+    {
+      "code": "4e",
+      "tier": 4,
+      "title": "SMS / MMS / RCS channel"
+    },
+    {
+      "code": "4f",
+      "tier": 4,
+      "title": "Direct mail channel"
+    },
+    {
+      "code": "4g",
+      "tier": 4,
+      "title": "Web channel"
+    },
+    {
+      "code": "4h",
+      "tier": 4,
+      "title": "Code-based experience"
+    },
+    {
+      "code": "4i",
+      "tier": 4,
+      "title": "Content cards"
+    },
+    {
+      "code": "4j",
+      "tier": 4,
+      "title": "Inbox channel"
+    },
+    {
+      "code": "4k",
+      "tier": 4,
+      "title": "WhatsApp channel"
+    },
+    {
+      "code": "4l",
+      "tier": 4,
+      "title": "LINE channel"
+    },
+    {
+      "code": "4m",
+      "tier": 4,
+      "title": "Live activities"
+    },
+    {
+      "code": "5a",
+      "tier": 5,
+      "title": "Journeys overview"
+    },
+    {
+      "code": "5b",
+      "tier": 5,
+      "title": "Create a journey"
+    },
+    {
+      "code": "5c",
+      "tier": 5,
+      "title": "Manage journeys"
+    },
+    {
+      "code": "5d",
+      "tier": 5,
+      "title": "Journey activities"
+    },
+    {
+      "code": "5e",
+      "tier": 5,
+      "title": "Journey expressions"
+    },
+    {
+      "code": "5f",
+      "tier": 5,
+      "title": "Journey use cases"
+    },
+    {
+      "code": "5g",
+      "tier": 5,
+      "title": "Loyalty challenges"
+    },
+    {
+      "code": "6a",
+      "tier": 6,
+      "title": "Campaigns overview"
+    },
+    {
+      "code": "6b",
+      "tier": 6,
+      "title": "Action campaigns"
+    },
+    {
+      "code": "6c",
+      "tier": 6,
+      "title": "API-triggered campaigns"
+    },
+    {
+      "code": "6d",
+      "tier": 6,
+      "title": "Orchestrated campaigns"
+    },
+    {
+      "code": "6e",
+      "tier": 6,
+      "title": "Orchestrated campaign activities"
+    },
+    {
+      "code": "6f",
+      "tier": 6,
+      "title": "Campaign use cases"
+    },
+    {
+      "code": "7a",
+      "tier": 7,
+      "title": "Decision capabilities overview"
+    },
+    {
+      "code": "7b",
+      "tier": 7,
+      "title": "Decisioning"
+    },
+    {
+      "code": "7c",
+      "tier": 7,
+      "title": "Manage decision items & rules"
+    },
+    {
+      "code": "7d",
+      "tier": 7,
+      "title": "Rankings & AI models"
+    },
+    {
+      "code": "7e",
+      "tier": 7,
+      "title": "Context & platform data for decisioning"
+    },
+    {
+      "code": "7f",
+      "tier": 7,
+      "title": "Decision policies & delivery"
+    },
+    {
+      "code": "7g",
+      "tier": 7,
+      "title": "Decision management"
+    },
+    {
+      "code": "7h",
+      "tier": 7,
+      "title": "Offer components & offers"
+    },
+    {
+      "code": "7i",
+      "tier": 7,
+      "title": "Decisions & batch delivery"
+    },
+    {
+      "code": "7j",
+      "tier": 7,
+      "title": "Decisioning event data & reports"
+    },
+    {
+      "code": "7k",
+      "tier": 7,
+      "title": "Offer catalog export"
+    },
+    {
+      "code": "7l",
+      "tier": 7,
+      "title": "Decisioning APIs"
+    },
+    {
+      "code": "8a",
+      "tier": 8,
+      "title": "Test & approve overview"
+    },
+    {
+      "code": "8b",
+      "tier": 8,
+      "title": "Preview & test"
+    },
+    {
+      "code": "8c",
+      "tier": 8,
+      "title": "Approvals"
+    },
+    {
+      "code": "8d",
+      "tier": 8,
+      "title": "Conflict & prioritization"
+    },
+    {
+      "code": "9a",
+      "tier": 9,
+      "title": "Reporting overview"
+    },
+    {
+      "code": "9b",
+      "tier": 9,
+      "title": "Live reports"
+    },
+    {
+      "code": "9c",
+      "tier": 9,
+      "title": "All-time reports"
+    },
+    {
+      "code": "9d",
+      "tier": 9,
+      "title": "Custom reports"
+    },
+    {
+      "code": "9e",
+      "tier": 9,
+      "title": "Monitoring & deliverability"
+    },
+    {
+      "code": "9f",
+      "tier": 9,
+      "title": "Troubleshooting"
+    },
+    {
+      "code": "10a",
+      "tier": 10,
+      "title": "Channel configuration"
+    },
+    {
+      "code": "10b",
+      "tier": 10,
+      "title": "Email deliverability setup"
+    },
+    {
+      "code": "10c",
+      "tier": 10,
+      "title": "Journey configuration"
+    },
+    {
+      "code": "10d",
+      "tier": 10,
+      "title": "System integrations"
+    },
+    {
+      "code": "10e",
+      "tier": 10,
+      "title": "Access control"
+    },
+    {
+      "code": "10f",
+      "tier": 10,
+      "title": "Privacy & consent"
+    }
+  ],
+  "assignments": [
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/ajo-home",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/rn/releases",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/rn/e-release-notes",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/rn/release-notes",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/previous-rn-new-landing-page",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/rn/release-notes-2026",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/rn/release-notes-2025",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/rn/release-notes-2024",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/rn/release-notes-2023",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/rn/release-notes-2022",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/rn/release-notes-2021",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/rn/documentation-updates",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/rn/new-canvas",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/get-started-landing-page",
+      "subchapter": "1b",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/start/get-started",
+      "subchapter": "1b",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/start/understanding-ajo",
+      "subchapter": "1b",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/start/ai-features",
+      "subchapter": "1b",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/start/terminology",
+      "subchapter": "1b",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/start/guardrails",
+      "subchapter": "1b",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/start/ajo-packages",
+      "subchapter": "1b",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/start/ajo-packages-v2",
+      "subchapter": "1b",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/start/ajo-packages-v3",
+      "subchapter": "1b",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/start/quick-start",
+      "subchapter": "1c",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/start/path/administrator",
+      "subchapter": "1c",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/start/path/data-engineer",
+      "subchapter": "1c",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/start/path/developer",
+      "subchapter": "1c",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/start/path/marketer",
+      "subchapter": "1c",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/start/user-interface",
+      "subchapter": "1d",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/start/search-filter-categorize",
+      "subchapter": "1d",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/start/accessibility",
+      "subchapter": "1d",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/start/journeys-vs-campaigns",
+      "subchapter": "1d",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/journey",
+      "subchapter": "5a",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/journey-get-started",
+      "subchapter": "5a",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/journey-types-selection",
+      "subchapter": "5a",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/journey-faq",
+      "subchapter": "5a",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/create-journey-landing-page",
+      "subchapter": "5b",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/journey-gs",
+      "subchapter": "5b",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/journey-properties",
+      "subchapter": "5b",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/send-using-waves",
+      "subchapter": "5b",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/success-metrics",
+      "subchapter": "5b",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/using-the-journey-designer",
+      "subchapter": "5b",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/simulate-journey-gs",
+      "subchapter": "5b",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/simulate-journey",
+      "subchapter": "5b",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/testing-the-journey",
+      "subchapter": "5b",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/journey-dry-run",
+      "subchapter": "5b",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/publish-journey",
+      "subchapter": "5b",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/journey-pause",
+      "subchapter": "5b",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/report-journey",
+      "subchapter": "5b",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/manage-journey-landing-page",
+      "subchapter": "5c",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/journey-ui",
+      "subchapter": "5c",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/tags",
+      "subchapter": "5c",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/entry-management",
+      "subchapter": "5c",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/supplemental-identifier",
+      "subchapter": "5c",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/journey-step-events-overview",
+      "subchapter": "5c",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/timezone-management",
+      "subchapter": "5c",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/send-time-optimization",
+      "subchapter": "5c",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/end-journey",
+      "subchapter": "5c",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/about-journey-building-landing-page",
+      "subchapter": "5d",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/about-journey-activities",
+      "subchapter": "5d",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/general-events",
+      "subchapter": "5d",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/reaction-events",
+      "subchapter": "5d",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/audience-qualification-events",
+      "subchapter": "5d",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/optimize",
+      "subchapter": "5d",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/path-experimentation",
+      "subchapter": "5d",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/path-targeting",
+      "subchapter": "5d",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/conditions",
+      "subchapter": "5d",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/read-audience",
+      "subchapter": "5d",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/wait-activity",
+      "subchapter": "5d",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/journey-fragments",
+      "subchapter": "5d",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/content-decision",
+      "subchapter": "5d",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/dataset-lookup",
+      "subchapter": "5d",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/journey-action",
+      "subchapter": "5d",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/jump",
+      "subchapter": "5d",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/update-profiles",
+      "subchapter": "5d",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/using-custom-actions",
+      "subchapter": "5d",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/using-adobe-campaign-standard",
+      "subchapter": "5d",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/using-adobe-campaign-v7-v8",
+      "subchapter": "5d",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/building-advanced-conditions-journeys-landing-page",
+      "subchapter": "5e",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/expression/expressionadvanced",
+      "subchapter": "5e",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/expression/expression-agent",
+      "subchapter": "5e",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/syntax-landing-page",
+      "subchapter": "5e",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/expression/generalities",
+      "subchapter": "5e",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/expression/conditional-instruction",
+      "subchapter": "5e",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/expression/data-types",
+      "subchapter": "5e",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/expression/field-references",
+      "subchapter": "5e",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/expression/collection-management-functions",
+      "subchapter": "5e",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/expression/operators",
+      "subchapter": "5e",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/expression/journey-properties",
+      "subchapter": "5e",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/expression/advanced-editor-use-cases",
+      "subchapter": "5e",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/expression/functions",
+      "subchapter": "5e",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/functions/functioninaudience",
+      "subchapter": "5e",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/functions/aggregation-functions",
+      "subchapter": "5e",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/functions/conversion-functions",
+      "subchapter": "5e",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/functions/date-functions",
+      "subchapter": "5e",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/functions/list-functions",
+      "subchapter": "5e",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/functions/math-functions",
+      "subchapter": "5e",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/functions/string-functions",
+      "subchapter": "5e",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/journey-use-cases-landing-page",
+      "subchapter": "5f",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/jo-use-cases",
+      "subchapter": "5f",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/entry-exit-criteria-guide",
+      "subchapter": "5f",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/exp-event-lookup",
+      "subchapter": "5f",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/journeys-uc",
+      "subchapter": "5f",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/ajo-ac",
+      "subchapter": "5f",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/message-to-subscribers-uc",
+      "subchapter": "5f",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/weekday-email-uc",
+      "subchapter": "5f",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/collections",
+      "subchapter": "5f",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/ramp-up-deliveries-uc",
+      "subchapter": "5f",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/limit-throughput",
+      "subchapter": "5f",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/custom-action-aep",
+      "subchapter": "5f",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/loyalty-challenges/get-started",
+      "subchapter": "5g",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/loyalty-challenges/access-loyalty-challenges",
+      "subchapter": "5g",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/loyalty-challenges/create-challenges",
+      "subchapter": "5g",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/loyalty-challenges/create-tasks",
+      "subchapter": "5g",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/loyalty-challenges/loyalty-reporting",
+      "subchapter": "5g",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/loyalty-challenges/loyalty-admin",
+      "subchapter": "5g",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/loyalty-challenges/loyalty-data-and-datasets",
+      "subchapter": "5g",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/campaigns-landing-page",
+      "subchapter": "6a",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/campaigns/get-started-with-campaigns",
+      "subchapter": "6a",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/campaigns/manage-campaigns",
+      "subchapter": "6a",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/action-campaigns-landing-page",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/campaigns/create-campaign",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/campaigns/campaign-properties",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/campaigns/campaign-action",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/campaigns/campaign-content",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/campaigns/campaign-audience",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/campaigns/campaign-schedule",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/campaigns/send-using-waves",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/campaigns/review-activate-campaign",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/api-triggered-campaigns-landing-page",
+      "subchapter": "6c",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/campaigns/api-triggered-campaigns",
+      "subchapter": "6c",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/campaigns/api-triggered-campaign-properties",
+      "subchapter": "6c",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/campaigns/api-triggered-campaign-action",
+      "subchapter": "6c",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/campaigns/api-triggered-campaign-content",
+      "subchapter": "6c",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/campaigns/api-triggered-campaign-audience",
+      "subchapter": "6c",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/campaigns/api-triggered-campaign-schedule",
+      "subchapter": "6c",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/campaigns/review-activate-api-triggered-campaign",
+      "subchapter": "6c",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/campaigns/trigger-campaigns",
+      "subchapter": "6c",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/campaigns/api-triggered-high-throughput",
+      "subchapter": "6c",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/orchestrated-campaigns-landing-page",
+      "subchapter": "6d",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/gs-orchestrated-campaigns",
+      "subchapter": "6d",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/guardrails",
+      "subchapter": "6d",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/orchestrated-campaigns-faq",
+      "subchapter": "6d",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/data-configuration-landing-page",
+      "subchapter": "6d",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/schemas-datasets-landing-page",
+      "subchapter": "6d",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/gs-schemas",
+      "subchapter": "6d",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/manual-schema",
+      "subchapter": "6d",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/file-upload-schema",
+      "subchapter": "6d",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/ingest-data",
+      "subchapter": "6d",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/target-dimension",
+      "subchapter": "6d",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/channel-config",
+      "subchapter": "6d",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/launch-landing-page",
+      "subchapter": "6d",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/gs-campaign-creation",
+      "subchapter": "6d",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/create-orchestrated-campaign",
+      "subchapter": "6d",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/orchestrate-activities",
+      "subchapter": "6d",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/start-monitor-campaigns",
+      "subchapter": "6d",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/reporting-campaigns",
+      "subchapter": "6d",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/query-database-landing-page",
+      "subchapter": "6d",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/orchestrated-rule-builder",
+      "subchapter": "6d",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/predefined-filters",
+      "subchapter": "6d",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/build-query",
+      "subchapter": "6d",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/edit-expressions",
+      "subchapter": "6d",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/retarget",
+      "subchapter": "6d",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/design-campaigns-landing-page",
+      "subchapter": "6e",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/activities/about-activities",
+      "subchapter": "6e",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/activities/and-join",
+      "subchapter": "6e",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/activities/build-audience",
+      "subchapter": "6e",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/activities/change-dimension",
+      "subchapter": "6e",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/activities/channels",
+      "subchapter": "6e",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/activities/combine",
+      "subchapter": "6e",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/activities/deduplication",
+      "subchapter": "6e",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/activities/enrichment",
+      "subchapter": "6e",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/activities/fork",
+      "subchapter": "6e",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/activities/incremental-query",
+      "subchapter": "6e",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/activities/load-file",
+      "subchapter": "6e",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/activities/read-audience",
+      "subchapter": "6e",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/activities/reconciliation",
+      "subchapter": "6e",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/activities/save-audience",
+      "subchapter": "6e",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/activities/split",
+      "subchapter": "6e",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/activities/test",
+      "subchapter": "6e",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/activities/wait",
+      "subchapter": "6e",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/wishlist-uc",
+      "subchapter": "6f",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/engage-customers-uc",
+      "subchapter": "6f",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/product-availability-uc",
+      "subchapter": "6f",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/variables-orchestrated-campaigns",
+      "subchapter": "6f",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/global-variables",
+      "subchapter": "6f",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrated/trigger-orchestrated-campaign",
+      "subchapter": "6f",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/conflict-prioritization/gs-conflict-prioritization",
+      "subchapter": "8d",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/conflict-prioritization/conflicts",
+      "subchapter": "8d",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/conflict-prioritization/priority-scores",
+      "subchapter": "8d",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/capping-rules-landing-page",
+      "subchapter": "8d",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/conflict-prioritization/rule-sets",
+      "subchapter": "8d",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/conflict-prioritization/journey-capping",
+      "subchapter": "8d",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/conflict-prioritization/channel-capping",
+      "subchapter": "8d",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/conflict-prioritization/quiet-hours",
+      "subchapter": "8d",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/conflict-prioritization/journey-ranking-formulas",
+      "subchapter": "8d",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/conflict-prioritization/journey-ai-models",
+      "subchapter": "8d",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/test-landing-page",
+      "subchapter": "8a",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/preview-test-landing-page",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/preview-test",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/test-profiles",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/preview",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/proofs",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/rendering",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/test-approve/simulate-sample-input",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/spam-report",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/approve-landing-page",
+      "subchapter": "8c",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/test-approve/gs-approval",
+      "subchapter": "8c",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/test-approve/approval-policies",
+      "subchapter": "8c",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/test-approve/request-approval",
+      "subchapter": "8c",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/test-approve/review-approve-request",
+      "subchapter": "8c",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/troubleshoot-journey-landing-page",
+      "subchapter": "9e",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/start/get-started-tracking",
+      "subchapter": "9e",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/deliverability",
+      "subchapter": "9e",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/suppression-list",
+      "subchapter": "9e",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/dmarc-record-update",
+      "subchapter": "9e",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/alerts",
+      "subchapter": "9e",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/error-codes-reference",
+      "subchapter": "9e",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/start/troubleshooting",
+      "subchapter": "9f",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/troubleshooting",
+      "subchapter": "9f",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/troubleshooting-execution",
+      "subchapter": "9f",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/building-journeys/troubleshooting-inbound",
+      "subchapter": "9f",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/action/troubleshoot-custom-action",
+      "subchapter": "9f",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/channels/gs-channels",
+      "subchapter": "4a",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/email-landing-page",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/email/get-started-email",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/email/create-email",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/design-email-landing-page",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/start/message-content-design",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/email/get-started-email-design",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/start-creating-content-landing-page",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/email/content-from-scratch",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/email/existing-content",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/email/code-content",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/email/use-email-templates",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/email/apply-email-themes",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/email/pdf-attachments",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/add-content-landing-page",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/email/content-components",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/email/use-visual-fragments",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/email/message-tracking",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/email/url-personalization",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/email/add-offers-email",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/email/llm-email-optimizer",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/email/text-version-email",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/email/email-metadata",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/email/email-expert-mode",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/edit-style-landing-page",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/email/get-started-email-style",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/email/backgrounds",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/email/alignment-and-padding",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/email/inline-styling",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/email/custom-css",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/email/dark-mode",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/email/accessible-content",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/configure-email-landing-page",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/email/get-started-email-config",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/email/email-settings",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/email/list-unsubscribe",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/email/header-parameters",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/email/url-tracking",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/email/surface-personalization",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/email/deeplinks",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/email/email-opt-out",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/in-app-landing-page",
+      "subchapter": "4c",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/in-app/get-started-in-app",
+      "subchapter": "4c",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/in-app/inapp-configuration",
+      "subchapter": "4c",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/in-app/create-in-app",
+      "subchapter": "4c",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/in-app/create-in-app-web",
+      "subchapter": "4c",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/in-app/design-in-app",
+      "subchapter": "4c",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/in-app/send-in-app",
+      "subchapter": "4c",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/push-landing-page",
+      "subchapter": "4d",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/push/get-started-push",
+      "subchapter": "4d",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/push/create-push",
+      "subchapter": "4d",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/push/design-push",
+      "subchapter": "4d",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/push/send-push",
+      "subchapter": "4d",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/push-config-landing-page",
+      "subchapter": "4d",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/push/push-gs",
+      "subchapter": "4d",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/push/push-configuration",
+      "subchapter": "4d",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/push/push-configuration-web",
+      "subchapter": "4d",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/push/mobile-onboarding-wf",
+      "subchapter": "4d",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/mobile/get-started-mobile",
+      "subchapter": "4e",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/mobile/create-mobile-message",
+      "subchapter": "4e",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/mobile/design-mobile",
+      "subchapter": "4e",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/mobile/send-mobile-message",
+      "subchapter": "4e",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/mobile/mobile-opt-out",
+      "subchapter": "4e",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/mobile/mobile-subdomains",
+      "subchapter": "4e",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/mobile/mobile-cost-optimization",
+      "subchapter": "4e",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/mobile/mobile-configuration",
+      "subchapter": "4e",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/mobile/mobile-configuration-sinch",
+      "subchapter": "4e",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/mobile/mobile-configuration-infobip",
+      "subchapter": "4e",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/mobile/mobile-configuration-twilio",
+      "subchapter": "4e",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/mobile/mobile-configuration-custom",
+      "subchapter": "4e",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/mobile/mobile-webhook",
+      "subchapter": "4e",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/mobile/mobile-configuration-surface",
+      "subchapter": "4e",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/mobile/custom-dataset-inbound-keywords",
+      "subchapter": "4e",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/direct-mail-landing-page",
+      "subchapter": "4f",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/direct-mail/get-started-direct-mail",
+      "subchapter": "4f",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/direct-mail/create-direct-mail",
+      "subchapter": "4f",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/direct-mail/test-send-direct-mail",
+      "subchapter": "4f",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/direct-mail/direct-mail-configuration",
+      "subchapter": "4f",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/web-landing-page",
+      "subchapter": "4g",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/web/get-started-web",
+      "subchapter": "4g",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/configure-web-channel-landing-page",
+      "subchapter": "4g",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/web/web-prerequisites",
+      "subchapter": "4g",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/web/web-delegated-subdomains",
+      "subchapter": "4g",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/web/web-configuration",
+      "subchapter": "4g",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/web/create-web",
+      "subchapter": "4g",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/author-web-pages-landing-page",
+      "subchapter": "4g",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/web/web-visual-editor",
+      "subchapter": "4g",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/web/web-non-visual-editor",
+      "subchapter": "4g",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/web/manage-web-modifications",
+      "subchapter": "4g",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/web/monitor-web-experiences",
+      "subchapter": "4g",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/web/web-spa",
+      "subchapter": "4g",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/code-based-experience-landing-page",
+      "subchapter": "4h",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based/get-started-code-based",
+      "subchapter": "4h",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/configure-code-based-channel-landing-page",
+      "subchapter": "4h",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based/code-based-prerequisites",
+      "subchapter": "4h",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based/code-based-surface",
+      "subchapter": "4h",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based/code-based-implementation-samples",
+      "subchapter": "4h",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based/code-based-decisioning-implementations",
+      "subchapter": "4h",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based/code-based-configuration",
+      "subchapter": "4h",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/create-code-based-experiences-landing-page",
+      "subchapter": "4h",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based/create-code-based",
+      "subchapter": "4h",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based/code-based-form-fields",
+      "subchapter": "4h",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based/test-code-based",
+      "subchapter": "4h",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based/publish-code-based",
+      "subchapter": "4h",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/content-card-landing-page",
+      "subchapter": "4i",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/configure-landing-page",
+      "subchapter": "4i",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-card/content-card-configuration-prereq",
+      "subchapter": "4i",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-card/content-card-configuration",
+      "subchapter": "4i",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-card/content-card-lp",
+      "subchapter": "4i",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-card/content-card-configuration-sdk",
+      "subchapter": "4i",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-card/create-content-card",
+      "subchapter": "4i",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-card/design-content-card",
+      "subchapter": "4i",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/inbox/inbox-gs",
+      "subchapter": "4j",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/inbox/inbox-configuration",
+      "subchapter": "4j",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/inbox/inbox-create",
+      "subchapter": "4j",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/inbox/inbox-design",
+      "subchapter": "4j",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/whatsapp-landing-page",
+      "subchapter": "4k",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whatsapp/get-started-whatsapp",
+      "subchapter": "4k",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whatsapp/whatsapp-configuration",
+      "subchapter": "4k",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whatsapp/create-whatsapp",
+      "subchapter": "4k",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whatsapp/send-whatsapp",
+      "subchapter": "4k",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/line-landing-page",
+      "subchapter": "4l",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/line/get-started-line",
+      "subchapter": "4l",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/line/line-configuration",
+      "subchapter": "4l",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/line/create-line",
+      "subchapter": "4l",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/line/send-line",
+      "subchapter": "4l",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/mobile-live/get-started-mobile-live",
+      "subchapter": "4m",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/mobile-live/create-mobile-live",
+      "subchapter": "4m",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/mobile-live/troubleshoot-mobile-live",
+      "subchapter": "4m",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/mobile-live/mobile-live-faq",
+      "subchapter": "4m",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/mobile-live/mobile-live-configuration",
+      "subchapter": "4m",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/mobile-live/mobile-live-configuration-sdk",
+      "subchapter": "4m",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/content-management-landing-page",
+      "subchapter": "3a",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/personalization-landing-page",
+      "subchapter": "3b",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/personalization/personalize",
+      "subchapter": "3b",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/personalization/personalization-build-expressions",
+      "subchapter": "3b",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/personalization/personalization-syntax",
+      "subchapter": "3b",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/personalization/iterate-contextual-data",
+      "subchapter": "3b",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/personalization/use-expression-fragments",
+      "subchapter": "3b",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/personalization/aep-data-perso",
+      "subchapter": "3b",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/personalization/url-parameter-encryption",
+      "subchapter": "3b",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/functions-landing-page",
+      "subchapter": "3c",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/personalization/functions/functions",
+      "subchapter": "3c",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/personalization/external-data-lookup",
+      "subchapter": "3c",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/personalization/functions/aggregation",
+      "subchapter": "3c",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/personalization/functions/arithmetic-functions",
+      "subchapter": "3c",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/personalization/functions/arrays-list",
+      "subchapter": "3c",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/personalization/functions/dates",
+      "subchapter": "3c",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/personalization/functions/operators",
+      "subchapter": "3c",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/personalization/functions/helpers",
+      "subchapter": "3c",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/personalization/functions/maps",
+      "subchapter": "3c",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/personalization/functions/math",
+      "subchapter": "3c",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/personalization/functions/objects",
+      "subchapter": "3c",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/personalization/functions/string",
+      "subchapter": "3c",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/personalization-use-cases-landing-page",
+      "subchapter": "3d",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/personalization/personalization-recipes",
+      "subchapter": "3d",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/personalization/personalization-use-case",
+      "subchapter": "3d",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/personalization/personalization-use-case-helper-functions",
+      "subchapter": "3d",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/personalization/perso-uc-plan-prescriptions",
+      "subchapter": "3d",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/landing-pages/get-started-lp",
+      "subchapter": "3h",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/landing-pages/create-lp",
+      "subchapter": "3h",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/landing-pages/manage-lp",
+      "subchapter": "3h",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/landing-pages-design-landing-page",
+      "subchapter": "3h",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/landing-pages/design-lp",
+      "subchapter": "3h",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/landing-pages/lp-content",
+      "subchapter": "3h",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/landing-pages/lp-templates",
+      "subchapter": "3h",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/landing-pages/lp-custom-js",
+      "subchapter": "3h",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/landing-pages/lp-forms",
+      "subchapter": "3h",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/landing-pages/subscription-list",
+      "subchapter": "3h",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/landing-pages/lp-use-cases",
+      "subchapter": "3h",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/lp-configuration-landing-page",
+      "subchapter": "3h",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/landing-pages/lp-subdomains",
+      "subchapter": "3h",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/landing-pages/lp-presets",
+      "subchapter": "3h",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/content-templates-landing-page",
+      "subchapter": "3e",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/content-templates",
+      "subchapter": "3e",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/access-content-templates",
+      "subchapter": "3e",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/create-content-templates",
+      "subchapter": "3e",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/image-to-html",
+      "subchapter": "3e",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/content-locking",
+      "subchapter": "3e",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/test-content-templates",
+      "subchapter": "3e",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/use-content-templates",
+      "subchapter": "3e",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/fragments-landing-page",
+      "subchapter": "3f",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/fragments",
+      "subchapter": "3f",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/create-fragments",
+      "subchapter": "3f",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/save-fragments",
+      "subchapter": "3f",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/customizable-fragments",
+      "subchapter": "3f",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/manage-fragments",
+      "subchapter": "3f",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/manage-fragments-contextual-attributes",
+      "subchapter": "3f",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/dynamic-landing-page",
+      "subchapter": "3g",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/personalization/get-started-dynamic-content",
+      "subchapter": "3g",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/personalization/create-conditions",
+      "subchapter": "3g",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/personalization/dynamic-content",
+      "subchapter": "3g",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/combine-landing-page",
+      "subchapter": "3k",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/integrations/content-integrations",
+      "subchapter": "3k",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/integrations/assets",
+      "subchapter": "3k",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/integrations/stock",
+      "subchapter": "3k",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/integrations/express",
+      "subchapter": "3k",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/integrations/aem-templates",
+      "subchapter": "3k",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/integrations/aem-fragments-gs",
+      "subchapter": "3k",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/integrations/aem-admin-settings",
+      "subchapter": "3k",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/integrations/aem-fragments",
+      "subchapter": "3k",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/integrations/aem-fragments-limitations",
+      "subchapter": "3k",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/integrations/aem-content-advisor",
+      "subchapter": "3k",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/integrations/aem-dynamic",
+      "subchapter": "3k",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/integrations/countdown",
+      "subchapter": "3k",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/integrations/genstudio",
+      "subchapter": "3k",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/integrations/intelligent-services",
+      "subchapter": "3k",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/integrations/integrations",
+      "subchapter": "3k",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/integrations/integrations-personalization",
+      "subchapter": "3k",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/integrations/vendor-integration-faq",
+      "subchapter": "3k",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/integrations/vendor-integration-gs",
+      "subchapter": "3k",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/integrations/vendor-integration",
+      "subchapter": "3k",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/integrations/ajo-mcp",
+      "subchapter": "3k",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/ai-assistant-landing-page",
+      "subchapter": "3j",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/gs-generative",
+      "subchapter": "3j",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/ai-assistant-prompting-guide",
+      "subchapter": "3j",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/generative-full-content",
+      "subchapter": "3j",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/generative-text",
+      "subchapter": "3j",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/generative-image",
+      "subchapter": "3j",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/generative-personalization-expressions",
+      "subchapter": "3j",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/generative-uc",
+      "subchapter": "3j",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/brands-landing-page",
+      "subchapter": "3j",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/brands",
+      "subchapter": "3j",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/brands-personalize",
+      "subchapter": "3j",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/generative-models",
+      "subchapter": "3j",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/brands-score",
+      "subchapter": "3j",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/content-multilingual-landing-page",
+      "subchapter": "3i",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/multilingual-gs",
+      "subchapter": "3i",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/multilingual-locale",
+      "subchapter": "3i",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/multilingual-provider",
+      "subchapter": "3i",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/multilingual-manual",
+      "subchapter": "3i",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/multilingual-automated",
+      "subchapter": "3i",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/gs-message-optimization",
+      "subchapter": "3l",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/optimization-targeting",
+      "subchapter": "3l",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/optimization-experimentation",
+      "subchapter": "3l",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/optimization-combination",
+      "subchapter": "3l",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/get-started-experiment",
+      "subchapter": "3l",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/experiment-accelerator-gs",
+      "subchapter": "3l",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/content-experiment",
+      "subchapter": "3l",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/technotes-landing-page",
+      "subchapter": "3l",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/mab-vs-ab",
+      "subchapter": "3l",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/experiment-calculations",
+      "subchapter": "3l",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/experiment-report-calculations",
+      "subchapter": "3l",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/audiences-profiles-identities-landing-page",
+      "subchapter": "2a",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/audiences-landing-page",
+      "subchapter": "2b",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/audience/about-audiences",
+      "subchapter": "2b",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/create-landing-page",
+      "subchapter": "2b",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/audience/creating-a-segment-definition",
+      "subchapter": "2b",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/audience/get-started-audience-orchestration",
+      "subchapter": "2b",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/audience/custom-upload",
+      "subchapter": "2b",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/audience/federated-audience-composition",
+      "subchapter": "2b",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/audience/target-audiences",
+      "subchapter": "2b",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/audience/enrichment-attributes",
+      "subchapter": "2b",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/profiles-landing-page",
+      "subchapter": "2c",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/audience/get-started-profiles",
+      "subchapter": "2c",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/audience/creating-test-profiles",
+      "subchapter": "2c",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/audience/computed-attributes",
+      "subchapter": "2c",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/audience/get-started-identity",
+      "subchapter": "2a",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/audience/license-usage",
+      "subchapter": "2a",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/reporting-landing-page",
+      "subchapter": "9a",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/gs-reports",
+      "subchapter": "9a",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/live-report-landing-page",
+      "subchapter": "9b",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/live-report",
+      "subchapter": "9b",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/live-report-components",
+      "subchapter": "9b",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/journey-live-report",
+      "subchapter": "9b",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/campaign-live-report",
+      "subchapter": "9b",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/lp-report-live",
+      "subchapter": "9b",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/subscription-report-live",
+      "subchapter": "9b",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/channel-report-landing-page",
+      "subchapter": "9c",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/report-gs-cja",
+      "subchapter": "9c",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/global-report-components-cja",
+      "subchapter": "9c",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/cja-ajo",
+      "subchapter": "9c",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/report-cja-manage",
+      "subchapter": "9c",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/reporting-configuration",
+      "subchapter": "9c",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/exclusion-list",
+      "subchapter": "9c",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/campaign-reporting-landing-page",
+      "subchapter": "9c",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/campaign-global-report-cja",
+      "subchapter": "9c",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/campaign-global-report-cja-code",
+      "subchapter": "9c",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/campaign-global-report-cja-content",
+      "subchapter": "9c",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/campaign-global-report-cja-direct",
+      "subchapter": "9c",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/campaign-global-report-cja-email",
+      "subchapter": "9c",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/campaign-global-report-cja-experimentation",
+      "subchapter": "9c",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/campaign-global-report-cja-inapp",
+      "subchapter": "9c",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/campaign-global-report-cja-activity",
+      "subchapter": "9c",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/campaign-global-report-cja-push",
+      "subchapter": "9c",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/campaign-global-report-cja-sms",
+      "subchapter": "9c",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/campaign-global-report-cja-web",
+      "subchapter": "9c",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/journey-reporting-landing-page",
+      "subchapter": "9c",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/journey-global-report-cja",
+      "subchapter": "9c",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/journey-global-report-cja-code",
+      "subchapter": "9c",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/journey-global-report-cja-content",
+      "subchapter": "9c",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/journey-global-report-cja-direct",
+      "subchapter": "9c",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/journey-global-report-cja-email",
+      "subchapter": "9c",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/journey-global-report-cja-experimentation",
+      "subchapter": "9c",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/journey-global-report-cja-inapp",
+      "subchapter": "9c",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/journey-global-report-cja-push",
+      "subchapter": "9c",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/journey-global-report-cja-sms",
+      "subchapter": "9c",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/journey-global-report-cja-web",
+      "subchapter": "9c",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/channel-report-cja",
+      "subchapter": "9c",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/lp-report-global-cja",
+      "subchapter": "9c",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/subscription-report-global-cja",
+      "subchapter": "9c",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/reports-landing-page",
+      "subchapter": "9d",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/sharing-overview",
+      "subchapter": "9d",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/sharing-field-list",
+      "subchapter": "9d",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/legacy-step-event-fields-landing-page",
+      "subchapter": "9d",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/sharing-legacy-fields",
+      "subchapter": "9d",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/sharing-journey-fields",
+      "subchapter": "9d",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/sharing-common-fields",
+      "subchapter": "9d",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/sharing-execution-fields",
+      "subchapter": "9d",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/sharing-fetch-fields",
+      "subchapter": "9d",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/sharing-identity-fields",
+      "subchapter": "9d",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reports/query-examples",
+      "subchapter": "9d",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/decisioning-landing-page",
+      "subchapter": "7a",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/gs-decision",
+      "subchapter": "7a",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/experience-decisioning-landing-page",
+      "subchapter": "7b",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/gs-experience-decisioning",
+      "subchapter": "7b",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/decisioning-guardrails",
+      "subchapter": "7b",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/decisioning-faq",
+      "subchapter": "7b",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/migrate-to-decisioning",
+      "subchapter": "7b",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/decisioning-migration-api",
+      "subchapter": "7b",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/experience-decisioning-api-reference-landing-page",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/api-reference/getting-started",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/api-reference/decisions-items/create",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/api-reference/decisions-items/decision-items-list",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/api-reference/decisions-items/delete",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/api-reference/decisions-items/lookup",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/api-reference/decisions-items/update",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/api-reference/items-collections/create",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/api-reference/items-collections/delete",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/api-reference/items-collections/items-collections-list",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/api-reference/items-collections/lookup",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/api-reference/items-collections/update",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/api-reference/selection-strategies/create",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/api-reference/selection-strategies/delete",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/api-reference/selection-strategies/lookup",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/api-reference/selection-strategies/selection-strategies-list",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/api-reference/selection-strategies/update",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/api-reference/ranking-formulas/create",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/api-reference/ranking-formulas/delete",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/api-reference/ranking-formulas/lookup",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/api-reference/ranking-formulas/ranking-formulas-list",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/api-reference/ranking-formulas/update",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/api-reference/eligibility-rules/create",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/api-reference/eligibility-rules/delete",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/api-reference/eligibility-rules/lookup",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/api-reference/eligibility-rules/eligibility-rules-list",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/api-reference/eligibility-rules/update",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/api-reference/exd-placements/create",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/api-reference/exd-placements/exd-placements-list",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/api-reference/exd-placements/lookup",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/api-reference/exd-placements/update",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/manage-decision-items-landing-page",
+      "subchapter": "7c",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/catalogs",
+      "subchapter": "7c",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/items",
+      "subchapter": "7c",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/collections",
+      "subchapter": "7c",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/rules",
+      "subchapter": "7b",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/experience-decisioning-rankings-landing-page",
+      "subchapter": "7d",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/ranking/ranking",
+      "subchapter": "7d",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/ranking/ranking-formulas",
+      "subchapter": "7d",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/experience-decisioning-ai-models-landing-page",
+      "subchapter": "7d",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/ranking/ai-models",
+      "subchapter": "7d",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/ranking/auto-optimization-model",
+      "subchapter": "7d",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/ranking/personalized-optimization-model",
+      "subchapter": "7d",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/ranking/create-ai-models",
+      "subchapter": "7d",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/ranking/ai-model-observability",
+      "subchapter": "7d",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/placements",
+      "subchapter": "7b",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/aep-data-landing-page",
+      "subchapter": "7e",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/context-data",
+      "subchapter": "7e",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/aep-data-exd",
+      "subchapter": "7e",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/selection-strategies",
+      "subchapter": "7b",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/create-decision",
+      "subchapter": "7f",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/create-decision-policy",
+      "subchapter": "7f",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/use-decision-policy",
+      "subchapter": "7f",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/fragments-decision-policies",
+      "subchapter": "7f",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/batch-decisioning-direct-mail",
+      "subchapter": "7f",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/cja-reporting",
+      "subchapter": "7b",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/experience-decisioning-uc",
+      "subchapter": "7b",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/data-collection/data-collection",
+      "subchapter": "7j",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/data-collection/create-dataset",
+      "subchapter": "7j",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/experience-decisioning/data-collection/schema-requirement",
+      "subchapter": "7j",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/offer-decisioning-landing-page",
+      "subchapter": "7g",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/get-started-decision-landing-page",
+      "subchapter": "7g",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/get-started/starting-offer-decisioning",
+      "subchapter": "7g",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/decision-management-guardrails",
+      "subchapter": "7g",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/get-started/user-interface",
+      "subchapter": "7g",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/offer-library/key-steps",
+      "subchapter": "7g",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/custom-upload-decisioning",
+      "subchapter": "7g",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/offers-e2e",
+      "subchapter": "7g",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/create-components-landing-page",
+      "subchapter": "7h",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/offer-library/creating-placements",
+      "subchapter": "7h",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/offer-library/creating-decision-rules",
+      "subchapter": "7h",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/offer-library/creating-tags",
+      "subchapter": "7h",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/rankings-landing-page",
+      "subchapter": "7d",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/ranking/get-started-rankings",
+      "subchapter": "7d",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/ranking/create-ranking-formulas",
+      "subchapter": "7d",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/ai-models-landing-page",
+      "subchapter": "7d",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/ranking/ai-models",
+      "subchapter": "7d",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/ranking/auto-optimization-model",
+      "subchapter": "7d",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/ranking/personalized-optimization-model",
+      "subchapter": "7d",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/ranking/create-ranking-strategies",
+      "subchapter": "7d",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/managing-offers-in-the-offer-library-landing-page",
+      "subchapter": "7h",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/configure-offers-landing-page",
+      "subchapter": "7h",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/offer-library/creating-personalized-offers",
+      "subchapter": "7h",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/offer-library/add-representations",
+      "subchapter": "7h",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/offer-library/personalization-editor-supported-functions",
+      "subchapter": "7h",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/offer-library/add-constraints",
+      "subchapter": "7h",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/offer-library/creating-fallback-offers",
+      "subchapter": "7h",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/offer-library/creating-collections",
+      "subchapter": "7h",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/create-manage-activities-landing-page",
+      "subchapter": "7i",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/offer-activities/create-offer-activities",
+      "subchapter": "7i",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/offer-activities/configure-offer-selection",
+      "subchapter": "7i",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/offer-activities/simulation",
+      "subchapter": "7i",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/batch-delivery",
+      "subchapter": "7g",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/collect-event-data-landing-page",
+      "subchapter": "7j",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/data-collection/data-collection",
+      "subchapter": "7j",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/data-collection/create-dataset",
+      "subchapter": "7j",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/data-collection/schema-requirement",
+      "subchapter": "7j",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/context-data-landing-page",
+      "subchapter": "7e",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/context-data",
+      "subchapter": "7e",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/context-data-edge",
+      "subchapter": "7e",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/context-data-decisioning",
+      "subchapter": "7e",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/create-reports-landing-page",
+      "subchapter": "7j",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/reports/get-started-events",
+      "subchapter": "7j",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/reports/xdm-fields",
+      "subchapter": "7j",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/export-catalog-landing-page",
+      "subchapter": "7k",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/export-catalog/get-started-export",
+      "subchapter": "7k",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/export-catalog/access-dataset",
+      "subchapter": "7k",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/export-catalog/export-offers",
+      "subchapter": "7k",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/export-catalog/export-decisions",
+      "subchapter": "7k",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/export-catalog/export-placements",
+      "subchapter": "7k",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/export-catalog/export-fallback",
+      "subchapter": "7k",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/api-reference-landing-page",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/getting-started",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/placements/placements-list",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/placements/lookup",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/placements/create",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/placements/update",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/placements/delete",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/decision-rules/rules-list",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/decision-rules/lookup",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/decision-rules/create",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/decision-rules/update",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/decision-rules/delete",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/tags/tags-list",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/tags/lookup",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/tags/create",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/tags/update",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/tags/delete",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/personalized-offers/offers-list",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/personalized-offers/lookup",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/personalized-offers/create",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/personalized-offers/update",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/personalized-offers/delete",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/collections/collections-list",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/collections/lookup",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/collections/create",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/collections/update",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/collections/delete",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/fallback-offers/fallback-list",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/fallback-offers/lookup",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/fallback-offers/create",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/fallback-offers/update",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/fallback-offers/delete",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/activities-api/activities/activities-list",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/activities-api/activities/lookup",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/activities-api/activities/create",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/activities-api/activities/update",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/activities-api/activities/delete",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/legacy-apis/about-legacy-apis",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/legacy-apis/placements/placements-list",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/legacy-apis/placements/lookup",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/legacy-apis/placements/create",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/legacy-apis/placements/update",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/legacy-apis/placements/delete",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/legacy-apis/decision-rules/rules-list",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/legacy-apis/decision-rules/lookup",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/legacy-apis/decision-rules/create",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/legacy-apis/decision-rules/update",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/legacy-apis/decision-rules/delete",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/legacy-apis/tags/tags-list",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/legacy-apis/tags/lookup",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/legacy-apis/tags/create",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/legacy-apis/tags/update",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/legacy-apis/tags/delete",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/legacy-apis/personalized-offers/offers-list",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/legacy-apis/personalized-offers/lookup",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/legacy-apis/personalized-offers/create",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/legacy-apis/personalized-offers/update",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/legacy-apis/personalized-offers/delete",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/legacy-apis/fallback-offers/fallback-list",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/legacy-apis/fallback-offers/lookup",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/legacy-apis/fallback-offers/create",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/legacy-apis/fallback-offers/update",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/legacy-apis/fallback-offers/delete",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/legacy-apis/collections/collections-list",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/legacy-apis/collections/lookup",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/legacy-apis/collections/create",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/legacy-apis/collections/update",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/legacy-apis/collections/delete",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/legacy-apis/activities-api/activities-list",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/legacy-apis/activities-api/lookup",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/legacy-apis/activities-api/create",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/legacy-apis/activities-api/update",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offers-api/legacy-apis/activities-api/delete",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/offer-delivery-api-landing-page",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offer-delivery-api/start-offer-delivery-apis",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offer-delivery-api/decisioning-api",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offer-delivery-api/edge-decisioning-api",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/offers/api-reference/offer-delivery-api/batch-decisioning-api",
+      "subchapter": "7l",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/data-management-landing-page",
+      "subchapter": "2d",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/data/gs-data",
+      "subchapter": "2d",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/data/get-started-schemas",
+      "subchapter": "2d",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/datasets-landing-page",
+      "subchapter": "2d",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/data/get-started-datasets",
+      "subchapter": "2d",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/data/datasets-ttl",
+      "subchapter": "2d",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/data/export-datasets",
+      "subchapter": "2d",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/data/datasets-query-examples",
+      "subchapter": "2d",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/data/lookup-aep-data",
+      "subchapter": "2d",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/data/get-started-queries",
+      "subchapter": "2d",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/configuration-landing-page",
+      "subchapter": "10a",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/get-started-configuration",
+      "subchapter": "10a",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/channel-surfaces",
+      "subchapter": "10a",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/message-export",
+      "subchapter": "10a",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/message-export-schema",
+      "subchapter": "10a",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/set-mobile-config",
+      "subchapter": "10a",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/create-channel-set-up",
+      "subchapter": "10a",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/delegate-subdomains-landing-page",
+      "subchapter": "10b",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/about-subdomain-delegation",
+      "subchapter": "10b",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/delegate-subdomain",
+      "subchapter": "10b",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/delegate-custom-subdomain",
+      "subchapter": "10b",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/custom-subdomain-migration",
+      "subchapter": "10b",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/dmarc-record",
+      "subchapter": "10b",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/google-txt",
+      "subchapter": "10b",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/ptr-records",
+      "subchapter": "10b",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/ip-pools",
+      "subchapter": "10b",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/ip-warmup-gs",
+      "subchapter": "10b",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/ip-warmup-deliverability-guide",
+      "subchapter": "10b",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/ip-warmup-campaign",
+      "subchapter": "10b",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/ip-warmup-plan",
+      "subchapter": "10b",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/ip-warmup-execution",
+      "subchapter": "10b",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/ip-warmup-plan-files",
+      "subchapter": "10b",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/monitor-reputation-landing-page",
+      "subchapter": "10b",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/email-error-types",
+      "subchapter": "10b",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/manage-suppression-list",
+      "subchapter": "10b",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/retries",
+      "subchapter": "10b",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/allow-list",
+      "subchapter": "10b",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/seed-lists",
+      "subchapter": "10a",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/archiving-support",
+      "subchapter": "10a",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/cc-email-field",
+      "subchapter": "10a",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/primary-email-addresses",
+      "subchapter": "10a",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/feedback-webhooks",
+      "subchapter": "10a",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/configure-journeys-landing-page",
+      "subchapter": "10c",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/about-data-sources-events-actions",
+      "subchapter": "10c",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/events-journeys-landing-page",
+      "subchapter": "10c",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/event/about-events",
+      "subchapter": "10c",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/event/about-creating",
+      "subchapter": "10c",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/event/experience-event-schema",
+      "subchapter": "10c",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/event/about-analytics",
+      "subchapter": "10c",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/event/about-creating-business",
+      "subchapter": "10c",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/event/additional-steps-to-send-events-to-journey",
+      "subchapter": "10c",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/data-source-journeys-landing-page",
+      "subchapter": "10c",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/datasource/about-data-sources",
+      "subchapter": "10c",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/datasource/configure-data-sources",
+      "subchapter": "10c",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/datasource/adobe-experience-platform-data-source",
+      "subchapter": "10c",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/datasource/external-data-sources",
+      "subchapter": "10c",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/action-journeys-landing-page",
+      "subchapter": "10c",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/action/action",
+      "subchapter": "10c",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/action/about-custom-action-configuration",
+      "subchapter": "10c",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/action/action-response",
+      "subchapter": "10c",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/action/reporting",
+      "subchapter": "10c",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/connect-systems-landing-page",
+      "subchapter": "10d",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/integrations/ajo-integrations",
+      "subchapter": "10d",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/ajo-apis",
+      "subchapter": "10d",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/external-systems-landing-page",
+      "subchapter": "10d",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/external-systems",
+      "subchapter": "10d",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/capping",
+      "subchapter": "10d",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/throttling",
+      "subchapter": "10d",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/adobe-solutions-landing-page",
+      "subchapter": "10d",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/action/acs-action",
+      "subchapter": "10d",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/action/acc-action",
+      "subchapter": "10d",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/action/marketo-engage",
+      "subchapter": "10d",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/administration/sandboxes",
+      "subchapter": "10d",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox",
+      "subchapter": "10d",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/start/get-started-sources",
+      "subchapter": "10d",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/access-control-landing-page",
+      "subchapter": "10e",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/administration/permissions-overview",
+      "subchapter": "10e",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/administration/permissions",
+      "subchapter": "10e",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/administration/ootb-product-profiles",
+      "subchapter": "10e",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/administration/ootb-permissions",
+      "subchapter": "10e",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/administration/high-low-permissions",
+      "subchapter": "10e",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/administration/attribute-based-access",
+      "subchapter": "10e",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/administration/object-based-access",
+      "subchapter": "10e",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/privacy-landing-page",
+      "subchapter": "10f",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/privacy/get-started-privacy",
+      "subchapter": "10f",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/privacy/requests",
+      "subchapter": "10f",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/privacy/audit-logs",
+      "subchapter": "10f",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/privacy/data-hygiene",
+      "subchapter": "10f",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/rp_landing_pages/consent-landing-page",
+      "subchapter": "10f",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/privacy/opt-out",
+      "subchapter": "10f",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/action/consent",
+      "subchapter": "10f",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/action/preference-center",
+      "subchapter": "10f",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/action/action-privacy",
+      "subchapter": "10f",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/privacy/cmk",
+      "subchapter": "10f",
+      "tier": 10
+    }
+  ],
+  "tier_hierarchy_md": "## Adobe Journey Optimizer \u2014 learning tiers\n\n1. **Orientation** \u2014 What Journey Optimizer is, how it works, key terminology, role-based paths, and navigating the interface. The entry point for every learner.\n2. **Audiences, profiles & data foundations** \u2014 Who you target and the data model behind them. Profiles, audiences, and datasets are referenced by every journey, campaign, and message, so they come early.\n3. **Content authoring core** \u2014 Personalization, templates, fragments, dynamic and multilingual content, AI generation, and content experiments. The reusable material that channels deliver.\n4. **Communication channels** \u2014 Per-channel creation, design, and configuration (email, in-app, push, SMS/MMS/RCS, direct mail, web, code-based, content cards, inbox, WhatsApp, LINE, live activities). Builds on content and audience skills.\n5. **Journeys** \u2014 Event-driven orchestration: building, managing, and using activities and expressions to send the channel messages built earlier, plus loyalty challenges.\n6. **Campaigns** \u2014 Action, API-triggered, and orchestrated campaigns: the batch/triggered delivery model alongside journeys.\n7. **Decision capabilities** \u2014 Offer decisioning, ranking, AI models, decision policies, offer management, and APIs, layered on top of content and orchestration.\n8. **Test, approve & deliver** \u2014 Previewing, testing, approving, and resolving conflicts/prioritization before content goes live.\n9. **Reporting & monitoring** \u2014 Live and all-time reports, custom reports, deliverability monitoring, and troubleshooting of executions.\n10. **Configuration & administration** \u2014 Channel, journey, event, data-source, and action configuration, system integrations, sandboxes, access control, and privacy/consent. Cross-cutting administrative work.\n"
+}

@@ -1,0 +1,52 @@
+[config] dataset=aep_dataset_t  neg_type=hard  k=4  epochs=10  batch=64  grad_accum=2  eff_batch=128  max_len=256  total_steps=26370  warmup=1582  params=194,537,473
+  opt_step=   200/26370  loss=0.5809  lr=2.53e-06  epoch=1
+  opt_step=   400/26370  loss=0.4388  lr=5.06e-06  epoch=1
+  opt_step=   600/26370  loss=0.4494  lr=7.59e-06  epoch=1
+  opt_step=   800/26370  loss=0.5782  lr=1.01e-05  epoch=1
+  opt_step=  1000/26370  loss=0.4661  lr=1.26e-05  epoch=1
+  opt_step=  1200/26370  loss=0.4434  lr=1.52e-05  epoch=1
+  opt_step=  1400/26370  loss=0.5276  lr=1.77e-05  epoch=1
+  opt_step=  1600/26370  loss=0.5770  lr=2.00e-05  epoch=1
+  opt_step=  1800/26370  loss=0.5295  lr=1.98e-05  epoch=1
+  opt_step=  2000/26370  loss=0.5042  lr=1.97e-05  epoch=1
+  opt_step=  2200/26370  loss=0.5966  lr=1.95e-05  epoch=1
+  opt_step=  2400/26370  loss=0.4665  lr=1.93e-05  epoch=1
+  opt_step=  2600/26370  loss=0.5243  lr=1.92e-05  epoch=1
+[epoch 1/10]  train_loss=0.5041  val_AUC=0.5000  val_P@1=0.0000  (2208s)
+  * new best val_AUC=0.5000, saved checkpoint_best.pt
+  opt_step=  2800/26370  loss=0.5032  lr=1.90e-05  epoch=2
+  opt_step=  3000/26370  loss=0.4885  lr=1.89e-05  epoch=2
+  opt_step=  3200/26370  loss=0.4615  lr=1.87e-05  epoch=2
+  opt_step=  3400/26370  loss=0.5486  lr=1.85e-05  epoch=2
+  opt_step=  3600/26370  loss=0.5564  lr=1.84e-05  epoch=2
+  opt_step=  3800/26370  loss=0.5797  lr=1.82e-05  epoch=2
+  opt_step=  4000/26370  loss=0.4811  lr=1.80e-05  epoch=2
+  opt_step=  4200/26370  loss=0.5468  lr=1.79e-05  epoch=2
+  opt_step=  4400/26370  loss=0.5244  lr=1.77e-05  epoch=2
+  opt_step=  4600/26370  loss=0.5302  lr=1.76e-05  epoch=2
+  opt_step=  4800/26370  loss=0.5229  lr=1.74e-05  epoch=2
+  opt_step=  5000/26370  loss=0.5907  lr=1.72e-05  epoch=2
+  opt_step=  5200/26370  loss=0.6447  lr=1.71e-05  epoch=2
+[epoch 2/10]  train_loss=0.5013  val_AUC=0.5000  val_P@1=0.0000  (4451s)
+  no improvement (best=0.5000, bad_epochs=1/2)
+  opt_step=  5400/26370  loss=0.5969  lr=1.69e-05  epoch=3
+  opt_step=  5600/26370  loss=0.4339  lr=1.68e-05  epoch=3
+  opt_step=  5800/26370  loss=0.5534  lr=1.66e-05  epoch=3
+  opt_step=  6000/26370  loss=0.5690  lr=1.64e-05  epoch=3
+  opt_step=  6200/26370  loss=0.4622  lr=1.63e-05  epoch=3
+  opt_step=  6400/26370  loss=0.6159  lr=1.61e-05  epoch=3
+  opt_step=  6600/26370  loss=0.4553  lr=1.60e-05  epoch=3
+  opt_step=  6800/26370  loss=0.4381  lr=1.58e-05  epoch=3
+  opt_step=  7000/26370  loss=0.4858  lr=1.56e-05  epoch=3
+  opt_step=  7200/26370  loss=0.5020  lr=1.55e-05  epoch=3
+  opt_step=  7400/26370  loss=0.6806  lr=1.53e-05  epoch=3
+  opt_step=  7600/26370  loss=0.5759  lr=1.51e-05  epoch=3
+  opt_step=  7800/26370  loss=0.4659  lr=1.50e-05  epoch=3
+[epoch 3/10]  train_loss=0.5012  val_AUC=0.5000  val_P@1=0.0000  (6693s)
+  no improvement (best=0.5000, bad_epochs=2/2)
+[early stop] triggered at epoch 3
+
+[test] loading checkpoint_best.pt …
+[test]  AUC=0.5001  P@1=0.0000  n_anchors=8460
+
+[done]  neg_type=hard  k=4  best_val_AUC=0.5000  test_AUC=0.5001  test_P@1=0.0000  stopped_early=True
