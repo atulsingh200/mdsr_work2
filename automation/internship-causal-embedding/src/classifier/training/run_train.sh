@@ -9,7 +9,7 @@ cd "$REPO_ROOT"
 source "$REPO_ROOT/.venv/bin/activate"
 
 python3 -m src.classifier.training.train \
-  --data-dir /mnt/localssd/automation/internship-causal-embedding/data/merged_workflows \
+  --data-dir /mnt/localssd/automation/internship-causal-embedding/data/new_aep_workflow_scrap \
   --out-dir runs/classifier \
   --run-name merged_workflows_all-mpnet-base-v2 \
   --base-model sentence-transformers/all-mpnet-base-v2 \

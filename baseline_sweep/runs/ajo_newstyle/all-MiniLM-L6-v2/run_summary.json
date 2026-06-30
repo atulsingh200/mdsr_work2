@@ -1,0 +1,18 @@
+{
+  "dataset_slug": "ajo_newstyle",
+  "model_slug": "all-MiniLM-L6-v2",
+  "base_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "schema": "newstyle",
+  "best_val_acc": 0.636294,
+  "best_val_auc": 0.724609,
+  "test_acc": 0.616915,
+  "test_auc": 0.703372,
+  "test_f1": 0.58585,
+  "test_loss": 0.613449,
+  "n_train": 20897,
+  "n_val": 2612,
+  "n_test": 2613,
+  "epochs": 4,
+  "batch_size": 64,
+  "max_seq_len": 512
+}

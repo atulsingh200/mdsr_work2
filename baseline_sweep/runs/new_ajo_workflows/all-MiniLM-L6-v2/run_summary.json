@@ -1,0 +1,18 @@
+{
+  "dataset_slug": "new_ajo_workflows",
+  "model_slug": "all-MiniLM-L6-v2",
+  "base_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "schema": "standard",
+  "best_val_acc": 0.586235,
+  "best_val_auc": 0.631044,
+  "test_acc": 0.597477,
+  "test_auc": 0.646401,
+  "test_f1": 0.614991,
+  "test_loss": 0.671903,
+  "n_train": 21846,
+  "n_val": 2470,
+  "n_test": 2616,
+  "epochs": 4,
+  "batch_size": 64,
+  "max_seq_len": 350
+}

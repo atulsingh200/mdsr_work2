@@ -1,0 +1,39 @@
+12:48:41 INFO run_dir=/mnt/localssd/crossencoder_sweep/runs/new_aep_wf_scrap/bge-base-en-v1.5
+12:48:41 INFO device=cuda:0  bf16=True  physical_gpu=1  CUDA_VISIBLE_DEVICES=1
+12:48:41 INFO dataset=new_aep_wf_scrap  model=bge-base-en-v1.5  backbone=BAAI/bge-base-en-v1.5
+12:48:41 INFO tokenizer <- BAAI/bge-base-en-v1.5
+12:48:41 INFO split files: ['directional_train.jsonl', 'directional_val.jsonl', 'directional_test.jsonl']
+12:48:41 INFO scanning max JOINT token length across all splits ...
+12:48:47 INFO   observed_max_joint=444 -> max_seq_len=469 (cap=512, scan=5.4s)
+12:48:47 INFO loading datasets ...
+12:48:47 INFO   schema=step  train=13904  val=1676  test=1548
+12:48:47 INFO building CrossEncoderClassifier  backbone=BAAI/bge-base-en-v1.5
+12:48:48 INFO   hidden_size=768  trainable_params=109,483,009
+12:48:48 INFO   total_steps=872  warmup_steps=87
+12:48:53 INFO   e1 step    50/218  loss=0.7393  acc=0.4831  lr0=1.15e-05 lr1=5.75e-04
+12:48:57 INFO   e1 step   100/218  loss=0.7321  acc=0.4845  lr0=1.97e-05 lr1=9.83e-04
+12:49:01 INFO   e1 step   150/218  loss=0.7291  acc=0.4825  lr0=1.84e-05 lr1=9.20e-04
+12:49:05 INFO   e1 step   200/218  loss=0.7227  acc=0.4909  lr0=1.71e-05 lr1=8.56e-04
+12:49:07 INFO [epoch 1] train_loss=0.7216 train_acc=0.4903  val_loss=0.7001 val_acc=0.5072 val_auc=0.5580  elapsed=19.5s
+12:49:08 INFO   saved best.pt  val_acc=0.5072
+12:49:12 INFO   e2 step    50/218  loss=0.6906  acc=0.5428  lr0=1.54e-05 lr1=7.69e-04
+12:49:17 INFO   e2 step   100/218  loss=0.6880  acc=0.5427  lr0=1.41e-05 lr1=7.06e-04
+12:49:21 INFO   e2 step   150/218  loss=0.6849  acc=0.5467  lr0=1.28e-05 lr1=6.42e-04
+12:49:25 INFO   e2 step   200/218  loss=0.6824  acc=0.5500  lr0=1.16e-05 lr1=5.78e-04
+12:49:27 INFO [epoch 2] train_loss=0.6804 train_acc=0.5532  val_loss=0.6644 val_acc=0.5805 val_auc=0.6345  elapsed=19.2s
+12:49:28 INFO   saved best.pt  val_acc=0.5805
+12:49:32 INFO   e3 step    50/218  loss=0.6424  acc=0.6134  lr0=9.83e-06 lr1=4.92e-04
+12:49:36 INFO   e3 step   100/218  loss=0.6470  acc=0.6069  lr0=8.56e-06 lr1=4.28e-04
+12:49:40 INFO   e3 step   150/218  loss=0.6450  acc=0.6080  lr0=7.29e-06 lr1=3.64e-04
+12:49:44 INFO   e3 step   200/218  loss=0.6439  acc=0.6088  lr0=6.01e-06 lr1=3.01e-04
+12:49:47 INFO [epoch 3] train_loss=0.6433 train_acc=0.6092  val_loss=0.6466 val_acc=0.6092 val_auc=0.6637  elapsed=18.9s
+12:49:47 INFO   saved best.pt  val_acc=0.6092
+12:49:52 INFO   e4 step    50/218  loss=0.6060  acc=0.6509  lr0=4.28e-06 lr1=2.14e-04
+12:49:56 INFO   e4 step   100/218  loss=0.6052  acc=0.6522  lr0=3.01e-06 lr1=1.50e-04
+12:50:00 INFO   e4 step   150/218  loss=0.6040  acc=0.6534  lr0=1.73e-06 lr1=8.66e-05
+12:50:04 INFO   e4 step   200/218  loss=0.6045  acc=0.6517  lr0=4.59e-07 lr1=2.29e-05
+12:50:06 INFO [epoch 4] train_loss=0.6039 train_acc=0.6533  val_loss=0.6420 val_acc=0.6235 val_auc=0.6757  elapsed=19.1s
+12:50:07 INFO   saved best.pt  val_acc=0.6235
+12:50:08 INFO loading best.pt for test eval
+12:50:09 INFO [test] loss=0.6487  acc=0.6124  auc=0.6658  f1=0.6324
+12:50:09 INFO [done] run_summary.json written to /mnt/localssd/crossencoder_sweep/runs/new_aep_wf_scrap/bge-base-en-v1.5

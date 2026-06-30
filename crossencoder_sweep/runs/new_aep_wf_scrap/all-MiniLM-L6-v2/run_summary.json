@@ -1,0 +1,18 @@
+{
+  "dataset_slug": "new_aep_wf_scrap",
+  "model_slug": "all-MiniLM-L6-v2",
+  "base_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "schema": "step",
+  "best_val_acc": 0.586516,
+  "best_val_auc": 0.632078,
+  "test_acc": 0.586563,
+  "test_auc": 0.629155,
+  "test_f1": 0.584955,
+  "test_loss": 0.668293,
+  "n_train": 13904,
+  "n_val": 1676,
+  "n_test": 1548,
+  "epochs": 4,
+  "batch_size": 64,
+  "max_seq_len": 469
+}

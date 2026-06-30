@@ -1,0 +1,40 @@
+{
+  "base_model": "sentence-transformers/all-mpnet-base-v2",
+  "dataset_slug": "new_aep_wf_scrap",
+  "model_slug": "all-mpnet-base-v2",
+  "data_dir": "/mnt/localssd/automation/internship-causal-embedding/data/new_aep_workflow_scrap",
+  "schema": "step",
+  "gpu_id": 1,
+  "lr_encoder": 2e-05,
+  "lr_head": 0.001,
+  "batch_size": 64,
+  "eval_batch_size": 64,
+  "epochs": 4,
+  "warmup_frac": 0.1,
+  "weight_decay": 0.01,
+  "grad_clip": 1.0,
+  "seed": 42,
+  "max_seq_len": 312,
+  "device": "cuda:0",
+  "bf16": true,
+  "n_train": 13904,
+  "n_val": 1676,
+  "n_test": 1548,
+  "pool": "cls",
+  "l2_normalize": true,
+  "concat_form": "[A; B; A-B; A*B]",
+  "head_cfg": {
+    "head_type": "mlp",
+    "hidden_dims": [
+      512,
+      128
+    ],
+    "dropout": 0.1,
+    "activation": "gelu",
+    "norm": "layer"
+  },
+  "head": "MLP(4d->512->128->1, act=gelu, norm=layer, dropout=0.1)",
+  "freeze_encoders": false,
+  "tier_aux_weight": 0.0,
+  "n_tiers": 0
+}

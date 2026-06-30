@@ -1,0 +1,52 @@
+22:19:59 INFO run_dir=/mnt/localssd/baseline_sweep/runs/ajo_newstyle/all-MiniLM-L6-v2
+22:19:59 INFO device=cuda:0  bf16=True  physical_gpu=3  CUDA_VISIBLE_DEVICES=3
+22:19:59 INFO dataset=ajo_newstyle  model=all-MiniLM-L6-v2  backbone=sentence-transformers/all-MiniLM-L6-v2
+22:19:59 INFO tokenizer <- sentence-transformers/all-MiniLM-L6-v2
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+22:20:00 INFO split files: ['train.jsonl', 'val.jsonl', 'test.jsonl']
+22:20:00 INFO scanning max token length across all splits ...
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (1021 > 512). Running this sequence through the model will result in indexing errors
+22:20:28 INFO   observed_max=21129 -> max_seq_len=512 (cap=512, scan=28.7s)
+22:20:28 INFO loading datasets ...
+22:20:29 INFO   schema=newstyle  train=20897  val=2612  test=2613
+22:20:29 INFO building DirectionalClassifier  backbone=sentence-transformers/all-MiniLM-L6-v2  head=MLP(4d->512->128->1, act=gelu, norm=layer, dropout=0.1)  n_tiers=0
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 8179.75it/s]
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 6160.09it/s]
+22:20:30 INFO   hidden_size=384  trainable_params=46,283,521
+22:20:30 INFO   total_steps=1308  warmup_steps=130
+22:20:40 INFO   e1 step    50/327  loss=0.7762  acc=0.5119  lr0=7.69e-06 lr1=3.85e-04
+22:20:46 INFO   e1 step   100/327  loss=0.7476  acc=0.5086  lr0=1.54e-05 lr1=7.69e-04
+22:20:52 INFO   e1 step   150/327  loss=0.7363  acc=0.5097  lr0=1.97e-05 lr1=9.83e-04
+22:20:58 INFO   e1 step   200/327  loss=0.7251  acc=0.5132  lr0=1.88e-05 lr1=9.41e-04
+22:21:04 INFO   e1 step   250/327  loss=0.7169  acc=0.5210  lr0=1.80e-05 lr1=8.98e-04
+22:21:10 INFO   e1 step   300/327  loss=0.7107  acc=0.5258  lr0=1.71e-05 lr1=8.56e-04
+22:21:16 INFO [epoch 1] train_loss=0.7078 train_acc=0.5290  val_loss=0.6645 val_acc=0.5716 val_auc=0.6278  elapsed=46.5s
+22:21:16 INFO   saved best.pt  val_acc=0.5716
+22:21:23 INFO   e2 step    50/327  loss=0.6651  acc=0.6031  lr0=1.58e-05 lr1=7.90e-04
+22:21:29 INFO   e2 step   100/327  loss=0.6639  acc=0.5842  lr0=1.50e-05 lr1=7.48e-04
+22:21:35 INFO   e2 step   150/327  loss=0.6537  acc=0.5943  lr0=1.41e-05 lr1=7.05e-04
+22:21:41 INFO   e2 step   200/327  loss=0.6482  acc=0.6023  lr0=1.33e-05 lr1=6.63e-04
+22:21:47 INFO   e2 step   250/327  loss=0.6459  acc=0.6018  lr0=1.24e-05 lr1=6.21e-04
+22:21:53 INFO   e2 step   300/327  loss=0.6420  acc=0.6058  lr0=1.16e-05 lr1=5.78e-04
+22:21:59 INFO [epoch 2] train_loss=0.6402 train_acc=0.6087  val_loss=0.6195 val_acc=0.6164 val_auc=0.6881  elapsed=42.5s
+22:21:59 INFO   saved best.pt  val_acc=0.6164
+22:22:06 INFO   e3 step    50/327  loss=0.5925  acc=0.6619  lr0=1.03e-05 lr1=5.13e-04
+22:22:12 INFO   e3 step   100/327  loss=0.5835  acc=0.6631  lr0=9.41e-06 lr1=4.70e-04
+22:22:18 INFO   e3 step   150/327  loss=0.5881  acc=0.6570  lr0=8.56e-06 lr1=4.28e-04
+22:22:24 INFO   e3 step   200/327  loss=0.5859  acc=0.6594  lr0=7.71e-06 lr1=3.85e-04
+22:22:30 INFO   e3 step   250/327  loss=0.5821  acc=0.6627  lr0=6.86e-06 lr1=3.43e-04
+22:22:36 INFO   e3 step   300/327  loss=0.5804  acc=0.6640  lr0=6.01e-06 lr1=3.01e-04
+22:22:42 INFO [epoch 3] train_loss=0.5793 train_acc=0.6645  val_loss=0.5945 val_acc=0.6363 val_auc=0.7246  elapsed=42.6s
+22:22:42 INFO   saved best.pt  val_acc=0.6363
+22:22:48 INFO   e4 step    50/327  loss=0.5399  acc=0.6978  lr0=4.70e-06 lr1=2.35e-04
+22:22:55 INFO   e4 step   100/327  loss=0.5336  acc=0.7086  lr0=3.85e-06 lr1=1.93e-04
+22:23:01 INFO   e4 step   150/327  loss=0.5339  acc=0.7049  lr0=3.01e-06 lr1=1.50e-04
+22:23:07 INFO   e4 step   200/327  loss=0.5289  acc=0.7080  lr0=2.16e-06 lr1=1.08e-04
+22:23:13 INFO   e4 step   250/327  loss=0.5303  acc=0.7056  lr0=1.31e-06 lr1=6.54e-05
+22:23:19 INFO   e4 step   300/327  loss=0.5283  acc=0.7071  lr0=4.58e-07 lr1=2.29e-05
+22:23:25 INFO [epoch 4] train_loss=0.5277 train_acc=0.7072  val_loss=0.5945 val_acc=0.6355 val_auc=0.7368  elapsed=42.6s
+22:23:25 INFO loading best.pt for test eval
+22:23:28 INFO [test] loss=0.6134  acc=0.6169  auc=0.7034  f1=0.5859
+22:23:28 INFO [test] per-tier-pair accuracy:
+22:23:28 INFO         T0-T0  n= 2613  acc=0.6169
+22:23:28 INFO [done] run_summary.json written to /mnt/localssd/baseline_sweep/runs/ajo_newstyle/all-MiniLM-L6-v2

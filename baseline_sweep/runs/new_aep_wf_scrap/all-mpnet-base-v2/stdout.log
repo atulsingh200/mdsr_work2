@@ -1,0 +1,43 @@
+00:17:30 INFO run_dir=/mnt/localssd/baseline_sweep/runs/new_aep_wf_scrap/all-mpnet-base-v2
+00:17:30 INFO device=cuda:0  bf16=True  physical_gpu=1  CUDA_VISIBLE_DEVICES=1
+00:17:30 INFO dataset=new_aep_wf_scrap  model=all-mpnet-base-v2  backbone=sentence-transformers/all-mpnet-base-v2
+00:17:30 INFO tokenizer <- sentence-transformers/all-mpnet-base-v2
+00:17:30 INFO split files: ['directional_train.jsonl', 'directional_val.jsonl', 'directional_test.jsonl']
+00:17:30 INFO scanning max token length across all splits ...
+00:17:36 INFO   observed_max=295 -> max_seq_len=312 (cap=512, scan=5.6s)
+00:17:36 INFO loading datasets ...
+00:17:36 INFO   schema=step  train=13904  val=1676  test=1548
+00:17:36 INFO building DirectionalClassifier  backbone=sentence-transformers/all-mpnet-base-v2  head=MLP(4d->512->128->1, act=gelu, norm=layer, dropout=0.1)  n_tiers=0
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 8219.91it/s]
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 7754.75it/s]
+00:17:37 INFO   hidden_size=768  trainable_params=220,619,521
+00:17:37 INFO   total_steps=872  warmup_steps=87
+00:17:45 INFO   e1 step    50/218  loss=0.7932  acc=0.5434  lr0=1.15e-05 lr1=5.75e-04
+00:17:51 INFO   e1 step   100/218  loss=0.7440  acc=0.5558  lr0=1.97e-05 lr1=9.83e-04
+00:17:58 INFO   e1 step   150/218  loss=0.7182  acc=0.5658  lr0=1.84e-05 lr1=9.20e-04
+00:18:04 INFO   e1 step   200/218  loss=0.6961  acc=0.5784  lr0=1.71e-05 lr1=8.56e-04
+00:18:08 INFO [epoch 1] train_loss=0.6898 train_acc=0.5823  val_loss=0.6030 val_acc=0.6462 val_auc=0.7279  elapsed=31.1s
+00:18:09 INFO   saved best.pt  val_acc=0.6462
+00:18:16 INFO   e2 step    50/218  loss=0.5493  acc=0.7047  lr0=1.54e-05 lr1=7.69e-04
+00:18:22 INFO   e2 step   100/218  loss=0.5500  acc=0.6923  lr0=1.41e-05 lr1=7.06e-04
+00:18:28 INFO   e2 step   150/218  loss=0.5549  acc=0.6899  lr0=1.28e-05 lr1=6.42e-04
+00:18:35 INFO   e2 step   200/218  loss=0.5536  acc=0.6881  lr0=1.16e-05 lr1=5.78e-04
+00:18:39 INFO [epoch 2] train_loss=0.5537 train_acc=0.6880  val_loss=0.5856 val_acc=0.6581 val_auc=0.7388  elapsed=30.1s
+00:18:40 INFO   saved best.pt  val_acc=0.6581
+00:18:47 INFO   e3 step    50/218  loss=0.4647  acc=0.7572  lr0=9.83e-06 lr1=4.92e-04
+00:18:53 INFO   e3 step   100/218  loss=0.4565  acc=0.7625  lr0=8.56e-06 lr1=4.28e-04
+00:19:00 INFO   e3 step   150/218  loss=0.4626  acc=0.7577  lr0=7.29e-06 lr1=3.64e-04
+00:19:07 INFO   e3 step   200/218  loss=0.4593  acc=0.7591  lr0=6.01e-06 lr1=3.01e-04
+00:19:11 INFO [epoch 3] train_loss=0.4598 train_acc=0.7580  val_loss=0.6091 val_acc=0.6647 val_auc=0.7504  elapsed=30.5s
+00:19:12 INFO   saved best.pt  val_acc=0.6647
+00:19:19 INFO   e4 step    50/218  loss=0.3812  acc=0.8131  lr0=4.28e-06 lr1=2.14e-04
+00:19:26 INFO   e4 step   100/218  loss=0.3748  acc=0.8161  lr0=3.01e-06 lr1=1.50e-04
+00:19:32 INFO   e4 step   150/218  loss=0.3712  acc=0.8178  lr0=1.73e-06 lr1=8.66e-05
+00:19:39 INFO   e4 step   200/218  loss=0.3668  acc=0.8195  lr0=4.59e-07 lr1=2.29e-05
+00:19:42 INFO [epoch 4] train_loss=0.3653 train_acc=0.8213  val_loss=0.7354 val_acc=0.6677 val_auc=0.7507  elapsed=30.4s
+00:19:44 INFO   saved best.pt  val_acc=0.6677
+00:19:45 INFO loading best.pt for test eval
+00:19:46 INFO [test] loss=0.7380  acc=0.6835  auc=0.7565  f1=0.6742
+00:19:46 INFO [test] per-tier-pair accuracy:
+00:19:46 INFO         T0-T0  n= 1548  acc=0.6835
+00:19:46 INFO [done] run_summary.json written to /mnt/localssd/baseline_sweep/runs/new_aep_wf_scrap/all-mpnet-base-v2

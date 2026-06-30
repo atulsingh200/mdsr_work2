@@ -1,0 +1,18 @@
+{
+  "dataset_slug": "aep_causal_wf_v3",
+  "model_slug": "e5-large-v2",
+  "base_model": "intfloat/e5-large-v2",
+  "schema": "standard",
+  "best_val_acc": 0.703364,
+  "best_val_auc": 0.778173,
+  "test_acc": 0.72956,
+  "test_auc": 0.81244,
+  "test_f1": 0.724359,
+  "test_loss": 0.624436,
+  "n_train": 21287,
+  "n_val": 327,
+  "n_test": 318,
+  "epochs": 4,
+  "batch_size": 16,
+  "max_seq_len": 446
+}

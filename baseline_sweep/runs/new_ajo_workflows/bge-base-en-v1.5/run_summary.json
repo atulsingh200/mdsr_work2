@@ -1,0 +1,18 @@
+{
+  "dataset_slug": "new_ajo_workflows",
+  "model_slug": "bge-base-en-v1.5",
+  "base_model": "BAAI/bge-base-en-v1.5",
+  "schema": "standard",
+  "best_val_acc": 0.610931,
+  "best_val_auc": 0.661904,
+  "test_acc": 0.627676,
+  "test_auc": 0.681705,
+  "test_f1": 0.631897,
+  "test_loss": 0.7555,
+  "n_train": 21846,
+  "n_val": 2470,
+  "n_test": 2616,
+  "epochs": 4,
+  "batch_size": 64,
+  "max_seq_len": 350
+}

@@ -1,0 +1,18 @@
+{
+  "dataset_slug": "aep_causal_wf_v3",
+  "model_slug": "deberta-v3-large",
+  "base_model": "microsoft/deberta-v3-large",
+  "schema": "standard",
+  "best_val_acc": 0.657492,
+  "best_val_auc": 0.744482,
+  "test_acc": 0.773585,
+  "test_auc": 0.871383,
+  "test_f1": 0.761589,
+  "test_loss": 1.119926,
+  "n_train": 21287,
+  "n_val": 327,
+  "n_test": 318,
+  "epochs": 4,
+  "batch_size": 8,
+  "max_seq_len": 512
+}

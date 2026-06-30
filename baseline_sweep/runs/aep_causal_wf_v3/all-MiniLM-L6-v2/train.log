@@ -1,0 +1,139 @@
+17:25:58 INFO run_dir=/mnt/localssd/baseline_sweep/runs/aep_causal_wf_v3/all-MiniLM-L6-v2
+17:25:58 INFO device=cuda:0  bf16=True  physical_gpu=3  CUDA_VISIBLE_DEVICES=3
+17:25:58 INFO dataset=aep_causal_wf_v3  model=all-MiniLM-L6-v2  backbone=sentence-transformers/all-MiniLM-L6-v2
+17:25:58 INFO tokenizer <- sentence-transformers/all-MiniLM-L6-v2
+17:25:58 INFO split files: ['directional_train.jsonl', 'directional_val.jsonl', 'directional_test.jsonl']
+17:25:58 INFO scanning max token length across all splits ...
+17:26:07 INFO   observed_max=422 -> max_seq_len=446 (cap=512, scan=8.2s)
+17:26:07 INFO loading datasets ...
+17:26:07 INFO   schema=standard  train=21287  val=327  test=318
+17:26:07 INFO building DirectionalClassifier  backbone=sentence-transformers/all-MiniLM-L6-v2  head=MLP(4d->512->128->1, act=gelu, norm=layer, dropout=0.1)  n_tiers=0
+17:26:08 INFO   hidden_size=384  trainable_params=46,283,521
+17:26:08 INFO   total_steps=1332  warmup_steps=133
+17:26:11 INFO   e1 step    50/333  loss=0.7709  acc=0.5337  lr0=7.52e-06 lr1=3.76e-04
+17:26:14 INFO   e1 step   100/333  loss=0.7138  acc=0.5767  lr0=1.50e-05 lr1=7.52e-04
+17:26:16 INFO   e1 step   150/333  loss=0.6862  acc=0.6004  lr0=1.97e-05 lr1=9.86e-04
+17:26:19 INFO   e1 step   200/333  loss=0.6643  acc=0.6170  lr0=1.89e-05 lr1=9.44e-04
+17:26:21 INFO   e1 step   250/333  loss=0.6419  acc=0.6367  lr0=1.80e-05 lr1=9.02e-04
+17:26:23 INFO   e1 step   300/333  loss=0.6229  acc=0.6520  lr0=1.72e-05 lr1=8.61e-04
+17:26:25 INFO [epoch 1] train_loss=0.6130 train_acc=0.6602  val_loss=0.6014 val_acc=0.6850 val_auc=0.7601  elapsed=17.8s
+17:26:26 INFO   saved best.pt  val_acc=0.6850
+17:26:28 INFO   e2 step    50/333  loss=0.4482  acc=0.7859  lr0=1.58e-05 lr1=7.91e-04
+17:26:31 INFO   e2 step   100/333  loss=0.4493  acc=0.7836  lr0=1.50e-05 lr1=7.50e-04
+17:26:33 INFO   e2 step   150/333  loss=0.4485  acc=0.7834  lr0=1.42e-05 lr1=7.08e-04
+17:26:35 INFO   e2 step   200/333  loss=0.4421  acc=0.7869  lr0=1.33e-05 lr1=6.66e-04
+17:26:38 INFO   e2 step   250/333  loss=0.4371  acc=0.7902  lr0=1.25e-05 lr1=6.25e-04
+17:26:40 INFO   e2 step   300/333  loss=0.4329  acc=0.7930  lr0=1.17e-05 lr1=5.83e-04
+17:26:42 INFO [epoch 2] train_loss=0.4323 train_acc=0.7935  val_loss=0.6162 val_acc=0.7064 val_auc=0.7737  elapsed=16.5s
+17:26:42 INFO   saved best.pt  val_acc=0.7064
+17:26:45 INFO   e3 step    50/333  loss=0.3473  acc=0.8431  lr0=1.03e-05 lr1=5.14e-04
+17:26:47 INFO   e3 step   100/333  loss=0.3339  acc=0.8502  lr0=9.44e-06 lr1=4.72e-04
+17:26:50 INFO   e3 step   150/333  loss=0.3299  acc=0.8518  lr0=8.61e-06 lr1=4.30e-04
+17:26:52 INFO   e3 step   200/333  loss=0.3297  acc=0.8516  lr0=7.77e-06 lr1=3.89e-04
+17:26:54 INFO   e3 step   250/333  loss=0.3261  acc=0.8534  lr0=6.94e-06 lr1=3.47e-04
+17:26:57 INFO   e3 step   300/333  loss=0.3240  acc=0.8551  lr0=6.11e-06 lr1=3.05e-04
+17:26:59 INFO [epoch 3] train_loss=0.3232 train_acc=0.8554  val_loss=0.6656 val_acc=0.6911 val_auc=0.7973  elapsed=16.3s
+17:27:01 INFO   e4 step    50/333  loss=0.2509  acc=0.8947  lr0=4.72e-06 lr1=2.36e-04
+17:27:04 INFO   e4 step   100/333  loss=0.2502  acc=0.8945  lr0=3.89e-06 lr1=1.94e-04
+17:27:06 INFO   e4 step   150/333  loss=0.2555  acc=0.8925  lr0=3.05e-06 lr1=1.53e-04
+17:27:08 INFO   e4 step   200/333  loss=0.2553  acc=0.8920  lr0=2.22e-06 lr1=1.11e-04
+17:27:11 INFO   e4 step   250/333  loss=0.2540  acc=0.8934  lr0=1.38e-06 lr1=6.92e-05
+17:27:13 INFO   e4 step   300/333  loss=0.2515  acc=0.8938  lr0=5.50e-07 lr1=2.75e-05
+17:27:15 INFO [epoch 4] train_loss=0.2510 train_acc=0.8940  val_loss=0.7564 val_acc=0.6911 val_auc=0.7926  elapsed=16.3s
+17:27:15 INFO loading best.pt for test eval
+17:27:16 INFO [test] loss=0.5641  acc=0.7296  auc=0.8089  f1=0.7190
+17:27:16 INFO [test] per-tier-pair accuracy:
+17:27:16 INFO         T1-T1  n=    2  acc=0.0000
+17:27:16 INFO         T1-T2  n=    1  acc=1.0000
+17:27:16 INFO         T1-T3  n=    1  acc=1.0000
+17:27:16 INFO         T1-T4  n=    1  acc=1.0000
+17:27:16 INFO         T1-T5  n=    2  acc=1.0000
+17:27:16 INFO         T1-T6  n=    2  acc=1.0000
+17:27:16 INFO         T1-T7  n=    2  acc=1.0000
+17:27:16 INFO         T1-T8  n=    2  acc=1.0000
+17:27:16 INFO        T1-T10  n=    1  acc=1.0000
+17:27:16 INFO        T1-T12  n=    1  acc=1.0000
+17:27:16 INFO         T2-T3  n=    2  acc=0.0000
+17:27:16 INFO         T2-T4  n=    2  acc=1.0000
+17:27:16 INFO         T2-T6  n=    3  acc=0.6667
+17:27:16 INFO         T2-T7  n=    1  acc=1.0000
+17:27:16 INFO         T2-T9  n=    2  acc=1.0000
+17:27:16 INFO        T2-T11  n=    1  acc=1.0000
+17:27:16 INFO        T2-T13  n=    2  acc=1.0000
+17:27:16 INFO        T2-T14  n=    1  acc=1.0000
+17:27:16 INFO        T2-T15  n=    1  acc=1.0000
+17:27:16 INFO         T3-T3  n=    6  acc=0.5000
+17:27:16 INFO         T3-T4  n=    6  acc=0.8333
+17:27:16 INFO         T3-T5  n=    1  acc=1.0000
+17:27:16 INFO         T3-T6  n=    2  acc=0.5000
+17:27:16 INFO         T3-T7  n=    2  acc=1.0000
+17:27:16 INFO         T3-T8  n=    1  acc=1.0000
+17:27:16 INFO         T3-T9  n=    3  acc=1.0000
+17:27:16 INFO        T3-T11  n=    1  acc=1.0000
+17:27:16 INFO        T3-T12  n=    3  acc=1.0000
+17:27:16 INFO        T3-T13  n=    2  acc=1.0000
+17:27:16 INFO        T3-T14  n=    1  acc=1.0000
+17:27:16 INFO        T3-T15  n=    4  acc=1.0000
+17:27:16 INFO         T4-T4  n=    3  acc=0.0000
+17:27:16 INFO         T4-T5  n=    1  acc=1.0000
+17:27:16 INFO         T4-T8  n=    2  acc=0.0000
+17:27:16 INFO         T4-T9  n=    1  acc=0.0000
+17:27:16 INFO        T4-T10  n=    3  acc=1.0000
+17:27:16 INFO        T4-T11  n=    1  acc=1.0000
+17:27:16 INFO        T4-T13  n=    2  acc=1.0000
+17:27:16 INFO        T4-T15  n=    2  acc=1.0000
+17:27:16 INFO         T5-T5  n=   24  acc=0.6667
+17:27:16 INFO         T5-T6  n=    4  acc=0.5000
+17:27:16 INFO         T5-T7  n=    1  acc=1.0000
+17:27:16 INFO         T5-T8  n=    1  acc=1.0000
+17:27:16 INFO        T5-T10  n=    1  acc=0.0000
+17:27:16 INFO        T5-T11  n=    2  acc=1.0000
+17:27:16 INFO        T5-T13  n=    2  acc=1.0000
+17:27:16 INFO        T5-T14  n=    1  acc=1.0000
+17:27:16 INFO         T6-T6  n=   33  acc=0.7273
+17:27:16 INFO         T6-T8  n=    1  acc=0.0000
+17:27:16 INFO         T6-T9  n=    1  acc=0.0000
+17:27:16 INFO        T6-T10  n=    1  acc=0.0000
+17:27:16 INFO        T6-T11  n=    4  acc=0.7500
+17:27:16 INFO        T6-T12  n=    1  acc=1.0000
+17:27:16 INFO        T6-T13  n=    4  acc=1.0000
+17:27:16 INFO        T6-T15  n=    2  acc=0.5000
+17:27:16 INFO         T7-T7  n=   13  acc=0.6154
+17:27:16 INFO         T7-T8  n=    4  acc=1.0000
+17:27:16 INFO         T7-T9  n=    2  acc=1.0000
+17:27:16 INFO        T7-T10  n=    1  acc=1.0000
+17:27:16 INFO        T7-T11  n=    1  acc=1.0000
+17:27:16 INFO        T7-T12  n=    1  acc=1.0000
+17:27:16 INFO        T7-T13  n=    1  acc=1.0000
+17:27:16 INFO         T8-T8  n=    3  acc=0.6667
+17:27:16 INFO        T8-T10  n=    2  acc=0.0000
+17:27:16 INFO        T8-T11  n=    2  acc=1.0000
+17:27:16 INFO        T8-T12  n=    1  acc=1.0000
+17:27:16 INFO        T8-T13  n=    1  acc=1.0000
+17:27:16 INFO        T8-T15  n=    2  acc=0.0000
+17:27:16 INFO         T9-T9  n=   15  acc=0.6000
+17:27:16 INFO        T9-T10  n=    2  acc=0.5000
+17:27:16 INFO        T9-T11  n=    1  acc=1.0000
+17:27:16 INFO        T9-T12  n=    1  acc=1.0000
+17:27:16 INFO        T9-T13  n=    1  acc=1.0000
+17:27:16 INFO        T9-T14  n=    2  acc=0.5000
+17:27:16 INFO       T10-T10  n=   17  acc=0.8824
+17:27:16 INFO       T10-T11  n=    1  acc=0.0000
+17:27:16 INFO       T10-T12  n=    1  acc=1.0000
+17:27:16 INFO       T10-T13  n=    2  acc=1.0000
+17:27:16 INFO       T10-T14  n=    1  acc=0.0000
+17:27:16 INFO       T10-T15  n=    1  acc=1.0000
+17:27:16 INFO       T11-T11  n=    2  acc=1.0000
+17:27:16 INFO       T11-T12  n=    2  acc=0.5000
+17:27:16 INFO       T11-T13  n=    2  acc=1.0000
+17:27:16 INFO       T11-T14  n=    2  acc=0.0000
+17:27:16 INFO       T12-T12  n=   26  acc=0.6923
+17:27:16 INFO       T12-T13  n=    2  acc=1.0000
+17:27:16 INFO       T12-T14  n=    2  acc=1.0000
+17:27:16 INFO       T12-T15  n=    3  acc=0.3333
+17:27:16 INFO       T13-T13  n=    5  acc=0.4000
+17:27:16 INFO       T13-T15  n=    2  acc=1.0000
+17:27:16 INFO       T14-T14  n=   10  acc=0.6000
+17:27:16 INFO       T14-T15  n=    1  acc=0.0000
+17:27:16 INFO       T15-T15  n=   20  acc=0.9000
+17:27:16 INFO [done] run_summary.json written to /mnt/localssd/baseline_sweep/runs/aep_causal_wf_v3/all-MiniLM-L6-v2

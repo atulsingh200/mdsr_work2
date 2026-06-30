@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "Audience to email",
+    "source": "Behind the scenes / Marketing workflows",
+    "t1": "Define a segment of the customers you want to reach.",
+    "t2": "Export the segment's profiles into an email campaign.",
+    "t3": "Send the personalized email to those customers."
+  },
+  {
+    "id": 2,
+    "title": "Data to segment",
+    "source": "Behind the scenes / Key capabilities",
+    "t1": "Bring your data into Experience Platform from your sources.",
+    "t2": "Merge the data into a real-time customer profile using the identity graph.",
+    "t3": "Define a segment over those profiles."
+  },
+  {
+    "id": 3,
+    "title": "Win back churning customers",
+    "source": "Key use cases - Don't Lose Campaigns",
+    "t1": "Predict which customers are likely to churn with AI models.",
+    "t2": "Create an audience of the customers at risk of churning.",
+    "t3": "Send them a re-engagement offer across the right channels."
+  },
+  {
+    "id": 4,
+    "title": "Re-engage cart abandoners",
+    "source": "Key use cases - Intelligent Re-Engagement",
+    "t1": "Identify customers who abandoned their cart.",
+    "t2": "Create a re-engagement audience from those customers.",
+    "t3": "Send a personalized re-engagement message in a journey."
+  },
+  {
+    "id": 5,
+    "title": "Web data to destination",
+    "source": "Key capabilities / Basic architecture",
+    "t1": "Collect website interaction data with the Web SDK.",
+    "t2": "Create a segment from the collected data.",
+    "t3": "Activate the audience to a destination."
+  },
+  {
+    "id": 6,
+    "title": "Plan, launch, review",
+    "source": "Marketing workflows",
+    "t1": "Plan the campaign and check the audience size.",
+    "t2": "Launch the campaign to the audience.",
+    "t3": "Review the campaign performance after it goes live."
+  },
+  {
+    "id": 7,
+    "title": "Schema to profile",
+    "source": "Create schemas / Create and populate a dataset",
+    "t1": "Create a schema for your data.",
+    "t2": "Create a dataset and ingest data using that schema.",
+    "t3": "Enable the dataset for Real-Time Customer Profile."
+  },
+  {
+    "id": 8,
+    "title": "Activate an audience",
+    "source": "Destinations videos",
+    "t1": "Create an audience in the platform.",
+    "t2": "Connect to a destination.",
+    "t3": "Activate the audience to that destination."
+  },
+  {
+    "id": 9,
+    "title": "Use a playbook",
+    "source": "Use case playbooks videos",
+    "t1": "Browse the use case playbook gallery.",
+    "t2": "Create an instance of a playbook.",
+    "t3": "Publish the playbook assets to your sandbox."
+  },
+  {
+    "id": 10,
+    "title": "Personalize an offer",
+    "source": "Key use cases - Lifetime Value / Contextual Recognition",
+    "t1": "Read the customer's attributes and behavior from their profile.",
+    "t2": "Pick the best offer for them with Next Best Offer decisioning.",
+    "t3": "Activate the offer to the customer across any channel."
+  }
+]

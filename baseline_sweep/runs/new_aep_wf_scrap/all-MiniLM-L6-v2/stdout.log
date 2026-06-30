@@ -1,0 +1,43 @@
+00:20:00 INFO run_dir=/mnt/localssd/baseline_sweep/runs/new_aep_wf_scrap/all-MiniLM-L6-v2
+00:20:00 INFO device=cuda:0  bf16=True  physical_gpu=1  CUDA_VISIBLE_DEVICES=1
+00:20:00 INFO dataset=new_aep_wf_scrap  model=all-MiniLM-L6-v2  backbone=sentence-transformers/all-MiniLM-L6-v2
+00:20:00 INFO tokenizer <- sentence-transformers/all-MiniLM-L6-v2
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+00:20:00 INFO split files: ['directional_train.jsonl', 'directional_val.jsonl', 'directional_test.jsonl']
+00:20:00 INFO scanning max token length across all splits ...
+00:20:06 INFO   observed_max=295 -> max_seq_len=312 (cap=512, scan=5.7s)
+00:20:06 INFO loading datasets ...
+00:20:06 INFO   schema=step  train=13904  val=1676  test=1548
+00:20:06 INFO building DirectionalClassifier  backbone=sentence-transformers/all-MiniLM-L6-v2  head=MLP(4d->512->128->1, act=gelu, norm=layer, dropout=0.1)  n_tiers=0
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 7784.87it/s]
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 6603.69it/s]
+00:20:07 INFO   hidden_size=384  trainable_params=46,283,521
+00:20:07 INFO   total_steps=872  warmup_steps=87
+00:20:10 INFO   e1 step    50/218  loss=0.7857  acc=0.5050  lr0=1.15e-05 lr1=5.75e-04
+00:20:12 INFO   e1 step   100/218  loss=0.7421  acc=0.5212  lr0=1.97e-05 lr1=9.83e-04
+00:20:14 INFO   e1 step   150/218  loss=0.7207  acc=0.5344  lr0=1.84e-05 lr1=9.20e-04
+00:20:16 INFO   e1 step   200/218  loss=0.7089  acc=0.5433  lr0=1.71e-05 lr1=8.56e-04
+00:20:18 INFO [epoch 1] train_loss=0.7054 train_acc=0.5454  val_loss=0.6606 val_acc=0.6026 val_auc=0.6749  elapsed=10.7s
+00:20:18 INFO   saved best.pt  val_acc=0.6026
+00:20:20 INFO   e2 step    50/218  loss=0.6266  acc=0.6397  lr0=1.54e-05 lr1=7.69e-04
+00:20:22 INFO   e2 step   100/218  loss=0.6282  acc=0.6338  lr0=1.41e-05 lr1=7.06e-04
+00:20:25 INFO   e2 step   150/218  loss=0.6246  acc=0.6372  lr0=1.28e-05 lr1=6.42e-04
+00:20:27 INFO   e2 step   200/218  loss=0.6203  acc=0.6409  lr0=1.16e-05 lr1=5.78e-04
+00:20:29 INFO [epoch 2] train_loss=0.6186 train_acc=0.6422  val_loss=0.6272 val_acc=0.6396 val_auc=0.7112  elapsed=10.6s
+00:20:29 INFO   saved best.pt  val_acc=0.6396
+00:20:31 INFO   e3 step    50/218  loss=0.5465  acc=0.7081  lr0=9.83e-06 lr1=4.92e-04
+00:20:33 INFO   e3 step   100/218  loss=0.5464  acc=0.7042  lr0=8.56e-06 lr1=4.28e-04
+00:20:35 INFO   e3 step   150/218  loss=0.5474  acc=0.7017  lr0=7.29e-06 lr1=3.64e-04
+00:20:38 INFO   e3 step   200/218  loss=0.5459  acc=0.7013  lr0=6.01e-06 lr1=3.01e-04
+00:20:39 INFO [epoch 3] train_loss=0.5456 train_acc=0.7015  val_loss=0.6129 val_acc=0.6378 val_auc=0.7225  elapsed=10.2s
+00:20:41 INFO   e4 step    50/218  loss=0.5076  acc=0.7316  lr0=4.28e-06 lr1=2.14e-04
+00:20:43 INFO   e4 step   100/218  loss=0.5009  acc=0.7341  lr0=3.01e-06 lr1=1.50e-04
+00:20:46 INFO   e4 step   150/218  loss=0.4922  acc=0.7441  lr0=1.73e-06 lr1=8.66e-05
+00:20:48 INFO   e4 step   200/218  loss=0.4902  acc=0.7447  lr0=4.59e-07 lr1=2.29e-05
+00:20:49 INFO [epoch 4] train_loss=0.4881 train_acc=0.7453  val_loss=0.6439 val_acc=0.6533 val_auc=0.7269  elapsed=10.1s
+00:20:49 INFO   saved best.pt  val_acc=0.6533
+00:20:50 INFO loading best.pt for test eval
+00:20:51 INFO [test] loss=0.6551  acc=0.6479  auc=0.7194  f1=0.6482
+00:20:51 INFO [test] per-tier-pair accuracy:
+00:20:51 INFO         T0-T0  n= 1548  acc=0.6479
+00:20:51 INFO [done] run_summary.json written to /mnt/localssd/baseline_sweep/runs/new_aep_wf_scrap/all-MiniLM-L6-v2

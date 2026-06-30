@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "Add a user to Experience Platform",
+    "source": "Add users",
+    "t1": "Add the user's email address to the default AEP product profile in Adobe Admin Console so that the user exists in the system.",
+    "t2": "In the Experience Platform UI, navigate to Permissions, go to Roles, and create a new role by selecting desired sandbox access and feature permission categories.",
+    "t3": "Add the user to the newly created role so they are granted access to the configured Experience Platform features and sandboxes."
+  },
+  {
+    "id": 2,
+    "title": "Set up a data source and build real-time customer profiles",
+    "source": "Behind the scenes: A customer experience powered by Experience Platform",
+    "t1": "Define a schema using Experience Data Model (XDM) to express the structure of your data source, including which fields represent customer identities.",
+    "t2": "Create a dataset and begin ingesting data into Experience Platform, either via streaming or batch ingestion, using the defined schema.",
+    "t3": "Experience Platform builds a real-time customer profile for each customer by merging incoming data fragments using the identity graph."
+  },
+  {
+    "id": 3,
+    "title": "Build and activate a segment-based email campaign",
+    "source": "Key capabilities",
+    "t1": "Ingest customer data from multiple sources and normalize it by mapping each source to standardized XDM schemas.",
+    "t2": "Use the Segment Builder in Experience Platform to create an audience based on customer attributes and behavioral events.",
+    "t3": "Activate the audience to an email marketing destination to deliver a targeted campaign to qualifying customer profiles."
+  },
+  {
+    "id": 4,
+    "title": "Run an AI-powered customer churn prevention campaign",
+    "source": "Key use cases",
+    "t1": "Use Customer AI to train a machine learning model that predicts each customer's likelihood to churn, generating propensity scores.",
+    "t2": "Create an audience segment that filters customer profiles with high churn propensity scores using the Segment Builder.",
+    "t3": "Activate the high-risk audience across email and other channels with personalized win-back offers using Journey Optimizer."
+  },
+  {
+    "id": 5,
+    "title": "Re-engage customers who abandoned their cart",
+    "source": "Key use cases",
+    "t1": "Run real-time journey analysis in Experience Platform to identify customers who added items to a cart but did not complete checkout.",
+    "t2": "Create a re-engagement segment based on the cart abandonment event, filtering by customer consent preferences.",
+    "t3": "Activate the segment in Journey Optimizer to send personalized re-engagement messages across email, push, and other channels."
+  },
+  {
+    "id": 6,
+    "title": "Ingest streaming data and update the identity graph",
+    "source": "Basic architecture",
+    "t1": "Send customer interaction events to Experience Platform in real time using the Web SDK or a streaming API endpoint.",
+    "t2": "Experience Platform stores the incoming data in the data lake and flags it for immediate processing into the real-time customer profile.",
+    "t3": "The identity graph links the new data fragment to the customer's existing identities, updating their unified profile in real time."
+  },
+  {
+    "id": 7,
+    "title": "Resolve an anonymous visitor's identity on login",
+    "source": "Key capabilities",
+    "t1": "An anonymous customer visits the website from a new device and a device ID is captured as their only initial identity.",
+    "t2": "The customer logs in and Identity Service detects the link between the device ID and their known identifiers such as CRM ID and email address.",
+    "t3": "Experience Platform merges the anonymous device fragment into the customer's existing unified profile using the updated identity graph."
+  },
+  {
+    "id": 8,
+    "title": "Set up data governance labels and policies",
+    "source": "Key capabilities",
+    "t1": "A data steward applies usage labels to individual data fields in Experience Platform to mark them according to their sensitivity or contractual restrictions.",
+    "t2": "The data steward creates a data usage policy that blocks labeled fields from being sent to specific destination types, such as third-party ad networks.",
+    "t3": "Experience Platform automatically enforces the policy and prevents activation when a marketer tries to send restricted data to a blocked destination."
+  },
+  {
+    "id": 9,
+    "title": "Plan and implement an Experience Platform project",
+    "source": "Roles and project phases",
+    "t1": "During the planning phase, the enterprise architect meets with stakeholders to document business objectives and produce an implementation architecture.",
+    "t2": "During the implementation phase, data architects model incoming data into XDM schemas and data engineers create datasets and ingest data into Platform.",
+    "t3": "During the use phase, marketers configure platform services such as Real-Time CDP and Journey Optimizer to deliver business value against the original objectives."
+  },
+  {
+    "id": 10,
+    "title": "Personalize a returning customer's web experience",
+    "source": "Key use cases",
+    "t1": "A known customer makes a purchase while logged in, and the event is captured and stored in their real-time customer profile in Experience Platform.",
+    "t2": "The customer returns to the site without logging in, and the identity graph links their anonymous device ID to their known profile using contextual identifiers.",
+    "t3": "Experience Platform uses the customer's unified behavioral history to deliver a personalized on-site experience even though the customer is not authenticated."
+  }
+]

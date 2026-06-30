@@ -1,0 +1,18 @@
+{
+  "dataset_slug": "new_aep_wf_scrap",
+  "model_slug": "bge-base-en-v1.5",
+  "base_model": "BAAI/bge-base-en-v1.5",
+  "schema": "step",
+  "best_val_acc": 0.623508,
+  "best_val_auc": 0.675685,
+  "test_acc": 0.612403,
+  "test_auc": 0.66576,
+  "test_f1": 0.632353,
+  "test_loss": 0.64865,
+  "n_train": 13904,
+  "n_val": 1676,
+  "n_test": 1548,
+  "epochs": 4,
+  "batch_size": 64,
+  "max_seq_len": 469
+}

@@ -1,0 +1,47 @@
+11:58:10 INFO run_dir=/mnt/localssd/crossencoder_sweep/runs/ajo_newstyle/all-mpnet-base-v2
+11:58:10 INFO device=cuda:0  bf16=True  physical_gpu=0  CUDA_VISIBLE_DEVICES=0
+11:58:10 INFO dataset=ajo_newstyle  model=all-mpnet-base-v2  backbone=sentence-transformers/all-mpnet-base-v2
+11:58:10 INFO tokenizer <- sentence-transformers/all-mpnet-base-v2
+11:58:11 INFO split files: ['train.jsonl', 'val.jsonl', 'test.jsonl']
+11:58:11 INFO scanning max JOINT token length across all splits ...
+11:58:52 INFO   observed_max_joint=512 -> max_seq_len=512 (cap=512, scan=41.3s)
+11:58:52 INFO loading datasets ...
+11:58:52 INFO   schema=newstyle  train=20897  val=2612  test=2613
+11:58:52 INFO building CrossEncoderClassifier  backbone=sentence-transformers/all-mpnet-base-v2
+11:58:53 INFO   hidden_size=768  trainable_params=109,487,233
+11:58:53 INFO   total_steps=1308  warmup_steps=130
+11:59:11 INFO   e1 step    50/327  loss=0.6965  acc=0.5088  lr0=7.69e-06 lr1=3.85e-04
+11:59:29 INFO   e1 step   100/327  loss=0.6966  acc=0.5058  lr0=1.54e-05 lr1=7.69e-04
+11:59:47 INFO   e1 step   150/327  loss=0.6952  acc=0.5105  lr0=1.97e-05 lr1=9.83e-04
+12:00:04 INFO   e1 step   200/327  loss=0.6938  acc=0.5159  lr0=1.88e-05 lr1=9.41e-04
+12:00:22 INFO   e1 step   250/327  loss=0.6922  acc=0.5181  lr0=1.80e-05 lr1=8.98e-04
+12:00:39 INFO   e1 step   300/327  loss=0.6900  acc=0.5214  lr0=1.71e-05 lr1=8.56e-04
+12:00:54 INFO [epoch 1] train_loss=0.6889 train_acc=0.5231  val_loss=0.6797 val_acc=0.5337 val_auc=0.5595  elapsed=120.7s
+12:00:54 INFO   saved best.pt  val_acc=0.5337
+12:01:12 INFO   e2 step    50/327  loss=0.6673  acc=0.5687  lr0=1.58e-05 lr1=7.90e-04
+12:01:30 INFO   e2 step   100/327  loss=0.6685  acc=0.5708  lr0=1.50e-05 lr1=7.48e-04
+12:01:47 INFO   e2 step   150/327  loss=0.6659  acc=0.5730  lr0=1.41e-05 lr1=7.05e-04
+12:02:04 INFO   e2 step   200/327  loss=0.6648  acc=0.5735  lr0=1.33e-05 lr1=6.63e-04
+12:02:22 INFO   e2 step   250/327  loss=0.6630  acc=0.5765  lr0=1.24e-05 lr1=6.21e-04
+12:02:39 INFO   e2 step   300/327  loss=0.6594  acc=0.5812  lr0=1.16e-05 lr1=5.78e-04
+12:02:54 INFO [epoch 2] train_loss=0.6579 train_acc=0.5827  val_loss=0.6421 val_acc=0.5850 val_auc=0.6470  elapsed=119.9s
+12:02:55 INFO   saved best.pt  val_acc=0.5850
+12:03:13 INFO   e3 step    50/327  loss=0.6038  acc=0.6497  lr0=1.03e-05 lr1=5.13e-04
+12:03:30 INFO   e3 step   100/327  loss=0.6073  acc=0.6430  lr0=9.41e-06 lr1=4.70e-04
+12:03:48 INFO   e3 step   150/327  loss=0.6021  acc=0.6447  lr0=8.56e-06 lr1=4.28e-04
+12:04:05 INFO   e3 step   200/327  loss=0.6001  acc=0.6471  lr0=7.71e-06 lr1=3.85e-04
+12:04:22 INFO   e3 step   250/327  loss=0.5987  acc=0.6488  lr0=6.86e-06 lr1=3.43e-04
+12:04:40 INFO   e3 step   300/327  loss=0.5972  acc=0.6515  lr0=6.01e-06 lr1=3.01e-04
+12:04:55 INFO [epoch 3] train_loss=0.5955 train_acc=0.6525  val_loss=0.6297 val_acc=0.6041 val_auc=0.6879  elapsed=119.8s
+12:04:55 INFO   saved best.pt  val_acc=0.6041
+12:05:13 INFO   e4 step    50/327  loss=0.5501  acc=0.6969  lr0=4.70e-06 lr1=2.35e-04
+12:05:30 INFO   e4 step   100/327  loss=0.5467  acc=0.6963  lr0=3.85e-06 lr1=1.93e-04
+12:05:48 INFO   e4 step   150/327  loss=0.5436  acc=0.7016  lr0=3.01e-06 lr1=1.50e-04
+12:06:05 INFO   e4 step   200/327  loss=0.5397  acc=0.7032  lr0=2.16e-06 lr1=1.08e-04
+12:06:23 INFO   e4 step   250/327  loss=0.5383  acc=0.7043  lr0=1.31e-06 lr1=6.54e-05
+12:06:40 INFO   e4 step   300/327  loss=0.5373  acc=0.7044  lr0=4.58e-07 lr1=2.29e-05
+12:06:55 INFO [epoch 4] train_loss=0.5378 train_acc=0.7044  val_loss=0.6507 val_acc=0.6164 val_auc=0.7024  elapsed=119.7s
+12:06:56 INFO   saved best.pt  val_acc=0.6164
+12:06:56 INFO loading best.pt for test eval
+12:07:02 INFO [test] loss=0.6527  acc=0.6100  auc=0.6936  f1=0.6002
+12:07:02 INFO [done] run_summary.json written to /mnt/localssd/crossencoder_sweep/runs/ajo_newstyle/all-mpnet-base-v2

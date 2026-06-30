@@ -75,7 +75,7 @@ sys.path.insert(0, str(REPO))
 from src.classifier.model import DirectionalClassifier  # noqa: E402
 from src.classifier.reasoning_model import ReasoningClassifier  # noqa: E402
 
-CKPT = REPO / "/mnt/localssd/automation/internship-causal-embedding/runs/classifier/merged_workflows_all-mpnet-base-v2" / "best.pt"
+CKPT = REPO / "/mnt/localssd/automation/internship-causal-embedding/runs/classifier/new_aep_workflow_scrap_snowflake-arctic-embed-l" / "best.pt"
 SAMPLES = Path("/mnt/localssd/test_samples_milan.json")
 OUT = Path("/mnt/localssd/ajo_doc_dataset.json")
 

@@ -1,0 +1,18 @@
+{
+  "dataset_slug": "aep_causal_wf_v3",
+  "model_slug": "all-mpnet-base-v2",
+  "base_model": "sentence-transformers/all-mpnet-base-v2",
+  "schema": "standard",
+  "best_val_acc": 0.697248,
+  "best_val_auc": 0.776817,
+  "test_acc": 0.77673,
+  "test_auc": 0.855306,
+  "test_f1": 0.765677,
+  "test_loss": 0.69798,
+  "n_train": 21287,
+  "n_val": 327,
+  "n_test": 318,
+  "epochs": 4,
+  "batch_size": 64,
+  "max_seq_len": 446
+}

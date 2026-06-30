@@ -1,0 +1,18 @@
+{
+  "dataset_slug": "new_aep_wf_scrap",
+  "model_slug": "all-mpnet-base-v2",
+  "base_model": "sentence-transformers/all-mpnet-base-v2",
+  "schema": "step",
+  "best_val_acc": 0.667661,
+  "best_val_auc": 0.750656,
+  "test_acc": 0.683463,
+  "test_auc": 0.756464,
+  "test_f1": 0.674202,
+  "test_loss": 0.737982,
+  "n_train": 13904,
+  "n_val": 1676,
+  "n_test": 1548,
+  "epochs": 4,
+  "batch_size": 64,
+  "max_seq_len": 312
+}

@@ -1,0 +1,18 @@
+{
+  "dataset_slug": "new_ajo_workflows",
+  "model_slug": "all-mpnet-base-v2",
+  "base_model": "sentence-transformers/all-mpnet-base-v2",
+  "schema": "standard",
+  "best_val_acc": 0.610121,
+  "best_val_auc": 0.65916,
+  "test_acc": 0.62844,
+  "test_auc": 0.683944,
+  "test_f1": 0.635409,
+  "test_loss": 0.717477,
+  "n_train": 21846,
+  "n_val": 2470,
+  "n_test": 2616,
+  "epochs": 4,
+  "batch_size": 64,
+  "max_seq_len": 350
+}

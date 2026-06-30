@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "Audience to email",
+    "source": "Behind the scenes / Demo of streaming segmentation",
+    "t1": "In the Segment Builder, drag profile attributes and events onto the canvas to define the audience rule (for example, membership ID exists with at least one shopping cart event) and save it.",
+    "t2": "In Journey Optimizer, create a campaign and select that saved audience as the target.",
+    "t3": "Design the email content and send the campaign to the profiles in the audience."
+  },
+  {
+    "id": 2,
+    "title": "Data to segment",
+    "source": "Behind the scenes / Key capabilities",
+    "t1": "Ingest data from your sources into Experience Platform so it lands in datasets that are enabled for Profile.",
+    "t2": "Experience Platform stitches the incoming data fragments into a real-time customer profile using the identity graph.",
+    "t3": "In the Segment Builder, define a rule over the profiles' attributes and events and save it as an audience."
+  },
+  {
+    "id": 3,
+    "title": "Win back churning customers",
+    "source": "Key use cases - Don't Lose Campaigns / Customer AI",
+    "t1": "In Customer AI, build a model that scores each profile's propensity to churn.",
+    "t2": "In the Segment Builder, create an audience that filters profiles by a high churn-propensity score.",
+    "t3": "Activate that audience to a Journey Optimizer journey that sends a personalized win-back offer on the customer's preferred channel."
+  },
+  {
+    "id": 4,
+    "title": "Re-engage cart abandoners",
+    "source": "Key use cases - Intelligent Re-Engagement",
+    "t1": "Run real-time journey analysis to identify profiles that triggered a cart-abandonment event.",
+    "t2": "In the Segment Builder, create a re-engagement audience from those profiles while honoring their consent preferences.",
+    "t3": "Add the audience to a Journey Optimizer journey that delivers a personalized re-engagement message."
+  },
+  {
+    "id": 5,
+    "title": "Web data to destination",
+    "source": "Key capabilities / Basic architecture / Activate to a destination",
+    "t1": "Use the Web SDK to send website interaction events to Experience Platform through the Edge Network.",
+    "t2": "In the Segment Builder, create a segment from the collected behavioral data and save it as an audience.",
+    "t3": "In the Destinations catalog, open a connected destination, select the audience, and activate it."
+  },
+  {
+    "id": 6,
+    "title": "Plan, launch, review",
+    "source": "Marketing workflows",
+    "t1": "Size the target audience and check whether other live journeys target the same profiles to avoid conflicts.",
+    "t2": "Launch the campaign to the audience in Journey Optimizer.",
+    "t3": "In Customer Journey Analytics, review the campaign's performance once it is live."
+  },
+  {
+    "id": 7,
+    "title": "Schema to profile",
+    "source": "Create schemas / Create and populate a dataset",
+    "t1": "In Schemas, click Create Schema, choose the Individual Profile class, name it, and add the field groups you need.",
+    "t2": "In Datasets, click Create Dataset from schema, pick that schema, and drag your data file into the Add Data panel to ingest a batch.",
+    "t3": "Toggle the Profile switch on for the dataset and confirm to enable it for Real-Time Customer Profile."
+  },
+  {
+    "id": 8,
+    "title": "Activate an audience",
+    "source": "Connect to destinations / Activate profiles and audiences to a destination",
+    "t1": "In the Segment Builder, define the audience rule and save it.",
+    "t2": "In the Destinations catalog, select Set up on the destination card and enter the credentials to connect.",
+    "t3": "From the destination, select the audience, map the required identities, and select Finish to activate it."
+  },
+  {
+    "id": 9,
+    "title": "Use a playbook",
+    "source": "Create and publish a playbook instance",
+    "t1": "In the Playbooks gallery, filter by product, industry, or channel and open a playbook card.",
+    "t2": "From your inspiration sandbox, select Create Instance to generate the playbook's schemas, audiences, journey, and messages.",
+    "t3": "Click Publish to create a package and import it into a development sandbox, mapping the schemas to yours."
+  },
+  {
+    "id": 10,
+    "title": "Personalize an offer",
+    "source": "Key use cases - Lifetime Value / Contextual Recognition",
+    "t1": "Experience Platform builds a rich profile by linking the customer's identities in the identity graph.",
+    "t2": "In Offer Decisioning, create an offer with eligibility rules based on the customer's attributes and behavior.",
+    "t3": "Activate the offer to the customer in real time across web, email, or app channels."
+  }
+]

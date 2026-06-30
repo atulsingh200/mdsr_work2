@@ -1,0 +1,18 @@
+{
+  "dataset_slug": "aep_dataset",
+  "model_slug": "all-MiniLM-L6-v2",
+  "base_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "schema": "standard",
+  "best_val_acc": 0.955437,
+  "best_val_auc": 0.982282,
+  "test_acc": 0.912057,
+  "test_auc": 0.953685,
+  "test_f1": 0.914088,
+  "test_loss": 0.52262,
+  "n_train": 67500,
+  "n_val": 8460,
+  "n_test": 8460,
+  "epochs": 4,
+  "batch_size": 64,
+  "max_seq_len": 512
+}

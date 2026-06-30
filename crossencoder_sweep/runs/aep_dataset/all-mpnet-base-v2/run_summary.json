@@ -1,0 +1,18 @@
+{
+  "dataset_slug": "aep_dataset",
+  "model_slug": "all-mpnet-base-v2",
+  "base_model": "sentence-transformers/all-mpnet-base-v2",
+  "schema": "standard",
+  "best_val_acc": 0.951182,
+  "best_val_auc": 0.980604,
+  "test_acc": 0.925059,
+  "test_auc": 0.962483,
+  "test_f1": 0.926739,
+  "test_loss": 0.434386,
+  "n_train": 67500,
+  "n_val": 8460,
+  "n_test": 8460,
+  "epochs": 4,
+  "batch_size": 64,
+  "max_seq_len": 512
+}

@@ -1,0 +1,18 @@
+{
+  "dataset_slug": "new_aep_wf_scrap",
+  "model_slug": "e5-large-v2",
+  "base_model": "intfloat/e5-large-v2",
+  "schema": "step",
+  "best_val_acc": 0.590095,
+  "best_val_auc": 0.626542,
+  "test_acc": 0.580749,
+  "test_auc": 0.616824,
+  "test_f1": 0.57554,
+  "test_loss": 0.694578,
+  "n_train": 13904,
+  "n_val": 1676,
+  "n_test": 1548,
+  "epochs": 4,
+  "batch_size": 16,
+  "max_seq_len": 312
+}

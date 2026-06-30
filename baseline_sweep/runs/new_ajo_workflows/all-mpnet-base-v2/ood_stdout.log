@@ -1,0 +1,54 @@
+loading checkpoint <- /mnt/localssd/baseline_sweep/runs/new_ajo_workflows/all-mpnet-base-v2/best.pt
+device=cuda:0  bf16=True
+base_model=sentence-transformers/all-mpnet-base-v2  head=MLP(4d->512->128->1, act=gelu, norm=layer, dropout=0.1)  n_tiers=0  max_seq_len=350
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 6777.53it/s]
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 7567.51it/s]
+
+=== Milan eval (test_samples_milan.json) ===
+  ground_truth : ['t1', 't2', 't3', 't4', 't5', 't6']
+  predicted    : ['t3', 't6', 't1', 't2', 't5', 't4']
+  order_match  : False
+  pairwise_acc : 0.6333 (19/30)
+  per_event:
+    t1: wins=3 net=1.305 pred_rank=3 true_rank=1
+    t2: wins=2 net=1.165 pred_rank=4 true_rank=2
+    t3: wins=5 net=2.716 pred_rank=1 true_rank=3
+    t4: wins=0 net=-3.692 pred_rank=6 true_rank=4
+    t5: wins=1 net=-2.970 pred_rank=5 true_rank=5
+    t6: wins=4 net=1.476 pred_rank=2 true_rank=6
+
+=== AJO ordering eval (ajo_orchestrated_workflows_flat.json) ===
+  correct: 7/30  perfect_order_rate=0.2333
+  [X] id=1  predicted=['t2', 't1', 't3']
+  [X] id=2  predicted=['t3', 't1', 't2']
+  [X] id=3  predicted=['t3', 't2', 't1']
+  [OK] id=4  predicted=['t1', 't2', 't3']
+  [OK] id=5  predicted=['t1', 't2', 't3']
+  [X] id=6  predicted=['t2', 't3', 't1']
+  [X] id=7  predicted=['t3', 't1', 't2']
+  [X] id=8  predicted=['t3', 't2', 't1']
+  [OK] id=9  predicted=['t1', 't2', 't3']
+  [X] id=10  predicted=['t3', 't1', 't2']
+  [X] id=11  predicted=['t3', 't2', 't1']
+  [OK] id=12  predicted=['t1', 't2', 't3']
+  [X] id=13  predicted=['t3', 't1', 't2']
+  [OK] id=14  predicted=['t1', 't2', 't3']
+  [X] id=15  predicted=['t3', 't1', 't2']
+  [X] id=16  predicted=['t2', 't3', 't1']
+  [X] id=17  predicted=['t1', 't3', 't2']
+  [X] id=18  predicted=['t2', 't3', 't1']
+  [X] id=19  predicted=['t2', 't3', 't1']
+  [X] id=20  predicted=['t3', 't2', 't1']
+  [X] id=21  predicted=['t3', 't2', 't1']
+  [X] id=22  predicted=['t1', 't3', 't2']
+  [X] id=23  predicted=['t3', 't2', 't1']
+  [X] id=24  predicted=['t2', 't1', 't3']
+  [OK] id=25  predicted=['t1', 't2', 't3']
+  [X] id=26  predicted=['t3', 't2', 't1']
+  [OK] id=27  predicted=['t1', 't2', 't3']
+  [X] id=28  predicted=['t3', 't2', 't1']
+  [X] id=29  predicted=['t1', 't3', 't2']
+  [X] id=30  predicted=['t3', 't1', 't2']
+
+wrote /mnt/localssd/baseline_sweep/runs/new_ajo_workflows/all-mpnet-base-v2/ood_results.json

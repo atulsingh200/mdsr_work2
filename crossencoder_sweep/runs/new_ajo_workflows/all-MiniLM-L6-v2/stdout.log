@@ -1,0 +1,49 @@
+13:00:11 INFO run_dir=/mnt/localssd/crossencoder_sweep/runs/new_ajo_workflows/all-MiniLM-L6-v2
+13:00:11 INFO device=cuda:0  bf16=True  physical_gpu=1  CUDA_VISIBLE_DEVICES=1
+13:00:11 INFO dataset=new_ajo_workflows  model=all-MiniLM-L6-v2  backbone=sentence-transformers/all-MiniLM-L6-v2
+13:00:11 INFO tokenizer <- sentence-transformers/all-MiniLM-L6-v2
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+13:00:11 INFO split files: ['directional_train.jsonl', 'directional_val.jsonl', 'directional_test.jsonl']
+13:00:11 INFO scanning max JOINT token length across all splits ...
+13:00:16 INFO   observed_max_joint=512 -> max_seq_len=512 (cap=512, scan=4.8s)
+13:00:16 INFO loading datasets ...
+13:00:16 INFO   schema=standard  train=21846  val=2470  test=2616
+13:00:16 INFO building CrossEncoderClassifier  backbone=sentence-transformers/all-MiniLM-L6-v2
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 6305.75it/s]
+13:00:17 INFO   hidden_size=384  trainable_params=22,713,601
+13:00:17 INFO   total_steps=1368  warmup_steps=136
+13:00:20 INFO   e1 step    50/342  loss=0.7146  acc=0.4909  lr0=7.35e-06 lr1=3.68e-04
+13:00:21 INFO   e1 step   100/342  loss=0.7108  acc=0.4913  lr0=1.47e-05 lr1=7.35e-04
+13:00:22 INFO   e1 step   150/342  loss=0.7066  acc=0.4974  lr0=1.98e-05 lr1=9.89e-04
+13:00:24 INFO   e1 step   200/342  loss=0.7047  acc=0.4980  lr0=1.90e-05 lr1=9.48e-04
+13:00:25 INFO   e1 step   250/342  loss=0.7033  acc=0.4984  lr0=1.81e-05 lr1=9.07e-04
+13:00:26 INFO   e1 step   300/342  loss=0.7017  acc=0.4996  lr0=1.73e-05 lr1=8.67e-04
+13:00:28 INFO [epoch 1] train_loss=0.7007 train_acc=0.4995  val_loss=0.6844 val_acc=0.5109 val_auc=0.5449  elapsed=11.3s
+13:00:28 INFO   saved best.pt  val_acc=0.5109
+13:00:30 INFO   e2 step    50/342  loss=0.6818  acc=0.5238  lr0=1.58e-05 lr1=7.92e-04
+13:00:31 INFO   e2 step   100/342  loss=0.6845  acc=0.5158  lr0=1.50e-05 lr1=7.52e-04
+13:00:33 INFO   e2 step   150/342  loss=0.6845  acc=0.5166  lr0=1.42e-05 lr1=7.11e-04
+13:00:34 INFO   e2 step   200/342  loss=0.6840  acc=0.5159  lr0=1.34e-05 lr1=6.70e-04
+13:00:35 INFO   e2 step   250/342  loss=0.6830  acc=0.5166  lr0=1.26e-05 lr1=6.30e-04
+13:00:37 INFO   e2 step   300/342  loss=0.6826  acc=0.5159  lr0=1.18e-05 lr1=5.89e-04
+13:00:38 INFO [epoch 2] train_loss=0.6814 train_acc=0.5166  val_loss=0.6660 val_acc=0.5377 val_auc=0.5737  elapsed=10.1s
+13:00:39 INFO   saved best.pt  val_acc=0.5377
+13:00:40 INFO   e3 step    50/342  loss=0.6622  acc=0.5491  lr0=1.03e-05 lr1=5.15e-04
+13:00:42 INFO   e3 step   100/342  loss=0.6647  acc=0.5464  lr0=9.48e-06 lr1=4.74e-04
+13:00:43 INFO   e3 step   150/342  loss=0.6652  acc=0.5425  lr0=8.67e-06 lr1=4.33e-04
+13:00:44 INFO   e3 step   200/342  loss=0.6644  acc=0.5453  lr0=7.86e-06 lr1=3.93e-04
+13:00:46 INFO   e3 step   250/342  loss=0.6642  acc=0.5454  lr0=7.05e-06 lr1=3.52e-04
+13:00:47 INFO   e3 step   300/342  loss=0.6639  acc=0.5441  lr0=6.23e-06 lr1=3.12e-04
+13:00:49 INFO [epoch 3] train_loss=0.6635 train_acc=0.5443  val_loss=0.6669 val_acc=0.5449 val_auc=0.5915  elapsed=10.2s
+13:00:49 INFO   saved best.pt  val_acc=0.5449
+13:00:50 INFO   e4 step    50/342  loss=0.6531  acc=0.5578  lr0=4.74e-06 lr1=2.37e-04
+13:00:52 INFO   e4 step   100/342  loss=0.6556  acc=0.5625  lr0=3.93e-06 lr1=1.96e-04
+13:00:53 INFO   e4 step   150/342  loss=0.6569  acc=0.5626  lr0=3.12e-06 lr1=1.56e-04
+13:00:54 INFO   e4 step   200/342  loss=0.6567  acc=0.5607  lr0=2.31e-06 lr1=1.15e-04
+13:00:56 INFO   e4 step   250/342  loss=0.6550  acc=0.5626  lr0=1.49e-06 lr1=7.47e-05
+13:00:57 INFO   e4 step   300/342  loss=0.6552  acc=0.5617  lr0=6.82e-07 lr1=3.41e-05
+13:00:59 INFO [epoch 4] train_loss=0.6547 train_acc=0.5620  val_loss=0.6686 val_acc=0.5591 val_auc=0.5967  elapsed=9.9s
+13:00:59 INFO   saved best.pt  val_acc=0.5591
+13:00:59 INFO loading best.pt for test eval
+13:01:00 INFO [test] loss=0.6515  acc=0.5558  auc=0.5907  f1=0.5805
+13:01:00 INFO [done] run_summary.json written to /mnt/localssd/crossencoder_sweep/runs/new_ajo_workflows/all-MiniLM-L6-v2

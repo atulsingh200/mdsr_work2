@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "Add users",
+    "url": "https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/admin/add-users",
+    "t1": "In Adobe Admin Console, open the Experience Platform product and add the user's email to the AEP Default All Users product profile.",
+    "t2": "In the Platform UI under Permissions > Roles, create a role and choose its sandboxes and feature permissions.",
+    "t3": "Open the role's Users tab, select Add Users, and add the user to grant the configured access."
+  },
+  {
+    "id": 2,
+    "title": "Add developers",
+    "url": "https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/admin/add-developers",
+    "t1": "In Adobe Admin Console, open Experience Platform's product profile, go to the Developers tab, and add the developer's email.",
+    "t2": "After the developer generates API credentials in Developer Console, go to Permissions > Roles, open a role's API Credentials tab, and add their credentials.",
+    "t3": "On the same role's Users tab, add the developer as a user so they can test their integrations in the Platform UI."
+  },
+  {
+    "id": 3,
+    "title": "Configure attribute-based access control",
+    "url": "https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/admin/configure-attribute-based-access-control",
+    "t1": "Open the role's Labels tab and add the data-usage label (for example, Regulated Health Data) to the role.",
+    "t2": "Open the schema (and audience) and add the same label to the fields and objects you want to restrict.",
+    "t3": "Go to Permissions > Policies and activate the Default Label-Based Access Control policy to enforce the restriction."
+  },
+  {
+    "id": 4,
+    "title": "Create and populate a dataset",
+    "url": "https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data",
+    "t1": "Select Datasets in the left nav, click Create Dataset, choose Create Dataset from schema, pick the schema, name it, and click Finish.",
+    "t2": "In the Add Data panel, drag the data file into the dataset to start a batch and wait for the batch status to reach Success.",
+    "t3": "Toggle the Profile button on in the right panel and confirm to enable the dataset for Real-Time Customer Profile."
+  },
+  {
+    "id": 5,
+    "title": "Create destinations and activate data",
+    "url": "https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/destinations/create-destinations-and-activate-data",
+    "t1": "In Destinations > Catalog, find the desired destination.",
+    "t2": "On the destination card, select Set up (or configure a new instance).",
+    "t3": "Enter the required credentials and select Connect to destination to authenticate and verify the connection."
+  },
+  {
+    "id": 6,
+    "title": "Create merge policies",
+    "url": "https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/profiles/create-merge-policies",
+    "t1": "Select Profiles > Merge Policies, click Create Merge Policy, then name it and set its class, ID stitching, and default options; select Next.",
+    "t2": "Choose the merge method (Timestamp ordered or Dataset precedence) and select Next.",
+    "t3": "Review the merge policy details and select Finish to save it."
+  },
+  {
+    "id": 7,
+    "title": "Create schemas",
+    "url": "https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/schemas/create-schemas",
+    "t1": "Select Schemas in the left nav, click Create Schema, and choose a base class (for example, Individual Profile); select Next.",
+    "t2": "Give the schema a name and optional description, then click Finish.",
+    "t3": "Add fields by typing field names or adding field groups (for example, the Loyalty field group) to the schema."
+  },
+  {
+    "id": 8,
+    "title": "Use sandboxes (reset a development sandbox)",
+    "url": "https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/admin/use-sandboxes",
+    "t1": "Go to Sandboxes in the left nav and select the development sandbox you want to reset.",
+    "t2": "Select Sandbox Reset and acknowledge the warning that all user-created resources will be deleted.",
+    "t3": "Manually type the sandbox name to confirm and select Reset to return it to a clean state."
+  },
+  {
+    "id": 9,
+    "title": "Copy packages between sandboxes",
+    "url": "https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/admin/copy-objects-between-sandboxes",
+    "t1": "In the source (development) sandbox, create a package and add the objects (schemas, journeys, and so on) to it.",
+    "t2": "On the package inventory page, review the artifacts and Publish the package.",
+    "t3": "From the target sandbox, select Import, choose the target sandbox, review dependencies, and import the package."
+  },
+  {
+    "id": 10,
+    "title": "Share packages across IMS Orgs",
+    "url": "https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/admin/share-packages-across-orgs",
+    "t1": "In the source org, open Partner Orgs > Manage Partner Orgs, enter the target org ID, and submit a sharing request.",
+    "t2": "An admin in the target org reviews and approves the incoming partnership request.",
+    "t3": "Back in the source org's package inventory, select the package, choose the approved org, and submit the share job."
+  }
+]

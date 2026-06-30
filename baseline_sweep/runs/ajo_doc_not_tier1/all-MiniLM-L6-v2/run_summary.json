@@ -1,0 +1,18 @@
+{
+  "dataset_slug": "ajo_doc_not_tier1",
+  "model_slug": "all-MiniLM-L6-v2",
+  "base_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "schema": "standard",
+  "best_val_acc": 0.994732,
+  "best_val_auc": 0.999175,
+  "test_acc": 0.981518,
+  "test_auc": 0.995265,
+  "test_f1": 0.98169,
+  "test_loss": 0.100465,
+  "n_train": 88000,
+  "n_val": 11200,
+  "n_test": 11200,
+  "epochs": 4,
+  "batch_size": 64,
+  "max_seq_len": 278
+}

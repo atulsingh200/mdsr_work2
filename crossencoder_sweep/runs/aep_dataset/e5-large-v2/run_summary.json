@@ -1,0 +1,18 @@
+{
+  "dataset_slug": "aep_dataset",
+  "model_slug": "e5-large-v2",
+  "base_model": "intfloat/e5-large-v2",
+  "schema": "standard",
+  "best_val_acc": 0.502837,
+  "best_val_auc": 0.5,
+  "test_acc": 0.510638,
+  "test_auc": 0.5,
+  "test_f1": 0.676056,
+  "test_loss": 0.72534,
+  "n_train": 67500,
+  "n_val": 8460,
+  "n_test": 8460,
+  "epochs": 4,
+  "batch_size": 16,
+  "max_seq_len": 512
+}

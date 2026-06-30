@@ -1,0 +1,88 @@
+loading checkpoint <- /mnt/localssd/baseline_sweep/runs/new_ajo_workflows/deberta-v3-large/best.pt
+device=cuda:0  bf16=False
+base_model=microsoft/deberta-v3-large  head=MLP(4d->512->128->1, act=gelu, norm=layer, dropout=0.1)  n_tiers=0  max_seq_len=342
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/390 [00:00<?, ?it/s]Loading weights: 100%|██████████| 390/390 [00:00<00:00, 33022.68it/s]
+[transformers] [1mDebertaV2Model LOAD REPORT[0m from: microsoft/deberta-v3-large
+Key                                     | Status     |  | 
+----------------------------------------+------------+--+-
+mask_predictions.dense.weight           | UNEXPECTED |  | 
+lm_predictions.lm_head.dense.bias       | UNEXPECTED |  | 
+lm_predictions.lm_head.LayerNorm.bias   | UNEXPECTED |  | 
+mask_predictions.classifier.bias        | UNEXPECTED |  | 
+lm_predictions.lm_head.dense.weight     | UNEXPECTED |  | 
+mask_predictions.LayerNorm.bias         | UNEXPECTED |  | 
+lm_predictions.lm_head.bias             | UNEXPECTED |  | 
+mask_predictions.dense.bias             | UNEXPECTED |  | 
+lm_predictions.lm_head.LayerNorm.weight | UNEXPECTED |  | 
+mask_predictions.classifier.weight      | UNEXPECTED |  | 
+mask_predictions.LayerNorm.weight       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Loading weights:   0%|          | 0/390 [00:00<?, ?it/s]Loading weights: 100%|██████████| 390/390 [00:00<00:00, 31714.04it/s]
+[transformers] [1mDebertaV2Model LOAD REPORT[0m from: microsoft/deberta-v3-large
+Key                                     | Status     |  | 
+----------------------------------------+------------+--+-
+mask_predictions.dense.weight           | UNEXPECTED |  | 
+lm_predictions.lm_head.dense.bias       | UNEXPECTED |  | 
+lm_predictions.lm_head.LayerNorm.bias   | UNEXPECTED |  | 
+mask_predictions.classifier.bias        | UNEXPECTED |  | 
+lm_predictions.lm_head.dense.weight     | UNEXPECTED |  | 
+mask_predictions.LayerNorm.bias         | UNEXPECTED |  | 
+lm_predictions.lm_head.bias             | UNEXPECTED |  | 
+mask_predictions.dense.bias             | UNEXPECTED |  | 
+lm_predictions.lm_head.LayerNorm.weight | UNEXPECTED |  | 
+mask_predictions.classifier.weight      | UNEXPECTED |  | 
+mask_predictions.LayerNorm.weight       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+
+=== Milan eval (test_samples_milan.json) ===
+  ground_truth : ['t1', 't2', 't3', 't4', 't5', 't6']
+  predicted    : ['t1', 't2', 't6', 't4', 't5', 't3']
+  order_match  : False
+  pairwise_acc : 0.5000 (15/30)
+  per_event:
+    t1: wins=5 net=0.001 pred_rank=1 true_rank=1
+    t2: wins=4 net=0.001 pred_rank=2 true_rank=2
+    t3: wins=0 net=-0.001 pred_rank=6 true_rank=3
+    t4: wins=2 net=-0.000 pred_rank=4 true_rank=4
+    t5: wins=1 net=-0.001 pred_rank=5 true_rank=5
+    t6: wins=3 net=0.000 pred_rank=3 true_rank=6
+
+=== AJO ordering eval (ajo_orchestrated_workflows_flat.json) ===
+  correct: 10/30  perfect_order_rate=0.3333
+  [OK] id=1  predicted=['t1', 't2', 't3']
+  [OK] id=2  predicted=['t1', 't2', 't3']
+  [X] id=3  predicted=['t2', 't3', 't1']
+  [X] id=4  predicted=['t2', 't1', 't3']
+  [X] id=5  predicted=['t2', 't3', 't1']
+  [X] id=6  predicted=['t1', 't3', 't2']
+  [X] id=7  predicted=['t2', 't1', 't3']
+  [X] id=8  predicted=['t2', 't1', 't3']
+  [X] id=9  predicted=['t1', 't3', 't2']
+  [X] id=10  predicted=['t1', 't3', 't2']
+  [X] id=11  predicted=['t2', 't1', 't3']
+  [OK] id=12  predicted=['t1', 't2', 't3']
+  [OK] id=13  predicted=['t1', 't2', 't3']
+  [OK] id=14  predicted=['t1', 't2', 't3']
+  [OK] id=15  predicted=['t1', 't2', 't3']
+  [X] id=16  predicted=['t2', 't1', 't3']
+  [X] id=17  predicted=['t2', 't3', 't1']
+  [X] id=18  predicted=['t1', 't3', 't2']
+  [OK] id=19  predicted=['t1', 't2', 't3']
+  [X] id=20  predicted=['t3', 't1', 't2']
+  [OK] id=21  predicted=['t1', 't2', 't3']
+  [OK] id=22  predicted=['t1', 't2', 't3']
+  [X] id=23  predicted=['t2', 't1', 't3']
+  [OK] id=24  predicted=['t1', 't2', 't3']
+  [X] id=25  predicted=['t2', 't1', 't3']
+  [X] id=26  predicted=['t1', 't3', 't2']
+  [X] id=27  predicted=['t2', 't1', 't3']
+  [X] id=28  predicted=['t2', 't1', 't3']
+  [X] id=29  predicted=['t1', 't3', 't2']
+  [X] id=30  predicted=['t2', 't1', 't3']
+
+wrote /mnt/localssd/baseline_sweep/runs/new_ajo_workflows/deberta-v3-large/ood_results.json

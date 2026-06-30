@@ -1,0 +1,18 @@
+{
+  "dataset_slug": "ajo_newstyle",
+  "model_slug": "all-mpnet-base-v2",
+  "base_model": "sentence-transformers/all-mpnet-base-v2",
+  "schema": "newstyle",
+  "best_val_acc": 0.616386,
+  "best_val_auc": 0.702431,
+  "test_acc": 0.610027,
+  "test_auc": 0.693555,
+  "test_f1": 0.600235,
+  "test_loss": 0.652704,
+  "n_train": 20897,
+  "n_val": 2612,
+  "n_test": 2613,
+  "epochs": 4,
+  "batch_size": 64,
+  "max_seq_len": 512
+}

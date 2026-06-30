@@ -1,0 +1,18 @@
+{
+  "dataset_slug": "aep_causal_wf_v3",
+  "model_slug": "bge-large-en-v1.5",
+  "base_model": "BAAI/bge-large-en-v1.5",
+  "schema": "standard",
+  "best_val_acc": 0.636086,
+  "best_val_auc": 0.679266,
+  "test_acc": 0.679245,
+  "test_auc": 0.722536,
+  "test_f1": 0.679245,
+  "test_loss": 0.623777,
+  "n_train": 21287,
+  "n_val": 327,
+  "n_test": 318,
+  "epochs": 4,
+  "batch_size": 16,
+  "max_seq_len": 512
+}

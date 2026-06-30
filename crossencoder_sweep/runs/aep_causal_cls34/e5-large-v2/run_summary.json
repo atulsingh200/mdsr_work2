@@ -1,0 +1,18 @@
+{
+  "dataset_slug": "aep_causal_cls34",
+  "model_slug": "e5-large-v2",
+  "base_model": "intfloat/e5-large-v2",
+  "schema": "standard",
+  "best_val_acc": 0.506496,
+  "best_val_auc": 0.5,
+  "test_acc": 0.488841,
+  "test_auc": 0.5,
+  "test_f1": 0.656673,
+  "test_loss": 0.698629,
+  "n_train": 110775,
+  "n_val": 6004,
+  "n_test": 6004,
+  "epochs": 4,
+  "batch_size": 16,
+  "max_seq_len": 512
+}

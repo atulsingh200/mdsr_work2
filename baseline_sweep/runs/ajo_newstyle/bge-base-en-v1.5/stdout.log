@@ -1,0 +1,53 @@
+23:02:29 INFO run_dir=/mnt/localssd/baseline_sweep/runs/ajo_newstyle/bge-base-en-v1.5
+23:02:29 INFO device=cuda:0  bf16=True  physical_gpu=3  CUDA_VISIBLE_DEVICES=3
+23:02:29 INFO dataset=ajo_newstyle  model=bge-base-en-v1.5  backbone=BAAI/bge-base-en-v1.5
+23:02:29 INFO tokenizer <- BAAI/bge-base-en-v1.5
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+23:02:30 INFO split files: ['train.jsonl', 'val.jsonl', 'test.jsonl']
+23:02:30 INFO scanning max token length across all splits ...
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (1021 > 512). Running this sequence through the model will result in indexing errors
+23:02:59 INFO   observed_max=21129 -> max_seq_len=512 (cap=512, scan=28.8s)
+23:02:59 INFO loading datasets ...
+23:02:59 INFO   schema=newstyle  train=20897  val=2612  test=2613
+23:02:59 INFO building DirectionalClassifier  backbone=BAAI/bge-base-en-v1.5  head=MLP(4d->512->128->1, act=gelu, norm=layer, dropout=0.1)  n_tiers=0
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 7909.28it/s]
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 7711.97it/s]
+23:03:00 INFO   hidden_size=768  trainable_params=220,611,073
+23:03:00 INFO   total_steps=1308  warmup_steps=130
+23:03:21 INFO   e1 step    50/327  loss=0.7560  acc=0.5334  lr0=7.69e-06 lr1=3.85e-04
+23:03:41 INFO   e1 step   100/327  loss=0.7285  acc=0.5353  lr0=1.54e-05 lr1=7.69e-04
+23:04:01 INFO   e1 step   150/327  loss=0.7158  acc=0.5418  lr0=1.97e-05 lr1=9.83e-04
+23:04:21 INFO   e1 step   200/327  loss=0.7053  acc=0.5473  lr0=1.88e-05 lr1=9.41e-04
+23:04:41 INFO   e1 step   250/327  loss=0.6964  acc=0.5542  lr0=1.80e-05 lr1=8.98e-04
+23:05:01 INFO   e1 step   300/327  loss=0.6897  acc=0.5606  lr0=1.71e-05 lr1=8.56e-04
+23:05:17 INFO [epoch 1] train_loss=0.6861 train_acc=0.5638  val_loss=0.6394 val_acc=0.5877 val_auc=0.6563  elapsed=136.4s
+23:05:18 INFO   saved best.pt  val_acc=0.5877
+23:05:38 INFO   e2 step    50/327  loss=0.6019  acc=0.6397  lr0=1.58e-05 lr1=7.90e-04
+23:05:58 INFO   e2 step   100/327  loss=0.6026  acc=0.6370  lr0=1.50e-05 lr1=7.48e-04
+23:06:18 INFO   e2 step   150/327  loss=0.5986  acc=0.6452  lr0=1.41e-05 lr1=7.05e-04
+23:06:38 INFO   e2 step   200/327  loss=0.5950  acc=0.6509  lr0=1.33e-05 lr1=6.63e-04
+23:06:58 INFO   e2 step   250/327  loss=0.5926  acc=0.6505  lr0=1.24e-05 lr1=6.21e-04
+23:07:18 INFO   e2 step   300/327  loss=0.5905  acc=0.6501  lr0=1.16e-05 lr1=5.78e-04
+23:07:33 INFO [epoch 2] train_loss=0.5890 train_acc=0.6500  val_loss=0.6024 val_acc=0.6126 val_auc=0.7052  elapsed=135.7s
+23:07:35 INFO   saved best.pt  val_acc=0.6126
+23:07:55 INFO   e3 step    50/327  loss=0.5329  acc=0.6937  lr0=1.03e-05 lr1=5.13e-04
+23:08:15 INFO   e3 step   100/327  loss=0.5229  acc=0.6989  lr0=9.41e-06 lr1=4.70e-04
+23:08:35 INFO   e3 step   150/327  loss=0.5167  acc=0.7064  lr0=8.56e-06 lr1=4.28e-04
+23:08:55 INFO   e3 step   200/327  loss=0.5156  acc=0.7049  lr0=7.71e-06 lr1=3.85e-04
+23:09:15 INFO   e3 step   250/327  loss=0.5163  acc=0.7051  lr0=6.86e-06 lr1=3.43e-04
+23:09:35 INFO   e3 step   300/327  loss=0.5133  acc=0.7074  lr0=6.01e-06 lr1=3.01e-04
+23:09:50 INFO [epoch 3] train_loss=0.5122 train_acc=0.7084  val_loss=0.6195 val_acc=0.6298 val_auc=0.7283  elapsed=135.6s
+23:09:52 INFO   saved best.pt  val_acc=0.6298
+23:10:12 INFO   e4 step    50/327  loss=0.4537  acc=0.7544  lr0=4.70e-06 lr1=2.35e-04
+23:10:32 INFO   e4 step   100/327  loss=0.4437  acc=0.7570  lr0=3.85e-06 lr1=1.93e-04
+23:10:52 INFO   e4 step   150/327  loss=0.4456  acc=0.7580  lr0=3.01e-06 lr1=1.50e-04
+23:11:12 INFO   e4 step   200/327  loss=0.4424  acc=0.7598  lr0=2.16e-06 lr1=1.08e-04
+23:11:32 INFO   e4 step   250/327  loss=0.4425  acc=0.7599  lr0=1.31e-06 lr1=6.54e-05
+23:11:52 INFO   e4 step   300/327  loss=0.4440  acc=0.7575  lr0=4.58e-07 lr1=2.29e-05
+23:12:07 INFO [epoch 4] train_loss=0.4456 train_acc=0.7562  val_loss=0.6860 val_acc=0.6309 val_auc=0.7344  elapsed=135.9s
+23:12:09 INFO   saved best.pt  val_acc=0.6309
+23:12:10 INFO loading best.pt for test eval
+23:12:15 INFO [test] loss=0.6752  acc=0.6334  auc=0.7264  f1=0.6267
+23:12:15 INFO [test] per-tier-pair accuracy:
+23:12:15 INFO         T0-T0  n= 2613  acc=0.6334
+23:12:15 INFO [done] run_summary.json written to /mnt/localssd/baseline_sweep/runs/ajo_newstyle/bge-base-en-v1.5

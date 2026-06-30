@@ -1,0 +1,18 @@
+{
+  "dataset_slug": "aep_dataset",
+  "model_slug": "bge-base-en-v1.5",
+  "base_model": "BAAI/bge-base-en-v1.5",
+  "schema": "standard",
+  "best_val_acc": 0.930969,
+  "best_val_auc": 0.970261,
+  "test_acc": 0.896336,
+  "test_auc": 0.939639,
+  "test_f1": 0.899668,
+  "test_loss": 0.772403,
+  "n_train": 67500,
+  "n_val": 8460,
+  "n_test": 8460,
+  "epochs": 4,
+  "batch_size": 64,
+  "max_seq_len": 512
+}

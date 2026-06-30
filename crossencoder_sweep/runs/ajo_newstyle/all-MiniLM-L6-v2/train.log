@@ -1,0 +1,47 @@
+12:07:10 INFO run_dir=/mnt/localssd/crossencoder_sweep/runs/ajo_newstyle/all-MiniLM-L6-v2
+12:07:10 INFO device=cuda:0  bf16=True  physical_gpu=0  CUDA_VISIBLE_DEVICES=0
+12:07:10 INFO dataset=ajo_newstyle  model=all-MiniLM-L6-v2  backbone=sentence-transformers/all-MiniLM-L6-v2
+12:07:10 INFO tokenizer <- sentence-transformers/all-MiniLM-L6-v2
+12:07:11 INFO split files: ['train.jsonl', 'val.jsonl', 'test.jsonl']
+12:07:11 INFO scanning max JOINT token length across all splits ...
+12:07:52 INFO   observed_max_joint=512 -> max_seq_len=512 (cap=512, scan=41.3s)
+12:07:52 INFO loading datasets ...
+12:07:52 INFO   schema=newstyle  train=20897  val=2612  test=2613
+12:07:52 INFO building CrossEncoderClassifier  backbone=sentence-transformers/all-MiniLM-L6-v2
+12:07:53 INFO   hidden_size=384  trainable_params=22,713,601
+12:07:53 INFO   total_steps=1308  warmup_steps=130
+12:07:58 INFO   e1 step    50/327  loss=0.7119  acc=0.4878  lr0=7.69e-06 lr1=3.85e-04
+12:08:01 INFO   e1 step   100/327  loss=0.7081  acc=0.4964  lr0=1.54e-05 lr1=7.69e-04
+12:08:04 INFO   e1 step   150/327  loss=0.7069  acc=0.4906  lr0=1.97e-05 lr1=9.83e-04
+12:08:08 INFO   e1 step   200/327  loss=0.7048  acc=0.4903  lr0=1.88e-05 lr1=9.41e-04
+12:08:11 INFO   e1 step   250/327  loss=0.7036  acc=0.4903  lr0=1.80e-05 lr1=8.98e-04
+12:08:15 INFO   e1 step   300/327  loss=0.7028  acc=0.4907  lr0=1.71e-05 lr1=8.56e-04
+12:08:19 INFO [epoch 1] train_loss=0.7021 train_acc=0.4919  val_loss=0.6960 val_acc=0.5034 val_auc=0.5150  elapsed=26.0s
+12:08:19 INFO   saved best.pt  val_acc=0.5034
+12:08:23 INFO   e2 step    50/327  loss=0.6938  acc=0.4969  lr0=1.58e-05 lr1=7.90e-04
+12:08:26 INFO   e2 step   100/327  loss=0.6934  acc=0.5070  lr0=1.50e-05 lr1=7.48e-04
+12:08:30 INFO   e2 step   150/327  loss=0.6936  acc=0.5053  lr0=1.41e-05 lr1=7.05e-04
+12:08:33 INFO   e2 step   200/327  loss=0.6931  acc=0.5090  lr0=1.33e-05 lr1=6.63e-04
+12:08:36 INFO   e2 step   250/327  loss=0.6929  acc=0.5117  lr0=1.24e-05 lr1=6.21e-04
+12:08:40 INFO   e2 step   300/327  loss=0.6928  acc=0.5114  lr0=1.16e-05 lr1=5.78e-04
+12:08:44 INFO [epoch 2] train_loss=0.6927 train_acc=0.5125  val_loss=0.6872 val_acc=0.5191 val_auc=0.5494  elapsed=24.7s
+12:08:44 INFO   saved best.pt  val_acc=0.5191
+12:08:48 INFO   e3 step    50/327  loss=0.6842  acc=0.5491  lr0=1.03e-05 lr1=5.13e-04
+12:08:51 INFO   e3 step   100/327  loss=0.6845  acc=0.5441  lr0=9.41e-06 lr1=4.70e-04
+12:08:55 INFO   e3 step   150/327  loss=0.6833  acc=0.5465  lr0=8.56e-06 lr1=4.28e-04
+12:08:58 INFO   e3 step   200/327  loss=0.6835  acc=0.5463  lr0=7.71e-06 lr1=3.85e-04
+12:09:01 INFO   e3 step   250/327  loss=0.6831  acc=0.5463  lr0=6.86e-06 lr1=3.43e-04
+12:09:04 INFO   e3 step   300/327  loss=0.6822  acc=0.5496  lr0=6.01e-06 lr1=3.01e-04
+12:09:09 INFO [epoch 3] train_loss=0.6821 train_acc=0.5488  val_loss=0.6752 val_acc=0.5444 val_auc=0.5845  elapsed=24.6s
+12:09:09 INFO   saved best.pt  val_acc=0.5444
+12:09:13 INFO   e4 step    50/327  loss=0.6690  acc=0.5716  lr0=4.70e-06 lr1=2.35e-04
+12:09:16 INFO   e4 step   100/327  loss=0.6683  acc=0.5711  lr0=3.85e-06 lr1=1.93e-04
+12:09:20 INFO   e4 step   150/327  loss=0.6680  acc=0.5723  lr0=3.01e-06 lr1=1.50e-04
+12:09:23 INFO   e4 step   200/327  loss=0.6689  acc=0.5723  lr0=2.16e-06 lr1=1.08e-04
+12:09:26 INFO   e4 step   250/327  loss=0.6676  acc=0.5763  lr0=1.31e-06 lr1=6.54e-05
+12:09:29 INFO   e4 step   300/327  loss=0.6669  acc=0.5791  lr0=4.58e-07 lr1=2.29e-05
+12:09:34 INFO [epoch 4] train_loss=0.6669 train_acc=0.5777  val_loss=0.6744 val_acc=0.5590 val_auc=0.5911  elapsed=25.1s
+12:09:34 INFO   saved best.pt  val_acc=0.5590
+12:09:34 INFO loading best.pt for test eval
+12:09:37 INFO [test] loss=0.6777  acc=0.5522  auc=0.5790  f1=0.5004
+12:09:37 INFO [done] run_summary.json written to /mnt/localssd/crossencoder_sweep/runs/ajo_newstyle/all-MiniLM-L6-v2

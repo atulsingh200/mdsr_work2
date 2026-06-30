@@ -1,0 +1,18 @@
+{
+  "dataset_slug": "ajo_newstyle",
+  "model_slug": "bge-base-en-v1.5",
+  "base_model": "BAAI/bge-base-en-v1.5",
+  "schema": "newstyle",
+  "best_val_acc": 0.567381,
+  "best_val_auc": 0.625996,
+  "test_acc": 0.551473,
+  "test_auc": 0.610093,
+  "test_f1": 0.544678,
+  "test_loss": 0.657375,
+  "n_train": 20897,
+  "n_val": 2612,
+  "n_test": 2613,
+  "epochs": 4,
+  "batch_size": 64,
+  "max_seq_len": 512
+}

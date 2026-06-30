@@ -1,0 +1,18 @@
+{
+  "dataset_slug": "ajo_doc_not_tier1",
+  "model_slug": "bge-base-en-v1.5",
+  "base_model": "BAAI/bge-base-en-v1.5",
+  "schema": "standard",
+  "best_val_acc": 0.992857,
+  "best_val_auc": 0.995624,
+  "test_acc": 0.993304,
+  "test_auc": 0.998387,
+  "test_f1": 0.993356,
+  "test_loss": 0.040464,
+  "n_train": 88000,
+  "n_val": 11200,
+  "n_test": 11200,
+  "epochs": 4,
+  "batch_size": 64,
+  "max_seq_len": 278
+}

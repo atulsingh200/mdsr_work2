@@ -1,0 +1,43 @@
+00:24:30 INFO run_dir=/mnt/localssd/baseline_sweep/runs/new_aep_wf_scrap/bge-base-en-v1.5
+00:24:30 INFO device=cuda:0  bf16=True  physical_gpu=3  CUDA_VISIBLE_DEVICES=3
+00:24:30 INFO dataset=new_aep_wf_scrap  model=bge-base-en-v1.5  backbone=BAAI/bge-base-en-v1.5
+00:24:30 INFO tokenizer <- BAAI/bge-base-en-v1.5
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+00:24:30 INFO split files: ['directional_train.jsonl', 'directional_val.jsonl', 'directional_test.jsonl']
+00:24:30 INFO scanning max token length across all splits ...
+00:24:36 INFO   observed_max=295 -> max_seq_len=312 (cap=512, scan=5.8s)
+00:24:36 INFO loading datasets ...
+00:24:36 INFO   schema=step  train=13904  val=1676  test=1548
+00:24:36 INFO building DirectionalClassifier  backbone=BAAI/bge-base-en-v1.5  head=MLP(4d->512->128->1, act=gelu, norm=layer, dropout=0.1)  n_tiers=0
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 6174.53it/s]
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 6364.02it/s]
+00:24:37 INFO   hidden_size=768  trainable_params=220,611,073
+00:24:37 INFO   total_steps=872  warmup_steps=87
+00:24:44 INFO   e1 step    50/218  loss=0.7595  acc=0.5312  lr0=1.15e-05 lr1=5.75e-04
+00:24:49 INFO   e1 step   100/218  loss=0.7210  acc=0.5519  lr0=1.97e-05 lr1=9.83e-04
+00:24:54 INFO   e1 step   150/218  loss=0.7093  acc=0.5513  lr0=1.84e-05 lr1=9.20e-04
+00:24:59 INFO   e1 step   200/218  loss=0.6949  acc=0.5642  lr0=1.71e-05 lr1=8.56e-04
+00:25:02 INFO [epoch 1] train_loss=0.6904 train_acc=0.5685  val_loss=0.6223 val_acc=0.6390 val_auc=0.7008  elapsed=24.9s
+00:25:03 INFO   saved best.pt  val_acc=0.6390
+00:25:09 INFO   e2 step    50/218  loss=0.5877  acc=0.6737  lr0=1.54e-05 lr1=7.69e-04
+00:25:14 INFO   e2 step   100/218  loss=0.5833  acc=0.6698  lr0=1.41e-05 lr1=7.06e-04
+00:25:19 INFO   e2 step   150/218  loss=0.5811  acc=0.6718  lr0=1.28e-05 lr1=6.42e-04
+00:25:24 INFO   e2 step   200/218  loss=0.5772  acc=0.6752  lr0=1.16e-05 lr1=5.78e-04
+00:25:27 INFO [epoch 2] train_loss=0.5762 train_acc=0.6771  val_loss=0.6179 val_acc=0.6581 val_auc=0.7353  elapsed=24.0s
+00:25:29 INFO   saved best.pt  val_acc=0.6581
+00:25:34 INFO   e3 step    50/218  loss=0.4782  acc=0.7600  lr0=9.83e-06 lr1=4.92e-04
+00:25:39 INFO   e3 step   100/218  loss=0.4705  acc=0.7589  lr0=8.56e-06 lr1=4.28e-04
+00:25:45 INFO   e3 step   150/218  loss=0.4733  acc=0.7570  lr0=7.29e-06 lr1=3.64e-04
+00:25:50 INFO   e3 step   200/218  loss=0.4703  acc=0.7584  lr0=6.01e-06 lr1=3.01e-04
+00:25:53 INFO [epoch 3] train_loss=0.4701 train_acc=0.7584  val_loss=0.6633 val_acc=0.6647 val_auc=0.7429  elapsed=24.3s
+00:25:54 INFO   saved best.pt  val_acc=0.6647
+00:26:00 INFO   e4 step    50/218  loss=0.3652  acc=0.8256  lr0=4.28e-06 lr1=2.14e-04
+00:26:05 INFO   e4 step   100/218  loss=0.3712  acc=0.8177  lr0=3.01e-06 lr1=1.50e-04
+00:26:10 INFO   e4 step   150/218  loss=0.3679  acc=0.8200  lr0=1.73e-06 lr1=8.66e-05
+00:26:15 INFO   e4 step   200/218  loss=0.3691  acc=0.8190  lr0=4.59e-07 lr1=2.29e-05
+00:26:18 INFO [epoch 4] train_loss=0.3672 train_acc=0.8201  val_loss=0.7965 val_acc=0.6629 val_auc=0.7464  elapsed=24.2s
+00:26:19 INFO loading best.pt for test eval
+00:26:21 INFO [test] loss=0.6171  acc=0.6815  auc=0.7616  f1=0.6584
+00:26:21 INFO [test] per-tier-pair accuracy:
+00:26:21 INFO         T0-T0  n= 1548  acc=0.6815
+00:26:21 INFO [done] run_summary.json written to /mnt/localssd/baseline_sweep/runs/new_aep_wf_scrap/bge-base-en-v1.5
