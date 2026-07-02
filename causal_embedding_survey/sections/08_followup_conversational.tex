@@ -1,0 +1,150 @@
+\section{Follow-up Question Ranking and Conversational Retrieval}
+\label{sec:followup}
+
+A causal embedding model for procedural documentation is not consumed in
+isolation: in the AEP/AJO assistant it sits behind a conversational surface
+that must decide \emph{what the user should ask next}. This section surveys the
+research landscape underpinning that capability---follow-up reranking,
+clarifying-question generation and ranking, multi-turn conversational
+retrieval, and proactive/mixed-initiative dialogue---and argues that ordering
+follow-ups by \emph{causal/next-step progression} rather than by mere semantic
+relevance is the distinguishing requirement for our setting.
+
+\subsection{The follow-up reranking task in this project}
+
+The concrete task instance in the repository is a \emph{slate-reranking}
+problem. The production data file
+(\texttt{prod\_jan\_feb\_26-aep-ajo\_follow-up-queries.json}) is a list of
+$334$ records, each of the form
+\begin{quote}\small
+\texttt{\{"question": <user query>,}\\
+\texttt{ "follow\_up\_queries": [[ fq$_1$, \dots, fq$_{10}$ ]]\}}
+\end{quote}
+i.e.\ a single user question paired with a slate of exactly ten candidate
+follow-up questions (the inner list is wrapped once). For the anchor
+\emph{``What is Journey Pause feature''} the candidates range over permissions,
+the hold-vs-discard semantics at action nodes, scheduled audience runs during a
+pause, organization-wide held-profile limits, and re-entrance/timeout
+interaction---a mix of \emph{prerequisite}, \emph{consequence}, and
+\emph{lateral} questions. The reranking harness
+(\texttt{rerank\_followup.py}) flattens every record into
+\texttt{(question, follow\_up)} pairs, scores each pair with the fine-tuned
+\texttt{DirectionalClassifier} bi-encoder
+($\mathrm{score}=\sigma(\text{MLP}([a;b;a-b;a\!\cdot\!b]))$, the architecture
+from Section~\ref{sec:embeddings}), and sorts the slate descending by score.
+Crucially the model used is the \emph{directional precedence} classifier, so
+the score approximates $P(\text{question causally precedes/enables follow-up})$
+rather than topical similarity---this is exactly the ``rank by logical
+progression'' signal we want, and it is what differentiates the task from a
+generic relevance reranker. The slate is fixed and there is no gold ordering in
+the file, so evaluation must come from a downstream signal (click logs,
+LLM-as-judge ordering, or a held-out human ranking).
+
+\subsection{Clarifying-question generation and ranking}
+
+When a user query is under-specified, a proactive system can either retrieve or
+\emph{ask}. \citet{fu:rao2018clarification} framed clarifying-question
+\emph{ranking} as maximizing the expected value of perfect information (EVPI)
+over StackExchange post--comment data, selecting the question whose likely
+answer most changes the system's belief.
+\citet{fu:aliannejadi2019clarifying} introduced the offline
+\textbf{Qulac} methodology and the influential SIGIR'19 formulation of
+\emph{asking clarifying questions in open-domain information-seeking
+conversations}, later scaled into the \textbf{ClariQ}/ConvAI3 challenge
+\citep{fu:aliannejadi2021convai3} with explicit \emph{clarification-need}
+labels (the \texttt{clariq} TSV in our repo carries
+\texttt{topic\_id, initial\_request, facet\_desc, question, answer} columns and
+a 4-level clarification-need score).
+\textbf{ClarQ} \citep{fu:kumar2020clarq} bootstrapped $\sim$2M
+clarification questions across 173 StackExchange domains for generation, and
+\textbf{CLAMBER} \citep{fu:clamber2024} contributes an LLM-oriented taxonomy of
+$\sim$12K ambiguous queries, finding that current LLMs are still weak at both
+\emph{recognizing} ambiguity and \emph{generating} a useful clarifying question.
+At web scale, \textbf{MIMICS} \citep{fu:zamani2020mimics} mined real search
+clarification panes (the ``People also ask''/clarification-pane lineage). These
+threads share our core sub-problem: given a query, produce and \emph{rank} a
+small slate of next questions; the AEP follow-up slate is the
+documentation-grounded, ten-candidate version of this.
+
+\subsection{Conversational and multi-turn retrieval}
+
+Follow-ups live inside multi-turn sessions, where the central difficulty is
+\emph{context-dependence}: a follow-up like ``what permissions does it need?''
+is meaningless without its antecedent. Two solution families dominate.
+\paragraph{Query rewriting.} \textbf{CANARD} \citep{fu:elgohary2019canard}
+reformulates context-dependent questions into self-contained ones; T5-based
+rewriters (\textbf{T5QR}, \citealp{fu:lin2020t5qr}) became the de-facto
+sequence-to-sequence approach, turning a conversation into a standalone query
+that any ad-hoc retriever can consume. \textbf{QReCC}
+\citep{fu:anantha2021qrecc} packages 14K conversations as an end-to-end
+``rewrite$\rightarrow$retrieve$\rightarrow$answer'' benchmark
+(\texttt{qrecc\_train.json}/\texttt{qrecc\_test.json} in the repo).
+\paragraph{Conversational dense retrieval.} Rather than rewrite, \textbf{ConvDR}
+\citep{fu:yu2021convdr} trains a session encoder to embed the full multi-turn
+context directly, distilling from the embedding of an oracle rewrite
+(teacher--student) so it works few-shot. \textbf{TopiOCQA}
+\citep{fu:adlakha2022topiocqa} stresses \emph{topic switching}: $3{,}920$
+conversations averaging $13$ turns over $\sim$4 documents each, forcing
+retrieval that detects when the user pivots---directly analogous to a user
+jumping from ``pause a journey'' to ``read-audience scheduling.'' Most
+recently, \textbf{MTRAG} \citep{fu:katsis2025mtrag} is a human-generated
+multi-turn RAG benchmark ($110$ conversations, $\sim$7.7 turns, four domains
+incl.\ Cloud) explicitly probing non-standalone and unanswerable later-turn
+questions; the repo's \texttt{mtrag/conversations.json} mirrors this format with
+per-turn retriever traces.
+
+\subsection{Proactive and mixed-initiative agents}
+
+Reranking a fixed slate is a special case of \emph{proactivity}: deciding,
+unprompted, what to surface next. \citet{fu:deng2023mixedinitiative} survey
+proactive dialogue (clarification, asking, recommending, non-collaborative
+initiative). \textbf{ProactiveAgent} \citep{fu:lu2024proactive} (the
+\texttt{proactive\_agent} dir) trains an agent on $\sim$6.8K real events to
+\emph{anticipate} the user's next task and offer assistance before being asked,
+with a reward model scoring whether an intervention was wanted. On the
+generation side, \textbf{FollowupQG} \citep{fu:meng2023followupqg} (the
+\texttt{followupqg} split: \texttt{\{question, answer, follow-up, relation\}}
+tuples from Reddit ELI5) targets \emph{information-seeking} follow-up
+generation, showing that model follow-ups remain markedly less informative than
+human ones---evidence that good follow-ups require genuine reasoning about what
+new knowledge the answer leaves open, not surface paraphrase.
+
+\subsection{Reranking methods and the causal/next-step signal}
+
+The reranker toolkit spans pointwise cross-encoders
+(\textbf{monoBERT}, \citealp{fu:nogueira2019bertrerank}; \textbf{monoT5},
+\citealp{fu:nogueira2020monot5}) that jointly attend over (query, candidate),
+and listwise LLM rerankers (\textbf{RankGPT}, \citealp{fu:sun2023rankgpt};
+distilled into the 7B \textbf{RankZephyr}, \citealp{fu:pradeep2023rankzephyr})
+that emit a full permutation ``[3] > [1] > \dots'' over the slate. All of these
+optimize \emph{relevance}. The thesis of this survey is that a follow-up slate
+should instead be ordered by \emph{logical/causal progression}: the next
+question a user \emph{should} ask is typically the immediate prerequisite or the
+immediate consequence of the current step, not merely the most topically
+similar one. Two ingredients combine cleanly: (i) the joint cross-attention of a
+cross-encoder/LLM reranker, which Section~\ref{sec:embeddings} and the repo's
+ordering experiments show generalizes better to non-adjacent pairs; and (ii) a
+\emph{directional precedence} score $s(q,fq)\approx P(q \prec fq)$ from the
+causal embedding model. A listwise reranker can be supervised or prompted to
+sort by $s$ rather than by relevance, and the same pairwise scores feed the rank
+aggregator of Section~\ref{sec:procedural} when a globally consistent ordering
+of the slate is required.
+
+\paragraph{Relevance to causal embedding for AEP/AJO.}
+The follow-up slate is the most direct deployment of the causal embedding
+primitive: \texttt{rerank\_followup.py} already scores
+$(question, follow\_up)$ with the directional bi-encoder and sorts by it. The
+literature surveyed here motivates three concrete upgrades for our
+$<\!1$B-parameter model. First, treat the slate as a \emph{partial order} of
+prerequisite/consequence/lateral follow-ups (mirroring CLAMBER's ambiguity
+types and proScript's partial-order scripts in Section~\ref{sec:procedural})
+rather than a single relevance ranking, so parallel ``lateral'' follow-ups are
+not spuriously forced above causal next-steps. Second, adopt a cross-encoder or
+distilled listwise reranker (RankZephyr-style) so the ordering signal benefits
+from joint attention---consistent with the repo finding that the DeBERTa
+cross-encoder dominates on \emph{ordering} despite trailing on flat
+classification. Third, because follow-ups arrive mid-conversation, a
+ConvDR/CANARD-style rewrite step should canonicalize the anchor question before
+causal scoring, so context-dependent follow-ups (``how does \emph{it} interact
+with re-entrance?'') resolve to their AEP/AJO referents before precedence is
+estimated.

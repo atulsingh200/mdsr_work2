@@ -1,0 +1,237 @@
+\section{Foundations: What Is a ``Causal'' Embedding?}
+\label{sec:foundations}
+
+The phrase ``causal embedding'' is used loosely across the retrieval and
+representation-learning literature, often as a synonym for any embedding whose
+geometry encodes \emph{asymmetric} relations. This section pins down what we
+mean precisely, separates three distinct notions that are routinely conflated,
+and locates the project's goal --- directional precedence between documentation
+steps --- on the firmest defensible footing. We are deliberately conservative:
+we argue that a ``causal embedding'' for procedural documentation is, in the
+honest analysis, a model of \emph{structural / directional precedence learned
+from text}, sitting almost entirely at the lowest rung of Pearl's ladder, and we
+say so plainly rather than overclaiming interventional or counterfactual
+content.
+
+\subsection{Three notions routinely conflated}
+\label{sec:three-notions}
+
+\paragraph{(i) Statistical / semantic similarity.}
+The default embedding objective --- contrastive or masked-language pretraining,
+then a cosine/dot-product similarity --- produces a \emph{symmetric},
+\emph{undirected} notion of relatedness: $\mathrm{sim}(a,b)=\mathrm{sim}(b,a)$.
+Two documentation steps that mention the same dataset, schema, or UI panel land
+near each other regardless of which must happen first. This is exactly the
+shortcut our project must defeat: in the repo's hardest ordering dataset
+(\texttt{ajo\_newstyle}), the best symmetric similarity model collapses to
+$\approx 65\%$ accuracy because topical overlap and step order are decorrelated
+on purpose. Semantic similarity is a \emph{necessary} substrate (it gives a
+strong stage-1 retriever) but is provably insufficient for ordering: any
+symmetric kernel assigns the pair $(A,B)$ and $(B,A)$ identical scores and
+therefore carries zero bits about direction.
+
+\paragraph{(ii) Asymmetric / directional relations.}
+The next notion drops symmetry without yet claiming causality. Entailment is the
+canonical example: ``$P$ entails $H$'' does not imply ``$H$ entails $P$''
+\citep{found:bowman2015snli,found:williams2018mnli}. Order embeddings,
+hyperbolic/entailment cones, and asymmetric dual encoders (a query tower and a
+document tower with untied weights) all realize a scoring function
+$s(a\!\to\!b)\neq s(b\!\to\!a)$. Temporal precedence (``$A$ occurs before $B$'')
+and prerequisite structure also live here. Crucially, \emph{asymmetry is not
+causality}: an asymmetric relation can encode narration order, set inclusion, or
+specificity, none of which is a causal mechanism. Most so-called ``causal
+embeddings'' in practice are this --- a learned directional relation --- and the
+honest claim stops here.
+
+\paragraph{(iii) Genuine causal structure.}
+The strongest notion requires that the represented relation track an underlying
+data-generating mechanism: $A\to B$ means intervening on $A$ changes the
+distribution of $B$, while intervening on $B$ does not change $A$
+\citep{found:pearl2009causality,found:peters2017elements}. This is defined with
+respect to a structural causal model (SCM) and is identified, in the
+observational regime, only under assumptions (Sec.~\ref{sec:direction-id}). For
+text, we essentially never observe interventions on documentation steps, so
+genuine causal structure is at best \emph{inferred} from the asymmetries the
+text exposes. Our position: the project targets notion~(ii) as a tractable proxy
+for notion~(iii), and the contribution is making that proxy as faithful as the
+text allows.
+
+\paragraph{Problem statement.}
+Formally, given an ordered pair of texts $(t_1,t_2)$ we want a model
+$f_\theta(t_1,t_2)\to[0,1]$ estimating $P(t_1 \text{ causally precedes /
+enables } t_2)$, with the constraints (a) \emph{antisymmetry},
+$f_\theta(t_1,t_2)\approx 1-f_\theta(t_2,t_1)$ for genuinely directional pairs,
+and (b) an \emph{abstain / NEUTRAL} option for independent or parallel steps so
+that the induced relation is a partial order (DAG), not a forced total order.
+Downstream we need this primitive to (1) classify direction, (2) rerank
+follow-ups, and (3) sort a workflow. A pure bi-encoder embedding cannot satisfy
+(a) by construction unless direction is injected via untied towers or an
+asymmetric scoring head; this motivates the cross-encoder / interaction-based
+designs surveyed later.
+
+\subsection{Causal representation learning: what it gives and does not give for text}
+\label{sec:crl}
+
+The modern program of \emph{causal representation learning} (CRL)
+\citep{found:scholkopf2021causalrl} seeks to recover latent variables that
+correspond to causal factors of variation and to learn the causal graph among
+them, rather than entangled statistical features. Three pillars are relevant.
+
+\paragraph{Independent causal mechanisms (ICM).}
+The ICM principle holds that the causal generative process factorizes into
+autonomous modules $P(X)=\prod_i P(X_i\mid \mathrm{pa}_i)$ whose mechanisms are
+independent: changing one mechanism (an intervention) leaves the others
+invariant \citep{found:peters2017elements,found:scholkopf2021causalrl}. This
+\emph{invariance} is the deepest reason causal features generalize across
+distribution shift, and it underlies invariant-risk and domain-generalization
+objectives \citep{found:arjovsky2019irm,found:gulrajani2021domainbed}. For our
+setting, ICM is aspirational: it suggests that a step's \emph{enabling
+preconditions} should be an invariant module reusable across workflows, which is
+precisely the generalization we need for far-apart (non-adjacent) step pairs.
+
+\paragraph{Disentanglement and identifiability.}
+A central negative result is that disentangled representations are
+\emph{not identifiable} from i.i.d.\ observations without inductive biases or
+weak supervision \citep{found:locatello2019challenging}: infinitely many latent
+factorizations explain the same marginal. CRL therefore leans on auxiliary
+signals --- multiple environments, interventions, temporal structure, or paired
+data --- to pin down the causal factors \citep{found:scholkopf2021causalrl}.
+\textbf{What this means for text:} we have no controlled interventions on
+documentation, but we \emph{do} have weak supervision (the antisymmetric
+forward/reverse labels, multiple documents, tier metadata). The identifiability
+literature warns that direction learned from a single narration order is
+under-determined --- it can latch onto narration rather than mechanism --- which
+is exactly the failure diagnosed in the repo data (training only on adjacent,
+same-document pairs teaches narration order, not causal necessity). CRL thus
+does \emph{not} hand us a causal text embedding for free; it tells us which
+auxiliary signals (non-adjacent pairs, multiple sources, abstention) are needed
+to make direction identifiable.
+
+\subsection{Pearl's ladder and where a documentation ``causal embedding'' sits}
+\label{sec:ladder}
+
+Pearl's \emph{ladder of causation} stratifies causal questions into three rungs
+\citep{found:pearl2009causality,found:pearl2018book}:
+
+\begin{description}[leftmargin=1.2em,itemsep=2pt]
+  \item[Rung 1 --- Association] $P(y\mid x)$: ``seeing.'' Correlation,
+  conditional probability, similarity. All standard embeddings live here.
+  \item[Rung 2 --- Intervention] $P(y\mid \mathrm{do}(x))$: ``doing.'' The effect
+  of actively setting $x$, requiring an SCM or experiments.
+  \item[Rung 3 --- Counterfactual] $P(y_x\mid x',y')$: ``imagining.'' What would
+  have happened had $x$ been different, holding the realized world fixed.
+\end{description}
+
+\noindent\textbf{An honest placement.}
+A causal embedding for procedural documentation operates predominantly at
+\emph{Rung 1 with structural / directional precedence layered on top}. We are
+estimating an associational quantity --- $P(\text{$t_1$ precedes $t_2$}\mid
+t_1,t_2)$ --- that we \emph{interpret} as enablement. We are not running
+$\mathrm{do}(\cdot)$ on a workflow, and we are not computing counterfactual
+re-orderings of a tutorial. The directional supervision (forward/reverse labels)
+nudges the representation toward the asymmetry that a Rung-2 mechanism would
+induce, but the trained object remains a Rung-1 estimator of a directed relation.
+This is the single most important caveat in the survey: claiming Rung-2/3
+content for a text embedding trained on observational documentation would be an
+overclaim. Where genuine intervention-style evidence exists in our data, it is
+implicit (``you cannot publish before you authenticate'' is a logical/temporal
+precondition recoverable from text, not an experiment).
+
+\subsection{Causal direction identification (background, then pivot to text)}
+\label{sec:direction-id}
+
+Outside NLP, the \emph{bivariate} causal-direction problem --- given samples of
+$(X,Y)$, decide $X\to Y$ vs.\ $Y\to X$ --- is the cleanest analog of our pairwise
+task. Because the joint $P(X,Y)$ is symmetric, direction is identifiable only
+under structural assumptions that break the symmetry:
+
+\begin{itemize}[leftmargin=1.2em,itemsep=2pt]
+  \item \textbf{Additive Noise Models (ANM)} \citep{found:hoyer2008anm}:
+  assume $Y=f(X)+N$, $N\!\perp\!X$. A nonlinear $f$ typically admits an
+  independent-noise fit in only one direction; one regresses both ways and tests
+  residual independence (HSIC) to pick the direction with independent residuals.
+  \item \textbf{LiNGAM} \citep{found:shimizu2006lingam}: linear non-Gaussian
+  acyclic models identify direction via independent-component analysis on the
+  non-Gaussian noise.
+  \item \textbf{IGCI} \citep{found:janzing2012igci}: information-geometric causal
+  inference assumes independence between the cause distribution and the
+  mechanism, scoring an asymmetry in their ``alignment.''
+\end{itemize}
+
+\noindent The standard testbed is the \emph{T\"ubingen cause-effect pairs}
+benchmark of $\approx 100$ expert-labeled real bivariate pairs
+\citep{found:mooij2016distinguishing}; reported accuracies cluster around
+$\sim$60--72\% for IGCI/ANM-style methods --- i.e.\ direction is hard even with
+clean numeric data and explicit modeling assumptions. \textbf{The pivot to
+text:} documentation gives us neither i.i.d.\ numeric samples nor a clean noise
+model. Instead, the asymmetry-revealing signal is \emph{linguistic} ---
+discourse connectives, temporal markers, prerequisite phrasing, and world
+knowledge --- which is why the rest of this survey treats causal direction in
+text as a supervised pairwise classification / entailment problem
+(Sec.~\ref{sec:causal-reasoning}) rather than an ANM/IGCI estimation problem.
+The bivariate literature contributes the conceptual lesson, not the algorithm:
+direction must come from an assumption or supervision that breaks the symmetry of
+$P(X,Y)$, and for text that assumption is encoded in the antisymmetric labels and
+the cross-attention architecture.
+
+\subsection{A taxonomy of ``causal'' embeddings}
+\label{sec:taxonomy}
+
+Table~\ref{tab:found-taxonomy} organizes the design space along two axes: the
+\emph{relation type} the model can express (symmetric, directional, or
+mechanism-grounded) and the \emph{architecture} that realizes it. The taxonomy
+makes explicit that genuine causal grounding is not achievable by geometry alone
+in the observational text regime; the best a feasible model does is a
+faithfully directional, abstention-capable estimator (row 2--3), built on a
+strong symmetric retriever (row 1).
+
+\begin{table*}[t]
+\centering
+\footnotesize
+\caption{Taxonomy of embedding/relation models for procedural documentation.
+``Pearl rung'' is the highest rung the model honestly addresses in the
+observational text regime. Direction can be \emph{injected} architecturally
+(untied towers, cross-attention) or via the training signal (antisymmetric
+labels).}
+\label{tab:found-taxonomy}
+\begin{tabular}{@{}p{2.6cm}p{3.0cm}p{2.2cm}p{4.6cm}p{2.4cm}@{}}
+\toprule
+\textbf{Relation type} & \textbf{Typical objective} & \textbf{Symmetry} &
+\textbf{Architecture / realization} & \textbf{Pearl rung} \\
+\midrule
+Semantic similarity & Contrastive (InfoNCE), MLM & Symmetric &
+Single-tower / tied bi-encoder; cosine score & Rung 1 (assoc.) \\
+\addlinespace
+Directional (learned) & Pairwise BCE on forward/reverse labels; entailment &
+Antisymmetric & Untied dual encoder; order/cone embeddings; cross-encoder over
+$[t_1;t_2]$ & Rung 1 + directional precedence \\
+\addlinespace
+Directional + abstain & As above $+$ NEUTRAL class; partial-order/DAG decoding &
+Antisymmetric, partial & Cross-encoder $+$ 3-way head; rank aggregation
+(Bradley--Terry, min-feedback-arc-set) & Rung 1 + structural precedence \\
+\addlinespace
+Mechanism-grounded (aspirational) & Invariance / ICM; counterfactual
+consistency & Asymmetric, invariant & CRL latent SCM; reasoning trace with
+grounded premises (VeriCoT-style) & Rungs 2--3 (\emph{not} attained from text
+alone) \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\paragraph{Relevance to causal embedding for AEP/AJO.}
+This foundation fixes the target and its honest ceiling. The AEP/AJO project
+needs row~2--3 of Table~\ref{tab:found-taxonomy}: a \emph{directional,
+abstention-capable} precedence estimator built on a strong symmetric retriever
+(row~1, where fine-tuned BGE-large already gives the best MRR in the repo). Three
+foundational lessons carry forward. First, symmetric similarity cannot order
+steps --- direction must be \emph{injected}, motivating cross-attention
+backbones over independent embeddings. Second, the identifiability results
+\citep{found:locatello2019challenging,found:scholkopf2021causalrl} explain
+\emph{why} training on adjacent same-document pairs fails to generalize:
+direction learned from a single narration order is under-determined, so we must
+supply the missing auxiliary signal (non-adjacent transitive pairs, multiple
+sources, an abstain class). Third, we should advertise the model as a Rung-1
+structural-precedence estimator, not an interventional one --- the ICM/invariance
+ideal (row~4) is the north star for generalization, but genuine Rung-2/3 content
+is not recoverable from observational documentation. The next section turns to
+how direction is actually learned and evaluated from text.

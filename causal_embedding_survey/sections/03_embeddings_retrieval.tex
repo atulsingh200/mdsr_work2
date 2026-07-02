@@ -1,0 +1,183 @@
+\section{Text Embeddings and Neural Retrieval: State of the Art}
+\label{sec:embeddings}
+
+Neural text retrieval rests on learned dense representations of text that can be
+compared by an inexpensive geometric operation. This section surveys the
+architectural families that dominate the field, the contrastive objectives that
+train them, the recent wave of instruction-tuned and LLM-based embedders, and the
+representation-geometry choices (dimensionality, pooling, Matryoshka nesting) that
+govern their deployment. Throughout we tie the landscape back to the project's own
+bi-encoder/cross-encoder findings on Adobe Experience Platform (AEP) and Adobe
+Journey Optimizer (AJO) workflow data, and flag the one assumption---\emph{symmetric}
+cosine similarity---that makes all of these models a poor fit for directional, causal
+ordering.
+
+\subsection{Architecture families}
+\label{sec:emb:arch}
+
+\paragraph{Bi-encoders (dual-encoders).}
+A bi-encoder maps a query $q$ and a document $d$ \emph{independently} to vectors
+$\mathbf{e}_q,\mathbf{e}_d\in\mathbb{R}^k$ and scores them with a symmetric kernel,
+typically inner product or cosine: $s(q,d)=\mathbf{e}_q^{\!\top}\mathbf{e}_d$. Because
+document vectors can be precomputed and indexed, retrieval reduces to (approximate)
+nearest-neighbour search and scales to billions of passages. DPR
+\citep{emb:karpukhin2020dpr} established the modern recipe of two BERT towers trained
+with in-batch negatives; Sentence-BERT \citep{emb:reimers2019sbert} popularised
+siamese/triplet fine-tuning for sentence-level similarity; and SimCSE
+\citep{emb:gao2021simcse} showed that even unsupervised dropout-as-augmentation
+contrastive training yields strong sentence embeddings while reducing the
+anisotropy of raw BERT representations \citep{emb:li2020sentencebias}. The repo's
+\texttt{DirectionalClassifier} is a bi-encoder variant: two untied encoders produce
+CLS embeddings that are L2-normalised and fused as $[\mathbf{a};\mathbf{b};
+\mathbf{a}{-}\mathbf{b};\mathbf{a}{\odot}\mathbf{b}]$ before an MLP head---the
+explicit $\mathbf{a}{-}\mathbf{b}$ term is an attempt to inject the asymmetry that
+plain cosine lacks.
+
+\paragraph{Cross-encoders (rerankers).}
+A cross-encoder concatenates both texts into a single input
+\texttt{[CLS]\,$t_1$\,[SEP]\,$t_2$} and lets full self-attention model token-level
+interactions, emitting a scalar relevance from the pooled state
+\citep{emb:nogueira2019passage}; sequence-to-sequence variants such as monoT5
+\citep{emb:nogueira2020monot5} cast ranking as generating a ``true''/``false'' token.
+Cross-encoders are far more accurate but cost a full forward pass \emph{per pair},
+so they are used only as second-stage rerankers over a shortlist from a bi-encoder.
+
+\paragraph{Late interaction (ColBERT family).}
+ColBERT \citep{emb:khattab2020colbert} occupies a middle ground: it stores
+\emph{per-token} embeddings and scores a pair by a sum of max-similarities
+(``MaxSim''), $s(q,d)=\sum_{i\in q}\max_{j\in d}\mathbf{e}_{q_i}^{\!\top}\mathbf{e}_{d_j}$,
+preserving fine-grained interaction while keeping the document side precomputable.
+ColBERTv2 \citep{emb:santhanam2022colbertv2} adds residual compression and
+denoised, distilled supervision, cutting the index footprint $6$--$10\times$, and
+PLAID \citep{emb:santhanam2022plaid} introduces centroid-based pruning that lowers
+late-interaction latency by up to $7\times$ on GPU and $45\times$ on CPU at equal
+quality.
+
+\paragraph{The accuracy/latency tradeoff and the repo finding.}
+The canonical wisdom---cross-encoders are more accurate, bi-encoders are faster---is
+borne out and \emph{sharpened} by the project's experiments. On pairwise
+\emph{classification} (\texttt{aep\_causal\_cls34}), the bi-encoder \emph{beat} the
+cross-encoder by roughly $4.6\%$ (e.g.\ BGE-base $86.1\%$ bi vs.\ $81.5\%$ cross;
+MiniLM $87.4\%$ vs.\ $78.8\%$), because the cross-encoder shares a single $512$-token
+budget across both texts and is \emph{starved} of context when the two steps are long.
+Yet on the task we actually care about---end-to-end \emph{workflow ordering}---the
+DeBERTa-v3-large cross-encoder scored $21/30$ while the bi-encoder scored $0/30$. The
+reason is distributional: training pairs are same-document and windowed (adjacent
+steps, gap $\le 2$--$4$), but ordering a full workflow requires judging
+\emph{non-adjacent, off-distribution} pairs. The bi-encoder's independent embeddings
+collapse there---two far-apart steps look semantically similar and cosine cannot tell
+which precedes---whereas the cross-encoder's \emph{joint cross-attention} reads the two
+texts \emph{together} and can pick up directional cues (prerequisite mentions,
+references to prior configuration) that survive the distribution shift. Pairwise
+accuracy is therefore \emph{not} a proxy for ordering quality.
+
+\subsection{Contrastive training and negatives}
+\label{sec:emb:contrastive}
+
+Dense encoders are trained almost universally with the InfoNCE / softmax-contrastive
+loss \citep{emb:oord2018infonce}. For a query $q$ with one positive $d^+$ and
+negatives $\{d_j^-\}$,
+\[
+\mathcal{L}_{\mathrm{InfoNCE}}=-\log
+\frac{\exp\!\big(s(q,d^+)/\tau\big)}
+{\exp\!\big(s(q,d^+)/\tau\big)+\sum_j \exp\!\big(s(q,d_j^-)/\tau\big)},
+\]
+where $\tau$ is a temperature controlling how sharply the model separates positives
+from negatives (small $\tau$ emphasises the hardest negatives). \emph{In-batch
+negatives} reuse other examples in the minibatch as cheap negatives, so larger
+batches directly improve representation quality. The dominant lever, however, is
+\emph{hard-negative mining}: negatives that are lexically or semantically close to the
+positive but actually irrelevant. ANCE \citep{emb:xiong2021ance} periodically re-mines
+hard negatives from the model's own evolving ANN index; RocketQA
+\citep{emb:qu2021rocketqa} combines cross-batch negatives, denoised hard negatives
+(filtered by a cross-encoder to remove false negatives), and data augmentation; and
+TAS-B \citep{emb:hofstatter2021tasb} balances topic-aware sampling with
+cross-encoder/ColBERT distillation. This directly motivates the repo's
+\texttt{hard\_neg\_semantic} dataset ($\sim$261K pairs): forcing the model to
+distinguish a true causal successor from a topically identical but causally wrong step
+is exactly the hard-negative regime, and it is what pushes the encoder past the
+``same-topic'' shortcut toward genuine directional discrimination.
+
+\subsection{Instruction-tuned and LLM-based embeddings}
+\label{sec:emb:llm}
+
+The current frontier replaces BERT-scale encoders with instruction-conditioned and
+decoder-LLM backbones. E5 \citep{emb:wang2022e5} pre-trains on weakly supervised text
+pairs (CCPairs) and was the first to beat BM25 zero-shot on BEIR; its multilingual
+variant underpins much of the open ecosystem. INSTRUCTOR \citep{emb:su2023instructor}
+prepends a natural-language \emph{task instruction} so one model serves many tasks,
+and GTE \citep{emb:li2023gte} uses multi-stage contrastive training over diverse
+sources. The BGE family \citep{emb:xiao2023bge} and BGE-M3 \citep{emb:chen2024bgem3}
+add self-knowledge distillation and, in M3, \emph{multi-functionality} (dense,
+sparse, and multi-vector retrieval from one model), $100{+}$ languages, and
+$8192$-token context. The LLM-backbone line is now state of the art: E5-Mistral
+\citep{emb:wang2024mistrale5} fine-tunes Mistral-7B on GPT-generated synthetic
+retrieval tasks; SFR-Embedding-Mistral \citep{emb:sfr2024embedding} extends it with
+multi-task transfer; LLM2Vec \citep{emb:behnamghader2024llm2vec} converts any
+decoder-only LLM into an encoder via bidirectional attention plus masked-next-token
+and contrastive adaptation; NV-Embed \citep{emb:lee2025nvembed} adds latent-attention
+pooling and two-stage instruction tuning to reach $72.31$ on MTEB; GritLM
+\citep{emb:muennighoff2024gritlm} unifies generation and embedding in one model via
+instruction routing; and Qwen3-Embedding \citep{emb:zhang2025qwen3emb} (0.6B/4B/8B)
+tops the MMTEB multilingual leaderboard ($70.58$ for the 8B as of mid-2025), with even
+the \emph{0.6B} model competitive---directly relevant under our $<\!1$B budget.
+
+\paragraph{What the leaderboards measure---and don't.}
+MTEB \citep{emb:muennighoff2023mteb} aggregates $\sim$56 tasks (retrieval/BEIR
+\citep{emb:thakur2021beir}, clustering, classification, STS, reranking,
+pair-classification, summarisation) into a single average; MMTEB
+\citep{emb:enevoldsen2025mmteb} extends this to $500{+}$ tasks and $250{+}$ languages
+with long-document, code, and instruction-following tasks. Crucially, \emph{none} of
+these tasks is \emph{directional} or \emph{causal}: STS and pair-classification are
+symmetric ($\mathrm{sim}(a,b)=\mathrm{sim}(b,a)$), retrieval is topical relevance, and
+reranking judges relevance, not precedence. A model can top MMTEB and still be unable
+to tell whether step $A$ \emph{enables} step $B$ or vice versa. This is borne out by
+the project's own GritLM-7B probe: zero-shot, it \emph{stays semantic}---it ranks by
+topical similarity and \emph{ignores} a causal instruction in the prompt, never
+overriding its semantic bias in favour of directional precedence.
+
+\subsection{Representation geometry: dimensionality, pooling, Matryoshka}
+\label{sec:emb:geometry}
+
+\paragraph{Pooling.} How token states become one vector matters. CLS pooling reads a
+single special token (natural for BERT bi-encoders and the repo's classifier); mean
+pooling averages token states (the default for E5/Sentence-BERT and usually more
+robust); last-token pooling reads the final position and is standard for causal
+decoder-LLM embedders (E5-Mistral, NV-Embed, Qwen3) because only that position has
+attended to the whole sequence---NV-Embed's latent-attention pooling is an explicit
+fix for the weakness of plain last-token pooling.
+
+\paragraph{Dimensionality and Matryoshka.} Larger $k$ (LLM embedders emit
+$1024$--$4096$-d) helps quality but inflates index size and search cost. Matryoshka
+Representation Learning \citep{emb:kusupati2022matryoshka} trains nested prefixes so a
+single vector can be \emph{truncated} (e.g.\ $1024\!\to\!256\!\to\!64$) with graceful
+degradation, enabling an adaptive accuracy/latency knob and cheap coarse-to-fine
+retrieval; it is now standard in commercial APIs and in BGE/Qwen3 releases. For a
+two-stage AEP/AJO system, MRL allows a small truncated vector for stage-1 recall and
+the full vector (or a reranker) for precision.
+
+\paragraph{The symmetry mismatch.} Every model above scores pairs with cosine or inner
+product, which is \emph{symmetric}: $s(a,b)=s(b,a)$. A retrieval relevance signal is
+naturally symmetric, but causal precedence is \emph{antisymmetric}---if $A$ precedes
+$B$ then $B$ does not precede $A$. No amount of contrastive fine-tuning of a symmetric
+kernel can represent a strict order, which is precisely why the repo's bi-encoder bolts
+on an $\mathbf{a}{-}\mathbf{b}$ feature and why the cross-encoder (asymmetric by
+input order) wins on ordering. This is the central geometric gap addressed later (see
+the section on asymmetric geometry), which considers order embeddings, asymmetric/dot
+scoring, and hyperbolic/cone representations that natively encode direction.
+
+\subsection*{Relevance to causal embedding for AEP/AJO}
+
+Three implications follow for the project. (1) A symmetric-cosine bi-encoder is an
+excellent \emph{stage-1 recaller}---fine-tuned BGE-large already gives $+21\%$ MRR over
+the BERT baseline on AEP retrieval---but its independent, symmetric embeddings
+\emph{cannot} order non-adjacent workflow steps, matching the $0/30$ ordering result.
+(2) The cross-encoder's joint attention is what generalises to off-distribution pairs
+($21/30$); the right architecture is therefore a bi-encoder retriever feeding an
+\emph{asymmetric, cross-attentive} reranker/orderer. (3) Instruction-tuned LLM
+embedders are tempting under the $<\!1$B budget (Qwen3-Embedding-0.6B is strong), but
+the GritLM finding warns that instructions alone do not buy directionality---these
+models optimise the symmetric, topical objective that MTEB/MMTEB reward, with no causal
+or directional task in sight. Closing that gap requires hard causal negatives
+(\S\ref{sec:emb:contrastive}), an antisymmetric scoring geometry, and cross-attention,
+not merely a bigger embedder.

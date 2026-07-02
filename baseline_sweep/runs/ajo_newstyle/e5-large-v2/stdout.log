@@ -1,132 +1,132 @@
-22:23:59 INFO run_dir=/mnt/localssd/baseline_sweep/runs/ajo_newstyle/e5-large-v2
-22:23:59 INFO device=cuda:0  bf16=True  physical_gpu=3  CUDA_VISIBLE_DEVICES=3
-22:23:59 INFO dataset=ajo_newstyle  model=e5-large-v2  backbone=intfloat/e5-large-v2
-22:23:59 INFO tokenizer <- intfloat/e5-large-v2
+06:25:47 INFO run_dir=/mnt/localssd/baseline_sweep/runs/ajo_newstyle/e5-large-v2
+06:25:47 INFO device=cuda:0  bf16=True  physical_gpu=1  CUDA_VISIBLE_DEVICES=1
+06:25:47 INFO dataset=ajo_newstyle  model=e5-large-v2  backbone=intfloat/e5-large-v2
+06:25:47 INFO tokenizer <- intfloat/e5-large-v2
 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-22:24:00 INFO split files: ['train.jsonl', 'val.jsonl', 'test.jsonl']
-22:24:00 INFO scanning max token length across all splits ...
+06:25:47 INFO split files: ['train.jsonl', 'val.jsonl', 'test.jsonl']
+06:25:47 INFO scanning max token length across all splits ...
 [transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (1021 > 512). Running this sequence through the model will result in indexing errors
-22:24:28 INFO   observed_max=21129 -> max_seq_len=512 (cap=512, scan=28.9s)
-22:24:28 INFO loading datasets ...
-22:24:29 INFO   schema=newstyle  train=20897  val=2612  test=2613
-22:24:29 INFO building DirectionalClassifier  backbone=intfloat/e5-large-v2  head=MLP(4d->512->128->1, act=gelu, norm=layer, dropout=0.1)  n_tiers=0
-Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 6566.90it/s]
-Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 6541.89it/s]
-22:24:34 INFO   hidden_size=1024  trainable_params=672,456,705
-22:24:34 INFO   total_steps=5228  warmup_steps=522
-22:24:53 INFO   e1 step    50/1307  loss=0.7828  acc=0.5212  lr0=1.92e-06 lr1=9.58e-05
-22:25:10 INFO   e1 step   100/1307  loss=0.7584  acc=0.5219  lr0=3.83e-06 lr1=1.92e-04
-22:25:27 INFO   e1 step   150/1307  loss=0.7434  acc=0.5238  lr0=5.75e-06 lr1=2.87e-04
-22:25:44 INFO   e1 step   200/1307  loss=0.7384  acc=0.5175  lr0=7.66e-06 lr1=3.83e-04
-22:26:01 INFO   e1 step   250/1307  loss=0.7287  acc=0.5215  lr0=9.58e-06 lr1=4.79e-04
-22:26:19 INFO   e1 step   300/1307  loss=0.7240  acc=0.5240  lr0=1.15e-05 lr1=5.75e-04
-22:26:36 INFO   e1 step   350/1307  loss=0.7225  acc=0.5218  lr0=1.34e-05 lr1=6.70e-04
-22:26:52 INFO   e1 step   400/1307  loss=0.7204  acc=0.5186  lr0=1.53e-05 lr1=7.66e-04
-22:27:10 INFO   e1 step   450/1307  loss=0.7182  acc=0.5169  lr0=1.72e-05 lr1=8.62e-04
-22:27:26 INFO   e1 step   500/1307  loss=0.7151  acc=0.5200  lr0=1.92e-05 lr1=9.58e-04
-22:27:43 INFO   e1 step   550/1307  loss=0.7133  acc=0.5200  lr0=1.99e-05 lr1=9.94e-04
-22:28:01 INFO   e1 step   600/1307  loss=0.7125  acc=0.5190  lr0=1.97e-05 lr1=9.83e-04
-22:28:18 INFO   e1 step   650/1307  loss=0.7105  acc=0.5212  lr0=1.95e-05 lr1=9.73e-04
-22:28:35 INFO   e1 step   700/1307  loss=0.7104  acc=0.5209  lr0=1.92e-05 lr1=9.62e-04
-22:28:52 INFO   e1 step   750/1307  loss=0.7091  acc=0.5225  lr0=1.90e-05 lr1=9.52e-04
-22:29:09 INFO   e1 step   800/1307  loss=0.7086  acc=0.5209  lr0=1.88e-05 lr1=9.41e-04
-22:29:27 INFO   e1 step   850/1307  loss=0.7078  acc=0.5212  lr0=1.86e-05 lr1=9.30e-04
-22:29:44 INFO   e1 step   900/1307  loss=0.7073  acc=0.5194  lr0=1.84e-05 lr1=9.20e-04
-22:30:01 INFO   e1 step   950/1307  loss=0.7067  acc=0.5182  lr0=1.82e-05 lr1=9.09e-04
-22:30:18 INFO   e1 step  1000/1307  loss=0.7063  acc=0.5162  lr0=1.80e-05 lr1=8.98e-04
-22:30:36 INFO   e1 step  1050/1307  loss=0.7059  acc=0.5152  lr0=1.78e-05 lr1=8.88e-04
-22:30:53 INFO   e1 step  1100/1307  loss=0.7053  acc=0.5156  lr0=1.75e-05 lr1=8.77e-04
-22:31:10 INFO   e1 step  1150/1307  loss=0.7048  acc=0.5152  lr0=1.73e-05 lr1=8.67e-04
-22:31:27 INFO   e1 step  1200/1307  loss=0.7042  acc=0.5162  lr0=1.71e-05 lr1=8.56e-04
-22:31:45 INFO   e1 step  1250/1307  loss=0.7038  acc=0.5179  lr0=1.69e-05 lr1=8.45e-04
-22:32:02 INFO   e1 step  1300/1307  loss=0.7036  acc=0.5175  lr0=1.67e-05 lr1=8.35e-04
-22:32:17 INFO [epoch 1] train_loss=0.7036 train_acc=0.5173  val_loss=0.6940 val_acc=0.5073 val_auc=0.5635  elapsed=463.1s
-22:32:20 INFO   saved best.pt  val_acc=0.5073
-22:32:37 INFO   e2 step    50/1307  loss=0.6896  acc=0.5337  lr0=1.65e-05 lr1=8.23e-04
-22:32:54 INFO   e2 step   100/1307  loss=0.6915  acc=0.5288  lr0=1.62e-05 lr1=8.12e-04
-22:33:11 INFO   e2 step   150/1307  loss=0.6927  acc=0.5183  lr0=1.60e-05 lr1=8.01e-04
-22:33:29 INFO   e2 step   200/1307  loss=0.6971  acc=0.5219  lr0=1.58e-05 lr1=7.91e-04
-22:33:46 INFO   e2 step   250/1307  loss=0.6972  acc=0.5200  lr0=1.56e-05 lr1=7.80e-04
-22:34:03 INFO   e2 step   300/1307  loss=0.6969  acc=0.5177  lr0=1.54e-05 lr1=7.69e-04
-22:34:20 INFO   e2 step   350/1307  loss=0.6990  acc=0.5155  lr0=1.52e-05 lr1=7.59e-04
-22:34:37 INFO   e2 step   400/1307  loss=0.6984  acc=0.5172  lr0=1.50e-05 lr1=7.48e-04
-22:34:55 INFO   e2 step   450/1307  loss=0.6986  acc=0.5171  lr0=1.48e-05 lr1=7.38e-04
-22:35:12 INFO   e2 step   500/1307  loss=0.6983  acc=0.5190  lr0=1.45e-05 lr1=7.27e-04
-22:35:29 INFO   e2 step   550/1307  loss=0.6985  acc=0.5168  lr0=1.43e-05 lr1=7.16e-04
-22:35:46 INFO   e2 step   600/1307  loss=0.6984  acc=0.5140  lr0=1.41e-05 lr1=7.06e-04
-22:36:03 INFO   e2 step   650/1307  loss=0.6981  acc=0.5127  lr0=1.39e-05 lr1=6.95e-04
-22:36:20 INFO   e2 step   700/1307  loss=0.6977  acc=0.5132  lr0=1.37e-05 lr1=6.84e-04
-22:36:37 INFO   e2 step   750/1307  loss=0.6973  acc=0.5142  lr0=1.35e-05 lr1=6.74e-04
-22:36:54 INFO   e2 step   800/1307  loss=0.6973  acc=0.5115  lr0=1.33e-05 lr1=6.63e-04
-22:37:12 INFO   e2 step   850/1307  loss=0.6972  acc=0.5089  lr0=1.31e-05 lr1=6.53e-04
-22:37:29 INFO   e2 step   900/1307  loss=0.6970  acc=0.5090  lr0=1.28e-05 lr1=6.42e-04
-22:37:46 INFO   e2 step   950/1307  loss=0.6970  acc=0.5085  lr0=1.26e-05 lr1=6.31e-04
-22:38:03 INFO   e2 step  1000/1307  loss=0.6968  acc=0.5081  lr0=1.24e-05 lr1=6.21e-04
-22:38:20 INFO   e2 step  1050/1307  loss=0.6965  acc=0.5087  lr0=1.22e-05 lr1=6.10e-04
-22:38:38 INFO   e2 step  1100/1307  loss=0.6964  acc=0.5084  lr0=1.20e-05 lr1=5.99e-04
-22:38:55 INFO   e2 step  1150/1307  loss=0.6963  acc=0.5077  lr0=1.18e-05 lr1=5.89e-04
-22:39:12 INFO   e2 step  1200/1307  loss=0.6962  acc=0.5075  lr0=1.16e-05 lr1=5.78e-04
-22:39:29 INFO   e2 step  1250/1307  loss=0.6960  acc=0.5086  lr0=1.14e-05 lr1=5.68e-04
-22:39:47 INFO   e2 step  1300/1307  loss=0.6959  acc=0.5093  lr0=1.11e-05 lr1=5.57e-04
-22:40:02 INFO [epoch 2] train_loss=0.6960 train_acc=0.5093  val_loss=0.6976 val_acc=0.5073 val_auc=0.5302  elapsed=462.1s
-22:40:19 INFO   e3 step    50/1307  loss=0.6967  acc=0.5075  lr0=1.09e-05 lr1=5.45e-04
-22:40:36 INFO   e3 step   100/1307  loss=0.6947  acc=0.5056  lr0=1.07e-05 lr1=5.34e-04
-22:40:54 INFO   e3 step   150/1307  loss=0.6938  acc=0.5079  lr0=1.05e-05 lr1=5.24e-04
-22:41:11 INFO   e3 step   200/1307  loss=0.6930  acc=0.5181  lr0=1.03e-05 lr1=5.13e-04
-22:41:28 INFO   e3 step   250/1307  loss=0.6936  acc=0.5128  lr0=1.00e-05 lr1=5.02e-04
-22:41:45 INFO   e3 step   300/1307  loss=0.6939  acc=0.5098  lr0=9.83e-06 lr1=4.92e-04
-22:42:02 INFO   e3 step   350/1307  loss=0.6938  acc=0.5121  lr0=9.62e-06 lr1=4.81e-04
-22:42:19 INFO   e3 step   400/1307  loss=0.6938  acc=0.5136  lr0=9.41e-06 lr1=4.70e-04
-22:42:37 INFO   e3 step   450/1307  loss=0.6939  acc=0.5131  lr0=9.20e-06 lr1=4.60e-04
-22:42:56 INFO   e3 step   500/1307  loss=0.6942  acc=0.5110  lr0=8.98e-06 lr1=4.49e-04
-22:43:33 INFO   e3 step   550/1307  loss=0.6939  acc=0.5114  lr0=8.77e-06 lr1=4.39e-04
-22:44:10 INFO   e3 step   600/1307  loss=0.6933  acc=0.5134  lr0=8.56e-06 lr1=4.28e-04
-22:44:46 INFO   e3 step   650/1307  loss=0.6934  acc=0.5133  lr0=8.35e-06 lr1=4.17e-04
-22:45:24 INFO   e3 step   700/1307  loss=0.6933  acc=0.5139  lr0=8.13e-06 lr1=4.07e-04
-22:46:01 INFO   e3 step   750/1307  loss=0.6934  acc=0.5119  lr0=7.92e-06 lr1=3.96e-04
-22:46:38 INFO   e3 step   800/1307  loss=0.6935  acc=0.5122  lr0=7.71e-06 lr1=3.85e-04
-22:47:11 INFO   e3 step   850/1307  loss=0.6936  acc=0.5113  lr0=7.50e-06 lr1=3.75e-04
-22:47:48 INFO   e3 step   900/1307  loss=0.6936  acc=0.5092  lr0=7.28e-06 lr1=3.64e-04
-22:48:25 INFO   e3 step   950/1307  loss=0.6936  acc=0.5091  lr0=7.07e-06 lr1=3.54e-04
-22:49:02 INFO   e3 step  1000/1307  loss=0.6936  acc=0.5093  lr0=6.86e-06 lr1=3.43e-04
-22:49:40 INFO   e3 step  1050/1307  loss=0.6935  acc=0.5086  lr0=6.65e-06 lr1=3.32e-04
-22:50:17 INFO   e3 step  1100/1307  loss=0.6933  acc=0.5093  lr0=6.43e-06 lr1=3.22e-04
-22:50:54 INFO   e3 step  1150/1307  loss=0.6935  acc=0.5085  lr0=6.22e-06 lr1=3.11e-04
-22:51:26 INFO   e3 step  1200/1307  loss=0.6935  acc=0.5084  lr0=6.01e-06 lr1=3.00e-04
-22:52:03 INFO   e3 step  1250/1307  loss=0.6934  acc=0.5095  lr0=5.80e-06 lr1=2.90e-04
-22:52:41 INFO   e3 step  1300/1307  loss=0.6934  acc=0.5101  lr0=5.58e-06 lr1=2.79e-04
-22:53:14 INFO [epoch 3] train_loss=0.6934 train_acc=0.5102  val_loss=0.6954 val_acc=0.5096 val_auc=0.5151  elapsed=791.6s
-22:53:17 INFO   saved best.pt  val_acc=0.5096
-22:53:55 INFO   e4 step    50/1307  loss=0.6936  acc=0.5212  lr0=5.34e-06 lr1=2.67e-04
-22:54:32 INFO   e4 step   100/1307  loss=0.6924  acc=0.5194  lr0=5.13e-06 lr1=2.56e-04
-22:55:06 INFO   e4 step   150/1307  loss=0.6907  acc=0.5200  lr0=4.92e-06 lr1=2.46e-04
-22:55:25 INFO   e4 step   200/1307  loss=0.6914  acc=0.5172  lr0=4.70e-06 lr1=2.35e-04
-22:55:43 INFO   e4 step   250/1307  loss=0.6916  acc=0.5140  lr0=4.49e-06 lr1=2.25e-04
-22:56:00 INFO   e4 step   300/1307  loss=0.6911  acc=0.5175  lr0=4.28e-06 lr1=2.14e-04
-22:56:17 INFO   e4 step   350/1307  loss=0.6905  acc=0.5195  lr0=4.07e-06 lr1=2.03e-04
-22:56:34 INFO   e4 step   400/1307  loss=0.6905  acc=0.5205  lr0=3.85e-06 lr1=1.93e-04
-22:56:51 INFO   e4 step   450/1307  loss=0.6901  acc=0.5240  lr0=3.64e-06 lr1=1.82e-04
-22:57:09 INFO   e4 step   500/1307  loss=0.6895  acc=0.5294  lr0=3.43e-06 lr1=1.71e-04
-22:57:26 INFO   e4 step   550/1307  loss=0.6894  acc=0.5289  lr0=3.22e-06 lr1=1.61e-04
-22:57:43 INFO   e4 step   600/1307  loss=0.6898  acc=0.5275  lr0=3.00e-06 lr1=1.50e-04
-22:58:00 INFO   e4 step   650/1307  loss=0.6893  acc=0.5256  lr0=2.79e-06 lr1=1.40e-04
-22:58:18 INFO   e4 step   700/1307  loss=0.6890  acc=0.5267  lr0=2.58e-06 lr1=1.29e-04
-22:58:35 INFO   e4 step   750/1307  loss=0.6897  acc=0.5273  lr0=2.37e-06 lr1=1.18e-04
-22:58:52 INFO   e4 step   800/1307  loss=0.6896  acc=0.5282  lr0=2.15e-06 lr1=1.08e-04
-22:59:09 INFO   e4 step   850/1307  loss=0.6898  acc=0.5274  lr0=1.94e-06 lr1=9.71e-05
-22:59:26 INFO   e4 step   900/1307  loss=0.6895  acc=0.5286  lr0=1.73e-06 lr1=8.65e-05
-22:59:43 INFO   e4 step   950/1307  loss=0.6892  acc=0.5301  lr0=1.52e-06 lr1=7.59e-05
-23:00:00 INFO   e4 step  1000/1307  loss=0.6891  acc=0.5309  lr0=1.30e-06 lr1=6.52e-05
-23:00:17 INFO   e4 step  1050/1307  loss=0.6891  acc=0.5311  lr0=1.09e-06 lr1=5.46e-05
-23:00:34 INFO   e4 step  1100/1307  loss=0.6888  acc=0.5317  lr0=8.80e-07 lr1=4.40e-05
-23:00:51 INFO   e4 step  1150/1307  loss=0.6889  acc=0.5317  lr0=6.67e-07 lr1=3.34e-05
-23:01:08 INFO   e4 step  1200/1307  loss=0.6885  acc=0.5321  lr0=4.55e-07 lr1=2.27e-05
-23:01:26 INFO   e4 step  1250/1307  loss=0.6884  acc=0.5330  lr0=2.42e-07 lr1=1.21e-05
-23:01:43 INFO   e4 step  1300/1307  loss=0.6884  acc=0.5325  lr0=2.97e-08 lr1=1.49e-06
-23:01:59 INFO [epoch 4] train_loss=0.6884 train_acc=0.5327  val_loss=0.6879 val_acc=0.5283 val_auc=0.5412  elapsed=521.2s
-23:02:03 INFO   saved best.pt  val_acc=0.5283
-23:02:07 INFO loading best.pt for test eval
-23:02:22 INFO [test] loss=0.6874  acc=0.5320  auc=0.5534  f1=0.4002
-23:02:22 INFO [test] per-tier-pair accuracy:
-23:02:22 INFO         T0-T0  n= 2613  acc=0.5320
-23:02:22 INFO [done] run_summary.json written to /mnt/localssd/baseline_sweep/runs/ajo_newstyle/e5-large-v2
+06:26:17 INFO   observed_max=21129 -> max_seq_len=512 (cap=512, scan=29.4s)
+06:26:17 INFO loading datasets ...
+06:26:17 INFO   schema=newstyle  train=20897  val=2612  test=2613
+06:26:17 INFO building DirectionalClassifier  backbone=intfloat/e5-large-v2  head=MLP(4d->512->128->1, act=gelu, norm=layer, dropout=0.1)  n_tiers=0
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 7202.72it/s]
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 8964.98it/s]
+06:26:19 INFO   hidden_size=1024  trainable_params=672,456,705
+06:26:19 INFO   total_steps=1304  warmup_steps=78  grad_accum=4  eff_batch=64
+06:26:36 INFO   e1 step    50/1307  loss=0.8269  acc=0.5100  lr0=1.54e-06 lr1=1.54e-04
+06:26:52 INFO   e1 step   100/1307  loss=0.7722  acc=0.5231  lr0=3.21e-06 lr1=3.21e-04
+06:27:08 INFO   e1 step   150/1307  loss=0.7517  acc=0.5196  lr0=4.74e-06 lr1=4.74e-04
+06:27:24 INFO   e1 step   200/1307  loss=0.7411  acc=0.5203  lr0=6.41e-06 lr1=6.41e-04
+06:27:40 INFO   e1 step   250/1307  loss=0.7337  acc=0.5225  lr0=7.95e-06 lr1=7.95e-04
+06:27:56 INFO   e1 step   300/1307  loss=0.7269  acc=0.5242  lr0=9.62e-06 lr1=9.62e-04
+06:28:12 INFO   e1 step   350/1307  loss=0.7224  acc=0.5257  lr0=9.93e-06 lr1=9.93e-04
+06:28:27 INFO   e1 step   400/1307  loss=0.7194  acc=0.5258  lr0=9.82e-06 lr1=9.82e-04
+06:28:43 INFO   e1 step   450/1307  loss=0.7162  acc=0.5253  lr0=9.72e-06 lr1=9.72e-04
+06:28:59 INFO   e1 step   500/1307  loss=0.7113  acc=0.5321  lr0=9.62e-06 lr1=9.62e-04
+06:29:15 INFO   e1 step   550/1307  loss=0.7100  acc=0.5365  lr0=9.52e-06 lr1=9.52e-04
+06:29:31 INFO   e1 step   600/1307  loss=0.7077  acc=0.5375  lr0=9.41e-06 lr1=9.41e-04
+06:29:47 INFO   e1 step   650/1307  loss=0.7042  acc=0.5413  lr0=9.31e-06 lr1=9.31e-04
+06:30:03 INFO   e1 step   700/1307  loss=0.7019  acc=0.5444  lr0=9.21e-06 lr1=9.21e-04
+06:30:19 INFO   e1 step   750/1307  loss=0.7010  acc=0.5456  lr0=9.11e-06 lr1=9.11e-04
+06:30:35 INFO   e1 step   800/1307  loss=0.7005  acc=0.5441  lr0=9.00e-06 lr1=9.00e-04
+06:30:51 INFO   e1 step   850/1307  loss=0.6989  acc=0.5454  lr0=8.91e-06 lr1=8.91e-04
+06:31:07 INFO   e1 step   900/1307  loss=0.6969  acc=0.5463  lr0=8.80e-06 lr1=8.80e-04
+06:31:23 INFO   e1 step   950/1307  loss=0.6952  acc=0.5483  lr0=8.70e-06 lr1=8.70e-04
+06:31:39 INFO   e1 step  1000/1307  loss=0.6934  acc=0.5498  lr0=8.60e-06 lr1=8.60e-04
+06:31:55 INFO   e1 step  1050/1307  loss=0.6922  acc=0.5496  lr0=8.50e-06 lr1=8.50e-04
+06:32:11 INFO   e1 step  1100/1307  loss=0.6911  acc=0.5508  lr0=8.39e-06 lr1=8.39e-04
+06:32:27 INFO   e1 step  1150/1307  loss=0.6885  acc=0.5540  lr0=8.30e-06 lr1=8.30e-04
+06:32:43 INFO   e1 step  1200/1307  loss=0.6877  acc=0.5551  lr0=8.19e-06 lr1=8.19e-04
+06:32:58 INFO   e1 step  1250/1307  loss=0.6864  acc=0.5560  lr0=8.09e-06 lr1=8.09e-04
+06:33:14 INFO   e1 step  1300/1307  loss=0.6853  acc=0.5571  lr0=7.99e-06 lr1=7.99e-04
+06:33:30 INFO [epoch 1] train_loss=0.6850 train_acc=0.5574  val_loss=0.6388 val_acc=0.5926 val_auc=0.6613  elapsed=431.0s
+06:33:33 INFO   saved best.pt  val_acc=0.5926
+06:33:49 INFO   e2 step    50/1307  loss=0.6283  acc=0.6462  lr0=7.88e-06 lr1=7.88e-04
+06:34:05 INFO   e2 step   100/1307  loss=0.6305  acc=0.6288  lr0=7.77e-06 lr1=7.77e-04
+06:34:21 INFO   e2 step   150/1307  loss=0.6329  acc=0.6204  lr0=7.68e-06 lr1=7.68e-04
+06:34:37 INFO   e2 step   200/1307  loss=0.6291  acc=0.6269  lr0=7.57e-06 lr1=7.57e-04
+06:34:53 INFO   e2 step   250/1307  loss=0.6293  acc=0.6230  lr0=7.47e-06 lr1=7.47e-04
+06:35:09 INFO   e2 step   300/1307  loss=0.6312  acc=0.6215  lr0=7.37e-06 lr1=7.37e-04
+06:35:24 INFO   e2 step   350/1307  loss=0.6299  acc=0.6193  lr0=7.27e-06 lr1=7.27e-04
+06:35:40 INFO   e2 step   400/1307  loss=0.6299  acc=0.6148  lr0=7.16e-06 lr1=7.16e-04
+06:35:56 INFO   e2 step   450/1307  loss=0.6296  acc=0.6136  lr0=7.06e-06 lr1=7.06e-04
+06:36:12 INFO   e2 step   500/1307  loss=0.6294  acc=0.6134  lr0=6.96e-06 lr1=6.96e-04
+06:36:28 INFO   e2 step   550/1307  loss=0.6304  acc=0.6093  lr0=6.86e-06 lr1=6.86e-04
+06:36:44 INFO   e2 step   600/1307  loss=0.6292  acc=0.6089  lr0=6.75e-06 lr1=6.75e-04
+06:37:00 INFO   e2 step   650/1307  loss=0.6287  acc=0.6090  lr0=6.66e-06 lr1=6.66e-04
+06:37:16 INFO   e2 step   700/1307  loss=0.6277  acc=0.6104  lr0=6.55e-06 lr1=6.55e-04
+06:37:31 INFO   e2 step   750/1307  loss=0.6264  acc=0.6122  lr0=6.45e-06 lr1=6.45e-04
+06:37:48 INFO   e2 step   800/1307  loss=0.6268  acc=0.6113  lr0=6.35e-06 lr1=6.35e-04
+06:38:04 INFO   e2 step   850/1307  loss=0.6252  acc=0.6139  lr0=6.25e-06 lr1=6.25e-04
+06:38:20 INFO   e2 step   900/1307  loss=0.6241  acc=0.6142  lr0=6.14e-06 lr1=6.14e-04
+06:38:36 INFO   e2 step   950/1307  loss=0.6250  acc=0.6134  lr0=6.04e-06 lr1=6.04e-04
+06:38:51 INFO   e2 step  1000/1307  loss=0.6243  acc=0.6132  lr0=5.94e-06 lr1=5.94e-04
+06:39:08 INFO   e2 step  1050/1307  loss=0.6229  acc=0.6155  lr0=5.84e-06 lr1=5.84e-04
+06:39:24 INFO   e2 step  1100/1307  loss=0.6231  acc=0.6153  lr0=5.73e-06 lr1=5.73e-04
+06:39:40 INFO   e2 step  1150/1307  loss=0.6222  acc=0.6155  lr0=5.64e-06 lr1=5.64e-04
+06:39:56 INFO   e2 step  1200/1307  loss=0.6224  acc=0.6148  lr0=5.53e-06 lr1=5.53e-04
+06:40:12 INFO   e2 step  1250/1307  loss=0.6220  acc=0.6157  lr0=5.43e-06 lr1=5.43e-04
+06:40:28 INFO   e2 step  1300/1307  loss=0.6222  acc=0.6149  lr0=5.33e-06 lr1=5.33e-04
+06:40:43 INFO [epoch 2] train_loss=0.6224 train_acc=0.6143  val_loss=0.6542 val_acc=0.5957 val_auc=0.6761  elapsed=430.5s
+06:40:47 INFO   saved best.pt  val_acc=0.5957
+06:41:03 INFO   e3 step    50/1307  loss=0.6163  acc=0.6075  lr0=5.22e-06 lr1=5.22e-04
+06:41:19 INFO   e3 step   100/1307  loss=0.6014  acc=0.6375  lr0=5.11e-06 lr1=5.11e-04
+06:41:35 INFO   e3 step   150/1307  loss=0.5924  acc=0.6462  lr0=5.02e-06 lr1=5.02e-04
+06:41:51 INFO   e3 step   200/1307  loss=0.5868  acc=0.6553  lr0=4.91e-06 lr1=4.91e-04
+06:42:07 INFO   e3 step   250/1307  loss=0.5862  acc=0.6580  lr0=4.81e-06 lr1=4.81e-04
+06:42:23 INFO   e3 step   300/1307  loss=0.5850  acc=0.6573  lr0=4.71e-06 lr1=4.71e-04
+06:42:39 INFO   e3 step   350/1307  loss=0.5814  acc=0.6634  lr0=4.61e-06 lr1=4.61e-04
+06:42:55 INFO   e3 step   400/1307  loss=0.5823  acc=0.6619  lr0=4.50e-06 lr1=4.50e-04
+06:43:11 INFO   e3 step   450/1307  loss=0.5837  acc=0.6579  lr0=4.40e-06 lr1=4.40e-04
+06:43:27 INFO   e3 step   500/1307  loss=0.5854  acc=0.6550  lr0=4.30e-06 lr1=4.30e-04
+06:43:43 INFO   e3 step   550/1307  loss=0.5860  acc=0.6551  lr0=4.20e-06 lr1=4.20e-04
+06:43:59 INFO   e3 step   600/1307  loss=0.5854  acc=0.6553  lr0=4.09e-06 lr1=4.09e-04
+06:44:15 INFO   e3 step   650/1307  loss=0.5838  acc=0.6541  lr0=4.00e-06 lr1=4.00e-04
+06:44:31 INFO   e3 step   700/1307  loss=0.5822  acc=0.6555  lr0=3.89e-06 lr1=3.89e-04
+06:44:47 INFO   e3 step   750/1307  loss=0.5819  acc=0.6548  lr0=3.79e-06 lr1=3.79e-04
+06:45:03 INFO   e3 step   800/1307  loss=0.5825  acc=0.6527  lr0=3.69e-06 lr1=3.69e-04
+06:45:19 INFO   e3 step   850/1307  loss=0.5827  acc=0.6523  lr0=3.59e-06 lr1=3.59e-04
+06:45:34 INFO   e3 step   900/1307  loss=0.5832  acc=0.6515  lr0=3.48e-06 lr1=3.48e-04
+06:45:50 INFO   e3 step   950/1307  loss=0.5811  acc=0.6523  lr0=3.38e-06 lr1=3.38e-04
+06:46:06 INFO   e3 step  1000/1307  loss=0.5809  acc=0.6518  lr0=3.28e-06 lr1=3.28e-04
+06:46:23 INFO   e3 step  1050/1307  loss=0.5798  acc=0.6524  lr0=3.18e-06 lr1=3.18e-04
+06:46:39 INFO   e3 step  1100/1307  loss=0.5801  acc=0.6529  lr0=3.08e-06 lr1=3.08e-04
+06:46:55 INFO   e3 step  1150/1307  loss=0.5804  acc=0.6518  lr0=2.98e-06 lr1=2.98e-04
+06:47:10 INFO   e3 step  1200/1307  loss=0.5808  acc=0.6506  lr0=2.87e-06 lr1=2.87e-04
+06:47:26 INFO   e3 step  1250/1307  loss=0.5805  acc=0.6506  lr0=2.77e-06 lr1=2.77e-04
+06:47:42 INFO   e3 step  1300/1307  loss=0.5809  acc=0.6497  lr0=2.67e-06 lr1=2.67e-04
+06:47:58 INFO [epoch 3] train_loss=0.5811 train_acc=0.6497  val_loss=0.6505 val_acc=0.5911 val_auc=0.6799  elapsed=430.5s
+06:48:14 INFO   e4 step    50/1307  loss=0.5739  acc=0.6600  lr0=2.56e-06 lr1=2.56e-04
+06:48:30 INFO   e4 step   100/1307  loss=0.5651  acc=0.6581  lr0=2.46e-06 lr1=2.46e-04
+06:48:46 INFO   e4 step   150/1307  loss=0.5523  acc=0.6721  lr0=2.36e-06 lr1=2.36e-04
+06:49:02 INFO   e4 step   200/1307  loss=0.5523  acc=0.6722  lr0=2.25e-06 lr1=2.25e-04
+06:49:18 INFO   e4 step   250/1307  loss=0.5508  acc=0.6745  lr0=2.15e-06 lr1=2.15e-04
+06:49:34 INFO   e4 step   300/1307  loss=0.5495  acc=0.6742  lr0=2.05e-06 lr1=2.05e-04
+06:49:50 INFO   e4 step   350/1307  loss=0.5513  acc=0.6739  lr0=1.95e-06 lr1=1.95e-04
+06:50:06 INFO   e4 step   400/1307  loss=0.5480  acc=0.6761  lr0=1.84e-06 lr1=1.84e-04
+06:50:22 INFO   e4 step   450/1307  loss=0.5486  acc=0.6746  lr0=1.75e-06 lr1=1.75e-04
+06:50:38 INFO   e4 step   500/1307  loss=0.5467  acc=0.6771  lr0=1.64e-06 lr1=1.64e-04
+06:50:54 INFO   e4 step   550/1307  loss=0.5480  acc=0.6743  lr0=1.54e-06 lr1=1.54e-04
+06:51:10 INFO   e4 step   600/1307  loss=0.5492  acc=0.6729  lr0=1.44e-06 lr1=1.44e-04
+06:51:26 INFO   e4 step   650/1307  loss=0.5487  acc=0.6713  lr0=1.34e-06 lr1=1.34e-04
+06:51:42 INFO   e4 step   700/1307  loss=0.5483  acc=0.6713  lr0=1.23e-06 lr1=1.23e-04
+06:51:58 INFO   e4 step   750/1307  loss=0.5484  acc=0.6717  lr0=1.13e-06 lr1=1.13e-04
+06:52:14 INFO   e4 step   800/1307  loss=0.5479  acc=0.6734  lr0=1.03e-06 lr1=1.03e-04
+06:52:30 INFO   e4 step   850/1307  loss=0.5474  acc=0.6749  lr0=9.30e-07 lr1=9.30e-05
+06:52:46 INFO   e4 step   900/1307  loss=0.5470  acc=0.6754  lr0=8.24e-07 lr1=8.24e-05
+06:53:01 INFO   e4 step   950/1307  loss=0.5460  acc=0.6759  lr0=7.26e-07 lr1=7.26e-05
+06:53:17 INFO   e4 step  1000/1307  loss=0.5441  acc=0.6775  lr0=6.20e-07 lr1=6.20e-05
+06:53:33 INFO   e4 step  1050/1307  loss=0.5444  acc=0.6775  lr0=5.22e-07 lr1=5.22e-05
+06:53:49 INFO   e4 step  1100/1307  loss=0.5436  acc=0.6780  lr0=4.16e-07 lr1=4.16e-05
+06:54:04 INFO   e4 step  1150/1307  loss=0.5453  acc=0.6777  lr0=3.18e-07 lr1=3.18e-05
+06:54:20 INFO   e4 step  1200/1307  loss=0.5444  acc=0.6790  lr0=2.12e-07 lr1=2.12e-05
+06:54:36 INFO   e4 step  1250/1307  loss=0.5442  acc=0.6790  lr0=1.14e-07 lr1=1.14e-05
+06:54:53 INFO   e4 step  1300/1307  loss=0.5441  acc=0.6794  lr0=8.16e-09 lr1=8.16e-07
+06:55:08 INFO [epoch 4] train_loss=0.5441 train_acc=0.6793  val_loss=0.6633 val_acc=0.5984 val_auc=0.6842  elapsed=430.3s
+06:55:12 INFO   saved best.pt  val_acc=0.5984
+06:55:14 INFO loading best.pt for test eval
+06:55:30 INFO [test] loss=0.6856  acc=0.6070  auc=0.6769  f1=0.6283
+06:55:30 INFO [test] per-tier-pair accuracy:
+06:55:30 INFO         T0-T0  n= 2613  acc=0.6070
+06:55:30 INFO [done] run_summary.json written to /mnt/localssd/baseline_sweep/runs/ajo_newstyle/e5-large-v2

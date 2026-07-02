@@ -16,37 +16,37 @@
       {
         "label1": "t1",
         "label2": "t2",
-        "score": 0.734375,
+        "score": 1.0,
         "pred": 1
       },
       {
         "label1": "t1",
         "label2": "t3",
-        "score": 0.933594,
+        "score": 0.996094,
         "pred": 1
       },
       {
         "label1": "t2",
         "label2": "t1",
-        "score": 0.380859,
+        "score": 0.001869,
         "pred": 0
       },
       {
         "label1": "t2",
         "label2": "t3",
-        "score": 0.800781,
+        "score": 0.996094,
         "pred": 1
       },
       {
         "label1": "t3",
         "label2": "t1",
-        "score": 0.412109,
+        "score": 0.001808,
         "pred": 0
       },
       {
         "label1": "t3",
         "label2": "t2",
-        "score": 0.421875,
+        "score": 0.009705,
         "pred": 0
       }
     ]
@@ -60,46 +60,46 @@
     ],
     "predicted_order": [
       "t1",
-      "t3",
-      "t2"
+      "t2",
+      "t3"
     ],
-    "order_correct": false,
+    "order_correct": true,
     "pairs": [
       {
         "label1": "t1",
         "label2": "t2",
-        "score": 0.703125,
+        "score": 0.9375,
         "pred": 1
       },
       {
         "label1": "t1",
         "label2": "t3",
-        "score": 0.578125,
+        "score": 0.996094,
         "pred": 1
       },
       {
         "label1": "t2",
         "label2": "t1",
-        "score": 0.423828,
+        "score": 0.009705,
         "pred": 0
       },
       {
         "label1": "t2",
         "label2": "t3",
-        "score": 0.679688,
+        "score": 0.988281,
         "pred": 1
       },
       {
         "label1": "t3",
         "label2": "t1",
-        "score": 0.396484,
+        "score": 0.011658,
         "pred": 0
       },
       {
         "label1": "t3",
         "label2": "t2",
-        "score": 0.757812,
-        "pred": 1
+        "score": 0.202148,
+        "pred": 0
       }
     ]
   },
@@ -120,38 +120,38 @@
       {
         "label1": "t1",
         "label2": "t2",
-        "score": 0.494141,
-        "pred": 0
+        "score": 0.996094,
+        "pred": 1
       },
       {
         "label1": "t1",
         "label2": "t3",
-        "score": 0.699219,
+        "score": 0.996094,
         "pred": 1
       },
       {
         "label1": "t2",
         "label2": "t1",
-        "score": 0.408203,
+        "score": 0.003082,
         "pred": 0
       },
       {
         "label1": "t2",
         "label2": "t3",
-        "score": 0.402344,
+        "score": 0.197266,
         "pred": 0
       },
       {
         "label1": "t3",
         "label2": "t1",
-        "score": 0.480469,
+        "score": 0.002884,
         "pred": 0
       },
       {
         "label1": "t3",
         "label2": "t2",
-        "score": 0.488281,
-        "pred": 0
+        "score": 0.632812,
+        "pred": 1
       }
     ]
   },
@@ -172,38 +172,38 @@
       {
         "label1": "t1",
         "label2": "t2",
-        "score": 0.796875,
+        "score": 1.0,
         "pred": 1
       },
       {
         "label1": "t1",
         "label2": "t3",
-        "score": 0.910156,
+        "score": 0.996094,
         "pred": 1
       },
       {
         "label1": "t2",
         "label2": "t1",
-        "score": 0.519531,
-        "pred": 1
+        "score": 0.005737,
+        "pred": 0
       },
       {
         "label1": "t2",
         "label2": "t3",
-        "score": 0.910156,
+        "score": 0.996094,
         "pred": 1
       },
       {
         "label1": "t3",
         "label2": "t1",
-        "score": 0.318359,
+        "score": 0.003708,
         "pred": 0
       },
       {
         "label1": "t3",
         "label2": "t2",
-        "score": 0.855469,
-        "pred": 1
+        "score": 0.363281,
+        "pred": 0
       }
     ]
   },
@@ -224,37 +224,37 @@
       {
         "label1": "t1",
         "label2": "t2",
-        "score": 0.738281,
+        "score": 0.996094,
         "pred": 1
       },
       {
         "label1": "t1",
         "label2": "t3",
-        "score": 0.8125,
+        "score": 1.0,
         "pred": 1
       },
       {
         "label1": "t2",
         "label2": "t1",
-        "score": 0.416016,
+        "score": 0.011353,
         "pred": 0
       },
       {
         "label1": "t2",
         "label2": "t3",
-        "score": 0.875,
+        "score": 0.996094,
         "pred": 1
       },
       {
         "label1": "t3",
         "label2": "t1",
-        "score": 0.208984,
+        "score": 0.001549,
         "pred": 0
       },
       {
         "label1": "t3",
         "label2": "t2",
-        "score": 0.122559,
+        "score": 0.001869,
         "pred": 0
       }
     ]
@@ -268,45 +268,45 @@
     ],
     "predicted_order": [
       "t1",
-      "t3",
-      "t2"
+      "t2",
+      "t3"
     ],
-    "order_correct": false,
+    "order_correct": true,
     "pairs": [
       {
         "label1": "t1",
         "label2": "t2",
-        "score": 0.474609,
-        "pred": 0
+        "score": 0.988281,
+        "pred": 1
       },
       {
         "label1": "t1",
         "label2": "t3",
-        "score": 0.492188,
-        "pred": 0
+        "score": 0.996094,
+        "pred": 1
       },
       {
         "label1": "t2",
         "label2": "t1",
-        "score": 0.40625,
+        "score": 0.016357,
         "pred": 0
       },
       {
         "label1": "t2",
         "label2": "t3",
-        "score": 0.396484,
+        "score": 0.412109,
         "pred": 0
       },
       {
         "label1": "t3",
         "label2": "t1",
-        "score": 0.425781,
+        "score": 0.010681,
         "pred": 0
       },
       {
         "label1": "t3",
         "label2": "t2",
-        "score": 0.488281,
+        "score": 0.056641,
         "pred": 0
       }
     ]
@@ -328,37 +328,37 @@
       {
         "label1": "t1",
         "label2": "t2",
-        "score": 0.476562,
-        "pred": 0
+        "score": 0.984375,
+        "pred": 1
       },
       {
         "label1": "t1",
         "label2": "t3",
-        "score": 0.890625,
+        "score": 0.996094,
         "pred": 1
       },
       {
         "label1": "t2",
         "label2": "t1",
-        "score": 0.392578,
+        "score": 0.034668,
         "pred": 0
       },
       {
         "label1": "t2",
         "label2": "t3",
-        "score": 0.462891,
+        "score": 0.289062,
         "pred": 0
       },
       {
         "label1": "t3",
         "label2": "t1",
-        "score": 0.357422,
+        "score": 0.001503,
         "pred": 0
       },
       {
         "label1": "t3",
         "label2": "t2",
-        "score": 0.503906,
+        "score": 0.523438,
         "pred": 1
       }
     ]
@@ -372,46 +372,46 @@
     ],
     "predicted_order": [
       "t1",
-      "t3",
-      "t2"
+      "t2",
+      "t3"
     ],
-    "order_correct": false,
+    "order_correct": true,
     "pairs": [
       {
         "label1": "t1",
         "label2": "t2",
-        "score": 0.847656,
+        "score": 1.0,
         "pred": 1
       },
       {
         "label1": "t1",
         "label2": "t3",
-        "score": 0.914062,
+        "score": 0.996094,
         "pred": 1
       },
       {
         "label1": "t2",
         "label2": "t1",
-        "score": 0.265625,
+        "score": 0.001984,
         "pred": 0
       },
       {
         "label1": "t2",
         "label2": "t3",
-        "score": 0.386719,
-        "pred": 0
+        "score": 0.925781,
+        "pred": 1
       },
       {
         "label1": "t3",
         "label2": "t1",
-        "score": 0.140625,
+        "score": 0.002548,
         "pred": 0
       },
       {
         "label1": "t3",
         "label2": "t2",
-        "score": 0.851562,
-        "pred": 1
+        "score": 0.031982,
+        "pred": 0
       }
     ]
   },
@@ -432,38 +432,38 @@
       {
         "label1": "t1",
         "label2": "t2",
-        "score": 0.59375,
+        "score": 0.996094,
         "pred": 1
       },
       {
         "label1": "t1",
         "label2": "t3",
-        "score": 0.605469,
+        "score": 0.996094,
         "pred": 1
       },
       {
         "label1": "t2",
         "label2": "t1",
-        "score": 0.535156,
-        "pred": 1
+        "score": 0.0065,
+        "pred": 0
       },
       {
         "label1": "t2",
         "label2": "t3",
-        "score": 0.910156,
+        "score": 0.996094,
         "pred": 1
       },
       {
         "label1": "t3",
         "label2": "t1",
-        "score": 0.34375,
+        "score": 0.00383,
         "pred": 0
       },
       {
         "label1": "t3",
         "label2": "t2",
-        "score": 0.789062,
-        "pred": 1
+        "score": 0.031738,
+        "pred": 0
       }
     ]
   },
@@ -484,37 +484,37 @@
       {
         "label1": "t1",
         "label2": "t2",
-        "score": 0.726562,
+        "score": 0.976562,
         "pred": 1
       },
       {
         "label1": "t1",
         "label2": "t3",
-        "score": 0.851562,
+        "score": 0.996094,
         "pred": 1
       },
       {
         "label1": "t2",
         "label2": "t1",
-        "score": 0.503906,
-        "pred": 1
+        "score": 0.017456,
+        "pred": 0
       },
       {
         "label1": "t2",
         "label2": "t3",
-        "score": 0.373047,
+        "score": 0.208984,
         "pred": 0
       },
       {
         "label1": "t3",
         "label2": "t1",
-        "score": 0.683594,
-        "pred": 1
+        "score": 0.320312,
+        "pred": 0
       },
       {
         "label1": "t3",
         "label2": "t2",
-        "score": 0.570312,
+        "score": 0.683594,
         "pred": 1
       }
     ]
@@ -536,37 +536,37 @@
       {
         "label1": "t1",
         "label2": "t2",
-        "score": 0.925781,
+        "score": 0.996094,
         "pred": 1
       },
       {
         "label1": "t1",
         "label2": "t3",
-        "score": 0.886719,
+        "score": 0.996094,
         "pred": 1
       },
       {
         "label1": "t2",
         "label2": "t1",
-        "score": 0.408203,
+        "score": 0.0065,
         "pred": 0
       },
       {
         "label1": "t2",
         "label2": "t3",
-        "score": 0.145508,
+        "score": 0.125977,
         "pred": 0
       },
       {
         "label1": "t3",
         "label2": "t1",
-        "score": 0.169922,
+        "score": 0.001869,
         "pred": 0
       },
       {
         "label1": "t3",
         "label2": "t2",
-        "score": 0.894531,
+        "score": 0.726562,
         "pred": 1
       }
     ]
@@ -588,37 +588,37 @@
       {
         "label1": "t1",
         "label2": "t2",
-        "score": 0.84375,
+        "score": 1.0,
         "pred": 1
       },
       {
         "label1": "t1",
         "label2": "t3",
-        "score": 0.84375,
+        "score": 1.0,
         "pred": 1
       },
       {
         "label1": "t2",
         "label2": "t1",
-        "score": 0.376953,
+        "score": 0.011353,
         "pred": 0
       },
       {
         "label1": "t2",
         "label2": "t3",
-        "score": 0.667969,
+        "score": 0.996094,
         "pred": 1
       },
       {
         "label1": "t3",
         "label2": "t1",
-        "score": 0.578125,
-        "pred": 1
+        "score": 0.00193,
+        "pred": 0
       },
       {
         "label1": "t3",
         "label2": "t2",
-        "score": 0.371094,
+        "score": 0.0065,
         "pred": 0
       }
     ]
@@ -632,45 +632,45 @@
     ],
     "predicted_order": [
       "t1",
-      "t3",
-      "t2"
+      "t2",
+      "t3"
     ],
-    "order_correct": false,
+    "order_correct": true,
     "pairs": [
       {
         "label1": "t1",
         "label2": "t2",
-        "score": 0.921875,
+        "score": 0.988281,
         "pred": 1
       },
       {
         "label1": "t1",
         "label2": "t3",
-        "score": 0.902344,
+        "score": 0.996094,
         "pred": 1
       },
       {
         "label1": "t2",
         "label2": "t1",
-        "score": 0.333984,
+        "score": 0.061768,
         "pred": 0
       },
       {
         "label1": "t2",
         "label2": "t3",
-        "score": 0.46875,
-        "pred": 0
+        "score": 0.949219,
+        "pred": 1
       },
       {
         "label1": "t3",
         "label2": "t1",
-        "score": 0.400391,
+        "score": 0.00592,
         "pred": 0
       },
       {
         "label1": "t3",
         "label2": "t2",
-        "score": 0.890625,
+        "score": 0.65625,
         "pred": 1
       }
     ]
@@ -684,46 +684,46 @@
     ],
     "predicted_order": [
       "t1",
-      "t3",
-      "t2"
+      "t2",
+      "t3"
     ],
-    "order_correct": false,
+    "order_correct": true,
     "pairs": [
       {
         "label1": "t1",
         "label2": "t2",
-        "score": 0.722656,
+        "score": 1.0,
         "pred": 1
       },
       {
         "label1": "t1",
         "label2": "t3",
-        "score": 0.443359,
-        "pred": 0
+        "score": 1.0,
+        "pred": 1
       },
       {
         "label1": "t2",
         "label2": "t1",
-        "score": 0.429688,
+        "score": 0.001984,
         "pred": 0
       },
       {
         "label1": "t2",
         "label2": "t3",
-        "score": 0.359375,
+        "score": 0.199219,
         "pred": 0
       },
       {
         "label1": "t3",
         "label2": "t1",
-        "score": 0.1875,
+        "score": 0.001549,
         "pred": 0
       },
       {
         "label1": "t3",
         "label2": "t2",
-        "score": 0.636719,
-        "pred": 1
+        "score": 0.131836,
+        "pred": 0
       }
     ]
   },
@@ -744,37 +744,37 @@
       {
         "label1": "t1",
         "label2": "t2",
-        "score": 0.902344,
+        "score": 0.988281,
         "pred": 1
       },
       {
         "label1": "t1",
         "label2": "t3",
-        "score": 0.890625,
+        "score": 0.996094,
         "pred": 1
       },
       {
         "label1": "t2",
         "label2": "t1",
-        "score": 0.503906,
-        "pred": 1
+        "score": 0.071777,
+        "pred": 0
       },
       {
         "label1": "t2",
         "label2": "t3",
-        "score": 0.546875,
-        "pred": 1
+        "score": 0.431641,
+        "pred": 0
       },
       {
         "label1": "t3",
         "label2": "t1",
-        "score": 0.373047,
+        "score": 0.0065,
         "pred": 0
       },
       {
         "label1": "t3",
         "label2": "t2",
-        "score": 0.769531,
+        "score": 0.9375,
         "pred": 1
       }
     ]
@@ -796,37 +796,37 @@
       {
         "label1": "t1",
         "label2": "t2",
-        "score": 0.574219,
+        "score": 0.996094,
         "pred": 1
       },
       {
         "label1": "t1",
         "label2": "t3",
-        "score": 0.902344,
+        "score": 0.996094,
         "pred": 1
       },
       {
         "label1": "t2",
         "label2": "t1",
-        "score": 0.445312,
+        "score": 0.024414,
         "pred": 0
       },
       {
         "label1": "t2",
         "label2": "t3",
-        "score": 0.451172,
-        "pred": 0
+        "score": 0.628906,
+        "pred": 1
       },
       {
         "label1": "t3",
         "label2": "t1",
-        "score": 0.357422,
+        "score": 0.00383,
         "pred": 0
       },
       {
         "label1": "t3",
         "label2": "t2",
-        "score": 0.679688,
+        "score": 0.949219,
         "pred": 1
       }
     ]
@@ -840,46 +840,46 @@
     ],
     "predicted_order": [
       "t1",
-      "t3",
-      "t2"
+      "t2",
+      "t3"
     ],
-    "order_correct": false,
+    "order_correct": true,
     "pairs": [
       {
         "label1": "t1",
         "label2": "t2",
-        "score": 0.925781,
+        "score": 1.0,
         "pred": 1
       },
       {
         "label1": "t1",
         "label2": "t3",
-        "score": 0.878906,
+        "score": 1.0,
         "pred": 1
       },
       {
         "label1": "t2",
         "label2": "t1",
-        "score": 0.078125,
+        "score": 0.002045,
         "pred": 0
       },
       {
         "label1": "t2",
         "label2": "t3",
-        "score": 0.458984,
-        "pred": 0
+        "score": 1.0,
+        "pred": 1
       },
       {
         "label1": "t3",
         "label2": "t1",
-        "score": 0.249023,
+        "score": 0.001503,
         "pred": 0
       },
       {
         "label1": "t3",
         "label2": "t2",
-        "score": 0.574219,
-        "pred": 1
+        "score": 0.00383,
+        "pred": 0
       }
     ]
   },
@@ -900,37 +900,37 @@
       {
         "label1": "t1",
         "label2": "t2",
-        "score": 0.625,
+        "score": 0.992188,
         "pred": 1
       },
       {
         "label1": "t1",
         "label2": "t3",
-        "score": 0.482422,
-        "pred": 0
+        "score": 0.988281,
+        "pred": 1
       },
       {
         "label1": "t2",
         "label2": "t1",
-        "score": 0.380859,
+        "score": 0.012451,
         "pred": 0
       },
       {
         "label1": "t2",
         "label2": "t3",
-        "score": 0.222656,
+        "score": 0.006683,
         "pred": 0
       },
       {
         "label1": "t3",
         "label2": "t1",
-        "score": 0.345703,
+        "score": 0.005737,
         "pred": 0
       },
       {
         "label1": "t3",
         "label2": "t2",
-        "score": 0.917969,
+        "score": 0.984375,
         "pred": 1
       }
     ]
@@ -952,37 +952,37 @@
       {
         "label1": "t1",
         "label2": "t2",
-        "score": 0.90625,
+        "score": 0.996094,
         "pred": 1
       },
       {
         "label1": "t1",
         "label2": "t3",
-        "score": 0.921875,
+        "score": 0.992188,
         "pred": 1
       },
       {
         "label1": "t2",
         "label2": "t1",
-        "score": 0.176758,
+        "score": 0.029297,
         "pred": 0
       },
       {
         "label1": "t2",
         "label2": "t3",
-        "score": 0.898438,
+        "score": 0.992188,
         "pred": 1
       },
       {
         "label1": "t3",
         "label2": "t1",
-        "score": 0.157227,
+        "score": 0.005371,
         "pred": 0
       },
       {
         "label1": "t3",
         "label2": "t2",
-        "score": 0.298828,
+        "score": 0.027954,
         "pred": 0
       }
     ]
@@ -1004,38 +1004,38 @@
       {
         "label1": "t1",
         "label2": "t2",
-        "score": 0.71875,
+        "score": 0.988281,
         "pred": 1
       },
       {
         "label1": "t1",
         "label2": "t3",
-        "score": 0.875,
+        "score": 0.996094,
         "pred": 1
       },
       {
         "label1": "t2",
         "label2": "t1",
-        "score": 0.472656,
+        "score": 0.016968,
         "pred": 0
       },
       {
         "label1": "t2",
         "label2": "t3",
-        "score": 0.742188,
+        "score": 0.988281,
         "pred": 1
       },
       {
         "label1": "t3",
         "label2": "t1",
-        "score": 0.114258,
+        "score": 0.004913,
         "pred": 0
       },
       {
         "label1": "t3",
         "label2": "t2",
-        "score": 0.597656,
-        "pred": 1
+        "score": 0.026001,
+        "pred": 0
       }
     ]
   },
@@ -1056,37 +1056,37 @@
       {
         "label1": "t1",
         "label2": "t2",
-        "score": 0.886719,
+        "score": 1.0,
         "pred": 1
       },
       {
         "label1": "t1",
         "label2": "t3",
-        "score": 0.753906,
+        "score": 0.996094,
         "pred": 1
       },
       {
         "label1": "t2",
         "label2": "t1",
-        "score": 0.367188,
+        "score": 0.002258,
         "pred": 0
       },
       {
         "label1": "t2",
         "label2": "t3",
-        "score": 0.412109,
+        "score": 0.349609,
         "pred": 0
       },
       {
         "label1": "t3",
         "label2": "t1",
-        "score": 0.613281,
-        "pred": 1
+        "score": 0.005066,
+        "pred": 0
       },
       {
         "label1": "t3",
         "label2": "t2",
-        "score": 0.769531,
+        "score": 0.949219,
         "pred": 1
       }
     ]
@@ -1108,37 +1108,37 @@
       {
         "label1": "t1",
         "label2": "t2",
-        "score": 0.859375,
+        "score": 0.996094,
         "pred": 1
       },
       {
         "label1": "t1",
         "label2": "t3",
-        "score": 0.878906,
+        "score": 0.996094,
         "pred": 1
       },
       {
         "label1": "t2",
         "label2": "t1",
-        "score": 0.115723,
+        "score": 0.004456,
         "pred": 0
       },
       {
         "label1": "t2",
         "label2": "t3",
-        "score": 0.914062,
+        "score": 0.992188,
         "pred": 1
       },
       {
         "label1": "t3",
         "label2": "t1",
-        "score": 0.03418,
+        "score": 0.001457,
         "pred": 0
       },
       {
         "label1": "t3",
         "label2": "t2",
-        "score": 0.018799,
+        "score": 0.001984,
         "pred": 0
       }
     ]
@@ -1160,37 +1160,37 @@
       {
         "label1": "t1",
         "label2": "t2",
-        "score": 0.875,
+        "score": 0.992188,
         "pred": 1
       },
       {
         "label1": "t1",
         "label2": "t3",
-        "score": 0.726562,
+        "score": 0.992188,
         "pred": 1
       },
       {
         "label1": "t2",
         "label2": "t1",
-        "score": 0.328125,
+        "score": 0.008301,
         "pred": 0
       },
       {
         "label1": "t2",
         "label2": "t3",
-        "score": 0.734375,
+        "score": 0.996094,
         "pred": 1
       },
       {
         "label1": "t3",
         "label2": "t1",
-        "score": 0.112793,
+        "score": 0.002121,
         "pred": 0
       },
       {
         "label1": "t3",
         "label2": "t2",
-        "score": 0.162109,
+        "score": 0.022949,
         "pred": 0
       }
     ]
@@ -1212,37 +1212,37 @@
       {
         "label1": "t1",
         "label2": "t2",
-        "score": 0.664062,
+        "score": 1.0,
         "pred": 1
       },
       {
         "label1": "t1",
         "label2": "t3",
-        "score": 0.455078,
-        "pred": 0
+        "score": 0.996094,
+        "pred": 1
       },
       {
         "label1": "t2",
         "label2": "t1",
-        "score": 0.429688,
+        "score": 0.001984,
         "pred": 0
       },
       {
         "label1": "t2",
         "label2": "t3",
-        "score": 0.382812,
+        "score": 0.027222,
         "pred": 0
       },
       {
         "label1": "t3",
         "label2": "t1",
-        "score": 0.439453,
+        "score": 0.004333,
         "pred": 0
       },
       {
         "label1": "t3",
         "label2": "t2",
-        "score": 0.527344,
+        "score": 0.871094,
         "pred": 1
       }
     ]
@@ -1264,37 +1264,37 @@
       {
         "label1": "t1",
         "label2": "t2",
-        "score": 0.710938,
+        "score": 0.945312,
         "pred": 1
       },
       {
         "label1": "t1",
         "label2": "t3",
-        "score": 0.574219,
+        "score": 0.949219,
         "pred": 1
       },
       {
         "label1": "t2",
         "label2": "t1",
-        "score": 0.455078,
+        "score": 0.241211,
         "pred": 0
       },
       {
         "label1": "t2",
         "label2": "t3",
-        "score": 0.441406,
+        "score": 0.235352,
         "pred": 0
       },
       {
         "label1": "t3",
         "label2": "t1",
-        "score": 0.515625,
+        "score": 0.714844,
         "pred": 1
       },
       {
         "label1": "t3",
         "label2": "t2",
-        "score": 0.542969,
+        "score": 0.9375,
         "pred": 1
       }
     ]
@@ -1316,37 +1316,37 @@
       {
         "label1": "t1",
         "label2": "t2",
-        "score": 0.929688,
+        "score": 0.996094,
         "pred": 1
       },
       {
         "label1": "t1",
         "label2": "t3",
-        "score": 0.914062,
+        "score": 0.996094,
         "pred": 1
       },
       {
         "label1": "t2",
         "label2": "t1",
-        "score": 0.109863,
+        "score": 0.002472,
         "pred": 0
       },
       {
         "label1": "t2",
         "label2": "t3",
-        "score": 0.855469,
+        "score": 0.992188,
         "pred": 1
       },
       {
         "label1": "t3",
         "label2": "t1",
-        "score": 0.185547,
+        "score": 0.002884,
         "pred": 0
       },
       {
         "label1": "t3",
         "label2": "t2",
-        "score": 0.177734,
+        "score": 0.003372,
         "pred": 0
       }
     ]
@@ -1368,37 +1368,37 @@
       {
         "label1": "t1",
         "label2": "t2",
-        "score": 0.808594,
+        "score": 1.0,
         "pred": 1
       },
       {
         "label1": "t1",
         "label2": "t3",
-        "score": 0.933594,
+        "score": 0.996094,
         "pred": 1
       },
       {
         "label1": "t2",
         "label2": "t1",
-        "score": 0.335938,
+        "score": 0.002472,
         "pred": 0
       },
       {
         "label1": "t2",
         "label2": "t3",
-        "score": 0.777344,
+        "score": 0.925781,
         "pred": 1
       },
       {
         "label1": "t3",
         "label2": "t1",
-        "score": 0.031982,
+        "score": 0.002182,
         "pred": 0
       },
       {
         "label1": "t3",
         "label2": "t2",
-        "score": 0.214844,
+        "score": 0.008301,
         "pred": 0
       }
     ]
@@ -1420,38 +1420,38 @@
       {
         "label1": "t1",
         "label2": "t2",
-        "score": 0.792969,
+        "score": 0.996094,
         "pred": 1
       },
       {
         "label1": "t1",
         "label2": "t3",
-        "score": 0.925781,
+        "score": 0.996094,
         "pred": 1
       },
       {
         "label1": "t2",
         "label2": "t1",
-        "score": 0.5,
+        "score": 0.003479,
         "pred": 0
       },
       {
         "label1": "t2",
         "label2": "t3",
-        "score": 0.550781,
-        "pred": 1
+        "score": 0.022339,
+        "pred": 0
       },
       {
         "label1": "t3",
         "label2": "t1",
-        "score": 0.214844,
+        "score": 0.001869,
         "pred": 0
       },
       {
         "label1": "t3",
         "label2": "t2",
-        "score": 0.667969,
-        "pred": 1
+        "score": 0.223633,
+        "pred": 0
       }
     ]
   },
@@ -1472,38 +1472,38 @@
       {
         "label1": "t1",
         "label2": "t2",
-        "score": 0.632812,
+        "score": 0.980469,
         "pred": 1
       },
       {
         "label1": "t1",
         "label2": "t3",
-        "score": 0.527344,
+        "score": 0.996094,
         "pred": 1
       },
       {
         "label1": "t2",
         "label2": "t1",
-        "score": 0.414062,
+        "score": 0.412109,
         "pred": 0
       },
       {
         "label1": "t2",
         "label2": "t3",
-        "score": 0.59375,
-        "pred": 1
+        "score": 0.355469,
+        "pred": 0
       },
       {
         "label1": "t3",
         "label2": "t1",
-        "score": 0.40625,
+        "score": 0.002808,
         "pred": 0
       },
       {
         "label1": "t3",
         "label2": "t2",
-        "score": 0.730469,
-        "pred": 1
+        "score": 0.478516,
+        "pred": 0
       }
     ]
   },
@@ -1515,8 +1515,8 @@
       "t3"
     ],
     "predicted_order": [
-      "t3",
       "t1",
+      "t3",
       "t2"
     ],
     "order_correct": false,
@@ -1524,38 +1524,38 @@
       {
         "label1": "t1",
         "label2": "t2",
-        "score": 0.910156,
+        "score": 0.996094,
         "pred": 1
       },
       {
         "label1": "t1",
         "label2": "t3",
-        "score": 0.59375,
+        "score": 0.554688,
         "pred": 1
       },
       {
         "label1": "t2",
         "label2": "t1",
-        "score": 0.302734,
+        "score": 0.005554,
         "pred": 0
       },
       {
         "label1": "t2",
         "label2": "t3",
-        "score": 0.197266,
-        "pred": 0
+        "score": 0.957031,
+        "pred": 1
       },
       {
         "label1": "t3",
         "label2": "t1",
-        "score": 0.9375,
+        "score": 0.976562,
         "pred": 1
       },
       {
         "label1": "t3",
         "label2": "t2",
-        "score": 0.878906,
-        "pred": 1
+        "score": 0.460938,
+        "pred": 0
       }
     ]
   }

@@ -1,0 +1,32 @@
+loading checkpoint <- /mnt/localssd/crossencoder_sweep/runs/new_aep_wf_scrap/deberta-v3-large/best.pt
+device=cuda:0  bf16=False  base_model=microsoft/deberta-v3-large  max_seq_len=446
+Loading weights:   0%|          | 0/390 [00:00<?, ?it/s]Loading weights: 100%|██████████| 390/390 [00:00<00:00, 28624.05it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] [1mDebertaV2Model LOAD REPORT[0m from: microsoft/deberta-v3-large
+Key                                     | Status     |  | 
+----------------------------------------+------------+--+-
+mask_predictions.LayerNorm.bias         | UNEXPECTED |  | 
+lm_predictions.lm_head.LayerNorm.weight | UNEXPECTED |  | 
+lm_predictions.lm_head.LayerNorm.bias   | UNEXPECTED |  | 
+lm_predictions.lm_head.bias             | UNEXPECTED |  | 
+mask_predictions.dense.bias             | UNEXPECTED |  | 
+mask_predictions.classifier.weight      | UNEXPECTED |  | 
+lm_predictions.lm_head.dense.weight     | UNEXPECTED |  | 
+lm_predictions.lm_head.dense.bias       | UNEXPECTED |  | 
+mask_predictions.classifier.bias        | UNEXPECTED |  | 
+mask_predictions.LayerNorm.weight       | UNEXPECTED |  | 
+mask_predictions.dense.weight           | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+
+=== Milan eval (test_samples_milan.json) ===
+  ground_truth : ['t1', 't2', 't3', 't4', 't5', 't6']
+  predicted    : ['t2', 't1', 't5', 't3', 't4', 't6']
+  order_match  : False
+  pairwise_acc : 0.8000 (24/30)
+
+=== AJO ordering eval (ajo_orchestrated_workflows_flat.json) ===
+  correct: 12/30  perfect_order_rate=0.4000
+
+wrote /mnt/localssd/crossencoder_sweep/runs/new_aep_wf_scrap/deberta-v3-large/ood_results.json

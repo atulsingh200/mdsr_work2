@@ -1,0 +1,249 @@
+\section{Reasoning Rerankers and Reinforcement Learning for Ranking}
+\label{sec:rerank-rl}
+
+A second-stage \emph{reranker} re-scores a small candidate set returned by a
+first-stage retriever. With large language models (LLMs) this re-scoring can be
+framed as a generation problem, and a 2024--2025 wave of work has equipped these
+rerankers with explicit \emph{reasoning} and trained them with reinforcement
+learning (RL). This section surveys the prompting paradigms, the reasoning
+rerankers, the RL recipes that make reasoning feasible at small scale, and the
+distillation techniques that internalise reasoning into a sub-1B (or even
+non-generative) scorer. Throughout, the target application is a
+\emph{causal-precedence} scorer of $<\!1$B parameters that judges whether one
+procedural step enables another, reranks candidate follow-ups, and feeds a
+workflow orderer (Sec.~\ref{sec:ordering}).
+
+\subsection{LLM reranking paradigms}
+\label{sec:rerank-paradigms}
+The standard taxonomy distinguishes four prompting paradigms by \emph{how many
+candidates enter a single prompt} and what the model emits, trading cost against
+effectiveness \citep{rl:zhou2025rerankingsurvey}.
+
+\paragraph{Pointwise.} One query--document pair per call; the model emits an
+independent relevance score (via a yes/no token probability or a graded label).
+Cost is $O(N)$ for $N$ candidates and the scores are \emph{directly comparable
+and reusable}, but they require calibration (Sec.~\ref{sec:calibration}) and the
+per-item signal is the weakest of the four.
+
+\paragraph{Pairwise.} Two documents per call (``which is more relevant?''),
+aggregated into an order by sorting. This yields the strongest relative
+judgments but costs up to $O(N^2)$ comparisons, reduced to $O(N\log N)$ with
+sorting networks. Pairwise prompting maps naturally onto \emph{causal precedence}
+(``does step $A$ enable step $B$?''), which is the primitive our project needs.
+
+\paragraph{Listwise.} A whole candidate list enters one prompt and the model
+emits a permutation using global context. RankGPT \citep{rl:sun2023rankgpt}
+established the sliding-window protocol (window 20, step 10 over a top-100 list,
+candidates labelled \texttt{[1] [2]\ldots} and reordered as \texttt{[2] > [3] >
+[1]}), and distilled GPT into open students --- notably a 435M DeBERTa-v3-large
+student trained with a RankNet pairwise loss that reportedly surpassed the prior
+monoT5-3B state of the art on BEIR. RankVicuna \citep{rl:pradeep2023rankvicuna}
+and RankZephyr \citep{rl:pradeep2023rankzephyr} are open 7B listwise rerankers
+distilled from GPT-3.5/4 permutations; RankZephyr's two-stage distillation
+(${\sim}100$K RankGPT-3.5 then ${\sim}5$K RankGPT-4 permutations) matches or
+exceeds RankGPT-4 and is robust to input order. Listwise is cheap per list (few
+calls) but suffers strong \emph{position bias} and finite context.
+
+\paragraph{Setwise.} A set of $c{+}1$ documents enters each call and the model
+selects only the most relevant; plugged into heapsort/bubblesort this cuts sort
+complexity to $O(k\log_c N)$ \citep{rl:zhuang2024setwise}. On Flan-T5-large/DL19,
+setwise heapsort used roughly half the inferences of pairwise heapsort at
+comparable effectiveness. The ``pick the most relevant of a set'' objective is
+the unit on which Rank-R1 later builds its RL.
+
+\paragraph{Injecting side signals.} InsertRank
+\citep{rl:chordia2025insertrank} appends each candidate's BM25 lexical score
+into a listwise prompt to ground reasoning on reasoning-intensive queries (BRIGHT,
+R2MED), giving consistent NDCG@10 gains with no fine-tuning. The lesson is that a
+cheap structural prior injected into the prompt measurably helps --- analogous to
+injecting a bi-encoder similarity or a workflow-position prior into a causal
+reranker.
+
+\subsection{Reasoning rerankers}
+\label{sec:reasoning-rerankers}
+Reasoning rerankers apply the DeepSeek-R1 recipe \citep{rl:deepseekr1} ---
+\texttt{<think>}/\texttt{<answer>} formatting plus a verifiable relevance reward
+optimised by GRPO --- to ranking.
+
+\paragraph{Rank-R1.}
+\citet{rl:zhuang2025rankr1} take the Setwise prompt, add a reasoning
+instruction, and train the reasoning ability \emph{purely with RL} on relevance
+labels (no reasoning supervision). On Qwen2.5 at 3B/7B/14B, GRPO uses a binary
+reward (1 iff the output matches the \texttt{<think>}/\texttt{<answer>} format
+\emph{and} the selected label is the relevant document) and matches the Setwise
+SFT baseline using only ${\sim}18\%$ of its data, with the largest gains on
+reasoning-intensive (BRIGHT) queries.
+
+\paragraph{REARANK.}
+\citet{rl:zhang2025rearank} train a \emph{listwise} reasoning agent
+(REARANK-7B, on Qwen2.5-7B) with GRPO from only ${\sim}179$ annotated MS~MARCO
+queries (expanded by augmentation to ${\sim}12$K instances). Its composite
+reward $r = 0.8\,r_{\text{rank}} + 0.1\,r_{\text{fmt1}} + 0.1\,r_{\text{fmt2}}$
+uses a min--max-normalised NDCG@10 \emph{improvement}
+$(\mathrm{NDCG}_{\text{rerank}}-\mathrm{NDCG}_{\text{init}})/
+(\mathrm{NDCG}_{\text{opt}}-\mathrm{NDCG}_{\text{init}})$ plus two format terms.
+It matches GPT-4 on TREC DL19/20 and surpasses it on BRIGHT, demonstrating that a
+listwise reasoning reranker --- whose permutation output is exactly a step
+ordering --- can be learned from a tiny label set.
+
+\paragraph{Rank-GRPO.}
+\citet{rl:rankgrpo2025} generalise GRPO for ranked outputs by treating each
+\emph{rank position} (not each token or sequence) as the unit of advantage
+estimation and importance weighting, removing non-causal credit assignment and
+the quality decay toward the end of a generated list. Although framed for
+conversational recommendation, the rank-level credit assignment is directly
+relevant to any listwise reasoning reranker.
+
+\paragraph{When chain-of-thought \emph{hurts}: the think-free fix.} A central,
+initially counter-intuitive finding is that naive chain-of-thought (CoT) can
+\emph{degrade} pointwise rerankers \citep{rl:cotfallsshort2025}. The mechanism:
+ranking needs a precise, calibrated \emph{scalar} comparable across candidates,
+whereas free-form CoT (i) injects variance into the verbalised score, (ii) lets
+the model ``overthink'' and drift from the query, and (iii) consumes the output
+distribution that a clean score token would otherwise occupy --- all at large
+latency cost. TFRank \citep{rl:tfrank2025} resolves this with a
+\emph{think-mode switch}: the model is \emph{trained} with explicit CoT
+(internalising reasoning into its weights) but runs \emph{think-free} at
+inference, emitting only a pointwise score with no reasoning chain. Built on the
+Qwen3 series with released checkpoints at \textbf{0.6B}, 1.7B, 4B and 8B, a
+\emph{1.7B} TFRank competes with 7B reasoning rerankers on BRIGHT at ${\sim}4\times$
+fewer parameters and an order-of-magnitude faster inference. Its score is an
+expected-value over a five-level ordinal scale (0--4) read from the top-20 logit
+tokens, with a neutral 0.5 fallback --- precisely the role a cross-encoder
+classifier plays, but reasoning-distilled. The TFRank \textbf{0.6B} checkpoint is
+the existence proof that a sub-1B think-free reasoning scorer is achievable rather
+than speculative. Rank1 \citep{rl:weller2025rank1} occupies the opposite extreme
+(emit CoT at inference as test-time compute), underscoring the
+reason-then-rank{} versus reason-then-score{} latency trade-off.
+
+\subsection{Reinforcement learning for ranking and reasoning at sub-1B scale}
+\label{sec:rl-sub1b}
+\paragraph{GRPO and its core mechanism.} Group Relative Policy Optimization
+\citep{rl:shao2024grpo}, scaled in DeepSeek-R1 \citep{rl:deepseekr1}, removes
+PPO's value network. For a prompt $q$ it samples a group of $G$ completions,
+scores each with a reward $r_i$, and assigns every token of completion $i$ the
+group-relative advantage
+\begin{equation}
+A_i = \frac{r_i - \mathrm{mean}(r_1,\ldots,r_G)}{\mathrm{std}(r_1,\ldots,r_G)},
+\label{eq:grpo-adv}
+\end{equation}
+optimised with PPO's clipped surrogate plus a KL penalty to a frozen reference.
+The group mean replaces the learned critic, halving memory --- attractive on
+constrained GPUs --- but rollout cost scales with $G$, and groups that are
+all-correct or all-wrong yield zero advantage.
+
+\paragraph{GRPO variants.} \emph{Dr.\ GRPO} \citep{rl:liu2025drgrpo} identifies
+two optimisation biases in Eq.~\ref{eq:grpo-adv}: response-length normalisation
+(which inflates length, especially of wrong answers) and per-question std
+normalisation (which over-weights easy/hard prompts). It normalises by a fixed
+constant and drops the std term, cutting incorrect-response length by ${\sim}38\%$
+while preserving accuracy. \emph{DAPO} \citep{rl:yu2025dapo} adds Clip-Higher
+(decoupled clip range $\varepsilon_{\text{low}}{=}0.2$,
+$\varepsilon_{\text{high}}{=}0.28$, fixing entropy collapse), dynamic sampling
+(discarding zero-gradient groups), token-level loss, and overlong-reward shaping;
+it removes the KL term and reaches AIME-2024$=50$ on Qwen2.5-32B in half the
+training steps. \emph{S-GRPO} \citep{rl:sgrpo2025} samples serial early-exit
+positions on a single chain with decaying reward, cutting sequence length 35--61\%
+with no accuracy loss --- useful when a binary causal decision should not invite
+runaway CoT.
+
+\paragraph{PPO versus DPO versus GRPO.} PPO \citep{rl:schulman2017ppo} is
+actor--critic: a learned value baseline is lower-variance but unstable and
+doubles memory; it can edge out DPO on reasoning in controlled studies
+\citep{rl:ivison2024ppodpo}. DPO \citep{rl:rafailov2023dpo} skips the RL loop and
+reward model, optimising a classification loss directly on (chosen, rejected)
+pairs --- cheap and stable, but it does not explore. GRPO is the middle ground for
+\emph{verifiable} reasoning (no reward model, no critic). Because the causal
+direction/order ground truth is verifiable, GRPO/Dr.\ GRPO is the natural fit;
+DPO over (correct order $\succ$ corrupted order) pairs is a cheaper baseline.
+
+\paragraph{Reward design.} The de-facto pattern is a sum of independent terms
+\citep{rl:deepseekr1}: a \emph{format} reward ($+1$ if the output matches the
+required schema) plus a \emph{correctness} reward checked by a deterministic
+verifier. For binary causal direction the verifier is trivial
+(predicted$=$gold). For \emph{ordering}, sparse exact-match wastes gradient, so
+order-sensitive rewards are preferred: REARANK's NDCG-improvement
+\citep{rl:zhang2025rearank}, or a Kendall-$\tau$/Spearman correlation between the
+predicted and gold permutation (dense in $[-1,1]$), optionally plus an
+exact-permutation bonus and a format term. Dense, order-aware rewards matter at
+small scale because they avoid the all-wrong degenerate groups that give zero
+advantage.
+
+\paragraph{Distill-then-RL, not RL-from-scratch.} The strongest evidence for the
+sub-1B regime is that \emph{distillation (SFT on reasoning traces) should precede
+any RL}. DeepSeek-R1 \citep{rl:deepseekr1} reports that distilling a large model
+into a small dense model beats large-scale RL run directly on that small model,
+which ``requires enormous computational power and may not even achieve the
+performance of distillation.'' Open-RS \citep{rl:dang2025openrs} confirms the
+nuance: GRPO on 7K math samples lifted an \emph{already-distilled} 1.5B model
+cheaply (${\sim}\$42$, 4$\times$A40), but observed degradation after 150--200
+steps, KL instability and length truncation --- small-model RL is fragile. Tina
+\citep{rl:wang2025tina} reproduced a competitive 1.5B reasoning model with
+LoRA-GRPO for ${\sim}\$9$. ``SFT Memorizes, RL Generalizes''
+\citep{rl:chu2025sftrl} gives the canonical justification: RL with outcome reward
+generalises better out of distribution, \emph{but SFT is still required first} to
+stabilise output format so RL pays off. A weak $<\!1$B base lacks the latent
+reasoning for RL to discover much unaided; seed it with SFT, then run a short,
+well-regularised GRPO polish (tens-to-low-hundreds of steps).
+
+\subsection{Distilling reasoning into small / non-generative models}
+\label{sec:distillation}
+\paragraph{Rationale-as-auxiliary-objective.} Distilling Step-by-Step
+\citep{rl:hsieh2023distillstep} trains a student with \emph{two} objectives ---
+predict the label, and (auxiliary) produce the teacher's rationale --- so the
+rationale is a \emph{training target, not an inference input}. A 770M T5 thereby
+beat a 540B PaLM few-shot teacher using 80\% of the labelled data, and matched
+full-data fine-tuning with as little as 12.5\% on e-SNLI. This is the conceptual
+ancestor of internalised reasoning, and the precedent for an explanation-aligned
+auxiliary head on a discriminative scorer; e-SNLI \citep{rl:camburu2018esnli} is
+the canonical dataset pairing labels with natural-language explanations for
+exactly this predict-and-explain supervision.
+
+\paragraph{Distillation versus on-small-model RL.} R1-Distill
+\citep{rl:deepseekr1} curated ${\sim}800$K R1 traces and applied \emph{pure SFT}
+to open bases (Qwen2.5 1.5B--32B, Llama 8B/70B); the distilled 32B (AIME-2024
+72.6 / MATH-500 94.3) far exceeds RL-from-scratch on the same base (47.0 / 91.6),
+the cleanest published confirmation of the distill-first verdict. SCoTD
+\citep{rl:li2023scotd} shows 125M--1.3B students gain CoT ability when trained on
+many diverse teacher chains, and Magister et al.\ \citep{rl:magister2022teaching}
+established that CoT fine-tuning transfers reasoning to small students.
+
+\paragraph{Label-only rationale bootstrapping.} When only task labels exist (the
+project's situation --- causal-direction labels, no gold rationales), rationales
+can be self-generated. STaR \citep{rl:zelikman2022star} keeps self-produced
+rationales that reach the correct answer and \emph{rationalises} the rest by
+conditioning on the gold answer; rejection-sampling fine-tuning (RFT)
+\citep{rl:yuan2023rft} is its one-shot best-of-$N$ variant. COLLATE
+\citep{rl:patnaik2025collate} goes further with a teacher-free signal: it ranks
+candidate rationales by how much each \emph{raises the model's own likelihood of
+the gold answer}, forming DPO preference pairs --- no judge, no larger teacher,
+needing only labels, and keeping a sample only when the winning rationale truly
+raises gold-answer likelihood.
+
+\paragraph{Rationale distillation into a cross-encoder (think-free, zero added
+latency).} The unifying recipe is to add a rationale-derived auxiliary loss to a
+discriminative head: a generative \texttt{[rationale]} decoding head (Distilling
+Step-by-Step), or an embedding-alignment head that pulls the classifier's hidden
+state toward a (frozen) rationale embedding via cosine/contrastive loss. TFRank's
+think-free score \citep{rl:tfrank2025} is the ranking instantiation. At inference
+only the label/score head runs, so reasoning improves accuracy at \emph{zero}
+added latency --- exactly what a production DeBERTa-class cross-encoder needs,
+since it cannot emit \texttt{<think>} tokens but can be regularised toward
+reasoning-relevant features.
+
+\subsection{Relevance to causal embedding for AEP/AJO}
+This section is the backbone of the project's core thread: \emph{add reasoning to
+a $<\!1$B causal scorer}. The repository's strongest ordering model is a
+DeBERTa-v3-large cross-encoder, which cannot generate reasoning tokens, so genuine
+reason-then-answer must be \emph{internalised}: the literature converges on
+TFRank's think-free pointwise scorer (with a demonstrated 0.6B checkpoint) and
+Distilling-Step-by-Step / e-SNLI-style auxiliary rationale heads as the way to
+get reasoning gains at the latency of the current cross-encoder. The training
+verdict is equally clear: with ${\sim}100$K--260K verifiable labels but no gold
+rationales, the right pipeline is \emph{bootstrap rationales} (STaR/RFT/COLLATE)
+$\rightarrow$ \emph{SFT-distil} the behaviour into a sub-1B (or cross-encoder)
+scorer $\rightarrow$ a short \emph{GRPO/Dr.\ GRPO} polish with a format reward plus
+a verifiable correctness reward for the pairwise causal direction and a dense
+NDCG/Kendall-$\tau$ reward for the ordering head --- never RL from scratch. The
+pairwise causal-precedence judgments this scorer produces are the input to the
+global-ordering machinery of Sec.~\ref{sec:ordering}.

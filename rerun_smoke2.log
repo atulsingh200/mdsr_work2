@@ -1,0 +1,152 @@
+### SMOKE: ce|new_aep_wf_scrap|e5-large-v2 ###
+  clearing ce/new_aep_wf_scrap/e5-large-v2 (test_acc=0.5) -> collapsed_bak/
+2026-07-01 06:18:44 === PHASE 0: Pre-downloading 6 backbones (serial) ===
+2026-07-01 06:18:44   fetch microsoft/deberta-v3-large
+2026-07-01 06:18:53   fetch sentence-transformers/all-mpnet-base-v2
+2026-07-01 06:19:00   fetch sentence-transformers/all-MiniLM-L6-v2
+2026-07-01 06:19:06   fetch intfloat/e5-large-v2
+2026-07-01 06:19:12   fetch BAAI/bge-base-en-v1.5
+2026-07-01 06:19:19   fetch BAAI/bge-large-en-v1.5
+2026-07-01 06:19:25 === PHASE 0 complete ===
+2026-07-01 06:19:25 === PHASE 1: Training (7 datasets × 6 models = 42 runs) ===
+2026-07-01 06:19:25 SKIP (already done): aep_causal_cls34/deberta-v3-large
+2026-07-01 06:19:25 SKIP (already done): aep_causal_cls34/all-mpnet-base-v2
+2026-07-01 06:19:25 SKIP (already done): aep_causal_cls34/all-MiniLM-L6-v2
+2026-07-01 06:19:25 SKIP (already done): aep_causal_cls34/e5-large-v2
+2026-07-01 06:19:25 SKIP (already done): aep_causal_cls34/bge-base-en-v1.5
+2026-07-01 06:19:25 SKIP (already done): aep_causal_cls34/bge-large-en-v1.5
+2026-07-01 06:19:25 SKIP (already done): aep_dataset/deberta-v3-large
+2026-07-01 06:19:25 SKIP (already done): aep_dataset/all-mpnet-base-v2
+2026-07-01 06:19:25 SKIP (already done): aep_dataset/all-MiniLM-L6-v2
+2026-07-01 06:19:25 SKIP (already done): aep_dataset/e5-large-v2
+2026-07-01 06:19:25 SKIP (already done): aep_dataset/bge-base-en-v1.5
+2026-07-01 06:19:25 SKIP (already done): aep_dataset/bge-large-en-v1.5
+2026-07-01 06:19:25 SKIP (already done): aep_causal_wf_v3/deberta-v3-large
+2026-07-01 06:19:25 SKIP (already done): aep_causal_wf_v3/all-mpnet-base-v2
+2026-07-01 06:19:25 SKIP (already done): aep_causal_wf_v3/all-MiniLM-L6-v2
+2026-07-01 06:19:25 SKIP (already done): aep_causal_wf_v3/e5-large-v2
+2026-07-01 06:19:25 SKIP (already done): aep_causal_wf_v3/bge-base-en-v1.5
+2026-07-01 06:19:25 SKIP (already done): aep_causal_wf_v3/bge-large-en-v1.5
+2026-07-01 06:19:25 SKIP (already done): ajo_doc_not_tier1/deberta-v3-large
+2026-07-01 06:19:25 SKIP (already done): ajo_doc_not_tier1/all-mpnet-base-v2
+2026-07-01 06:19:25 SKIP (already done): ajo_doc_not_tier1/all-MiniLM-L6-v2
+2026-07-01 06:19:25 SKIP (already done): ajo_doc_not_tier1/e5-large-v2
+2026-07-01 06:19:25 SKIP (already done): ajo_doc_not_tier1/bge-base-en-v1.5
+2026-07-01 06:19:25 SKIP (already done): ajo_doc_not_tier1/bge-large-en-v1.5
+2026-07-01 06:19:25 SKIP (already done): ajo_newstyle/deberta-v3-large
+2026-07-01 06:19:25 SKIP (already done): ajo_newstyle/all-mpnet-base-v2
+2026-07-01 06:19:25 SKIP (already done): ajo_newstyle/all-MiniLM-L6-v2
+2026-07-01 06:19:25 SKIP (already done): ajo_newstyle/e5-large-v2
+2026-07-01 06:19:25 SKIP (already done): ajo_newstyle/bge-base-en-v1.5
+2026-07-01 06:19:25 SKIP (already done): ajo_newstyle/bge-large-en-v1.5
+2026-07-01 06:19:25 SKIP (already done): new_aep_wf_scrap/deberta-v3-large
+2026-07-01 06:19:25 SKIP (already done): new_aep_wf_scrap/all-mpnet-base-v2
+2026-07-01 06:19:25 SKIP (already done): new_aep_wf_scrap/all-MiniLM-L6-v2
+2026-07-01 06:19:25 START GPU0: new_aep_wf_scrap/e5-large-v2  batch=16
+2026-07-01 06:19:25 SKIP (already done): new_aep_wf_scrap/bge-base-en-v1.5
+2026-07-01 06:19:26 SKIP (already done): new_aep_wf_scrap/bge-large-en-v1.5
+2026-07-01 06:19:26 SKIP (already done): new_ajo_workflows/deberta-v3-large
+2026-07-01 06:19:26 SKIP (already done): new_ajo_workflows/all-mpnet-base-v2
+2026-07-01 06:19:26 SKIP (already done): new_ajo_workflows/all-MiniLM-L6-v2
+2026-07-01 06:19:26 SKIP (already done): new_ajo_workflows/e5-large-v2
+2026-07-01 06:19:26 SKIP (already done): new_ajo_workflows/bge-base-en-v1.5
+2026-07-01 06:19:26 SKIP (already done): new_ajo_workflows/bge-large-en-v1.5
+2026-07-01 06:19:26 All jobs submitted — waiting for completion ...
+2026-07-01 06:24:08 === PHASE 1 complete ===
+2026-07-01 06:24:08 === PHASE 2: OOD evaluation (max 4 concurrent, 1 per GPU) ===
+2026-07-01 06:24:08 SKIP OOD (already done): aep_causal_cls34/deberta-v3-large
+2026-07-01 06:24:08 SKIP OOD (already done): aep_causal_cls34/all-mpnet-base-v2
+2026-07-01 06:24:08 SKIP OOD (already done): aep_causal_cls34/all-MiniLM-L6-v2
+2026-07-01 06:24:08 SKIP OOD (already done): aep_causal_cls34/e5-large-v2
+2026-07-01 06:24:08 SKIP OOD (already done): aep_causal_cls34/bge-base-en-v1.5
+2026-07-01 06:24:08 SKIP OOD (already done): aep_causal_cls34/bge-large-en-v1.5
+2026-07-01 06:24:08 SKIP OOD (already done): aep_dataset/deberta-v3-large
+2026-07-01 06:24:08 SKIP OOD (already done): aep_dataset/all-mpnet-base-v2
+2026-07-01 06:24:08 SKIP OOD (already done): aep_dataset/all-MiniLM-L6-v2
+2026-07-01 06:24:08 SKIP OOD (already done): aep_dataset/e5-large-v2
+2026-07-01 06:24:08 SKIP OOD (already done): aep_dataset/bge-base-en-v1.5
+2026-07-01 06:24:08 SKIP OOD (already done): aep_dataset/bge-large-en-v1.5
+2026-07-01 06:24:08 SKIP OOD (already done): aep_causal_wf_v3/deberta-v3-large
+2026-07-01 06:24:08 SKIP OOD (already done): aep_causal_wf_v3/all-mpnet-base-v2
+2026-07-01 06:24:08 SKIP OOD (already done): aep_causal_wf_v3/all-MiniLM-L6-v2
+2026-07-01 06:24:08 SKIP OOD (already done): aep_causal_wf_v3/e5-large-v2
+2026-07-01 06:24:08 SKIP OOD (already done): aep_causal_wf_v3/bge-base-en-v1.5
+2026-07-01 06:24:08 SKIP OOD (already done): aep_causal_wf_v3/bge-large-en-v1.5
+2026-07-01 06:24:08 SKIP OOD (already done): ajo_doc_not_tier1/deberta-v3-large
+2026-07-01 06:24:08 SKIP OOD (already done): ajo_doc_not_tier1/all-mpnet-base-v2
+2026-07-01 06:24:08 SKIP OOD (already done): ajo_doc_not_tier1/all-MiniLM-L6-v2
+2026-07-01 06:24:08 SKIP OOD (already done): ajo_doc_not_tier1/e5-large-v2
+2026-07-01 06:24:08 SKIP OOD (already done): ajo_doc_not_tier1/bge-base-en-v1.5
+2026-07-01 06:24:08 SKIP OOD (already done): ajo_doc_not_tier1/bge-large-en-v1.5
+2026-07-01 06:24:08 SKIP OOD (already done): ajo_newstyle/deberta-v3-large
+2026-07-01 06:24:08 SKIP OOD (already done): ajo_newstyle/all-mpnet-base-v2
+2026-07-01 06:24:08 SKIP OOD (already done): ajo_newstyle/all-MiniLM-L6-v2
+2026-07-01 06:24:08 SKIP OOD (already done): ajo_newstyle/e5-large-v2
+2026-07-01 06:24:08 SKIP OOD (already done): ajo_newstyle/bge-base-en-v1.5
+2026-07-01 06:24:08 SKIP OOD (already done): ajo_newstyle/bge-large-en-v1.5
+2026-07-01 06:24:08 SKIP OOD (already done): new_aep_wf_scrap/deberta-v3-large
+2026-07-01 06:24:08 SKIP OOD (already done): new_aep_wf_scrap/all-mpnet-base-v2
+2026-07-01 06:24:08 SKIP OOD (already done): new_aep_wf_scrap/all-MiniLM-L6-v2
+2026-07-01 06:24:08 OOD eval GPU0: new_aep_wf_scrap/e5-large-v2
+2026-07-01 06:24:08 SKIP OOD (already done): new_aep_wf_scrap/bge-base-en-v1.5
+2026-07-01 06:24:08 SKIP OOD (already done): new_aep_wf_scrap/bge-large-en-v1.5
+2026-07-01 06:24:08 SKIP OOD (already done): new_ajo_workflows/deberta-v3-large
+2026-07-01 06:24:08 SKIP OOD (already done): new_ajo_workflows/all-mpnet-base-v2
+2026-07-01 06:24:08 SKIP OOD (already done): new_ajo_workflows/all-MiniLM-L6-v2
+2026-07-01 06:24:08 SKIP OOD (already done): new_ajo_workflows/e5-large-v2
+2026-07-01 06:24:08 SKIP OOD (already done): new_ajo_workflows/bge-base-en-v1.5
+2026-07-01 06:24:08 SKIP OOD (already done): new_ajo_workflows/bge-large-en-v1.5
+2026-07-01 06:24:08 All OOD evals submitted — waiting for completion ...
+2026-07-01 06:24:18 === PHASE 2 complete ===
+2026-07-01 06:24:18 === PHASE 3: Aggregating results ===
+Wrote /mnt/localssd/crossencoder_sweep/results/final_results.json
+
+Dataset                Model                  test_acc test_auc test_f1 milan_pairw ajo_perfect
+-----------------------------------------------------------------------------------------------
+aep_causal_cls34       deberta-v3-large         0.8816   0.9427  0.8791      0.3000      0.1333
+aep_causal_cls34       all-mpnet-base-v2        0.8719   0.9129  0.8679      0.4000      0.0000
+aep_causal_cls34       all-MiniLM-L6-v2         0.7876   0.8479  0.7892      0.3333      0.1333
+aep_causal_cls34       e5-large-v2              0.4888   0.5000  0.6567      0.5000      1.0000
+aep_causal_cls34       bge-base-en-v1.5         0.8145   0.8646  0.8082      0.2333      0.1000
+aep_causal_cls34       bge-large-en-v1.5        0.8286   0.8674  0.8286      0.6000      0.1000
+aep_dataset            deberta-v3-large         0.9390   0.9808  0.9406      0.4667      0.2000
+aep_dataset            all-mpnet-base-v2        0.9251   0.9625  0.9267      0.7000      0.5667
+aep_dataset            all-MiniLM-L6-v2         0.8690   0.9381  0.8714      0.4667      0.3333
+aep_dataset            e5-large-v2              0.5106   0.5000  0.6761      0.5000      1.0000
+aep_dataset            bge-base-en-v1.5         0.8963   0.9396  0.8997      0.6667      0.4333
+aep_dataset            bge-large-en-v1.5        0.9126   0.9432  0.9138      0.5667      0.2000
+aep_causal_wf_v3       deberta-v3-large         0.7736   0.8714  0.7616      0.5333      0.1667
+aep_causal_wf_v3       all-mpnet-base-v2        0.6698   0.7467  0.6392      0.5333      0.1000
+aep_causal_wf_v3       all-MiniLM-L6-v2         0.6447   0.6713  0.6246      0.5333      0.3000
+aep_causal_wf_v3       e5-large-v2              0.4654   0.5000  0.6352      0.5000      1.0000
+aep_causal_wf_v3       bge-base-en-v1.5         0.6321   0.7176  0.5776      0.6000      0.1667
+aep_causal_wf_v3       bge-large-en-v1.5        0.6792   0.7225  0.6792      0.5000      0.3000
+ajo_doc_not_tier1      deberta-v3-large         0.4966   0.4970  0.0000      0.5000      0.5333
+ajo_doc_not_tier1      all-mpnet-base-v2        0.9893   0.9953  0.9894      0.3667      0.5000
+ajo_doc_not_tier1      all-MiniLM-L6-v2         0.9663   0.9862  0.9666      0.5000      0.4000
+ajo_doc_not_tier1      e5-large-v2              0.4966   0.4991  0.0000      0.5000      0.2333
+ajo_doc_not_tier1      bge-base-en-v1.5         0.9696   0.9890  0.9698      0.4667      0.5000
+ajo_doc_not_tier1      bge-large-en-v1.5        0.4966   0.5000  0.0000      0.5000      1.0000
+ajo_newstyle           deberta-v3-large         0.5002   0.5319  0.6668      0.5000      0.3667
+ajo_newstyle           all-mpnet-base-v2        0.6100   0.6936  0.6002      0.3333      0.5000
+ajo_newstyle           all-MiniLM-L6-v2         0.5522   0.5790  0.5004      0.4333      0.2333
+ajo_newstyle           e5-large-v2              0.5002   0.5000  0.6668      0.5000      1.0000
+ajo_newstyle           bge-base-en-v1.5         0.5515   0.6101  0.5447      0.5667      0.2667
+ajo_newstyle           bge-large-en-v1.5        0.5002   0.5000  0.6668      0.5000      1.0000
+new_aep_wf_scrap       deberta-v3-large         0.5000   0.5966  0.6667      0.5000      0.5000
+new_aep_wf_scrap       all-mpnet-base-v2        0.6957   0.7727  0.6955      0.5667      0.2333
+new_aep_wf_scrap       all-MiniLM-L6-v2         0.5866   0.6292  0.5850      0.5667      0.3333
+new_aep_wf_scrap       e5-large-v2              0.5407   0.5986  0.6520      0.5000      0.2333
+new_aep_wf_scrap       bge-base-en-v1.5         0.6124   0.6658  0.6324      0.9000      0.2667
+new_aep_wf_scrap       bge-large-en-v1.5        0.5000   0.4946  0.0000      0.5000      0.5667
+new_ajo_workflows      deberta-v3-large         0.5000   0.4845  0.0000      0.5000      0.1000
+new_ajo_workflows      all-mpnet-base-v2        0.6422   0.6886  0.6513      0.6667      0.2333
+new_ajo_workflows      all-MiniLM-L6-v2         0.5558   0.5907  0.5805      0.5333      0.4333
+new_ajo_workflows      e5-large-v2              0.5000   0.4992  0.0000      0.5000      0.9667
+new_ajo_workflows      bge-base-en-v1.5         0.5558   0.5986  0.5548      0.4333      0.3333
+new_ajo_workflows      bge-large-en-v1.5        0.5818   0.6326  0.6045      0.5000      0.0667
+
+42/42 runs completed.
+2026-07-01 06:24:18 Done. Final results at /mnt/localssd/crossencoder_sweep/results/final_results.json
+== smoke: final test_acc=0.540698  (want >0.53; collapse pins at 0.5000) ==
+SMOKE PASS  -> safe to run: nohup bash /mnt/localssd/rerun_broken.sh pass1 > /mnt/localssd/rerun_pass1.log 2>&1 &

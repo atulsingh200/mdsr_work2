@@ -1,0 +1,44 @@
+\section{Conclusion}
+
+We set out to answer whether one can build a \emph{causal embedding model}---a
+representation and scoring function that captures directional precedence rather than
+topical similarity---capable of judging causal direction, reranking follow-up questions,
+and sorting \aep/\ajo\ workflow steps into order. Surveying causal foundations, dense
+retrieval, causal reasoning from text, asymmetric/order-structured geometry, reasoning
+rerankers and RL, sentence-ordering and rank aggregation, follow-up/conversational
+retrieval, and procedural-workflow understanding, three conclusions stand out.
+
+\paragraph{1. ``Causal'' here is mostly structural precedence.} The task lives largely on
+Pearl's associational/structural rung---ordering steps by enablement within procedural
+text---rather than on intervention or counterfactuals. This is liberating: it can be
+attacked with directional supervised learning and reasoning, without the full apparatus
+of causal discovery. It is also a caution against over-claiming ``causality.''
+
+\paragraph{2. Symmetry is the architectural mismatch; the cross-encoder and asymmetric
+geometries are the answers.} Cosine-similarity embeddings cannot represent direction by
+construction. Cross-encoders recover it through joint cross-attention (and win on
+ordering despite losing on pairwise classification), while order/box/Gaussian/hyperbolic
+embeddings and dual cause/effect projections offer asymmetric scoring at embedding speed
+for scalable first-stage retrieval.
+
+\paragraph{3. The ordering bottleneck is aggregation and data, not the pairwise model.}
+The most actionable finding is that a 21/30 pairwise model collapses to 0/30 full
+orderings under naive topological sort. Replacing it with calibrated, confidence-weighted
+minimum-feedback-arc-set / Kemeny aggregation, training on the full within-document
+transitive closure (not just adjacent pairs), adding a \textsc{neutral} class for
+partial orders, and evaluating with tie-aware Kendall-$\tau$ together address the failure
+\emph{before} any new model is trained.
+
+On top of this foundation, the survey points to a sub-1B reasoning track---think-free
+rationale distillation into the cross-encoder as the safe primary, a 0.6B generative
+reasoner as the ceiling, and a short ordering-reward GRPO polish---as the way to push
+beyond what aggregation fixes alone can buy. The accompanying reference implementation
+makes the Tier-1 wins (robust aggregation, calibration, partial-order metrics, follow-up
+reranking) immediately runnable.
+
+\paragraph{Limitations and future work.} Causal direction remains hard even for frontier
+models; gold reasoning traces must be bootstrapped; and the \textsc{neutral}/partial-order
+labels need mining. Promising directions include listwise global ordering to eliminate
+error compounding, learned asymmetric retrieval heads benchmarked against the cross-encoder,
+and a dedicated directional/causal evaluation suite---absent from current embedding
+leaderboards---to measure progress on precisely the capability this project needs.

@@ -1,0 +1,14 @@
+loading checkpoint <- /mnt/localssd/crossencoder_sweep/runs/aep_causal_wf_v3/all-mpnet-base-v2/best.pt
+device=cuda:0  bf16=True  base_model=sentence-transformers/all-mpnet-base-v2  max_seq_len=512
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 6057.88it/s]
+
+=== Milan eval (test_samples_milan.json) ===
+  ground_truth : ['t1', 't2', 't3', 't4', 't5', 't6']
+  predicted    : ['t3', 't4', 't1', 't6', 't5', 't2']
+  order_match  : False
+  pairwise_acc : 0.5333 (16/30)
+
+=== AJO ordering eval (ajo_orchestrated_workflows_flat.json) ===
+  correct: 3/30  perfect_order_rate=0.1000
+
+wrote /mnt/localssd/crossencoder_sweep/runs/aep_causal_wf_v3/all-mpnet-base-v2/ood_results.json

@@ -346,6 +346,9 @@ def main() -> None:
     ap.add_argument("--warmup-frac", type=float, default=0.10)
     ap.add_argument("--weight-decay", type=float, default=0.01)
     ap.add_argument("--grad-clip", type=float, default=1.0)
+    ap.add_argument("--grad-accum", type=int, default=1,
+                    help="Gradient accumulation steps; effective batch = "
+                         "batch-size * grad-accum. Default 1 (no accumulation).")
     ap.add_argument("--seed", type=int, default=42)
     ap.add_argument("--num-workers", type=int, default=2)
     ap.add_argument("--max-seq-len", type=int, default=None)
@@ -483,10 +486,13 @@ def main() -> None:
             "weight_decay": args.weight_decay,
         })
     optim = torch.optim.AdamW(param_groups)
-    total_steps = len(dl_train) * args.epochs
+    total_steps = (len(dl_train) // args.grad_accum) * args.epochs
     warmup_steps = int(total_steps * args.warmup_frac)
     sched = get_linear_schedule_with_warmup(optim, warmup_steps, total_steps)
-    log.info(f"  total_steps={total_steps}  warmup_steps={warmup_steps}")
+    log.info(
+        f"  total_steps={total_steps}  warmup_steps={warmup_steps}  "
+        f"grad_accum={args.grad_accum}  eff_batch={args.batch_size * args.grad_accum}"
+    )
 
     loss_fn = nn.BCEWithLogitsLoss()
     tier_loss_fn = nn.CrossEntropyLoss() if n_tiers > 0 else None
@@ -508,6 +514,8 @@ def main() -> None:
         "warmup_frac": args.warmup_frac,
         "weight_decay": args.weight_decay,
         "grad_clip": args.grad_clip,
+        "grad_accum": args.grad_accum,
+        "eff_batch_size": args.batch_size * args.grad_accum,
         "seed": args.seed,
         "max_seq_len": args.max_seq_len,
         "device": str(device),
@@ -548,6 +556,7 @@ def main() -> None:
         running_correct = 0
         running_total = 0
 
+        optim.zero_grad(set_to_none=True)
         for step, batch in enumerate(dl_train, 1):
             enc1 = {k: v.to(device, non_blocking=True) for k, v in batch["enc1"].items()}
             enc2 = {k: v.to(device, non_blocking=True) for k, v in batch["enc2"].items()}
@@ -566,16 +575,18 @@ def main() -> None:
                     loss = dir_loss + tier_aux_weight * aux_loss
                 else:
                     loss = dir_loss
+                loss = loss / args.grad_accum
 
-            optim.zero_grad()
             loss.backward()
-            if args.grad_clip and args.grad_clip > 0:
-                torch.nn.utils.clip_grad_norm_(model.parameters(), args.grad_clip)
-            optim.step()
-            sched.step()
+            if step % args.grad_accum == 0:
+                if args.grad_clip and args.grad_clip > 0:
+                    torch.nn.utils.clip_grad_norm_(model.parameters(), args.grad_clip)
+                optim.step()
+                sched.step()
+                optim.zero_grad(set_to_none=True)
 
             bs = labels.size(0)
-            running_loss += loss.item() * bs
+            running_loss += loss.item() * args.grad_accum * bs
             running_dir_loss += dir_loss.item() * bs
             running_aux_loss += aux_loss_val * bs
             preds = (torch.sigmoid(dir_logits.detach()) > 0.5).float()

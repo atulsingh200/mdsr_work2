@@ -1,0 +1,14 @@
+loading checkpoint <- /mnt/localssd/crossencoder_sweep/runs/aep_dataset/e5-large-v2/best.pt
+device=cuda:0  bf16=True  base_model=intfloat/e5-large-v2  max_seq_len=512
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 7885.02it/s]
+
+=== Milan eval (test_samples_milan.json) ===
+  ground_truth : ['t1', 't2', 't3', 't4', 't5', 't6']
+  predicted    : ['t2', 't1', 't4', 't3', 't5', 't6']
+  order_match  : False
+  pairwise_acc : 0.5000 (15/30)
+
+=== AJO ordering eval (ajo_orchestrated_workflows_flat.json) ===
+  correct: 21/30  perfect_order_rate=0.7000
+
+wrote /mnt/localssd/crossencoder_sweep/runs/aep_dataset/e5-large-v2/ood_results.json

@@ -1,0 +1,135 @@
+\section{Reasoning-Augmented Embeddings under 1B Parameters}
+\label{sec:reasoning-embeddings}
+
+Section~\ref{sec:rerank-rl} surveyed reasoning \emph{rerankers}---generative models
+that read a candidate and emit a score. This section addresses the complementary
+question: can the \emph{embedder itself} reason? A dense retriever maps text to a
+vector once and compares with a cheap kernel, so reasoning, if any, must happen
+\emph{before pooling}. We survey the 2024--2025 line of \emph{reason-then-embed} and
+reasoning-trained retrievers, the unified generate-and-embed models, and the
+instruction-controllable embedders, all under the project's $<\!1$B-parameter budget,
+and assess how---and whether---to add reasoning to a Qwen3-Embedding-0.6B backbone for
+directional causal retrieval.
+
+\subsection{Why plain embedders fail on reasoning}
+\label{sec:re:bright}
+The motivating evidence is the BRIGHT benchmark \citep{re:su2024bright}, the first
+retrieval benchmark whose relevant documents require multi-step reasoning rather than
+surface matching. Strong models that reach ${\sim}59$ nDCG@10 on standard benchmarks
+collapse to ${\sim}18.3$ on BRIGHT, with a best score of only ${\sim}24.3$; crucially,
+supplying chain-of-thought (CoT) reasoning to expand the query improves retrieval by up
+to $+12.2$ nDCG@10. This is the embedding-side analogue of the reranker finding: a
+single similarity computation cannot perform the inference that connects a query to a
+non-obviously-relevant document, but an explicit reasoning step can bridge the gap. Our
+project's ordering task is exactly such a case---two workflow steps may be lexically
+and topically similar yet stand in a non-obvious \emph{causal precedence} relation that
+no symmetric similarity recovers (Sec.~\ref{sec:embeddings}).
+
+\subsection{Reason-then-embed}
+\label{sec:re:rte}
+\paragraph{Test-time reasoning (training-free).} The cheapest form generates auxiliary
+text at query time and embeds \emph{that}. HyDE \citep{re:gao2023hyde} zero-shot
+prompts an instruction LLM to write a \emph{hypothetical document} answering the query,
+then embeds the hypothetical with an unsupervised encoder; query2doc
+\citep{re:wang2023query2doc} few-shot generates a pseudo-document and concatenates it to
+the query, lifting BM25 by $3$--$15\%$ and also helping dense retrievers. Both are
+training-free ``reason-then-embed'' at the prompt level, at the cost of one LLM
+generation per query.
+
+\paragraph{Learned reason-then-embed.} O1-Embedder \citep{re:yan2025o1embedder} makes
+the reasoning intrinsic: the model first \emph{generates ``thoughts''} for the input
+query, then embeds the thought-augmented query for dense retrieval. It is trained by
+jointly (i) behavior-cloning thoughts whose training signal is synthesized by an
+LLM-expert and refined by a retrieval committee, and (ii) standard contrastive
+retrieval. The decisive deployment property is that reasoning is applied
+\emph{query-side only}: documents are embedded normally, so the corpus index remains
+precomputable. ReasonIR \citep{re:shao2025reasonir} instead targets the \emph{training
+data}: its ReasonIR-Synthesizer fabricates varied-length reasoning queries paired with
+hard, plausibly-related-but-unhelpful negatives, reaching $29.9$ nDCG@10 on BRIGHT
+without a reranker (8B, above our budget, but the recipe transfers to a small student).
+RaDeR \citep{re:das2025rader} mines reasoning supervision from Monte-Carlo-Tree-Search
+trajectories over mathematical problem solving and is the first dense retriever to beat
+BM25 when queries are CoT steps; DIVER \citep{re:long2025diver} wraps a
+reasoning-fine-tuned retriever in a four-stage pipeline (document cleaning, iterative
+LLM query expansion, retrieval, pointwise reranking) for ${\sim}41.6$ nDCG@10 on BRIGHT.
+The common thread---reasoning helps embedding retrieval, and it is most naturally and
+cheaply applied to the query.
+
+\subsection{Unified generate-and-embed and decoder-LLM embedders}
+\label{sec:re:unified}
+A reason-then-embed system needs a backbone that can both generate and embed. GritLM
+\citep{re:muennighoff2024gritlm} shows one model can do both via \emph{instruction
+routing}---generation under a generative instruction, embedding (mean-pooled, bidirectional
+attention) under an embedding instruction---at no loss to either task, and it speeds
+retrieval-augmented generation by reusing the same forward states. This is the blueprint
+for ``one Qwen3-0.6B in two modes.'' Decoder-only LLMs are turned into embedders by
+LLM2Vec \citep{re:behnamghader2024llm2vec} (enable bidirectional attention, adapt with
+masked-next-token prediction, then SimCSE-style contrastive training), by echo
+embeddings \citep{re:springer2024repetition} (repeat the input and pool the second copy
+so early tokens attend to later ones, a training-free fix for causal-attention pooling),
+and earlier by SGPT \citep{re:muennighoff2022sgpt}. Qwen3-Embedding
+\citep{re:zhang2025qwen3emb} is the production realisation under our budget: a 0.6B
+decoder-LLM embedder with last-token pooling, instruction-aware queries, $32$k context,
+and Matryoshka dimensions ($32$--$1024$), trained by large-scale synthetic weak
+supervision, supervised contrastive fine-tuning, and model merging, with a matching
+generative Qwen3-Reranker-0.6B. Because its backbone is a full causal LM, the
+generative capacity needed for reason-then-embed is already latent in the weights.
+
+\subsection{Instruction-controllable (directional) embeddings}
+\label{sec:re:instruct}
+The other lever is instruction conditioning. INSTRUCTOR-style task prefixes and
+Promptriever \citep{re:weller2024promptriever}---the first zero-shot \emph{promptable}
+retriever, instruction-trained on an MS~MARCO-derived set and gaining $+14.3$ p-MRR on
+FollowIR---show that a free-text instruction can steer what an embedder treats as
+relevant. The benchmarks temper this: INSTRUCTIR \citep{re:oh2024instructir} and FollowIR
+\citep{re:weller2024followir} find instruction-following in retrieval real but fragile,
+with some instruction-tuned retrievers \emph{underperforming} their bases. For our
+problem the relevance is direct: ``represent this step \emph{as a cause}'' versus
+``\emph{as an effect}'' is an instruction, and embedding the same text under two roles
+yields an \emph{asymmetric} comparison that plain cosine---$\mathrm{sim}(a,b)=\mathrm{sim}(b,a)$---cannot
+express. This complements the asymmetric-geometry treatment of Sec.~\ref{sec:embeddings}:
+instruction conditioning is a learned, prompt-level route to directionality, an
+order/box/cone head is the geometric route, and a learned cause/effect projection
+$s(A\!\to\!B)=\langle W_c\mathbf{e}_A,\,W_e\mathbf{e}_B\rangle$ sits between them.
+
+\subsection{Architectures for adding reasoning to Qwen3-0.6B}
+\label{sec:re:arch}
+We enumerate concrete options and their trade-offs for the AEP/AJO tasks.
+\textbf{(A) Reason-then-embed} (O1-Embedder style): Qwen generates a short causal
+``thought'' for the query, then embeds query$+$thought. Pro: genuine reasoning, BRIGHT
+evidence. Con: generation latency---acceptable \emph{only query-side}, since generating
+a thought per corpus document would destroy the bi-encoder's precompute/caching.
+\textbf{(B) Unified GritLM-style}: one Qwen3-0.6B emits a rationale and embeds via
+instruction switching---flexible but requires joint training, and the project's own
+GritLM-7B probe stayed semantic and ignored a causal instruction zero-shot
+(Sec.~\ref{sec:embeddings}). \textbf{(C) Think-free / distilled}: train with rationales,
+use none at inference---the latency-safe embedder route, identical in spirit to TFRank's
+think-mode switch (Sec.~\ref{sec:rerank-rl}); preferred when the embedder must run at
+index speed. \textbf{(D) Latent reasoning before pooling}: looped/recurrent depth or
+learned ``think'' tokens consumed before last-token pooling---no token generation, but
+speculative for embedders (cf.\ the recurrent-depth discussion). \textbf{(E) Generative
+pointwise reasoner-reranker}: Qwen3-0.6B reasons then scores a pair's precedence---the
+most accurate directional option, but a reranker not an embedder, treated in
+Sec.~\ref{sec:rerank-rl}. \textbf{(F) Asymmetric/instructed directional embedder}:
+cause/effect instructions plus a learned asymmetric scoring head---directional at
+embedding speed and fully precomputable, at a lower accuracy ceiling than cross-attention.
+
+\subsection{Relevance to causal embedding for AEP/AJO}
+For the three project tasks the fit is specific. \emph{Pairwise causal direction} is
+inherently antisymmetric, so the highest accuracy comes from a cross-attentive reasoner
+(option E, Sec.~\ref{sec:rerank-rl}) and the embedding-speed alternative is the
+asymmetric head (F). \emph{Follow-up reranking}---``given this step, what should one ask
+or do next?''---is a reasoning-intensive, BRIGHT-like query and is the natural home of
+reasoning-augmented embedding: query-side reason-then-embed (A) over Qwen3-Embedding-0.6B
+with an asymmetric head (F), with instruction prompting (HyDE/query2doc/Promptriever) as
+a zero-training first probe. \emph{Workflow ordering}, by contrast, is shown in
+Sec.~\ref{sec:embeddings} to be a \emph{signal-plus-aggregation} problem that the
+DeBERTa cross-encoder already solves ($21/30$ versus $0/30$, made aggregable by robust
+MFAS/Kemeny ordering): an embedder, reasoning or not, is at best a stage-1 directional
+recaller here. The verdict is therefore that adding reasoning to Qwen3-0.6B is worth it
+as a \emph{complement}---query-side reason-then-embed plus an asymmetric cause/effect
+head for follow-up reranking and directional recall---and that the latency-disciplined
+form keeps the corpus side precomputable, but it should \emph{not} replace the
+cross-encoder-plus-aggregation ordering pipeline. The SOTA-grounded expectation under
+1B is a moderate gain on reasoning-intensive retrieval, contingent on the
+O1-Embedder/ReasonIR synthetic-data recipe, not a breakthrough on strict ordering.

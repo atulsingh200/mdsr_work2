@@ -1,0 +1,156 @@
+\section{Synthesis: A Recommended Sub-1B Causal Embedding System}
+
+This section pulls the survey together into a single, concrete design for the \aep/\ajo
+setting, ranked by return on investment (impact divided by cost/risk), under the
+sub-1B-parameter constraint. The guiding empirical fact---established in the data and
+baselines (Section~10) and across the surveyed literature---is that \emph{pairwise
+accuracy does not equal ordering quality}: the DeBERTa-v3 cross-encoder is already strong
+on pairs (21/30) yet the end-to-end ordering is 0/30. The dominant losses are therefore in
+\textbf{aggregation} and \textbf{data}, not in the pairwise model.
+
+\subsection{The three sub-problems}
+Any system for this task decomposes into:
+\begin{enumerate}[leftmargin=1.4em,itemsep=0.1em]
+  \item \textbf{Pairwise scorer} --- ``does step $A$ causally precede $B$?'' (the
+  cross-encoder is strong here).
+  \item \textbf{Data} --- which pairs/labels the scorer is trained on (currently
+  adjacent-only within a document, forced total order, no \textsc{neutral}).
+  \item \textbf{Aggregation} --- turning $O(n^2)$ noisy pairwise scores into one global
+  order (currently naive topological sort, which cannot survive a single cycle).
+\end{enumerate}
+The cheapest, highest-impact wins are in (2) and (3) and require \emph{no new model}; the
+reasoning/RL work raises the ceiling on top of them.
+
+\subsection{Tier 1 --- highest ROI, no new model}
+\paragraph{Robust rank aggregation (the single biggest win).}
+Replace topological sort with \emph{calibrated, confidence-weighted minimum-feedback-arc-set
+(MFAS) / Kemeny ``minimum-violations'' ordering} (Section~7). Edges are weighted by the
+log-odds of the pairwise $P(\text{precedes})$; solve with the linear-time Eades--Lin--Smyth
+heuristic (\texttt{python-igraph}'s \texttt{feedback\_arc\_set}; note NetworkX has no FAS
+routine) or an exact ILP since workflows are tiny (3--12 steps). Unlike topological sort,
+MFAS/Kemeny degrade gracefully under cycles. Our reference implementation provides this and
+demonstrates it on the 30 \ajo\ workflows.
+
+\paragraph{Calibrate before aggregating.}
+Temperature-scale the cross-encoder logits on the validation set (Section~7). Calibration
+preserves arg-max (so pairwise accuracy is unchanged) but makes confidence-weighted edges,
+thresholds, and abstention behave correctly.
+
+\paragraph{Train on the full within-document transitive closure.}
+Positional precedence is transitive, so every $i<j$ pair within a document is a valid label,
+yet the data emits only adjacent ($\text{gap}\le 2/4$) pairs while evaluation requires
+ordering \emph{all} pairs of a workflow. Dropping \texttt{MAX\_GAP} closes this distribution
+shift (Section~10); adding pairwise distance as an auxiliary target sharpens long-range
+judgments.
+
+\paragraph{Evaluate as a partial order.}
+Report tie-aware Kendall-$\tau$ ($\tau_b/\tau_c$) and precedence-pair precision/recall, not
+just exact-permutation accuracy (Section~7). Real workflows contain parallel steps; exact
+matching hides genuine progress and provides no usable training/RL signal.
+
+\subsection{Tier 2 --- the reasoning model, on the backbone that wins}
+Naive chain-of-thought \emph{degrades} pointwise rerankers (Section~6), so for the pointwise
+causal scorer we prefer \emph{internalized / ``think-free'' reasoning}.
+\paragraph{Distill causal rationales into the cross-encoder (recommended primary).}
+Keep the DeBERTa-v3 CE; add an auxiliary rationale objective in which a teacher LLM writes a
+short causal explanation per pair (reject-sampled to agree with the gold label), and the CE
+learns to both predict direction and match the rationale representation. This extends the
+repo's existing \texttt{ReasoningClassifier} (frozen-encoder explanation embedding +
+cosine loss), adds \emph{zero} inference latency, and is strongly supported by
+\emph{Distilling Step-by-Step} and TFRank-style think-free training (Section~6).
+\paragraph{Sub-1B generative reasoner (ceiling track).}
+In parallel, train a $\sim$0.6B generative model (e.g.\ Qwen3-0.6B) as a pointwise
+precedence scorer with a think-mode switch---reasons during training, runs think-free at
+inference, emits \textsc{precedes/follows/neutral} plus a graded score. TFRank ships a 0.6B
+checkpoint as existence proof. Pick the winner of the two tracks on the latency/accuracy
+curve.
+\paragraph{Bootstrap rationales and a \textsc{neutral} class.}
+Generate teacher CoT per pair, reject-sample to the gold label (STaR/RFT/COLLATE-style),
+optionally VeriCoT-validate for consistency; and \emph{mine \textsc{neutral} pairs}
+(cross-document unrelated steps; same-document steps under sibling/parallel headings whose
+order is swap-invariant). \textsc{neutral} lets the orderer emit antichains (a DAG) instead
+of hallucinating edges between parallel steps.
+
+\subsection{Tier 3 --- push the ceiling}
+\paragraph{Ordering-reward GRPO polish.}
+After distillation/SFT, a \emph{short} GRPO run with a reward of format + pairwise direction
+correctness + Kendall-$\tau$/NDCG against gold order on sampled whole workflows (REARANK /
+Rank-GRPO precedent). Use Dr.GRPO/DAPO fixes for length bias and entropy collapse; LoRA
+first. The literature is consistent that sub-1B models should be \emph{distilled first, then
+RL-polished}, not RL-trained from scratch (Section~6).
+\paragraph{Listwise / global ordering.}
+Longer term, move from pairwise-then-aggregate toward a global objective---ListMLE /
+Plackett--Luce NLL, a pointer/seq2seq orderer, or a Set-Encoder-style listwise
+cross-encoder---to stop per-pair errors from compounding (Section~7).
+\paragraph{Asymmetric-geometry retriever.}
+For \emph{scalable} first-stage directional retrieval (where a cross-encoder is too slow),
+an order/box/hyperbolic head or a dual ``cause''/``effect'' projection (Section~5) provides a
+genuinely asymmetric score at embedding speed; keep the cross-encoder as the precise
+second stage.
+
+\subsection{The recommended pipeline}
+\begin{quote}\small\ttfamily
+Stage 1  Retriever (existing BGE-large bi-encoder; optional asymmetric head) \\
+Stage 2  Causal reasoner (PRIMARY: DeBERTa-v3 CE + distilled rationale head; \\
+\phantom{Stage 2  }TRACK B: Qwen3-0.6B think-free generative) \\
+\phantom{Stage 2  }$\rightarrow$ calibrated P(precedes), 3-way incl. NEUTRAL \\
+Stage 3  Orderer = weighted MFAS / Kemeny over log-odds edges; \\
+\phantom{Stage 3  }low-confidence pairs $\rightarrow$ antichains (DAG) \\
+Stage 4  Verifier (VeriCoT-style) breaks residual cycles \\
+Eval     tie-aware Kendall-$\tau$ + precedence P/R; later GRPO $\tau$-reward
+\end{quote}
+\textbf{Training order:} distill rationales $\rightarrow$ SFT CE/0.6B $\rightarrow$ optional
+GRPO $\tau$-reward; data upgraded to full transitive closure $+$ \textsc{neutral};
+aggregation upgraded to calibrated Kemeny.
+
+\subsection{First-week plan (most gain needs no training)}
+(1) Swap topological sort for calibrated weighted-MFAS and re-score the existing DeBERTa-CE
+outputs on the milan/\ajo\ sets---this alone should move 0/30 sharply. (2) Add Kendall-$\tau$
++ precedence-P/R to the eval harness. (3) Drop \texttt{MAX\_GAP}, regenerate
+full-transitive-closure pairs, retrain the CE. (4) Measure, \emph{then} invest in the
+reasoning track. The reference implementation released with this survey covers steps (1)
+and (2) out of the box.
+
+\subsection{Empirical validation (reference implementation)}
+The reference implementation released with this survey (\texttt{implementation/}) lets us
+test the Tier-1 claims directly. Two findings stand out. First, on a controlled
+decent-but-noisy, cyclic pairwise signal ($\sim$0.80 pairwise accuracy, presentation
+shuffled to remove input-order leakage), robust aggregation recovers roughly
+$3\times$ the perfect-match rate of naive topological sort, as pure post-processing with no
+model change:
+
+\begin{table}[h]
+\centering\footnotesize
+\begin{tabular}{lccc}
+\toprule
+Aggregator & PMR & Kendall $\tau_b$ & Prec.\ F1 \\
+\midrule
+Naive topo-sort       & 0.104 & 0.243 & 0.622 \\
+Bradley--Terry        & 0.265 & 0.806 & 0.903 \\
+MFAS (weighted)       & \textbf{0.317} & \textbf{0.816} & \textbf{0.908} \\
+Kemeny (exact, small) & \textbf{0.317} & \textbf{0.816} & \textbf{0.908} \\
+\bottomrule
+\end{tabular}
+\caption{Ordering quality from the same pairwise scores under different aggregators
+(controlled noisy/cyclic regime). Robust aggregation $\approx 3\times$ the perfect-match
+rate (PMR) of topological sort.}
+\end{table}
+
+Second---and crucially---aggregation only helps when the pairwise signal is
+\emph{decent}. Wiring in the project's \emph{real} scored workflows confirms the
+diagnosis: the bi-encoder's pairwise scores agree with gold precedence only
+$\sim$41\% of the time (worse than chance), so \emph{no} aggregator can order them---this
+is the documented 0/30. The cross-encoder scores are $\sim$96\% accurate, and \emph{every}
+aggregator then orders all evaluated workflows correctly. The practical implication is
+twofold: (i) the cross-encoder is the right backbone (it makes the signal aggregable), and
+(ii) robust aggregation is the lever that converts that signal into correct global orders
+once it is decent-but-noisy. The bi-encoder's failure is not an aggregation problem to be
+post-processed away---it is a signal problem requiring the better pairwise model.
+
+\subsection{Honest expectation-setting}
+Causal \emph{direction} is hard even for frontier models, and supervised systems cap well
+below ceiling (Section~4). Reasoning + distillation is precisely the lever shown to help,
+but no orderer will be perfect. The realistic, defensible win is to \emph{fix aggregation
+and data (Tier 1) to convert the existing pairwise strength into a much higher ordering
+score}, then use distilled reasoning and a $\tau$-reward GRPO polish (Tiers 2--3) to push
+further.

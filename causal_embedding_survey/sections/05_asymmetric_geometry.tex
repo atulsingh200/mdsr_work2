@@ -1,0 +1,234 @@
+\section{Asymmetric and Order-Structured Embeddings for Directionality}
+\label{sec:asymmetric_geometry}
+
+Causal precedence is an inherently \emph{asymmetric, transitive} relation: if
+step $A$ enables step $B$ then $B$ does not enable $A$, and if $A \prec B$ and
+$B \prec C$ then $A \prec C$. The dominant tool for dense retrieval and
+sentence similarity --- cosine similarity --- cannot express either property.
+This section surveys the geometric machinery that can: order embeddings,
+density and box embeddings, hyperbolic geometry, and asymmetric scoring heads.
+We connect each family to the project's own experiments, in particular the
+\texttt{internship-causal-embedding-lorentz} subproject, whose Lorentzian
+space/time encoder is a direct instantiation of several of these ideas.
+
+\subsection{Why cosine similarity is the wrong tool}
+For unit-normalized embeddings $\mathbf{u},\mathbf{v}$, cosine similarity
+$s_{\cos}(\mathbf{u},\mathbf{v}) = \mathbf{u}^\top \mathbf{v}/(\lVert
+\mathbf{u}\rVert \lVert \mathbf{v}\rVert)$ is \emph{symmetric} by construction:
+$s_{\cos}(\mathbf{u},\mathbf{v}) = s_{\cos}(\mathbf{v},\mathbf{u})$. Any scorer
+that factors through a single shared metric space and reads out an inner
+product or a distance $d(\mathbf{u},\mathbf{v}) = d(\mathbf{v},\mathbf{u})$ is
+likewise symmetric and obeys the triangle inequality, so it can encode
+``$A$ and $B$ are about the same topic'' but never ``$A$ causally precedes
+$B$.'' Empirically this is exactly what the repo observed: a pure space-only
+cosine scorer has directional accuracy $\equiv 0.5$ by construction
+\citep{geo:repo_lorentz2026}. To model precedence we must abandon symmetry and
+adopt a score $s(A,B)\neq s(B,A)$ whose asymmetry is a controllable, learnable
+quantity. We organize the asymmetric mechanisms into four geometric families
+plus a class of learned asymmetric operators.
+
+\subsection{Order embeddings (partial order via reversed product order)}
+\citet{geo:vendrov2016order} embed objects in the non-negative orthant
+$\mathbb{R}^N_{+}$ and impose the \emph{reversed product order}: $\mathbf{x}
+\preceq \mathbf{y}$ (read ``$\mathbf{y}$ entails / is more general than
+$\mathbf{x}$'') iff $x_i \geq y_i$ for every coordinate $i$. The apex of the
+hierarchy (most general concept) sits near the origin; specializations move
+outward. Order violation is measured by the penalty
+\begin{equation}
+E(\mathbf{x},\mathbf{y}) = \big\lVert \max(\mathbf{0}, \mathbf{y}-\mathbf{x})
+\big\rVert_2^2 ,
+\end{equation}
+which is $0$ exactly when $\mathbf{x}\preceq\mathbf{y}$ holds and grows with the
+violation otherwise --- and is \emph{asymmetric}, $E(\mathbf{x},\mathbf{y})\neq
+E(\mathbf{y},\mathbf{x})$. Training uses a max-margin objective over positive
+ordered pairs $P$ and negative (non-ordered) pairs $N$:
+\begin{equation}
+\mathcal{L} = \!\!\sum_{(\mathbf{x},\mathbf{y})\in P}\!\! E(\mathbf{x},\mathbf{y})
+\;+\!\! \sum_{(\mathbf{x},\mathbf{y})\in N}\!\! \max\!\big(0,\, \alpha -
+E(\mathbf{x},\mathbf{y})\big).
+\end{equation}
+Crucially the construction is \emph{transitive} by lattice structure, matching
+the transitivity of causal precedence, and it scales: scoring is one
+coordinate-wise comparison, so order embeddings remain indexable like ordinary
+dense retrieval.
+
+\subsection{Probabilistic and density order embeddings}
+A complementary route makes each object a \emph{distribution} rather than a
+point. \citet{geo:vilnis2015gaussian} represent each word as a Gaussian
+$\mathcal{N}(\boldsymbol{\mu}_w,\Sigma_w)$ and score relatedness by KL
+divergence,
+\begin{equation}
+\mathrm{KL}\!\left(\mathcal{N}_a \,\Vert\, \mathcal{N}_b\right) \neq
+\mathrm{KL}\!\left(\mathcal{N}_b \,\Vert\, \mathcal{N}_a\right),
+\end{equation}
+whose built-in asymmetry encodes inclusion of one ellipsoid in another and
+captures entailment direction and uncertainty (broad covariance = general
+concept). \citet{geo:athiwaratkun2018density} extend this to
+\emph{hierarchical density order embeddings}: they impose a partial order on
+Gaussians via a thresholded (``truncated'') divergence so that a general
+concept's density \emph{encapsulates} its specializations, and train with an
+order-violation loss analogous to Eq.~(2). This unifies the order-embedding
+inductive bias with calibrated, interpretable uncertainty and gives strong
+WordNet hypernymy and HyperLex results.
+
+\subsection{Box / region-based embeddings}
+Box embeddings represent each concept as an axis-aligned hyper-rectangle
+(``box'') $\mathrm{Box}(x) = \prod_i [x_i^{-}, x_i^{+}]$ and read off relations
+from \emph{volume and intersection}, giving a probabilistic, set-theoretic
+semantics. \citet{geo:vilnis2018box} define a calibrated containment
+probability
+\begin{equation}
+P(b \mid a) = \frac{\mathrm{Vol}\big(\mathrm{Box}(a)\cap
+\mathrm{Box}(b)\big)}{\mathrm{Vol}\big(\mathrm{Box}(a)\big)},
+\end{equation}
+which is asymmetric ($P(b\mid a)\neq P(a\mid b)$ whenever the boxes differ in
+volume) and directly models entailment/containment plus negative correlation
+between concepts. Boxes are closed under intersection, so conjunctive queries
+compose naturally --- the basis of \texttt{query2box}
+\citep{geo:ren2020query2box}, which embeds a knowledge-graph query as a box,
+realizes conjunction as box intersection and projection as a learned box
+transform, and ranks an entity by whether its point falls inside the answer
+box. A practical caveat is that hard-edged volumes give vanishing gradients
+when boxes are disjoint; smoothed/Gumbel box measures restore
+trainability \citep{geo:dasgupta2020boxlib}.
+
+\subsection{Hyperbolic embeddings}
+Hierarchies and DAGs grow their node count \emph{exponentially} with depth;
+Euclidean space, whose volume grows polynomially, cannot embed a tree with low
+distortion, but hyperbolic space (constant negative curvature) has volume that
+grows exponentially with radius and so embeds trees almost isometrically in few
+dimensions. \citet{geo:nickel2017poincare} place concepts in the Poincar\'e
+ball $\mathbb{B}^n=\{\mathbf{x}:\lVert\mathbf{x}\rVert<1\}$ with distance
+\begin{equation}
+d_{\mathbb{B}}(\mathbf{u},\mathbf{v}) = \mathrm{arcosh}\!\left(1 +
+2\frac{\lVert \mathbf{u}-\mathbf{v}\rVert^2}{(1-\lVert\mathbf{u}\rVert^2)
+(1-\lVert\mathbf{v}\rVert^2)}\right),
+\end{equation}
+so distances explode toward the boundary; depth (generality) is encoded by
+radius and similarity by angle. \citet{geo:nickel2018lorentz} re-derive the
+same geometry in the Lorentz / hyperboloid model
+$\{\mathbf{x}: \langle\mathbf{x},\mathbf{x}\rangle_{\mathcal{L}}=-1\}$ with the
+Minkowski form $\langle\mathbf{x},\mathbf{y}\rangle_{\mathcal{L}} = -x_0 y_0 +
+\sum_{i\geq1} x_i y_i$, which is numerically more stable for Riemannian
+optimization. Distance itself is still symmetric, so directionality is added on
+top: \citet{geo:ganea2018cones} attach to each point a \emph{geodesically
+convex entailment cone} and declare $\mathbf{x}\preceq\mathbf{y}$ iff
+$\mathbf{y}$ lies in the cone at $\mathbf{x}$, penalizing the angle by which a
+positive pair falls outside the cone --- an asymmetric, transitive order over
+hyperbolic points. \citet{geo:ganea2018hnn} lift standard layers
+(linear maps, RNN/GRU, softmax) to the Poincar\'e ball via the exponential and
+logarithmic maps, enabling end-to-end hyperbolic encoders.
+
+\paragraph{Connection to the repo's Lorentz experiment.}
+The \texttt{internship-causal-embedding-lorentz} subproject built exactly such
+an encoder: an e5/BGE backbone whose output is split into a
+\emph{space} part $\mathbf{s}\in\mathbb{R}^{d_s}$ (L2-normalized, topical) and a
+\emph{time} part $\mathbf{t}\in\mathbb{R}^{d_t}$ (LayerNorm, unbounded,
+``causal clock''), scored by
+\begin{equation}
+s(a,b) = \alpha\,\cos(\mathbf{s}_a,\mathbf{s}_b)
++ \beta\,\frac{1}{d_t}\sum_{k=1}^{d_t}\sigma\!\big(\tau\,(t_{b,k}-t_{a,k})\big),
+\end{equation}
+where the first term is symmetric (retrieval) and the second is an asymmetric
+SteepSigmoid time-ordering term ($\tau{=}10$) that is high only when $b$ is
+``after'' $a$ in every time coordinate \citep{geo:repo_lorentz2026}. Two
+findings are decisive for this survey. (i) The time head genuinely breaks
+symmetry: with an explicit ordering loss it reaches \textbf{directional
+accuracy $1.0$} (forward $>$ reverse for every test pair) versus $0.5$ for the
+cosine baseline, on \texttt{aep\_causal} and \texttt{followupqg}. (ii) The same
+time head contributes essentially \emph{nothing} to retrieval MRR (e.g.\
+$0.460\!\to\!0.459$ on \texttt{aep\_causal} at $\beta{=}0$ vs $0.3$, on
+identical pools): retrieval is dominated by topical similarity, and direction
+only says \emph{which way} a known pair points, not \emph{which} candidate is
+correct. The honest ablation further attributes the headline ``+20\% over the
+BERT baseline'' to the \emph{backbone swap} (BERT $\to$ e5), not to the
+Lorentzian machinery. The lesson: explicit directional geometry is the right
+tool for the \emph{direction} sub-task but does not substitute for a strong
+retriever, and direction in this data lives in the \emph{untied two-tower
+heads}, not in a single shared (even hyperbolic) clock coordinate.
+
+\subsection{Learned asymmetric operators and dual-space heads}
+Beyond geometric priors, one can simply \emph{learn} an asymmetric scorer.
+\textbf{Dot product} (without normalization) is already asymmetric in norm and
+underlies dense retrievers \citep{geo:karpukhin2020dpr}. A \textbf{bilinear /
+relation matrix} $s(a,b)=\mathbf{u}_a^\top \mathbf{R}\,\mathbf{v}_b$ with
+non-symmetric $\mathbf{R}$ models a directional relation directly.
+Translational KG embeddings impose direction by construction: \textbf{TransE}
+\citep{geo:bordes2013transe} scores a triple by $-\lVert \mathbf{h}+\mathbf{r}
+-\mathbf{t}\rVert$, so $(h,r,t)$ and $(t,r,h)$ generally differ; \textbf{RotatE}
+\citep{geo:sun2019rotate} makes $\mathbf{r}$ a unit-modulus rotation in
+$\mathbb{C}^d$, $\mathbf{t}=\mathbf{h}\circ\mathbf{r}$, which can represent
+\emph{antisymmetry} (rotation by $\theta\neq0,\pi$), inversion, and composition
+--- precisely the algebra a precedence relation needs. \textbf{Dual-/two-space
+embeddings} give each text two roles via separate ``cause'' and ``effect''
+projection heads, $\phi_c(\cdot),\phi_e(\cdot)$, and score
+$s(A\!\to\!B)=\langle \phi_c(A),\phi_e(B)\rangle$; because $\phi_c\neq\phi_e$,
+$s(A\!\to\!B)\neq s(B\!\to\!A)$, and the two indexes remain separately
+retrievable. This is the same mechanism the repo found to carry direction:
+untied two-tower e5 with a directional margin loss pushing
+$s(a\!\to\!b)>s(b\!\to\!a)+m$ lifted directional accuracy to $0.91$--$1.00$ on
+four of five datasets while keeping retrieval MRR $\geq10\%$ above the BERT
+baseline \citep{geo:repo_lorentz2026}.
+
+\paragraph{The heads / fusion trick.}
+The repo's \texttt{DirectionalClassifier} encodes $A$ and $B$ separately and
+fuses them as $[\mathbf{a};\mathbf{b};\mathbf{a}-\mathbf{b};\mathbf{a}\odot
+\mathbf{b}]\!\to\!\mathrm{MLP}$. Read geometrically, this is a learned
+asymmetric operator: the difference term $\mathbf{a}-\mathbf{b}$ is
+\emph{antisymmetric} ($(\mathbf{a}-\mathbf{b})=-(\mathbf{b}-\mathbf{a})$), so it
+injects a TransE-like translational signal that flips sign under argument swap
+and lets the MLP read off direction; the Hadamard term $\mathbf{a}\odot
+\mathbf{b}$ is symmetric and supplies a bilinear-style interaction (topical
+agreement). Concatenating both gives the head a symmetric channel for
+\emph{relatedness} and an antisymmetric channel for \emph{precedence} --- the
+fusion analogue of the space/time split in Eq.~(7).
+
+\begin{table*}[t]
+\centering
+\footnotesize
+\caption{Geometries for directional/causal scoring. ``Indexable'' = candidates
+can be embedded offline and retrieved with a single-vector ANN index (scalable
+stage-1); cross-encoders are not.}
+\label{tab:geometries}
+\begin{tabular}{@{}llll l@{}}
+\toprule
+Family & Space & Asymmetry mechanism & Suited structure & Indexable / cost \\
+\midrule
+Cosine bi-encoder & $\mathbb{S}^{d-1}$ & none (symmetric) & topical similarity & yes / cheap \\
+Order embeddings \citep{geo:vendrov2016order} & $\mathbb{R}^d_{+}$ & reversed product order, $\max(0,\mathbf{y}{-}\mathbf{x})$ & partial order, DAG & yes / cheap \\
+Gaussian / density \citep{geo:vilnis2015gaussian,geo:athiwaratkun2018density} & Gaussians & asymmetric KL / truncated divergence & hypernymy + uncertainty & yes / medium \\
+Box / region \citep{geo:vilnis2018box,geo:ren2020query2box} & boxes in $\mathbb{R}^d$ & conditional volume $P(b\mid a)$ & containment, conjunctive queries & yes / medium \\
+Hyperbolic + cones \citep{geo:nickel2017poincare,geo:ganea2018cones} & $\mathbb{B}^d$ / hyperboloid & entailment cone membership & deep trees / DAGs & yes / medium \\
+Translational KG \citep{geo:bordes2013transe,geo:sun2019rotate} & $\mathbb{R}^d$ / $\mathbb{C}^d$ & $\mathbf{h}{+}\mathbf{r}{-}\mathbf{t}$, rotation & typed directional relations & yes / cheap \\
+Dual-head (cause/effect) & two $\mathbb{R}^d$ & $\phi_c\neq\phi_e$, learned & pairwise precedence & yes / cheap \\
+Cross-encoder & joint & full cross-attention & adjacency / fine pairs & no / expensive \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\paragraph{Relevance to causal embedding for \aep{}/\ajo{}.}
+An order/box/hyperbolic or dual-head scorer is attractive precisely where a
+cross-encoder cannot go: \emph{scalable} stage-1 directional retrieval. All of
+the asymmetric families in Table~\ref{tab:geometries} are single-vector
+indexable, so they can rank thousands of candidate next-steps in sublinear time
+while still respecting direction --- something a symmetric cosine index cannot
+do and a cross-encoder cannot afford at corpus scale. The repo evidence says
+where this pays off and where it does not. \emph{It pays off} when the
+direction is genuinely learnable from text and the workflow is close to a
+partial order/DAG: \texttt{qrecc}, \texttt{multiwoz}, and \texttt{followupqg}
+reached $0.91$--$1.00$ directional accuracy with a dual-head + directional
+margin --- a region-/order-style head would be a natural, transitivity-aware
+generalization there, and would let stage-1 itself prune wrong-direction
+candidates. \emph{It will not help} on two fronts established by the project:
+(i) on \texttt{aep\_causal}, where anchor and positive are near-duplicate
+documentation chunks, direction is ambiguous \emph{in the text} and no geometry
+(towers, time head, cones) moves accuracy off $\approx0.76$; (ii) on the actual
+\emph{ordering} metric, where pairwise classification accuracy does not equal
+ordering quality and the DeBERTa \emph{cross-encoder} (joint cross-attention,
+not indexable) is what generalizes to far-apart/non-adjacent pairs. The
+synthesis matching the rest of this survey is therefore a two-stage design: an
+asymmetric, indexable geometric head (dual cause/effect towers, optionally with
+an order/box penalty for transitivity) as a fast directional \emph{retriever},
+followed by a cross-encoder reranker for the hard adjacent pairs --- reserving
+the expensive joint model for the few candidates where direction is genuinely
+hard.

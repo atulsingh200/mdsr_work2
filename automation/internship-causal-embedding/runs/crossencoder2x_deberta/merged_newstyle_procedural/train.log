@@ -1,0 +1,57 @@
+01:20:03 INFO run_dir=runs/crossencoder2x_deberta/merged_newstyle_procedural  device=cuda  bf16=True
+01:20:04 INFO tokenizer <- microsoft/deberta-v3-large
+01:20:04 INFO scanning max joint token length across all splits …
+01:20:43 INFO   observed max=512  -> max_seq_len=512  (scan 38.9s)
+01:20:43 INFO loading datasets …
+01:20:43 INFO   train=39561  val=4034  test=5055
+01:20:43 INFO building CrossEncoder2x  backbone=microsoft/deberta-v3-large  n_layers=24  native=True …
+01:20:45 INFO   total params=434,013,185
+01:20:45 INFO   total_steps=1854  warmup_steps=185
+01:22:35 INFO   e1 opt_step=50/1854  loss=0.7027  acc=0.4925  lr=2.70e-06
+01:24:24 INFO   e1 opt_step=100/1854  loss=0.7023  acc=0.4983  lr=5.41e-06
+01:26:14 INFO   e1 opt_step=150/1854  loss=0.6995  acc=0.5075  lr=8.11e-06
+01:28:03 INFO   e1 opt_step=200/1854  loss=0.6950  acc=0.5152  lr=9.91e-06
+01:29:52 INFO   e1 opt_step=250/1854  loss=0.6858  acc=0.5335  lr=9.61e-06
+01:31:42 INFO   e1 opt_step=300/1854  loss=0.6737  acc=0.5534  lr=9.31e-06
+01:33:31 INFO   e1 opt_step=350/1854  loss=0.6580  acc=0.5748  lr=9.01e-06
+01:35:21 INFO   e1 opt_step=400/1854  loss=0.6413  acc=0.5939  lr=8.71e-06
+01:37:08 INFO   e1 opt_step=450/1854  loss=0.6281  acc=0.6082  lr=8.41e-06
+01:38:58 INFO   e1 opt_step=500/1854  loss=0.6143  acc=0.6235  lr=8.11e-06
+01:40:49 INFO   e1 opt_step=550/1854  loss=0.6025  acc=0.6357  lr=7.81e-06
+01:42:37 INFO   e1 opt_step=600/1854  loss=0.5920  acc=0.6468  lr=7.51e-06
+01:43:49 INFO [epoch 1/3]  train_loss=0.5885  train_acc=0.6505  val_loss=0.4294  val_acc=0.7846  val_auc=0.8817  elapsed=1384.1s
+01:43:53 INFO   * saved best.pt  val_acc=0.7846
+01:45:04 INFO   e2 opt_step=650/1854  loss=0.3871  acc=0.8262  lr=7.21e-06
+01:46:53 INFO   e2 opt_step=700/1854  loss=0.3851  acc=0.8256  lr=6.91e-06
+01:48:41 INFO   e2 opt_step=750/1854  loss=0.3806  acc=0.8272  lr=6.61e-06
+01:50:30 INFO   e2 opt_step=800/1854  loss=0.3862  acc=0.8243  lr=6.32e-06
+01:52:19 INFO   e2 opt_step=850/1854  loss=0.3836  acc=0.8241  lr=6.02e-06
+01:54:07 INFO   e2 opt_step=900/1854  loss=0.3828  acc=0.8246  lr=5.72e-06
+01:55:57 INFO   e2 opt_step=950/1854  loss=0.3834  acc=0.8240  lr=5.42e-06
+01:57:46 INFO   e2 opt_step=1000/1854  loss=0.3803  acc=0.8255  lr=5.12e-06
+01:59:37 INFO   e2 opt_step=1050/1854  loss=0.3773  acc=0.8269  lr=4.82e-06
+02:01:27 INFO   e2 opt_step=1100/1854  loss=0.3764  acc=0.8275  lr=4.52e-06
+02:03:15 INFO   e2 opt_step=1150/1854  loss=0.3757  acc=0.8276  lr=4.22e-06
+02:05:04 INFO   e2 opt_step=1200/1854  loss=0.3735  acc=0.8284  lr=3.92e-06
+02:06:55 INFO [epoch 2/3]  train_loss=0.3729  train_acc=0.8285  val_loss=0.3881  val_acc=0.8153  val_auc=0.9090  elapsed=1382.2s
+02:07:01 INFO   * saved best.pt  val_acc=0.8153
+02:07:32 INFO   e3 opt_step=1250/1854  loss=0.2924  acc=0.8772  lr=3.62e-06
+02:09:22 INFO   e3 opt_step=1300/1854  loss=0.2677  acc=0.8887  lr=3.32e-06
+02:11:12 INFO   e3 opt_step=1350/1854  loss=0.2722  acc=0.8839  lr=3.02e-06
+02:13:01 INFO   e3 opt_step=1400/1854  loss=0.2657  acc=0.8856  lr=2.72e-06
+02:14:50 INFO   e3 opt_step=1450/1854  loss=0.2607  acc=0.8879  lr=2.42e-06
+02:16:40 INFO   e3 opt_step=1500/1854  loss=0.2581  acc=0.8892  lr=2.12e-06
+02:18:30 INFO   e3 opt_step=1550/1854  loss=0.2608  acc=0.8873  lr=1.82e-06
+02:20:20 INFO   e3 opt_step=1600/1854  loss=0.2596  acc=0.8877  lr=1.52e-06
+02:22:09 INFO   e3 opt_step=1650/1854  loss=0.2583  acc=0.8879  lr=1.22e-06
+02:23:58 INFO   e3 opt_step=1700/1854  loss=0.2570  acc=0.8886  lr=9.23e-07
+02:25:47 INFO   e3 opt_step=1750/1854  loss=0.2571  acc=0.8876  lr=6.23e-07
+02:27:37 INFO   e3 opt_step=1800/1854  loss=0.2561  acc=0.8879  lr=3.24e-07
+02:29:26 INFO   e3 opt_step=1850/1854  loss=0.2561  acc=0.8881  lr=2.40e-08
+02:30:07 INFO [epoch 3/3]  train_loss=0.2561  train_acc=0.8881  val_loss=0.4157  val_acc=0.8230  val_auc=0.9156  elapsed=1386.7s
+02:30:13 INFO   * saved best.pt  val_acc=0.8230
+02:30:15 INFO saved final.pt  total_time=4170s
+02:30:15 INFO loading best.pt for final val/test evaluation …
+02:30:48 INFO [val]  acc=0.8230  auc=0.9156  f1=0.8215
+02:31:27 INFO [test] loss=0.4889  acc=0.8085  auc=0.8949  f1=0.8070
+02:31:27 INFO [done] best_val_acc=0.8230  test_acc=0.8085  test_auc=0.8949  results in runs/crossencoder2x_deberta/merged_newstyle_procedural

@@ -1,0 +1,107 @@
+\section{Procedural and Workflow Understanding}
+\label{sec:procedural}
+
+The third target task---\emph{sort the steps of a workflow into ascending
+order}---is an instance of procedural understanding, a problem the NLP
+community has studied under several guises: tracking state through a process,
+inferring goal--step and step--step relations, inducing event schemas, and
+planning. This section surveys those threads and connects them to ordering
+the AEP/AJO tutorial steps from documentation and video transcripts.
+
+\subsection{Procedural text understanding}
+
+The canonical benchmark is \textbf{ProPara} \citep{proc:dalvi2018propara}:
+$488$ human-authored science procedures with dense per-step annotations of
+entity \emph{existence} and \emph{location}, where the model must track state
+changes whose causes are often implicit and must be inferred---the same
+implicit-causality challenge our pairwise primitive faces.
+\textbf{OpenPI} \citep{proc:tandon2020proglobal} extends entity-state tracking
+to open-domain wikiHow procedures. \textbf{RecipeQA}
+\citep{proc:yagcioglu2018recipeqa} ($\sim$20K recipes, $\sim$36K QA pairs)
+includes an explicit \emph{ordering} subtask---reorder shuffled steps---that is
+structurally identical to our workflow-ordering goal, plus a coherence/cloze
+subtask. The wikiHow line of work is most directly relevant:
+\citet{proc:zhang2020wikihow} define \emph{Goal--Step Inference} (``learn
+poses'' is a step of ``do yoga''), \emph{step inference}, and a \emph{temporal
+ordering} task (``buy a yoga mat'' precedes ``learn poses''), reporting a
+$10$--$20\%$ gap between transformer models and humans; \textbf{VGSI}
+\citep{proc:yang2021vgsi} adds a visual variant over $772$K step images.
+These step--step temporal relations are precisely the forward(1)/reverse(0)
+precedence labels the repo derives from positional order within a document.
+
+\subsection{Script and event-schema induction}
+
+Ordering steps is a modern form of \emph{script} learning.
+\citet{proc:chambers2008narrative} introduced unsupervised \emph{narrative
+event chains} and the \emph{narrative cloze} evaluation---predict the held-out
+event in a partially ordered chain---which directly anticipates next-step
+prediction over a workflow. \textbf{ROCStories}
+\citep{proc:mostafazadeh2016story} supplies a story-cloze/temporal-ordering
+benchmark over everyday event sequences. Commonsense event schemas were
+operationalized by \textbf{ATOMIC} \citep{proc:sap2019atomic}
+(if--then social/physical relations incl.\ \emph{xNeed} prerequisites and
+\emph{xEffect} consequences) and made generative by \textbf{COMET}
+\citep{proc:bosselut2019comet}, which fine-tunes a transformer to emit
+commonsense tails---a template for emitting prerequisite/consequence edges
+between AEP steps. \textbf{proScript} \citep{proc:sakaguchi2021proscript} is the
+most aligned: it generates \emph{partially ordered} scripts and defines an
+\emph{edge-prediction} task (given a scenario and unordered events, recover the
+partial-order DAG; F1$=75.7$). Its partial-order stance directly supports the
+repo's diagnosis that forcing a \emph{total} order over parallel workflow steps
+is a root cause of the $0/30$ ordering failure.
+
+\subsection{Workflow and process modeling with LLMs}
+
+Recent work scales procedural understanding to executable workflows.
+\textbf{WorkflowLLM} \citep{proc:fan2024workflowllm} builds
+\emph{WorkflowBench}---$106{,}763$ orchestration samples over $1{,}503$ APIs
+from $83$ applications---and fine-tunes \emph{WorkflowLlama} to generate API
+workflows, outperforming GPT-4o with in-context learning and generalizing to
+out-of-distribution tasks (F1 plan $77.5\%$ on T-Eval). The repo's
+\texttt{workflowllm\_aep\_merged\_2} dataset ($210$K pairs) adapts this corpus
+to AEP. \textbf{FlowBench} \citep{proc:xiao2024flowbench} benchmarks
+\emph{workflow-guided} agent planning across $6$ domains, $22$ roles, and $51$
+scenarios, comparing workflow-knowledge formats (natural language, symbolic
+code, flowchart) and finding even GPT-4o reaches only $\sim$40--43\% success---a
+flowchart/DAG representation gave the best trade-off, reinforcing a
+graph-structured rather than linear view of process knowledge. This connects to
+classical \emph{process extraction} from documents and to hierarchical task
+networks (HTNs) / task graphs, where a procedure is a partial order of subtasks
+rather than a flat chain---the representation our rank-aggregation stage should
+target.
+
+\subsection{Procedural planning with LLMs}
+
+The planning literature studies \emph{generating} an ordered plan rather than
+sorting a given one, but the ordering competence transfers.
+\citet{proc:huang2022zeroshotplanners} show large LMs decompose high-level
+goals into mid-level step sequences zero-shot, though raw outputs need grounding
+to admissible actions; \textbf{SayCan} \citep{proc:ahn2022saycan} grounds such
+plans via affordance scoring. \textbf{Chain-of-thought} prompting
+\citep{proc:wei2022cot} improves multi-step reasoning generally and underlies
+the rationale-before-verdict strategy proposed for our reranker. Critically,
+\textbf{CaT-Bench} \citep{proc:lyu2024catbench} benchmarks LM understanding of
+\emph{causal and temporal} dependencies in plans (``can step $j$ happen before
+step $i$?''), finding models conflate temporal sequence with causal necessity---
+exactly the conflation the repo flags between \emph{narration order} and
+\emph{causal precedence}.
+
+\paragraph{Relevance to causal embedding for AEP/AJO.}
+The downstream goal is to order the $30$ three-step AJO orchestrated workflows
+(\texttt{ajo\_orchestrated\_workflows\_flat.json}, fields \texttt{t1/t2/t3}) and
+to recover step order from the $142$ AEP video transcripts
+(\texttt{aep\_transcripts.json}), where narration order is a noisy proxy for
+causal order. The surveyed literature suggests four moves, consistent with the
+repo's own root-cause analysis. (1) Adopt a \emph{partial-order/DAG} target
+(proScript, FlowBench's flowchart format) instead of a forced total order, with
+a NEUTRAL/abstain class for parallel steps such as the AJO welcome-flow ``pause
+24h'' that is independent of audience enrichment. (2) Frame pairwise scoring as
+prerequisite/consequence edge prediction (ATOMIC \emph{xNeed}/\emph{xEffect},
+COMET) so the embedding distinguishes causal necessity from mere sequence, the
+distinction CaT-Bench shows models miss. (3) Train on the \emph{transitive
+closure} of within-document orders (not just adjacent pairs) to close the
+distribution shift the repo identifies between gap$\le$2 training and
+all-pairs evaluation. (4) Aggregate the (possibly cyclic) pairwise scores with a
+robust ranker---minimum-feedback-arc-set / Bradley--Terry---feeding
+\texttt{order\_events.py}, rather than a naive topological sort that lets per-pair
+errors compound into the current $0/30$ result.

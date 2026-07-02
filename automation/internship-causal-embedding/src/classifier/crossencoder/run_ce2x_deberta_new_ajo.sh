@@ -36,10 +36,10 @@ CE2X_ARGS="
 
 echo "===== training CE2x-deberta-v3-large on new_ajo_workflows ====="
 python3 -m src.classifier.crossencoder.train_ce2x \
-    --data-dir /mnt/localssd/automation/internship-causal-embedding/data/merged_workflows \
-    --split-prefix "directional_" \
-    --out-dir "$RUNS" --run-name merged_workflow \
+    --data-dir /mnt/localssd/automation/internship-causal-embedding/data/merged_newstyle_procedural \
+    --split-prefix "" \
+    --out-dir "$RUNS" --run-name merged_newstyle_procedural \
     $CE2X_ARGS \
-    2>&1 | tee "$RUNS/ce2x_deberta_new_ajo_workflows_stdout.log"
+    2>&1 | tee "$RUNS/ce2x_deberta_merged_newstyle_procedural_stdout.log"
 
 echo "===== DONE. Results in $RUNS/ ====="

@@ -1,0 +1,24 @@
+We study the design of \emph{causal embedding models}: representations and scoring
+functions that capture the \emph{directional, precedence} structure of procedural
+documentation rather than mere topical similarity. Our concrete setting is the
+documentation and video tutorials of Adobe Experience Platform (\aep) and Adobe
+Journey Optimizer (\ajo), from which a model must (i) judge whether one step
+\emph{causally precedes / enables} another, (ii) \textbf{rerank candidate follow-up
+questions} by logical progression, and (iii) \textbf{sort multi-step workflows into
+ascending order}. We survey the landscape end to end---causal representation learning
+and causal reasoning from text; the state of the art in dense retrieval and
+bi-/cross-/late-interaction architectures; \emph{asymmetric and order-structured
+embedding geometries} (order, box, Gaussian, and hyperbolic/Lorentz embeddings) that
+natively express directionality; reasoning rerankers and reinforcement learning for
+ranking in sub-1B models; sentence/step ordering and robust rank aggregation; and
+follow-up/conversational retrieval and procedural-workflow understanding. We ground the
+survey in an empirical characterization of the project's own data and baselines---where
+a bi-encoder wins pairwise classification but a DeBERTa cross-encoder wins workflow
+ordering (21/30 vs.\ 0/30), exposing that \emph{pairwise accuracy $\neq$ ordering
+quality}. We argue that the dominant failure mode is not the pairwise model but the
+\emph{aggregation} (naive topological sort collapses on a single cycle) and the
+\emph{data} (adjacent-only, total-order labels). We synthesize a concrete, sub-1B system
+design---calibrated cross-encoder $\rightarrow$ minimum-feedback-arc-set / Kemeny
+aggregation $\rightarrow$ partial-order evaluation, with distilled ``think-free'' causal
+rationales and an optional ordering-reward GRPO polish---and release a reference
+implementation of the aggregation, calibration, metrics, and reranking components.

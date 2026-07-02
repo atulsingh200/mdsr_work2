@@ -1,0 +1,229 @@
+\section{Data Characterization: AEP/AJO Documentation and Workflows}
+\label{sec:data}
+
+This section empirically characterizes the corpora that underpin the causal-embedding
+effort for Adobe Experience Platform (AEP) and Adobe Journey Optimizer (AJO). All
+statistics below are computed directly from the repository's JSON/JSONL assets by the
+reproducible script \texttt{implementation/analyze\_data.py}; the figures it emits are
+included verbatim. We deliberately treat the data as small structured files (parsed with
+\texttt{json}/\texttt{csv}) and compute everything with simple counting, so the numbers
+are auditable and the analysis is decoupled from any model. We first describe the raw
+sources (documentation pages and video tutorials), then the derived pairwise
+causal-classification datasets and their tier system, then the labeling procedure
+(adjacency and \texttt{MAX\_GAP} windowing) and the distribution shift it induces, and
+finally the workflow-ordering and follow-up-reranking evaluation sets. We close with
+implications for modeling.
+
+\subsection{Source corpora}
+
+\paragraph{Documentation.} The pairwise datasets are mined from Adobe Experience League
+documentation. The deterministic phase-level extractor consumes a snapshot of $3{,}853$
+scraped documentation pages (title/URL/content); after markdown, code-fence, table, and
+callout cleaning, pages are split on H2/H3 headings into action-bearing
+\emph{phase} paragraphs of $24$--$56$ words. Pages yielding between $3$ and $12$ phases
+are retained, producing $1{,}301$ phase-structured workflows. A parallel sentence-level
+builder restricts to \texttt{/tutorials/} pages and keeps only \emph{action} sentences
+($5$--$60$ words containing an imperative verb such as \emph{select}, \emph{click},
+\emph{navigate}, \emph{create}, \emph{configure}), dropping narration markers.
+
+\paragraph{Video tutorials.} The transcript corpus
+(\texttt{scrap\_transcript/aep\_transcripts.json}) contains $142$ AEP/AJO video tutorials,
+each a \texttt{(title, url, toc\_path, video\_id, transcript)} record. Transcripts are
+long and highly variable: the median length is $\approx 792$ words, the mean $\approx
+1{,}135$ words, ranging from $175$ to $9{,}608$ words
+(Figure~\ref{fig:transcripts}, left). All videos sit under the
+\texttt{platform-learn/tutorials} tree; by topic area the largest buckets are
+\emph{destinations} ($17$), \emph{ai-assistant} ($14$), \emph{schemas} ($13$),
+\emph{privacy} ($11$), \emph{intro-to-platform} ($10$), and \emph{sources} ($10$)
+(Figure~\ref{fig:transcripts}, right). The heavy right tail matters operationally: a
+single transcript routinely exceeds a transformer's $512$-token budget, which is exactly
+the ``text-starvation'' failure mode reported for cross-encoders on this data.
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=\linewidth]{fig_transcript_lengths}
+  \caption{Video-tutorial transcript corpus ($N=142$). Left: distribution of transcript
+  length in words (median $\approx 792$, long right tail to $\sim 9.6$k words). Right:
+  the twelve largest documentation topic areas. The corpus is AEP/AJO-centric and
+  long-form, frequently exceeding standard $512$-token encoder budgets.}
+  \label{fig:transcripts}
+\end{figure*}
+
+\subsection{Pairwise causal-classification datasets}
+
+The central training signal is a \emph{directional pairwise} format: each row carries
+\texttt{text\_1}, \texttt{text\_2}, and a binary \texttt{label}, where $\texttt{label}=1$
+means \emph{\texttt{text\_1} causally precedes / enables \texttt{text\_2}}. The richer,
+tiered variants additionally carry \texttt{tier\_1}, \texttt{tier\_2} (a curriculum-level
+index), \texttt{sub\_1}, \texttt{sub\_2} (sub-chapter codes), and source URLs. We survey
+the six datasets referenced as primary in the project context; their split sizes and
+label balance are shown in Table~\ref{tab:datasets} and
+Figures~\ref{fig:sizes}--\ref{fig:balance}.
+
+\begin{table}[t]
+  \centering
+  \small
+  \caption{Primary pairwise causal-classification datasets. Sizes are exact line counts;
+  ``\%\,label\,1'' is the fraction of \emph{precedes} pairs in train; ``med.\ len.'' is the
+  median word count of \texttt{text\_1}; ``tier'' marks datasets carrying tier metadata.
+  Every dataset is essentially perfectly balanced by construction (forward/reverse pairs).}
+  \label{tab:datasets}
+  \begin{tabular}{lrrrcrc}
+    \toprule
+    Dataset & Train & Val & Test & \%\,lbl1 & med.\ len. & tier \\
+    \midrule
+    \texttt{aep\_causal\_cls34}    & 110{,}775 & 6{,}004  & 6{,}004  & 50.3 & 103 & \checkmark \\
+    \texttt{hard\_neg\_sem}        & 261{,}210 & 14{,}736 & 6{,}004  & 50.3 & 103 & \checkmark \\
+    \texttt{ajo\_doc\_not\_t1}     & 88{,}000  & 11{,}200 & 11{,}200 & 50.0 & 208 & \checkmark \\
+    \texttt{new\_aep\_wf\_scrap}   & 13{,}904  & 1{,}676  & 1{,}548  & 50.0 & 44  & \\
+    \texttt{workflowllm\_m2}       & 210{,}775 & 6{,}004  & 6{,}004  & 50.0 & 37  & \\
+    \texttt{ajo\_newstyle}         & 20{,}897  & 2{,}612  & 2{,}613  & 50.0 & 95  & \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\paragraph{Label balance.} Because every dataset is built by emitting each ordered pair
+in both directions ($\text{forward}\!\to\!1$, $\text{reverse}\!\to\!0$), the label
+distribution is essentially exactly $50/50$ in every split
+(Figure~\ref{fig:balance}). This is a deliberate and important property: it removes the
+class-prior shortcut, forcing a model to learn \emph{directional asymmetry} rather than a
+topical or frequency cue. It also means accuracy is directly interpretable against a
+$50\%$ random floor, and that the genuine difficulty lives entirely in the
+\emph{direction}, not in the marginal.
+
+\paragraph{Scale and granularity.} Sizes span two orders of magnitude, from the
+$\sim$17k-pair \texttt{new\_aep\_wf\_scrap} to the $\sim$282k-pair
+\texttt{hard\_neg\_semantic} (Figure~\ref{fig:sizes}). Text granularity varies just as
+widely: the workflow/phase datasets are short ($37$--$44$ word medians, single
+action steps), whereas the conceptual document datasets are paragraph-scale
+($103$--$208$ word medians). The \texttt{hard\_neg\_semantic} variant augments
+\texttt{aep\_causal\_cls34} with semantically similar but causally unrelated distractors
+(an explicit \texttt{hard\_neg} flag), roughly $2.4\times$ the base training size, to push
+the model past lexical-overlap heuristics toward genuine causal discrimination.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{fig_dataset_sizes}
+  \caption{Train/val/test sizes of the six primary pairwise datasets (stacked, exact line
+  counts). Scale ranges from $\sim$17k to $\sim$282k pairs.}
+  \label{fig:sizes}
+\end{figure}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{fig_label_balance}
+  \caption{Label balance (fraction of $\texttt{label}=1$ ``precedes'' pairs, train split).
+  Forward/reverse pair construction yields a $\approx 50/50$ split everywhere, eliminating
+  the class-prior shortcut.}
+  \label{fig:balance}
+\end{figure}
+
+\subsection{The tier system and the cross-tier gap}
+
+The tiered AEP datasets attach to each text a \emph{tier} index ($\mathrm{T}1$--$\mathrm{T}15$)
+derived from a fixed sub-chapter$\to$tier mapping (\texttt{directional\_manifest.json}). The
+tier is a coarse position in the AEP learning curriculum: low tiers are foundational
+(schemas, ingestion), high tiers are downstream (activation, journeys). The tier gap
+$\lvert \texttt{tier\_1} - \texttt{tier\_2} \rvert$ thus measures how conceptually far
+apart the two texts are.
+
+The gap distribution is the single most consequential property of these datasets
+(Figure~\ref{fig:tiergap}). For \texttt{aep\_causal\_cls34} and
+\texttt{hard\_neg\_semantic}, \emph{no} training pair has gap $0$: both texts always come
+from \emph{different} tiers, and the gap is broadly spread (modes at $1$--$4$, a long tail
+out to $14$), with adjacent-tier pairs (gap $1$) being only $\sim$$13.5\%$ of the data.
+These datasets therefore teach \emph{cross-tier} precedence over a wide conceptual span.
+In sharp contrast, \texttt{ajo\_doc\_not\_tier1} is built \emph{within} documents, so its
+pairs are confined to gap $0$/$1$ (same or immediately adjacent tier). The two regimes are
+complementary --- broad cross-tier supervision versus fine intra-document supervision ---
+but they are \emph{not interchangeable}, and a model trained on one is evaluated
+implicitly on the other.
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=\linewidth]{fig_tier_gap_dist}
+  \caption{Tier-gap $\lvert \texttt{tier\_1}-\texttt{tier\_2}\rvert$ distribution over
+  training pairs. The cross-document datasets (\texttt{aep\_causal\_cls34},
+  \texttt{hard\_neg\_semantic}) span gaps $1$--$14$ and contain \emph{no} same-tier pairs,
+  whereas \texttt{ajo\_doc\_not\_tier1} is confined to gaps $0$/$1$. This complementarity
+  is the structural source of train/test distribution shift.}
+  \label{fig:tiergap}
+\end{figure*}
+
+\subsection{Adjacency / \texttt{MAX\_GAP} labeling and its distribution shift}
+
+The workflow datasets reveal a second, finer adjacency constraint --- imposed not at the
+tier level but at the \emph{step} level within a single document. The deterministic
+extractor builds ordered pairs only between phases at most \texttt{MAX\_GAP} positions
+apart: \texttt{MAX\_GAP}$=2$ (consecutive $+$ skip-one) for
+\texttt{new\_aep\_workflow\_scrap}, and gap$\le 4$ (capped at $60$ pairs per document) for
+the AJO sentence-level builder. Empirically, $100\%$ of \texttt{new\_aep\_workflow\_scrap}
+training pairs have step gap $1$ ($56.5\%$) or $2$ ($43.5\%$) --- the model \emph{never}
+sees a far-apart pair during training. Splits are document-level $80/10/10$ (seed $42$)
+with no URL leakage across splits, and forward/reverse pairs keep labels balanced.
+
+This windowing is well-intentioned --- it kills the topic shortcut and keeps pairs locally
+coherent --- but it creates a hard \textbf{train/eval distribution shift}. At evaluation
+time the orderer must score \emph{all} $\binom{n}{2}$ pairs of an $n$-step workflow,
+including the far-apart (gap $\gg \texttt{MAX\_GAP}$) pairs that never appeared in
+training. The independent-embedding bi-encoder, which excels on the adjacent in-distribution
+pairs, degrades on these off-distribution long-range pairs; the cross-encoder's joint
+cross-attention generalizes further, which is consistent with the repository's finding that
+the DeBERTa-v3-large cross-encoder reaches $21/30$ correct workflow orderings on
+\texttt{new\_ajo\_workflows} versus a bi-encoder's $0/30$. A second confound compounds it:
+the format forces a \emph{total order} (every pair gets a direction) with \emph{no neutral
+class}, yet real procedures are partial orders containing genuinely parallel/independent
+steps. Forcing a chain over noisy, occasionally cyclic pairwise scores makes errors
+compound. These two artifacts --- adjacency-only supervision and the total-order assumption
+--- are the structural roots of the end-to-end ordering failure.
+
+\subsection{Workflow-ordering and follow-up evaluation sets}
+
+\paragraph{Workflow ordering.} The downstream ordering target
+\texttt{ajo\_orchestrated\_workflows\_flat.json} contains $30$ orchestrated AJO
+workflows, each \emph{uniformly} $3$ steps (\texttt{t1}/\texttt{t2}/\texttt{t3}), written
+in a clean LLM-orchestrated style (e.g.\ select abandoned-cart profiles
+$\to$ enrich with cart data $\to$ send personalized email). Four auxiliary
+\texttt{aep\_3step\_workflows*} sets ($10$ workflows each; \emph{simple}, \emph{specific},
+and \emph{transcript} stylistic variants) provide additional $3$-step probes. The small,
+short, clean nature of these eval targets contrasts sharply with the long, noisy training
+transcripts --- another axis of distribution shift between train and evaluation.
+
+\paragraph{Follow-up reranking.} The follow-up dataset
+(\texttt{prod\_jan\_feb\_26-aep-ajo\_follow-up-queries.json}) contains $334$ real AEP/AJO
+anchor questions, each paired with \emph{exactly} $10$ candidate follow-up queries
+(Figure~\ref{fig:followup}, left). Anchor questions are short --- mean $\approx 17.5$
+words. The uniform $10$-candidate structure makes this a clean fixed-list reranking
+benchmark (ideal for MRR / Recall@$k$), but it carries no gold relevance labels in the
+raw file, so supervision or evaluation requires an external relevance signal.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{fig_followup_counts}
+  \caption{Follow-up reranking set ($N=334$ anchor questions). Left: each question has
+  exactly $10$ candidate follow-ups (a fixed-list reranking setup). Right: anchor-question
+  length distribution (mean $\approx 17.5$ words).}
+  \label{fig:followup}
+\end{figure}
+
+\subsection{Implications for modeling}
+
+Four data properties should drive modeling decisions. \textbf{(1) Direction is the whole
+task.} The enforced $50/50$ balance removes priors, so every gain must come from modeling
+the antisymmetry $P(\text{A}\!\prec\!\text{B}) \neq P(\text{B}\!\prec\!\text{A})$ ---
+motivating directional fusion, asymmetric scoring, or order-aware objectives over plain
+symmetric similarity. \textbf{(2) Adjacency-only / \texttt{MAX\_GAP} supervision under-fits
+long-range ordering.} Training only on gap-$\le$$2$/$4$ pairs but evaluating on all pairs
+is the dominant distribution shift; closing it argues for training on the full transitive
+closure within a document (far-apart pairs included), which also explains why the
+cross-attention cross-encoder generalizes better than independent bi-encoder embeddings.
+\textbf{(3) The total-order assumption is wrong.} With no neutral/abstain class, parallel
+steps are mislabeled and forced into a chain; adding a neutral class and aggregating with a
+cycle-tolerant ranker (Bradley--Terry / minimum-feedback-arc-set / Kemeny) rather than a
+naive topological sort should reduce compounded ordering errors. \textbf{(4) Length and
+style mismatch.} Long-form transcripts ($\sim$792-word median, $9.6$k-word tail) exceed
+$512$-token budgets and differ stylistically from the short, clean $3$-step eval workflows;
+this favors models that avoid truncating both texts into one shared budget and motivates
+explicit train/eval style-gap mitigation. The tiered/hard-negative datasets and the fixed
+$10$-candidate follow-up set are well-suited respectively to curriculum-style training and
+to clean MRR-based reranking evaluation.

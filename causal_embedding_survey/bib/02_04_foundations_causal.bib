@@ -1,0 +1,356 @@
+% ============================================================
+% Bibliography for sections 02 (Foundations) and 04 (Causal Reasoning)
+% Keys prefixed found: (foundations) and caus: (causal reasoning).
+% Real papers only; arXiv ids used where exact venue/year uncertain.
+% ============================================================
+
+% ---------- FOUNDATIONS: causal representation learning, direction discovery ----------
+
+@article{found:scholkopf2021causalrl,
+  author    = {Sch{\"o}lkopf, Bernhard and Locatello, Francesco and Bauer, Stefan and Ke, Nan Rosemary and Kalchbrenner, Nal and Goyal, Anirudh and Bengio, Yoshua},
+  title     = {Toward Causal Representation Learning},
+  journal   = {Proceedings of the IEEE},
+  volume    = {109},
+  number    = {5},
+  pages     = {612--634},
+  year      = {2021},
+  note      = {arXiv:2102.11107}
+}
+
+@inproceedings{found:peters2017elements,
+  author    = {Peters, Jonas and Janzing, Dominik and Sch{\"o}lkopf, Bernhard},
+  title     = {Elements of Causal Inference: Foundations and Learning Algorithms},
+  publisher = {MIT Press},
+  year      = {2017}
+}
+
+@book{found:pearl2009causality,
+  author    = {Pearl, Judea},
+  title     = {Causality: Models, Reasoning, and Inference},
+  edition   = {2nd},
+  publisher = {Cambridge University Press},
+  year      = {2009}
+}
+
+@book{found:pearl2018book,
+  author    = {Pearl, Judea and Mackenzie, Dana},
+  title     = {The Book of Why: The New Science of Cause and Effect},
+  publisher = {Basic Books},
+  year      = {2018}
+}
+
+@inproceedings{found:locatello2019challenging,
+  author    = {Locatello, Francesco and Bauer, Stefan and Lucic, Mario and R{\"a}tsch, Gunnar and Gelly, Sylvain and Sch{\"o}lkopf, Bernhard and Bachem, Olivier},
+  title     = {Challenging Common Assumptions in the Unsupervised Learning of Disentangled Representations},
+  booktitle = {Proceedings of the 36th International Conference on Machine Learning (ICML)},
+  year      = {2019},
+  note      = {arXiv:1811.12359}
+}
+
+@article{found:mooij2016distinguishing,
+  author    = {Mooij, Joris M. and Peters, Jonas and Janzing, Dominik and Zscheischler, Jakob and Sch{\"o}lkopf, Bernhard},
+  title     = {Distinguishing Cause from Effect Using Observational Data: Methods and Benchmarks},
+  journal   = {Journal of Machine Learning Research},
+  volume    = {17},
+  number    = {32},
+  pages     = {1--102},
+  year      = {2016}
+}
+
+@inproceedings{found:hoyer2008anm,
+  author    = {Hoyer, Patrik O. and Janzing, Dominik and Mooij, Joris M. and Peters, Jonas and Sch{\"o}lkopf, Bernhard},
+  title     = {Nonlinear Causal Discovery with Additive Noise Models},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2008}
+}
+
+@article{found:janzing2012igci,
+  author    = {Janzing, Dominik and Mooij, Joris and Zhang, Kun and Lemeire, Jan and Zscheischler, Jakob and Daniu{\v{s}}is, Povilas and Steudel, Bastian and Sch{\"o}lkopf, Bernhard},
+  title     = {Information-Geometric Approach to Inferring Causal Directions},
+  journal   = {Artificial Intelligence},
+  volume    = {182--183},
+  pages     = {1--31},
+  year      = {2012}
+}
+
+@article{found:shimizu2006lingam,
+  author    = {Shimizu, Shohei and Hoyer, Patrik O. and Hyv{\"a}rinen, Aapo and Kerminen, Antti},
+  title     = {A Linear Non-Gaussian Acyclic Model for Causal Discovery},
+  journal   = {Journal of Machine Learning Research},
+  volume    = {7},
+  pages     = {2003--2030},
+  year      = {2006}
+}
+
+@article{found:gulrajani2021domainbed,
+  author    = {Gulrajani, Ishaan and Lopez-Paz, David},
+  title     = {In Search of Lost Domain Generalization},
+  journal   = {International Conference on Learning Representations (ICLR)},
+  year      = {2021},
+  note      = {arXiv:2007.01434}
+}
+
+@misc{found:arjovsky2019irm,
+  author    = {Arjovsky, Martin and Bottou, L{\'e}on and Gulrajani, Ishaan and Lopez-Paz, David},
+  title     = {Invariant Risk Minimization},
+  year      = {2019},
+  eprint    = {1907.02893},
+  archivePrefix = {arXiv},
+  note      = {arXiv:1907.02893}
+}
+
+% NLI foundations (shared substrate; used by both sections)
+
+@inproceedings{found:bowman2015snli,
+  author    = {Bowman, Samuel R. and Angeli, Gabor and Potts, Christopher and Manning, Christopher D.},
+  title     = {A Large Annotated Corpus for Learning Natural Language Inference},
+  booktitle = {Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  year      = {2015},
+  note      = {arXiv:1508.05326}
+}
+
+@inproceedings{found:williams2018mnli,
+  author    = {Williams, Adina and Nangia, Nikita and Bowman, Samuel R.},
+  title     = {A Broad-Coverage Challenge Corpus for Sentence Understanding through Inference},
+  booktitle = {Proceedings of NAACL-HLT},
+  year      = {2018},
+  note      = {arXiv:1704.05426}
+}
+
+@misc{found:he2021debertav3,
+  author    = {He, Pengcheng and Gao, Jianfeng and Chen, Weizhu},
+  title     = {{DeBERTaV3}: Improving {DeBERTa} using {ELECTRA}-Style Pre-Training with Gradient-Disentangled Embedding Sharing},
+  year      = {2021},
+  eprint    = {2111.09543},
+  archivePrefix = {arXiv},
+  note      = {arXiv:2111.09543}
+}
+
+% ---------- CAUSAL REASONING / DIRECTION FROM TEXT ----------
+
+@inproceedings{caus:roemmele2011copa,
+  author    = {Roemmele, Melissa and Bejan, Cosmin Adrian and Gordon, Andrew S.},
+  title     = {Choice of Plausible Alternatives: An Evaluation of Commonsense Causal Reasoning},
+  booktitle = {AAAI Spring Symposium on Logical Formalizations of Commonsense Reasoning},
+  year      = {2011}
+}
+
+@inproceedings{caus:wang2019superglue,
+  author    = {Wang, Alex and Pruksachatkun, Yada and Nangia, Nikita and Singh, Amanpreet and Michael, Julian and Hill, Felix and Levy, Omer and Bowman, Samuel R.},
+  title     = {{SuperGLUE}: A Stickier Benchmark for General-Purpose Language Understanding Systems},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2019},
+  note      = {arXiv:1905.00537}
+}
+
+@inproceedings{caus:du2022ecare,
+  author    = {Du, Li and Ding, Xiao and Xiong, Kai and Liu, Ting and Qin, Bing},
+  title     = {e-{CARE}: a New Dataset for Exploring Explainable Causal Reasoning},
+  booktitle = {Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (ACL)},
+  year      = {2022},
+  note      = {arXiv:2205.05849}
+}
+
+@misc{caus:jin2024corr2cause,
+  author    = {Jin, Zhijing and Liu, Jiarui and Lyu, Zhiheng and Poff, Spencer and Sachan, Mrinmaya and Mihalcea, Rada and Diab, Mona and Sch{\"o}lkopf, Bernhard},
+  title     = {Can Large Language Models Infer Causation from Correlation?},
+  year      = {2024},
+  eprint    = {2306.05836},
+  archivePrefix = {arXiv},
+  note      = {ICLR 2024; arXiv:2306.05836}
+}
+
+@inproceedings{caus:jin2023cladder,
+  author    = {Jin, Zhijing and Chen, Yuen and Leeb, Felix and Gresele, Luigi and Kamal, Ojasv and Lyu, Zhiheng and Blin, Kevin and Adauto, Fernando Gonzalez and Kleiman-Weiner, Max and Sachan, Mrinmaya and Sch{\"o}lkopf, Bernhard},
+  title     = {{CLadder}: Assessing Causal Reasoning in Language Models},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2023},
+  note      = {arXiv:2312.04350}
+}
+
+@inproceedings{caus:frohberg2022crass,
+  author    = {Frohberg, J{\"o}rg and Binder, Frank},
+  title     = {{CRASS}: A Novel Data Set and Benchmark to Test Counterfactual Reasoning of Large Language Models},
+  booktitle = {Proceedings of the Thirteenth Language Resources and Evaluation Conference (LREC)},
+  year      = {2022},
+  note      = {arXiv:2112.11941}
+}
+
+@misc{caus:chen2024calm,
+  author    = {Chen, Sirui and Xu, Bo and Zhu, Mengdi and Wang, Mengying and others},
+  title     = {Causal Evaluation of Language Models},
+  year      = {2024},
+  eprint    = {2405.00622},
+  archivePrefix = {arXiv},
+  note      = {arXiv:2405.00622}
+}
+
+@inproceedings{caus:sap2019atomic,
+  author    = {Sap, Maarten and Le Bras, Ronan and Allaway, Emily and Bhagavatula, Chandra and Lourie, Nicholas and Rashkin, Hannah and Roof, Brendan and Smith, Noah A. and Choi, Yejin},
+  title     = {{ATOMIC}: An Atlas of Machine Commonsense for If-Then Reasoning},
+  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  year      = {2019},
+  note      = {arXiv:1811.00146}
+}
+
+@inproceedings{caus:li2020causalbank,
+  author    = {Li, Zhongyang and Ding, Xiao and Liu, Ting and Hu, J. Edward and Van Durme, Benjamin},
+  title     = {Guided Generation of Cause and Effect},
+  booktitle = {Proceedings of the Twenty-Ninth International Joint Conference on Artificial Intelligence (IJCAI)},
+  year      = {2020}
+}
+
+@inproceedings{caus:heindorf2020causenet,
+  author    = {Heindorf, Stefan and Scholten, Yan and Wachsmuth, Henning and Ngonga Ngomo, Axel-Cyrille and Potthast, Martin},
+  title     = {{CauseNet}: Towards a Causality Graph Extracted from the Web},
+  booktitle = {Proceedings of the 29th ACM International Conference on Information and Knowledge Management (CIKM)},
+  year      = {2020}
+}
+
+% NLI / entailment substrate
+
+@inproceedings{caus:nie2020anli,
+  author    = {Nie, Yixin and Williams, Adina and Dinan, Emily and Bansal, Mohit and Weston, Jason and Kiela, Douwe},
+  title     = {Adversarial {NLI}: A New Benchmark for Natural Language Understanding},
+  booktitle = {Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics (ACL)},
+  year      = {2020},
+  note      = {arXiv:1910.14599}
+}
+
+@inproceedings{caus:camburu2018esnli,
+  author    = {Camburu, Oana-Maria and Rockt{\"a}schel, Tim and Lukasiewicz, Thomas and Blunsom, Phil},
+  title     = {e-{SNLI}: Natural Language Inference with Natural Language Explanations},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2018},
+  note      = {arXiv:1812.01193}
+}
+
+@inproceedings{caus:yin2021docnli,
+  author    = {Yin, Wenpeng and Radev, Dragomir and Xiong, Caiming},
+  title     = {{DocNLI}: A Large-scale Dataset for Document-level Natural Language Inference},
+  booktitle = {Findings of the Association for Computational Linguistics: ACL-IJCNLP 2021},
+  year      = {2021},
+  note      = {arXiv:2106.09449}
+}
+
+@misc{caus:laurer2022debertanli,
+  author    = {Laurer, Moritz and van Atteveldt, Wouter and Casas, Andreu and Welbers, Kasper},
+  title     = {{DeBERTa-v3-large-mnli-fever-anli-ling-wanli}: A Zero-shot NLI Cross-Encoder},
+  howpublished = {Hugging Face model card},
+  year      = {2022},
+  note      = {huggingface.co/MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli}
+}
+
+@misc{caus:havaldar2025inli,
+  author    = {Havaldar, Shreya and Alvari, Hamidreza and Palowitch, John and Hosseini, Pedram and Buthpitiya, Senaka and Fabrikant, Alex},
+  title     = {Entailed Between the Lines: Incorporating Implication into {NLI}},
+  year      = {2025},
+  eprint    = {2501.07719},
+  archivePrefix = {arXiv},
+  note      = {arXiv:2501.07719}
+}
+
+@misc{caus:feng2025vericot,
+  author    = {Feng, Yu and Weir, Nathaniel and Bostrom, Kaj and Bayless, Sam and Cassel, Darion and Chaudhary, Aditi and Kiesl-Reiter, Benjamin and Rangwala, Huzefa},
+  title     = {{VeriCoT}: Neuro-symbolic Chain-of-Thought Validation via Logical Consistency Checks},
+  year      = {2025},
+  eprint    = {2511.04662},
+  archivePrefix = {arXiv},
+  note      = {arXiv:2511.04662}
+}
+
+@inproceedings{caus:dalvi2021entailmentbank,
+  author    = {Dalvi, Bhavana and Jansen, Peter and Tafjord, Oyvind and Xie, Zhengnan and Smith, Hannah and Pipatanangkura, Leighanna and Clark, Peter},
+  title     = {Explaining Answers with Entailment Trees},
+  booktitle = {Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  year      = {2021},
+  note      = {arXiv:2104.08661}
+}
+
+% Event causality & temporal ordering
+
+@inproceedings{caus:mostafazadeh2016caters,
+  author    = {Mostafazadeh, Nasrin and Grealish, Alyson and Chambers, Nathanael and Allen, James and Vanderwende, Lucy},
+  title     = {{CaTeRS}: Causal and Temporal Relation Scheme for Semantic Annotation of Event Structures},
+  booktitle = {Proceedings of the Fourth Workshop on Events (NAACL Workshop)},
+  year      = {2016}
+}
+
+@inproceedings{caus:ning2018matres,
+  author    = {Ning, Qiang and Wu, Hao and Roth, Dan},
+  title     = {A Multi-Axis Annotation Scheme for Event Temporal Relations},
+  booktitle = {Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (ACL)},
+  year      = {2018},
+  note      = {arXiv:1804.07828}
+}
+
+@inproceedings{caus:pustejovsky2003timebank,
+  author    = {Pustejovsky, James and Hanks, Patrick and Saur{\'i}, Roser and See, Andrew and Gaizauskas, Robert and Setzer, Andrea and Radev, Dragomir and Sundheim, Beth and Day, David and Ferro, Lisa and Lazo, Marcia},
+  title     = {The {TimeBank} Corpus},
+  booktitle = {Proceedings of Corpus Linguistics},
+  year      = {2003}
+}
+
+@inproceedings{caus:cassidy2014timebankdense,
+  author    = {Cassidy, Taylor and McDowell, Bill and Chambers, Nathanael and Bethard, Steven},
+  title     = {An Annotation Framework for Dense Event Ordering},
+  booktitle = {Proceedings of the 52nd Annual Meeting of the Association for Computational Linguistics (ACL)},
+  year      = {2014}
+}
+
+@inproceedings{caus:mirza2014causaltimebank,
+  author    = {Mirza, Paramita and Sprugnoli, Rachele and Tonelli, Sara and Speranza, Manuela},
+  title     = {Annotating Causality in the {TempEval-3} Corpus},
+  booktitle = {Proceedings of the EACL Workshop on Computational Approaches to Causality in Language (CAtoCL)},
+  year      = {2014}
+}
+
+@inproceedings{caus:caselli2017eventstoryline,
+  author    = {Caselli, Tommaso and Vossen, Piek},
+  title     = {The Event StoryLine Corpus: A New Benchmark for Causal and Temporal Relation Extraction},
+  booktitle = {Proceedings of the Events and Stories in the News Workshop (ACL Workshop)},
+  year      = {2017}
+}
+
+@inproceedings{caus:domino2008causalexpansion,
+  author    = {Bethard, Steven and Corvey, William and Klingenstein, Sara and Martin, James H.},
+  title     = {Building a Corpus of Temporal-Causal Structure},
+  booktitle = {Proceedings of the Sixth International Conference on Language Resources and Evaluation (LREC)},
+  year      = {2008}
+}
+
+@misc{caus:gao2023chatgptcausal,
+  author    = {Gao, Jinglong and Ding, Xiao and Qin, Bing and Liu, Ting},
+  title     = {Is {ChatGPT} a Good Causal Reasoner? A Comprehensive Evaluation},
+  year      = {2023},
+  eprint    = {2305.07375},
+  archivePrefix = {arXiv},
+  note      = {Findings of EMNLP 2023; arXiv:2305.07375}
+}
+
+@misc{caus:hosseini2021directionality,
+  author    = {Hosseini, Pedram and Broniatowski, David A. and Diab, Mona},
+  title     = {Predicting Directionality in Causal Relations in Text},
+  year      = {2021},
+  eprint    = {2103.13606},
+  archivePrefix = {arXiv},
+  note      = {arXiv:2103.13606}
+}
+
+@misc{caus:eciSurvey2024,
+  author    = {Zuo, Xinyu and Cao, Pengfei and Chen, Yubo and Liu, Kang and Zhao, Jun},
+  title     = {A Survey of Event Causality Identification: Principles, Taxonomy, Challenges, and Assessment},
+  year      = {2024},
+  eprint    = {2411.10371},
+  archivePrefix = {arXiv},
+  note      = {arXiv:2411.10371}
+}
+
+@misc{caus:identifyingwhilelearning2024,
+  author    = {Chen, Meiqi and Cao, Yixin and Zhang, Yan and Liu, Zhiwei},
+  title     = {Identifying while Learning: Toward Causal Direction-aware Event Causality Identification},
+  year      = {2024},
+  eprint    = {2405.20608},
+  archivePrefix = {arXiv},
+  note      = {arXiv:2405.20608}
+}

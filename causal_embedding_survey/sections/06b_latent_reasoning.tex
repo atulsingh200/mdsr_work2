@@ -1,0 +1,126 @@
+\section{Latent and Recursive Reasoning: HRM, TRM, and Iterative Refinement}
+
+Chain-of-thought (CoT) reasoning verbalizes intermediate steps as tokens. An alternative
+family keeps the reasoning chain entirely inside the model's continuous hidden state---%
+\emph{latent reasoning}---trading interpretability for bandwidth, speed, and the ability to
+represent superpositions of partial solutions \citep{lat:zhu2025survey,lat:hao2024coconut}.
+At the structured-puzzle extreme of this family sit two recent tiny recurrent solvers, the
+Hierarchical Reasoning Model (HRM) and the Tiny Recursive Model (TRM), which solve
+constraint-satisfaction tasks such as Sudoku, mazes, and ARC-AGI with $5$--$27$M parameters
+and no language at all. This section surveys that landscape and connects it to the
+``think-free'' reasoning theme of Section~6, because workflow ordering is itself a small
+combinatorial puzzle.
+
+\subsection{Adaptive computation and recurrence-in-depth}
+The lineage begins with Adaptive Computation Time \citep{lat:graves2016act}, which lets a
+recurrent network predict a per-step halting probability and thus spend a variable number of
+``ponder'' steps per input. Universal Transformers \citep{lat:dehghani2019ut} apply the same
+idea in depth: a single weight-tied Transformer block is iterated, with per-token ACT
+halting, so effective depth becomes data-dependent. PonderNet \citep{lat:banino2021pondernet}
+reformulates halting as a differentiable probabilistic model, giving unbiased, low-variance
+gradients. Deep Equilibrium Models (DEQ) \citep{lat:bai2019deq} push recurrence to its limit:
+the output is defined as the \emph{fixed point} $z^\star = f_\theta(z^\star, x)$ of a
+weight-tied map, found by root-finding, with constant-memory backpropagation through the
+equilibrium via the implicit function theorem. These works share one principle---%
+\emph{decouple computational depth from parameter count by iterating a small block}---which
+HRM and TRM inherit directly.
+
+At language-model scale, \citet{lat:geiping2025recurrent} train a $3.5$B
+``recurrent-depth'' model (Huginn) whose core block can be unrolled for an arbitrary number
+of steps at test time, scaling test-time compute per token without growing parameters and
+performing a latent CoT. Coconut \citep{lat:hao2024coconut} feeds the model's last hidden
+state back as the next ``continuous thought,'' and shows that a continuous thought can encode
+several candidate next steps at once---an implicit breadth-first frontier---solving graph
+reachability in $O(\text{diameter})$ latent steps where discrete CoT needs $O(n^2)$.
+Quiet-STaR \citep{lat:zelikman2024quietstar} learns token-level internal rationales that are
+never shown but improve next-token prediction, bridging latent reasoning and the
+internalized/think-free training of Section~6.
+
+\subsection{HRM: hierarchical recurrent convergence}
+HRM \citep{lat:wang2025hrm} couples two recurrent modules: a slow high-level module for
+abstract planning and a fast low-level module for detailed computation. The low-level module
+iterates to a local equilibrium conditioned on the current high-level state, after which the
+high-level state updates---``hierarchical convergence''---so a single forward pass performs
+many internal reasoning steps with no supervision of the intermediate process. HRM uses
+\textbf{deep supervision} (repeated forward segments, each carrying state forward and
+incurring a loss), a \textbf{one-step gradient approximation} that treats the converged inner
+state as a fixed point and backpropagates roughly one step (in the DEQ spirit) to avoid full
+backpropagation-through-time, and an \textbf{ACT/Q-learning halting} head that decides how
+many segments to run. With $\sim$27M parameters trained on $\sim$1000 examples per task and
+no pre-training or CoT data, HRM reports near-perfect Sudoku-Extreme and Maze-Hard accuracy
+and competitive ARC-AGI scores ($\sim$40\% on ARC-AGI-1).
+
+\paragraph{What actually drives HRM (an honest caveat).}
+An independent re-implementation and ablation by the ARC Prize team \citep{lat:arcprize2025hrm}
+is essential context. They find that the \emph{hierarchical} architecture contributes little:
+a same-sized ordinary Transformer comes within $\sim$5 percentage points. The real driver is
+the \emph{outer refinement loop}---revising the predicted answer across multiple passes.
+Going from one pass to two adds $\sim$13 points, and one to eight roughly doubles
+public-evaluation accuracy; moreover, \emph{training} with many refinement steps matters far
+more than using them only at inference ($>$15 points even when inference uses a single loop).
+Data augmentation is necessary but cheap ($\sim$300 augmentations reach near-maximum).
+Critically, the setup is \emph{transductive}: a per-puzzle identifier embedding means the
+model only applies to puzzle IDs seen in training, cross-task transfer is small, and most
+performance is memorizing solutions for the specific evaluation tasks. The transferable lesson
+is therefore ``\emph{train a recurrent solver with an outer refinement loop and augmentation
+under deep supervision},'' not the biological hierarchy and not the transductive identifier.
+
+\subsection{TRM: less is more}
+TRM \citep{lat:jolicoeurmartineau2025trm} distills HRM to its working core and improves on it.
+A \emph{single} tiny two-layer network ($\sim$5--7M parameters) recurses over a triple of an
+embedded question $x$, a current answer $y$, and a latent state $z$. The inner recursion runs,
+by default, $n{=}6$ steps of $z \leftarrow \mathrm{net}(x{+}y{+}z)$ followed by one update
+$y \leftarrow \mathrm{net}(y{+}z)$; an outer loop runs $T{=}3$ such blocks ($T{-}1$
+gradient-free to pre-converge the state, then one with gradients), repeated under deep
+supervision for up to $16$ steps with the state detached between steps. TRM \emph{drops} both
+HRM's biological two-timescale story and its fixed-point/implicit-function justification,
+instead backpropagating through the full recursion; the ablation shows the one-step gradient
+approximation actually \emph{hurts} ($87.4\%\!\to\!56.5\%$ on Sudoku-Extreme). It uses a
+single binary halting loss (one forward pass instead of HRM's two) and exponential
+moving-average weights for stability on scarce data ($-7.5$ points without it). For small
+fixed grids it replaces self-attention with an MLP-mixer token mix, cheap when sequence length
+$L \le$ width. TRM reports Sudoku-Extreme $87.4\%$ (HRM $55.0\%$), Maze-Hard $85.3\%$ (HRM
+$74.5\%$), ARC-AGI-1 $44.6\%$ (HRM $40.3\%$) and ARC-AGI-2 $7.8\%$ (HRM $5.0\%$)---surpassing
+much larger LLMs on these grids with under $0.01\%$ of their parameters. The same transductive,
+augmentation-heavy regime as HRM applies, so the ARC-team critique of the \emph{setup} carries
+over.
+
+\paragraph{Token CoT versus latent reasoning.}
+Explicit CoT spends decoding budget and is interpretable but brittle and slow; latent
+reasoning keeps the chain in continuous state, gaining bandwidth and removing decoding cost at
+the price of opacity \citep{lat:zhu2025survey}. HRM and TRM are the extreme: \emph{no language
+at all}, only iterative refinement of a structured answer tensor. This is precisely why they
+fit combinatorial tasks with a structured output---ordering, assignment, constraint
+satisfaction---better than they fit free-text reasoning.
+
+\subsection{Relevance to causal embedding for \aep/\ajo}
+Workflow ordering in our setting is structurally a small permutation / constraint-satisfaction
+puzzle: given $N$ steps and a calibrated $N{\times}N$ pairwise precedence tensor from the
+cross-encoder, find a global order maximally consistent with the confident edges while
+resolving cycles---exactly the minimum-feedback-arc-set / Kemeny objective of Section~7, and
+exactly the ``make the grid globally consistent'' task TRM solves. This suggests a concrete,
+sub-1B option: a frozen encoder front-end (the winning DeBERTa-v3 cross-encoder, since
+HRM/TRM operate on tensors, not text) produces step embeddings and the relation tensor, and a
+tiny ($\sim$5--7M-parameter) TRM-style recursive head iteratively refines a soft
+precedence/permutation matrix under deep supervision with a Kendall-$\tau$-aware listwise
+loss and ACT halting. This is a \emph{learned} alternative or complement to MFAS/Kemeny at the
+aggregation stage, and a concrete realization of the listwise/global orderer recommended in
+Sections~7 and~11---able to use step \emph{content}, not just scalar scores, to break ties and
+to perform soft transitive closure and cycle repair in latent space, directly targeting the
+$0/30$ aggregation collapse.
+
+The honest verdict, however, is bounded. Latent recursion does \emph{not} help the pairwise
+primitive: a recursive head over frozen, independently-pooled embeddings forfeits the
+cross-attention that makes the cross-encoder strong (the same weakness that left the
+bi-encoder at $\sim$0.41 pairwise accuracy and $0/30$). It does \emph{not} beat MFAS/Kemeny
+when the pairwise signal is already clean---on the cross-encoder's $\sim$0.96 signal, plain
+robust aggregation already orders every evaluated workflow correctly (Section~11) at no
+training cost. Its value is confined to the \emph{decent-but-noisy, cyclic, partial-order}
+regime, and it inherits the ARC-team caveats: the architecture matters less than the
+refinement loop and augmentation, and our scarce supply of gold full-workflow orders ($\sim$30
+in the \ajo\ test, versus the $\sim$1000-examples-plus-augmentation regime these solvers
+assume) creates a real overfitting/memorization risk. We therefore recommend a TRM-style
+orderer as a low-cost \emph{Track-B research bet}---a learned listwise ordering head atop the
+frozen cross-encoder, prototyped and benchmarked head-to-head against calibrated MFAS/Kemeny
+on the same relation tensors---pursued only after the no-training Tier-1 aggregation fix
+(Section~11) is in place.

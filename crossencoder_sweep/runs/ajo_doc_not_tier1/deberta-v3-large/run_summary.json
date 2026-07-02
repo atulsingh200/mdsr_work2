@@ -1,0 +1,18 @@
+{
+  "dataset_slug": "ajo_doc_not_tier1",
+  "model_slug": "deberta-v3-large",
+  "base_model": "microsoft/deberta-v3-large",
+  "schema": "standard",
+  "best_val_acc": 0.496607,
+  "best_val_auc": 0.500861,
+  "test_acc": 0.496607,
+  "test_auc": 0.496976,
+  "test_f1": 0.0,
+  "test_loss": 0.709836,
+  "n_train": 88000,
+  "n_val": 11200,
+  "n_test": 11200,
+  "epochs": 4,
+  "batch_size": 8,
+  "max_seq_len": 512
+}

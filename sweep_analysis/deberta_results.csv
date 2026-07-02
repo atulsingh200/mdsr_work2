@@ -1,0 +1,15 @@
+encoder,dataset,n_train,n_test,epochs,best_val_acc,best_val_auc,test_acc,test_auc,test_f1,milan_pairwise_acc,milan_order_match,milan_predicted_order,ajo_n_correct,ajo_n_samples,ajo_perfect_order_rate
+biencoder,aep_causal_cls34,110775,6004,4,0.660560,0.679389,0.619254,0.667689,0.593528,0.533333,False,t3 > t6 > t4 > t2 > t1 > t5,5,30,0.166667
+biencoder,aep_dataset,67500,8460,4,0.915248,0.963964,0.883452,0.939161,0.884678,0.500000,False,t1 > t2 > t5 > t3 > t6 > t4,19,30,0.633333
+biencoder,aep_causal_wf_v3,21287,318,4,0.660550,0.700904,0.751572,0.809380,0.740984,0.333333,False,t4 > t3 > t6 > t1 > t5 > t2,1,30,0.033333
+biencoder,ajo_doc_not_tier1,88000,11200,4,0.503393,0.496359,0.503393,0.499966,0.669676,0.500000,True,t1 > t2 > t3 > t4 > t5 > t6,29,30,0.966667
+biencoder,ajo_newstyle,20897,2613,4,0.503063,0.505812,0.500191,0.509856,0.666837,0.500000,True,t1 > t2 > t3 > t4 > t5 > t6,1,30,0.033333
+biencoder,new_aep_wf_scrap,13904,1548,4,0.500000,0.570839,0.500000,0.568873,0.666667,0.500000,False,t6 > t5 > t1 > t2 > t4 > t3,1,30,0.033333
+biencoder,new_ajo_workflows,21846,2616,4,0.500000,0.526766,0.500000,0.534263,0.000000,0.500000,False,t1 > t2 > t6 > t4 > t5 > t3,10,30,0.333333
+crossencoder,aep_causal_cls34,110775,6004,4,0.883411,0.914147,0.881579,0.942659,0.879102,0.300000,False,t6 > t3 > t4 > t2 > t5 > t1,4,30,0.133333
+crossencoder,aep_dataset,67500,8460,4,0.969622,0.993456,0.939007,0.980770,0.940621,0.466667,False,t5 > t2 > t6 > t3 > t1 > t4,6,30,0.200000
+crossencoder,aep_causal_wf_v3,21287,318,4,0.657492,0.744482,0.773585,0.871383,0.761589,0.533333,False,t3 > t1 > t6 > t4 > t2 > t5,5,30,0.166667
+crossencoder,ajo_doc_not_tier1,88000,11200,4,0.496607,0.500861,0.496607,0.496976,0.000000,0.500000,True,t1 > t2 > t3 > t4 > t5 > t6,16,30,0.533333
+crossencoder,ajo_newstyle,20897,2613,4,0.503063,0.521287,0.500191,0.531860,0.666837,0.500000,False,t4 > t1 > t6 > t2 > t3 > t5,11,30,0.366667
+crossencoder,new_aep_wf_scrap,13904,1548,4,0.500000,0.608962,0.500000,0.596574,0.666667,0.500000,False,t1 > t3 > t5 > t4 > t6 > t2,15,30,0.500000
+crossencoder,new_ajo_workflows,21846,2616,4,0.500000,0.499175,0.500000,0.484527,0.000000,0.500000,False,t3 > t4 > t6 > t2 > t5 > t1,3,30,0.100000

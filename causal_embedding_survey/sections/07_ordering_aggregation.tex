@@ -1,0 +1,191 @@
+\section{From Pairwise Scores to a Global Order: Sentence Ordering and Rank Aggregation}
+\label{sec:ordering}
+
+The reasoning scorer of Sec.~\ref{sec:rerank-rl} emits, for the steps of a
+workflow, a matrix of pairwise directional scores
+$P[i,j] = P(\text{step}_i \text{ causally precedes } \text{step}_j)$. The
+remaining problem is \emph{aggregation}: turning these noisy, possibly cyclic,
+possibly partially-ordered judgments into a global order. This is the locus of
+the project's headline failure --- a naive tournament/topological sort scores
+$0/30$ on the AJO ordering test while a stronger pairwise model reaches $21/30$,
+a gap whose signature is a brittle \emph{aggregation} step, not a weak pairwise
+model. This section surveys the ordering task, why topological sort fails, the
+robust rank-aggregation alternatives, calibration and partial-order handling, and
+listwise objectives.
+
+\subsection{The sentence/step-ordering task}
+\label{sec:ordering-task}
+The NLP \emph{sentence-ordering} task (recover the order of shuffled sentences) is
+the closest analogue to workflow-step ordering and has directly studied
+``pairwise-then-assemble'' against end-to-end models.
+
+\paragraph{Pairwise-then-topological-sort (B-TSort).}
+\citet{ord:prabhumoye2020btsort} reframe ordering as constraint solving: a BERT
+classifier predicts pairwise relative-order constraints, then a \emph{topological
+sort} of the constraint graph produces the order (TSort / B-TSort). This is
+essentially the project's current pipeline. Earlier, \citet{ord:chen2016neural}
+combined a pairwise model with \emph{beam search} to assemble the order.
+
+\paragraph{Listwise / pointer orderers.} To avoid committing to independent
+pairwise decisions, pointer/seq2seq orderers encode all sentences jointly and
+\emph{decode} the permutation. \citet{ord:gong2016pointer} and
+\citet{ord:logeswaran2018sentence} use pointer networks explicitly to
+``alleviate error propagation''; BERSON \citep{ord:cui2020berson} adds a
+BERT-based relational pointer decoder; RankTxNet \citep{ord:kumar2020ranktxnet}
+scores each sentence and sorts, supporting pointwise/pairwise/listwise losses in
+one architecture. As re-tabulated by Re-BART \citep{ord:rebart2021}, the pointer
+decoder of BERSON reports markedly higher $\tau$ and PMR than B-TSort (e.g.\ on
+NIPS, PMR $48.0$ vs $32.6$), consistent with the error-compounding thesis below.
+
+\paragraph{Metrics.} Standard measures are \emph{Kendall's $\tau$} (rank
+correlation), \emph{Perfect Match Ratio} (PMR, the fraction of instances ordered
+\emph{entirely} correctly --- the strict analogue of the project's $0/30$
+metric), and longest-common-subsequence (LCS) overlap with the gold order.
+
+\subsection{Why naive topological sort fails on noisy scores}
+\label{sec:toposort-fails}
+A topological sort \emph{requires a DAG}: on \emph{any} directed cycle it cannot
+produce an order at all, and forcing acyclicity by dropping arbitrary edges
+scrambles the result. Noisy pairwise causal scores are almost always cyclic
+($A\!\rightarrow\!B\!\rightarrow\!C\!\rightarrow\!A$), so topological sort is
+simply inapplicable --- the most likely cause of the $0/30$ result. The deeper
+issue is \emph{error compounding}: a pairwise-then-assemble pipeline makes
+$O(n^2)$ independent binary decisions, and a single high-confidence wrong edge can
+reorder an entire chain. If per-pair accuracy is $a$, exact-sequence success is
+closer to $a^{\#\text{critical pairs}}$ than to $a$ --- precisely how a $21/30$
+per-pair-strong model can collapse to $0/30$ exact-order. A robust global
+objective, rather than greedy commitment, is required.
+
+\subsection{Rank aggregation from pairwise comparisons}
+\label{sec:rank-agg}
+The principled fix replaces topological sort with an aggregator that consumes the
+\emph{weighted} pairwise data and degrades gracefully under noise.
+
+\paragraph{Probabilistic models: Bradley--Terry / Plackett--Luce.}
+Bradley--Terry (BT) \citep{ord:bradley1952} gives each item a latent worth
+$\beta_i$ with $\Pr(i \succ j) = \sigma(\beta_i - \beta_j)$ --- logistic
+regression on score differences, the family Elo belongs to. Plackett--Luce (PL)
+generalises BT from pairs to full rankings via a chain of choose-best softmaxes.
+Maximum-likelihood inference of any Luce-axiom model is the stationary
+distribution of a Markov chain; Luce Spectral Ranking (LSR) approximates it in one
+spectral step and I-LSR converges to the MLE \citep{ord:maystre2015plackettluce}.
+The \texttt{choix} library \citep{ord:choix} implements the pairwise variants
+(\texttt{ilsr\_pairwise}, \texttt{mm\_pairwise}, \texttt{opt\_pairwise},
+\texttt{rank\_centrality}). BT/PL are parametric: a true Condorcet cycle is fit to
+the closest \emph{transitive} score vector (so cycles are absorbed, not
+represented), and the MLE is unique only when the comparison graph is strongly
+connected.
+
+\paragraph{Spectral and win-counting baselines.} Rank Centrality
+\citep{ord:negahban2017rankcentrality} scores items by the stationary
+distribution of a random walk that passes mass from losers to winners; it is
+minimax-optimal for top-$K$ recovery under standard noise
+\citep{ord:chen2019spectral} and costs one power iteration per step. Plain
+\emph{win-counting} (Borda/Copeland) is provably optimal, robust and efficient
+\emph{with no parametric assumption} \citep{ord:shah2017simple} --- the most
+model-robust baseline and an excellent initialiser. HodgeRank
+\citep{ord:jiang2011hodgerank} decomposes the pairwise flow (via a single sparse
+graph-Laplacian solve) into a \emph{gradient} (rankable) part plus \emph{curl} and
+\emph{harmonic} (cyclic, inconsistent) parts, returning a global ranking
+\emph{and} a certificate of how rankable the data is --- large cyclic energy
+signals that no clean chain exists.
+
+\paragraph{Minimum Feedback Arc Set = Kemeny / minimum-violations ranking.} The
+principled global objective is the \emph{minimum-weight feedback arc set} (MFAS):
+the linear order minimising the number (weight) of backward arcs --- equivalently
+the order disagreeing with the fewest pairwise edges. On the majority weighted
+tournament this is exactly the \emph{Kemeny consensus}, the order minimising total
+Kendall-$\tau$ distance and the maximum-likelihood ranking under Condorcet-style
+noise --- a justification topological sort lacks. It \emph{degrades gracefully}:
+on a true DAG it reproduces the topological order with zero backward arcs; on
+cyclic input it returns the best-supported order. MFAS is NP-hard, even on
+tournaments \citep{ord:karp1972,ord:alon2006ranking}, and Kemeny aggregation is
+NP-hard with as few as four input rankings \citep{ord:bartholdi1989kemeny,
+ord:dwork2001rank}; but tournaments admit a PTAS \citep{ord:kenyon2007fast} and
+excellent practical heuristics. The standard heuristic is Eades--Lin--Smyth greedy
+\citep{ord:eades1993fas} (peel off sinks and sources, then pick the vertex
+maximising $\mathrm{outdeg}-\mathrm{indeg}$; linear time) followed by local search
+(swaps/reinsertions reducing backward-arc weight); for $n \lesssim 30$--$40$ an
+exact ILP (order variables $x_{ij}$, triangle constraints
+$x_{ij}+x_{jk}+x_{ki}\le 2$, minimise backward weight) is tractable. Note a
+practical pitfall: \textbf{NetworkX has no \texttt{feedback\_arc\_set}}; it
+supplies only building blocks (\texttt{topological\_sort},
+\texttt{topological\_generations}, \texttt{simple\_cycles}). The library that
+provides FAS is \textbf{igraph} (\texttt{feedback\_arc\_set} with
+\texttt{approx\_eades}/\texttt{exact\_ip}) \citep{ord:igraph}.
+
+\subsection{Calibration and confidence-weighted aggregation}
+\label{sec:calibration}
+Aggregators consume $P[i,j]$ as a \emph{weight}, not just a sign, so
+miscalibration directly distorts the global order: an overconfident wrong edge can
+dominate a weighted-MFAS objective and flip the result. The cheap, standard fix is
+\emph{temperature scaling} \citep{ord:guo2017calibration} --- a single scalar
+$T$, with calibrated probability $\sigma(z/T)$, fit to minimise validation NLL;
+because it scales all logits equally it leaves the arg-max (and thus accuracy)
+unchanged while fixing confidences. Platt scaling \citep{ord:platt1999} and
+isotonic regression \citep{ord:zadrozny2002isotonic} are the parametric and
+non-parametric alternatives. Calibrated scores then justify
+\emph{confidence-weighted edges}: set the arc weight to the log-odds
+$w_{ij} = \log\!\big(P[i,j]/(1-P[i,j])\big)$ (the natural BT/weighted-FAS weight)
+or the margin $P[i,j]-0.5$, so a low-confidence wrong edge costs little and cannot
+flip the order, while only calibrated $P$ makes a threshold $\tau$ correspond to a
+fixed reliability level.
+
+\paragraph{Abstention and partial orders.} A workflow is generally a
+\emph{partial} order, not a chain: genuinely parallel steps form an
+\emph{antichain} and must be left unordered. Rather than force every pair into a
+direction, \emph{abstain} (emit NEUTRAL) when $P[i,j] \approx 0.5$ within a
+calibrated band, keep only high-confidence oriented edges, and output a
+\emph{DAG}. \texttt{topological\_generations} then stratifies the DAG into layers
+that are exactly the parallel-step antichains; Dilworth's theorem
+\citep{ord:dilworth1950} relates the largest antichain (maximum parallelism) to
+the minimum chain decomposition. Forcing a total order over parallel steps both
+misrepresents the workflow and manufactures spurious ``errors.''
+
+\subsection{Listwise losses and partial-order evaluation}
+\label{sec:listwise}
+\paragraph{Listwise losses.} If the orderer can be trained end-to-end, a listwise
+objective optimises the whole permutation jointly and avoids the
+$O(n^2)$-independent-decision compounding. ListNet \citep{ord:cao2007listnet}
+defines a PL distribution over permutations and minimises cross-entropy to the
+gold (top-one) distribution; ListMLE \citep{ord:xia2008listmle} is the negative
+log-likelihood of the gold permutation under Plackett--Luce (i.e.\ ListMLE = PL
+NLL), and is convex and consistent. An autoregressive pointer decoder implements
+the \emph{same} PL factorisation operationally (each step a softmax over remaining
+items). RankTxNet's controlled comparison \citep{ord:kumar2020ranktxnet} isolates
+the objective: listwise (ListMLE) beats pairwise beats pointwise on most datasets,
+matching the error-compounding analysis of Sec.~\ref{sec:toposort-fails}.
+
+\paragraph{Partial-order evaluation.} Exact-chain matching (PMR) wrongly penalises
+a correct-but-different linear extension of parallel steps, so evaluation should
+be tie-aware. Use Kendall's \emph{$\tau_b$/$\tau_c$} (tie-corrected
+denominators) \citep{ord:kendall1938}, Goodman--Kruskal $\gamma$
+\citep{ord:goodman1954}, and the Fagin et al.\ partial-ranking $\tau$-distance
+with a tie penalty $p\in[0,1]$ ($p=\tfrac12$ neutral)
+\citep{ord:fagin2006partial,ord:fagin2003topk}. The most interpretable scheme is
+\emph{precedence precision/recall/F1}: represent the gold partial order as its set
+of precedence constraints $\{(i,j): i \text{ must precede } j\}$ and score the
+prediction as pairwise classification, crediting any correct precedence regardless
+of which valid linear extension was chosen and not penalising the ordering of
+genuinely parallel pairs.
+
+\subsection{Relevance to causal embedding for AEP/AJO --- the fix for 0/30}
+This section is \emph{the} fix for the $0/30$ ordering failure. The diagnosis is
+structural: topological sort cannot survive the cycles that noisy pairwise causal
+scores inevitably produce (Sec.~\ref{sec:toposort-fails}), and exact-chain scoring
+punishes valid alternative orderings of parallel steps. The minimal-change,
+maximal-impact pipeline keeps the existing pairwise reasoning reranker of
+Sec.~\ref{sec:rerank-rl} and replaces only the aggregation: (1) \emph{calibrate}
+the pairwise scores with temperature scaling; (2) build a \emph{weighted
+tournament} with log-odds edge weights (do not threshold to a hard DAG);
+(3) aggregate with \emph{weighted MFAS / Kemeny} --- initialise by win-counting
+(Copeland/Borda), refine with Eades--Lin--Smyth greedy plus local search (or an
+exact ILP for the short workflows here, or igraph's \texttt{feedback\_arc\_set};
+\emph{not} NetworkX, which lacks it); optionally run \texttt{choix} Rank
+Centrality and HodgeRank in parallel to obtain scores and a cyclic-inconsistency
+certificate; (4) \emph{abstain} on near-$0.5$ pairs and emit a DAG, recovering
+parallel steps as antichains; (5) \emph{evaluate as a partial order} with
+tie-aware $\tau_b$ and precedence precision/recall. Longer term, a listwise
+(ListMLE) objective or a pointer decoder trained end-to-end optimises full-sequence
+accuracy directly and removes per-pair error compounding. Steps (1)--(3) plus (5)
+together address the precise reasons topological sort scores $0/30$.

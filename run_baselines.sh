@@ -58,7 +58,9 @@ MODEL_IDS[e5-large-v2]=intfloat/e5-large-v2
 MODEL_IDS[bge-base-en-v1.5]=BAAI/bge-base-en-v1.5
 MODEL_IDS[bge-large-en-v1.5]=BAAI/bge-large-en-v1.5
 
-# Batch sizes tuned for A100 80GB with dual encoders
+# Micro-batch (× grad-accum below = effective batch 64 for every model). The
+# large models (deberta/e5-large/bge-large) keep a small memory-safe micro-batch
+# (dual encoders on A100 80GB) and accumulate to reach 64; base models fit 64.
 declare -A MODEL_BATCH
 MODEL_BATCH[deberta-v3-large]=8
 MODEL_BATCH[all-mpnet-base-v2]=64
@@ -67,10 +69,26 @@ MODEL_BATCH[e5-large-v2]=16
 MODEL_BATCH[bge-base-en-v1.5]=64
 MODEL_BATCH[bge-large-en-v1.5]=16
 
-# Extra per-model train flags. DeBERTa-v3 must train in fp32 (--no-amp):
-# its disentangled attention is unstable under bf16 and produces NaN loss.
+# Gradient-accumulation steps: micro-batch × accum = 64 (effective batch) for all.
+declare -A MODEL_ACCUM
+MODEL_ACCUM[deberta-v3-large]=8
+MODEL_ACCUM[all-mpnet-base-v2]=1
+MODEL_ACCUM[all-MiniLM-L6-v2]=1
+MODEL_ACCUM[e5-large-v2]=4
+MODEL_ACCUM[bge-base-en-v1.5]=1
+MODEL_ACCUM[bge-large-en-v1.5]=4
+
+# Extra per-model train flags. The large models (deberta/e5-large/bge-large)
+# collapsed to constant output (test_acc~=0.50) under the default recipe: the
+# real cause was the tiny effective batch (8/16) combined with the default LR,
+# which pinned them at the symmetric 0.5 saddle on this 50/50 directional task.
+# Fix (validated): effective batch 64 (via MODEL_ACCUM above) + encoder LR 1e-5
+# + 0.06 warmup; the randomly-initialised MLP head keeps its 1e-3 LR. deberta
+# keeps --no-amp (fp32). Base models are fine on the defaults and left unchanged.
 declare -A MODEL_EXTRA
-MODEL_EXTRA[deberta-v3-large]="--no-amp"
+MODEL_EXTRA[deberta-v3-large]="--no-amp --lr-encoder 1e-5 --lr-head 1e-3 --warmup-frac 0.06"
+MODEL_EXTRA[e5-large-v2]="--lr-encoder 1e-5 --lr-head 1e-3 --warmup-frac 0.06"
+MODEL_EXTRA[bge-large-en-v1.5]="--lr-encoder 1e-5 --lr-head 1e-3 --warmup-frac 0.06"
 
 EPOCHS=4
 
@@ -153,6 +171,7 @@ for ds in "${DATASETS[@]}"; do
             --model-slug   "$model" \
             --gpu-id       "$g" \
             --batch-size   "${MODEL_BATCH[$model]}" \
+            --grad-accum   "${MODEL_ACCUM[$model]:-1}" \
             --eval-batch-size 64 \
             --epochs       $EPOCHS \
             --head-type    mlp \

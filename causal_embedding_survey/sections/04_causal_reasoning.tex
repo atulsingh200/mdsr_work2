@@ -1,0 +1,207 @@
+\section{Causal Reasoning and Direction from Text}
+\label{sec:causal-reasoning}
+
+Section~\ref{sec:foundations} established that direction in text must be
+\emph{supervised} or \emph{architecturally injected} rather than estimated from
+an assumed noise model. This section surveys the benchmarks and methods that do
+so: commonsense and formal causal-direction benchmarks, the natural-language
+inference (NLI) substrate that supplies directional precedence, event-causality
+and temporal-ordering corpora, the classifier families used to predict
+direction, and the consistent empirical finding that \emph{causal direction is
+hard} even for frontier models. We close by connecting these to the AEP/AJO
+ordering task.
+
+\subsection{Commonsense and formal causal benchmarks}
+\label{sec:causal-bench}
+
+\paragraph{Commonsense causal choice.}
+\textbf{COPA} (Choice of Plausible Alternatives) \citep{caus:roemmele2011copa}
+is the canonical directional benchmark: $1{,}000$ forced-choice items
+(500 dev / 500 test), each giving a premise and two alternatives for
+\emph{either the cause or the effect}, with the prompt itself specifying
+direction (``What was the \textsc{cause}?'' vs.\ ``What happened as a
+\textsc{result}?''). COPA is part of SuperGLUE
+\citep{caus:wang2019superglue}; the human baseline is $100$ and a 1.5B-parameter
+DeBERTa reaches $98.4$ on COPA, so the \emph{benchmark} is near-saturated while
+the underlying \emph{direction skill} (below) is not. \textbf{e-CARE}
+\citep{caus:du2022ecare} scales this to ``over 21K'' causal-reasoning questions,
+each paired with a free-text conceptual explanation. The best model (ALBERT)
+reaches $73.86\%$ vs.\ human $92.00\%$, and --- the key result for our project ---
+pretraining on e-CARE explanations \emph{transfers}: COPA improves
+$70.4\to75.4$ and EventStoryLine causality F1 $66.5\to68.1$. Explaining
+causality, not merely labeling it, measurably helps downstream causal tasks.
+
+\paragraph{If-then commonsense knowledge.}
+\textbf{ATOMIC} \citep{caus:sap2019atomic} is a crowd-sourced knowledge graph of
+$\approx$877K if-event-then triples over nine typed relations that explicitly
+distinguish causes from effects, agents from themes, and voluntary from
+involuntary events --- a directed inferential resource directly analogous to
+``effects of step $A$'' / ``preconditions of step $B$.''
+
+\paragraph{Formal causal inference.}
+\textbf{Corr2Cause} \citep{caus:jin2024corr2cause} is the first benchmark for
+pure causal inference (inferring causation from correlation), with $>$200K
+samples over 17 LLMs. The headline is stark: LLMs are near-random, with
+\textbf{GPT-4 F1 $=29.08$} (precision $20.92$ / recall $47.66$ / accuracy
+$64.60$; the high accuracy is a class-imbalance artifact, so F1 is the honest
+metric). On direction specifically, under variable refactorization the
+Is-Ancestor / Is-Descendant F1 drop to $45.45$ / $29.41$, and non-finetuned GPT-4
+``fails at all direct causation recognition with parents and children'' --- it
+cannot reliably tell $A\to B$ from $B\to A$. \textbf{CLADDER}
+\citep{caus:jin2023cladder} grounds 10K questions in Pearl's three rungs with
+oracle ground truth from a causal-inference engine; its \emph{CausalCoT}
+prompting lifts GPT-4 from $62.03\%\to70.40\%$ (random $49.27\%$), a
+\textbf{$+8.37$-point} gain, with by-rung accuracy of associational $83.35\%$,
+interventional $67.47\%$, counterfactual $62.05\%$ --- monotonically harder up
+the ladder. \textbf{CRASS} \citep{caus:frohberg2022crass} tests counterfactual
+reasoning via ``questionized'' counterfactual conditionals against a
+crowd-validated human baseline (part of BIG-bench); the tested LLMs trail humans
+by over $25$ points. \textbf{CaLM} \citep{caus:chen2024calm} is the broadest
+recent effort: $126{,}334$ samples, $92$ causal targets covering $46$ tasks
+across natural, symbolic, and mathematical modes and two languages, evaluating
+$28$ models --- a taxonomy (causal target / adaptation / metric / error) that
+confirms the same pattern, with direction- and intervention-style targets the
+weakest.
+
+\subsection{NLI / entailment as a substrate for directional precedence}
+\label{sec:nli}
+
+NLI is inherently \emph{directional} --- ``premise entails hypothesis'' is not
+symmetric --- which makes it a natural template for ``step $A$ precedes /
+enables step $B$.'' The foundational corpora are \textbf{SNLI} ($\approx$570K
+human-written pairs) \citep{found:bowman2015snli} and \textbf{MultiNLI} ($\approx$433K,
+ten genres, defining the matched/mismatched split) \citep{found:williams2018mnli}.
+\textbf{ANLI} \citep{caus:nie2020anli} hardens this with an adversarial
+human-and-model-in-the-loop procedure (R1/R2/R3 train sizes
+$16{,}946$ / $45{,}460$ / $100{,}459$), so a credible NLI score must be reported
+on adversarial data. \textbf{DeBERTa-v3} cross-encoders are the strong, cheap
+NLI workhorse: a DeBERTa-v3-large checkpoint trained on $\approx$885K NLI pairs
+reaches $0.912$ / $0.908$ matched/mismatched MNLI accuracy and $0.702$ average on
+ANLI \citep{caus:laurer2022debertanli,found:he2021debertav3}. The cross-encoder
+lets every premise token attend to every hypothesis token --- precisely the
+interaction a directional judgment needs, and the architectural reason NLI
+leaderboards are topped by cross-encoders rather than bi-encoders.
+
+\paragraph{Document-level and explanation-augmented NLI.}
+\textbf{DocNLI} \citep{caus:yin2021docnli} reformats QA and summarization into a
+large document-granularity NLI dataset (premise always document-length,
+hypotheses from a sentence to a passage), relevant because documentation steps
+are multi-clause passages, not single sentences. \textbf{e-SNLI}
+\citep{caus:camburu2018esnli} adds $\approx$549K human explanations and rationale
+highlights, enabling models that justify the entailment, while
+\textbf{EntailmentBank} \citep{caus:dalvi2021entailmentbank} provides $1{,}840$
+multistep entailment trees --- the template for proving ``$A$ enables $B$''
+through intermediate steps. \textbf{INLI} \citep{caus:havaldar2025inli} draws the
+distinction most relevant to us: \emph{explicit} entailment (lexical/syntactic)
+vs.\ \emph{implied} entailment (requiring world knowledge / logical reasoning).
+On $10$K premises with $40$K hypotheses, a model trained on INLI reaches
+$92.4\%$ overall and $88.5\%$ on implied cases, while models trained on
+SNLI/MNLI/ANLI/WANLI score only $\approx$$50\%$ (near chance) on implied
+entailments. Causal precedence (``you must authenticate before you can
+publish'') is almost always \emph{implied}, so surface NLI models are near-chance
+on exactly the regime we care about --- the central argument for injecting
+reasoning rather than relying on similarity.
+
+\paragraph{Verifying the reasoning chain.}
+\textbf{VeriCoT} \citep{caus:feng2025vericot} formalizes each chain-of-thought
+step into first-order logic, identifies whether each premise is grounded in
+source context / commonsense / a prior step, and uses automated solvers to check
+logical validity; evaluated on ProofWriter, LegalBench, and BioASQ it is ``a
+strong predictor of final-answer correctness.'' This is a template for validating
+a model's ``$A$ precedes $B$ because\ldots'' trace --- flagging ungrounded
+(hallucinated) precedence claims against the documentation.
+
+\subsection{Event causality and temporal ordering from text}
+\label{sec:event-causality}
+
+The corpora most directly analogous to ordering workflow steps annotate
+relations \emph{between events} in text. \textbf{TimeBank}
+\citep{caus:pustejovsky2003timebank} introduced TimeML event/temporal-link
+annotation; \textbf{TimeBank-Dense} \citep{caus:cassidy2014timebankdense} added
+dense (near-complete) pairwise temporal ordering. \textbf{MATRES}
+\citep{caus:ning2018matres} simplified TimeBank-Dense via a multi-axis scheme
+annotating only start-points into four relations (\textsc{before}, \textsc{after},
+\textsc{equal}, \textsc{vague}); reported systems reach $\approx$$69$--$75.5$ F1
+on MATRES vs.\ $\approx$$48$--$64.5$ on TB-Dense, so even temporal ordering ---
+strictly easier than causal ordering --- is far from solved. On the causal side,
+\textbf{Causal-TimeBank} \citep{caus:mirza2014causaltimebank} annotates causality
+over the TempEval-3 corpus (184 docs, 6,813 events, only $318$ of $7{,}608$ event
+pairs causal --- extreme sparsity), and \textbf{EventStoryLine}
+\citep{caus:caselli2017eventstoryline} provides a larger benchmark for joint
+causal-and-temporal relation extraction (22 topics, 258 docs, $\approx$1,770
+intra- and 3,885 inter-sentence causal pairs). \textbf{CaTeRS}
+\citep{caus:mostafazadeh2016caters} jointly annotates temporal
+(\textsc{before}/\textsc{after}) and causal (\textsc{cause}/\textsc{enable}/\textsc{prevent})
+relations over 1,600 sentences, explicitly separating ``$A$ before $B$'' from
+``$A$ enables $B$.'' \textbf{This temporal-vs-causal distinction is exactly the
+trap in our data}: narration order in a tutorial is not the same as causal
+necessity, and a model trained on positional order alone learns the former.
+
+\subsection{Methods for causal / temporal direction classification}
+\label{sec:methods}
+
+Three operationalizations of direction recur \citep{caus:hosseini2021directionality}.
+(1) \emph{Pairwise span/relation classifiers}: given two spans known to be in a
+causal relation, predict cause$\to$effect vs.\ effect$\to$cause. On PDTB3,
+BERT/SpanBERT reach $0.83$/$0.86$ F1; on EventStoryLine, $0.79$/$0.71$ ---
+i.e.\ supervised direction prediction caps at $\sim$$0.79$--$0.86$ F1 even with
+the relation given. The same work builds \textbf{CREST}, unifying nine causal
+datasets. (2) \emph{Directed-graph edges}: \textbf{CausalBank}
+\citep{caus:li2020causalbank} ($\approx$314M cause--effect pairs split into
+cause-pattern-effect / effect-pattern-cause, encoding direction lexically) and
+\textbf{CauseNet} \citep{caus:heindorf2020causenet} (a directed web-extracted
+causality graph) provide direction as edge orientation. (3) \emph{Joint /
+direction-aware models}: a recent ECI survey \citep{caus:eciSurvey2024} notes
+prior work ``mainly focus[es] on causality existence but ignore[s] causal
+direction,'' and \emph{Identifying while Learning}
+\citep{caus:identifyingwhilelearning2024} jointly learns existence and direction,
+exploiting that causal chains are \emph{asymmetric and transitive} --- the same
+transitivity our rank-aggregation step relies on.
+
+\subsection{Why direction is hard; frontier vs.\ small models}
+\label{sec:hardness}
+
+The evidence converges on a single conclusion: causal \emph{direction} is the
+consistently hard part of causal NLP, and scale does not fix it. GPT-4 is
+near-random on Corr2Cause (F1 $29.08$) and cannot reliably distinguish
+ancestor from descendant \citep{caus:jin2024corr2cause}. \emph{Is ChatGPT a Good
+Causal Reasoner?} \citep{caus:gao2023chatgptcausal} shows ChatGPT/GPT-4 are
+\emph{outperformed by fine-tuned small models} on event-causality identification,
+with high recall but low precision --- a \emph{reporting-bias} artifact (text
+states what causes what, rarely what does \emph{not}), so the model over-predicts
+causality and is worse on \emph{implicit} (reasoning-required) than explicit
+(cue-word) causality, and degrades as event density rises. Supervised direction
+classifiers cap at $0.79$--$0.86$ F1 \citep{caus:hosseini2021directionality};
+even clean numeric bivariate methods top out at $\sim$$60$--$72\%$ on the
+T\"ubingen pairs \citep{found:mooij2016distinguishing}. The reasons are
+structural: (a) the joint distribution is symmetric so direction needs an extra
+assumption or supervision (Sec.~\ref{sec:foundations}); (b) the relation is
+usually \emph{implied}, where surface NLI is near-chance \citep{caus:havaldar2025inli};
+(c) labels are sparse and imbalanced \citep{caus:mirza2014causaltimebank}. What
+\emph{does} help is structured reasoning: CausalCoT's $+8.37$ on CLADDER
+\citep{caus:jin2023cladder} and e-CARE explanation transfer
+\citep{caus:du2022ecare} both show that a causal-specific reasoning step, not a
+larger embedding, moves the needle.
+
+\paragraph{Relevance to causal embedding for AEP/AJO.}
+Mapped to our pairwise primitive $P(t_1 \text{ precedes } t_2)$, the literature
+gives a concrete recipe and concrete warnings. First, frame the task as
+\emph{directional NLI}: an ordered pair $(t_1,t_2)$ with labels
+\textsc{precedes} / \textsc{follows} / \textsc{neutral}, evaluating both
+directions of the same pair to expose the symmetry failure that Corr2Cause flags
+--- and use a \emph{cross-encoder} (DeBERTa-v3-style) so tokens of both steps
+interact, matching the repo finding that the cross-encoder orders far better
+($21/30$) than the bi-encoder ($0/30$) despite lower pairwise accuracy. Second,
+keep the \textsc{neutral}/abstain class so parallel steps are not forced into a
+chain, turning the output into a DAG amenable to robust rank aggregation
+(consistent with the transitivity exploited by direction-aware ECI). Third,
+separate \emph{temporal} from \emph{causal} precedence (the CaTeRS lesson): our
+positional labels teach narration order, so non-adjacent / cross-document pairs
+and explanation-augmented training (the e-CARE transfer effect) are needed to
+recover genuine enablement. Fourth, because direction is hard and \emph{implied},
+inject reasoning --- distilled CausalCoT-style traces filtered by the verifiable
+gold label, with optional VeriCoT-style grounding checks --- rather than relying
+on similarity. The honest ceiling remains a Rung-1 structural-precedence
+estimator (Sec.~\ref{sec:ladder}), but the benchmarks show that a directional,
+abstention-capable, reasoning-augmented cross-encoder is the design most likely
+to close the $0/30$ ordering gap.

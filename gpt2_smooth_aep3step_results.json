@@ -1,0 +1,1811 @@
+{
+  "config": {
+    "model": "gpt2-smooth",
+    "model_path": "/mnt/localssd/automation/internship-causal-embedding/pythia_train/output_gpt2_smooth",
+    "data": "/mnt/localssd/automation/internship-causal-embedding/data/scrap_transcript/aep_3step_workflows_simple.json",
+    "n_samples": 10,
+    "method": "all-permutations (3! = 6), lowest perplexity wins",
+    "score": "full-sequence perplexity (exp of mean per-token NLL)",
+    "gold_order": [
+      "t1",
+      "t2",
+      "t3"
+    ],
+    "device": "cuda:0",
+    "dtype": "torch.bfloat16"
+  },
+  "separators": {
+    "space": {
+      "n_correct": 5,
+      "n_total": 10,
+      "order_accuracy": 0.5,
+      "pairwise_direction_accuracy": 0.5667,
+      "per_sample": [
+        {
+          "id": 1,
+          "title": "Audience to email",
+          "gold_order": [
+            "t1",
+            "t2",
+            "t3"
+          ],
+          "best_order": [
+            "t1",
+            "t2",
+            "t3"
+          ],
+          "order_correct": true,
+          "best_ppl": 26.4907,
+          "gold_ppl": 26.4907,
+          "ppl_margin": 0.0,
+          "all_permutations": [
+            {
+              "order": [
+                "t1",
+                "t2",
+                "t3"
+              ],
+              "ppl": 26.4907
+            },
+            {
+              "order": [
+                "t1",
+                "t3",
+                "t2"
+              ],
+              "ppl": 33.9707
+            },
+            {
+              "order": [
+                "t3",
+                "t1",
+                "t2"
+              ],
+              "ppl": 37.4879
+            },
+            {
+              "order": [
+                "t2",
+                "t1",
+                "t3"
+              ],
+              "ppl": 39.6295
+            },
+            {
+              "order": [
+                "t2",
+                "t3",
+                "t1"
+              ],
+              "ppl": 42.2603
+            },
+            {
+              "order": [
+                "t3",
+                "t2",
+                "t1"
+              ],
+              "ppl": 62.0827
+            }
+          ],
+          "pairwise": [
+            {
+              "pair": "t1->t2",
+              "fwd_ppl": 40.7634,
+              "rev_ppl": 64.0549,
+              "correct_direction": true
+            },
+            {
+              "pair": "t1->t3",
+              "fwd_ppl": 28.9273,
+              "rev_ppl": 35.5352,
+              "correct_direction": true
+            },
+            {
+              "pair": "t2->t3",
+              "fwd_ppl": 78.757,
+              "rev_ppl": 152.8451,
+              "correct_direction": true
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Data to segment",
+          "gold_order": [
+            "t1",
+            "t2",
+            "t3"
+          ],
+          "best_order": [
+            "t2",
+            "t3",
+            "t1"
+          ],
+          "order_correct": false,
+          "best_ppl": 75.6441,
+          "gold_ppl": 89.2106,
+          "ppl_margin": 13.5666,
+          "all_permutations": [
+            {
+              "order": [
+                "t2",
+                "t3",
+                "t1"
+              ],
+              "ppl": 75.6441
+            },
+            {
+              "order": [
+                "t2",
+                "t1",
+                "t3"
+              ],
+              "ppl": 81.1061
+            },
+            {
+              "order": [
+                "t1",
+                "t3",
+                "t2"
+              ],
+              "ppl": 88.8134
+            },
+            {
+              "order": [
+                "t3",
+                "t2",
+                "t1"
+              ],
+              "ppl": 89.0496
+            },
+            {
+              "order": [
+                "t1",
+                "t2",
+                "t3"
+              ],
+              "ppl": 89.2106
+            },
+            {
+              "order": [
+                "t3",
+                "t1",
+                "t2"
+              ],
+              "ppl": 98.6313
+            }
+          ],
+          "pairwise": [
+            {
+              "pair": "t1->t2",
+              "fwd_ppl": 81.7459,
+              "rev_ppl": 73.6273,
+              "correct_direction": false
+            },
+            {
+              "pair": "t1->t3",
+              "fwd_ppl": 232.9694,
+              "rev_ppl": 245.0214,
+              "correct_direction": true
+            },
+            {
+              "pair": "t2->t3",
+              "fwd_ppl": 63.3466,
+              "rev_ppl": 84.825,
+              "correct_direction": true
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Win back churning customers",
+          "gold_order": [
+            "t1",
+            "t2",
+            "t3"
+          ],
+          "best_order": [
+            "t3",
+            "t2",
+            "t1"
+          ],
+          "order_correct": false,
+          "best_ppl": 51.0364,
+          "gold_ppl": 52.2172,
+          "ppl_margin": 1.1809,
+          "all_permutations": [
+            {
+              "order": [
+                "t3",
+                "t2",
+                "t1"
+              ],
+              "ppl": 51.0364
+            },
+            {
+              "order": [
+                "t1",
+                "t2",
+                "t3"
+              ],
+              "ppl": 52.2172
+            },
+            {
+              "order": [
+                "t2",
+                "t1",
+                "t3"
+              ],
+              "ppl": 52.5043
+            },
+            {
+              "order": [
+                "t2",
+                "t3",
+                "t1"
+              ],
+              "ppl": 53.7654
+            },
+            {
+              "order": [
+                "t3",
+                "t1",
+                "t2"
+              ],
+              "ppl": 56.2891
+            },
+            {
+              "order": [
+                "t1",
+                "t3",
+                "t2"
+              ],
+              "ppl": 56.9598
+            }
+          ],
+          "pairwise": [
+            {
+              "pair": "t1->t2",
+              "fwd_ppl": 62.3601,
+              "rev_ppl": 56.8592,
+              "correct_direction": false
+            },
+            {
+              "pair": "t1->t3",
+              "fwd_ppl": 93.1033,
+              "rev_ppl": 93.7598,
+              "correct_direction": true
+            },
+            {
+              "pair": "t2->t3",
+              "fwd_ppl": 56.8898,
+              "rev_ppl": 60.7113,
+              "correct_direction": true
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Re-engage cart abandoners",
+          "gold_order": [
+            "t1",
+            "t2",
+            "t3"
+          ],
+          "best_order": [
+            "t1",
+            "t2",
+            "t3"
+          ],
+          "order_correct": true,
+          "best_ppl": 47.9355,
+          "gold_ppl": 47.9355,
+          "ppl_margin": 0.0,
+          "all_permutations": [
+            {
+              "order": [
+                "t1",
+                "t2",
+                "t3"
+              ],
+              "ppl": 47.9355
+            },
+            {
+              "order": [
+                "t3",
+                "t1",
+                "t2"
+              ],
+              "ppl": 51.387
+            },
+            {
+              "order": [
+                "t1",
+                "t3",
+                "t2"
+              ],
+              "ppl": 53.2719
+            },
+            {
+              "order": [
+                "t2",
+                "t3",
+                "t1"
+              ],
+              "ppl": 60.189
+            },
+            {
+              "order": [
+                "t2",
+                "t1",
+                "t3"
+              ],
+              "ppl": 61.7669
+            },
+            {
+              "order": [
+                "t3",
+                "t2",
+                "t1"
+              ],
+              "ppl": 62.2251
+            }
+          ],
+          "pairwise": [
+            {
+              "pair": "t1->t2",
+              "fwd_ppl": 62.7952,
+              "rev_ppl": 103.6065,
+              "correct_direction": true
+            },
+            {
+              "pair": "t1->t3",
+              "fwd_ppl": 99.4305,
+              "rev_ppl": 116.5214,
+              "correct_direction": true
+            },
+            {
+              "pair": "t2->t3",
+              "fwd_ppl": 57.0214,
+              "rev_ppl": 59.7075,
+              "correct_direction": true
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Web data to destination",
+          "gold_order": [
+            "t1",
+            "t2",
+            "t3"
+          ],
+          "best_order": [
+            "t3",
+            "t1",
+            "t2"
+          ],
+          "order_correct": false,
+          "best_ppl": 69.6145,
+          "gold_ppl": 120.1647,
+          "ppl_margin": 50.5502,
+          "all_permutations": [
+            {
+              "order": [
+                "t3",
+                "t1",
+                "t2"
+              ],
+              "ppl": 69.6145
+            },
+            {
+              "order": [
+                "t3",
+                "t2",
+                "t1"
+              ],
+              "ppl": 72.6344
+            },
+            {
+              "order": [
+                "t1",
+                "t3",
+                "t2"
+              ],
+              "ppl": 104.6693
+            },
+            {
+              "order": [
+                "t2",
+                "t1",
+                "t3"
+              ],
+              "ppl": 111.9797
+            },
+            {
+              "order": [
+                "t2",
+                "t3",
+                "t1"
+              ],
+              "ppl": 114.2174
+            },
+            {
+              "order": [
+                "t1",
+                "t2",
+                "t3"
+              ],
+              "ppl": 120.1647
+            }
+          ],
+          "pairwise": [
+            {
+              "pair": "t1->t2",
+              "fwd_ppl": 107.7028,
+              "rev_ppl": 95.9401,
+              "correct_direction": false
+            },
+            {
+              "pair": "t1->t3",
+              "fwd_ppl": 224.6812,
+              "rev_ppl": 121.9097,
+              "correct_direction": false
+            },
+            {
+              "pair": "t2->t3",
+              "fwd_ppl": 111.7338,
+              "rev_ppl": 67.6934,
+              "correct_direction": false
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Plan, launch, review",
+          "gold_order": [
+            "t1",
+            "t2",
+            "t3"
+          ],
+          "best_order": [
+            "t1",
+            "t2",
+            "t3"
+          ],
+          "order_correct": true,
+          "best_ppl": 43.3194,
+          "gold_ppl": 43.3194,
+          "ppl_margin": 0.0,
+          "all_permutations": [
+            {
+              "order": [
+                "t1",
+                "t2",
+                "t3"
+              ],
+              "ppl": 43.3194
+            },
+            {
+              "order": [
+                "t1",
+                "t3",
+                "t2"
+              ],
+              "ppl": 48.0909
+            },
+            {
+              "order": [
+                "t2",
+                "t1",
+                "t3"
+              ],
+              "ppl": 65.6065
+            },
+            {
+              "order": [
+                "t3",
+                "t1",
+                "t2"
+              ],
+              "ppl": 67.4679
+            },
+            {
+              "order": [
+                "t3",
+                "t2",
+                "t1"
+              ],
+              "ppl": 75.7882
+            },
+            {
+              "order": [
+                "t2",
+                "t3",
+                "t1"
+              ],
+              "ppl": 84.6092
+            }
+          ],
+          "pairwise": [
+            {
+              "pair": "t1->t2",
+              "fwd_ppl": 68.3477,
+              "rev_ppl": 119.8841,
+              "correct_direction": true
+            },
+            {
+              "pair": "t1->t3",
+              "fwd_ppl": 74.9037,
+              "rev_ppl": 113.1728,
+              "correct_direction": true
+            },
+            {
+              "pair": "t2->t3",
+              "fwd_ppl": 104.0686,
+              "rev_ppl": 80.0569,
+              "correct_direction": false
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "title": "Schema to profile",
+          "gold_order": [
+            "t1",
+            "t2",
+            "t3"
+          ],
+          "best_order": [
+            "t1",
+            "t2",
+            "t3"
+          ],
+          "order_correct": true,
+          "best_ppl": 44.3975,
+          "gold_ppl": 44.3975,
+          "ppl_margin": 0.0,
+          "all_permutations": [
+            {
+              "order": [
+                "t1",
+                "t2",
+                "t3"
+              ],
+              "ppl": 44.3975
+            },
+            {
+              "order": [
+                "t3",
+                "t1",
+                "t2"
+              ],
+              "ppl": 44.5234
+            },
+            {
+              "order": [
+                "t3",
+                "t2",
+                "t1"
+              ],
+              "ppl": 53.061
+            },
+            {
+              "order": [
+                "t1",
+                "t3",
+                "t2"
+              ],
+              "ppl": 55.1688
+            },
+            {
+              "order": [
+                "t2",
+                "t1",
+                "t3"
+              ],
+              "ppl": 56.4849
+            },
+            {
+              "order": [
+                "t2",
+                "t3",
+                "t1"
+              ],
+              "ppl": 61.134
+            }
+          ],
+          "pairwise": [
+            {
+              "pair": "t1->t2",
+              "fwd_ppl": 24.1904,
+              "rev_ppl": 35.7493,
+              "correct_direction": true
+            },
+            {
+              "pair": "t1->t3",
+              "fwd_ppl": 75.1824,
+              "rev_ppl": 58.3504,
+              "correct_direction": false
+            },
+            {
+              "pair": "t2->t3",
+              "fwd_ppl": 133.0355,
+              "rev_ppl": 109.4514,
+              "correct_direction": false
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "title": "Activate an audience",
+          "gold_order": [
+            "t1",
+            "t2",
+            "t3"
+          ],
+          "best_order": [
+            "t2",
+            "t1",
+            "t3"
+          ],
+          "order_correct": false,
+          "best_ppl": 49.1894,
+          "gold_ppl": 65.091,
+          "ppl_margin": 15.9015,
+          "all_permutations": [
+            {
+              "order": [
+                "t2",
+                "t1",
+                "t3"
+              ],
+              "ppl": 49.1894
+            },
+            {
+              "order": [
+                "t2",
+                "t3",
+                "t1"
+              ],
+              "ppl": 52.4414
+            },
+            {
+              "order": [
+                "t3",
+                "t2",
+                "t1"
+              ],
+              "ppl": 54.177
+            },
+            {
+              "order": [
+                "t3",
+                "t1",
+                "t2"
+              ],
+              "ppl": 57.3056
+            },
+            {
+              "order": [
+                "t1",
+                "t2",
+                "t3"
+              ],
+              "ppl": 65.091
+            },
+            {
+              "order": [
+                "t1",
+                "t3",
+                "t2"
+              ],
+              "ppl": 69.9295
+            }
+          ],
+          "pairwise": [
+            {
+              "pair": "t1->t2",
+              "fwd_ppl": 97.0065,
+              "rev_ppl": 73.5059,
+              "correct_direction": false
+            },
+            {
+              "pair": "t1->t3",
+              "fwd_ppl": 103.5719,
+              "rev_ppl": 81.8782,
+              "correct_direction": false
+            },
+            {
+              "pair": "t2->t3",
+              "fwd_ppl": 90.3628,
+              "rev_ppl": 83.9553,
+              "correct_direction": false
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "title": "Use a playbook",
+          "gold_order": [
+            "t1",
+            "t2",
+            "t3"
+          ],
+          "best_order": [
+            "t1",
+            "t2",
+            "t3"
+          ],
+          "order_correct": true,
+          "best_ppl": 52.071,
+          "gold_ppl": 52.071,
+          "ppl_margin": 0.0,
+          "all_permutations": [
+            {
+              "order": [
+                "t1",
+                "t2",
+                "t3"
+              ],
+              "ppl": 52.071
+            },
+            {
+              "order": [
+                "t1",
+                "t3",
+                "t2"
+              ],
+              "ppl": 60.3685
+            },
+            {
+              "order": [
+                "t2",
+                "t3",
+                "t1"
+              ],
+              "ppl": 88.3098
+            },
+            {
+              "order": [
+                "t2",
+                "t1",
+                "t3"
+              ],
+              "ppl": 96.6992
+            },
+            {
+              "order": [
+                "t3",
+                "t1",
+                "t2"
+              ],
+              "ppl": 102.355
+            },
+            {
+              "order": [
+                "t3",
+                "t2",
+                "t1"
+              ],
+              "ppl": 111.5024
+            }
+          ],
+          "pairwise": [
+            {
+              "pair": "t1->t2",
+              "fwd_ppl": 69.8758,
+              "rev_ppl": 153.1266,
+              "correct_direction": true
+            },
+            {
+              "pair": "t1->t3",
+              "fwd_ppl": 103.857,
+              "rev_ppl": 257.81,
+              "correct_direction": true
+            },
+            {
+              "pair": "t2->t3",
+              "fwd_ppl": 54.1576,
+              "rev_ppl": 73.1815,
+              "correct_direction": true
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "title": "Personalize an offer",
+          "gold_order": [
+            "t1",
+            "t2",
+            "t3"
+          ],
+          "best_order": [
+            "t3",
+            "t1",
+            "t2"
+          ],
+          "order_correct": false,
+          "best_ppl": 83.1999,
+          "gold_ppl": 96.6335,
+          "ppl_margin": 13.4337,
+          "all_permutations": [
+            {
+              "order": [
+                "t3",
+                "t1",
+                "t2"
+              ],
+              "ppl": 83.1999
+            },
+            {
+              "order": [
+                "t3",
+                "t2",
+                "t1"
+              ],
+              "ppl": 90.6821
+            },
+            {
+              "order": [
+                "t1",
+                "t2",
+                "t3"
+              ],
+              "ppl": 96.6335
+            },
+            {
+              "order": [
+                "t1",
+                "t3",
+                "t2"
+              ],
+              "ppl": 101.075
+            },
+            {
+              "order": [
+                "t2",
+                "t3",
+                "t1"
+              ],
+              "ppl": 103.3258
+            },
+            {
+              "order": [
+                "t2",
+                "t1",
+                "t3"
+              ],
+              "ppl": 111.1846
+            }
+          ],
+          "pairwise": [
+            {
+              "pair": "t1->t2",
+              "fwd_ppl": 133.4615,
+              "rev_ppl": 154.0023,
+              "correct_direction": true
+            },
+            {
+              "pair": "t1->t3",
+              "fwd_ppl": 100.4983,
+              "rev_ppl": 85.0149,
+              "correct_direction": false
+            },
+            {
+              "pair": "t2->t3",
+              "fwd_ppl": 154.6122,
+              "rev_ppl": 127.0967,
+              "correct_direction": false
+            }
+          ]
+        }
+      ]
+    },
+    "eos": {
+      "n_correct": 4,
+      "n_total": 10,
+      "order_accuracy": 0.4,
+      "pairwise_direction_accuracy": 0.5,
+      "per_sample": [
+        {
+          "id": 1,
+          "title": "Audience to email",
+          "gold_order": [
+            "t1",
+            "t2",
+            "t3"
+          ],
+          "best_order": [
+            "t2",
+            "t1",
+            "t3"
+          ],
+          "order_correct": false,
+          "best_ppl": 89.9079,
+          "gold_ppl": 104.5822,
+          "ppl_margin": 14.6742,
+          "all_permutations": [
+            {
+              "order": [
+                "t2",
+                "t1",
+                "t3"
+              ],
+              "ppl": 89.9079
+            },
+            {
+              "order": [
+                "t3",
+                "t1",
+                "t2"
+              ],
+              "ppl": 94.3803
+            },
+            {
+              "order": [
+                "t2",
+                "t3",
+                "t1"
+              ],
+              "ppl": 100.5358
+            },
+            {
+              "order": [
+                "t1",
+                "t2",
+                "t3"
+              ],
+              "ppl": 104.5822
+            },
+            {
+              "order": [
+                "t1",
+                "t3",
+                "t2"
+              ],
+              "ppl": 106.3791
+            },
+            {
+              "order": [
+                "t3",
+                "t2",
+                "t1"
+              ],
+              "ppl": 111.3726
+            }
+          ],
+          "pairwise": [
+            {
+              "pair": "t1->t2",
+              "fwd_ppl": 95.3086,
+              "rev_ppl": 91.85,
+              "correct_direction": false
+            },
+            {
+              "pair": "t1->t3",
+              "fwd_ppl": 70.3362,
+              "rev_ppl": 59.5527,
+              "correct_direction": false
+            },
+            {
+              "pair": "t2->t3",
+              "fwd_ppl": 216.3668,
+              "rev_ppl": 225.3851,
+              "correct_direction": true
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Data to segment",
+          "gold_order": [
+            "t1",
+            "t2",
+            "t3"
+          ],
+          "best_order": [
+            "t2",
+            "t3",
+            "t1"
+          ],
+          "order_correct": false,
+          "best_ppl": 112.7727,
+          "gold_ppl": 126.0713,
+          "ppl_margin": 13.2985,
+          "all_permutations": [
+            {
+              "order": [
+                "t2",
+                "t3",
+                "t1"
+              ],
+              "ppl": 112.7727
+            },
+            {
+              "order": [
+                "t2",
+                "t1",
+                "t3"
+              ],
+              "ppl": 122.1136
+            },
+            {
+              "order": [
+                "t1",
+                "t2",
+                "t3"
+              ],
+              "ppl": 126.0713
+            },
+            {
+              "order": [
+                "t1",
+                "t3",
+                "t2"
+              ],
+              "ppl": 131.9303
+            },
+            {
+              "order": [
+                "t3",
+                "t2",
+                "t1"
+              ],
+              "ppl": 132.8192
+            },
+            {
+              "order": [
+                "t3",
+                "t1",
+                "t2"
+              ],
+              "ppl": 132.8754
+            }
+          ],
+          "pairwise": [
+            {
+              "pair": "t1->t2",
+              "fwd_ppl": 103.0836,
+              "rev_ppl": 86.818,
+              "correct_direction": false
+            },
+            {
+              "pair": "t1->t3",
+              "fwd_ppl": 258.7244,
+              "rev_ppl": 266.2975,
+              "correct_direction": true
+            },
+            {
+              "pair": "t2->t3",
+              "fwd_ppl": 99.8668,
+              "rev_ppl": 113.0431,
+              "correct_direction": true
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Win back churning customers",
+          "gold_order": [
+            "t1",
+            "t2",
+            "t3"
+          ],
+          "best_order": [
+            "t3",
+            "t2",
+            "t1"
+          ],
+          "order_correct": false,
+          "best_ppl": 73.5755,
+          "gold_ppl": 102.7303,
+          "ppl_margin": 29.1548,
+          "all_permutations": [
+            {
+              "order": [
+                "t3",
+                "t2",
+                "t1"
+              ],
+              "ppl": 73.5755
+            },
+            {
+              "order": [
+                "t3",
+                "t1",
+                "t2"
+              ],
+              "ppl": 86.7555
+            },
+            {
+              "order": [
+                "t2",
+                "t3",
+                "t1"
+              ],
+              "ppl": 96.4249
+            },
+            {
+              "order": [
+                "t2",
+                "t1",
+                "t3"
+              ],
+              "ppl": 97.6189
+            },
+            {
+              "order": [
+                "t1",
+                "t2",
+                "t3"
+              ],
+              "ppl": 102.7303
+            },
+            {
+              "order": [
+                "t1",
+                "t3",
+                "t2"
+              ],
+              "ppl": 117.0528
+            }
+          ],
+          "pairwise": [
+            {
+              "pair": "t1->t2",
+              "fwd_ppl": 124.9276,
+              "rev_ppl": 89.7864,
+              "correct_direction": false
+            },
+            {
+              "pair": "t1->t3",
+              "fwd_ppl": 135.8669,
+              "rev_ppl": 93.5176,
+              "correct_direction": false
+            },
+            {
+              "pair": "t2->t3",
+              "fwd_ppl": 90.716,
+              "rev_ppl": 83.816,
+              "correct_direction": false
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Re-engage cart abandoners",
+          "gold_order": [
+            "t1",
+            "t2",
+            "t3"
+          ],
+          "best_order": [
+            "t1",
+            "t2",
+            "t3"
+          ],
+          "order_correct": true,
+          "best_ppl": 99.5895,
+          "gold_ppl": 99.5895,
+          "ppl_margin": 0.0,
+          "all_permutations": [
+            {
+              "order": [
+                "t1",
+                "t2",
+                "t3"
+              ],
+              "ppl": 99.5895
+            },
+            {
+              "order": [
+                "t3",
+                "t2",
+                "t1"
+              ],
+              "ppl": 104.0633
+            },
+            {
+              "order": [
+                "t1",
+                "t3",
+                "t2"
+              ],
+              "ppl": 106.1541
+            },
+            {
+              "order": [
+                "t3",
+                "t1",
+                "t2"
+              ],
+              "ppl": 108.5307
+            },
+            {
+              "order": [
+                "t2",
+                "t1",
+                "t3"
+              ],
+              "ppl": 112.2142
+            },
+            {
+              "order": [
+                "t2",
+                "t3",
+                "t1"
+              ],
+              "ppl": 117.6326
+            }
+          ],
+          "pairwise": [
+            {
+              "pair": "t1->t2",
+              "fwd_ppl": 139.2569,
+              "rev_ppl": 145.6731,
+              "correct_direction": true
+            },
+            {
+              "pair": "t1->t3",
+              "fwd_ppl": 127.5505,
+              "rev_ppl": 137.9244,
+              "correct_direction": true
+            },
+            {
+              "pair": "t2->t3",
+              "fwd_ppl": 88.9799,
+              "rev_ppl": 93.4953,
+              "correct_direction": true
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Web data to destination",
+          "gold_order": [
+            "t1",
+            "t2",
+            "t3"
+          ],
+          "best_order": [
+            "t2",
+            "t3",
+            "t1"
+          ],
+          "order_correct": false,
+          "best_ppl": 130.1518,
+          "gold_ppl": 139.5823,
+          "ppl_margin": 9.4305,
+          "all_permutations": [
+            {
+              "order": [
+                "t2",
+                "t3",
+                "t1"
+              ],
+              "ppl": 130.1518
+            },
+            {
+              "order": [
+                "t2",
+                "t1",
+                "t3"
+              ],
+              "ppl": 130.494
+            },
+            {
+              "order": [
+                "t3",
+                "t2",
+                "t1"
+              ],
+              "ppl": 135.6464
+            },
+            {
+              "order": [
+                "t1",
+                "t2",
+                "t3"
+              ],
+              "ppl": 139.5823
+            },
+            {
+              "order": [
+                "t3",
+                "t1",
+                "t2"
+              ],
+              "ppl": 143.1995
+            },
+            {
+              "order": [
+                "t1",
+                "t3",
+                "t2"
+              ],
+              "ppl": 144.8332
+            }
+          ],
+          "pairwise": [
+            {
+              "pair": "t1->t2",
+              "fwd_ppl": 155.2336,
+              "rev_ppl": 123.6777,
+              "correct_direction": false
+            },
+            {
+              "pair": "t1->t3",
+              "fwd_ppl": 178.287,
+              "rev_ppl": 165.8002,
+              "correct_direction": false
+            },
+            {
+              "pair": "t2->t3",
+              "fwd_ppl": 98.003,
+              "rev_ppl": 111.6532,
+              "correct_direction": true
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Plan, launch, review",
+          "gold_order": [
+            "t1",
+            "t2",
+            "t3"
+          ],
+          "best_order": [
+            "t3",
+            "t1",
+            "t2"
+          ],
+          "order_correct": false,
+          "best_ppl": 134.4939,
+          "gold_ppl": 153.1682,
+          "ppl_margin": 18.6743,
+          "all_permutations": [
+            {
+              "order": [
+                "t3",
+                "t1",
+                "t2"
+              ],
+              "ppl": 134.4939
+            },
+            {
+              "order": [
+                "t3",
+                "t2",
+                "t1"
+              ],
+              "ppl": 145.2197
+            },
+            {
+              "order": [
+                "t2",
+                "t1",
+                "t3"
+              ],
+              "ppl": 145.4827
+            },
+            {
+              "order": [
+                "t1",
+                "t2",
+                "t3"
+              ],
+              "ppl": 153.1682
+            },
+            {
+              "order": [
+                "t2",
+                "t3",
+                "t1"
+              ],
+              "ppl": 163.0472
+            },
+            {
+              "order": [
+                "t1",
+                "t3",
+                "t2"
+              ],
+              "ppl": 165.9917
+            }
+          ],
+          "pairwise": [
+            {
+              "pair": "t1->t2",
+              "fwd_ppl": 164.0036,
+              "rev_ppl": 156.1433,
+              "correct_direction": false
+            },
+            {
+              "pair": "t1->t3",
+              "fwd_ppl": 163.4766,
+              "rev_ppl": 140.5633,
+              "correct_direction": false
+            },
+            {
+              "pair": "t2->t3",
+              "fwd_ppl": 183.3724,
+              "rev_ppl": 172.1991,
+              "correct_direction": false
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "title": "Schema to profile",
+          "gold_order": [
+            "t1",
+            "t2",
+            "t3"
+          ],
+          "best_order": [
+            "t3",
+            "t1",
+            "t2"
+          ],
+          "order_correct": false,
+          "best_ppl": 85.0241,
+          "gold_ppl": 101.5917,
+          "ppl_margin": 16.5676,
+          "all_permutations": [
+            {
+              "order": [
+                "t3",
+                "t1",
+                "t2"
+              ],
+              "ppl": 85.0241
+            },
+            {
+              "order": [
+                "t3",
+                "t2",
+                "t1"
+              ],
+              "ppl": 93.6189
+            },
+            {
+              "order": [
+                "t1",
+                "t2",
+                "t3"
+              ],
+              "ppl": 101.5917
+            },
+            {
+              "order": [
+                "t2",
+                "t1",
+                "t3"
+              ],
+              "ppl": 114.6359
+            },
+            {
+              "order": [
+                "t1",
+                "t3",
+                "t2"
+              ],
+              "ppl": 122.7023
+            },
+            {
+              "order": [
+                "t2",
+                "t3",
+                "t1"
+              ],
+              "ppl": 129.872
+            }
+          ],
+          "pairwise": [
+            {
+              "pair": "t1->t2",
+              "fwd_ppl": 55.9892,
+              "rev_ppl": 64.2747,
+              "correct_direction": true
+            },
+            {
+              "pair": "t1->t3",
+              "fwd_ppl": 128.1399,
+              "rev_ppl": 99.3642,
+              "correct_direction": false
+            },
+            {
+              "pair": "t2->t3",
+              "fwd_ppl": 204.5993,
+              "rev_ppl": 168.0451,
+              "correct_direction": false
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "title": "Activate an audience",
+          "gold_order": [
+            "t1",
+            "t2",
+            "t3"
+          ],
+          "best_order": [
+            "t1",
+            "t2",
+            "t3"
+          ],
+          "order_correct": true,
+          "best_ppl": 106.9485,
+          "gold_ppl": 106.9485,
+          "ppl_margin": 0.0,
+          "all_permutations": [
+            {
+              "order": [
+                "t1",
+                "t2",
+                "t3"
+              ],
+              "ppl": 106.9485
+            },
+            {
+              "order": [
+                "t2",
+                "t3",
+                "t1"
+              ],
+              "ppl": 109.4008
+            },
+            {
+              "order": [
+                "t2",
+                "t1",
+                "t3"
+              ],
+              "ppl": 110.3158
+            },
+            {
+              "order": [
+                "t1",
+                "t3",
+                "t2"
+              ],
+              "ppl": 110.5525
+            },
+            {
+              "order": [
+                "t3",
+                "t1",
+                "t2"
+              ],
+              "ppl": 142.3019
+            },
+            {
+              "order": [
+                "t3",
+                "t2",
+                "t1"
+              ],
+              "ppl": 150.1632
+            }
+          ],
+          "pairwise": [
+            {
+              "pair": "t1->t2",
+              "fwd_ppl": 110.1498,
+              "rev_ppl": 130.4337,
+              "correct_direction": true
+            },
+            {
+              "pair": "t1->t3",
+              "fwd_ppl": 125.2363,
+              "rev_ppl": 150.2928,
+              "correct_direction": true
+            },
+            {
+              "pair": "t2->t3",
+              "fwd_ppl": 112.3771,
+              "rev_ppl": 135.2645,
+              "correct_direction": true
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "title": "Use a playbook",
+          "gold_order": [
+            "t1",
+            "t2",
+            "t3"
+          ],
+          "best_order": [
+            "t1",
+            "t2",
+            "t3"
+          ],
+          "order_correct": true,
+          "best_ppl": 124.5487,
+          "gold_ppl": 124.5487,
+          "ppl_margin": 0.0,
+          "all_permutations": [
+            {
+              "order": [
+                "t1",
+                "t2",
+                "t3"
+              ],
+              "ppl": 124.5487
+            },
+            {
+              "order": [
+                "t2",
+                "t3",
+                "t1"
+              ],
+              "ppl": 136.7339
+            },
+            {
+              "order": [
+                "t1",
+                "t3",
+                "t2"
+              ],
+              "ppl": 137.115
+            },
+            {
+              "order": [
+                "t2",
+                "t1",
+                "t3"
+              ],
+              "ppl": 140.2096
+            },
+            {
+              "order": [
+                "t3",
+                "t2",
+                "t1"
+              ],
+              "ppl": 158.6109
+            },
+            {
+              "order": [
+                "t3",
+                "t1",
+                "t2"
+              ],
+              "ppl": 163.6072
+            }
+          ],
+          "pairwise": [
+            {
+              "pair": "t1->t2",
+              "fwd_ppl": 129.7763,
+              "rev_ppl": 124.0096,
+              "correct_direction": false
+            },
+            {
+              "pair": "t1->t3",
+              "fwd_ppl": 168.4152,
+              "rev_ppl": 208.9331,
+              "correct_direction": true
+            },
+            {
+              "pair": "t2->t3",
+              "fwd_ppl": 129.4361,
+              "rev_ppl": 155.8457,
+              "correct_direction": true
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "title": "Personalize an offer",
+          "gold_order": [
+            "t1",
+            "t2",
+            "t3"
+          ],
+          "best_order": [
+            "t1",
+            "t2",
+            "t3"
+          ],
+          "order_correct": true,
+          "best_ppl": 142.3456,
+          "gold_ppl": 142.3456,
+          "ppl_margin": 0.0,
+          "all_permutations": [
+            {
+              "order": [
+                "t1",
+                "t2",
+                "t3"
+              ],
+              "ppl": 142.3456
+            },
+            {
+              "order": [
+                "t2",
+                "t3",
+                "t1"
+              ],
+              "ppl": 143.6054
+            },
+            {
+              "order": [
+                "t2",
+                "t1",
+                "t3"
+              ],
+              "ppl": 147.5593
+            },
+            {
+              "order": [
+                "t1",
+                "t3",
+                "t2"
+              ],
+              "ppl": 149.9568
+            },
+            {
+              "order": [
+                "t3",
+                "t2",
+                "t1"
+              ],
+              "ppl": 156.6193
+            },
+            {
+              "order": [
+                "t3",
+                "t1",
+                "t2"
+              ],
+              "ppl": 159.2495
+            }
+          ],
+          "pairwise": [
+            {
+              "pair": "t1->t2",
+              "fwd_ppl": 183.273,
+              "rev_ppl": 181.3251,
+              "correct_direction": false
+            },
+            {
+              "pair": "t1->t3",
+              "fwd_ppl": 106.2404,
+              "rev_ppl": 112.84,
+              "correct_direction": true
+            },
+            {
+              "pair": "t2->t3",
+              "fwd_ppl": 165.3611,
+              "rev_ppl": 186.9943,
+              "correct_direction": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "summary": [
+    {
+      "separator": "space",
+      "order_accuracy": 0.5,
+      "n_correct": 5,
+      "n_total": 10,
+      "pairwise_direction_acc": 0.5667
+    },
+    {
+      "separator": "eos",
+      "order_accuracy": 0.4,
+      "n_correct": 4,
+      "n_total": 10,
+      "pairwise_direction_acc": 0.5
+    }
+  ]
+}

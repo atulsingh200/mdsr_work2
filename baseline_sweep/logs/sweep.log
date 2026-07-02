@@ -133,3 +133,138 @@ cached BAAI/bge-large-en-v1.5
 2026-06-30 03:17:25 === PHASE 2 complete ===
 2026-06-30 03:17:25 === PHASE 3: Aggregating results ===
 2026-06-30 03:17:25 Done. Final results at /mnt/localssd/baseline_sweep/results/final_results.json
+2026-07-01 06:25:01 === PHASE 0: Pre-downloading 6 backbones (serial) ===
+2026-07-01 06:25:01   fetch microsoft/deberta-v3-large
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/390 [00:00<?, ?it/s]Loading weights: 100%|██████████| 390/390 [00:00<00:00, 34763.12it/s]
+[transformers] [1mDebertaV2Model LOAD REPORT[0m from: microsoft/deberta-v3-large
+Key                                     | Status     |  | 
+----------------------------------------+------------+--+-
+lm_predictions.lm_head.LayerNorm.bias   | UNEXPECTED |  | 
+lm_predictions.lm_head.dense.bias       | UNEXPECTED |  | 
+mask_predictions.LayerNorm.bias         | UNEXPECTED |  | 
+mask_predictions.LayerNorm.weight       | UNEXPECTED |  | 
+lm_predictions.lm_head.bias             | UNEXPECTED |  | 
+lm_predictions.lm_head.LayerNorm.weight | UNEXPECTED |  | 
+mask_predictions.dense.bias             | UNEXPECTED |  | 
+mask_predictions.dense.weight           | UNEXPECTED |  | 
+mask_predictions.classifier.bias        | UNEXPECTED |  | 
+mask_predictions.classifier.weight      | UNEXPECTED |  | 
+lm_predictions.lm_head.dense.weight     | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+cached microsoft/deberta-v3-large
+2026-07-01 06:25:09   fetch sentence-transformers/all-mpnet-base-v2
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 8122.88it/s]
+cached sentence-transformers/all-mpnet-base-v2
+2026-07-01 06:25:16   fetch sentence-transformers/all-MiniLM-L6-v2
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 6617.24it/s]
+cached sentence-transformers/all-MiniLM-L6-v2
+2026-07-01 06:25:22   fetch intfloat/e5-large-v2
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 7375.04it/s]
+cached intfloat/e5-large-v2
+2026-07-01 06:25:29   fetch BAAI/bge-base-en-v1.5
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 7637.80it/s]
+cached BAAI/bge-base-en-v1.5
+2026-07-01 06:25:35   fetch BAAI/bge-large-en-v1.5
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 8086.85it/s]
+cached BAAI/bge-large-en-v1.5
+2026-07-01 06:25:41 === PHASE 0 complete ===
+2026-07-01 06:25:41 === PHASE 1: Training (7 datasets × 6 models = 42 runs) ===
+2026-07-01 06:25:41 SKIP (already done): aep_causal_cls34/deberta-v3-large
+2026-07-01 06:25:41 SKIP (already done): aep_causal_cls34/all-mpnet-base-v2
+2026-07-01 06:25:41 SKIP (already done): aep_causal_cls34/all-MiniLM-L6-v2
+2026-07-01 06:25:41 SKIP (already done): aep_causal_cls34/e5-large-v2
+2026-07-01 06:25:41 SKIP (already done): aep_causal_cls34/bge-base-en-v1.5
+2026-07-01 06:25:41 SKIP (already done): aep_causal_cls34/bge-large-en-v1.5
+2026-07-01 06:25:41 SKIP (already done): aep_dataset/deberta-v3-large
+2026-07-01 06:25:41 SKIP (already done): aep_dataset/all-mpnet-base-v2
+2026-07-01 06:25:41 SKIP (already done): aep_dataset/all-MiniLM-L6-v2
+2026-07-01 06:25:41 SKIP (already done): aep_dataset/e5-large-v2
+2026-07-01 06:25:41 SKIP (already done): aep_dataset/bge-base-en-v1.5
+2026-07-01 06:25:41 SKIP (already done): aep_dataset/bge-large-en-v1.5
+2026-07-01 06:25:41 SKIP (already done): aep_causal_wf_v3/deberta-v3-large
+2026-07-01 06:25:41 SKIP (already done): aep_causal_wf_v3/all-mpnet-base-v2
+2026-07-01 06:25:41 SKIP (already done): aep_causal_wf_v3/all-MiniLM-L6-v2
+2026-07-01 06:25:41 SKIP (already done): aep_causal_wf_v3/e5-large-v2
+2026-07-01 06:25:41 SKIP (already done): aep_causal_wf_v3/bge-base-en-v1.5
+2026-07-01 06:25:41 SKIP (already done): aep_causal_wf_v3/bge-large-en-v1.5
+2026-07-01 06:25:41 SKIP (already done): ajo_doc_not_tier1/deberta-v3-large
+2026-07-01 06:25:41 SKIP (already done): ajo_doc_not_tier1/all-mpnet-base-v2
+2026-07-01 06:25:41 SKIP (already done): ajo_doc_not_tier1/all-MiniLM-L6-v2
+2026-07-01 06:25:41 SKIP (already done): ajo_doc_not_tier1/e5-large-v2
+2026-07-01 06:25:41 SKIP (already done): ajo_doc_not_tier1/bge-base-en-v1.5
+2026-07-01 06:25:41 SKIP (already done): ajo_doc_not_tier1/bge-large-en-v1.5
+2026-07-01 06:25:41 START GPU0: ajo_newstyle/deberta-v3-large  batch=8
+2026-07-01 06:25:41 SKIP (already done): ajo_newstyle/all-mpnet-base-v2
+2026-07-01 06:25:41 SKIP (already done): ajo_newstyle/all-MiniLM-L6-v2
+2026-07-01 06:25:41 START GPU1: ajo_newstyle/e5-large-v2  batch=16
+2026-07-01 06:25:41 SKIP (already done): ajo_newstyle/bge-base-en-v1.5
+2026-07-01 06:25:41 SKIP (already done): ajo_newstyle/bge-large-en-v1.5
+2026-07-01 06:25:41 START GPU2: new_aep_wf_scrap/deberta-v3-large  batch=8
+2026-07-01 06:25:41 SKIP (already done): new_aep_wf_scrap/all-mpnet-base-v2
+2026-07-01 06:25:41 SKIP (already done): new_aep_wf_scrap/all-MiniLM-L6-v2
+2026-07-01 06:25:41 SKIP (already done): new_aep_wf_scrap/e5-large-v2
+2026-07-01 06:25:41 SKIP (already done): new_aep_wf_scrap/bge-base-en-v1.5
+2026-07-01 06:25:41 SKIP (already done): new_aep_wf_scrap/bge-large-en-v1.5
+2026-07-01 06:25:41 START GPU3: new_ajo_workflows/deberta-v3-large  batch=8
+2026-07-01 06:25:41 SKIP (already done): new_ajo_workflows/all-mpnet-base-v2
+2026-07-01 06:25:41 SKIP (already done): new_ajo_workflows/all-MiniLM-L6-v2
+2026-07-01 06:55:42 START GPU1: new_ajo_workflows/e5-large-v2  batch=16
+2026-07-01 06:55:42 SKIP (already done): new_ajo_workflows/bge-base-en-v1.5
+2026-07-01 06:55:42 SKIP (already done): new_ajo_workflows/bge-large-en-v1.5
+2026-07-01 06:55:42 All jobs submitted — waiting for completion ...
+2026-07-01 10:10:23 === PHASE 1 complete ===
+2026-07-01 10:10:23 === PHASE 2: OOD evaluation (max 4 concurrent, 1 per GPU) ===
+2026-07-01 10:10:23 SKIP OOD (already done): aep_causal_cls34/deberta-v3-large
+2026-07-01 10:10:23 SKIP OOD (already done): aep_causal_cls34/all-mpnet-base-v2
+2026-07-01 10:10:23 SKIP OOD (already done): aep_causal_cls34/all-MiniLM-L6-v2
+2026-07-01 10:10:23 SKIP OOD (already done): aep_causal_cls34/e5-large-v2
+2026-07-01 10:10:23 SKIP OOD (already done): aep_causal_cls34/bge-base-en-v1.5
+2026-07-01 10:10:23 SKIP OOD (already done): aep_causal_cls34/bge-large-en-v1.5
+2026-07-01 10:10:23 SKIP OOD (already done): aep_dataset/deberta-v3-large
+2026-07-01 10:10:23 SKIP OOD (already done): aep_dataset/all-mpnet-base-v2
+2026-07-01 10:10:23 SKIP OOD (already done): aep_dataset/all-MiniLM-L6-v2
+2026-07-01 10:10:23 SKIP OOD (already done): aep_dataset/e5-large-v2
+2026-07-01 10:10:23 SKIP OOD (already done): aep_dataset/bge-base-en-v1.5
+2026-07-01 10:10:23 SKIP OOD (already done): aep_dataset/bge-large-en-v1.5
+2026-07-01 10:10:23 SKIP OOD (already done): aep_causal_wf_v3/deberta-v3-large
+2026-07-01 10:10:23 SKIP OOD (already done): aep_causal_wf_v3/all-mpnet-base-v2
+2026-07-01 10:10:23 SKIP OOD (already done): aep_causal_wf_v3/all-MiniLM-L6-v2
+2026-07-01 10:10:23 SKIP OOD (already done): aep_causal_wf_v3/e5-large-v2
+2026-07-01 10:10:23 SKIP OOD (already done): aep_causal_wf_v3/bge-base-en-v1.5
+2026-07-01 10:10:23 SKIP OOD (already done): aep_causal_wf_v3/bge-large-en-v1.5
+2026-07-01 10:10:23 SKIP OOD (already done): ajo_doc_not_tier1/deberta-v3-large
+2026-07-01 10:10:23 SKIP OOD (already done): ajo_doc_not_tier1/all-mpnet-base-v2
+2026-07-01 10:10:23 SKIP OOD (already done): ajo_doc_not_tier1/all-MiniLM-L6-v2
+2026-07-01 10:10:23 SKIP OOD (already done): ajo_doc_not_tier1/e5-large-v2
+2026-07-01 10:10:23 SKIP OOD (already done): ajo_doc_not_tier1/bge-base-en-v1.5
+2026-07-01 10:10:23 SKIP OOD (already done): ajo_doc_not_tier1/bge-large-en-v1.5
+2026-07-01 10:10:23 OOD eval GPU0: ajo_newstyle/deberta-v3-large
+2026-07-01 10:10:23 SKIP OOD (already done): ajo_newstyle/all-mpnet-base-v2
+2026-07-01 10:10:23 SKIP OOD (already done): ajo_newstyle/all-MiniLM-L6-v2
+2026-07-01 10:10:23 OOD eval GPU1: ajo_newstyle/e5-large-v2
+2026-07-01 10:10:23 SKIP OOD (already done): ajo_newstyle/bge-base-en-v1.5
+2026-07-01 10:10:23 SKIP OOD (already done): ajo_newstyle/bge-large-en-v1.5
+2026-07-01 10:10:23 OOD eval GPU2: new_aep_wf_scrap/deberta-v3-large
+2026-07-01 10:10:23 SKIP OOD (already done): new_aep_wf_scrap/all-mpnet-base-v2
+2026-07-01 10:10:23 SKIP OOD (already done): new_aep_wf_scrap/all-MiniLM-L6-v2
+2026-07-01 10:10:23 SKIP OOD (already done): new_aep_wf_scrap/e5-large-v2
+2026-07-01 10:10:23 SKIP OOD (already done): new_aep_wf_scrap/bge-base-en-v1.5
+2026-07-01 10:10:23 SKIP OOD (already done): new_aep_wf_scrap/bge-large-en-v1.5
+2026-07-01 10:10:23 OOD eval GPU3: new_ajo_workflows/deberta-v3-large
+2026-07-01 10:10:23 SKIP OOD (already done): new_ajo_workflows/all-mpnet-base-v2
+2026-07-01 10:10:23 SKIP OOD (already done): new_ajo_workflows/all-MiniLM-L6-v2
+2026-07-01 10:10:53 OOD eval GPU0: new_ajo_workflows/e5-large-v2
+2026-07-01 10:10:53 SKIP OOD (already done): new_ajo_workflows/bge-base-en-v1.5
+2026-07-01 10:10:53 SKIP OOD (already done): new_ajo_workflows/bge-large-en-v1.5
+2026-07-01 10:10:53 All OOD evals submitted — waiting for completion ...
+2026-07-01 10:11:05 === PHASE 2 complete ===
+2026-07-01 10:11:05 === PHASE 3: Aggregating results ===
+2026-07-01 10:11:05 Done. Final results at /mnt/localssd/baseline_sweep/results/final_results.json

@@ -1,0 +1,569 @@
+% =====================================================================
+% Bibliography for Section 6 (rl:) and Section 7 (ord:)
+% Section 6: Reasoning rerankers and RL for ranking
+% Section 7: Sentence ordering and rank aggregation
+% =====================================================================
+
+% ---------------------------------------------------------------------
+% SECTION 6 -- rl:  reasoning rerankers & RL
+% ---------------------------------------------------------------------
+
+% --- LLM reranking paradigms (pointwise/pairwise/listwise/setwise) ---
+@misc{rl:sun2023rankgpt,
+  title        = {Is {ChatGPT} Good at Search? Investigating Large Language Models as Re-Ranking Agents},
+  author       = {Sun, Weiwei and Yan, Lingyong and Ma, Xinyu and Wang, Shuaiqiang and Ren, Pengjie and Chen, Zhumin and Yin, Dawei and Ren, Zhaochun},
+  year         = {2023},
+  eprint       = {2304.09542},
+  archivePrefix= {arXiv},
+  note         = {EMNLP 2023; arXiv:2304.09542}
+}
+
+@misc{rl:pradeep2023rankzephyr,
+  title        = {{RankZephyr}: Effective and Robust Zero-Shot Listwise Reranking is a Breeze!},
+  author       = {Pradeep, Ronak and Sharifymoghaddam, Sahel and Lin, Jimmy},
+  year         = {2023},
+  eprint       = {2312.02724},
+  archivePrefix= {arXiv},
+  note         = {arXiv:2312.02724}
+}
+
+@misc{rl:pradeep2023rankvicuna,
+  title        = {{RankVicuna}: Zero-Shot Listwise Document Reranking with Open-Source Large Language Models},
+  author       = {Pradeep, Ronak and Sharifymoghaddam, Sahel and Lin, Jimmy},
+  year         = {2023},
+  eprint       = {2309.15088},
+  archivePrefix= {arXiv},
+  note         = {arXiv:2309.15088}
+}
+
+@misc{rl:zhuang2024setwise,
+  title        = {A Setwise Approach for Effective and Highly Efficient Zero-shot Ranking with Large Language Models},
+  author       = {Zhuang, Shengyao and Zhuang, Honglei and Koopman, Bevan and Zuccon, Guido},
+  year         = {2024},
+  eprint       = {2310.09497},
+  archivePrefix= {arXiv},
+  note         = {SIGIR 2024; arXiv:2310.09497}
+}
+
+@misc{rl:chordia2025insertrank,
+  title        = {{InsertRank}: {LLMs} can reason over {BM25} scores to Improve Listwise Reranking},
+  author       = {Chordia, Rahul and others},
+  year         = {2025},
+  eprint       = {2506.14086},
+  archivePrefix= {arXiv},
+  note         = {arXiv:2506.14086}
+}
+
+@misc{rl:zhou2025rerankingsurvey,
+  title        = {Large Language Models for Reranking: A Survey},
+  author       = {Zhou, Yinxin and Luo, Qin and Feng, Bin and Wang, Bang},
+  year         = {2025},
+  howpublished = {TechRxiv},
+  note         = {DOI:10.36227/techrxiv.176300630.01740917/v1}
+}
+
+% --- reasoning rerankers ---
+@misc{rl:zhuang2025rankr1,
+  title        = {{Rank-R1}: Enhancing Reasoning in {LLM}-based Document Rerankers via Reinforcement Learning},
+  author       = {Zhuang, Shengyao and Ma, Xueguang and Koopman, Bevan and Lin, Jimmy and Zuccon, Guido},
+  year         = {2025},
+  eprint       = {2503.06034},
+  archivePrefix= {arXiv},
+  note         = {arXiv:2503.06034}
+}
+
+@misc{rl:zhang2025rearank,
+  title        = {{REARANK}: Reasoning Re-ranking Agent via Reinforcement Learning},
+  author       = {Zhang, Le and others},
+  year         = {2025},
+  eprint       = {2505.20046},
+  archivePrefix= {arXiv},
+  note         = {EMNLP 2025; arXiv:2505.20046}
+}
+
+@misc{rl:tfrank2025,
+  title        = {{TFRank}: Think-Free Reasoning Enables Practical Pointwise {LLM} Ranking},
+  author       = {Fan, Jia and others},
+  year         = {2025},
+  eprint       = {2508.09539},
+  archivePrefix= {arXiv},
+  note         = {arXiv:2508.09539}
+}
+
+@misc{rl:weller2025rank1,
+  title        = {{Rank1}: Test-Time Compute for Reranking in Information Retrieval},
+  author       = {Weller, Orion and Van Durme, Benjamin and Lawrie, Dawn and others},
+  year         = {2025},
+  eprint       = {2502.18418},
+  archivePrefix= {arXiv},
+  note         = {arXiv:2502.18418}
+}
+
+@misc{rl:cotfallsshort2025,
+  title        = {Rethinking Reasoning in Document Ranking: Why Chain-of-Thought Falls Short},
+  author       = {Anonymous},
+  year         = {2025},
+  eprint       = {2510.08985},
+  archivePrefix= {arXiv},
+  note         = {arXiv:2510.08985}
+}
+
+@misc{rl:rankgrpo2025,
+  title        = {{Rank-GRPO}: Training {LLM}-based Conversational Recommender Systems with Reinforcement Learning},
+  author       = {Zhu, Yaochen and others},
+  year         = {2025},
+  eprint       = {2510.20150},
+  archivePrefix= {arXiv},
+  note         = {arXiv:2510.20150}
+}
+
+% --- RL algorithms for reasoning ---
+@misc{rl:shao2024grpo,
+  title        = {{DeepSeekMath}: Pushing the Limits of Mathematical Reasoning in Open Language Models},
+  author       = {Shao, Zhihong and Wang, Peiyi and Zhu, Qihao and Xu, Runxin and Song, Junxiao and Zhang, Mingchuan and Li, Y. K. and Wu, Y. and Guo, Daya},
+  year         = {2024},
+  eprint       = {2402.03300},
+  archivePrefix= {arXiv},
+  note         = {Introduces GRPO; arXiv:2402.03300}
+}
+
+@misc{rl:deepseekr1,
+  title        = {{DeepSeek-R1}: Incentivizing Reasoning Capability in {LLMs} via Reinforcement Learning},
+  author       = {{DeepSeek-AI}},
+  year         = {2025},
+  eprint       = {2501.12948},
+  archivePrefix= {arXiv},
+  note         = {arXiv:2501.12948}
+}
+
+@misc{rl:liu2025drgrpo,
+  title        = {Understanding {R1-Zero}-Like Training: A Critical Perspective},
+  author       = {Liu, Zichen and Chen, Changyu and Li, Wenjun and Pang, Tianyu and Du, Chao and Lin, Min},
+  year         = {2025},
+  eprint       = {2503.20783},
+  archivePrefix= {arXiv},
+  note         = {Introduces Dr.\ GRPO; arXiv:2503.20783}
+}
+
+@misc{rl:yu2025dapo,
+  title        = {{DAPO}: An Open-Source {LLM} Reinforcement Learning System at Scale},
+  author       = {Yu, Qiying and others},
+  year         = {2025},
+  eprint       = {2503.14476},
+  archivePrefix= {arXiv},
+  note         = {arXiv:2503.14476}
+}
+
+@misc{rl:sgrpo2025,
+  title        = {{S-GRPO}: Early Exit via Reinforcement Learning in Reasoning Models},
+  author       = {Dai, Muzhi and others},
+  year         = {2025},
+  eprint       = {2505.07686},
+  archivePrefix= {arXiv},
+  note         = {arXiv:2505.07686}
+}
+
+@misc{rl:ivison2024ppodpo,
+  title        = {Unpacking {DPO} and {PPO}: Disentangling Best Practices for Learning from Preference Feedback},
+  author       = {Ivison, Hamish and Wang, Yizhong and Liu, Jiacheng and Wu, Zeqiu and Pyatkin, Valentina and Lambert, Nathan and Smith, Noah A. and Choi, Yejin and Hajishirzi, Hannaneh},
+  year         = {2024},
+  eprint       = {2406.09279},
+  archivePrefix= {arXiv},
+  note         = {arXiv:2406.09279}
+}
+
+@misc{rl:rafailov2023dpo,
+  title        = {Direct Preference Optimization: Your Language Model is Secretly a Reward Model},
+  author       = {Rafailov, Rafael and Sharma, Archit and Mitchell, Eric and Ermon, Stefano and Manning, Christopher D. and Finn, Chelsea},
+  year         = {2023},
+  eprint       = {2305.18290},
+  archivePrefix= {arXiv},
+  note         = {NeurIPS 2023; arXiv:2305.18290}
+}
+
+@misc{rl:schulman2017ppo,
+  title        = {Proximal Policy Optimization Algorithms},
+  author       = {Schulman, John and Wolski, Filip and Dhariwal, Prafulla and Radford, Alec and Klimov, Oleg},
+  year         = {2017},
+  eprint       = {1707.06347},
+  archivePrefix= {arXiv},
+  note         = {arXiv:1707.06347}
+}
+
+% --- RL in small models ---
+@misc{rl:dang2025openrs,
+  title        = {Reinforcement Learning for Reasoning in Small {LLMs}: What Works and What Doesn't},
+  author       = {Dang, Quy-Anh and Ngo, Chris},
+  year         = {2025},
+  eprint       = {2503.16219},
+  archivePrefix= {arXiv},
+  note         = {Open-RS; arXiv:2503.16219}
+}
+
+@misc{rl:wang2025tina,
+  title        = {{Tina}: Tiny Reasoning Models via {LoRA}},
+  author       = {Wang, Shangshang and others},
+  year         = {2025},
+  eprint       = {2504.15777},
+  archivePrefix= {arXiv},
+  note         = {arXiv:2504.15777}
+}
+
+@misc{rl:chu2025sftrl,
+  title        = {{SFT} Memorizes, {RL} Generalizes: A Comparative Study of Foundation Model Post-training},
+  author       = {Chu, Tianzhe and Zhai, Yuexiang and Yang, Jihan and Tong, Shengbang and Xie, Saining and Schuurmans, Dale and Le, Quoc V. and Levine, Sergey and Ma, Yi},
+  year         = {2025},
+  eprint       = {2501.17161},
+  archivePrefix= {arXiv},
+  note         = {ICML 2025; arXiv:2501.17161}
+}
+
+% --- distillation of reasoning ---
+@misc{rl:hsieh2023distillstep,
+  title        = {Distilling Step-by-Step! Outperforming Larger Language Models with Less Training Data and Smaller Model Sizes},
+  author       = {Hsieh, Cheng-Yu and Li, Chun-Liang and Yeh, Chih-Kuan and Nakhost, Hootan and Fujii, Yasuhisa and Ratner, Alexander and Krishna, Ranjay and Lee, Chen-Yu and Pfister, Tomas},
+  year         = {2023},
+  eprint       = {2305.02301},
+  archivePrefix= {arXiv},
+  note         = {ACL 2023 Findings; arXiv:2305.02301}
+}
+
+@misc{rl:zelikman2022star,
+  title        = {{STaR}: Bootstrapping Reasoning with Reasoning},
+  author       = {Zelikman, Eric and Wu, Yuhuai and Mu, Jesse and Goodman, Noah D.},
+  year         = {2022},
+  eprint       = {2203.14465},
+  archivePrefix= {arXiv},
+  note         = {NeurIPS 2022; arXiv:2203.14465}
+}
+
+@misc{rl:yuan2023rft,
+  title        = {Scaling Relationship on Learning Mathematical Reasoning with Large Language Models},
+  author       = {Yuan, Zheng and Yuan, Hongyi and Li, Chengpeng and Dong, Guanting and Lu, Keming and Tan, Chuanqi and Zhou, Chang and Zhou, Jingren},
+  year         = {2023},
+  eprint       = {2308.01825},
+  archivePrefix= {arXiv},
+  note         = {Rejection-sampling fine-tuning (RFT); arXiv:2308.01825}
+}
+
+@misc{rl:li2023scotd,
+  title        = {Symbolic Chain-of-Thought Distillation: Small Models Can Also ``Think'' Step-by-Step},
+  author       = {Li, Liunian Harold and Hessel, Jack and Yu, Youngjae and Ren, Xiang and Chang, Kai-Wei and Choi, Yejin},
+  year         = {2023},
+  eprint       = {2306.14050},
+  archivePrefix= {arXiv},
+  note         = {ACL 2023; arXiv:2306.14050}
+}
+
+@misc{rl:magister2022teaching,
+  title        = {Teaching Small Language Models to Reason},
+  author       = {Magister, Lucie Charlotte and Mallinson, Jonathan and Adamek, Jakub and Malmi, Eric and Severyn, Aliaksei},
+  year         = {2022},
+  eprint       = {2212.08410},
+  archivePrefix= {arXiv},
+  note         = {arXiv:2212.08410}
+}
+
+@misc{rl:patnaik2025collate,
+  title        = {Learning Together to Perform Better: Teaching Small-Scale {LLMs} to Collaborate via Preferential Rationale Tuning},
+  author       = {Patnaik, Sohan and Aggarwal, Milan and Bhatia, Sumit and Krishnamurthy, Balaji},
+  year         = {2025},
+  eprint       = {2506.02519},
+  archivePrefix= {arXiv},
+  note         = {COLLATE; ACL 2025 Main; arXiv:2506.02519}
+}
+
+@misc{rl:camburu2018esnli,
+  title        = {e-{SNLI}: Natural Language Inference with Natural Language Explanations},
+  author       = {Camburu, Oana-Maria and Rockt{\"a}schel, Tim and Lukasiewicz, Thomas and Blunsom, Phil},
+  year         = {2018},
+  eprint       = {1812.01193},
+  archivePrefix= {arXiv},
+  note         = {NeurIPS 2018; arXiv:1812.01193}
+}
+
+% =====================================================================
+% SECTION 7 -- ord:  sentence ordering & rank aggregation
+% =====================================================================
+
+% --- sentence/step ordering ---
+@misc{ord:prabhumoye2020btsort,
+  title        = {Topological Sort for Sentence Ordering},
+  author       = {Prabhumoye, Shrimai and Salakhutdinov, Ruslan and Black, Alan W},
+  year         = {2020},
+  eprint       = {2005.00432},
+  archivePrefix= {arXiv},
+  note         = {ACL 2020; arXiv:2005.00432}
+}
+
+@misc{ord:chen2016neural,
+  title        = {Neural Sentence Ordering},
+  author       = {Chen, Xinchi and Qiu, Xipeng and Huang, Xuanjing},
+  year         = {2016},
+  eprint       = {1607.06952},
+  archivePrefix= {arXiv},
+  note         = {arXiv:1607.06952}
+}
+
+@misc{ord:gong2016pointer,
+  title        = {End-to-End Neural Sentence Ordering Using Pointer Network},
+  author       = {Gong, Jingjing and Chen, Xinchi and Qiu, Xipeng and Huang, Xuanjing},
+  year         = {2016},
+  eprint       = {1611.04953},
+  archivePrefix= {arXiv},
+  note         = {arXiv:1611.04953}
+}
+
+@misc{ord:logeswaran2018sentence,
+  title        = {Sentence Ordering and Coherence Modeling using Recurrent Neural Networks},
+  author       = {Logeswaran, Lajanugen and Lee, Honglak and Radev, Dragomir},
+  year         = {2018},
+  eprint       = {1611.02654},
+  archivePrefix= {arXiv},
+  note         = {AAAI 2018; arXiv:1611.02654}
+}
+
+@misc{ord:cui2020berson,
+  title        = {{BERT}-enhanced Relational Sentence Ordering Network},
+  author       = {Cui, Baiyun and Li, Yingming and Zhang, Zhongfei},
+  year         = {2020},
+  note         = {BERSON; EMNLP 2020, ACL Anthology 2020.emnlp-main.511}
+}
+
+@misc{ord:kumar2020ranktxnet,
+  title        = {Deep Attentive Ranking Networks for Learning to Order Sentences},
+  author       = {Kumar, Pawan and Brahma, Dhanajit and Karnick, Harish and Rai, Piyush},
+  year         = {2020},
+  eprint       = {2001.00056},
+  archivePrefix= {arXiv},
+  note         = {RankTxNet; AAAI 2020; arXiv:2001.00056}
+}
+
+@misc{ord:rebart2021,
+  title        = {Is Everything in Order? A Simple Way to Order Sentences},
+  author       = {Basu Roy Chowdhury, Somnath and Brahman, Faeze and Chaturvedi, Snigdha},
+  year         = {2021},
+  eprint       = {2104.07064},
+  archivePrefix= {arXiv},
+  note         = {Re-BART; EMNLP 2021; arXiv:2104.07064}
+}
+
+% --- rank aggregation / pairwise models ---
+@article{ord:bradley1952,
+  title        = {Rank Analysis of Incomplete Block Designs: I. The Method of Paired Comparisons},
+  author       = {Bradley, Ralph Allan and Terry, Milton E.},
+  journal      = {Biometrika},
+  volume       = {39},
+  number       = {3/4},
+  pages        = {324--345},
+  year         = {1952}
+}
+
+@inproceedings{ord:maystre2015plackettluce,
+  title        = {Fast and Accurate Inference of {Plackett--Luce} Models},
+  author       = {Maystre, Lucas and Grossglauser, Matthias},
+  booktitle    = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year         = {2015}
+}
+
+@misc{ord:negahban2017rankcentrality,
+  title        = {Rank Centrality: Ranking from Pairwise Comparisons},
+  author       = {Negahban, Sahand and Oh, Sewoong and Shah, Devavrat},
+  year         = {2017},
+  eprint       = {1209.1688},
+  archivePrefix= {arXiv},
+  note         = {Operations Research 65(1):266--287; arXiv:1209.1688}
+}
+
+@article{ord:chen2019spectral,
+  title        = {Spectral Method and Regularized {MLE} Are Both Optimal for Top-{K} Ranking},
+  author       = {Chen, Yuxin and Fan, Jianqing and Ma, Cong and Wang, Kaizheng},
+  journal      = {Annals of Statistics},
+  volume       = {47},
+  number       = {4},
+  pages        = {2204--2235},
+  year         = {2019}
+}
+
+@misc{ord:jiang2011hodgerank,
+  title        = {Statistical Ranking and Combinatorial Hodge Theory},
+  author       = {Jiang, Xiaoye and Lim, Lek-Heng and Yao, Yuan and Ye, Yinyu},
+  year         = {2011},
+  eprint       = {0811.1067},
+  archivePrefix= {arXiv},
+  note         = {Mathematical Programming 127(1):203--244; arXiv:0811.1067}
+}
+
+@article{ord:shah2017simple,
+  title        = {Simple, Robust and Optimal Ranking from Pairwise Comparisons},
+  author       = {Shah, Nihar B. and Wainwright, Martin J.},
+  journal      = {Journal of Machine Learning Research},
+  volume       = {18},
+  number       = {199},
+  pages        = {1--38},
+  year         = {2017}
+}
+
+@misc{ord:choix,
+  title        = {choix: Inference Algorithms for Models Based on {Luce}'s Choice Axiom},
+  author       = {Maystre, Lucas},
+  year         = {2018},
+  howpublished = {Software library},
+  note         = {\url{https://github.com/lucasmaystre/choix}}
+}
+
+% --- feedback arc set / Kemeny ---
+@inproceedings{ord:karp1972,
+  title        = {Reducibility Among Combinatorial Problems},
+  author       = {Karp, Richard M.},
+  booktitle    = {Complexity of Computer Computations},
+  pages        = {85--103},
+  year         = {1972}
+}
+
+@article{ord:eades1993fas,
+  title        = {A Fast and Effective Heuristic for the Feedback Arc Set Problem},
+  author       = {Eades, Peter and Lin, Xuemin and Smyth, W. F.},
+  journal      = {Information Processing Letters},
+  volume       = {47},
+  number       = {6},
+  pages        = {319--323},
+  year         = {1993}
+}
+
+@inproceedings{ord:kenyon2007fast,
+  title        = {How to Rank with Few Errors},
+  author       = {Kenyon-Mathieu, Claire and Schudy, Warren},
+  booktitle    = {Proceedings of the 39th Annual ACM Symposium on Theory of Computing (STOC)},
+  pages        = {95--103},
+  year         = {2007}
+}
+
+@article{ord:bartholdi1989kemeny,
+  title        = {Voting Schemes for Which It Can Be Difficult to Tell Who Won the Election},
+  author       = {Bartholdi, John and Tovey, Craig A. and Trick, Michael A.},
+  journal      = {Social Choice and Welfare},
+  volume       = {6},
+  number       = {2},
+  pages        = {157--165},
+  year         = {1989}
+}
+
+@inproceedings{ord:dwork2001rank,
+  title        = {Rank Aggregation Methods for the Web},
+  author       = {Dwork, Cynthia and Kumar, Ravi and Naor, Moni and Sivakumar, D.},
+  booktitle    = {Proceedings of the 10th International Conference on World Wide Web (WWW)},
+  pages        = {613--622},
+  year         = {2001}
+}
+
+@article{ord:alon2006ranking,
+  title        = {Ranking Tournaments},
+  author       = {Alon, Noga},
+  journal      = {SIAM Journal on Discrete Mathematics},
+  volume       = {20},
+  number       = {1},
+  pages        = {137--142},
+  year         = {2006}
+}
+
+@misc{ord:igraph,
+  title        = {igraph: Network Analysis and Visualization},
+  author       = {Csardi, Gabor and Nepusz, Tamas},
+  year         = {2006},
+  howpublished = {Software library; provides {\tt feedback\_arc\_set}},
+  note         = {InterJournal Complex Systems 1695}
+}
+
+% --- partial orders & metrics ---
+@article{ord:dilworth1950,
+  title        = {A Decomposition Theorem for Partially Ordered Sets},
+  author       = {Dilworth, Robert P.},
+  journal      = {Annals of Mathematics},
+  volume       = {51},
+  number       = {1},
+  pages        = {161--166},
+  year         = {1950}
+}
+
+@article{ord:kendall1938,
+  title        = {A New Measure of Rank Correlation},
+  author       = {Kendall, Maurice G.},
+  journal      = {Biometrika},
+  volume       = {30},
+  number       = {1/2},
+  pages        = {81--93},
+  year         = {1938}
+}
+
+@article{ord:goodman1954,
+  title        = {Measures of Association for Cross Classifications},
+  author       = {Goodman, Leo A. and Kruskal, William H.},
+  journal      = {Journal of the American Statistical Association},
+  volume       = {49},
+  number       = {268},
+  pages        = {732--764},
+  year         = {1954}
+}
+
+@article{ord:fagin2006partial,
+  title        = {Comparing Partial Rankings},
+  author       = {Fagin, Ronald and Kumar, Ravi and Mahdian, Mohammad and Sivakumar, D. and Vee, Erik},
+  journal      = {SIAM Journal on Discrete Mathematics},
+  volume       = {20},
+  number       = {3},
+  pages        = {628--648},
+  year         = {2006}
+}
+
+@article{ord:fagin2003topk,
+  title        = {Comparing Top k Lists},
+  author       = {Fagin, Ronald and Kumar, Ravi and Sivakumar, D.},
+  journal      = {SIAM Journal on Discrete Mathematics},
+  volume       = {17},
+  number       = {1},
+  pages        = {134--160},
+  year         = {2003}
+}
+
+% --- listwise losses ---
+@inproceedings{ord:cao2007listnet,
+  title        = {Learning to Rank: From Pairwise Approach to Listwise Approach},
+  author       = {Cao, Zhe and Qin, Tao and Liu, Tie-Yan and Tsai, Ming-Feng and Li, Hang},
+  booktitle    = {Proceedings of the 24th International Conference on Machine Learning (ICML)},
+  pages        = {129--136},
+  year         = {2007}
+}
+
+@inproceedings{ord:xia2008listmle,
+  title        = {Listwise Approach to Learning to Rank: Theory and Algorithm},
+  author       = {Xia, Fen and Liu, Tie-Yan and Wang, Jue and Zhang, Wensheng and Li, Hang},
+  booktitle    = {Proceedings of the 25th International Conference on Machine Learning (ICML)},
+  pages        = {1192--1199},
+  year         = {2008}
+}
+
+% --- calibration ---
+@inproceedings{ord:guo2017calibration,
+  title        = {On Calibration of Modern Neural Networks},
+  author       = {Guo, Chuan and Pleiss, Geoff and Sun, Yu and Weinberger, Kilian Q.},
+  booktitle    = {Proceedings of the 34th International Conference on Machine Learning (ICML)},
+  pages        = {1321--1330},
+  year         = {2017}
+}
+
+@inproceedings{ord:platt1999,
+  title        = {Probabilistic Outputs for Support Vector Machines and Comparisons to Regularized Likelihood Methods},
+  author       = {Platt, John},
+  booktitle    = {Advances in Large Margin Classifiers},
+  pages        = {61--74},
+  year         = {1999}
+}
+
+@inproceedings{ord:zadrozny2002isotonic,
+  title        = {Transforming Classifier Scores into Accurate Multiclass Probability Estimates},
+  author       = {Zadrozny, Bianca and Elkan, Charles},
+  booktitle    = {Proceedings of the 8th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD)},
+  pages        = {694--699},
+  year         = {2002}
+}

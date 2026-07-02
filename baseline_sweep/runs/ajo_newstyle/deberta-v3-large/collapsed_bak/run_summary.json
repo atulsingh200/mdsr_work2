@@ -1,0 +1,18 @@
+{
+  "dataset_slug": "ajo_newstyle",
+  "model_slug": "deberta-v3-large",
+  "base_model": "microsoft/deberta-v3-large",
+  "schema": "newstyle",
+  "best_val_acc": 0.503063,
+  "best_val_auc": 0.505812,
+  "test_acc": 0.500191,
+  "test_auc": 0.509856,
+  "test_f1": 0.666837,
+  "test_loss": 0.695243,
+  "n_train": 20897,
+  "n_val": 2612,
+  "n_test": 2613,
+  "epochs": 4,
+  "batch_size": 8,
+  "max_seq_len": 512
+}

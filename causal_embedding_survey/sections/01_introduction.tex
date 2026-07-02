@@ -1,0 +1,75 @@
+\section{Introduction}
+
+\subsection{Motivation}
+Enterprise documentation is overwhelmingly \emph{procedural}: it tells a user how to
+accomplish a goal through an ordered sequence of steps. Adobe Experience Platform
+(\aep) and Adobe Journey Optimizer (\ajo) ship thousands of documentation pages and
+video tutorials describing how to build audiences, enrich profiles, design journeys, and
+orchestrate campaigns. A retrieval or assistant system over this corpus must do more than
+return topically similar passages---it must understand \emph{what comes before what}.
+Concretely, three downstream capabilities motivate this survey:
+
+\begin{enumerate}[leftmargin=1.4em,itemsep=0.15em]
+  \item \textbf{Directional causal judgment.} Given two pieces of text
+  (steps, phases, or doc fragments) $t_1$ and $t_2$, estimate
+  $P(t_1 \text{ causally precedes / enables } t_2)$.
+  \item \textbf{Follow-up question reranking.} Given a user question, order a slate of
+  candidate follow-up questions by logical/causal progression, not just relevance.
+  \item \textbf{Workflow ordering.} Given the unordered steps of a workflow, sort them
+  into the correct ascending execution order.
+\end{enumerate}
+
+All three rest on a single primitive---a \emph{directional}, asymmetric notion of
+precedence---that standard semantic embeddings, built around symmetric cosine
+similarity, do not natively provide. We call a model that captures this primitive a
+\emph{causal embedding model}, and we use the term deliberately broadly: it spans
+asymmetric scoring heads over encoders, order/box/hyperbolic geometries, cross-encoder
+reasoners, and small generative rerankers. The foundations section clarifies precisely
+which rung of Pearl's causal ladder this task occupies (largely structural precedence,
+not intervention).
+
+\subsection{Why this is hard}
+Three difficulties recur throughout the survey. First, \emph{symmetry}: the workhorse
+similarity function $\cos(\mathbf{a},\mathbf{b})$ is symmetric, so a vanilla embedding
+cannot, by construction, distinguish ``$A$ enables $B$'' from ``$B$ enables $A$.''
+Second, \emph{causal direction is genuinely hard}: even frontier LLMs perform poorly on
+pure causal-direction benchmarks, and supervised systems cap well below ceiling. Third,
+and most consequentially for us, \emph{local correctness does not compose into global
+correctness}: a model can be accurate on most individual pairs yet still produce a wholly
+wrong global order, because the step that turns $O(n^2)$ noisy pairwise judgments into a
+single ranking is fragile. In this project, a DeBERTa-v3 cross-encoder that orders a
+6-step workflow nearly correctly and scores 21/30 on pairwise direction nonetheless
+yields \textbf{0/30} correct \emph{full orderings} under a naive topological sort---a
+gap this survey takes as its central diagnostic.
+
+\subsection{Scope and contributions}
+This document is both a \emph{survey} and a \emph{system-design study} grounded in a
+real, ongoing project under a strict \textbf{sub-1B-parameter} budget and a
+4$\times$A100 environment. Our contributions are:
+
+\begin{itemize}[leftmargin=1.4em,itemsep=0.15em]
+  \item A structured survey of the methods relevant to causal/directional embeddings,
+  spanning eight areas: causal foundations, embedding/retrieval architectures, causal
+  reasoning from text, asymmetric/order-structured geometry, reasoning rerankers and RL,
+  sentence-ordering and rank aggregation, follow-up/conversational retrieval, and
+  procedural-workflow understanding.
+  \item An empirical characterization of the project's corpus, pairwise datasets, tier
+  system, and follow-up data, with the baselines any new model must beat.
+  \item A diagnosis that reframes the workflow-ordering failure as primarily an
+  \emph{aggregation} and \emph{data} problem rather than a pairwise-model problem, and a
+  concrete sub-1B system design that follows from it.
+  \item A reference implementation (released alongside this survey) of robust ordering
+  (minimum-feedback-arc-set, Bradley--Terry, Kemeny), score calibration, partial-order
+  metrics, and a model-free follow-up reranker.
+\end{itemize}
+
+\subsection{Organization}
+Section~2 establishes causal foundations and a working definition of ``causal
+embedding.'' Section~3 surveys dense-retrieval architectures and modern embeddings.
+Section~4 covers causal reasoning and direction from text. Section~5 develops asymmetric
+and order-structured geometries---the most direct route to directionality. Section~6
+surveys reasoning rerankers and RL for ranking under a small-model budget; Section~7
+covers turning pairwise scores into a global order. Section~8 addresses follow-up and
+conversational retrieval; Section~9, procedural-workflow understanding. Section~10
+characterizes the data. Section~11 synthesizes a recommended system and roadmap, and
+Section~12 concludes.
