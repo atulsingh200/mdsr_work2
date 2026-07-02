@@ -1,0 +1,72 @@
+{
+  "model": "BAAI/bge-small-en-v1.5",
+  "architecture": "bi-encoder (untied) + MLP head",
+  "run": "best_mlp_bge_small",
+  "checkpoint_epoch": 3,
+  "val_acc": 0.8904063957361759,
+  "val_auc": 0.9317705832195677,
+  "n_pass": 4,
+  "n_fail": 1,
+  "samples": [
+    {
+      "variant": "V1 \u2013 Minimal / clean",
+      "text1": "Build an audience",
+      "text2": "Send an email to the customers",
+      "fwd_prob": 0.999821,
+      "rev_prob": 1.1e-05,
+      "fwd_logit": 8.625,
+      "rev_logit": -11.4375,
+      "delta": 0.99981,
+      "correct": true,
+      "margin": "strong"
+    },
+    {
+      "variant": "V2 \u2013 Paraphrase (formal)",
+      "text1": "Create and define your target audience segment",
+      "text2": "Send a promotional email campaign to the customers",
+      "fwd_prob": 0.999998,
+      "rev_prob": 4e-06,
+      "fwd_logit": 13.3125,
+      "rev_logit": -12.3125,
+      "delta": 0.999994,
+      "correct": true,
+      "margin": "strong"
+    },
+    {
+      "variant": "V3 \u2013 Platform action style (AEP/AJO verbs)",
+      "text1": "Navigate to Audiences and click Create audience to define customer criteria",
+      "text2": "Configure the email channel and send the message to the segmented customers",
+      "fwd_prob": 0.980281,
+      "rev_prob": 1.7e-05,
+      "fwd_logit": 3.9062,
+      "rev_logit": -11.0,
+      "delta": 0.980264,
+      "correct": true,
+      "margin": "strong"
+    },
+    {
+      "variant": "V4 \u2013 Marketing language",
+      "text1": "Identify and group target users into a reusable audience based on their attributes",
+      "text2": "Deliver a personalized email to all customers in the selected audience",
+      "fwd_prob": 7.5e-05,
+      "rev_prob": 0.999995,
+      "fwd_logit": -9.5,
+      "rev_logit": 12.125,
+      "delta": -0.99992,
+      "correct": false,
+      "margin": "strong"
+    },
+    {
+      "variant": "V5 \u2013 Stress test (longer, swapped surface emphasis)",
+      "text1": "Set up and publish your audience segment with the desired attribute filters",
+      "text2": "Write, schedule, and send a targeted marketing email to the customer list",
+      "fwd_prob": 1.0,
+      "rev_prob": 4.5e-05,
+      "fwd_logit": 14.9375,
+      "rev_logit": -10.0,
+      "delta": 0.999954,
+      "correct": true,
+      "margin": "strong"
+    }
+  ]
+}

@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CrossEncoder2x Scorer</title>
+  <style>
+    /* ── reset & base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #0f1117;
+      --surface:  #1a1d27;
+      --surface2: #22263a;
+      --border:   #2e3350;
+      --accent:   #6c8fff;
+      --accent2:  #ff7eb3;
+      --green:    #4ade80;
+      --yellow:   #facc15;
+      --red:      #f87171;
+      --text:     #e2e8f0;
+      --muted:    #64748b;
+      --radius:   10px;
+      font-size: 15px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem 4rem;
+    }
+
+    /* ── header ── */
+    header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+    header h1 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    header p {
+      margin-top: 0.4rem;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    /* ── card ── */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem 2rem;
+      width: 100%;
+      max-width: 860px;
+      margin-bottom: 1.25rem;
+    }
+    .card-title {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    /* ── model selector ── */
+    .model-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+    .model-row label {
+      font-size: 0.88rem;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    select#model-select {
+      flex: 1;
+      min-width: 200px;
+      background: var(--surface2);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.5rem 0.75rem;
+      font-size: 0.9rem;
+      cursor: pointer;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+    select#model-select:focus { border-color: var(--accent); }
+
+    .badge {
+      font-size: 0.72rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 99px;
+      font-weight: 600;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .badge.loaded { background: #14422a; border-color: #22623a; color: var(--green); }
+    .badge.loading { background: #332a00; border-color: #554400; color: var(--yellow); }
+
+    /* ── text areas ── */
+    .texts-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    @media (max-width: 600px) {
+      .texts-grid { grid-template-columns: 1fr; }
+    }
+    .text-block label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+    textarea {
+      width: 100%;
+      background: var(--surface2);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.7rem 0.9rem;
+      font-size: 0.9rem;
+      resize: vertical;
+      min-height: 120px;
+      font-family: inherit;
+      line-height: 1.5;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+    textarea:focus { border-color: var(--accent); }
+    textarea::placeholder { color: var(--muted); }
+
+    /* ── action row ── */
+    .action-row {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+      margin-top: 1rem;
+    }
+    button#score-btn {
+      background: linear-gradient(135deg, var(--accent), #8b5cf6);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 0.6rem 1.6rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.15s, transform 0.1s;
+      letter-spacing: 0.2px;
+    }
+    button#score-btn:hover:not(:disabled) { opacity: 0.88; transform: translateY(-1px); }
+    button#score-btn:disabled { opacity: 0.45; cursor: not-allowed; }
+
+    button#swap-btn {
+      background: var(--surface2);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.6rem 1rem;
+      font-size: 0.88rem;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    button#swap-btn:hover { background: var(--border); }
+
+    .spinner {
+      display: none;
+      width: 16px; height: 16px;
+      border: 2px solid var(--border);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 0.6s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .spinner.visible { display: inline-block; }
+
+    /* ── results ── */
+    .results-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    @media (max-width: 600px) {
+      .results-grid { grid-template-columns: 1fr; }
+    }
+
+    .score-box {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+    .score-box .direction {
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      font-weight: 600;
+    }
+    .score-box .prob {
+      font-size: 2.2rem;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      line-height: 1.1;
+    }
+    .score-box .logit {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .score-box .bar-wrap {
+      margin-top: 0.5rem;
+      height: 6px;
+      background: var(--border);
+      border-radius: 99px;
+      overflow: hidden;
+    }
+    .score-box .bar-fill {
+      height: 100%;
+      border-radius: 99px;
+      transition: width 0.4s ease;
+    }
+
+    .prob.high  { color: var(--green); }
+    .prob.mid   { color: var(--yellow); }
+    .prob.low   { color: var(--red); }
+    .bar-fill.high { background: var(--green); }
+    .bar-fill.mid  { background: var(--yellow); }
+    .bar-fill.low  { background: var(--red); }
+
+    /* ── error ── */
+    .error-box {
+      background: #2c1010;
+      border: 1px solid #5c2020;
+      color: #fca5a5;
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      font-size: 0.88rem;
+    }
+
+    /* ── history ── */
+    #history-section { display: none; }
+    .history-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+    }
+    .history-table th {
+      text-align: left;
+      color: var(--muted);
+      font-weight: 600;
+      padding: 0.4rem 0.6rem;
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+    }
+    .history-table td {
+      padding: 0.45rem 0.6rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+      word-break: break-word;
+    }
+    .history-table tr:last-child td { border-bottom: none; }
+    .history-table .text-cell { max-width: 200px; }
+    .mono { font-family: 'JetBrains Mono', 'Fira Code', monospace; }
+
+    /* ── footer ── */
+    footer {
+      margin-top: auto;
+      padding-top: 3rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>CrossEncoder2x Scorer</h1>
+  <p>Score causal / directional text pairs using fine-tuned DeBERTa-v3-large cross-encoders</p>
+</header>
+
+<!-- Model selector -->
+<div class="card">
+  <div class="card-title">Model</div>
+  <div class="model-row">
+    <label for="model-select">Select run:</label>
+    <select id="model-select">
+      <option value="">Loading models…</option>
+    </select>
+    <span class="badge" id="model-badge">not loaded</span>
+  </div>
+</div>
+
+<!-- Text inputs -->
+<div class="card">
+  <div class="card-title">Text Pair</div>
+  <div class="texts-grid">
+    <div class="text-block">
+      <label for="text1">Text 1 (anchor)</label>
+      <textarea id="text1" placeholder="Enter the first text / cause…"></textarea>
+    </div>
+    <div class="text-block">
+      <label for="text2">Text 2 (candidate)</label>
+      <textarea id="text2" placeholder="Enter the second text / follow-up…"></textarea>
+    </div>
+  </div>
+  <div class="action-row">
+    <button id="score-btn">Score</button>
+    <button id="swap-btn">&#8645; Swap</button>
+    <div class="spinner" id="spinner"></div>
+  </div>
+</div>
+
+<!-- Results -->
+<div class="card" id="results-card" style="display:none">
+  <div class="card-title">Scores &mdash; <span id="result-model-name" style="text-transform:none"></span></div>
+  <div class="results-grid">
+
+    <div class="score-box" id="fwd-box">
+      <span class="direction">Forward &rarr; (Text 1 causes Text 2)</span>
+      <span class="prob" id="fwd-prob">—</span>
+      <span class="logit" id="fwd-logit">logit: —</span>
+      <div class="bar-wrap"><div class="bar-fill" id="fwd-bar" style="width:0%"></div></div>
+    </div>
+
+    <div class="score-box" id="rev-box">
+      <span class="direction">Reverse &larr; (Text 2 causes Text 1)</span>
+      <span class="prob" id="rev-prob">—</span>
+      <span class="logit" id="rev-logit">logit: —</span>
+      <div class="bar-wrap"><div class="bar-fill" id="rev-bar" style="width:0%"></div></div>
+    </div>
+
+  </div>
+  <div id="error-area" style="margin-top:1rem"></div>
+</div>
+
+<!-- History -->
+<div class="card" id="history-section">
+  <div class="card-title" style="display:flex;justify-content:space-between;align-items:center">
+    <span>History</span>
+    <button id="clear-history" style="background:none;border:none;color:var(--muted);cursor:pointer;font-size:0.8rem">Clear</button>
+  </div>
+  <div style="overflow-x:auto">
+    <table class="history-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Model</th>
+          <th>Text 1</th>
+          <th>Text 2</th>
+          <th>Fwd</th>
+          <th>Rev</th>
+        </tr>
+      </thead>
+      <tbody id="history-body"></tbody>
+    </table>
+  </div>
+</div>
+
+<footer>
+  CrossEncoder2x &mdash; microsoft/deberta-v3-large &mdash; BCE binary classifier
+</footer>
+
+<script>
+(function () {
+  const API = '';   // same origin
+
+  // ── elements ──────────────────────────────────────────────────────────────
+  const sel       = document.getElementById('model-select');
+  const badge     = document.getElementById('model-badge');
+  const text1     = document.getElementById('text1');
+  const text2     = document.getElementById('text2');
+  const scoreBtn  = document.getElementById('score-btn');
+  const swapBtn   = document.getElementById('swap-btn');
+  const spinner   = document.getElementById('spinner');
+  const resCard   = document.getElementById('results-card');
+  const fwdProb   = document.getElementById('fwd-prob');
+  const fwdLogit  = document.getElementById('fwd-logit');
+  const fwdBar    = document.getElementById('fwd-bar');
+  const revProb   = document.getElementById('rev-prob');
+  const revLogit  = document.getElementById('rev-logit');
+  const revBar    = document.getElementById('rev-bar');
+  const resModel  = document.getElementById('result-model-name');
+  const errArea   = document.getElementById('error-area');
+  const histSec   = document.getElementById('history-section');
+  const histBody  = document.getElementById('history-body');
+  const clearBtn  = document.getElementById('clear-history');
+
+  let history = [];
+  let loadedModels = new Set();
+
+  // ── load model list ────────────────────────────────────────────────────────
+  async function fetchModels() {
+    try {
+      const res = await fetch(API + '/api/models');
+      const data = await res.json();
+      sel.innerHTML = '';
+      if (!data.models || data.models.length === 0) {
+        sel.innerHTML = '<option value="">No models found</option>';
+        return;
+      }
+      data.models.forEach((name, i) => {
+        const opt = document.createElement('option');
+        opt.value = name;
+        opt.textContent = name;
+        if (i === 0) opt.selected = true;
+        sel.appendChild(opt);
+      });
+      updateBadge();
+    } catch (e) {
+      sel.innerHTML = '<option value="">Error loading models</option>';
+    }
+  }
+
+  // ── badge state ───────────────────────────────────────────────────────────
+  function updateBadge() {
+    const name = sel.value;
+    if (!name) return;
+    if (loadedModels.has(name)) {
+      badge.textContent = 'cached';
+      badge.className = 'badge loaded';
+    } else {
+      badge.textContent = 'not loaded';
+      badge.className = 'badge';
+    }
+  }
+  sel.addEventListener('change', updateBadge);
+
+  // ── color class by probability ─────────────────────────────────────────────
+  function probClass(p) {
+    if (p >= 0.6) return 'high';
+    if (p >= 0.4) return 'mid';
+    return 'low';
+  }
+
+  // ── render score ──────────────────────────────────────────────────────────
+  function renderScore(probEl, logitEl, barEl, prob, logit) {
+    const pct = Math.round(prob * 100);
+    const cls = probClass(prob);
+    probEl.textContent = (prob * 100).toFixed(1) + '%';
+    probEl.className = 'prob ' + cls;
+    logitEl.textContent = 'logit: ' + logit.toFixed(4);
+    barEl.style.width = pct + '%';
+    barEl.className = 'bar-fill ' + cls;
+  }
+
+  // ── score ─────────────────────────────────────────────────────────────────
+  async function doScore() {
+    const modelName = sel.value;
+    const t1 = text1.value.trim();
+    const t2 = text2.value.trim();
+
+    if (!modelName) { showError('Please select a model.'); return; }
+    if (!t1 || !t2) { showError('Both text fields must be non-empty.'); return; }
+
+    clearError();
+    scoreBtn.disabled = true;
+    spinner.classList.add('visible');
+    badge.textContent = 'loading…';
+    badge.className = 'badge loading';
+
+    try {
+      const res = await fetch(API + '/api/score', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ model_name: modelName, text1: t1, text2: t2 }),
+      });
+
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({ detail: res.statusText }));
+        throw new Error(err.detail || res.statusText);
+      }
+
+      const data = await res.json();
+      loadedModels.add(modelName);
+      updateBadge();
+
+      resCard.style.display = 'block';
+      resModel.textContent = data.model_name;
+      renderScore(fwdProb, fwdLogit, fwdBar, data.forward, data.logit_forward);
+      renderScore(revProb, revLogit, revBar, data.reverse, data.logit_reverse);
+
+      // push to history
+      history.unshift({
+        model: data.model_name,
+        t1: t1.length > 60 ? t1.slice(0, 57) + '…' : t1,
+        t2: t2.length > 60 ? t2.slice(0, 57) + '…' : t2,
+        fwd: (data.forward * 100).toFixed(1) + '%',
+        rev: (data.reverse * 100).toFixed(1) + '%',
+      });
+      renderHistory();
+
+    } catch (e) {
+      showError(e.message);
+      updateBadge();
+    } finally {
+      scoreBtn.disabled = false;
+      spinner.classList.remove('visible');
+    }
+  }
+
+  // ── history ───────────────────────────────────────────────────────────────
+  function renderHistory() {
+    if (history.length === 0) {
+      histSec.style.display = 'none';
+      return;
+    }
+    histSec.style.display = 'block';
+    histBody.innerHTML = history.map((h, i) => `
+      <tr>
+        <td class="mono">${history.length - i}</td>
+        <td>${h.model}</td>
+        <td class="text-cell">${escHtml(h.t1)}</td>
+        <td class="text-cell">${escHtml(h.t2)}</td>
+        <td class="mono">${h.fwd}</td>
+        <td class="mono">${h.rev}</td>
+      </tr>
+    `).join('');
+  }
+
+  function escHtml(s) {
+    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  }
+
+  clearBtn.addEventListener('click', () => { history = []; renderHistory(); });
+
+  // ── error helpers ─────────────────────────────────────────────────────────
+  function showError(msg) {
+    resCard.style.display = 'block';
+    errArea.innerHTML = `<div class="error-box">${escHtml(msg)}</div>`;
+  }
+  function clearError() { errArea.innerHTML = ''; }
+
+  // ── event listeners ───────────────────────────────────────────────────────
+  scoreBtn.addEventListener('click', doScore);
+
+  swapBtn.addEventListener('click', () => {
+    const tmp = text1.value;
+    text1.value = text2.value;
+    text2.value = tmp;
+  });
+
+  // Allow Ctrl+Enter to score
+  [text1, text2].forEach(el => {
+    el.addEventListener('keydown', e => {
+      if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') doScore();
+    });
+  });
+
+  // ── init ──────────────────────────────────────────────────────────────────
+  fetchModels();
+})();
+</script>
+</body>
+</html>

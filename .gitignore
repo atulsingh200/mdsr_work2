@@ -43,3 +43,9 @@ test_pairs.jsonl
 
 # macOS
 .DS_Store
+
+# Home directory backup (contains SSH keys / tokens — NEVER commit)
+home-backup-colligo/
+
+# Collapsed-run backups (~10GB of model weights)
+collapsed_bak/

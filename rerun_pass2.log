@@ -1,0 +1,6 @@
+nohup: ignoring input
+backing up collapsed run -> /mnt/localssd/baseline_sweep/runs/ajo_doc_not_tier1/deberta-v3-large/collapsed_bak/
+backing up collapsed run -> /mnt/localssd/crossencoder_sweep/runs/ajo_doc_not_tier1/deberta-v3-large/collapsed_bak/
+== training BI (GPU0) + CE (GPU1) in parallel — ~9h ==
+  BI pid=33129 -> /mnt/localssd/baseline_sweep/runs/ajo_doc_not_tier1/deberta-v3-large/train.log
+  CE pid=33130 -> /mnt/localssd/crossencoder_sweep/runs/ajo_doc_not_tier1/deberta-v3-large/train.log
