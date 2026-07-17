@@ -1,0 +1,53 @@
+06:15:47 INFO run_dir=runs/crossencoder2x_deberta/merged_scrap_procedural  device=cuda  bf16=True
+/mnt/localssd/causal-embedding-research/automation/internship-causal-embedding/.venv/lib/python3.11/site-packages/transformers/convert_slow_tokenizer.py:566: UserWarning: The sentencepiece tokenizer that you are converting to a fast tokenizer uses the byte fallback option which is not implemented in the fast tokenizers. In practice this means that the fast version of the tokenizer can produce unknown tokens whereas the sentencepiece version would have converted these unknown tokens into a sequence of byte tokens matching the original piece of text.
+  warnings.warn(
+06:15:48 INFO tokenizer <- microsoft/deberta-v3-large
+06:15:48 INFO scanning max joint token length across all splits …
+06:15:57 INFO   observed max=512  -> max_seq_len=512  (scan 8.7s)
+06:15:57 INFO loading datasets …
+06:15:57 INFO   train=33195  val=3211  test=4100
+06:15:57 INFO building CrossEncoder2x  backbone=microsoft/deberta-v3-large  n_layers=24  native=True …
+06:15:59 INFO   total params=434,013,185
+06:15:59 INFO   total_steps=1554  warmup_steps=155
+06:17:24 INFO   e1 opt_step=50/1554  loss=0.7034  acc=0.5006  lr=3.23e-06
+06:18:50 INFO   e1 opt_step=100/1554  loss=0.7008  acc=0.5022  lr=6.45e-06
+06:20:16 INFO   e1 opt_step=150/1554  loss=0.6984  acc=0.5122  lr=9.68e-06
+06:21:45 INFO   e1 opt_step=200/1554  loss=0.6819  acc=0.5500  lr=9.68e-06
+06:23:14 INFO   e1 opt_step=250/1554  loss=0.6643  acc=0.5813  lr=9.32e-06
+06:24:34 INFO   e1 opt_step=300/1554  loss=0.6485  acc=0.6052  lr=8.96e-06
+06:25:58 INFO   e1 opt_step=350/1554  loss=0.6292  acc=0.6260  lr=8.61e-06
+06:27:15 INFO   e1 opt_step=400/1554  loss=0.6117  acc=0.6442  lr=8.25e-06
+06:28:30 INFO   e1 opt_step=450/1554  loss=0.5958  acc=0.6589  lr=7.89e-06
+06:29:50 INFO   e1 opt_step=500/1554  loss=0.5816  acc=0.6722  lr=7.53e-06
+06:30:19 INFO [epoch 1/3]  train_loss=0.5763  train_acc=0.6766  val_loss=0.4479  val_acc=0.7839  val_auc=0.8759  elapsed=860.5s
+06:30:24 INFO   * saved best.pt  val_acc=0.7839
+06:30:50 INFO   e2 opt_step=550/1554  loss=0.3966  acc=0.8242  lr=7.18e-06
+06:31:29 INFO   e2 opt_step=600/1554  loss=0.3856  acc=0.8289  lr=6.82e-06
+06:32:09 INFO   e2 opt_step=650/1554  loss=0.3719  acc=0.8361  lr=6.46e-06
+06:32:51 INFO   e2 opt_step=700/1554  loss=0.3717  acc=0.8353  lr=6.10e-06
+06:33:31 INFO   e2 opt_step=750/1554  loss=0.3684  acc=0.8367  lr=5.75e-06
+06:34:09 INFO   e2 opt_step=800/1554  loss=0.3648  acc=0.8399  lr=5.39e-06
+06:34:48 INFO   e2 opt_step=850/1554  loss=0.3592  acc=0.8425  lr=5.03e-06
+06:35:27 INFO   e2 opt_step=900/1554  loss=0.3562  acc=0.8433  lr=4.67e-06
+06:36:05 INFO   e2 opt_step=950/1554  loss=0.3521  acc=0.8454  lr=4.32e-06
+06:36:45 INFO   e2 opt_step=1000/1554  loss=0.3483  acc=0.8470  lr=3.96e-06
+06:37:29 INFO [epoch 2/3]  train_loss=0.3450  train_acc=0.8486  val_loss=0.5075  val_acc=0.7966  val_auc=0.8882  elapsed=425.4s
+06:37:34 INFO   * saved best.pt  val_acc=0.7966
+06:37:45 INFO   e3 opt_step=1050/1554  loss=0.2316  acc=0.9118  lr=3.60e-06
+06:38:26 INFO   e3 opt_step=1100/1554  loss=0.2242  acc=0.9104  lr=3.25e-06
+06:39:03 INFO   e3 opt_step=1150/1554  loss=0.2197  acc=0.9132  lr=2.89e-06
+06:39:44 INFO   e3 opt_step=1200/1554  loss=0.2150  acc=0.9154  lr=2.53e-06
+06:40:24 INFO   e3 opt_step=1250/1554  loss=0.2109  acc=0.9189  lr=2.17e-06
+06:41:01 INFO   e3 opt_step=1300/1554  loss=0.2119  acc=0.9180  lr=1.82e-06
+06:41:41 INFO   e3 opt_step=1350/1554  loss=0.2138  acc=0.9171  lr=1.46e-06
+06:42:20 INFO   e3 opt_step=1400/1554  loss=0.2125  acc=0.9172  lr=1.10e-06
+06:43:02 INFO   e3 opt_step=1450/1554  loss=0.2136  acc=0.9171  lr=7.43e-07
+06:43:43 INFO   e3 opt_step=1500/1554  loss=0.2137  acc=0.9175  lr=3.86e-07
+06:44:24 INFO   e3 opt_step=1550/1554  loss=0.2128  acc=0.9173  lr=2.86e-08
+06:44:42 INFO [epoch 3/3]  train_loss=0.2129  train_acc=0.9172  val_loss=0.5554  val_acc=0.8069  val_auc=0.8902  elapsed=428.4s
+06:44:48 INFO   * saved best.pt  val_acc=0.8069
+06:44:50 INFO saved final.pt  total_time=1732s
+06:44:50 INFO loading best.pt for final val/test evaluation …
+06:45:06 INFO [val]  acc=0.8069  auc=0.8902  f1=0.8092
+06:45:26 INFO [test] loss=0.5657  acc=0.8056  auc=0.8851  f1=0.8051
+06:45:26 INFO [done] best_val_acc=0.8069  test_acc=0.8056  test_auc=0.8851  results in runs/crossencoder2x_deberta/merged_scrap_procedural

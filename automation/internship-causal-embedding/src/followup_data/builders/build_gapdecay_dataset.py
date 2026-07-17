@@ -164,6 +164,19 @@ def main() -> None:
     ap.add_argument("--cap-seed", type=int, default=42)
     ap.add_argument("--val-frac", type=float, default=0.10)
     ap.add_argument("--test-frac", type=float, default=0.10)
+    # tier / gap restriction
+    ap.add_argument("--drop-tiers", default="",
+                    help="comma-separated tiers to exclude, e.g. '1,15'")
+    ap.add_argument("--max-gap", type=int, default=None,
+                    help="only pair tiers whose RANK gap <= this (e.g. 4). None = all gaps.")
+    # repetition-aware sampling (overrides the per-tier-pair gap-decay cap when set)
+    ap.add_argument("--max-text-repeat", type=int, default=None,
+                    help="cap the number of pairs each segment appears in (e.g. 8). Enables "
+                         "repetition-aware sampling: process gaps 1..max_gap in order, accept a "
+                         "pair only if both segments are below the cap.")
+    ap.add_argument("--gap-weights", default=None,
+                    help="comma-separated per-gap weights for the rep-aware path (len == max_gap), "
+                         "e.g. '1.0,0.65,0.4,0.22'. Default: geometric 0.62 decay.")
     args = ap.parse_args()
 
     out_dir = Path(args.out_dir)
@@ -178,6 +191,13 @@ def main() -> None:
           file=sys.stderr)
     if not resolved:
         sys.exit("[fatal] no assignments resolved against the corpus.")
+
+    drop_tiers = {int(t) for t in args.drop_tiers.split(",") if t.strip()}
+    if drop_tiers:
+        before = len(resolved)
+        resolved = [r for r in resolved if r["tier"] not in drop_tiers]
+        print(f"[drop-tiers] removed tiers {sorted(drop_tiers)}: {before} -> {len(resolved)} docs",
+              file=sys.stderr)
 
     subchapter_to_tier = {r["subchapter"]: r["tier"] for r in resolved}
     tier_docs: dict[int, list[dict]] = defaultdict(list)
@@ -199,6 +219,12 @@ def main() -> None:
     print(f"[segment] unit={args.unit}: {total} segments across {len(doc_chunks)} docs",
           file=sys.stderr)
 
+    # -- global text dedup: keep each unique text once (first occurrence, by
+    #    sorted url/idx) so repetition is bounded per UNIQUE TEXT and identical
+    #    boilerplate can't leak across splits or blow past the repeat cap. --
+    seen_text: set[str] = set()
+    dup_dropped = 0
+
     # -- chunk-level split pooled per tier (deterministic per-tier seed) --
     chunk_entries_by_tier: dict[int, list[dict]] = defaultdict(list)
     split_counts: dict[str, int] = defaultdict(int)
@@ -206,6 +232,11 @@ def main() -> None:
         entries: list[dict] = []
         for r in tier_docs[t]:
             for i, ct in enumerate(doc_chunks[r["url"]]):
+                norm = " ".join(ct.split())
+                if norm in seen_text:
+                    dup_dropped += 1
+                    continue
+                seen_text.add(norm)
                 entries.append({"text": ct, "url": r["url"], "chunk_idx": i,
                                 "subchapter": r["subchapter"]})
         rng = random.Random((args.seed, "tier", t).__hash__())
@@ -217,13 +248,19 @@ def main() -> None:
             e["split"] = "test" if i < n_test else ("val" if i < n_test + n_val else "train")
             split_counts[e["split"]] += 1
         chunk_entries_by_tier[t] = entries
+    print(f"[dedup] dropped {dup_dropped} duplicate-text segments; "
+          f"{sum(split_counts.values())} unique texts kept", file=sys.stderr)
     print(f"[split] segments per split: {dict(split_counts)}", file=sys.stderr)
 
-    # -- tier-pairs (ALL) + rank gap --
+    # -- tier-pairs + rank gap (optionally restricted to gap <= max_gap) --
     tiers_sorted = sorted(tier_docs)
     rank = {t: i for i, t in enumerate(tiers_sorted)}
     tier_pairs = [(tiers_sorted[i], tiers_sorted[j])
-                  for i in range(len(tiers_sorted)) for j in range(i + 1, len(tiers_sorted))]
+                  for i in range(len(tiers_sorted)) for j in range(i + 1, len(tiers_sorted))
+                  if args.max_gap is None or (j - i) <= args.max_gap]
+    if args.max_gap is not None:
+        print(f"[gap] restricting to rank gap <= {args.max_gap}: {len(tier_pairs)} tier-pairs",
+              file=sys.stderr)
 
     chunks_by_ts: dict[tuple[int, str], list[dict]] = defaultdict(list)
     for t, entries in chunk_entries_by_tier.items():
@@ -238,7 +275,7 @@ def main() -> None:
                 len(chunks_by_ts.get((t_low, sp), [])) * len(chunks_by_ts.get((t_hi, sp), []))
             )
 
-    # -- per-split base_cap: gap-decay every split, tuned to a per-split target --
+    # -- per-split target row counts --
     train_frac = max(1e-9, 1.0 - args.val_frac - args.test_frac)
     targets = {
         "train": args.target_train,
@@ -270,25 +307,15 @@ def main() -> None:
                 hi = mid
         return round(hi, 3)
 
-    base_cap_by_split: dict[str, float] = {}
-    for sp in ("train", "val", "test"):
-        if targets[sp] is not None:
-            bc = tune_base_cap(sp, targets[sp])
-            base_cap_by_split[sp] = bc
-            print(f"[tune] {sp}: target={targets[sp]} -> base_cap={bc} "
-                  f"(predicted={predict_split(sp, bc)})", file=sys.stderr)
-        else:
-            base_cap_by_split[sp] = args.base_cap
-
-    # -- sample pairs per tier-pair per split --
+    # -- writers / emit --
     writers = {sp: (out_dir / f"directional_{sp}.jsonl").open("w") for sp in ("train", "val", "test")}
     counts: dict[str, int] = defaultdict(int)
     dir_rng = random.Random(args.seed + 7)
     pre_cap: dict[str, int] = {}
     post_cap: dict[str, int] = {}
-    gap_hist: dict[str, dict[int, int]] = {"train": defaultdict(int),
-                                           "val": defaultdict(int),
-                                           "test": defaultdict(int)}
+    base_cap_by_split: dict[str, float] = {}
+    gap_hist: dict[str, dict[int, int]] = {sp: defaultdict(int) for sp in ("train", "val", "test")}
+    rep_count: dict[str, dict] = {sp: defaultdict(int) for sp in ("train", "val", "test")}
 
     def emit(sp, low, hi, tl, th):
         if dir_rng.random() < 0.5:
@@ -302,27 +329,99 @@ def main() -> None:
         writers[sp].write(json.dumps(row, ensure_ascii=False) + "\n")
         counts[sp] += 1
 
+    def seg_key(e):
+        return (e["url"], e["chunk_idx"])
+
     try:
-        for t_low, t_hi in tier_pairs:
-            g = rank[t_hi] - rank[t_low]
+        if args.max_text_repeat is not None:
+            # ---- repetition-aware gap-decay sampling ----
+            max_gap = args.max_gap if args.max_gap is not None else (len(tiers_sorted) - 1)
+            if args.gap_weights:
+                weights = [float(x) for x in args.gap_weights.split(",")][:max_gap]
+            else:
+                weights = [0.62 ** (g - 1) for g in range(1, max_gap + 1)]
+            wsum = sum(weights) or 1.0
+            R = args.max_text_repeat
+            print(f"[rep-aware] max_gap={max_gap} rep_cap={R} weights={[round(w,3) for w in weights]}",
+                  file=sys.stderr)
             for sp in ("train", "val", "test"):
-                lows = chunks_by_ts.get((t_low, sp), [])
-                highs = chunks_by_ts.get((t_hi, sp), [])
-                key = f"T{t_low}-T{t_hi}/{sp}"
-                pre_cap[key] = len(lows) * len(highs)
-                if not lows or not highs:
-                    post_cap[key] = 0
-                    continue
-                cap = gap_decay_cap(g, base_cap_by_split[sp], args.gap_decay, args.far_gap_floor)
-                srng = random.Random((args.cap_seed, t_low, t_hi, sp).__hash__())
-                idx_pairs = sample_index_pairs(len(lows), len(highs), cap, srng)
-                post_cap[key] = len(idx_pairs)
-                for i, j in idx_pairs:
-                    emit(sp, lows[i], highs[j], t_low, t_hi)
-                    gap_hist[sp][g] += 1
+                target = targets[sp] or 0
+                rc = rep_count[sp]
+                for gi, g in enumerate(range(1, max_gap + 1)):
+                    gap_target = round(target * weights[gi] / wsum) if target else None
+                    cands = []
+                    for t_low, t_hi in tier_pairs:
+                        if rank[t_hi] - rank[t_low] != g:
+                            continue
+                        lows = chunks_by_ts.get((t_low, sp), [])
+                        highs = chunks_by_ts.get((t_hi, sp), [])
+                        for li in range(len(lows)):
+                            for hj in range(len(highs)):
+                                cands.append((t_low, t_hi, li, hj))
+                    crng = random.Random((args.cap_seed, "gap", g, sp).__hash__())
+                    crng.shuffle(cands)
+                    pre_cap[f"gap{g}/{sp}"] = len(cands)
+                    taken = 0
+                    for t_low, t_hi, li, hj in cands:
+                        if gap_target is not None and taken >= gap_target:
+                            break
+                        low = chunks_by_ts[(t_low, sp)][li]
+                        hi = chunks_by_ts[(t_hi, sp)][hj]
+                        kl, kh = seg_key(low), seg_key(hi)
+                        if rc[kl] >= R or rc[kh] >= R:
+                            continue
+                        emit(sp, low, hi, t_low, t_hi)
+                        rc[kl] += 1
+                        rc[kh] += 1
+                        gap_hist[sp][g] += 1
+                        taken += 1
+                    post_cap[f"gap{g}/{sp}"] = taken
+        else:
+            # ---- legacy per-tier-pair gap-decay cap ----
+            for sp in ("train", "val", "test"):
+                if targets[sp] is not None:
+                    bc = tune_base_cap(sp, targets[sp])
+                    base_cap_by_split[sp] = bc
+                    print(f"[tune] {sp}: target={targets[sp]} -> base_cap={bc} "
+                          f"(predicted={predict_split(sp, bc)})", file=sys.stderr)
+                else:
+                    base_cap_by_split[sp] = args.base_cap
+            for t_low, t_hi in tier_pairs:
+                g = rank[t_hi] - rank[t_low]
+                for sp in ("train", "val", "test"):
+                    lows = chunks_by_ts.get((t_low, sp), [])
+                    highs = chunks_by_ts.get((t_hi, sp), [])
+                    key = f"T{t_low}-T{t_hi}/{sp}"
+                    pre_cap[key] = len(lows) * len(highs)
+                    if not lows or not highs:
+                        post_cap[key] = 0
+                        continue
+                    cap = gap_decay_cap(g, base_cap_by_split[sp], args.gap_decay, args.far_gap_floor)
+                    srng = random.Random((args.cap_seed, t_low, t_hi, sp).__hash__())
+                    idx_pairs = sample_index_pairs(len(lows), len(highs), cap, srng)
+                    post_cap[key] = len(idx_pairs)
+                    for i, j in idx_pairs:
+                        emit(sp, lows[i], highs[j], t_low, t_hi)
+                        gap_hist[sp][g] += 1
     finally:
         for w in writers.values():
             w.close()
+
+    # repetition histogram per split
+    def rep_stats(rc: dict) -> dict:
+        vals = sorted(rc.values())
+        if not vals:
+            return {"n_texts": 0}
+        n = len(vals)
+        return {
+            "n_texts": n,
+            "max": vals[-1],
+            "mean": round(sum(vals) / n, 3),
+            "p50": vals[n // 2],
+            "p95": vals[min(n - 1, int(0.95 * n))],
+            "hist": {k: sum(1 for v in vals if v == k) for k in range(1, max(vals) + 1)},
+        }
+    repetition_stats = {sp: rep_stats(rep_count[sp]) for sp in ("train", "val", "test")}
 
     manifest = {
         "builder": "build_gapdecay_dataset.py",
@@ -331,9 +430,15 @@ def main() -> None:
         "max_sentences": args.max_sentences if args.unit == "sentence" else None,
         "window_words": args.window if args.unit == "chunk" else None,
         "stride_words": args.stride if args.unit == "chunk" else None,
-        "pair_scope": "all",
+        "pair_scope": "all" if args.max_gap is None else f"gap<={args.max_gap}",
         "gap_metric": "rank",
         "single_direction": True,
+        "drop_tiers": sorted(drop_tiers),
+        "max_gap": args.max_gap,
+        "max_text_repeat": args.max_text_repeat,
+        "gap_weights": args.gap_weights,
+        "tiers_kept": tiers_sorted,
+        "repetition_stats": repetition_stats,
         "gap_decay": args.gap_decay,
         "far_gap_floor": args.far_gap_floor,
         "targets": targets,
