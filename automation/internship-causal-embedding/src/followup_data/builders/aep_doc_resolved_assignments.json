@@ -1,0 +1,2264 @@
+{
+  "assignments": [
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/home",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-overview",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-region-multi-brand-whitepaper",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/edge-and-hub-comparison",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/customer-experience",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/customer-experience-bts",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/getting-started/end-to-end-tutorial",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/getting-started/platform-use-cases",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/getting-started/platform-architecture",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/getting-started/roles-project-phases",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-ui/platform-ui",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-ui/workflows",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-ui/browser-language-support",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-ui/self-identification",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-apis/api-guide",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-apis/api-authentication",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-apis/api-fundamentals",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-apis/postman",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/documentation/overview",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/documentation/language-support",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/ecosystem/application-services",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/ecosystem/application-intelligent-services",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://business.adobe.com/products/adobe-analytics/customer-journey-analytics.html",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://business.adobe.com/products/journey-optimizer.html",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://business.adobe.com/products/mix-modeler.html",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/ecosystem/experience-cloud-integrations",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/governance-privacy-security/encryption",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/governance-privacy-security/customer-managed-keys/azure/azure-key-vault-config",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/governance-privacy-security/customer-managed-keys/azure/api-set-up",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/governance-privacy-security/customer-managed-keys/azure/alerts-and-ip-access",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/governance-privacy-security/customer-managed-keys/aws/configure-kms",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/governance-privacy-security/customer-managed-keys/alert-resolution-reference",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/license/data-management-best-practices",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/license/license-usage-dashboard",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/license/capacity",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/license/total-data-volume",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/troubleshooting",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/adls2-gen2-migration",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/landing/glossary",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest",
+      "subchapter": "1a",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home",
+      "subchapter": "1b",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/overview",
+      "subchapter": "1b",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/end-to-end-guide",
+      "subchapter": "1b",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/apply-access-labels-destinations",
+      "subchapter": "1b",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/abac-api/products",
+      "subchapter": "1b",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview",
+      "subchapter": "1b",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/browse",
+      "subchapter": "1b",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/permissions",
+      "subchapter": "1b",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/details-and-services",
+      "subchapter": "1b",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/create-profile",
+      "subchapter": "1b",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/users",
+      "subchapter": "1b",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/access-control/api/getting-started",
+      "subchapter": "1b",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/access-control/api/permissions-and-resource-types",
+      "subchapter": "1b",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/access-control/api/effective-policies",
+      "subchapter": "1b",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/access-control/troubleshooting-guide",
+      "subchapter": "1b",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sandbox-tooling",
+      "subchapter": "1c",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sharing-packages-across-orgs",
+      "subchapter": "1c",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/api/available",
+      "subchapter": "1c",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/api/types",
+      "subchapter": "1c",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/sandbox-tooling-api/packages",
+      "subchapter": "1c",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/sandbox-tooling-api/tools",
+      "subchapter": "1c",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/use-cases/backup-object-configuration",
+      "subchapter": "1c",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/use-cases/center-of-excellence",
+      "subchapter": "1c",
+      "tier": 1
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/xdm/home",
+      "subchapter": "2a",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/xdm/schema/composition",
+      "subchapter": "2a",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/xdm/schema/best-practices",
+      "subchapter": "2a",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/xdm/schema/profile-enablement-planning",
+      "subchapter": "2a",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/xdm/schema/sensitive-and-personal-data",
+      "subchapter": "2a",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/xdm/schema/field-constraints",
+      "subchapter": "2a",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/xdm/schema/relational",
+      "subchapter": "2a",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/xdm/schema/industries/retail",
+      "subchapter": "2a",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/xdm/schema/industries/financial",
+      "subchapter": "2a",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/xdm/schema/industries/healthcare",
+      "subchapter": "2a",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/xdm/schema/industries/telecom",
+      "subchapter": "2a",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/xdm/schema/industries/travel-hospitality",
+      "subchapter": "2a",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/xdm/schema/field-dictionary",
+      "subchapter": "2a",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/xdm/classes/individual-profile",
+      "subchapter": "2a",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/xdm/classes/experienceevent",
+      "subchapter": "2a",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/xdm/classes/medication",
+      "subchapter": "2a",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/xdm/classes/payer",
+      "subchapter": "2a",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/xdm/classes/plan",
+      "subchapter": "2a",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/xdm/classes/policy",
+      "subchapter": "2a",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/xdm/classes/product",
+      "subchapter": "2a",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/xdm/classes/prospect",
+      "subchapter": "2a",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/xdm/classes/provider",
+      "subchapter": "2a",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/xdm/classes/segment-definition",
+      "subchapter": "2a",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/xdm/classes/b2b/business-account",
+      "subchapter": "2a",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/xdm/classes/b2b/business-account-person-relation",
+      "subchapter": "2a",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/xdm/classes/b2b/business-campaign",
+      "subchapter": "2a",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/xdm/classes/b2b/business-campaign-members",
+      "subchapter": "2a",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/xdm/classes/b2b/business-opportunity",
+      "subchapter": "2a",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/xdm/classes/b2b/business-opportunity-person-relation",
+      "subchapter": "2a",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/xdm/classes/b2b/business-marketing-list",
+      "subchapter": "2a",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/xdm/classes/b2b/business-marketing-list-members",
+      "subchapter": "2a",
+      "tier": 2
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/collection/home",
+      "subchapter": "3a",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/collection/permissions",
+      "subchapter": "3a",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/collection/brightscript/brs-overview",
+      "subchapter": "3a",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/js-overview",
+      "subchapter": "3a",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes",
+      "subchapter": "3a",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/sources/home",
+      "subchapter": "3b",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/ingestion/home",
+      "subchapter": "3b",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/ingestion/streaming/kafka",
+      "subchapter": "3b",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/ingestion/batch/partial",
+      "subchapter": "3b",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/data-prep/home",
+      "subchapter": "3c",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/data-prep/functions",
+      "subchapter": "3c",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/data-prep/ui/mapping",
+      "subchapter": "3c",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/data-prep/data-handling",
+      "subchapter": "3c",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/data-prep/mapping-set",
+      "subchapter": "3c",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/data-prep/upserts",
+      "subchapter": "3c",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/data-prep/troubleshooting-guide",
+      "subchapter": "3c",
+      "tier": 3
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/catalog/home",
+      "subchapter": "4a",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/catalog/api/getting-started",
+      "subchapter": "4a",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/catalog/api/filter-data",
+      "subchapter": "4a",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/catalog/api/list-objects",
+      "subchapter": "4a",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/catalog/api/look-up-object",
+      "subchapter": "4a",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/catalog/api/look-up-multiple-objects",
+      "subchapter": "4a",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/catalog/api/update-object",
+      "subchapter": "4a",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/catalog/api/replace-object",
+      "subchapter": "4a",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/catalog/api/delete-object",
+      "subchapter": "4a",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/catalog/api/create-dataset",
+      "subchapter": "4a",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/catalog/api/create-batch",
+      "subchapter": "4a",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/catalog/api/labels",
+      "subchapter": "4a",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/catalog/api/appendix",
+      "subchapter": "4a",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/overview",
+      "subchapter": "4a",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/user-guide",
+      "subchapter": "4a",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/create",
+      "subchapter": "4a",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/enable-for-profile",
+      "subchapter": "4a",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/enable-upsert",
+      "subchapter": "4a",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/experience-event-dataset-retention-ttl-guide",
+      "subchapter": "4a",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/catalog/privacy",
+      "subchapter": "4a",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/catalog/catalog-faq",
+      "subchapter": "4a",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/configure",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/bot-detection",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overrides",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/data-prep",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dataflows/api/sort-and-filter",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dataflows/ui/monitor-sources",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dataflows/ui/monitor-identities",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dataflows/ui/monitor-profiles",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dataflows/ui/monitor-audiences",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dataflows/ui/monitor-destinations",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dataflows/ui/monitor-streaming-profile",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dataflows/ui/b2b/monitor-profile-enrichment",
+      "subchapter": "4b",
+      "tier": 4
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/identity/identity-and-profile",
+      "subchapter": "5a",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/identity-linking-logic",
+      "subchapter": "5a",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/identity-graph-viewer",
+      "subchapter": "5a",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/deletion",
+      "subchapter": "5a",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/identity-graph-linking-rules/identity-optimization-algorithm",
+      "subchapter": "5a",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/identity-graph-linking-rules/implementation-guide",
+      "subchapter": "5a",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/identity-graph-linking-rules/example-configurations",
+      "subchapter": "5a",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/identity-graph-linking-rules/namespace-priority",
+      "subchapter": "5a",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/identity-graph-linking-rules/identity-settings-ui",
+      "subchapter": "5a",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/identity/implementation",
+      "subchapter": "5a",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/identity/api/list-cluster-identites",
+      "subchapter": "5a",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/identity/api/list-cluster-history",
+      "subchapter": "5a",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/identity/api/list-identity-mappings",
+      "subchapter": "5a",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/identity/api/list-namespaces",
+      "subchapter": "5a",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/identity/api/create-custom-namespace",
+      "subchapter": "5a",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/identity/api/list-native-id",
+      "subchapter": "5a",
+      "tier": 5
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/profile/home",
+      "subchapter": "6a",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/profile/guardrails",
+      "subchapter": "6a",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/profile/profile-dashboard",
+      "subchapter": "6a",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/profile/edge-profiles",
+      "subchapter": "6a",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/profile/event-expirations",
+      "subchapter": "6a",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles",
+      "subchapter": "6a",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/profile/api/overview",
+      "subchapter": "6a",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/profile/api/getting-started",
+      "subchapter": "6a",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/profile/ui/user-guide",
+      "subchapter": "6a",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/profile/ui/profile-customization",
+      "subchapter": "6a",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/profile/ui/prospect-profile",
+      "subchapter": "6a",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/profile/computed-attributes/overview",
+      "subchapter": "6a",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/profile/computed-attributes/api",
+      "subchapter": "6a",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/profile/computed-attributes/ui",
+      "subchapter": "6a",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/profile/computed-attributes/faq",
+      "subchapter": "6a",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/profile/merge-policies/overview",
+      "subchapter": "6a",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/profile/merge-policies/ui-guide",
+      "subchapter": "6a",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/profile/union-schemas/union-schema",
+      "subchapter": "6a",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/profile/tutorials/add-profile-data",
+      "subchapter": "6a",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/profile/tutorials/dataset-configuration",
+      "subchapter": "6a",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/profile/tutorials/dataset-overlap-report",
+      "subchapter": "6a",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/profile/privacy",
+      "subchapter": "6a",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/profile/troubleshooting",
+      "subchapter": "6a",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/data-types",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/validation",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/api/overview",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/api/getting-started",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/api/audiences",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/api/export-jobs",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/api/external-audiences",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/api/previews-and-estimates",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/api/schedules",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/api/segment-definitions",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/api/segment-jobs",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/api/segment-search",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/audience-dashboard",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/audience-portal",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/audience-composition",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/segment-builder",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/segmentation/audience-builder",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/segment-match/overview",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/segment-match/troubleshooting",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/methods/overview",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/methods/batch-segmentation",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/methods/streaming-segmentation",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/methods/edge-segmentation",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/methods/flexible-audience-evaluation",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/types/overview",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/types/people-audiences",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/types/prospect-audiences",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/types/account-audiences",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/types/lookalike-audiences",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/tutorials/create-a-segment",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/tutorials/create-a-dynamic-segment",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/tutorials/create-multi-entity-segments",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/tutorials/multi-entity-segmentation",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/tutorials/consents",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/tutorials/evaluate-a-segment",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/tutorials/create-external-audience",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/tutorials/create-dataset-export-segment",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/tutorials/governance",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/pql/overview",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/pql/boolean-functions",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/pql/comparison-functions",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/pql/array-functions",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/pql/map-functions",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/pql/string-functions",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/pql/object-functions",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/pql/arithmetic-functions",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/pql/aggregation-functions",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/pql/datetime-functions",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/pql/filter-functions",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/pql/logical-quantifiers",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/pql/misc-functions",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/xdm/field-groups/profile/segmentation",
+      "subchapter": "6b",
+      "tier": 6
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/query/packaging",
+      "subchapter": "7a",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/query/get-started/prerequisites",
+      "subchapter": "7a",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/home",
+      "subchapter": "7b",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/access-features-dsw",
+      "subchapter": "7b",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/walkthrough",
+      "subchapter": "7b",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/overview",
+      "subchapter": "7b",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/access-notebook-data",
+      "subchapter": "7b",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data",
+      "subchapter": "7b",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/query-service",
+      "subchapter": "7b",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/eda-notebook",
+      "subchapter": "7b",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/create-a-model",
+      "subchapter": "7b",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/using-git-for-collaboration",
+      "subchapter": "7b",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/intelligent-services/home",
+      "subchapter": "7c",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/intelligent-services/data-preparation",
+      "subchapter": "7c",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/intelligent-services/attribution-ai/overview",
+      "subchapter": "7c",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/intelligent-services/attribution-ai/getting-started",
+      "subchapter": "7c",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/intelligent-services/attribution-ai/input-output",
+      "subchapter": "7c",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/intelligent-services/attribution-ai/user-guide",
+      "subchapter": "7c",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/intelligent-services/attribution-ai/discover-insights",
+      "subchapter": "7c",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/intelligent-services/attribution-ai/download-scores",
+      "subchapter": "7c",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/intelligent-services/content-commerce-ai/overview",
+      "subchapter": "7c",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/intelligent-services/content-commerce-ai/getting-started",
+      "subchapter": "7c",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/intelligent-services/content-commerce-ai/api/color-tagging",
+      "subchapter": "7c",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/intelligent-services/content-commerce-ai/api/keyword-tagging",
+      "subchapter": "7c",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/intelligent-services/content-commerce-ai/api/optical-character-recognition",
+      "subchapter": "7c",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/intelligent-services/customer-ai/overview",
+      "subchapter": "7c",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/intelligent-services/customer-ai/getting-started",
+      "subchapter": "7c",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/intelligent-services/customer-ai/data-requirements",
+      "subchapter": "7c",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/intelligent-services/customer-ai/model-detail",
+      "subchapter": "7c",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/intelligent-services/customer-ai/user-guide/configure",
+      "subchapter": "7c",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/intelligent-services/customer-ai/user-guide/discover-insights",
+      "subchapter": "7c",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/intelligent-services/customer-ai/user-guide/create-segment",
+      "subchapter": "7c",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/intelligent-services/customer-ai/user-guide/download-scores",
+      "subchapter": "7c",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/intelligent-services/customer-ai/troubleshooting",
+      "subchapter": "7c",
+      "tier": 7
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-types",
+      "subchapter": "8a",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/destinations-configurations",
+      "subchapter": "8a",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior",
+      "subchapter": "8a",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/identity-handling",
+      "subchapter": "8a",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/audience-lifecycle-streaming-destinations",
+      "subchapter": "8a",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/api/activate-segments-file-based-destinations",
+      "subchapter": "8a",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/api/streaming-destinations",
+      "subchapter": "8a",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/api/connect-activate-batch-destinations",
+      "subchapter": "8a",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/api/ad-hoc-activation-api",
+      "subchapter": "8a",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/api/update-destination-dataflows",
+      "subchapter": "8a",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/api/delete-destination-dataflow",
+      "subchapter": "8a",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/api/export-datasets",
+      "subchapter": "8a",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/destinations-workspace",
+      "subchapter": "8a",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/connect-destination",
+      "subchapter": "8a",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activation-overview",
+      "subchapter": "8a",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations",
+      "subchapter": "8a",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-streaming-profile-destinations",
+      "subchapter": "8a",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations",
+      "subchapter": "8a",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-edge-personalization-destinations",
+      "subchapter": "8a",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-edge-profile-lookup",
+      "subchapter": "8a",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-curated-destinations",
+      "subchapter": "8a",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-prospect-audiences",
+      "subchapter": "8a",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-account-audiences",
+      "subchapter": "8a",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/export-file-now",
+      "subchapter": "8a",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/dataset-expiration-update",
+      "subchapter": "8a",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-last-qualification-time",
+      "subchapter": "8a",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/export-arrays-maps-objects",
+      "subchapter": "8a",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/data-transformations-calculated-fields",
+      "subchapter": "8a",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/destination-details-page",
+      "subchapter": "8a",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/update-accounts",
+      "subchapter": "8a",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/edit-activation",
+      "subchapter": "8a",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/delete-destinations",
+      "subchapter": "8a",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/monitor-dataflows",
+      "subchapter": "8a",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/batch-destinations-file-formatting-options",
+      "subchapter": "8a",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/alerts",
+      "subchapter": "8a",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/home",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/intro/rtcdp-intro/home-page-dashboards",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/intro/rtcdpb2b-intro/b2b-use-case",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/intro/rtcdpb2b-intro/b2b-tutorial",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/intro/rtcdpb2b-intro/b2b-guardrails",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/intro/rtcdpb2b-intro/b2b-architecture-upgrade",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/evolution/aam-to-rtcdp",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-ui-guide",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/admin/admin-overview",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/segmentation/segmentation-overview",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/segmentation/b2b",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/segmentation/customer-ai",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/datasets/dataset",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/datasets/data-quality",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/destinations/overview",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/destinations/b2b",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/guardrails/overview",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/identity/identities-overview",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/privacy/privacy-overview",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/privacy/data-governance-overview",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/profile/profile-overview",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/profile/profile-browse",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/b2b-cdp-ai-ml/related-accounts",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/b2b-cdp-ai-ml/lead-to-account-matching",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/b2b-cdp-ai-ml/predictive-lead-and-account-scoring-intro/predictive-lead-and-account-scoring",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/b2b-cdp-ai-ml/predictive-lead-and-account-scoring-intro/manage-predictive-lead-and-account-scoring",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/schemas/overview",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/schemas/b2b",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/sources/sources-overview",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/sources/b2b",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/use-cases/customer-acquisition/prospecting",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/use-cases/customer-acquisition/onsite-personalization",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/use-cases/customer-acquisition/offsite-retargeting",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/use-cases/customer-acquisition/unauthenticated-retargeting",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/use-cases/profile-enrichment/supplement-first-party-profiles",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/use-cases/personalization-insights-engagement/evolve-one-time-value-to-lifetime-value",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/use-cases/personalization-insights-engagement/intelligent-re-engagement",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/use-cases/personalization-insights-engagement/use-cases-luma",
+      "subchapter": "8b",
+      "tier": 8
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home",
+      "subchapter": "9a",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/e2e",
+      "subchapter": "9a",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/labels/overview",
+      "subchapter": "9a",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/labels/reference",
+      "subchapter": "9a",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/labels/user-guide",
+      "subchapter": "9a",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/labels/dataset-api",
+      "subchapter": "9a",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/policies/overview",
+      "subchapter": "9a",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/policies/user-guide",
+      "subchapter": "9a",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/policies/create",
+      "subchapter": "9a",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/policies/consent-policy-rule-building-reference",
+      "subchapter": "9a",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/enforcement/overview",
+      "subchapter": "9a",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/enforcement/auto-enforcement",
+      "subchapter": "9a",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/enforcement/api-enforcement",
+      "subchapter": "9a",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/mtls-api/overview",
+      "subchapter": "9a",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/mtls-api/getting-started",
+      "subchapter": "9a",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/mtls-api/public-certificate-endpoint",
+      "subchapter": "9a",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/api/overview",
+      "subchapter": "9a",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/api/getting-started",
+      "subchapter": "9a",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/api/labels",
+      "subchapter": "9a",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/api/policies",
+      "subchapter": "9a",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/api/marketing-actions",
+      "subchapter": "9a",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/api/evaluation",
+      "subchapter": "9a",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/privacy/experience-cloud-apps",
+      "subchapter": "9b",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/privacy/identity-data",
+      "subchapter": "9b",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/privacy/js-library",
+      "subchapter": "9b",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/privacy/api/privacy-jobs",
+      "subchapter": "9b",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/privacy/api/content",
+      "subchapter": "9b",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/privacy/api/error-codes",
+      "subchapter": "9b",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/privacy/privacy-events",
+      "subchapter": "9b",
+      "tier": 9
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/observability/api/metrics",
+      "subchapter": "10a",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/observability/alerts/subscribe",
+      "subchapter": "10a",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/observability/alerts/slack-integration",
+      "subchapter": "10a",
+      "tier": 10
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/home",
+      "subchapter": "11a",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/permissions",
+      "subchapter": "11a",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/inventory",
+      "subchapter": "11a",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/standard-dashboards",
+      "subchapter": "11a",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/download",
+      "subchapter": "11a",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/sql-insights-query-pro-mode/overview",
+      "subchapter": "11a",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/sql-insights-query-pro-mode/templates/overview",
+      "subchapter": "11a",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/sql-insights-query-pro-mode/templates/overlaps",
+      "subchapter": "11a",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/sql-insights-query-pro-mode/templates/comparison",
+      "subchapter": "11a",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/sql-insights-query-pro-mode/templates/trends",
+      "subchapter": "11a",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/sql-insights-query-pro-mode/templates/identity-overlaps",
+      "subchapter": "11a",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/sql-insights-query-pro-mode/filters/date-filter",
+      "subchapter": "11a",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/sql-insights-query-pro-mode/filters/global-filter",
+      "subchapter": "11a",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/sql-insights-query-pro-mode/drill-through",
+      "subchapter": "11a",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/sql-insights-query-pro-mode/view-more",
+      "subchapter": "11a",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/sql-insights-query-pro-mode/view-sql",
+      "subchapter": "11a",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/sql-insights-query-pro-mode/download-csv",
+      "subchapter": "11a",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/sql-insights-query-pro-mode/export-pdf",
+      "subchapter": "11a",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/guides/profiles",
+      "subchapter": "11a",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/guides/account-profiles",
+      "subchapter": "11a",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/guides/audiences",
+      "subchapter": "11a",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/guides/destinations",
+      "subchapter": "11a",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/guides/license-usage",
+      "subchapter": "11a",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/insights/profiles",
+      "subchapter": "11a",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/insights/audiences",
+      "subchapter": "11a",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/insights/destinations",
+      "subchapter": "11a",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/insights/account-profiles",
+      "subchapter": "11a",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/customize/overview",
+      "subchapter": "11a",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/customize/modify",
+      "subchapter": "11a",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/customize/widget-library",
+      "subchapter": "11a",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/customize/standard-widgets",
+      "subchapter": "11a",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/customize/custom-widgets",
+      "subchapter": "11a",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/customize/edit-schema",
+      "subchapter": "11a",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/insights-use-cases/consent-analysis",
+      "subchapter": "11a",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/data-models/cdp-insights-data-model-b2b",
+      "subchapter": "11a",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/data-models/cdp-insights-data-model-b2c",
+      "subchapter": "11a",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/integrations/power-bi",
+      "subchapter": "11a",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/query",
+      "subchapter": "11a",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/view-sql",
+      "subchapter": "11a",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/ai-assistant/landing",
+      "subchapter": "11b",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/ai-assistant/home",
+      "subchapter": "11b",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/ai-assistant/access",
+      "subchapter": "11b",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/ai-assistant/questions",
+      "subchapter": "11b",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/ai-assistant/ui-guide",
+      "subchapter": "11b",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/ai-assistant/privacy",
+      "subchapter": "11b",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/ai-assistant/faq",
+      "subchapter": "11b",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/ai-assistant/legal-disclaimer",
+      "subchapter": "11b",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/ai-assistant/new-features/alpha-beta",
+      "subchapter": "11b",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/ai-assistant/new-features/audience-forecasting",
+      "subchapter": "11b",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/ai-assistant/new-features/natural-language",
+      "subchapter": "11b",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/ai-assistant/model-details/natural-language-to-sql",
+      "subchapter": "11b",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/assurance/user-access",
+      "subchapter": "11c",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/assurance/view/event-transactions",
+      "subchapter": "11c",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/assurance/view/extension-versions",
+      "subchapter": "11c",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/assurance/view/edge-delivery",
+      "subchapter": "11c",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/assurance/view/in-app-messaging",
+      "subchapter": "11c",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/assurance/view/on-device-views",
+      "subchapter": "11c",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/assurance/view/places-service",
+      "subchapter": "11c",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/assurance/view/push-debug-view",
+      "subchapter": "11c",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/assurance/view/validation-summary",
+      "subchapter": "11c",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/assurance/view/adobe-analytics-streaming-media",
+      "subchapter": "11c",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/assurance/tutorials/implement-assurance",
+      "subchapter": "11c",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/assurance/tutorials/using-assurance",
+      "subchapter": "11c",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/use-case-playbooks/playbooks/overview",
+      "subchapter": "11d",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/use-case-playbooks/playbooks/navigate",
+      "subchapter": "11d",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/use-case-playbooks/playbooks/get-started",
+      "subchapter": "11d",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/use-case-playbooks/playbooks/playbooks-list",
+      "subchapter": "11d",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/use-case-playbooks/playbooks/choose",
+      "subchapter": "11d",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/use-case-playbooks/playbooks/author",
+      "subchapter": "11d",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/use-case-playbooks/playbooks/create-share-reuse",
+      "subchapter": "11d",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/use-case-playbooks/playbooks/data-awareness",
+      "subchapter": "11d",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/use-case-playbooks/playbooks/troubleshooting",
+      "subchapter": "11d",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/expanded-activation/administration",
+      "subchapter": "11e",
+      "tier": 11
+    },
+    {
+      "url": "https://experienceleague.adobe.com/en/docs/experience-platform/expanded-activation/activate-audiences",
+      "subchapter": "11e",
+      "tier": 11
+    }
+  ]
+}
