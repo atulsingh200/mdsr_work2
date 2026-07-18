@@ -8,11 +8,27 @@ instead of producing two separate encodings.
 from __future__ import annotations
 
 import json
+import re
 import warnings
 from pathlib import Path
 
 import torch
 from torch.utils.data import Dataset
+
+_VERDICT_RE = re.compile(r"^\s*VERDICT\b")
+
+
+def strip_verdict(reasoning: str) -> str:
+    """Drop the trailing 'VERDICT: BEFORE/NOT_BEFORE (...)' line from a reasoning trace.
+
+    The verdict line spells out the label as text, so it is removed before the
+    reasoning is used as a decoder target -- otherwise the auxiliary generation
+    task could trivially shortcut to copying the label instead of the actual
+    explanation.
+    """
+    lines = reasoning.splitlines()
+    kept = [ln for ln in lines if not _VERDICT_RE.match(ln)]
+    return "\n".join(kept).rstrip()
 
 
 def _parse_step(v) -> int | None:
@@ -94,3 +110,40 @@ class CECollate:
             "step_2": step_2,
             "idx": [b["idx"] for b in batch],
         }
+
+
+class CEPairReasoningDataset(CEPairDataset):
+    """CEPairDataset that also exposes a verdict-stripped `reasoning` field."""
+
+    def __getitem__(self, i: int) -> dict:
+        item = super().__getitem__(i)
+        item["reasoning"] = strip_verdict(self.rows[i]["reasoning"])
+        return item
+
+
+class CEReasoningCollate(CECollate):
+    """CECollate plus teacher-forced decoder tensors for the `reasoning` field."""
+
+    def __init__(self, tokenizer, max_len: int, max_reason_len: int):
+        super().__init__(tokenizer, max_len)
+        self.max_reason_len = max_reason_len
+
+    def __call__(self, batch: list[dict]) -> dict:
+        out = super().__call__(batch)
+
+        reasoning = [b["reasoning"] for b in batch]
+        reason_enc = self.tok(
+            reasoning, padding=True, truncation=True,
+            max_length=self.max_reason_len + 1, return_tensors="pt",
+        )
+        ids = reason_enc["input_ids"]
+        pad_id = self.tok.pad_token_id
+        decoder_input_ids = ids[:, :-1]
+        decoder_labels = ids[:, 1:].clone()
+        decoder_labels[decoder_labels == pad_id] = -100
+        decoder_padding_mask = decoder_input_ids == pad_id
+
+        out["decoder_input_ids"] = decoder_input_ids
+        out["decoder_labels"] = decoder_labels
+        out["decoder_padding_mask"] = decoder_padding_mask
+        return out

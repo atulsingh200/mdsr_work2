@@ -1,0 +1,58 @@
+00:08:41 INFO run_dir=runs/crossencoder2x_deberta/aep_ajo_procedural_fixed_reas  device=cuda  bf16=True
+/mnt/localssd/causal-embedding-research/automation/internship-causal-embedding/.venv/lib/python3.11/site-packages/transformers/convert_slow_tokenizer.py:566: UserWarning: The sentencepiece tokenizer that you are converting to a fast tokenizer uses the byte fallback option which is not implemented in the fast tokenizers. In practice this means that the fast version of the tokenizer can produce unknown tokens whereas the sentencepiece version would have converted these unknown tokens into a sequence of byte tokens matching the original piece of text.
+  warnings.warn(
+00:08:42 INFO tokenizer <- microsoft/deberta-v3-large
+00:08:42 INFO scanning max joint token length across all splits …
+00:08:55 INFO   observed max=512  -> max_seq_len=512  (scan 12.9s)
+00:08:55 INFO loading datasets …
+00:08:55 INFO   train=38452  val=3928  test=4944
+00:08:55 INFO building CrossEncoder2x  backbone=microsoft/deberta-v3-large  n_layers=24  native=True …
+00:08:56 INFO   total params=434,013,185
+00:08:56 INFO   total_steps=1803  warmup_steps=180
+00:09:59 INFO   e1 opt_step=50/1803  loss=0.7052  acc=0.4853  lr=2.78e-06
+00:10:59 INFO   e1 opt_step=100/1803  loss=0.7013  acc=0.5012  lr=5.56e-06
+00:12:04 INFO   e1 opt_step=150/1803  loss=0.7001  acc=0.5043  lr=8.33e-06
+00:13:08 INFO   e1 opt_step=200/1803  loss=0.6960  acc=0.5141  lr=9.88e-06
+00:14:12 INFO   e1 opt_step=250/1803  loss=0.6892  acc=0.5265  lr=9.57e-06
+00:15:13 INFO   e1 opt_step=300/1803  loss=0.6810  acc=0.5389  lr=9.26e-06
+00:16:19 INFO   e1 opt_step=350/1803  loss=0.6708  acc=0.5542  lr=8.95e-06
+00:17:26 INFO   e1 opt_step=400/1803  loss=0.6602  acc=0.5663  lr=8.64e-06
+00:18:29 INFO   e1 opt_step=450/1803  loss=0.6507  acc=0.5775  lr=8.34e-06
+00:19:32 INFO   e1 opt_step=500/1803  loss=0.6422  acc=0.5862  lr=8.03e-06
+00:20:39 INFO   e1 opt_step=550/1803  loss=0.6356  acc=0.5935  lr=7.72e-06
+00:21:41 INFO   e1 opt_step=600/1803  loss=0.6285  acc=0.5995  lr=7.41e-06
+00:22:05 INFO [epoch 1/3]  train_loss=0.6284  train_acc=0.5997  val_loss=0.5596  val_acc=0.6380  val_auc=0.7346  elapsed=788.8s
+00:22:09 INFO   * saved best.pt  val_acc=0.6380
+00:23:12 INFO   e2 opt_step=650/1803  loss=0.5261  acc=0.6792  lr=7.10e-06
+00:24:17 INFO   e2 opt_step=700/1803  loss=0.5172  acc=0.6903  lr=6.80e-06
+00:25:20 INFO   e2 opt_step=750/1803  loss=0.5127  acc=0.6937  lr=6.49e-06
+00:26:24 INFO   e2 opt_step=800/1803  loss=0.5091  acc=0.6957  lr=6.18e-06
+00:27:24 INFO   e2 opt_step=850/1803  loss=0.5092  acc=0.6955  lr=5.87e-06
+00:28:28 INFO   e2 opt_step=900/1803  loss=0.5069  acc=0.6982  lr=5.56e-06
+00:29:29 INFO   e2 opt_step=950/1803  loss=0.5030  acc=0.7025  lr=5.26e-06
+00:30:36 INFO   e2 opt_step=1000/1803  loss=0.5002  acc=0.7054  lr=4.95e-06
+00:31:42 INFO   e2 opt_step=1050/1803  loss=0.4994  acc=0.7067  lr=4.64e-06
+00:32:46 INFO   e2 opt_step=1100/1803  loss=0.4973  acc=0.7091  lr=4.33e-06
+00:33:53 INFO   e2 opt_step=1150/1803  loss=0.4961  acc=0.7107  lr=4.02e-06
+00:34:57 INFO   e2 opt_step=1200/1803  loss=0.4945  acc=0.7124  lr=3.72e-06
+00:35:22 INFO [epoch 2/3]  train_loss=0.4944  train_acc=0.7124  val_loss=0.5476  val_acc=0.6846  val_auc=0.7804  elapsed=793.4s
+00:35:27 INFO   * saved best.pt  val_acc=0.6846
+00:36:33 INFO   e3 opt_step=1250/1803  loss=0.4195  acc=0.7660  lr=3.41e-06
+00:37:33 INFO   e3 opt_step=1300/1803  loss=0.4203  acc=0.7667  lr=3.10e-06
+00:38:41 INFO   e3 opt_step=1350/1803  loss=0.4220  acc=0.7671  lr=2.79e-06
+00:39:43 INFO   e3 opt_step=1400/1803  loss=0.4212  acc=0.7696  lr=2.48e-06
+00:40:47 INFO   e3 opt_step=1450/1803  loss=0.4202  acc=0.7714  lr=2.17e-06
+00:41:50 INFO   e3 opt_step=1500/1803  loss=0.4165  acc=0.7735  lr=1.87e-06
+00:42:54 INFO   e3 opt_step=1550/1803  loss=0.4124  acc=0.7764  lr=1.56e-06
+00:43:56 INFO   e3 opt_step=1600/1803  loss=0.4122  acc=0.7760  lr=1.25e-06
+00:45:03 INFO   e3 opt_step=1650/1803  loss=0.4109  acc=0.7771  lr=9.43e-07
+00:46:06 INFO   e3 opt_step=1700/1803  loss=0.4099  acc=0.7768  lr=6.35e-07
+00:47:10 INFO   e3 opt_step=1750/1803  loss=0.4076  acc=0.7785  lr=3.27e-07
+00:48:14 INFO   e3 opt_step=1800/1803  loss=0.4068  acc=0.7793  lr=1.85e-08
+00:48:40 INFO [epoch 3/3]  train_loss=0.4068  train_acc=0.7795  val_loss=0.5776  val_acc=0.6973  val_auc=0.7960  elapsed=793.0s
+00:48:45 INFO   * saved best.pt  val_acc=0.6973
+00:48:46 INFO saved final.pt  total_time=2390s
+00:48:46 INFO loading best.pt for final val/test evaluation …
+00:49:10 INFO [val]  acc=0.6973  auc=0.7960  f1=0.6933
+00:49:40 INFO [test] loss=0.6178  acc=0.7017  auc=0.7967  f1=0.7024
+00:49:40 INFO [done] best_val_acc=0.6973  test_acc=0.7017  test_auc=0.7967  results in runs/crossencoder2x_deberta/aep_ajo_procedural_fixed_reas

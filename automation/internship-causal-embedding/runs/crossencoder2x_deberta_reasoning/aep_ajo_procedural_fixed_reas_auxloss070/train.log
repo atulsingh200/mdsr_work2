@@ -1,0 +1,18 @@
+02:18:42 INFO run_dir=runs/crossencoder2x_deberta_reasoning/aep_ajo_procedural_fixed_reas_auxloss070  device=cuda  bf16=True
+02:18:43 INFO tokenizer <- microsoft/deberta-v3-large
+02:18:43 INFO scanning max joint token length across all splits …
+02:18:56 INFO   observed max=512  -> max_seq_len=512  (scan 12.8s)
+02:18:56 INFO scanning max reasoning token length across all splits …
+02:19:05 INFO   observed max=264  -> max_reason_len=280  (scan 9.3s)
+02:19:05 INFO loading datasets …
+02:19:06 INFO   train=38452  val=3928  test=4944
+02:19:06 INFO building CrossEncoder2xWithReasoning  backbone=microsoft/deberta-v3-large  n_layers=24  native=True  decoder_layers=4 …
+02:19:07 INFO   total params=501,614,693
+02:19:07 INFO   total_steps=6010  warmup_steps=601
+02:20:27 INFO   e1 opt_step=50/6010  loss=9.4202  cls_loss=0.7120  decoder_loss=13.1563  acc=0.4947  lr=8.32e-07
+02:21:39 INFO   e1 opt_step=100/6010  loss=8.3825  cls_loss=0.7123  decoder_loss=11.6735  acc=0.4955  lr=1.66e-06
+02:22:51 INFO   e1 opt_step=150/6010  loss=7.4652  cls_loss=0.7092  decoder_loss=10.3696  acc=0.4990  lr=2.50e-06
+02:24:00 INFO   e1 opt_step=200/6010  loss=6.8687  cls_loss=0.7093  decoder_loss=9.5151  acc=0.4963  lr=3.33e-06
+02:25:11 INFO   e1 opt_step=250/6010  loss=6.4611  cls_loss=0.7082  decoder_loss=8.9300  acc=0.4986  lr=4.16e-06
+02:26:18 INFO   e1 opt_step=300/6010  loss=6.1531  cls_loss=0.7077  decoder_loss=8.4858  acc=0.4991  lr=4.99e-06
+02:27:31 INFO   e1 opt_step=350/6010  loss=5.8983  cls_loss=0.7072  decoder_loss=8.1242  acc=0.4998  lr=5.82e-06
