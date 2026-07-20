@@ -1,0 +1,25 @@
+train_queries=8967 test_queries=2057
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:02<00:07,  2.44s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.90s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:05<00:01,  1.67s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:06<00:00,  1.51s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:06<00:00,  1.66s/it]
+trainable params: 40,370,176 || all params: 7,655,986,688 || trainable%: 0.5273
+  ep0 it300/2242 loss=0.3478
+  ep0 it600/2242 loss=nan
+  ep0 it900/2242 loss=nan
+  ep0 it1200/2242 loss=nan
+  ep0 it1500/2242 loss=nan
+  ep0 it1800/2242 loss=nan
+  ep0 it2100/2242 loss=nan
+[ep 0] train_loss=nan
+  ep1 it300/2242 loss=nan
+  ep1 it600/2242 loss=nan
+  ep1 it900/2242 loss=nan
+  ep1 it1200/2242 loss=nan
+  ep1 it1500/2242 loss=nan
+  ep1 it1800/2242 loss=nan
+  ep1 it2100/2242 loss=nan
+[ep 1] train_loss=nan
+  ep2 it300/2242 loss=0.0102
+  ep2 it600/2242 loss=0.0089
+  ep2 it900/2242 loss=0.0084
+  ep2 it1200/2242 loss=0.0077
+  ep2 it1500/2242 loss=nan
+  ep2 it1800/2242 loss=nan

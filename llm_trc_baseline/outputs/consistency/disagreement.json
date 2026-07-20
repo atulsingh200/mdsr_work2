@@ -1,0 +1,32 @@
+{
+  "all": {
+    "both_cyclic": 18,
+    "baseline_only_cyclic_OURS_WINS": 30,
+    "reasoning_only_cyclic_ours_worse": 27,
+    "neither_cyclic": 822,
+    "baseline_cyclic_total": 48,
+    "ours_resolves_natively_pct": 0.625,
+    "net_cyclic_baseline": 48,
+    "net_cyclic_reasoning": 45
+  },
+  "procedural": {
+    "both_cyclic": 10,
+    "baseline_only_cyclic_OURS_WINS": 18,
+    "reasoning_only_cyclic_ours_worse": 9,
+    "neither_cyclic": 163,
+    "baseline_cyclic_total": 28,
+    "ours_resolves_natively_pct": 0.6429,
+    "net_cyclic_baseline": 28,
+    "net_cyclic_reasoning": 19
+  },
+  "proc_n>=6": {
+    "both_cyclic": 9,
+    "baseline_only_cyclic_OURS_WINS": 15,
+    "reasoning_only_cyclic_ours_worse": 7,
+    "neither_cyclic": 94,
+    "baseline_cyclic_total": 24,
+    "ours_resolves_natively_pct": 0.625,
+    "net_cyclic_baseline": 24,
+    "net_cyclic_reasoning": 16
+  }
+}

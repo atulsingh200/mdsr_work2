@@ -1,0 +1,66 @@
+test rows: 4801  model: Qwen/Qwen2.5-14B-Instruct
+Loading safetensors checkpoint shards:   0% Completed | 0/8 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:  12% Completed | 1/8 [00:01<00:07,  1.10s/it]
+Loading safetensors checkpoint shards:  25% Completed | 2/8 [00:02<00:06,  1.13s/it]
+Loading safetensors checkpoint shards:  38% Completed | 3/8 [00:03<00:05,  1.13s/it]
+Loading safetensors checkpoint shards:  50% Completed | 4/8 [00:04<00:04,  1.16s/it]
+Loading safetensors checkpoint shards:  62% Completed | 5/8 [00:05<00:03,  1.19s/it]
+Loading safetensors checkpoint shards:  75% Completed | 6/8 [00:06<00:01,  1.01it/s]
+Loading safetensors checkpoint shards:  88% Completed | 7/8 [00:07<00:00,  1.01it/s]
+Loading safetensors checkpoint shards: 100% Completed | 8/8 [00:08<00:00,  1.10it/s]
+Loading safetensors checkpoint shards: 100% Completed | 8/8 [00:08<00:00,  1.02s/it]
+
+Capturing CUDA graph shapes:   0%|          | 0/35 [00:00<?, ?it/s]Capturing CUDA graph shapes:   3%|▎         | 1/35 [00:00<00:21,  1.60it/s]Capturing CUDA graph shapes:   6%|▌         | 2/35 [00:01<00:20,  1.62it/s]Capturing CUDA graph shapes:   9%|▊         | 3/35 [00:01<00:19,  1.65it/s]Capturing CUDA graph shapes:  11%|█▏        | 4/35 [00:02<00:18,  1.65it/s]Capturing CUDA graph shapes:  14%|█▍        | 5/35 [00:03<00:18,  1.67it/s]Capturing CUDA graph shapes:  17%|█▋        | 6/35 [00:03<00:17,  1.68it/s]Capturing CUDA graph shapes:  20%|██        | 7/35 [00:04<00:16,  1.71it/s]Capturing CUDA graph shapes:  23%|██▎       | 8/35 [00:04<00:15,  1.72it/s]Capturing CUDA graph shapes:  26%|██▌       | 9/35 [00:05<00:15,  1.70it/s]Capturing CUDA graph shapes:  29%|██▊       | 10/35 [00:05<00:14,  1.68it/s]Capturing CUDA graph shapes:  31%|███▏      | 11/35 [00:06<00:14,  1.67it/s]Capturing CUDA graph shapes:  34%|███▍      | 12/35 [00:07<00:13,  1.66it/s]Capturing CUDA graph shapes:  37%|███▋      | 13/35 [00:07<00:13,  1.65it/s]Capturing CUDA graph shapes:  40%|████      | 14/35 [00:08<00:12,  1.65it/s]Capturing CUDA graph shapes:  43%|████▎     | 15/35 [00:09<00:12,  1.65it/s]Capturing CUDA graph shapes:  46%|████▌     | 16/35 [00:09<00:11,  1.64it/s]Capturing CUDA graph shapes:  49%|████▊     | 17/35 [00:10<00:10,  1.65it/s]Capturing CUDA graph shapes:  51%|█████▏    | 18/35 [00:10<00:10,  1.66it/s]Capturing CUDA graph shapes:  54%|█████▍    | 19/35 [00:11<00:09,  1.67it/s]Capturing CUDA graph shapes:  57%|█████▋    | 20/35 [00:12<00:09,  1.66it/s]Capturing CUDA graph shapes:  60%|██████    | 21/35 [00:12<00:08,  1.64it/s]Capturing CUDA graph shapes:  63%|██████▎   | 22/35 [00:13<00:07,  1.65it/s]Capturing CUDA graph shapes:  66%|██████▌   | 23/35 [00:13<00:07,  1.65it/s]Capturing CUDA graph shapes:  69%|██████▊   | 24/35 [00:14<00:06,  1.66it/s]Capturing CUDA graph shapes:  71%|███████▏  | 25/35 [00:15<00:05,  1.68it/s]Capturing CUDA graph shapes:  74%|███████▍  | 26/35 [00:16<00:06,  1.32it/s]Capturing CUDA graph shapes:  77%|███████▋  | 27/35 [00:17<00:06,  1.20it/s]Capturing CUDA graph shapes:  80%|████████  | 28/35 [00:17<00:05,  1.33it/s]Capturing CUDA graph shapes:  83%|████████▎ | 29/35 [00:18<00:04,  1.41it/s]Capturing CUDA graph shapes:  86%|████████▌ | 30/35 [00:18<00:03,  1.46it/s]Capturing CUDA graph shapes:  89%|████████▊ | 31/35 [00:19<00:02,  1.55it/s]Capturing CUDA graph shapes:  91%|█████████▏| 32/35 [00:20<00:01,  1.58it/s]Capturing CUDA graph shapes:  94%|█████████▍| 33/35 [00:20<00:01,  1.63it/s]Capturing CUDA graph shapes:  97%|█████████▋| 34/35 [00:21<00:00,  1.67it/s]Capturing CUDA graph shapes: 100%|██████████| 35/35 [00:21<00:00,  1.70it/s]Capturing CUDA graph shapes: 100%|██████████| 35/35 [00:21<00:00,  1.60it/s]
+[Qwen2.5-14B-Instruct__P__k0] f1=0.5743 acc=0.6276 unparsed=0.000
+[Qwen2.5-14B-Instruct__P__k2__s0] f1=0.6033 acc=0.6297 unparsed=0.000
+[Qwen2.5-14B-Instruct__P__k2__s1] f1=0.5804 acc=0.6203 unparsed=0.000
+[Qwen2.5-14B-Instruct__P__k2__s2] f1=0.6214 acc=0.6376 unparsed=0.000
+[Qwen2.5-14B-Instruct__P__k2__s3] f1=0.6147 acc=0.6276 unparsed=0.000
+[Qwen2.5-14B-Instruct__P__k2__s4] f1=0.5991 acc=0.6261 unparsed=0.000
+[Qwen2.5-14B-Instruct__P__k2] f1=0.6038 +/- 0.0141
+[Qwen2.5-14B-Instruct__QA1__k0] f1=0.5686 acc=0.6353 unparsed=0.000
+[Qwen2.5-14B-Instruct__QA1__k2__s0] f1=0.6515 acc=0.6580 unparsed=0.000
+[Qwen2.5-14B-Instruct__QA1__k2__s1] f1=0.6044 acc=0.6444 unparsed=0.000
+[Qwen2.5-14B-Instruct__QA1__k2__s2] f1=0.6753 acc=0.6605 unparsed=0.000
+[Qwen2.5-14B-Instruct__QA1__k2__s3] f1=0.6780 acc=0.6647 unparsed=0.000
+[Qwen2.5-14B-Instruct__QA1__k2__s4] f1=0.6393 acc=0.6555 unparsed=0.000
+[Qwen2.5-14B-Instruct__QA1__k2] f1=0.6497 +/- 0.0269
+[Qwen2.5-14B-Instruct__QA2__k0] f1=0.7017 acc=0.6211 unparsed=0.000
+[Qwen2.5-14B-Instruct__QA2__k2__s0] f1=0.6948 acc=0.6497 unparsed=0.000
+[Qwen2.5-14B-Instruct__QA2__k2__s1] f1=0.6756 acc=0.6338 unparsed=0.000
+[Qwen2.5-14B-Instruct__QA2__k2__s2] f1=0.7108 acc=0.6367 unparsed=0.000
+[Qwen2.5-14B-Instruct__QA2__k2__s3] f1=0.7119 acc=0.6413 unparsed=0.000
+[Qwen2.5-14B-Instruct__QA2__k2__s4] f1=0.6896 acc=0.6332 unparsed=0.000
+[Qwen2.5-14B-Instruct__QA2__k2] f1=0.6966 +/- 0.0136
+
+=== summary ===
+{
+  "Qwen2.5-14B-Instruct__P__k0": {
+    "f1": 0.5742857142857143,
+    "acc": 0.6275775880024995,
+    "unparsed_rate": 0.0
+  },
+  "Qwen2.5-14B-Instruct__P__k2": {
+    "f1_mean": 0.6037732694773419,
+    "f1_std": 0.01411704495125792
+  },
+  "Qwen2.5-14B-Instruct__QA1__k0": {
+    "f1": 0.5686129588568613,
+    "acc": 0.6352843157675484,
+    "unparsed_rate": 0.0
+  },
+  "Qwen2.5-14B-Instruct__QA1__k2": {
+    "f1_mean": 0.6497134351623256,
+    "f1_std": 0.026902472096455757
+  },
+  "Qwen2.5-14B-Instruct__QA2__k0": {
+    "f1": 0.7016565524028211,
+    "acc": 0.621120599875026,
+    "unparsed_rate": 0.0
+  },
+  "Qwen2.5-14B-Instruct__QA2__k2": {
+    "f1_mean": 0.6965597646739171,
+    "f1_std": 0.013622632709213852
+  }
+}
+[rank0]:[W719 09:12:39.489008507 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())

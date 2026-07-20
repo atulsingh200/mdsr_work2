@@ -1,0 +1,14 @@
+Paper-faithful LoRA | full text (no truncation) | prompt=QA1 | no system msg
+train=38731 val=3954 test=4801
+`flash-attention` package not found, consider installing for better performance: No module named 'flash_attn'.
+Current `flash-attention` does not support `window_size`. Either upgrade or use `attn_implementation='eager'`.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:03<00:03,  3.92s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.19s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.45s/it]
+You are not running the flash-attention implementation, expect numerical differences.
+trainable params: 6,291,456 || all params: 3,827,371,008 || trainable%: 0.1644
+  ep0 it200/2421 loss=7.8279
+  ep0 it400/2421 loss=4.0691
+  ep0 it600/2421 loss=2.8126
+  ep0 it800/2421 loss=2.1782
+  ep0 it1000/2421 loss=1.7971
+  ep0 it1200/2421 loss=1.5409
+  ep0 it1400/2421 loss=1.3575

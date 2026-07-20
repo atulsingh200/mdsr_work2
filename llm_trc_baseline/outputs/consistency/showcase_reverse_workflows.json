@@ -1,0 +1,368 @@
+[
+  {
+    "id": "proc_1877",
+    "origin": "procedural",
+    "n_steps": 8,
+    "steps": [
+      "Go back into your default page rule that you were just in",
+      "In the actions section, click the plus button to add another action. This will be our Send Event action",
+      "To configure the action, select Adobe Experience Platform Web SDK from the Extension drop-down",
+      "Select Send Event from the Action Type",
+      "In the right-hand panel, select the data element icon next to the Data Object",
+      "Select the Page View Data Variable (or whatever you called your new \u201cdata\u201d type data element) and then click the Select button",
+      "Click Keep Changes/Save",
+      "You should now see all four actions (two old ones and two new ones) in your rule"
+    ],
+    "baseline_n_cycles": 0,
+    "reasoning_n_cycles": 31
+  },
+  {
+    "id": "proc_105",
+    "origin": "procedural",
+    "n_steps": 7,
+    "steps": [
+      "Extract propositions from the event object",
+      "Loop through each proposition",
+      "Determine if the SDK rendered the proposition",
+      "If so, loop through each item in the proposition",
+      "Retrieve the activity name from the meta property, which is an object containing response tokens",
+      "Push the activity name into an array",
+      "Send the activity names to a third party. var propositions = event.propositions; if (propositions) { var activityNames = []; propositions.forEach(function(proposition) { if (proposition.renderAttempted) { proposition.items.forEach(function(item) { if (item.meta) { // item.meta contains the response tokens. var activityName = item.meta[\"activity.name\"]; // Ignore duplicates if (activityNames.indexOf(activityName) === -1) { activityNames.push(activityName); } } }); } }); // Now that activity names are in an array, // you can send them to a third party or use // them in some other way. }"
+    ],
+    "baseline_n_cycles": 0,
+    "reasoning_n_cycles": 7
+  },
+  {
+    "id": "curated_418",
+    "origin": "curated",
+    "n_steps": 4,
+    "steps": [
+      "Browse the playbook gallery and create an instance of a playbook to generate its artifacts.",
+      "Review the generated artifacts, such as schemas, datasets, and journeys, inside the playbook instance.",
+      "Publish the playbook package from the source sandbox to make the artifacts available for export.",
+      "Import the published package into your development sandbox to begin building with those assets."
+    ],
+    "baseline_n_cycles": 0,
+    "reasoning_n_cycles": 3
+  },
+  {
+    "id": "curated_462",
+    "origin": "curated",
+    "n_steps": 4,
+    "steps": [
+      "Enable multiple datasets for Real-Time Customer Profile so their schemas contribute to the union schema.",
+      "Open the union schema view in the Platform UI to see all merged fields from contributing datasets.",
+      "Inspect the identity field section of the union schema to confirm each contributing dataset includes the required identity descriptors.",
+      "Resolve any datasets missing required identity fields by updating their schemas and re-enabling them for Profile."
+    ],
+    "baseline_n_cycles": 0,
+    "reasoning_n_cycles": 3
+  },
+  {
+    "id": "curated_475",
+    "origin": "curated",
+    "n_steps": 4,
+    "steps": [
+      "Browse the use case playbook gallery and create an instance of a playbook that matches your campaign scenario.",
+      "Review the playbook-generated assets, including schemas, datasets, and audiences, in the inspirational sandbox.",
+      "Publish the playbook package so its assets become available for import into another sandbox.",
+      "Import the published package into your development sandbox to begin customizing schemas and audiences for your use case."
+    ],
+    "baseline_n_cycles": 0,
+    "reasoning_n_cycles": 3
+  },
+  {
+    "id": "proc_85",
+    "origin": "procedural",
+    "n_steps": 5,
+    "steps": [
+      "Select a field \u2013 Navigate through container fields to reach a primitive field",
+      "Choose an operator \u2013 Select the operator supported by the field type",
+      "Set a value \u2013 Define the value or condition to match",
+      "Match map keys \u2013 Choose whether to target a specific key or match across all keys in a map",
+      "Add conditions \u2013 Combine multiple rules using AND or OR logic as needed"
+    ],
+    "baseline_n_cycles": 0,
+    "reasoning_n_cycles": 3
+  },
+  {
+    "id": "proc_1967",
+    "origin": "procedural",
+    "n_steps": 7,
+    "steps": [
+      "Build or rebuild and run the app in the simulator or on a physical device from Android Studio, using . Optionally, you might want to clean your build, especially when you see unexpected results. Select Clean Project from the Android Studio Build menu",
+      "In the Allow Luma Android to send you notifications dialog, select Allow. {width=\"300\"}",
+      "Select Show permission dialog. {width=\"300\"}",
+      "In the Allow Luma Android to access this device\u2019s location? \u2026 {width=\"300\"} Select Precise. Select While using the app",
+      "Back in the introduction app screen, select Open device settings",
+      "In the Location permission screen, select Allow all the time. Then select \u2190 to return to the introduction app screen. {width=\"300\"}",
+      "Select Continue to go to the Home screen. In your browser"
+    ],
+    "baseline_n_cycles": 0,
+    "reasoning_n_cycles": 3
+  },
+  {
+    "id": "curated_127",
+    "origin": "curated",
+    "n_steps": 3,
+    "steps": [
+      "Connect to Query Service and write a SQL query that aggregates behavioral event data to calculate each customer's total spend and purchase frequency.",
+      "Run a CTAS query to materialize the aggregated results as a new derived dataset stored in Experience Platform.",
+      "Enable the derived dataset for Real-Time Customer Profile so high-value customer attributes are available for segmentation and activation."
+    ],
+    "baseline_n_cycles": 0,
+    "reasoning_n_cycles": 1
+  },
+  {
+    "id": "curated_159",
+    "origin": "curated",
+    "n_steps": 3,
+    "steps": [
+      "Ask AI Assistant which datasets, segments, and journeys depend on a specific schema attribute you plan to delete.",
+      "Review the list of dependent objects returned by AI Assistant to understand the full impact of the deletion.",
+      "Remove or update all dependent objects, then safely delete the schema attribute."
+    ],
+    "baseline_n_cycles": 0,
+    "reasoning_n_cycles": 1
+  },
+  {
+    "id": "curated_216",
+    "origin": "curated",
+    "n_steps": 3,
+    "steps": [
+      "Export your Query Service credentials from the Experience Platform UI to authenticate an external BI tool.",
+      "Use those credentials to connect Tableau Desktop to the Query Service PostgreSQL endpoint.",
+      "Build an attribution performance report in Tableau by querying your dataset directly through the live connection."
+    ],
+    "baseline_n_cycles": 0,
+    "reasoning_n_cycles": 1
+  },
+  {
+    "id": "curated_240",
+    "origin": "curated",
+    "n_steps": 3,
+    "steps": [
+      "Open the incoming Segment Match feed and review the partner's data usage labels and governance terms attached to the shared audience.",
+      "Verify that the partner's governance terms are compatible with your organization's data usage policies and confirm compliance.",
+      "Accept the shared audience feed so the partner's audience becomes available for use in your sandbox."
+    ],
+    "baseline_n_cycles": 0,
+    "reasoning_n_cycles": 1
+  },
+  {
+    "id": "curated_286",
+    "origin": "curated",
+    "n_steps": 3,
+    "steps": [
+      "Create a custom XDM class to represent the new product entity type, defining its core identity and behavior.",
+      "Create a schema that uses the new custom class as its base structure for the product catalog.",
+      "Add field groups to the schema to capture all required product attributes and relationships."
+    ],
+    "baseline_n_cycles": 0,
+    "reasoning_n_cycles": 1
+  },
+  {
+    "id": "curated_459",
+    "origin": "curated",
+    "n_steps": 4,
+    "steps": [
+      "Create an XDM Experience Event schema and enable it for Real-Time Customer Profile.",
+      "Create a streaming dataset using that schema to receive continuous event data.",
+      "Connect a streaming source or Web SDK to ingest live events into the dataset.",
+      "Experience Platform merges each incoming event into unified real-time customer profiles via the identity graph."
+    ],
+    "baseline_n_cycles": 0,
+    "reasoning_n_cycles": 1
+  },
+  {
+    "id": "curated_463",
+    "origin": "curated",
+    "n_steps": 4,
+    "steps": [
+      "Connect to Query Service and identify the Platform datasets containing customer purchase event data.",
+      "Write and run a SQL query that aggregates total spend, order counts, and average order value per customer ID.",
+      "Save the query results as a derived dataset in Platform to persist the computed lifetime value scores.",
+      "Build an audience in Segment Builder using the lifetime value scores from the derived dataset and activate it to a destination."
+    ],
+    "baseline_n_cycles": 0,
+    "reasoning_n_cycles": 1
+  },
+  {
+    "id": "curated_474",
+    "origin": "curated",
+    "n_steps": 4,
+    "steps": [
+      "Browse the Use Case Playbook gallery and select a loyalty re-engagement playbook that matches your campaign goal.",
+      "Create an instance of the playbook to generate its supporting assets, including schemas, datasets, and segments.",
+      "Review and publish the generated templates and audience assets to your development sandbox.",
+      "Use the generated journey template to launch a personalized loyalty re-engagement journey for at-risk customers."
+    ],
+    "baseline_n_cycles": 0,
+    "reasoning_n_cycles": 1
+  },
+  {
+    "id": "curated_493",
+    "origin": "curated",
+    "n_steps": 4,
+    "steps": [
+      "Build a candidate audience in Segment Builder targeting holiday shoppers and preview the estimated profile count.",
+      "Review the audience size breakdown by channel to confirm sufficient reach for the campaign goals.",
+      "Align the confirmed audience size with the finance team to validate and approve the budget allocation.",
+      "Lock the approved audience and budget, then schedule the holiday campaign for launch."
+    ],
+    "baseline_n_cycles": 0,
+    "reasoning_n_cycles": 1
+  },
+  {
+    "id": "curated_600",
+    "origin": "curated",
+    "n_steps": 3,
+    "steps": [
+      "Establish a live connection between Tableau Desktop and AEP Query Service by entering the host, port, database, and PostgreSQL credentials found in the Platform UI under Query Service settings.",
+      "Author a SQL query in Tableau's custom SQL dialog to extract step-by-step funnel progression events from the ExperienceEvent dataset, grouping records by journey stage and drop-off point.",
+      "Build a funnel chart visualization in Tableau that illustrates conversion rates and drop-off percentages at each customer journey stage, enabling stakeholders to identify and prioritize optimization opportunities."
+    ],
+    "baseline_n_cycles": 0,
+    "reasoning_n_cycles": 1
+  },
+  {
+    "id": "curated_692",
+    "origin": "curated",
+    "n_steps": 3,
+    "steps": [
+      "Review the dataflow run summary in Sources monitoring and detect a high percentage of partial ingestion records flagged across recent runs.",
+      "Open the failed records report to identify which mandatory XDM schema fields are missing from the incoming source payload.",
+      "Update the field mapping in the dataflow transformation step to supply default values or derive the missing mandatory fields, then trigger a backfill run."
+    ],
+    "baseline_n_cycles": 0,
+    "reasoning_n_cycles": 1
+  },
+  {
+    "id": "curated_815",
+    "origin": "curated",
+    "n_steps": 3,
+    "steps": [
+      "Connect Azure Blob Storage destination by entering the storage account name, container name, and SAS token credentials to authorize AEP to write exported files to the target container",
+      "Choose the experience events dataset containing clickstream and behavioral data, then verify the dataset schema and select the relevant fields needed for downstream analytics processing",
+      "Set up a weekly full export schedule every Monday at 06:00 UTC with Parquet file format selected and enable email notifications upon successful export completion before activating the dataflow"
+    ],
+    "baseline_n_cycles": 0,
+    "reasoning_n_cycles": 1
+  },
+  {
+    "id": "curated_860",
+    "origin": "curated",
+    "n_steps": 3,
+    "steps": [
+      "Navigate to Alerts in AEP and subscribe to data ingestion failure notifications by selecting the relevant alert rule and enabling email or in-platform notifications for your team",
+      "Receive the triggered alert notification indicating a data ingestion failure, review the alert details including dataset name, error type, and timestamp to understand the scope of the issue",
+      "Investigate the failed ingestion job in the Data Management console, identify the root cause such as schema mismatch or corrupted file, apply the fix, and re-run the ingestion to resolve the alert"
+    ],
+    "baseline_n_cycles": 0,
+    "reasoning_n_cycles": 1
+  },
+  {
+    "id": "curated_865",
+    "origin": "curated",
+    "n_steps": 3,
+    "steps": [
+      "In AJO, navigate to the Alerts configuration panel and subscribe to journey publishing error notifications, assigning alerts to the campaign orchestration team responsible for live journey management",
+      "Receive an alert that a journey failed to publish due to a configuration error, review the alert details to identify the journey name, version, and the specific validation error preventing activation",
+      "Open the affected journey in AJO canvas, resolve the flagged configuration issues such as missing action credentials or invalid audience references, re-publish the journey, and confirm it enters live status"
+    ],
+    "baseline_n_cycles": 0,
+    "reasoning_n_cycles": 1
+  },
+  {
+    "id": "curated_883",
+    "origin": "curated",
+    "n_steps": 4,
+    "steps": [
+      "Set up Attribution AI model instance by connecting Experience Platform dataset, mapping identity fields, and configuring revenue conversion goals as the target metric",
+      "Initiate model scoring job to process customer touchpoint sequences across email, paid search, and display channels using the configured attribution schema",
+      "Review first-touch attribution visualization to understand which marketing channels are most frequently credited with initial consumer engagement before conversion",
+      "Overlay data-driven Attribution AI scores against first-touch results in Customer Journey Analytics to quantify the lift difference and recalibrate campaign attribution strategy"
+    ],
+    "baseline_n_cycles": 0,
+    "reasoning_n_cycles": 1
+  },
+  {
+    "id": "proc_1973",
+    "origin": "procedural",
+    "n_steps": 7,
+    "steps": [
+      "Copy all of your code from the Analytics extension\u2019s configuration code window and paste it into the onBeforeEventSend window in the Web SDK extension\u2019s configuration (although we might be copying over code that needs to be removed or updated, we will make a few passes at the code in the new window)",
+      "Go through your code now in the Web SDK extension and look for calls to plug-ins or function definition for plug-ins that are defined in the Common Web SDK Plugins extension. You can find the list of plug-ins in the Web SDK data element definition window after installing the plugins extension. You can also find it in the documentation for that extension",
+      "For each of the plug-ins that you find in the new Web SDK plugins extension, remove the extension and the call to it from your code, and make sure that you then compensate for that removal by creating a data element and then calling that data element in the appropriate rule to set variables, etc",
+      "Next take a pass through the code to see if there are any calls to functions that were defined IN the appMeasurement.js file. Code Change 1 above is an example of this, and you can make this removal of doPlugins code at this time, if you haven\u2019t already. For other instances, this will be most evident when you have a call to a function that is not defined anywhere in your code. You can also check with Adobe Customer Support or with your peers in the Experience League Community to make sure that this is the case with that code",
+      "Next take a pass through your code to update or delete any old code that no longer applies to your analytics needs, as recommended at the top of this page",
+      "Now do Code Change 2 listed above, adding the extra lines so that any references to the s object will not cause errors in your code",
+      "Last but certainly not least, test, test, and test some more. After that, test again. Make sure that your code is providing the results that you expect both in the Experience Platform debugger as well as in the reports in Adobe Analytics. Two last thoughts about the steps above. First, you may be thinking that it would be easier to just leave all of the plug-in code in there instead of removing it and using the new Common Web SDK Plugins extension. This is true and fine, but by using the extension you gain the advantages of using a UI, defining a reusable data element, and also automatically receiving any code updates in the future. It\u2019s probably worth making the switch. Second, speaking of \u201cmaking the switch,\u201d you may also decide now to update ALL of your custom code so that it doesn\u2019t reference the old \u201cs\u201d object at all, which is kind of an extension of step 5 above. This is, of course, totally acceptable and a great idea. This migration tutorial is just trying to make it a little easier to migrate your custom code, in case you have a ton of it and don\u2019t have the resources to update all of it right now. You decide. We\u2019ll end this lesson the way we started it, with an acknowledgement that there are many ways to write code, and this document gives you some steps to follow if you want to do it this way. The main thing is that your code works and gets you the results that you are expecting, so feel free to do it your way, and did I mention that you should test?"
+    ],
+    "baseline_n_cycles": 0,
+    "reasoning_n_cycles": 1
+  },
+  {
+    "id": "proc_1100",
+    "origin": "procedural",
+    "n_steps": 7,
+    "steps": [
+      "Access the fragment list through the Content Management > Fragments left menu",
+      "Select Create fragment and fill in the fragment name and description (if needed)",
+      "Select or create Adobe Experience Platform tags from the Tags field to categorize your fragment for improved search. Learn how to work with Unified Tags",
+      "Select the fragment type: Visual fragment or Expression fragment. Learn more Currently, visual fragments are available for the Email channel only",
+      "If you are creating an expression fragment, select the type of code you want to use: HTML , JSON or Text",
+      "To assign custom or core data usage labels to the fragment, click the Manage access button in the upper section of the screen. Learn more about Object Level Access Control (OLAC)",
+      "Click Create to design the content of your fragment"
+    ],
+    "baseline_n_cycles": 0,
+    "reasoning_n_cycles": 1
+  },
+  {
+    "id": "proc_719",
+    "origin": "procedural",
+    "n_steps": 8,
+    "steps": [
+      "In the Custom Domain Group tab, create the Hotmail domain group",
+      "Add all the the Hotmail domains on the same row. You can copy and paste all the Hotmail domains listed in the OOTB Domain Groups tab section",
+      "Add another row",
+      "Create the Microsoft X domain group",
+      "Add all the the Microsoft domains that are not Hotmail on the same row. Similarly, you can copy and paste them from the list above",
+      "Go back to the IP Warmup Plan tab",
+      "Create three columns: one for Hotmail , one for Microsoft X and one for Others",
+      "Fill in the columns according to your needs"
+    ],
+    "baseline_n_cycles": 0,
+    "reasoning_n_cycles": 1
+  },
+  {
+    "id": "proc_1984",
+    "origin": "procedural",
+    "n_steps": 7,
+    "steps": [
+      "Select outside of the current Commerce panel, to create a new panel",
+      "Rename the Panel to Offers",
+      "Ensure you select the appropriate period",
+      "Select Freeform table to create a new freeform table",
+      "Rename the Freeform table to Monthly Overview",
+      "Drag and drop the Display metric on to Drop ametric here (or any other component )",
+      "Drag and drop the Month dimension on the Day column to replace the dimension. Your Monthly Overview for Offers is complete. {modal=\"regular\"} Save your project before proceeding"
+    ],
+    "baseline_n_cycles": 0,
+    "reasoning_n_cycles": 1
+  },
+  {
+    "id": "proc_345",
+    "origin": "procedural",
+    "n_steps": 5,
+    "steps": [
+      "Ensure that the schema associated with your dataset specifies that the hashed email should be a SHA256 hashed value. Review SHA256 Hashing Support for setCustomerIDs for more details",
+      "Review any rules or data elements within your Tag property configuration to ensure they correctly hash email addresses before sending them to AEP. Review Build tag rules for more details",
+      "If not already implemented, add code within your web implementation (For example: JavaScript) to automatically hash email addresses using SHA256 before they are sent as part of the streaming batch. Failing to do so may result in the data (\u201cemail\u201d in this case) being sent in clear text. Review SHA256 Hashing Support for setCustomerIDs for more details",
+      "Use debugging tools such as console logging on relevant web pages where data collection occurs to verify that all events and data elements fire correctly and include properly hashed values for emails. Review Debugging in the Web SDK Guide",
+      "After making necessary adjustments, validate by re-streaming sample batches ensuring no validation errors occur related to hashed email. For steps, Stream data to Experience Platform with Web SDK. By following these steps, you can ensure compliance with schema requirements and prevent future batch failures due to invalid email token lengths. For further assistance or if issues persist after implementing these changes, please contact Adobe Support for additional troubleshooting guidance"
+    ],
+    "baseline_n_cycles": 0,
+    "reasoning_n_cycles": 1
+  }
+]

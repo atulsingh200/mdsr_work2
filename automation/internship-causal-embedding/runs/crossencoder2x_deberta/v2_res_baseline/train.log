@@ -1,0 +1,108 @@
+10:56:57 INFO run_dir=runs/crossencoder2x_deberta/v2_res_baseline  device=cuda  bf16=True
+10:56:58 INFO tokenizer <- microsoft/deberta-v3-large
+10:56:58 INFO scanning max joint token length across all splits …
+10:57:19 INFO   observed max=512  -> max_seq_len=512  (scan 21.1s)
+10:57:19 INFO loading datasets …
+10:57:19 INFO   train=38731  val=3954  test=4984
+10:57:19 INFO building CrossEncoder2x  backbone=microsoft/deberta-v3-large  n_layers=24  native=True …
+10:57:21 INFO   total params=434,013,185
+10:57:21 INFO   total_steps=3025  warmup_steps=302
+10:58:53 INFO run_dir=runs/crossencoder2x_deberta/v2_res_baseline  device=cuda  bf16=True
+10:58:54 INFO tokenizer <- microsoft/deberta-v3-large
+10:58:54 INFO scanning max joint token length across all splits …
+10:59:14 INFO   observed max=512  -> max_seq_len=512  (scan 20.1s)
+10:59:14 INFO loading datasets …
+10:59:15 INFO   train=38731  val=3954  test=4984
+10:59:15 INFO building CrossEncoder2x  backbone=microsoft/deberta-v3-large  n_layers=24  native=True …
+10:59:16 INFO   total params=434,013,185
+10:59:17 INFO   total_steps=3025  warmup_steps=302
+11:03:09 INFO   e1 opt_step=50/3025  loss=0.7036  acc=0.5028  lr=1.66e-06
+11:06:57 INFO   e1 opt_step=100/3025  loss=0.6998  acc=0.5091  lr=3.31e-06
+11:10:51 INFO   e1 opt_step=150/3025  loss=0.6997  acc=0.5091  lr=4.97e-06
+11:14:50 INFO   e1 opt_step=200/3025  loss=0.6995  acc=0.5084  lr=6.62e-06
+11:18:42 INFO   e1 opt_step=250/3025  loss=0.6939  acc=0.5208  lr=8.28e-06
+11:22:29 INFO   e1 opt_step=300/3025  loss=0.6859  acc=0.5384  lr=9.93e-06
+11:32:58 INFO run_dir=/mnt/localssd/causal-embedding-research/automation/internship-causal-embedding/runs/crossencoder2x_deberta/v2_res_baseline  device=cuda  bf16=True
+11:32:59 INFO tokenizer <- microsoft/deberta-v3-large
+11:32:59 INFO scanning max joint token length across all splits …
+11:33:19 INFO   observed max=512  -> max_seq_len=512  (scan 20.1s)
+11:33:19 INFO loading datasets …
+11:33:20 INFO   train=38731  val=3954  test=4984
+11:33:20 INFO building CrossEncoder2x  backbone=microsoft/deberta-v3-large  n_layers=24  native=True …
+11:33:21 INFO   total params=434,013,185
+11:33:21 INFO   total_steps=3025  warmup_steps=302
+11:35:02 INFO   e1 opt_step=50/3025  loss=0.7036  acc=0.5012  lr=1.66e-06
+11:36:37 INFO   e1 opt_step=100/3025  loss=0.6996  acc=0.5088  lr=3.31e-06
+11:38:15 INFO   e1 opt_step=150/3025  loss=0.6997  acc=0.5106  lr=4.97e-06
+11:39:55 INFO   e1 opt_step=200/3025  loss=0.6997  acc=0.5104  lr=6.62e-06
+11:41:31 INFO   e1 opt_step=250/3025  loss=0.6959  acc=0.5174  lr=8.28e-06
+11:43:06 INFO   e1 opt_step=300/3025  loss=0.6898  acc=0.5290  lr=9.93e-06
+11:44:44 INFO   e1 opt_step=350/3025  loss=0.6824  acc=0.5441  lr=9.82e-06
+11:46:17 INFO   e1 opt_step=400/3025  loss=0.6707  acc=0.5596  lr=9.64e-06
+11:47:56 INFO   e1 opt_step=450/3025  loss=0.6599  acc=0.5741  lr=9.46e-06
+11:49:31 INFO   e1 opt_step=500/3025  loss=0.6476  acc=0.5892  lr=9.27e-06
+11:51:08 INFO   e1 opt_step=550/3025  loss=0.6358  acc=0.6031  lr=9.09e-06
+11:52:45 INFO   e1 opt_step=600/3025  loss=0.6247  acc=0.6146  lr=8.91e-06
+11:53:20 INFO [epoch 1/5]  train_loss=0.6233  train_acc=0.6160  val_loss=0.5119  val_acc=0.7423  val_auc=0.8423  elapsed=1199.0s
+11:53:24 INFO   * saved best.pt  val_acc=0.7423
+11:54:51 INFO   e2 opt_step=650/3025  loss=0.4321  acc=0.7878  lr=8.72e-06
+11:56:28 INFO   e2 opt_step=700/3025  loss=0.4304  acc=0.7924  lr=8.54e-06
+11:58:05 INFO   e2 opt_step=750/3025  loss=0.4222  acc=0.7992  lr=8.35e-06
+11:59:44 INFO   e2 opt_step=800/3025  loss=0.4134  acc=0.8058  lr=8.17e-06
+12:01:20 INFO   e2 opt_step=850/3025  loss=0.4082  acc=0.8092  lr=7.99e-06
+12:02:57 INFO   e2 opt_step=900/3025  loss=0.4000  acc=0.8131  lr=7.80e-06
+12:04:34 INFO   e2 opt_step=950/3025  loss=0.3988  acc=0.8140  lr=7.62e-06
+12:06:11 INFO   e2 opt_step=1000/3025  loss=0.3935  acc=0.8163  lr=7.44e-06
+12:07:51 INFO   e2 opt_step=1050/3025  loss=0.3890  acc=0.8192  lr=7.25e-06
+12:09:25 INFO   e2 opt_step=1100/3025  loss=0.3866  acc=0.8211  lr=7.07e-06
+12:10:59 INFO   e2 opt_step=1150/3025  loss=0.3837  acc=0.8228  lr=6.89e-06
+12:12:37 INFO   e2 opt_step=1200/3025  loss=0.3786  acc=0.8255  lr=6.70e-06
+12:13:24 INFO [epoch 2/5]  train_loss=0.3779  train_acc=0.8261  val_loss=0.4192  val_acc=0.7999  val_auc=0.8937  elapsed=1200.2s
+12:13:28 INFO   * saved best.pt  val_acc=0.7999
+12:14:47 INFO   e3 opt_step=1250/3025  loss=0.2319  acc=0.8945  lr=6.52e-06
+12:16:21 INFO   e3 opt_step=1300/3025  loss=0.2381  acc=0.8964  lr=6.33e-06
+12:17:58 INFO   e3 opt_step=1350/3025  loss=0.2313  acc=0.9016  lr=6.15e-06
+12:19:36 INFO   e3 opt_step=1400/3025  loss=0.2318  acc=0.9016  lr=5.97e-06
+12:21:11 INFO   e3 opt_step=1450/3025  loss=0.2281  acc=0.9024  lr=5.78e-06
+12:22:47 INFO   e3 opt_step=1500/3025  loss=0.2264  acc=0.9027  lr=5.60e-06
+12:24:24 INFO   e3 opt_step=1550/3025  loss=0.2264  acc=0.9033  lr=5.42e-06
+12:26:01 INFO   e3 opt_step=1600/3025  loss=0.2241  acc=0.9048  lr=5.23e-06
+12:27:38 INFO   e3 opt_step=1650/3025  loss=0.2224  acc=0.9058  lr=5.05e-06
+12:29:13 INFO   e3 opt_step=1700/3025  loss=0.2229  acc=0.9058  lr=4.87e-06
+12:30:50 INFO   e3 opt_step=1750/3025  loss=0.2225  acc=0.9060  lr=4.68e-06
+12:32:25 INFO   e3 opt_step=1800/3025  loss=0.2212  acc=0.9069  lr=4.50e-06
+12:33:21 INFO [epoch 3/5]  train_loss=0.2209  train_acc=0.9072  val_loss=0.4959  val_acc=0.8141  val_auc=0.9027  elapsed=1192.4s
+12:33:25 INFO   * saved best.pt  val_acc=0.8141
+12:34:34 INFO   e4 opt_step=1850/3025  loss=0.1325  acc=0.9500  lr=4.32e-06
+12:36:10 INFO   e4 opt_step=1900/3025  loss=0.1354  acc=0.9491  lr=4.13e-06
+12:37:45 INFO   e4 opt_step=1950/3025  loss=0.1406  acc=0.9471  lr=3.95e-06
+12:39:22 INFO   e4 opt_step=2000/3025  loss=0.1389  acc=0.9478  lr=3.76e-06
+12:41:00 INFO   e4 opt_step=2050/3025  loss=0.1361  acc=0.9487  lr=3.58e-06
+12:42:37 INFO   e4 opt_step=2100/3025  loss=0.1366  acc=0.9485  lr=3.40e-06
+12:44:13 INFO   e4 opt_step=2150/3025  loss=0.1373  acc=0.9481  lr=3.21e-06
+12:45:51 INFO   e4 opt_step=2200/3025  loss=0.1366  acc=0.9481  lr=3.03e-06
+12:47:29 INFO   e4 opt_step=2250/3025  loss=0.1363  acc=0.9485  lr=2.85e-06
+12:49:08 INFO   e4 opt_step=2300/3025  loss=0.1356  acc=0.9486  lr=2.66e-06
+12:50:43 INFO   e4 opt_step=2350/3025  loss=0.1345  acc=0.9489  lr=2.48e-06
+12:52:18 INFO   e4 opt_step=2400/3025  loss=0.1339  acc=0.9493  lr=2.30e-06
+12:53:23 INFO [epoch 4/5]  train_loss=0.1337  train_acc=0.9494  val_loss=0.6219  val_acc=0.8212  val_auc=0.9076  elapsed=1198.0s
+12:53:27 INFO   * saved best.pt  val_acc=0.8212
+12:54:25 INFO   e5 opt_step=2450/3025  loss=0.0876  acc=0.9672  lr=2.11e-06
+12:55:59 INFO   e5 opt_step=2500/3025  loss=0.0842  acc=0.9688  lr=1.93e-06
+12:57:35 INFO   e5 opt_step=2550/3025  loss=0.0867  acc=0.9672  lr=1.74e-06
+12:59:11 INFO   e5 opt_step=2600/3025  loss=0.0902  acc=0.9655  lr=1.56e-06
+13:00:50 INFO   e5 opt_step=2650/3025  loss=0.0883  acc=0.9660  lr=1.38e-06
+13:02:28 INFO   e5 opt_step=2700/3025  loss=0.0874  acc=0.9669  lr=1.19e-06
+13:04:06 INFO   e5 opt_step=2750/3025  loss=0.0888  acc=0.9664  lr=1.01e-06
+13:05:45 INFO   e5 opt_step=2800/3025  loss=0.0868  acc=0.9672  lr=8.26e-07
+13:07:20 INFO   e5 opt_step=2850/3025  loss=0.0876  acc=0.9672  lr=6.43e-07
+13:08:59 INFO   e5 opt_step=2900/3025  loss=0.0866  acc=0.9672  lr=4.59e-07
+13:10:33 INFO   e5 opt_step=2950/3025  loss=0.0861  acc=0.9679  lr=2.75e-07
+13:12:11 INFO   e5 opt_step=3000/3025  loss=0.0865  acc=0.9677  lr=9.18e-08
+13:13:28 INFO [epoch 5/5]  train_loss=0.0868  train_acc=0.9675  val_loss=0.7361  val_acc=0.8225  val_auc=0.9027  elapsed=1201.6s
+13:13:32 INFO   * saved best.pt  val_acc=0.8225
+13:13:34 INFO saved final.pt  total_time=6013s
+13:13:34 INFO loading best.pt for final val/test evaluation …
+13:14:01 INFO [val]  acc=0.8225  auc=0.9027  f1=0.8210
+13:14:33 INFO [test] loss=0.7995  acc=0.8116  auc=0.8890  f1=0.8128
+13:14:33 INFO [done] best_val_acc=0.8225  test_acc=0.8116  test_auc=0.8890  results in /mnt/localssd/causal-embedding-research/automation/internship-causal-embedding/runs/crossencoder2x_deberta/v2_res_baseline

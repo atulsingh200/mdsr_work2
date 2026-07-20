@@ -1,0 +1,68 @@
+train=38731 val=3954 test=4801
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:03<00:09,  3.20s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:04<00:04,  2.20s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:06<00:01,  1.84s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:07<00:00,  1.63s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:07<00:00,  1.85s/it]
+trainable params: 20,185,088 || all params: 7,635,801,600 || trainable%: 0.2643
+  ep0 it200/9683 loss=0.6057
+  ep0 it400/9683 loss=0.4090
+  ep0 it600/9683 loss=0.3441
+  ep0 it800/9683 loss=0.3161
+  ep0 it1000/9683 loss=0.2962
+  ep0 it1200/9683 loss=0.2810
+  ep0 it1400/9683 loss=0.2707
+  ep0 it1600/9683 loss=0.2607
+  ep0 it1800/9683 loss=0.2538
+  ep0 it2000/9683 loss=0.2478
+  ep0 it2200/9683 loss=0.2429
+  ep0 it2400/9683 loss=0.2394
+  ep0 it2600/9683 loss=0.2350
+  ep0 it2800/9683 loss=0.2320
+  ep0 it3000/9683 loss=0.2284
+  ep0 it3200/9683 loss=0.2252
+  ep0 it3400/9683 loss=0.2219
+  ep0 it3600/9683 loss=0.2190
+  ep0 it3800/9683 loss=0.2151
+  ep0 it4000/9683 loss=0.2128
+  ep0 it4200/9683 loss=0.2104
+  ep0 it4400/9683 loss=0.2077
+  ep0 it4600/9683 loss=0.2047
+  ep0 it4800/9683 loss=0.2025
+  ep0 it5000/9683 loss=0.2002
+  ep0 it5200/9683 loss=0.1986
+  ep0 it5400/9683 loss=0.1966
+  ep0 it5600/9683 loss=0.1949
+  ep0 it5800/9683 loss=0.1932
+  ep0 it6000/9683 loss=0.1913
+  ep0 it6200/9683 loss=0.1899
+  ep0 it6400/9683 loss=0.1880
+  ep0 it6600/9683 loss=0.1864
+  ep0 it6800/9683 loss=0.1848
+  ep0 it7000/9683 loss=nan
+  ep0 it7200/9683 loss=nan
+  ep0 it7400/9683 loss=nan
+  ep0 it7600/9683 loss=nan
+  ep0 it7800/9683 loss=nan
+  ep0 it8000/9683 loss=nan
+  ep0 it8200/9683 loss=nan
+  ep0 it8400/9683 loss=nan
+  ep0 it8600/9683 loss=nan
+  ep0 it8800/9683 loss=nan
+  ep0 it9000/9683 loss=nan
+  ep0 it9200/9683 loss=nan
+  ep0 it9400/9683 loss=nan
+  ep0 it9600/9683 loss=nan
+/mnt/localssd/causal-embedding-research/llm_trc_baseline/.venv/lib/python3.11/site-packages/transformers/generation/configuration_utils.py:628: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.7` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/mnt/localssd/causal-embedding-research/llm_trc_baseline/.venv/lib/python3.11/site-packages/transformers/generation/configuration_utils.py:633: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.8` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+/mnt/localssd/causal-embedding-research/llm_trc_baseline/.venv/lib/python3.11/site-packages/transformers/generation/configuration_utils.py:650: UserWarning: `do_sample` is set to `False`. However, `top_k` is set to `20` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_k`.
+  warnings.warn(
+[epoch 0] train_loss=nan val_f1=0.8266
+  ep1 it200/9683 loss=0.0824
+  ep1 it400/9683 loss=0.0801
+  ep1 it600/9683 loss=0.0836
+  ep1 it800/9683 loss=nan
+  ep1 it1000/9683 loss=nan
+  ep1 it1200/9683 loss=nan
+  ep1 it1400/9683 loss=nan
+  ep1 it1600/9683 loss=nan
+  ep1 it1800/9683 loss=nan
+  ep1 it2000/9683 loss=nan

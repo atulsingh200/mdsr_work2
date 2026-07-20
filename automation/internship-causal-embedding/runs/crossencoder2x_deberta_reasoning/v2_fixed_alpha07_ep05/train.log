@@ -1,0 +1,151 @@
+11:10:35 INFO run_dir=runs/crossencoder2x_deberta_reasoning/v2_fixed_alpha07_ep05  device=cuda  bf16=True
+11:10:36 INFO tokenizer <- microsoft/deberta-v3-large
+11:10:36 INFO scanning max joint token length across all splits …
+11:10:57 INFO   observed max=512  -> max_seq_len=512  (scan 21.2s)
+11:10:57 INFO scanning max reasoning token length across all splits …
+11:11:07 INFO   observed max=261  -> max_reason_len=277  (scan 9.9s)
+11:11:07 INFO loading datasets …
+11:11:08 INFO   train=38731  val=3954  test=4984
+11:11:08 INFO building CrossEncoder2xWithReasoning  backbone=microsoft/deberta-v3-large  n_layers=24  native=True  decoder_layers=4 …
+11:11:11 INFO   total params=501,611,621
+11:11:11 INFO   total_steps=3025  warmup_steps=302
+11:23:50 INFO run_dir=runs/crossencoder2x_deberta_reasoning/v2_fixed_alpha07_ep05  device=cuda  bf16=True
+11:23:51 INFO tokenizer <- microsoft/deberta-v3-large
+11:23:51 INFO scanning max joint token length across all splits …
+11:24:12 INFO   observed max=512  -> max_seq_len=512  (scan 20.3s)
+11:24:12 INFO scanning max reasoning token length across all splits …
+11:24:21 INFO   observed max=261  -> max_reason_len=277  (scan 9.4s)
+11:24:21 INFO loading datasets …
+11:24:22 INFO   train=38731  val=3954  test=4984
+11:24:22 INFO building CrossEncoder2xWithReasoning  backbone=microsoft/deberta-v3-large  n_layers=24  native=True  decoder_layers=4 …
+11:24:23 INFO   total params=501,611,621
+11:24:23 INFO   total_steps=3025  warmup_steps=302
+11:26:14 INFO run_dir=/mnt/localssd/causal-embedding-research/automation/internship-causal-embedding/runs/crossencoder2x_deberta_reasoning/v2_fixed_alpha07_ep05  device=cuda  bf16=True
+11:26:15 INFO tokenizer <- microsoft/deberta-v3-large
+11:26:15 INFO scanning max joint token length across all splits …
+11:26:35 INFO   observed max=512  -> max_seq_len=512  (scan 19.7s)
+11:26:35 INFO scanning max reasoning token length across all splits …
+11:26:44 INFO   observed max=261  -> max_reason_len=277  (scan 9.1s)
+11:26:44 INFO loading datasets …
+11:26:45 INFO   train=38731  val=3954  test=4984
+11:26:45 INFO building CrossEncoder2xWithReasoning  backbone=microsoft/deberta-v3-large  n_layers=24  native=True  decoder_layers=4 …
+11:26:47 INFO   total params=501,611,621
+11:26:47 INFO   total_steps=3025  warmup_steps=302
+11:28:32 INFO   e1 opt_step=50/3025  loss=10.0845  cls_loss=0.7061  decoder_loss=13.3939  acc=0.5003  lr=1.66e-06
+11:30:19 INFO   e1 opt_step=100/3025  loss=8.5248  cls_loss=0.7037  decoder_loss=11.1708  acc=0.5039  lr=3.31e-06
+11:32:58 INFO run_dir=/mnt/localssd/causal-embedding-research/automation/internship-causal-embedding/runs/crossencoder2x_deberta_reasoning/v2_fixed_alpha07_ep05  device=cuda  bf16=True
+11:32:59 INFO tokenizer <- microsoft/deberta-v3-large
+11:32:59 INFO scanning max joint token length across all splits …
+11:33:19 INFO   observed max=512  -> max_seq_len=512  (scan 20.5s)
+11:33:19 INFO scanning max reasoning token length across all splits …
+11:33:29 INFO   observed max=261  -> max_reason_len=277  (scan 9.5s)
+11:33:29 INFO loading datasets …
+11:33:29 INFO   train=38731  val=3954  test=4984
+11:33:29 INFO building CrossEncoder2xWithReasoning  backbone=microsoft/deberta-v3-large  n_layers=24  native=True  decoder_layers=4 …
+11:33:31 INFO   total params=501,611,621
+11:33:31 INFO   total_steps=3025  warmup_steps=302
+11:35:21 INFO   e1 opt_step=50/3025  loss=10.0873  cls_loss=0.7060  decoder_loss=13.3980  acc=0.5000  lr=1.66e-06
+11:37:08 INFO   e1 opt_step=100/3025  loss=8.5247  cls_loss=0.7039  decoder_loss=11.1703  acc=0.5031  lr=3.31e-06
+11:38:52 INFO   e1 opt_step=150/3025  loss=7.5779  cls_loss=0.7036  decoder_loss=9.8165  acc=0.5035  lr=4.97e-06
+11:40:35 INFO   e1 opt_step=200/3025  loss=7.0219  cls_loss=0.7033  decoder_loss=9.0354  acc=0.5062  lr=6.62e-06
+11:42:20 INFO   e1 opt_step=250/3025  loss=6.6231  cls_loss=0.7026  decoder_loss=8.4717  acc=0.5057  lr=8.28e-06
+11:44:05 INFO   e1 opt_step=300/3025  loss=6.2951  cls_loss=0.7019  decoder_loss=8.0025  acc=0.5073  lr=9.93e-06
+11:45:50 INFO   e1 opt_step=350/3025  loss=6.0084  cls_loss=0.6987  decoder_loss=7.5999  acc=0.5137  lr=9.82e-06
+11:47:35 INFO   e1 opt_step=400/3025  loss=5.7669  cls_loss=0.6930  decoder_loss=7.2645  acc=0.5221  lr=9.64e-06
+11:49:18 INFO   e1 opt_step=450/3025  loss=5.5642  cls_loss=0.6882  decoder_loss=6.9766  acc=0.5318  lr=9.46e-06
+11:51:01 INFO   e1 opt_step=500/3025  loss=5.3863  cls_loss=0.6825  decoder_loss=6.7293  acc=0.5437  lr=9.27e-06
+11:52:48 INFO   e1 opt_step=550/3025  loss=5.2317  cls_loss=0.6768  decoder_loss=6.5169  acc=0.5553  lr=9.09e-06
+11:54:33 INFO   e1 opt_step=600/3025  loss=5.0948  cls_loss=0.6682  decoder_loss=6.3342  acc=0.5668  lr=8.91e-06
+11:55:13 INFO [epoch 1/5]  train_loss=5.0815  train_cls_loss=0.6675  train_decoder_loss=6.3167  train_acc=0.5677  val_loss=3.4855  val_acc=0.6985  val_auc=0.7817  val_decoder_ppl=64.05  elapsed=1301.9s
+11:55:14 INFO   [qual 0] gen : You must open the action before you can configure the action before you can be configured.
+11:55:14 INFO   [qual 0] gold: Step B filters the available templates/actions to those supported by the organization, which is a selection/configuration step that determines what gets displayed or generated. Generic actions being generated automatically (Step A) is a result that occurs after such configuration choices are made.
+11:55:14 INFO   [qual 1] gen : Step B describes the action action to the action, which is a prerequisite to the action that must happen before Step A.
+11:55:14 INFO   [qual 1] gold: Step A describes selecting or creating an action, which opens the action configuration panel. Step B describes configuring that action by setting the Extension and Action Type fields — which can only be done after an action has been selected or created.
+11:55:14 INFO   [qual 2] gen : Step A describes the action action action, which is a prerequisite to the action. Step B describes the action action action action that must be completed before Step B.
+11:55:14 INFO   [qual 2] gold: Step A describes browsing and selecting the best variant from the AI Assistant panel, which must happen before Step B, where you click "Select" to apply the chosen variant and return to the design space.
+11:55:19 INFO   * saved best.pt  val_auc=0.7817
+11:56:51 INFO   e2 opt_step=650/3025  loss=3.5188  cls_loss=0.5446  decoder_loss=4.2542  acc=0.7267  lr=8.72e-06
+11:58:36 INFO   e2 opt_step=700/3025  loss=3.4802  cls_loss=0.5350  decoder_loss=4.2124  acc=0.7347  lr=8.54e-06
+12:00:21 INFO   e2 opt_step=750/3025  loss=3.4423  cls_loss=0.5222  decoder_loss=4.1768  acc=0.7411  lr=8.35e-06
+12:02:04 INFO   e2 opt_step=800/3025  loss=3.4090  cls_loss=0.5080  decoder_loss=4.1487  acc=0.7509  lr=8.17e-06
+12:03:47 INFO   e2 opt_step=850/3025  loss=3.3835  cls_loss=0.4996  decoder_loss=4.1247  acc=0.7577  lr=7.99e-06
+12:05:30 INFO   e2 opt_step=900/3025  loss=3.3613  cls_loss=0.4927  decoder_loss=4.1027  acc=0.7624  lr=7.80e-06
+12:07:16 INFO   e2 opt_step=950/3025  loss=3.3373  cls_loss=0.4840  decoder_loss=4.0807  acc=0.7670  lr=7.62e-06
+12:08:59 INFO   e2 opt_step=1000/3025  loss=3.3157  cls_loss=0.4781  decoder_loss=4.0586  acc=0.7719  lr=7.44e-06
+12:10:47 INFO   e2 opt_step=1050/3025  loss=3.2939  cls_loss=0.4720  decoder_loss=4.0360  acc=0.7756  lr=7.25e-06
+12:12:29 INFO   e2 opt_step=1100/3025  loss=3.2735  cls_loss=0.4653  decoder_loss=4.0165  acc=0.7790  lr=7.07e-06
+12:14:15 INFO   e2 opt_step=1150/3025  loss=3.2532  cls_loss=0.4582  decoder_loss=3.9979  acc=0.7833  lr=6.89e-06
+12:15:59 INFO   e2 opt_step=1200/3025  loss=3.2353  cls_loss=0.4517  decoder_loss=3.9817  acc=0.7870  lr=6.70e-06
+12:16:50 INFO [epoch 2/5]  train_loss=3.2309  train_cls_loss=0.4498  train_decoder_loss=3.9779  train_acc=0.7881  val_loss=3.0559  val_acc=0.7901  val_auc=0.8804  val_decoder_ppl=38.73  elapsed=1291.5s
+12:16:50 INFO   [qual 0] gen : You must open the action before you can add it.
+12:16:50 INFO   [qual 0] gold: Step B filters the available templates/actions to those supported by the organization, which is a selection/configuration step that determines what gets displayed or generated. Generic actions being generated automatically (Step A) is a result that occurs after such configuration choices are made.
+12:16:50 INFO   [qual 1] gen : Step B describes the initial action of the action, which must happen before Step A can be completed first.
+12:16:50 INFO   [qual 1] gold: Step A describes selecting or creating an action, which opens the action configuration panel. Step B describes configuring that action by setting the Extension and Action Type fields — which can only be done after an action has been selected or created.
+12:16:51 INFO   [qual 2] gen : Step A describes configuring the content, which is part of the action that must happen before Step B can be completed.
+12:16:51 INFO   [qual 2] gold: Step A describes browsing and selecting the best variant from the AI Assistant panel, which must happen before Step B, where you click "Select" to apply the chosen variant and return to the design space.
+12:16:55 INFO   * saved best.pt  val_auc=0.8804
+12:18:19 INFO   e3 opt_step=1250/3025  loss=2.9474  cls_loss=0.3030  decoder_loss=3.7820  acc=0.8738  lr=6.52e-06
+12:20:04 INFO   e3 opt_step=1300/3025  loss=2.9140  cls_loss=0.2891  decoder_loss=3.7529  acc=0.8790  lr=6.33e-06
+12:21:51 INFO   e3 opt_step=1350/3025  loss=2.9092  cls_loss=0.2931  decoder_loss=3.7408  acc=0.8789  lr=6.15e-06
+12:23:36 INFO   e3 opt_step=1400/3025  loss=2.9033  cls_loss=0.2952  decoder_loss=3.7299  acc=0.8775  lr=5.97e-06
+12:25:19 INFO   e3 opt_step=1450/3025  loss=2.8936  cls_loss=0.2952  decoder_loss=3.7160  acc=0.8774  lr=5.78e-06
+12:27:03 INFO   e3 opt_step=1500/3025  loss=2.8803  cls_loss=0.2911  decoder_loss=3.7032  acc=0.8798  lr=5.60e-06
+12:28:51 INFO   e3 opt_step=1550/3025  loss=2.8694  cls_loss=0.2861  decoder_loss=3.6948  acc=0.8823  lr=5.42e-06
+12:30:37 INFO   e3 opt_step=1600/3025  loss=2.8584  cls_loss=0.2830  decoder_loss=3.6837  acc=0.8839  lr=5.23e-06
+12:32:22 INFO   e3 opt_step=1650/3025  loss=2.8532  cls_loss=0.2811  decoder_loss=3.6788  acc=0.8842  lr=5.05e-06
+12:34:05 INFO   e3 opt_step=1700/3025  loss=2.8444  cls_loss=0.2773  decoder_loss=3.6716  acc=0.8859  lr=4.87e-06
+12:35:52 INFO   e3 opt_step=1750/3025  loss=2.8366  cls_loss=0.2749  decoder_loss=3.6640  acc=0.8868  lr=4.68e-06
+12:37:36 INFO   e3 opt_step=1800/3025  loss=2.8293  cls_loss=0.2735  decoder_loss=3.6555  acc=0.8878  lr=4.50e-06
+12:38:38 INFO [epoch 3/5]  train_loss=2.8256  train_cls_loss=0.2720  train_decoder_loss=3.6526  train_acc=0.8885  val_loss=2.9537  val_acc=0.8209  val_auc=0.9023  val_decoder_ppl=31.79  elapsed=1302.8s
+12:38:38 INFO   [qual 0] gen : You must create the campaign before you can add it.
+12:38:38 INFO   [qual 0] gold: Step B filters the available templates/actions to those supported by the organization, which is a selection/configuration step that determines what gets displayed or generated. Generic actions being generated automatically (Step A) is a result that occurs after such configuration choices are made.
+12:38:39 INFO   [qual 1] gen : Step A describes configuring the action of the action, which is a prerequisite action that must be completed before Step B can be completed.
+12:38:39 INFO   [qual 1] gold: Step A describes selecting or creating an action, which opens the action configuration panel. Step B describes configuring that action by setting the Extension and Action Type fields — which can only be done after an action has been selected or created.
+12:38:39 INFO   [qual 2] gen : Step A describes configuring the content content, which is part of the content creation creation, while Step B describes adding a content to the content. You must happen before you can configure the content.
+12:38:39 INFO   [qual 2] gold: Step A describes browsing and selecting the best variant from the AI Assistant panel, which must happen before Step B, where you click "Select" to apply the chosen variant and return to the design space.
+12:38:44 INFO   * saved best.pt  val_auc=0.9023
+12:39:59 INFO   e4 opt_step=1850/3025  loss=2.6791  cls_loss=0.1767  decoder_loss=3.5781  acc=0.9335  lr=4.32e-06
+12:41:44 INFO   e4 opt_step=1900/3025  loss=2.6517  cls_loss=0.1674  decoder_loss=3.5521  acc=0.9355  lr=4.13e-06
+12:43:24 INFO   e4 opt_step=1950/3025  loss=2.6495  cls_loss=0.1709  decoder_loss=3.5447  acc=0.9336  lr=3.95e-06
+12:45:11 INFO   e4 opt_step=2000/3025  loss=2.6451  cls_loss=0.1708  decoder_loss=3.5387  acc=0.9340  lr=3.76e-06
+12:46:54 INFO   e4 opt_step=2050/3025  loss=2.6424  cls_loss=0.1715  decoder_loss=3.5332  acc=0.9336  lr=3.58e-06
+12:48:40 INFO   e4 opt_step=2100/3025  loss=2.6368  cls_loss=0.1712  decoder_loss=3.5257  acc=0.9331  lr=3.40e-06
+12:50:23 INFO   e4 opt_step=2150/3025  loss=2.6347  cls_loss=0.1712  decoder_loss=3.5225  acc=0.9337  lr=3.21e-06
+12:52:09 INFO   e4 opt_step=2200/3025  loss=2.6313  cls_loss=0.1700  decoder_loss=3.5197  acc=0.9346  lr=3.03e-06
+12:53:56 INFO   e4 opt_step=2250/3025  loss=2.6273  cls_loss=0.1684  decoder_loss=3.5162  acc=0.9354  lr=2.85e-06
+12:55:42 INFO   e4 opt_step=2300/3025  loss=2.6216  cls_loss=0.1665  decoder_loss=3.5108  acc=0.9363  lr=2.66e-06
+12:57:27 INFO   e4 opt_step=2350/3025  loss=2.6174  cls_loss=0.1653  decoder_loss=3.5069  acc=0.9369  lr=2.48e-06
+12:59:09 INFO   e4 opt_step=2400/3025  loss=2.6170  cls_loss=0.1666  decoder_loss=3.5043  acc=0.9365  lr=2.30e-06
+13:00:21 INFO [epoch 4/5]  train_loss=2.6155  train_cls_loss=0.1660  train_decoder_loss=3.5029  train_acc=0.9367  val_loss=2.9597  val_acc=0.8268  val_auc=0.9051  val_decoder_ppl=28.79  elapsed=1297.1s
+13:00:21 INFO   [qual 0] gen : You must create the campaign before you can add a specific specific specific specific specific specific specific specific specific specific specific specific specific specific specific specific specific specific specific.
+13:00:21 INFO   [qual 0] gold: Step B filters the available templates/actions to those supported by the organization, which is a selection/configuration step that determines what gets displayed or generated. Generic actions being generated automatically (Step A) is a result that occurs after such configuration choices are made.
+13:00:21 INFO   [qual 1] gen : Step A describes configuring the event event, which is a prerequisite action that must be done before Step B can be configured.
+13:00:21 INFO   [qual 1] gold: Step A describes selecting or creating an action, which opens the action configuration panel. Step B describes configuring that action by setting the Extension and Action Type fields — which can only be done after an action has been selected or created.
+13:00:22 INFO   [qual 2] gen : Step A describes configuring the campaign campaign, which is part of the content creation/configuration step. Step B describes configuring a content, which is a prerequisite for the content.
+13:00:22 INFO   [qual 2] gold: Step A describes browsing and selecting the best variant from the AI Assistant panel, which must happen before Step B, where you click "Select" to apply the chosen variant and return to the design space.
+13:00:26 INFO   * saved best.pt  val_auc=0.9051
+13:01:30 INFO   e5 opt_step=2450/3025  loss=2.5294  cls_loss=0.1104  decoder_loss=3.4611  acc=0.9578  lr=2.11e-06
+13:03:15 INFO   e5 opt_step=2500/3025  loss=2.5283  cls_loss=0.1178  decoder_loss=3.4490  acc=0.9564  lr=1.93e-06
+13:04:59 INFO   e5 opt_step=2550/3025  loss=2.5282  cls_loss=0.1182  decoder_loss=3.4474  acc=0.9584  lr=1.74e-06
+13:06:42 INFO   e5 opt_step=2600/3025  loss=2.5192  cls_loss=0.1154  decoder_loss=3.4390  acc=0.9589  lr=1.56e-06
+13:08:25 INFO   e5 opt_step=2650/3025  loss=2.5209  cls_loss=0.1163  decoder_loss=3.4397  acc=0.9583  lr=1.38e-06
+13:10:10 INFO   e5 opt_step=2700/3025  loss=2.5199  cls_loss=0.1158  decoder_loss=3.4389  acc=0.9583  lr=1.19e-06
+13:11:57 INFO   e5 opt_step=2750/3025  loss=2.5188  cls_loss=0.1143  decoder_loss=3.4394  acc=0.9593  lr=1.01e-06
+13:13:41 INFO   e5 opt_step=2800/3025  loss=2.5190  cls_loss=0.1148  decoder_loss=3.4388  acc=0.9588  lr=8.26e-07
+13:15:27 INFO   e5 opt_step=2850/3025  loss=2.5183  cls_loss=0.1144  decoder_loss=3.4382  acc=0.9590  lr=6.43e-07
+13:17:13 INFO   e5 opt_step=2900/3025  loss=2.5172  cls_loss=0.1149  decoder_loss=3.4358  acc=0.9592  lr=4.59e-07
+13:18:57 INFO   e5 opt_step=2950/3025  loss=2.5157  cls_loss=0.1136  decoder_loss=3.4351  acc=0.9597  lr=2.75e-07
+13:20:44 INFO   e5 opt_step=3000/3025  loss=2.5130  cls_loss=0.1124  decoder_loss=3.4332  acc=0.9602  lr=9.18e-08
+13:22:05 INFO [epoch 5/5]  train_loss=2.5119  train_cls_loss=0.1112  train_decoder_loss=3.4333  train_acc=0.9606  val_loss=2.9984  val_acc=0.8331  val_auc=0.9071  val_decoder_ppl=27.84  elapsed=1299.0s
+13:22:06 INFO   [qual 0] gen : You must create the campaign before you can add a specific specific action that can configure the rule.
+13:22:06 INFO   [qual 0] gold: Step B filters the available templates/actions to those supported by the organization, which is a selection/configuration step that determines what gets displayed or generated. Generic actions being generated automatically (Step A) is a result that occurs after such configuration choices are made.
+13:22:06 INFO   [qual 1] gen : Step A describes configuring the event event, which is a prerequisite action that must be done before Step B can be configured.
+13:22:06 INFO   [qual 1] gold: Step A describes selecting or creating an action, which opens the action configuration panel. Step B describes configuring that action by setting the Extension and Action Type fields — which can only be done after an action has been selected or created.
+13:22:06 INFO   [qual 2] gen : Step A describes configuring the campaign campaign, which is part of the content creation/configuration step. Step B describes configuring a content, which is a prerequisite for the content.
+13:22:06 INFO   [qual 2] gold: Step A describes browsing and selecting the best variant from the AI Assistant panel, which must happen before Step B, where you click "Select" to apply the chosen variant and return to the design space.
+13:22:11 INFO   * saved best.pt  val_auc=0.9071
+13:22:13 INFO saved final.pt  total_time=6522s
+13:22:13 INFO loading best.pt for final val/test evaluation …
+13:22:43 INFO [val]  acc=0.8331  auc=0.9071  f1=0.8295  decoder_ppl=27.84
+13:23:19 INFO [test] loss=3.1022  acc=0.8254  auc=0.9011  f1=0.8260  decoder_ppl=30.95
+13:23:19 INFO [done] best_val_auc=0.9071  test_acc=0.8254  test_auc=0.9011  results in /mnt/localssd/causal-embedding-research/automation/internship-causal-embedding/runs/crossencoder2x_deberta_reasoning/v2_fixed_alpha07_ep05

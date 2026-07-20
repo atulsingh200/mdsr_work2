@@ -1,0 +1,62 @@
+test rows: 4801  model: Qwen/Qwen2.5-7B-Instruct
+Loading safetensors checkpoint shards:   0% Completed | 0/4 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:  25% Completed | 1/4 [00:01<00:03,  1.12s/it]
+Loading safetensors checkpoint shards:  50% Completed | 2/4 [00:02<00:02,  1.27s/it]
+Loading safetensors checkpoint shards:  75% Completed | 3/4 [00:03<00:01,  1.36s/it]
+Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:05<00:00,  1.34s/it]
+Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:05<00:00,  1.32s/it]
+
+Capturing CUDA graph shapes:   0%|          | 0/35 [00:00<?, ?it/s]Capturing CUDA graph shapes:   3%|▎         | 1/35 [00:00<00:24,  1.39it/s]Capturing CUDA graph shapes:   6%|▌         | 2/35 [00:01<00:23,  1.42it/s]Capturing CUDA graph shapes:   9%|▊         | 3/35 [00:02<00:22,  1.44it/s]Capturing CUDA graph shapes:  11%|█▏        | 4/35 [00:02<00:21,  1.45it/s]Capturing CUDA graph shapes:  14%|█▍        | 5/35 [00:03<00:20,  1.44it/s]Capturing CUDA graph shapes:  17%|█▋        | 6/35 [00:04<00:20,  1.41it/s]Capturing CUDA graph shapes:  20%|██        | 7/35 [00:04<00:19,  1.41it/s]Capturing CUDA graph shapes:  23%|██▎       | 8/35 [00:05<00:19,  1.41it/s]Capturing CUDA graph shapes:  26%|██▌       | 9/35 [00:06<00:18,  1.39it/s]Capturing CUDA graph shapes:  29%|██▊       | 10/35 [00:07<00:18,  1.37it/s]Capturing CUDA graph shapes:  31%|███▏      | 11/35 [00:07<00:17,  1.35it/s]Capturing CUDA graph shapes:  34%|███▍      | 12/35 [00:08<00:17,  1.33it/s]Capturing CUDA graph shapes:  37%|███▋      | 13/35 [00:09<00:16,  1.35it/s]Capturing CUDA graph shapes:  40%|████      | 14/35 [00:10<00:15,  1.38it/s]Capturing CUDA graph shapes:  43%|████▎     | 15/35 [00:10<00:14,  1.40it/s]Capturing CUDA graph shapes:  46%|████▌     | 16/35 [00:11<00:13,  1.42it/s]Capturing CUDA graph shapes:  49%|████▊     | 17/35 [00:12<00:12,  1.43it/s]Capturing CUDA graph shapes:  51%|█████▏    | 18/35 [00:12<00:12,  1.42it/s]Capturing CUDA graph shapes:  54%|█████▍    | 19/35 [00:13<00:11,  1.40it/s]Capturing CUDA graph shapes:  57%|█████▋    | 20/35 [00:14<00:10,  1.40it/s]Capturing CUDA graph shapes:  60%|██████    | 21/35 [00:14<00:09,  1.41it/s]Capturing CUDA graph shapes:  63%|██████▎   | 22/35 [00:15<00:09,  1.43it/s]Capturing CUDA graph shapes:  66%|██████▌   | 23/35 [00:16<00:08,  1.44it/s]Capturing CUDA graph shapes:  69%|██████▊   | 24/35 [00:17<00:07,  1.45it/s]Capturing CUDA graph shapes:  71%|███████▏  | 25/35 [00:17<00:06,  1.45it/s]Capturing CUDA graph shapes:  74%|███████▍  | 26/35 [00:18<00:06,  1.46it/s]Capturing CUDA graph shapes:  77%|███████▋  | 27/35 [00:19<00:05,  1.47it/s]Capturing CUDA graph shapes:  80%|████████  | 28/35 [00:19<00:04,  1.48it/s]Capturing CUDA graph shapes:  83%|████████▎ | 29/35 [00:20<00:03,  1.52it/s]Capturing CUDA graph shapes:  86%|████████▌ | 30/35 [00:20<00:03,  1.59it/s]Capturing CUDA graph shapes:  89%|████████▊ | 31/35 [00:21<00:02,  1.61it/s]Capturing CUDA graph shapes:  91%|█████████▏| 32/35 [00:22<00:01,  1.65it/s]Capturing CUDA graph shapes:  94%|█████████▍| 33/35 [00:22<00:01,  1.66it/s]Capturing CUDA graph shapes:  97%|█████████▋| 34/35 [00:23<00:00,  1.68it/s]Capturing CUDA graph shapes: 100%|██████████| 35/35 [00:23<00:00,  1.71it/s]Capturing CUDA graph shapes: 100%|██████████| 35/35 [00:23<00:00,  1.47it/s]
+[Qwen2.5-7B-Instruct__P__k0] f1=0.6477 acc=0.5786 unparsed=0.000
+[Qwen2.5-7B-Instruct__P__k2__s0] f1=0.6614 acc=0.5980 unparsed=0.000
+[Qwen2.5-7B-Instruct__P__k2__s1] f1=0.6218 acc=0.5622 unparsed=0.000
+[Qwen2.5-7B-Instruct__P__k2__s2] f1=0.6546 acc=0.5863 unparsed=0.000
+[Qwen2.5-7B-Instruct__P__k2__s3] f1=0.6390 acc=0.5836 unparsed=0.000
+[Qwen2.5-7B-Instruct__P__k2__s4] f1=0.6487 acc=0.5865 unparsed=0.000
+[Qwen2.5-7B-Instruct__P__k2] f1=0.6451 +/- 0.0138
+[Qwen2.5-7B-Instruct__QA1__k0] f1=0.6391 acc=0.6163 unparsed=0.000
+[Qwen2.5-7B-Instruct__QA1__k2__s0] f1=0.6609 acc=0.6336 unparsed=0.000
+[Qwen2.5-7B-Instruct__QA1__k2__s1] f1=0.6914 acc=0.6138 unparsed=0.000
+[Qwen2.5-7B-Instruct__QA1__k2__s2] f1=0.6658 acc=0.6399 unparsed=0.000
+[Qwen2.5-7B-Instruct__QA1__k2__s3] f1=0.6417 acc=0.6317 unparsed=0.000
+[Qwen2.5-7B-Instruct__QA1__k2__s4] f1=0.6637 acc=0.6240 unparsed=0.000
+[Qwen2.5-7B-Instruct__QA1__k2] f1=0.6647 +/- 0.0159
+[Qwen2.5-7B-Instruct__QA2__k0] f1=0.6985 acc=0.5749 unparsed=0.000
+[Qwen2.5-7B-Instruct__QA2__k2__s0] f1=0.6977 acc=0.6330 unparsed=0.000
+[Qwen2.5-7B-Instruct__QA2__k2__s1] f1=0.6767 acc=0.6270 unparsed=0.000
+[Qwen2.5-7B-Instruct__QA2__k2__s2] f1=0.6965 acc=0.6324 unparsed=0.000
+[Qwen2.5-7B-Instruct__QA2__k2__s3] f1=0.6388 acc=0.6259 unparsed=0.000
+[Qwen2.5-7B-Instruct__QA2__k2__s4] f1=0.6798 acc=0.6390 unparsed=0.000
+[Qwen2.5-7B-Instruct__QA2__k2] f1=0.6779 +/- 0.0213
+
+=== summary ===
+{
+  "Qwen2.5-7B-Instruct__P__k0": {
+    "f1": 0.6477450809681351,
+    "acc": 0.5786294521974589,
+    "unparsed_rate": 0.0
+  },
+  "Qwen2.5-7B-Instruct__P__k2": {
+    "f1_mean": 0.6451055041121537,
+    "f1_std": 0.013780770380118148
+  },
+  "Qwen2.5-7B-Instruct__QA1__k0": {
+    "f1": 0.6391065830721003,
+    "acc": 0.6163299312643199,
+    "unparsed_rate": 0.0
+  },
+  "Qwen2.5-7B-Instruct__QA1__k2": {
+    "f1_mean": 0.6646829009434887,
+    "f1_std": 0.015878357514636114
+  },
+  "Qwen2.5-7B-Instruct__QA2__k0": {
+    "f1": 0.6984783572167232,
+    "acc": 0.5748802332847324,
+    "unparsed_rate": 0.0
+  },
+  "Qwen2.5-7B-Instruct__QA2__k2": {
+    "f1_mean": 0.6778838957427633,
+    "f1_std": 0.02131503609647469
+  }
+}
+[rank0]:[W719 08:05:00.596737987 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())

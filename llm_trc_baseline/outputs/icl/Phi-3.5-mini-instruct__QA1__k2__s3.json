@@ -1,0 +1,82 @@
+{
+  "model": "microsoft/Phi-3.5-mini-instruct",
+  "prompt_type": "QA1",
+  "shots": 2,
+  "seed": 3,
+  "overall": {
+    "n": 4801,
+    "acc": 0.5734222037075609,
+    "f1": 0.6456747404844291,
+    "f1_before": 0.6456747404844291,
+    "f1_not_before": 0.4641548927263213
+  },
+  "by_source": {
+    "aep": {
+      "n": 1548,
+      "acc": 0.5077519379844961,
+      "f1": 0.6120162932790224,
+      "f1_before": 0.6120162932790224,
+      "f1_not_before": 0.32685512367491165
+    },
+    "ajo": {
+      "n": 741,
+      "acc": 0.4750337381916329,
+      "f1": 0.45897079276773295,
+      "f1_before": 0.45897079276773295,
+      "f1_not_before": 0.49017038007863695
+    },
+    "procedural": {
+      "n": 2512,
+      "acc": 0.6429140127388535,
+      "f1": 0.7103648692282855,
+      "f1_before": 0.7103648692282855,
+      "f1_not_before": 0.534509600415153
+    }
+  },
+  "n": 4801,
+  "unparsed": 0,
+  "unparsed_rate": 0.0,
+  "pred_pos_rate": 0.6881899604249114,
+  "samples": [
+    {
+      "gen": " YES",
+      "pred": 1,
+      "gold": 0
+    },
+    {
+      "gen": " NO",
+      "pred": 0,
+      "gold": 0
+    },
+    {
+      "gen": " YES\n\nExplanation: In",
+      "pred": 1,
+      "gold": 1
+    },
+    {
+      "gen": " YES",
+      "pred": 1,
+      "gold": 1
+    },
+    {
+      "gen": " NO",
+      "pred": 0,
+      "gold": 1
+    },
+    {
+      "gen": " NO\n\nExplanation: Step",
+      "pred": 0,
+      "gold": 1
+    },
+    {
+      "gen": " YES\n\nExplanation: Step",
+      "pred": 1,
+      "gold": 0
+    },
+    {
+      "gen": " NO\n\nExplanation: Step",
+      "pred": 0,
+      "gold": 0
+    }
+  ]
+}

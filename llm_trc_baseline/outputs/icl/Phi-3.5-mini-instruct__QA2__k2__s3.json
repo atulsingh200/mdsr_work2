@@ -1,0 +1,82 @@
+{
+  "model": "microsoft/Phi-3.5-mini-instruct",
+  "prompt_type": "QA2",
+  "shots": 2,
+  "seed": 3,
+  "overall": {
+    "n": 4801,
+    "acc": 0.5694646948552385,
+    "f1": 0.6690152121697358,
+    "f1_before": 0.6690152121697358,
+    "f1_not_before": 0.38427167113494193
+  },
+  "by_source": {
+    "aep": {
+      "n": 1548,
+      "acc": 0.5064599483204134,
+      "f1": 0.6616474756421612,
+      "f1_before": 0.6616474756421612,
+      "f1_not_before": 0.0883054892601432
+    },
+    "ajo": {
+      "n": 741,
+      "acc": 0.4966261808367072,
+      "f1": 0.5958829902491874,
+      "f1_before": 0.5958829902491874,
+      "f1_not_before": 0.33273703041144903
+    },
+    "procedural": {
+      "n": 2512,
+      "acc": 0.6297770700636943,
+      "f1": 0.6964751958224543,
+      "f1_before": 0.6964751958224543,
+      "f1_not_before": 0.5255102040816326
+    }
+  },
+  "n": 4801,
+  "unparsed": 1,
+  "unparsed_rate": 0.00020828993959591752,
+  "pred_pos_rate": 0.7850447823370131,
+  "samples": [
+    {
+      "gen": " 1) NO\n2) YES\n\nExplanation: Step B",
+      "pred": 0,
+      "gold": 0
+    },
+    {
+      "gen": " 1) NO\n2) YES\n\nExplanation: Step A",
+      "pred": 0,
+      "gold": 0
+    },
+    {
+      "gen": " 1) YES\n2) NO\n\nStep A involves watching a video",
+      "pred": 1,
+      "gold": 1
+    },
+    {
+      "gen": " 1) YES\n2) NO\n\nStep A involves selecting the option",
+      "pred": 1,
+      "gold": 1
+    },
+    {
+      "gen": " 1) NO\n2) YES\n\nBoth steps A and B",
+      "pred": 0,
+      "gold": 1
+    },
+    {
+      "gen": " 1) YES\n2) NO\n\nExplanation: Step A",
+      "pred": 1,
+      "gold": 1
+    },
+    {
+      "gen": " 1) YES\n2) NO\n\nExplanation: Step A",
+      "pred": 1,
+      "gold": 0
+    },
+    {
+      "gen": " 1) NO\n2) YES\n\nExplanation: Step B",
+      "pred": 0,
+      "gold": 0
+    }
+  ]
+}

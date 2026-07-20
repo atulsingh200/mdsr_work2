@@ -1,0 +1,219 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "method": "lora_rationale",
+  "lora_r": 32,
+  "lr": 0.0001,
+  "epochs": 2,
+  "schedule": "linear",
+  "best_val_f1": 0.8636734693877551,
+  "history": [
+    {
+      "epoch": 0,
+      "train_loss": 0.892074706552443,
+      "val": {
+        "overall": {
+          "n": 1200,
+          "acc": 0.8525,
+          "f1": 0.8531120331950207,
+          "f1_before": 0.8531120331950207,
+          "f1_not_before": 0.8518828451882845
+        },
+        "by_source": {
+          "procedural": {
+            "n": 1200,
+            "acc": 0.8525,
+            "f1": 0.8531120331950207,
+            "f1_before": 0.8531120331950207,
+            "f1_not_before": 0.8518828451882845
+          }
+        },
+        "unparsed": 0,
+        "unparsed_rate": 0.0,
+        "samples": [
+          {
+            "gen": "Step B describes a configuration option (selecting a filtering setting) that affects what appears in the action list, while Step A describes the automatic generation of generic actions \u2014 these appear to be independent aspects of configuring action selection criteria rather than sequential steps wher",
+            "pred": 0,
+            "gold": 0
+          },
+          {
+            "gen": "Step A describes selecting or creating an action, which opens the action configuration interface where you can then set fields like the Extension and Action Type described in Step B.\n\nVERDICT: BEFORE",
+            "pred": 1,
+            "gold": 1
+          },
+          {
+            "gen": "Step A describes browsing and evaluating generated variations, while Step B describes selecting a specific variant to replace template contents \u2014 you must review the variations before choosing one to apply.\n\nVERDICT: BEFORE",
+            "pred": 1,
+            "gold": 1
+          },
+          {
+            "gen": "You must select the Adobe Analytics extension before you can interact with its settings or uninstall options.\n\nVERDICT: NOT_BEFORE",
+            "pred": 0,
+            "gold": 0
+          },
+          {
+            "gen": "Building customer journeys (Step B) creates the actual content and logic that needs to be tested and validated (Step A). You cannot preview, test, or experiment with content until the journey has been constructed.\n\nVERDICT: NOT_BEFORE",
+            "pred": 0,
+            "gold": 1
+          },
+          {
+            "gen": "Step B describes defining path, query, and header parameters as part of configuring the integration, which must be done before Step A, where you test the connection and activate the integration.\n\nVERDICT: NOT_BEFORE",
+            "pred": 0,
+            "gold": 0
+          },
+          {
+            "gen": "You must first click the icon to manage and add external calendars before you can hide, unhide, or remove them.\n\nVERDICT: BEFORE",
+            "pred": 1,
+            "gold": 1
+          },
+          {
+            "gen": "Step A selects the \"Landing page\" type for the element, which determines what options become available. Step B's \"Target\" option only appears after selecting \"Landing page\" as the type.\n\nVERDICT: BEFORE",
+            "pred": 1,
+            "gold": 1
+          }
+        ]
+      }
+    },
+    {
+      "epoch": 1,
+      "train_loss": 0.6353494894168451,
+      "val": {
+        "overall": {
+          "n": 1200,
+          "acc": 0.8608333333333333,
+          "f1": 0.8636734693877551,
+          "f1_before": 0.8636734693877551,
+          "f1_not_before": 0.857872340425532
+        },
+        "by_source": {
+          "procedural": {
+            "n": 1200,
+            "acc": 0.8608333333333333,
+            "f1": 0.8636734693877551,
+            "f1_before": 0.8636734693877551,
+            "f1_not_before": 0.857872340425532
+          }
+        },
+        "unparsed": 0,
+        "unparsed_rate": 0.0,
+        "samples": [
+          {
+            "gen": "Step B (selecting the template restriction option) is a configuration choice made during setup, while Step A describes the automatic generation behavior that occurs after that configuration is applied.\n\nVERDICT: NOT_BEFORE",
+            "pred": 0,
+            "gold": 0
+          },
+          {
+            "gen": "Step A describes selecting or creating an action, which opens the action configuration interface. Step B describes setting fields within that action's configuration form \u2014 you cannot configure the action until it exists.\n\nVERDICT: BEFORE",
+            "pred": 1,
+            "gold": 1
+          },
+          {
+            "gen": "Step A describes browsing and evaluating generated variations, while Step B describes selecting a specific variant to replace template contents \u2014 you must review the variations before choosing one to apply.\n\nVERDICT: BEFORE",
+            "pred": 1,
+            "gold": 1
+          },
+          {
+            "gen": "You must select the Adobe Analytics extension before you can interact with its settings or uninstall options.\n\nVERDICT: NOT_BEFORE",
+            "pred": 0,
+            "gold": 0
+          },
+          {
+            "gen": "Building customer journeys (Step B) creates the actual journey structures and content that need to be tested and validated (Step A). You cannot preview, test, or experiment with content until the journey has been constructed.\n\nVERDICT: NOT_BEFORE",
+            "pred": 0,
+            "gold": 1
+          },
+          {
+            "gen": "Step B describes defining the technical parameters (path, query, headers) of the API call, which is part of configuring the integration setup. Step A describes testing the connection and activating the integration, which can only happen after the parameters have been defined.\n\nVERDICT: NOT_BEFORE",
+            "pred": 0,
+            "gold": 0
+          },
+          {
+            "gen": "You must first click the icon to manage and add external calendars (Step A) before you can interact with those calendars to hide, unhide, or remove them (Step B).\n\nVERDICT: BEFORE",
+            "pred": 1,
+            "gold": 1
+          },
+          {
+            "gen": "Step A selects the \"Landing page\" type for the link, which establishes the context in which the Target options (including the link target behavior) become relevant. Without first choosing the landing page type, the Target options would not be applicable to the link configuration.\n\nVERDICT: BEFORE",
+            "pred": 1,
+            "gold": 1
+          }
+        ]
+      }
+    }
+  ],
+  "test": {
+    "overall": {
+      "n": 4801,
+      "acc": 0.7617163091022704,
+      "f1": 0.7614678899082569,
+      "f1_before": 0.7614678899082569,
+      "f1_not_before": 0.7619642114024137
+    },
+    "by_source": {
+      "aep": {
+        "n": 1548,
+        "acc": 0.710594315245478,
+        "f1": 0.7029177718832891,
+        "f1_before": 0.7029177718832891,
+        "f1_not_before": 0.7178841309823678
+      },
+      "ajo": {
+        "n": 741,
+        "acc": 0.6275303643724697,
+        "f1": 0.6329787234042553,
+        "f1_before": 0.6329787234042553,
+        "f1_not_before": 0.6219178082191781
+      },
+      "procedural": {
+        "n": 2512,
+        "acc": 0.8328025477707006,
+        "f1": 0.8343848580441641,
+        "f1_before": 0.8343848580441641,
+        "f1_not_before": 0.8311897106109325
+      }
+    },
+    "unparsed": 6,
+    "unparsed_rate": 0.0012497396375755051,
+    "samples": [
+      {
+        "gen": "You must create the freeform table before you can drag and drop metrics into it.\n\nVERDICT: NOT_BEFORE",
+        "pred": 0,
+        "gold": 0
+      },
+      {
+        "gen": "Step B opens the Intent Mapping section where you would find the download link, so it must come first.\n\nVERDICT: NOT_BEFORE",
+        "pred": 0,
+        "gold": 0
+      },
+      {
+        "gen": "Step A describes watching a video about data elements (which is triggered by the absence of existing data elements), while Step B is the action taken after deciding to create one \u2014 meaning the video serves as a prompt/nudge that precedes the actual creation click.\n\nVERDICT: BEFORE",
+        "pred": 1,
+        "gold": 1
+      },
+      {
+        "gen": "You must create the dataset first to open the creation flow, after which you can search for and select a schema to associate with it.\n\nVERDICT: BEFORE",
+        "pred": 1,
+        "gold": 1
+      },
+      {
+        "gen": "These two steps operate on different fields (Source vs. Target) and neither depends on the other being completed first \u2014 they are independent configuration actions.\n\nVERDICT: NOT_BEFORE",
+        "pred": 0,
+        "gold": 1
+      },
+      {
+        "gen": "Step A describes validating view events (scView), which is part of the same validation process as Step B's purchase validation. Both are verification steps within the same lesson, and neither logically depends on the other being completed first \u2014 they appear to be parallel checks or sequential check",
+        "pred": 0,
+        "gold": 1
+      },
+      {
+        "gen": "Step B involves confirming whether the identity descriptor exists on the primary identity field, which is the diagnostic check that determines whether Step A's corrective action is needed.\n\nVERDICT: NOT_BEFORE",
+        "pred": 0,
+        "gold": 0
+      },
+      {
+        "gen": "You need to obtain a sample template before you can call the render template API endpoint with it.\n\nVERDICT: NOT_BEFORE",
+        "pred": 0,
+        "gold": 0
+      }
+    ]
+  }
+}

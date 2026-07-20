@@ -1,0 +1,9 @@
+Paper-faithful LoRA | full text (no truncation) | prompt=QA1 | no system msg
+train=38731 val=3954 test=4801
+Loading checkpoint shards:   0%|          | 0/8 [00:00<?, ?it/s]Loading checkpoint shards:  12%|█▎        | 1/8 [00:03<00:25,  3.58s/it]Loading checkpoint shards:  25%|██▌       | 2/8 [00:05<00:14,  2.35s/it]Loading checkpoint shards:  38%|███▊      | 3/8 [00:06<00:09,  1.97s/it]Loading checkpoint shards:  50%|█████     | 4/8 [00:08<00:07,  1.79s/it]Loading checkpoint shards:  62%|██████▎   | 5/8 [00:09<00:04,  1.66s/it]Loading checkpoint shards:  75%|███████▌  | 6/8 [00:11<00:03,  1.61s/it]Loading checkpoint shards:  88%|████████▊ | 7/8 [00:12<00:01,  1.53s/it]Loading checkpoint shards: 100%|██████████| 8/8 [00:13<00:00,  1.27s/it]Loading checkpoint shards: 100%|██████████| 8/8 [00:13<00:00,  1.64s/it]
+trainable params: 50,331,648 || all params: 14,820,365,312 || trainable%: 0.3396
+  ep0 it200/4842 loss=5.6394
+  ep0 it400/4842 loss=2.9842
+  ep0 it600/4842 loss=2.0864
+  ep0 it800/4842 loss=1.6385
+  ep0 it1000/4842 loss=1.3690

@@ -1,0 +1,122 @@
+train=38731 val=3954 test=4801
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:02<00:08,  2.77s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:06<00:06,  3.22s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:07<00:02,  2.38s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:08<00:00,  1.94s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:08<00:00,  2.23s/it]
+trainable params: 20,185,088 || all params: 7,635,801,600 || trainable%: 0.2643
+  ep0 it200/9683 loss=1.1116
+  ep0 it400/9683 loss=0.7096
+  ep0 it600/9683 loss=0.5751
+  ep0 it800/9683 loss=0.5076
+  ep0 it1000/9683 loss=0.4651
+  ep0 it1200/9683 loss=0.4372
+  ep0 it1400/9683 loss=0.4190
+  ep0 it1600/9683 loss=0.4038
+  ep0 it1800/9683 loss=0.3915
+  ep0 it2000/9683 loss=0.3812
+  ep0 it2200/9683 loss=0.3732
+  ep0 it2400/9683 loss=0.3661
+  ep0 it2600/9683 loss=0.3577
+  ep0 it2800/9683 loss=0.3525
+  ep0 it3000/9683 loss=0.3477
+  ep0 it3200/9683 loss=0.3416
+  ep0 it3400/9683 loss=0.3370
+  ep0 it3600/9683 loss=0.3317
+  ep0 it3800/9683 loss=0.3283
+  ep0 it4000/9683 loss=0.3238
+  ep0 it4200/9683 loss=0.3196
+  ep0 it4400/9683 loss=0.3156
+  ep0 it4600/9683 loss=0.3116
+  ep0 it4800/9683 loss=0.3082
+  ep0 it5000/9683 loss=0.3059
+  ep0 it5200/9683 loss=0.3026
+  ep0 it5400/9683 loss=0.2990
+  ep0 it5600/9683 loss=0.2964
+  ep0 it5800/9683 loss=0.2937
+  ep0 it6000/9683 loss=0.2911
+  ep0 it6200/9683 loss=0.2883
+  ep0 it6400/9683 loss=0.2858
+  ep0 it6600/9683 loss=0.2827
+  ep0 it6800/9683 loss=0.2805
+  ep0 it7000/9683 loss=0.2784
+  ep0 it7200/9683 loss=0.2763
+  ep0 it7400/9683 loss=0.2748
+  ep0 it7600/9683 loss=0.2738
+  ep0 it7800/9683 loss=0.2718
+  ep0 it8000/9683 loss=0.2700
+  ep0 it8200/9683 loss=0.2682
+  ep0 it8400/9683 loss=0.2667
+  ep0 it8600/9683 loss=nan
+  ep0 it8800/9683 loss=nan
+  ep0 it9000/9683 loss=nan
+  ep0 it9200/9683 loss=nan
+  ep0 it9400/9683 loss=nan
+  ep0 it9600/9683 loss=nan
+/mnt/localssd/causal-embedding-research/llm_trc_baseline/.venv/lib/python3.11/site-packages/transformers/generation/configuration_utils.py:628: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.7` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/mnt/localssd/causal-embedding-research/llm_trc_baseline/.venv/lib/python3.11/site-packages/transformers/generation/configuration_utils.py:633: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.8` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+/mnt/localssd/causal-embedding-research/llm_trc_baseline/.venv/lib/python3.11/site-packages/transformers/generation/configuration_utils.py:650: UserWarning: `do_sample` is set to `False`. However, `top_k` is set to `20` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_k`.
+  warnings.warn(
+[epoch 0] train_loss=nan val_f1=0.8281
+  ep1 it200/9683 loss=0.1395
+  ep1 it400/9683 loss=0.1337
+  ep1 it600/9683 loss=0.1280
+  ep1 it800/9683 loss=0.1298
+  ep1 it1000/9683 loss=0.1230
+  ep1 it1200/9683 loss=0.1245
+  ep1 it1400/9683 loss=0.1244
+  ep1 it1600/9683 loss=0.1246
+  ep1 it1800/9683 loss=0.1241
+  ep1 it2000/9683 loss=0.1222
+  ep1 it2200/9683 loss=0.1216
+  ep1 it2400/9683 loss=0.1225
+  ep1 it2600/9683 loss=0.1222
+  ep1 it2800/9683 loss=0.1225
+  ep1 it3000/9683 loss=0.1226
+  ep1 it3200/9683 loss=0.1215
+  ep1 it3400/9683 loss=0.1205
+  ep1 it3600/9683 loss=0.1209
+  ep1 it3800/9683 loss=0.1206
+  ep1 it4000/9683 loss=0.1206
+  ep1 it4200/9683 loss=0.1203
+  ep1 it4400/9683 loss=0.1193
+  ep1 it4600/9683 loss=0.1195
+  ep1 it4800/9683 loss=0.1192
+  ep1 it5000/9683 loss=0.1186
+  ep1 it5200/9683 loss=0.1177
+  ep1 it5400/9683 loss=0.1173
+  ep1 it5600/9683 loss=0.1169
+  ep1 it5800/9683 loss=0.1164
+  ep1 it6000/9683 loss=0.1161
+  ep1 it6200/9683 loss=0.1159
+  ep1 it6400/9683 loss=0.1156
+  ep1 it6600/9683 loss=0.1152
+  ep1 it6800/9683 loss=0.1147
+  ep1 it7000/9683 loss=0.1143
+  ep1 it7200/9683 loss=0.1146
+  ep1 it7400/9683 loss=0.1145
+  ep1 it7600/9683 loss=0.1143
+  ep1 it7800/9683 loss=0.1140
+  ep1 it8000/9683 loss=0.1129
+  ep1 it8200/9683 loss=0.1123
+  ep1 it8400/9683 loss=0.1118
+  ep1 it8600/9683 loss=0.1118
+  ep1 it8800/9683 loss=0.1118
+  ep1 it9000/9683 loss=0.1114
+  ep1 it9200/9683 loss=0.1107
+  ep1 it9400/9683 loss=0.1101
+  ep1 it9600/9683 loss=0.1101
+/mnt/localssd/causal-embedding-research/llm_trc_baseline/.venv/lib/python3.11/site-packages/transformers/generation/configuration_utils.py:628: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.7` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/mnt/localssd/causal-embedding-research/llm_trc_baseline/.venv/lib/python3.11/site-packages/transformers/generation/configuration_utils.py:633: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.8` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+/mnt/localssd/causal-embedding-research/llm_trc_baseline/.venv/lib/python3.11/site-packages/transformers/generation/configuration_utils.py:650: UserWarning: `do_sample` is set to `False`. However, `top_k` is set to `20` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_k`.
+  warnings.warn(
+[epoch 1] train_loss=0.1101 val_f1=0.8439
+/mnt/localssd/causal-embedding-research/llm_trc_baseline/.venv/lib/python3.11/site-packages/transformers/generation/configuration_utils.py:628: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.7` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/mnt/localssd/causal-embedding-research/llm_trc_baseline/.venv/lib/python3.11/site-packages/transformers/generation/configuration_utils.py:633: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.8` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+/mnt/localssd/causal-embedding-research/llm_trc_baseline/.venv/lib/python3.11/site-packages/transformers/generation/configuration_utils.py:650: UserWarning: `do_sample` is set to `False`. However, `top_k` is set to `20` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_k`.
+  warnings.warn(
+
+[Qwen2.5-7B-Instruct__QA1__lora] TEST f1=0.8418 acc=0.8384
+wrote /mnt/localssd/causal-embedding-research/llm_trc_baseline/outputs/lora/Qwen2.5-7B-Instruct__QA1__lora.json

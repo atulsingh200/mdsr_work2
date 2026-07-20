@@ -1,0 +1,39 @@
+{
+  "model": "deberta-v3-large_crossencoder2x",
+  "run_dir": "/mnt/localssd/causal-embedding-research/automation/internship-causal-embedding/runs/crossencoder2x_deberta/v2_res_baseline",
+  "test_jsonl": "/mnt/localssd/causal-embedding-research/final_data/directional_test.jsonl",
+  "overall": {
+    "n": 4801,
+    "acc": 0.7833784628202458,
+    "f1": 0.7870597870597871,
+    "auc": 0.881298486980388,
+    "f1_before": 0.7870597870597871,
+    "f1_not_before": 0.7795676133955066
+  },
+  "by_source": {
+    "aep": {
+      "n": 1548,
+      "acc": 0.872093023255814,
+      "f1": 0.8742058449809402,
+      "auc": 0.9396725880648542,
+      "f1_before": 0.8742058449809402,
+      "f1_not_before": 0.8699080157687253
+    },
+    "ajo": {
+      "n": 741,
+      "acc": 0.5910931174089069,
+      "f1": 0.6059817945383615,
+      "auc": 0.6605153812509112,
+      "f1_before": 0.6059817945383615,
+      "f1_not_before": 0.5750350631136045
+    },
+    "procedural": {
+      "n": 2512,
+      "acc": 0.7854299363057324,
+      "f1": 0.7878787878787878,
+      "auc": 0.88143642657478,
+      "f1_before": 0.7878787878787878,
+      "f1_not_before": 0.7829238824003222
+    }
+  }
+}

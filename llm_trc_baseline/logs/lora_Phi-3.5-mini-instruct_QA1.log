@@ -1,0 +1,25 @@
+train=38731 val=3954 test=4801
+`flash-attention` package not found, consider installing for better performance: No module named 'flash_attn'.
+Current `flash-attention` does not support `window_size`. Either upgrade or use `attn_implementation='eager'`.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:03<00:03,  3.23s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  1.87s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.07s/it]
+You are not running the flash-attention implementation, expect numerical differences.
+trainable params: 6,291,456 || all params: 3,827,371,008 || trainable%: 0.1644
+  ep0 it200/1211 loss=2.7545
+  ep0 it400/1211 loss=1.5243
+  ep0 it600/1211 loss=1.1088
+  ep0 it800/1211 loss=0.8986
+  ep0 it1000/1211 loss=0.7702
+  ep0 it1200/1211 loss=0.6827
+The `seen_tokens` attribute is deprecated and will be removed in v4.41. Use the `cache_position` model input instead.
+`get_max_cache()` is deprecated for all Cache classes. Use `get_max_cache_shape()` instead. Calling `get_max_cache()` will raise error from v4.48
+[epoch 0] train_loss=0.6783 val_f1=0.7376
+  ep1 it200/1211 loss=0.2111
+  ep1 it400/1211 loss=0.2095
+  ep1 it600/1211 loss=0.2049
+  ep1 it800/1211 loss=0.2011
+  ep1 it1000/1211 loss=0.1989
+  ep1 it1200/1211 loss=0.1973
+[epoch 1] train_loss=0.1972 val_f1=0.7509
+
+[Phi-3.5-mini-instruct__QA1__lora] TEST f1=0.7651 acc=0.7638
+wrote /mnt/localssd/causal-embedding-research/llm_trc_baseline/outputs/lora/Phi-3.5-mini-instruct__QA1__lora.json

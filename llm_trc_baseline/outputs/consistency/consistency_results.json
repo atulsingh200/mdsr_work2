@@ -1,0 +1,232 @@
+{
+  "baseline_plain": {
+    "llm_at_inference": false,
+    "note": "baseline CE, no breaking",
+    "metrics": {
+      "all": {
+        "n_workflows": 897,
+        "cycle_rate": 0.05351170568561873,
+        "n_cyclic_workflows": 48,
+        "mean_cycles_per_wf": 0.22073578595317725,
+        "ordering_accuracy": 0.9474147027787548,
+        "edges_removed": 0,
+        "llm_calls": 0,
+        "n_pairs": 5686
+      },
+      "curated": {
+        "n_workflows": 697,
+        "cycle_rate": 0.028694404591104734,
+        "n_cyclic_workflows": 20,
+        "mean_cycles_per_wf": 0.03730272596843615,
+        "ordering_accuracy": 0.9351969504447268,
+        "edges_removed": 0,
+        "llm_calls": 0,
+        "n_pairs": 2361
+      },
+      "procedural": {
+        "n_workflows": 200,
+        "cycle_rate": 0.14,
+        "n_cyclic_workflows": 28,
+        "mean_cycles_per_wf": 0.86,
+        "ordering_accuracy": 0.9560902255639098,
+        "edges_removed": 0,
+        "llm_calls": 0,
+        "n_pairs": 3325
+      },
+      "proc_n>=6": {
+        "n_workflows": 125,
+        "cycle_rate": 0.192,
+        "n_cyclic_workflows": 24,
+        "mean_cycles_per_wf": 1.288,
+        "ordering_accuracy": 0.9537864077669903,
+        "edges_removed": 0,
+        "llm_calls": 0,
+        "n_pairs": 2575
+      }
+    }
+  },
+  "baseline_confidence": {
+    "llm_at_inference": false,
+    "note": "baseline + confidence break (paper best)",
+    "metrics": {
+      "all": {
+        "n_workflows": 897,
+        "cycle_rate": 0.0,
+        "n_cyclic_workflows": 0,
+        "mean_cycles_per_wf": 0.0,
+        "ordering_accuracy": 0.9424903271192402,
+        "edges_removed": 66,
+        "llm_calls": 66,
+        "n_pairs": 5686
+      },
+      "curated": {
+        "n_workflows": 697,
+        "cycle_rate": 0.0,
+        "n_cyclic_workflows": 0,
+        "mean_cycles_per_wf": 0.0,
+        "ordering_accuracy": 0.9322321050402372,
+        "edges_removed": 22,
+        "llm_calls": 22,
+        "n_pairs": 2361
+      },
+      "procedural": {
+        "n_workflows": 200,
+        "cycle_rate": 0.0,
+        "n_cyclic_workflows": 0,
+        "mean_cycles_per_wf": 0.0,
+        "ordering_accuracy": 0.9497744360902256,
+        "edges_removed": 44,
+        "llm_calls": 44,
+        "n_pairs": 3325
+      },
+      "proc_n>=6": {
+        "n_workflows": 125,
+        "cycle_rate": 0.0,
+        "n_cyclic_workflows": 0,
+        "mean_cycles_per_wf": 0.0,
+        "ordering_accuracy": 0.9471844660194175,
+        "edges_removed": 38,
+        "llm_calls": 38,
+        "n_pairs": 2575
+      }
+    }
+  },
+  "reasoning_plain": {
+    "llm_at_inference": false,
+    "note": "OURS: reasoning-trace CE, no breaking",
+    "metrics": {
+      "all": {
+        "n_workflows": 897,
+        "cycle_rate": 0.05016722408026756,
+        "n_cyclic_workflows": 45,
+        "mean_cycles_per_wf": 0.1716833890746934,
+        "ordering_accuracy": 0.946535349982413,
+        "edges_removed": 0,
+        "llm_calls": 0,
+        "n_pairs": 5686
+      },
+      "curated": {
+        "n_workflows": 697,
+        "cycle_rate": 0.03730272596843615,
+        "n_cyclic_workflows": 26,
+        "mean_cycles_per_wf": 0.05164992826398852,
+        "ordering_accuracy": 0.9512918254976704,
+        "edges_removed": 0,
+        "llm_calls": 0,
+        "n_pairs": 2361
+      },
+      "procedural": {
+        "n_workflows": 200,
+        "cycle_rate": 0.095,
+        "n_cyclic_workflows": 19,
+        "mean_cycles_per_wf": 0.59,
+        "ordering_accuracy": 0.9431578947368421,
+        "edges_removed": 0,
+        "llm_calls": 0,
+        "n_pairs": 3325
+      },
+      "proc_n>=6": {
+        "n_workflows": 125,
+        "cycle_rate": 0.128,
+        "n_cyclic_workflows": 16,
+        "mean_cycles_per_wf": 0.888,
+        "ordering_accuracy": 0.9390291262135922,
+        "edges_removed": 0,
+        "llm_calls": 0,
+        "n_pairs": 2575
+      }
+    }
+  },
+  "reasoning_confidence": {
+    "llm_at_inference": false,
+    "note": "OURS + confidence break",
+    "metrics": {
+      "all": {
+        "n_workflows": 897,
+        "cycle_rate": 0.0,
+        "n_cyclic_workflows": 0,
+        "mean_cycles_per_wf": 0.0,
+        "ordering_accuracy": 0.9417868448821667,
+        "edges_removed": 66,
+        "llm_calls": 66,
+        "n_pairs": 5686
+      },
+      "curated": {
+        "n_workflows": 697,
+        "cycle_rate": 0.0,
+        "n_cyclic_workflows": 0,
+        "mean_cycles_per_wf": 0.0,
+        "ordering_accuracy": 0.9470563320626854,
+        "edges_removed": 28,
+        "llm_calls": 28,
+        "n_pairs": 2361
+      },
+      "procedural": {
+        "n_workflows": 200,
+        "cycle_rate": 0.0,
+        "n_cyclic_workflows": 0,
+        "mean_cycles_per_wf": 0.0,
+        "ordering_accuracy": 0.9380451127819549,
+        "edges_removed": 38,
+        "llm_calls": 38,
+        "n_pairs": 3325
+      },
+      "proc_n>=6": {
+        "n_workflows": 125,
+        "cycle_rate": 0.0,
+        "n_cyclic_workflows": 0,
+        "mean_cycles_per_wf": 0.0,
+        "ordering_accuracy": 0.9324271844660195,
+        "edges_removed": 34,
+        "llm_calls": 34,
+        "n_pairs": 2575
+      }
+    }
+  },
+  "baseline_llm": {
+    "llm_at_inference": true,
+    "note": "baseline + LLM-assisted break (Qwen/Qwen2.5-14B-Instruct)",
+    "metrics": {
+      "all": {
+        "n_workflows": 897,
+        "cycle_rate": 0.0,
+        "n_cyclic_workflows": 0,
+        "mean_cycles_per_wf": 0.0,
+        "ordering_accuracy": 0.9398522687302145,
+        "edges_removed": 73,
+        "llm_calls": 73,
+        "n_pairs": 5686
+      },
+      "curated": {
+        "n_workflows": 697,
+        "cycle_rate": 0.0,
+        "n_cyclic_workflows": 0,
+        "mean_cycles_per_wf": 0.0,
+        "ordering_accuracy": 0.929690808979246,
+        "edges_removed": 24,
+        "llm_calls": 24,
+        "n_pairs": 2361
+      },
+      "procedural": {
+        "n_workflows": 200,
+        "cycle_rate": 0.0,
+        "n_cyclic_workflows": 0,
+        "mean_cycles_per_wf": 0.0,
+        "ordering_accuracy": 0.9470676691729323,
+        "edges_removed": 49,
+        "llm_calls": 49,
+        "n_pairs": 3325
+      },
+      "proc_n>=6": {
+        "n_workflows": 125,
+        "cycle_rate": 0.0,
+        "n_cyclic_workflows": 0,
+        "mean_cycles_per_wf": 0.0,
+        "ordering_accuracy": 0.9429126213592233,
+        "edges_removed": 43,
+        "llm_calls": 43,
+        "n_pairs": 2575
+      }
+    }
+  }
+}

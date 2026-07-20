@@ -1,0 +1,13 @@
+{
+  "tag": "reasoning_ce",
+  "run_dir": "/mnt/localssd/causal-embedding-research/automation/internship-causal-embedding/runs/crossencoder2x_deberta_reasoning/v2_fixed_alpha02_ep10",
+  "method": "pairwise_On2",
+  "precision": 0.7849443969204448,
+  "recall": 0.7849443969204448,
+  "f1": 0.7849443969204448,
+  "tp": 4588,
+  "fp": 1257,
+  "fn": 1257,
+  "n_docs": 370,
+  "pairs_On2": 5845
+}

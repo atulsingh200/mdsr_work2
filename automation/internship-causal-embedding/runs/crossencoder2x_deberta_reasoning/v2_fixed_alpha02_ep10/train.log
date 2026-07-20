@@ -1,0 +1,224 @@
+11:10:34 INFO run_dir=runs/crossencoder2x_deberta_reasoning/v2_fixed_alpha02_ep10  device=cuda  bf16=True
+11:10:35 INFO tokenizer <- microsoft/deberta-v3-large
+11:10:35 INFO scanning max joint token length across all splits …
+11:10:56 INFO   observed max=512  -> max_seq_len=512  (scan 21.0s)
+11:10:56 INFO scanning max reasoning token length across all splits …
+11:11:06 INFO   observed max=261  -> max_reason_len=277  (scan 9.6s)
+11:11:06 INFO loading datasets …
+11:11:07 INFO   train=38731  val=3954  test=4984
+11:11:07 INFO building CrossEncoder2xWithReasoning  backbone=microsoft/deberta-v3-large  n_layers=24  native=True  decoder_layers=4 …
+11:11:12 INFO   total params=501,611,621
+11:11:12 INFO   total_steps=6050  warmup_steps=605
+11:15:18 INFO   e1 opt_step=50/6050  loss=3.4992  cls_loss=0.7046  decoder_loss=13.9728  acc=0.5003  lr=8.26e-07
+11:19:32 INFO   e1 opt_step=100/6050  loss=3.1955  cls_loss=0.7037  decoder_loss=12.4617  acc=0.5066  lr=1.65e-06
+11:23:28 INFO   e1 opt_step=150/6050  loss=2.9104  cls_loss=0.7033  decoder_loss=11.0352  acc=0.5060  lr=2.48e-06
+11:32:59 INFO run_dir=/mnt/localssd/causal-embedding-research/automation/internship-causal-embedding/runs/crossencoder2x_deberta_reasoning/v2_fixed_alpha02_ep10  device=cuda  bf16=True
+11:33:00 INFO tokenizer <- microsoft/deberta-v3-large
+11:33:00 INFO scanning max joint token length across all splits …
+11:33:20 INFO   observed max=512  -> max_seq_len=512  (scan 20.3s)
+11:33:20 INFO scanning max reasoning token length across all splits …
+11:33:29 INFO   observed max=261  -> max_reason_len=277  (scan 9.4s)
+11:33:29 INFO loading datasets …
+11:33:30 INFO   train=38731  val=3954  test=4984
+11:33:30 INFO building CrossEncoder2xWithReasoning  backbone=microsoft/deberta-v3-large  n_layers=24  native=True  decoder_layers=4 …
+11:33:32 INFO   total params=501,611,621
+11:33:32 INFO   total_steps=6050  warmup_steps=605
+11:35:20 INFO   e1 opt_step=50/6050  loss=3.4986  cls_loss=0.7045  decoder_loss=13.9705  acc=0.5000  lr=8.26e-07
+11:37:08 INFO   e1 opt_step=100/6050  loss=3.1968  cls_loss=0.7036  decoder_loss=12.4686  acc=0.5075  lr=1.65e-06
+11:38:51 INFO   e1 opt_step=150/6050  loss=2.9111  cls_loss=0.7030  decoder_loss=11.0402  acc=0.5064  lr=2.48e-06
+11:40:34 INFO   e1 opt_step=200/6050  loss=2.7192  cls_loss=0.7017  decoder_loss=10.1008  acc=0.5059  lr=3.31e-06
+11:42:19 INFO   e1 opt_step=250/6050  loss=2.5881  cls_loss=0.7005  decoder_loss=9.4566  acc=0.5098  lr=4.13e-06
+11:44:04 INFO   e1 opt_step=300/6050  loss=2.4932  cls_loss=0.6985  decoder_loss=8.9893  acc=0.5123  lr=4.96e-06
+11:45:50 INFO   e1 opt_step=350/6050  loss=2.4187  cls_loss=0.6954  decoder_loss=8.6336  acc=0.5202  lr=5.79e-06
+11:47:35 INFO   e1 opt_step=400/6050  loss=2.3577  cls_loss=0.6916  decoder_loss=8.3482  acc=0.5301  lr=6.61e-06
+11:49:17 INFO   e1 opt_step=450/6050  loss=2.3033  cls_loss=0.6859  decoder_loss=8.0996  acc=0.5428  lr=7.44e-06
+11:51:01 INFO   e1 opt_step=500/6050  loss=2.2539  cls_loss=0.6799  decoder_loss=7.8815  acc=0.5557  lr=8.26e-06
+11:52:47 INFO   e1 opt_step=550/6050  loss=2.2061  cls_loss=0.6714  decoder_loss=7.6849  acc=0.5677  lr=9.09e-06
+11:54:33 INFO   e1 opt_step=600/6050  loss=2.1607  cls_loss=0.6621  decoder_loss=7.5047  acc=0.5810  lr=9.92e-06
+11:55:13 INFO [epoch 1/10]  train_loss=2.1562  train_cls_loss=0.6614  train_decoder_loss=7.4867  train_acc=0.5822  val_loss=1.5860  val_acc=0.7355  val_auc=0.8146  val_decoder_ppl=196.21  elapsed=1300.8s
+11:55:14 INFO   [qual 0] gen : You must must must must must must must must must be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be be
+11:55:14 INFO   [qual 0] gold: Step B filters the available templates/actions to those supported by the organization, which is a selection/configuration step that determines what gets displayed or generated. Generic actions being generated automatically (Step A) is a result that occurs after such configuration choices are made.
+11:55:15 INFO   [qual 1] gen : Step A describes the the the data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data.
+11:55:15 INFO   [qual 1] gold: Step A describes selecting or creating an action, which opens the action configuration panel. Step B describes configuring that action by setting the Extension and Action Type fields — which can only be done after an action has been selected or created.
+11:55:16 INFO   [qual 2] gen : Step A describes the the the Step B describes the the Step A describes the the Step B is the Step B is the Step B is the Step B is the Step A describes the Step B is the Step B is the the Step A is the the Step B is the Step B is the Step B is the Step B is the Step B is the Step B is the Step B is the Step B is the Step B is the Step B is the Step B is the Step B is the Step B is the Step B is the Step B is the Step B is the Step B is the Step B is the Step B is the the Step B is the Step B is the Step B is the Step B is the Step B is the Step B is the Step B is the the Step B is the the Step B is the Step B is the Step B is the Step B is the Step B is the Step B is the Step A describes the Step B is the Step B is the Step B is the Step B is the Step B is the Step B is the Step B is the Step B is the Step B is the Step B is the Step B is the Step B is the Step B is the Step B is the Step B is the Step B is the Step B is the Step B is the Step B is the Step B is the Step B is the Step B is the
+11:55:16 INFO   [qual 2] gold: Step A describes browsing and selecting the best variant from the AI Assistant panel, which must happen before Step B, where you click "Select" to apply the chosen variant and return to the design space.
+11:55:20 INFO   * saved best.pt  val_auc=0.8146
+11:56:53 INFO   e2 opt_step=650/6050  loss=1.5681  cls_loss=0.5104  decoder_loss=5.2949  acc=0.7493  lr=9.92e-06
+11:58:37 INFO   e2 opt_step=700/6050  loss=1.5438  cls_loss=0.5041  decoder_loss=5.2030  acc=0.7513  lr=9.83e-06
+12:00:23 INFO   e2 opt_step=750/6050  loss=1.5192  cls_loss=0.4973  decoder_loss=5.1154  acc=0.7577  lr=9.73e-06
+12:02:06 INFO   e2 opt_step=800/6050  loss=1.4913  cls_loss=0.4839  decoder_loss=5.0423  acc=0.7660  lr=9.64e-06
+12:03:49 INFO   e2 opt_step=850/6050  loss=1.4736  cls_loss=0.4789  decoder_loss=4.9793  acc=0.7691  lr=9.55e-06
+12:05:32 INFO   e2 opt_step=900/6050  loss=1.4541  cls_loss=0.4706  decoder_loss=4.9223  acc=0.7753  lr=9.46e-06
+12:07:18 INFO   e2 opt_step=950/6050  loss=1.4361  cls_loss=0.4630  decoder_loss=4.8703  acc=0.7803  lr=9.37e-06
+12:09:02 INFO   e2 opt_step=1000/6050  loss=1.4214  cls_loss=0.4582  decoder_loss=4.8211  acc=0.7835  lr=9.27e-06
+12:10:49 INFO   e2 opt_step=1050/6050  loss=1.4056  cls_loss=0.4518  decoder_loss=4.7739  acc=0.7879  lr=9.18e-06
+12:12:32 INFO   e2 opt_step=1100/6050  loss=1.3899  cls_loss=0.4447  decoder_loss=4.7310  acc=0.7921  lr=9.09e-06
+12:14:17 INFO   e2 opt_step=1150/6050  loss=1.3746  cls_loss=0.4376  decoder_loss=4.6909  acc=0.7964  lr=9.00e-06
+12:16:02 INFO   e2 opt_step=1200/6050  loss=1.3611  cls_loss=0.4312  decoder_loss=4.6552  acc=0.7998  lr=8.91e-06
+12:16:53 INFO [epoch 2/10]  train_loss=1.3582  train_cls_loss=0.4298  train_decoder_loss=4.6476  train_acc=0.8007  val_loss=1.2585  val_acc=0.8032  val_auc=0.8918  val_decoder_ppl=59.94  elapsed=1292.5s
+12:16:53 INFO   [qual 0] gen : You must navigate to the data can be completed before you can be configured.
+12:16:53 INFO   [qual 0] gold: Step B filters the available templates/actions to those supported by the organization, which is a selection/configuration step that determines what gets displayed or generated. Generic actions being generated automatically (Step A) is a result that occurs after such configuration choices are made.
+12:16:53 INFO   [qual 1] gen : Step B describes the action of the action, which is a prerequisite to the action that must be completed before Step A.
+12:16:53 INFO   [qual 1] gold: Step A describes selecting or creating an action, which opens the action configuration panel. Step B describes configuring that action by setting the Extension and Action Type fields — which can only be done after an action has been selected or created.
+12:16:53 INFO   [qual 2] gen : Step B describes the action of the action (Step A), which is part of the action action that must happen before Step A.
+12:16:53 INFO   [qual 2] gold: Step A describes browsing and selecting the best variant from the AI Assistant panel, which must happen before Step B, where you click "Select" to apply the chosen variant and return to the design space.
+12:16:58 INFO   * saved best.pt  val_auc=0.8918
+12:18:22 INFO   e3 opt_step=1250/6050  loss=1.1045  cls_loss=0.2599  decoder_loss=4.2278  acc=0.8969  lr=8.82e-06
+12:20:06 INFO   e3 opt_step=1300/6050  loss=1.0944  cls_loss=0.2574  decoder_loss=4.1885  acc=0.8986  lr=8.72e-06
+12:21:53 INFO   e3 opt_step=1350/6050  loss=1.0961  cls_loss=0.2635  decoder_loss=4.1672  acc=0.8946  lr=8.63e-06
+12:23:37 INFO   e3 opt_step=1400/6050  loss=1.0952  cls_loss=0.2666  decoder_loss=4.1474  acc=0.8920  lr=8.54e-06
+12:25:21 INFO   e3 opt_step=1450/6050  loss=1.0891  cls_loss=0.2649  decoder_loss=4.1258  acc=0.8937  lr=8.45e-06
+12:27:05 INFO   e3 opt_step=1500/6050  loss=1.0826  cls_loss=0.2625  decoder_loss=4.1052  acc=0.8945  lr=8.36e-06
+12:28:53 INFO   e3 opt_step=1550/6050  loss=1.0762  cls_loss=0.2593  decoder_loss=4.0890  acc=0.8958  lr=8.26e-06
+12:30:40 INFO   e3 opt_step=1600/6050  loss=1.0684  cls_loss=0.2553  decoder_loss=4.0705  acc=0.8969  lr=8.17e-06
+12:32:24 INFO   e3 opt_step=1650/6050  loss=1.0655  cls_loss=0.2548  decoder_loss=4.0583  acc=0.8971  lr=8.08e-06
+12:34:08 INFO   e3 opt_step=1700/6050  loss=1.0606  cls_loss=0.2526  decoder_loss=4.0445  acc=0.8972  lr=7.99e-06
+12:35:54 INFO   e3 opt_step=1750/6050  loss=1.0545  cls_loss=0.2494  decoder_loss=4.0303  acc=0.8984  lr=7.90e-06
+12:37:38 INFO   e3 opt_step=1800/6050  loss=1.0498  cls_loss=0.2477  decoder_loss=4.0156  acc=0.8992  lr=7.81e-06
+12:38:40 INFO [epoch 3/10]  train_loss=1.0475  train_cls_loss=0.2463  train_decoder_loss=4.0107  train_acc=0.9000  val_loss=1.2443  val_acc=0.8331  val_auc=0.9142  val_decoder_ppl=41.53  elapsed=1302.2s
+12:38:41 INFO   [qual 0] gen : You must navigate to the data element before you can access the data can be configured.
+12:38:41 INFO   [qual 0] gold: Step B filters the available templates/actions to those supported by the organization, which is a selection/configuration step that determines what gets displayed or generated. Generic actions being generated automatically (Step A) is a result that occurs after such configuration choices are made.
+12:38:41 INFO   [qual 1] gen : Step A describes the initial configuration, which is a prerequisite action that must be completed before Step B.
+12:38:41 INFO   [qual 1] gold: Step A describes selecting or creating an action, which opens the action configuration panel. Step B describes configuring that action by setting the Extension and Action Type fields — which can only be done after an action has been selected or created.
+12:38:41 INFO   [qual 2] gen : Step A describes the action of the action, which is a prerequisite action that must be completed before Step B.
+12:38:41 INFO   [qual 2] gold: Step A describes browsing and selecting the best variant from the AI Assistant panel, which must happen before Step B, where you click "Select" to apply the chosen variant and return to the design space.
+12:38:46 INFO   * saved best.pt  val_auc=0.9142
+12:40:01 INFO   e4 opt_step=1850/6050  loss=0.9178  cls_loss=0.1474  decoder_loss=3.8557  acc=0.9473  lr=7.71e-06
+12:41:45 INFO   e4 opt_step=1900/6050  loss=0.9056  cls_loss=0.1409  decoder_loss=3.8264  acc=0.9504  lr=7.62e-06
+12:43:25 INFO   e4 opt_step=1950/6050  loss=0.9040  cls_loss=0.1423  decoder_loss=3.8123  acc=0.9485  lr=7.53e-06
+12:45:11 INFO   e4 opt_step=2000/6050  loss=0.9053  cls_loss=0.1457  decoder_loss=3.8019  acc=0.9466  lr=7.44e-06
+12:46:54 INFO   e4 opt_step=2050/6050  loss=0.9042  cls_loss=0.1463  decoder_loss=3.7925  acc=0.9459  lr=7.35e-06
+12:48:40 INFO   e4 opt_step=2100/6050  loss=0.9024  cls_loss=0.1471  decoder_loss=3.7802  acc=0.9446  lr=7.25e-06
+12:50:22 INFO   e4 opt_step=2150/6050  loss=0.9012  cls_loss=0.1474  decoder_loss=3.7725  acc=0.9438  lr=7.16e-06
+12:52:09 INFO   e4 opt_step=2200/6050  loss=0.9003  cls_loss=0.1481  decoder_loss=3.7644  acc=0.9434  lr=7.07e-06
+12:53:55 INFO   e4 opt_step=2250/6050  loss=0.8962  cls_loss=0.1457  decoder_loss=3.7561  acc=0.9443  lr=6.98e-06
+12:55:41 INFO   e4 opt_step=2300/6050  loss=0.8923  cls_loss=0.1438  decoder_loss=3.7463  acc=0.9448  lr=6.89e-06
+12:57:26 INFO   e4 opt_step=2350/6050  loss=0.8897  cls_loss=0.1430  decoder_loss=3.7377  acc=0.9452  lr=6.80e-06
+12:59:08 INFO   e4 opt_step=2400/6050  loss=0.8903  cls_loss=0.1450  decoder_loss=3.7305  acc=0.9447  lr=6.70e-06
+13:00:20 INFO [epoch 4/10]  train_loss=0.8893  train_cls_loss=0.1446  train_decoder_loss=3.7273  train_acc=0.9451  val_loss=1.2816  val_acc=0.8333  val_auc=0.9109  val_decoder_ppl=33.44  elapsed=1294.1s
+13:00:20 INFO   [qual 0] gen : You must navigate to the data element before you can access the data element.
+13:00:20 INFO   [qual 0] gold: Step B filters the available templates/actions to those supported by the organization, which is a selection/configuration step that determines what gets displayed or generated. Generic actions being generated automatically (Step A) is a result that occurs after such configuration choices are made.
+13:00:20 INFO   [qual 1] gen : Step A describes the initial configuration, which is a prerequisite action that must be completed before Step B can be completed first.
+13:00:20 INFO   [qual 1] gold: Step A describes selecting or creating an action, which opens the action configuration panel. Step B describes configuring that action by setting the Extension and Action Type fields — which can only be done after an action has been selected or created.
+13:00:20 INFO   [qual 2] gen : Step A describes configuring the action of the action, which is a prerequisite action that must be completed before Step B can be completed.
+13:00:20 INFO   [qual 2] gold: Step A describes browsing and selecting the best variant from the AI Assistant panel, which must happen before Step B, where you click "Select" to apply the chosen variant and return to the design space.
+13:01:26 INFO   e5 opt_step=2450/6050  loss=0.8001  cls_loss=0.0761  decoder_loss=3.6252  acc=0.9708  lr=6.61e-06
+13:03:11 INFO   e5 opt_step=2500/6050  loss=0.8098  cls_loss=0.0882  decoder_loss=3.6129  acc=0.9705  lr=6.52e-06
+13:04:55 INFO   e5 opt_step=2550/6050  loss=0.8118  cls_loss=0.0917  decoder_loss=3.6048  acc=0.9689  lr=6.43e-06
+13:06:38 INFO   e5 opt_step=2600/6050  loss=0.8096  cls_loss=0.0901  decoder_loss=3.6022  acc=0.9696  lr=6.34e-06
+13:08:21 INFO   e5 opt_step=2650/6050  loss=0.8094  cls_loss=0.0903  decoder_loss=3.6000  acc=0.9688  lr=6.24e-06
+13:10:06 INFO   e5 opt_step=2700/6050  loss=0.8068  cls_loss=0.0891  decoder_loss=3.5926  acc=0.9693  lr=6.15e-06
+13:11:53 INFO   e5 opt_step=2750/6050  loss=0.8070  cls_loss=0.0904  decoder_loss=3.5870  acc=0.9688  lr=6.06e-06
+13:13:36 INFO   e5 opt_step=2800/6050  loss=0.8067  cls_loss=0.0915  decoder_loss=3.5804  acc=0.9683  lr=5.97e-06
+13:15:22 INFO   e5 opt_step=2850/6050  loss=0.8056  cls_loss=0.0915  decoder_loss=3.5747  acc=0.9682  lr=5.88e-06
+13:17:08 INFO   e5 opt_step=2900/6050  loss=0.8042  cls_loss=0.0915  decoder_loss=3.5669  acc=0.9685  lr=5.79e-06
+13:18:53 INFO   e5 opt_step=2950/6050  loss=0.8020  cls_loss=0.0906  decoder_loss=3.5606  acc=0.9687  lr=5.69e-06
+13:20:39 INFO   e5 opt_step=3000/6050  loss=0.7996  cls_loss=0.0897  decoder_loss=3.5530  acc=0.9689  lr=5.60e-06
+13:22:01 INFO [epoch 5/10]  train_loss=0.7993  train_cls_loss=0.0900  train_decoder_loss=3.5503  train_acc=0.9688  val_loss=1.3455  val_acc=0.8237  val_auc=0.9072  val_decoder_ppl=28.87  elapsed=1298.3s
+13:22:01 INFO   [qual 0] gen : You must navigate to the schema before you can access the data element, as the schema field that must be configured before you can configure its fields.
+13:22:01 INFO   [qual 0] gold: Step B filters the available templates/actions to those supported by the organization, which is a selection/configuration step that determines what gets displayed or generated. Generic actions being generated automatically (Step A) is a result that occurs after such configuration choices are made.
+13:22:01 INFO   [qual 1] gen : Step A describes configuring the API API, which is a prerequisite action that must be done before Step B can be completed.
+13:22:01 INFO   [qual 1] gold: Step A describes selecting or creating an action, which opens the action configuration panel. Step B describes configuring that action by setting the Extension and Action Type fields — which can only be done after an action has been selected or created.
+13:22:01 INFO   [qual 2] gen : Step A describes configuring the campaign, which is a prerequisite action that must be done before Step B can be completed.
+13:22:01 INFO   [qual 2] gold: Step A describes browsing and selecting the best variant from the AI Assistant panel, which must happen before Step B, where you click "Select" to apply the chosen variant and return to the design space.
+13:22:54 INFO   e6 opt_step=3050/6050  loss=0.7329  cls_loss=0.0395  decoder_loss=3.4696  acc=0.9881  lr=5.51e-06
+13:24:37 INFO   e6 opt_step=3100/6050  loss=0.7512  cls_loss=0.0534  decoder_loss=3.4924  acc=0.9833  lr=5.42e-06
+13:26:22 INFO   e6 opt_step=3150/6050  loss=0.7478  cls_loss=0.0545  decoder_loss=3.4702  acc=0.9826  lr=5.33e-06
+13:28:08 INFO   e6 opt_step=3200/6050  loss=0.7471  cls_loss=0.0542  decoder_loss=3.4687  acc=0.9833  lr=5.23e-06
+13:29:53 INFO   e6 opt_step=3250/6050  loss=0.7472  cls_loss=0.0558  decoder_loss=3.4609  acc=0.9832  lr=5.14e-06
+13:31:37 INFO   e6 opt_step=3300/6050  loss=0.7466  cls_loss=0.0568  decoder_loss=3.4530  acc=0.9826  lr=5.05e-06
+13:33:21 INFO   e6 opt_step=3350/6050  loss=0.7478  cls_loss=0.0593  decoder_loss=3.4463  acc=0.9816  lr=4.96e-06
+13:35:05 INFO   e6 opt_step=3400/6050  loss=0.7481  cls_loss=0.0609  decoder_loss=3.4401  acc=0.9809  lr=4.87e-06
+13:36:49 INFO   e6 opt_step=3450/6050  loss=0.7462  cls_loss=0.0597  decoder_loss=3.4369  acc=0.9810  lr=4.78e-06
+13:38:37 INFO   e6 opt_step=3500/6050  loss=0.7457  cls_loss=0.0600  decoder_loss=3.4329  acc=0.9810  lr=4.68e-06
+13:40:23 INFO   e6 opt_step=3550/6050  loss=0.7448  cls_loss=0.0606  decoder_loss=3.4256  acc=0.9809  lr=4.59e-06
+13:42:07 INFO   e6 opt_step=3600/6050  loss=0.7438  cls_loss=0.0601  decoder_loss=3.4228  acc=0.9810  lr=4.50e-06
+13:43:42 INFO [epoch 6/10]  train_loss=0.7438  train_cls_loss=0.0605  train_decoder_loss=3.4207  train_acc=0.9809  val_loss=1.5029  val_acc=0.8263  val_auc=0.8988  val_decoder_ppl=26.14  elapsed=1298.3s
+13:43:42 INFO   [qual 0] gen : You must open the Data Element Element before you can configure its settings.
+13:43:42 INFO   [qual 0] gold: Step B filters the available templates/actions to those supported by the organization, which is a selection/configuration step that determines what gets displayed or generated. Generic actions being generated automatically (Step A) is a result that occurs after such configuration choices are made.
+13:43:42 INFO   [qual 1] gen : Step A describes configuring the API call to the API, which is a prerequisite action that must be done before Step B can be performed in Step A.
+13:43:42 INFO   [qual 1] gold: Step A describes selecting or creating an action, which opens the action configuration panel. Step B describes configuring that action by setting the Extension and Action Type fields — which can only be done after an action has been selected or created.
+13:43:43 INFO   [qual 2] gen : Step A describes configuring the campaign, which is a prerequisite action that must be done before Step B can be done.
+13:43:43 INFO   [qual 2] gold: Step A describes browsing and selecting the best variant from the AI Assistant panel, which must happen before Step B, where you click "Select" to apply the chosen variant and return to the design space.
+13:44:27 INFO   e7 opt_step=3650/6050  loss=0.7015  cls_loss=0.0250  decoder_loss=3.3867  acc=0.9938  lr=4.41e-06
+13:46:13 INFO   e7 opt_step=3700/6050  loss=0.7160  cls_loss=0.0433  decoder_loss=3.3691  acc=0.9859  lr=4.32e-06
+13:47:56 INFO   e7 opt_step=3750/6050  loss=0.7148  cls_loss=0.0434  decoder_loss=3.3611  acc=0.9854  lr=4.22e-06
+13:49:38 INFO   e7 opt_step=3800/6050  loss=0.7120  cls_loss=0.0415  decoder_loss=3.3569  acc=0.9866  lr=4.13e-06
+13:51:22 INFO   e7 opt_step=3850/6050  loss=0.7115  cls_loss=0.0415  decoder_loss=3.3544  acc=0.9865  lr=4.04e-06
+13:53:07 INFO   e7 opt_step=3900/6050  loss=0.7104  cls_loss=0.0422  decoder_loss=3.3453  acc=0.9865  lr=3.95e-06
+13:54:52 INFO   e7 opt_step=3950/6050  loss=0.7088  cls_loss=0.0417  decoder_loss=3.3398  acc=0.9865  lr=3.86e-06
+13:56:36 INFO   e7 opt_step=4000/6050  loss=0.7083  cls_loss=0.0415  decoder_loss=3.3383  acc=0.9866  lr=3.76e-06
+13:58:21 INFO   e7 opt_step=4050/6050  loss=0.7073  cls_loss=0.0414  decoder_loss=3.3340  acc=0.9866  lr=3.67e-06
+14:00:04 INFO   e7 opt_step=4100/6050  loss=0.7063  cls_loss=0.0411  decoder_loss=3.3301  acc=0.9869  lr=3.58e-06
+14:01:48 INFO   e7 opt_step=4150/6050  loss=0.7063  cls_loss=0.0418  decoder_loss=3.3266  acc=0.9867  lr=3.49e-06
+14:03:32 INFO   e7 opt_step=4200/6050  loss=0.7068  cls_loss=0.0429  decoder_loss=3.3232  acc=0.9865  lr=3.40e-06
+14:05:15 INFO [epoch 7/10]  train_loss=0.7067  train_cls_loss=0.0432  train_decoder_loss=3.3209  train_acc=0.9864  val_loss=1.5563  val_acc=0.8341  val_auc=0.9011  val_decoder_ppl=23.98  elapsed=1289.7s
+14:05:15 INFO   [qual 0] gen : You must open the action before you can configure its settings.
+14:05:15 INFO   [qual 0] gold: Step B filters the available templates/actions to those supported by the organization, which is a selection/configuration step that determines what gets displayed or generated. Generic actions being generated automatically (Step A) is a result that occurs after such configuration choices are made.
+14:05:15 INFO   [qual 1] gen : Step A describes configuring the API credentials (Step B), which is a prerequisite action that must be completed before Step B can be done in Step A.
+14:05:15 INFO   [qual 1] gold: Step A describes selecting or creating an action, which opens the action configuration panel. Step B describes configuring that action by setting the Extension and Action Type fields — which can only be done after an action has been selected or created.
+14:05:15 INFO   [qual 2] gen : Step A describes configuring the email content, which is a prerequisite action that must be completed before Step B can be done in Step A.
+14:05:15 INFO   [qual 2] gold: Step A describes browsing and selecting the best variant from the AI Assistant panel, which must happen before Step B, where you click "Select" to apply the chosen variant and return to the design space.
+14:05:49 INFO   e8 opt_step=4250/6050  loss=0.6715  cls_loss=0.0275  decoder_loss=3.2247  acc=0.9917  lr=3.31e-06
+14:07:37 INFO   e8 opt_step=4300/6050  loss=0.6788  cls_loss=0.0268  decoder_loss=3.2633  acc=0.9911  lr=3.21e-06
+14:09:18 INFO   e8 opt_step=4350/6050  loss=0.6824  cls_loss=0.0298  decoder_loss=3.2654  acc=0.9906  lr=3.12e-06
+14:11:00 INFO   e8 opt_step=4400/6050  loss=0.6813  cls_loss=0.0290  decoder_loss=3.2637  acc=0.9909  lr=3.03e-06
+14:12:45 INFO   e8 opt_step=4450/6050  loss=0.6812  cls_loss=0.0292  decoder_loss=3.2629  acc=0.9908  lr=2.94e-06
+14:14:28 INFO   e8 opt_step=4500/6050  loss=0.6802  cls_loss=0.0290  decoder_loss=3.2593  acc=0.9907  lr=2.85e-06
+14:16:13 INFO   e8 opt_step=4550/6050  loss=0.6800  cls_loss=0.0291  decoder_loss=3.2580  acc=0.9908  lr=2.75e-06
+14:17:56 INFO   e8 opt_step=4600/6050  loss=0.6800  cls_loss=0.0299  decoder_loss=3.2543  acc=0.9908  lr=2.66e-06
+14:19:43 INFO   e8 opt_step=4650/6050  loss=0.6785  cls_loss=0.0290  decoder_loss=3.2514  acc=0.9909  lr=2.57e-06
+14:21:27 INFO   e8 opt_step=4700/6050  loss=0.6776  cls_loss=0.0287  decoder_loss=3.2485  acc=0.9910  lr=2.48e-06
+14:23:10 INFO   e8 opt_step=4750/6050  loss=0.6771  cls_loss=0.0289  decoder_loss=3.2446  acc=0.9908  lr=2.39e-06
+14:24:56 INFO   e8 opt_step=4800/6050  loss=0.6763  cls_loss=0.0287  decoder_loss=3.2421  acc=0.9908  lr=2.30e-06
+14:26:49 INFO [epoch 8/10]  train_loss=0.6765  train_cls_loss=0.0292  train_decoder_loss=3.2406  train_acc=0.9907  val_loss=1.7142  val_acc=0.8376  val_auc=0.8880  val_decoder_ppl=22.64  elapsed=1291.0s
+14:26:49 INFO   [qual 0] gen : You must open the data element before you can configure its settings, as the action that action is a prerequisite action that action that action that must be configured before you can configure its fields.
+14:26:49 INFO   [qual 0] gold: Step B filters the available templates/actions to those supported by the organization, which is a selection/configuration step that determines what gets displayed or generated. Generic actions being generated automatically (Step A) is a result that occurs after such configuration choices are made.
+14:26:49 INFO   [qual 1] gen : Step A describes configuring the API credentials (Step B), which is a prerequisite action that must be completed before Step B can be performed in Step A.
+14:26:49 INFO   [qual 1] gold: Step A describes selecting or creating an action, which opens the action configuration panel. Step B describes configuring that action by setting the Extension and Action Type fields — which can only be done after an action has been selected or created.
+14:26:50 INFO   [qual 2] gen : Step A describes selecting a content (clicking the content), which is a prerequisite action that must be completed before Step B can be done in Step A.
+14:26:50 INFO   [qual 2] gold: Step A describes browsing and selecting the best variant from the AI Assistant panel, which must happen before Step B, where you click "Select" to apply the chosen variant and return to the design space.
+14:27:13 INFO   e9 opt_step=4850/6050  loss=0.6592  cls_loss=0.0106  decoder_loss=3.2474  acc=0.9984  lr=2.20e-06
+14:28:58 INFO   e9 opt_step=4900/6050  loss=0.6636  cls_loss=0.0251  decoder_loss=3.1964  acc=0.9935  lr=2.11e-06
+14:30:41 INFO   e9 opt_step=4950/6050  loss=0.6615  cls_loss=0.0203  decoder_loss=3.2099  acc=0.9945  lr=2.02e-06
+14:32:23 INFO   e9 opt_step=5000/6050  loss=0.6623  cls_loss=0.0215  decoder_loss=3.2082  acc=0.9938  lr=1.93e-06
+14:34:06 INFO   e9 opt_step=5050/6050  loss=0.6604  cls_loss=0.0196  decoder_loss=3.2078  acc=0.9940  lr=1.84e-06
+14:35:51 INFO   e9 opt_step=5100/6050  loss=0.6598  cls_loss=0.0200  decoder_loss=3.2032  acc=0.9940  lr=1.74e-06
+14:37:36 INFO   e9 opt_step=5150/6050  loss=0.6604  cls_loss=0.0208  decoder_loss=3.2024  acc=0.9938  lr=1.65e-06
+14:39:22 INFO   e9 opt_step=5200/6050  loss=0.6584  cls_loss=0.0197  decoder_loss=3.1976  acc=0.9941  lr=1.56e-06
+14:41:05 INFO   e9 opt_step=5250/6050  loss=0.6574  cls_loss=0.0193  decoder_loss=3.1943  acc=0.9941  lr=1.47e-06
+14:42:49 INFO   e9 opt_step=5300/6050  loss=0.6567  cls_loss=0.0194  decoder_loss=3.1901  acc=0.9942  lr=1.38e-06
+14:44:33 INFO   e9 opt_step=5350/6050  loss=0.6573  cls_loss=0.0204  decoder_loss=3.1882  acc=0.9941  lr=1.29e-06
+14:46:18 INFO   e9 opt_step=5400/6050  loss=0.6572  cls_loss=0.0207  decoder_loss=3.1866  acc=0.9940  lr=1.19e-06
+14:48:24 INFO [epoch 9/10]  train_loss=0.6566  train_cls_loss=0.0206  train_decoder_loss=3.1835  train_acc=0.9940  val_loss=1.8538  val_acc=0.8379  val_auc=0.8885  val_decoder_ppl=21.70  elapsed=1291.6s
+14:48:24 INFO   [qual 0] gen : You must first select the event type before you can configure its settings.
+14:48:24 INFO   [qual 0] gold: Step B filters the available templates/actions to those supported by the organization, which is a selection/configuration step that determines what gets displayed or generated. Generic actions being generated automatically (Step A) is a result that occurs after such configuration choices are made.
+14:48:24 INFO   [qual 1] gen : Step A describes configuring the API credentials (Step B), which is a prerequisite action that must be completed before Step B can be done.
+14:48:24 INFO   [qual 1] gold: Step A describes selecting or creating an action, which opens the action configuration panel. Step B describes configuring that action by setting the Extension and Action Type fields — which can only be done after an action has been selected or created.
+14:48:24 INFO   [qual 2] gen : Step A describes the initial action of the content, which is a prerequisite action that must be completed before Step B, where you can select the content and save the content.
+14:48:24 INFO   [qual 2] gold: Step A describes browsing and selecting the best variant from the AI Assistant panel, which must happen before Step B, where you click "Select" to apply the chosen variant and return to the design space.
+14:48:37 INFO   e10 opt_step=5450/6050  loss=0.6434  cls_loss=0.0007  decoder_loss=3.2197  acc=1.0000  lr=1.10e-06
+14:50:25 INFO   e10 opt_step=5500/6050  loss=0.6472  cls_loss=0.0112  decoder_loss=3.1832  acc=0.9969  lr=1.01e-06
+14:52:08 INFO   e10 opt_step=5550/6050  loss=0.6470  cls_loss=0.0139  decoder_loss=3.1673  acc=0.9957  lr=9.18e-07
+14:53:51 INFO   e10 opt_step=5600/6050  loss=0.6462  cls_loss=0.0139  decoder_loss=3.1641  acc=0.9958  lr=8.26e-07
+14:55:36 INFO   e10 opt_step=5650/6050  loss=0.6440  cls_loss=0.0124  decoder_loss=3.1612  acc=0.9963  lr=7.35e-07
+14:57:19 INFO   e10 opt_step=5700/6050  loss=0.6437  cls_loss=0.0126  decoder_loss=3.1588  acc=0.9963  lr=6.43e-07
+14:59:05 INFO   e10 opt_step=5750/6050  loss=0.6429  cls_loss=0.0127  decoder_loss=3.1542  acc=0.9964  lr=5.51e-07
+15:00:50 INFO   e10 opt_step=5800/6050  loss=0.6421  cls_loss=0.0119  decoder_loss=3.1539  acc=0.9965  lr=4.59e-07
+15:02:35 INFO   e10 opt_step=5850/6050  loss=0.6422  cls_loss=0.0121  decoder_loss=3.1540  acc=0.9964  lr=3.67e-07
+15:04:18 INFO   e10 opt_step=5900/6050  loss=0.6423  cls_loss=0.0124  decoder_loss=3.1531  acc=0.9963  lr=2.75e-07
+15:06:07 INFO   e10 opt_step=5950/6050  loss=0.6421  cls_loss=0.0122  decoder_loss=3.1526  acc=0.9963  lr=1.84e-07
+15:07:51 INFO   e10 opt_step=6000/6050  loss=0.6422  cls_loss=0.0124  decoder_loss=3.1527  acc=0.9964  lr=9.18e-08
+15:09:34 INFO   e10 opt_step=6050/6050  loss=0.6425  cls_loss=0.0129  decoder_loss=3.1519  acc=0.9962  lr=0.00e+00
+15:10:04 INFO [epoch 10/10]  train_loss=0.6425  train_cls_loss=0.0129  train_decoder_loss=3.1519  train_acc=0.9962  val_loss=1.9015  val_acc=0.8349  val_auc=0.8838  val_decoder_ppl=21.40  elapsed=1297.4s
+15:10:04 INFO   [qual 0] gen : You must first create the data element before you can configure its settings.
+15:10:04 INFO   [qual 0] gold: Step B filters the available templates/actions to those supported by the organization, which is a selection/configuration step that determines what gets displayed or generated. Generic actions being generated automatically (Step A) is a result that occurs after such configuration choices are made.
+15:10:04 INFO   [qual 1] gen : Step A describes configuring the API credentials (Step B), which is a prerequisite action that must be completed before Step B can be done.
+15:10:04 INFO   [qual 1] gold: Step A describes selecting or creating an action, which opens the action configuration panel. Step B describes configuring that action by setting the Extension and Action Type fields — which can only be done after an action has been selected or created.
+15:10:05 INFO   [qual 2] gen : Step A describes the initial action of the content, which is a prerequisite for the content creation process. Step B describes clicking "Create" to the content, which is a prerequisite to the content editor. You must first before you can select the content.
+15:10:05 INFO   [qual 2] gold: Step A describes browsing and selecting the best variant from the AI Assistant panel, which must happen before Step B, where you click "Select" to apply the chosen variant and return to the design space.
+15:10:09 INFO saved final.pt  total_time=12997s
+15:10:09 INFO loading best.pt for final val/test evaluation …
+15:10:40 INFO [val]  acc=0.8331  auc=0.9142  f1=0.8342  decoder_ppl=41.53
+15:11:15 INFO [test] loss=1.3450  acc=0.8098  auc=0.8958  f1=0.8155  decoder_ppl=46.23
+15:11:15 INFO [done] best_val_auc=0.9142  test_acc=0.8098  test_auc=0.8958  results in /mnt/localssd/causal-embedding-research/automation/internship-causal-embedding/runs/crossencoder2x_deberta_reasoning/v2_fixed_alpha02_ep10

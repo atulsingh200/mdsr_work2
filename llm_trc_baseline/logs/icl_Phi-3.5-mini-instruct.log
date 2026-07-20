@@ -1,0 +1,72 @@
+test rows: 4801  model: microsoft/Phi-3.5-mini-instruct
+A new version of the following files was downloaded from https://huggingface.co/microsoft/Phi-3.5-mini-instruct:
+- configuration_phi3.py
+. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
+Loading safetensors checkpoint shards:   0% Completed | 0/2 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:  50% Completed | 1/2 [00:01<00:01,  1.38s/it]
+Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:02<00:00,  1.10s/it]
+Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:02<00:00,  1.14s/it]
+
+Capturing CUDA graph shapes:   0%|          | 0/35 [00:00<?, ?it/s]Capturing CUDA graph shapes:   3%|▎         | 1/35 [00:00<00:24,  1.40it/s]Capturing CUDA graph shapes:   6%|▌         | 2/35 [00:01<00:23,  1.42it/s]Capturing CUDA graph shapes:   9%|▊         | 3/35 [00:02<00:22,  1.44it/s]Capturing CUDA graph shapes:  11%|█▏        | 4/35 [00:02<00:21,  1.44it/s]Capturing CUDA graph shapes:  14%|█▍        | 5/35 [00:03<00:20,  1.43it/s]Capturing CUDA graph shapes:  17%|█▋        | 6/35 [00:04<00:20,  1.40it/s]Capturing CUDA graph shapes:  20%|██        | 7/35 [00:04<00:20,  1.40it/s]Capturing CUDA graph shapes:  23%|██▎       | 8/35 [00:05<00:19,  1.40it/s]Capturing CUDA graph shapes:  26%|██▌       | 9/35 [00:06<00:18,  1.41it/s]Capturing CUDA graph shapes:  29%|██▊       | 10/35 [00:07<00:17,  1.43it/s]Capturing CUDA graph shapes:  31%|███▏      | 11/35 [00:07<00:16,  1.43it/s]Capturing CUDA graph shapes:  34%|███▍      | 12/35 [00:08<00:16,  1.43it/s]Capturing CUDA graph shapes:  37%|███▋      | 13/35 [00:09<00:15,  1.42it/s]Capturing CUDA graph shapes:  40%|████      | 14/35 [00:09<00:14,  1.42it/s]Capturing CUDA graph shapes:  43%|████▎     | 15/35 [00:10<00:14,  1.42it/s]Capturing CUDA graph shapes:  46%|████▌     | 16/35 [00:11<00:13,  1.43it/s]Capturing CUDA graph shapes:  49%|████▊     | 17/35 [00:11<00:12,  1.46it/s]Capturing CUDA graph shapes:  51%|█████▏    | 18/35 [00:12<00:11,  1.47it/s]Capturing CUDA graph shapes:  54%|█████▍    | 19/35 [00:13<00:10,  1.48it/s]Capturing CUDA graph shapes:  57%|█████▋    | 20/35 [00:13<00:10,  1.49it/s]Capturing CUDA graph shapes:  60%|██████    | 21/35 [00:14<00:09,  1.49it/s]Capturing CUDA graph shapes:  63%|██████▎   | 22/35 [00:15<00:08,  1.47it/s]Capturing CUDA graph shapes:  66%|██████▌   | 23/35 [00:15<00:08,  1.48it/s]Capturing CUDA graph shapes:  69%|██████▊   | 24/35 [00:16<00:07,  1.49it/s]Capturing CUDA graph shapes:  71%|███████▏  | 25/35 [00:17<00:06,  1.52it/s]Capturing CUDA graph shapes:  74%|███████▍  | 26/35 [00:17<00:05,  1.52it/s]Capturing CUDA graph shapes:  77%|███████▋  | 27/35 [00:18<00:05,  1.49it/s]Capturing CUDA graph shapes:  80%|████████  | 28/35 [00:19<00:04,  1.48it/s]Capturing CUDA graph shapes:  83%|████████▎ | 29/35 [00:20<00:04,  1.44it/s]Capturing CUDA graph shapes:  86%|████████▌ | 30/35 [00:20<00:03,  1.42it/s]Capturing CUDA graph shapes:  89%|████████▊ | 31/35 [00:21<00:02,  1.40it/s]Capturing CUDA graph shapes:  91%|█████████▏| 32/35 [00:22<00:02,  1.42it/s]Capturing CUDA graph shapes:  94%|█████████▍| 33/35 [00:22<00:01,  1.42it/s]Capturing CUDA graph shapes:  97%|█████████▋| 34/35 [00:23<00:00,  1.42it/s]Capturing CUDA graph shapes: 100%|██████████| 35/35 [00:24<00:00,  1.38it/s]Capturing CUDA graph shapes: 100%|██████████| 35/35 [00:24<00:00,  1.44it/s]
+[Phi-3.5-mini-instruct__P__k0] f1=0.6616 acc=0.5230 unparsed=0.000
+WARNING 07-19 06:51:04 scheduler.py:944] Input prompt (4526 tokens) is too long and exceeds limit of 4096
+[Phi-3.5-mini-instruct__P__k2__s0] f1=0.5389 acc=0.5740 unparsed=0.000
+[Phi-3.5-mini-instruct__P__k2__s1] f1=0.6051 acc=0.5557 unparsed=0.000
+WARNING 07-19 06:59:29 scheduler.py:944] Input prompt (4429 tokens) is too long and exceeds limit of 4096
+[Phi-3.5-mini-instruct__P__k2__s2] f1=0.6640 acc=0.5216 unparsed=0.000
+WARNING 07-19 07:03:35 scheduler.py:944] Input prompt (4155 tokens) is too long and exceeds limit of 4096
+[Phi-3.5-mini-instruct__P__k2__s3] f1=0.6518 acc=0.5361 unparsed=0.000
+[Phi-3.5-mini-instruct__P__k2__s4] f1=0.6659 acc=0.5524 unparsed=0.000
+[Phi-3.5-mini-instruct__P__k2] f1=0.6251 +/- 0.0484
+[Phi-3.5-mini-instruct__QA1__k0] f1=0.5468 acc=0.5643 unparsed=0.000
+WARNING 07-19 07:12:12 scheduler.py:944] Input prompt (4449 tokens) is too long and exceeds limit of 4096
+[Phi-3.5-mini-instruct__QA1__k2__s0] f1=0.5292 acc=0.5786 unparsed=0.000
+[Phi-3.5-mini-instruct__QA1__k2__s1] f1=0.5656 acc=0.5786 unparsed=0.000
+WARNING 07-19 07:19:43 scheduler.py:944] Input prompt (4352 tokens) is too long and exceeds limit of 4096
+[Phi-3.5-mini-instruct__QA1__k2__s2] f1=0.6633 acc=0.5526 unparsed=0.000
+[Phi-3.5-mini-instruct__QA1__k2__s3] f1=0.6457 acc=0.5734 unparsed=0.000
+[Phi-3.5-mini-instruct__QA1__k2__s4] f1=0.6370 acc=0.5826 unparsed=0.000
+[Phi-3.5-mini-instruct__QA1__k2] f1=0.6082 +/- 0.0516
+[Phi-3.5-mini-instruct__QA2__k0] f1=0.4412 acc=0.5632 unparsed=0.000
+WARNING 07-19 07:32:28 scheduler.py:944] Input prompt (4544 tokens) is too long and exceeds limit of 4096
+[Phi-3.5-mini-instruct__QA2__k2__s0] f1=0.6836 acc=0.5451 unparsed=0.000
+WARNING 07-19 07:34:05 scheduler.py:1555] Sequence group 67832 is preempted by PreemptionMode.RECOMPUTE mode because there is not enough KV cache space. This can affect the end-to-end performance. Increase gpu_memory_utilization or tensor_parallel_size to provide more KV cache memory. total_num_cumulative_preemption=1
+[Phi-3.5-mini-instruct__QA2__k2__s1] f1=0.6381 acc=0.5730 unparsed=0.000
+WARNING 07-19 07:41:42 scheduler.py:944] Input prompt (4447 tokens) is too long and exceeds limit of 4096
+[Phi-3.5-mini-instruct__QA2__k2__s2] f1=0.6704 acc=0.5682 unparsed=0.000
+WARNING 07-19 07:46:10 scheduler.py:944] Input prompt (4173 tokens) is too long and exceeds limit of 4096
+[Phi-3.5-mini-instruct__QA2__k2__s3] f1=0.6690 acc=0.5695 unparsed=0.000
+[Phi-3.5-mini-instruct__QA2__k2__s4] f1=0.6657 acc=0.5561 unparsed=0.000
+[Phi-3.5-mini-instruct__QA2__k2] f1=0.6654 +/- 0.0149
+
+=== summary ===
+{
+  "Phi-3.5-mini-instruct__P__k0": {
+    "f1": 0.6616430260047281,
+    "acc": 0.5230160383253489,
+    "unparsed_rate": 0.0
+  },
+  "Phi-3.5-mini-instruct__P__k2": {
+    "f1_mean": 0.6251405294316398,
+    "f1_std": 0.04842915076018451
+  },
+  "Phi-3.5-mini-instruct__QA1__k0": {
+    "f1": 0.5467937608318891,
+    "acc": 0.5642574463653406,
+    "unparsed_rate": 0.0
+  },
+  "Phi-3.5-mini-instruct__QA1__k2": {
+    "f1_mean": 0.6081521482212766,
+    "f1_std": 0.051622756934302315
+  },
+  "Phi-3.5-mini-instruct__QA2__k0": {
+    "f1": 0.4412470023980815,
+    "acc": 0.563215996667361,
+    "unparsed_rate": 0.00041657987919183504
+  },
+  "Phi-3.5-mini-instruct__QA2__k2": {
+    "f1_mean": 0.6653505004597652,
+    "f1_std": 0.014935088916766724
+  }
+}
+[rank0]:[W719 07:50:19.673940596 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())

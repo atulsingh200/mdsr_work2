@@ -1,0 +1,36 @@
+train_queries=8967 test_queries=2057
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:03<00:11,  3.72s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:05<00:05,  2.54s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:06<00:02,  2.04s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:08<00:00,  1.75s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:08<00:00,  2.05s/it]
+trainable params: 20,185,088 || all params: 7,635,801,600 || trainable%: 0.2643
+  ep0 it300/2242 loss=0.4137
+  ep0 it600/2242 loss=0.2756
+  ep0 it900/2242 loss=0.2223
+  ep0 it1200/2242 loss=0.1911
+  ep0 it1500/2242 loss=0.1699
+  ep0 it1800/2242 loss=0.1537
+  ep0 it2100/2242 loss=0.1407
+[ep 0] train_loss=0.1351
+  ep1 it300/2242 loss=0.0379
+  ep1 it600/2242 loss=0.0366
+  ep1 it900/2242 loss=0.0347
+  ep1 it1200/2242 loss=0.0329
+  ep1 it1500/2242 loss=0.0308
+  ep1 it1800/2242 loss=0.0292
+  ep1 it2100/2242 loss=0.0273
+[ep 1] train_loss=0.0264
+  ep2 it300/2242 loss=0.0072
+  ep2 it600/2242 loss=0.0070
+  ep2 it900/2242 loss=0.0068
+  ep2 it1200/2242 loss=0.0060
+  ep2 it1500/2242 loss=0.0057
+  ep2 it1800/2242 loss=0.0053
+  ep2 it2100/2242 loss=0.0051
+[ep 2] train_loss=0.0050
+/mnt/localssd/causal-embedding-research/llm_trc_baseline/.venv/lib/python3.11/site-packages/transformers/generation/configuration_utils.py:628: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.7` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/mnt/localssd/causal-embedding-research/llm_trc_baseline/.venv/lib/python3.11/site-packages/transformers/generation/configuration_utils.py:633: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.8` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+/mnt/localssd/causal-embedding-research/llm_trc_baseline/.venv/lib/python3.11/site-packages/transformers/generation/configuration_utils.py:650: UserWarning: `do_sample` is set to `False`. However, `top_k` is set to `20` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_k`.
+  warnings.warn(
+
+[Qwen2.5-7B-Instruct__perevent__lora] relation F1=0.7653 P=0.7894 R=0.7427 | O(n) queries=2057 vs O(n^2) pairs=5845 (2.84x fewer forwards)
+wrote /mnt/localssd/causal-embedding-research/llm_trc_baseline/outputs/llmere/Qwen2.5-7B-Instruct__perevent__lora.json

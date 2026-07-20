@@ -1,0 +1,80 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "adapter": "outputs/lora/Qwen2.5-7B-Instruct__P__lora_adapter",
+  "prompt_type": "P",
+  "method": "lora_vllm_eval",
+  "overall": {
+    "n": 4801,
+    "acc": 0.8279525098937721,
+    "f1": 0.8308070462925031,
+    "f1_before": 0.8308070462925031,
+    "f1_not_before": 0.825
+  },
+  "by_source": {
+    "aep": {
+      "n": 1548,
+      "acc": 0.8682170542635659,
+      "f1": 0.8678756476683938,
+      "f1_before": 0.8678756476683938,
+      "f1_not_before": 0.8685567010309279
+    },
+    "ajo": {
+      "n": 741,
+      "acc": 0.6909581646423751,
+      "f1": 0.715527950310559,
+      "f1_before": 0.715527950310559,
+      "f1_not_before": 0.6617429837518464
+    },
+    "procedural": {
+      "n": 2512,
+      "acc": 0.8435509554140127,
+      "f1": 0.8448480063166206,
+      "f1_before": 0.8448480063166206,
+      "f1_not_before": 0.8422320353271778
+    }
+  },
+  "unparsed": 0,
+  "unparsed_rate": 0.0,
+  "samples": [
+    {
+      "gen": "NOT_BEFORE",
+      "pred": 0,
+      "gold": 0
+    },
+    {
+      "gen": "NOT_BEFORE",
+      "pred": 0,
+      "gold": 0
+    },
+    {
+      "gen": "BEFORE",
+      "pred": 1,
+      "gold": 1
+    },
+    {
+      "gen": "BEFORE",
+      "pred": 1,
+      "gold": 1
+    },
+    {
+      "gen": "BEFORE",
+      "pred": 1,
+      "gold": 1
+    },
+    {
+      "gen": "BEFORE",
+      "pred": 1,
+      "gold": 1
+    },
+    {
+      "gen": "NOT_BEFORE",
+      "pred": 0,
+      "gold": 0
+    },
+    {
+      "gen": "NOT_BEFORE",
+      "pred": 0,
+      "gold": 0
+    }
+  ]
+}

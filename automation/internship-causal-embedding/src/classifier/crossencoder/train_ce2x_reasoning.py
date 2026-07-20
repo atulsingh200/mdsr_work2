@@ -2,13 +2,15 @@
 
 Adds a small Transformer decoder head that reconstructs the (verdict-stripped)
 `reasoning` trace via teacher forcing, jointly trained with the classification
-BCE loss:
+BCE loss. Following the spec L = L_BCE + alpha * L_LM, keep cls_loss_weight=1.0
+and set decoder_loss_weight=alpha:
 
     total_loss = cls_loss_weight * cls_loss + decoder_loss_weight * decoder_loss
 
 Everything else (data splits, backbone, optimizer/schedule, checkpointing,
 per-step-pair breakdown) mirrors train_ce2x.py -- this is a separate script so
-the plain classification pipeline stays untouched.
+the plain classification pipeline stays untouched. Best checkpoint is selected
+on val AUC.
 
 Typical usage
 -------------
@@ -16,8 +18,8 @@ Typical usage
       --data-dir data/aep_ajo_procedural_fixed_reas --split-prefix "" \\
       --backbone microsoft/deberta-v3-large --native-backbone \\
       --out-dir runs/crossencoder2x_deberta_reasoning \\
-      --run-name aep_ajo_procedural_fixed_reas_auxloss070 \\
-      --cls-loss-weight 0.3 --decoder-loss-weight 0.7
+      --run-name aep_ajo_procedural_fixed_reas_lm_alpha07 \\
+      --cls-loss-weight 1.0 --decoder-loss-weight 0.7
 """
 
 from __future__ import annotations
@@ -239,7 +241,10 @@ def main() -> None:
                          "Required for non-BERT backbones such as DeBERTa-v3-large.")
     ap.add_argument("--decoder-layers", type=int, default=4,
                     help="Number of Transformer decoder layers for the reasoning head.")
-    ap.add_argument("--cls-loss-weight", type=float, default=0.3)
+    ap.add_argument("--cls-loss-weight", type=float, default=1.0,
+                    help="Weight on the BCE classification loss. Spec loss is "
+                         "L = L_BCE + alpha*L_LM, so keep this at 1.0 and set "
+                         "--decoder-loss-weight to alpha.")
     ap.add_argument("--decoder-loss-weight", type=float, default=0.7)
     ap.add_argument("--epochs", type=int, default=3)
     ap.add_argument("--batch-size", type=int, default=16)
@@ -377,7 +382,7 @@ def main() -> None:
 
     ctx = (lambda: torch.autocast(device_type="cuda", dtype=torch.bfloat16)) if use_bf16 else nullcontext
 
-    best_val_acc = -1.0
+    best_val_auc = -1.0
     opt_step = 0
     t_start = time.time()
     qual_batch = next(iter(dl_val))  # fixed batch for qualitative decoding each epoch
@@ -455,10 +460,10 @@ def main() -> None:
         ckpt = {"model": model.state_dict(), "epoch": epoch, "val": val_metrics, "cfg": cfg}
         torch.save(ckpt, run_dir / "checkpoint_latest.pt")
 
-        if val_metrics["acc"] > best_val_acc:
-            best_val_acc = val_metrics["acc"]
+        if val_metrics["auc"] > best_val_auc:
+            best_val_auc = val_metrics["auc"]
             torch.save(ckpt, run_dir / "best.pt")
-            log.info(f"  * saved best.pt  val_acc={best_val_acc:.4f}")
+            log.info(f"  * saved best.pt  val_auc={best_val_auc:.4f}")
 
     torch.save({"model": model.state_dict(), "epoch": args.epochs, "cfg": cfg},
                run_dir / "final.pt")
@@ -488,7 +493,7 @@ def main() -> None:
         json.dumps({**test_metrics, "per_step_pair": per_pair}, indent=2))
     _write_preds(run_dir / "test_predictions.jsonl", test_rows)
 
-    log.info(f"[done] best_val_acc={best_val_acc:.4f}  "
+    log.info(f"[done] best_val_auc={best_val_auc:.4f}  "
              f"test_acc={test_metrics['acc']:.4f}  test_auc={test_metrics['auc']:.4f}  "
              f"results in {run_dir}")
 

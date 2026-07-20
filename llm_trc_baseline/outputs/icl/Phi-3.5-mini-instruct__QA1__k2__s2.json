@@ -1,0 +1,82 @@
+{
+  "model": "microsoft/Phi-3.5-mini-instruct",
+  "prompt_type": "QA1",
+  "shots": 2,
+  "seed": 2,
+  "overall": {
+    "n": 4801,
+    "acc": 0.5525932097479692,
+    "f1": 0.6633228840125391,
+    "f1_before": 0.6633228840125391,
+    "f1_not_before": 0.3333333333333333
+  },
+  "by_source": {
+    "aep": {
+      "n": 1548,
+      "acc": 0.5103359173126615,
+      "f1": 0.6345226615236258,
+      "f1_before": 0.6345226615236258,
+      "f1_not_before": 0.2583170254403131
+    },
+    "ajo": {
+      "n": 741,
+      "acc": 0.5128205128205128,
+      "f1": 0.5984427141268076,
+      "f1_before": 0.5984427141268076,
+      "f1_not_before": 0.38078902229845624
+    },
+    "procedural": {
+      "n": 2512,
+      "acc": 0.5903662420382165,
+      "f1": 0.6979747578514822,
+      "f1_before": 0.6979747578514822,
+      "f1_not_before": 0.36363636363636365
+    }
+  },
+  "n": 4801,
+  "unparsed": 2,
+  "unparsed_rate": 0.00041657987919183504,
+  "pred_pos_rate": 0.813163924182462,
+  "samples": [
+    {
+      "gen": " YES",
+      "pred": 1,
+      "gold": 0
+    },
+    {
+      "gen": " NO\n\nExplanation: The",
+      "pred": 0,
+      "gold": 0
+    },
+    {
+      "gen": " YES",
+      "pred": 1,
+      "gold": 1
+    },
+    {
+      "gen": " YES",
+      "pred": 1,
+      "gold": 1
+    },
+    {
+      "gen": " YES",
+      "pred": 1,
+      "gold": 1
+    },
+    {
+      "gen": " YES",
+      "pred": 1,
+      "gold": 1
+    },
+    {
+      "gen": " YES",
+      "pred": 1,
+      "gold": 0
+    },
+    {
+      "gen": " YES",
+      "pred": 1,
+      "gold": 0
+    }
+  ]
+}

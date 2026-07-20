@@ -1,0 +1,82 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "prompt_type": "P",
+  "shots": 2,
+  "seed": 3,
+  "overall": {
+    "n": 4801,
+    "acc": 0.5836284107477608,
+    "f1": 0.6389741737402925,
+    "f1_before": 0.6389741737402925,
+    "f1_not_before": 0.5082410824108241
+  },
+  "by_source": {
+    "aep": {
+      "n": 1548,
+      "acc": 0.5051679586563308,
+      "f1": 0.52125,
+      "f1_before": 0.52125,
+      "f1_not_before": 0.4879679144385027
+    },
+    "ajo": {
+      "n": 741,
+      "acc": 0.4844804318488529,
+      "f1": 0.4542857142857143,
+      "f1_before": 0.4542857142857143,
+      "f1_not_before": 0.5115089514066496
+    },
+    "procedural": {
+      "n": 2512,
+      "acc": 0.6612261146496815,
+      "f1": 0.7371022551745443,
+      "f1_before": 0.7371022551745443,
+      "f1_not_before": 0.5237828763290431
+    }
+  },
+  "n": 4801,
+  "unparsed": 0,
+  "unparsed_rate": 0.0,
+  "pred_pos_rate": 0.6375755051031036,
+  "samples": [
+    {
+      "gen": "NOT_BEFORE",
+      "pred": 0,
+      "gold": 0
+    },
+    {
+      "gen": "NOT_BEFORE",
+      "pred": 0,
+      "gold": 0
+    },
+    {
+      "gen": "BEFORE",
+      "pred": 1,
+      "gold": 1
+    },
+    {
+      "gen": "BEFORE",
+      "pred": 1,
+      "gold": 1
+    },
+    {
+      "gen": "BEFORE",
+      "pred": 1,
+      "gold": 1
+    },
+    {
+      "gen": "BEFORE",
+      "pred": 1,
+      "gold": 1
+    },
+    {
+      "gen": "NOT_BEFORE",
+      "pred": 0,
+      "gold": 0
+    },
+    {
+      "gen": "NOT_BEFORE",
+      "pred": 0,
+      "gold": 0
+    }
+  ]
+}

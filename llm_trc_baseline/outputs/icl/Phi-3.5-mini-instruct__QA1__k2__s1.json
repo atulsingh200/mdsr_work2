@@ -1,0 +1,82 @@
+{
+  "model": "microsoft/Phi-3.5-mini-instruct",
+  "prompt_type": "QA1",
+  "shots": 2,
+  "seed": 1,
+  "overall": {
+    "n": 4801,
+    "acc": 0.5786294521974589,
+    "f1": 0.5656001717844106,
+    "f1_before": 0.5656001717844106,
+    "f1_not_before": 0.5908998988877654
+  },
+  "by_source": {
+    "aep": {
+      "n": 1548,
+      "acc": 0.48255813953488375,
+      "f1": 0.3461224489795918,
+      "f1_before": 0.3461224489795918,
+      "f1_not_before": 0.5718866916087654
+    },
+    "ajo": {
+      "n": 741,
+      "acc": 0.47908232118758437,
+      "f1": 0.36303630363036304,
+      "f1_before": 0.36303630363036304,
+      "f1_not_before": 0.5593607305936074
+    },
+    "procedural": {
+      "n": 2512,
+      "acc": 0.6671974522292994,
+      "f1": 0.7041755130927105,
+      "f1_before": 0.7041755130927105,
+      "f1_not_before": 0.6196542311191993
+    }
+  },
+  "n": 4801,
+  "unparsed": 0,
+  "unparsed_rate": 0.0,
+  "pred_pos_rate": 0.4542803582586961,
+  "samples": [
+    {
+      "gen": " NO\n\nExplanation: Step",
+      "pred": 0,
+      "gold": 0
+    },
+    {
+      "gen": " NO\n\nThe two steps appear to",
+      "pred": 0,
+      "gold": 0
+    },
+    {
+      "gen": " YES\n\nExplanation: Step",
+      "pred": 1,
+      "gold": 1
+    },
+    {
+      "gen": " YES",
+      "pred": 1,
+      "gold": 1
+    },
+    {
+      "gen": " NO\n\nThe steps involve selecting different",
+      "pred": 0,
+      "gold": 1
+    },
+    {
+      "gen": " NO",
+      "pred": 0,
+      "gold": 1
+    },
+    {
+      "gen": " YES",
+      "pred": 1,
+      "gold": 0
+    },
+    {
+      "gen": " NO",
+      "pred": 0,
+      "gold": 0
+    }
+  ]
+}

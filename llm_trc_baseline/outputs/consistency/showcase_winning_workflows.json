@@ -1,0 +1,438 @@
+[
+  {
+    "id": "proc_2044",
+    "origin": "procedural",
+    "n_steps": 8,
+    "steps": [
+      "Open up one of your rules, E.g. your default page load rule",
+      "Having been through the migration for this rule, you probably have 4 (or more) actions",
+      "You can see that the first two have the \u201cAdobe Analytics\u201d identifier on them. These are the actions that we will want to delete",
+      "Mouse over the first one, like the \u201cAdobe Analytics - Set Variables\u201d action, and an X will appear allowing deletion. Click the X and see the action disappear. Remove any and all Adobe Analytics actions in the rule, in this case the Set Variable action and the Send Beacon action",
+      "This will leave only the Web SDK actions",
+      "Save to library",
+      "Build the library and test your site, to make sure that there are no new errors and that everything is working properly",
+      "Repeat this action for your other rules, building to your development library and testing between each removal (or as often as you are comfortable). You can just test in the debugger, or also check the reports in the migration report suite, again depending on your comfort level"
+    ],
+    "baseline_n_cycles": 45,
+    "reasoning_n_cycles": 0
+  },
+  {
+    "id": "proc_157",
+    "origin": "procedural",
+    "n_steps": 8,
+    "steps": [
+      "Navigate to the Destinations portal",
+      "Click the 3 dot menu button next to the pre-configured Amazon S3 destination, then click Activate Audiences",
+      "Select the S3 destination , then click Next",
+      "Select the appropriate audience. In our example: SecureFinancial Customers - No Loans, Good Credit audience",
+      "In the Scheduling section, use the default settings and click Next",
+      "In the Mapping step, choose the de-duplication key. In our example, xdm: personalEmail.address is included and selected as the De-duplication Key. Then click Next",
+      "In the mapping step, select enrichment attributes based on audience field mappings in the federated audience composition. Click the pencil (edit) icon to view the pre-selected attributes",
+      "Review your audience mapping and hit Finish"
+    ],
+    "baseline_n_cycles": 31,
+    "reasoning_n_cycles": 0
+  },
+  {
+    "id": "proc_1077",
+    "origin": "procedural",
+    "n_steps": 8,
+    "steps": [
+      "On the Email Designer home page, click on the HTML component where you want to insert the note",
+      "On the contextual toolbar, click Show the source code",
+      "In the Edit HTML window, add the if helper: In the left menu, select Helper functions. Use the search field to find \u201cif\u201d. From the search results, add the if helper. The Expression editor shows this expression: code language-handlebars {%#if condition1%} render 1 {%else if condition2%} render 2 {%else%} default render {%/if%}",
+      "Remove this condition from the expression: code language-handlebars {%else if condition2%} render 2 This example shows the modified expression: code language-handlebars {%#if condition1%} render 1 {%else%} default render {%/if%}",
+      "Add the product name token to the condition: Remove the \u201ccondition1\u201d placeholder from the expression. In the left menu, select Contextual attributes. Select Journey Orchestration > Events > event name , then expand the productListItems node. In this example, event name represents the name of your event. Add the Name token to the expression. The Expression editor shows this expression: code language-handlebars {%#if context.journey.events.event ID.productListItems.name%} render 1 {%else%} default render {%/if%}",
+      "Modify the expression: In the Expression editor, specify the product name after the name token. Use this syntax, where product name represents the name of your product: code language-javascript = \"product name\" In this example, the product name is \u201cJuno Jacket\u201d: code language-handlebars {%#if context.journey.events.event ID.productListItems.name = \"Juno Jacket\" %} render 1 {%else%} default render {%/if%} Replace the \u201crender 1\u201d placeholder with the text of the note. Example: code language-handlebars {%#if context.journey.events.event ID.productListItems.name = \"Juno Jacket\" %} Due to longer than usual lead times on the Juno Jacket, please expect item to ship two weeks after purchase. {%else%} default render {%/if%} Remove the \u201cdefault render\u201d placeholder from the expression",
+      "Click Validate , then click Save",
+      "Save the message"
+    ],
+    "baseline_n_cycles": 15,
+    "reasoning_n_cycles": 0
+  },
+  {
+    "id": "proc_1028",
+    "origin": "procedural",
+    "n_steps": 6,
+    "steps": [
+      "Make sure your organization has purchased the Adobe Healthcare Shield or Privacy and Security Shield add-on offerings. Learn more",
+      "In Adobe Experience Platform, create a custom policy (from the Privacy > Policies menu). Learn how",
+      "Choose the Consent policy type and configure a condition as follows. Learn how to configure consent policies Under the If section, select the Email Targeting default marketing action. The core marketing actions provided out-of-the-box by Adobe are listed in this table. The steps to create a custom marketing action are listed in this section. Select what happens when the marketing action applies. In this example, select Email Marketing Consent",
+      "Save and enable this policy",
+      "In Journey Optimizer, create an email channel configuration. Learn how",
+      "In the email configuration details, select the Email Targeting marketing action. All consent policies associated with that marketing action are automatically leveraged in order to respect the preferences of your customers. Therefore, in this example, any email using that configuration in a campaign or a journey is only sent to the profiles who have consented to receive emails from you. Profiles who have not consented to receive email communications are excluded"
+    ],
+    "baseline_n_cycles": 10,
+    "reasoning_n_cycles": 0
+  },
+  {
+    "id": "proc_1150",
+    "origin": "procedural",
+    "n_steps": 8,
+    "steps": [
+      "Make sure you follow the channel-specific prerequisites. Learn more",
+      "Define a surface in your application implementation, which is basically the location where you want to add your experience",
+      "Create a code-based channel configuration that references that location. Learn how",
+      "Create a journey or campaign in Journey Optimizer using this configuration. Learn how",
+      "Compose an experience by specifying content for the selected configuration using the Journey Optimizer personalization editor. Learn how",
+      "Test your code-based experience. Learn how",
+      "Publish it. Learn how",
+      "Once your code-based experience journey or campaign is live, the app or page implementation that requests content for the surface must be in place for the content to be retrieved and displayed. note info INFO To ensure this, your app implementation team makes explicit API or SDK calls to fetch content for the surface defined in the code-based configuration, such as \u201cBanner Text\u201d or \u201cRecommendations Tray 1\u201d, or non-UI-related decision points in an application, such as \u201csearch algorithm parameters\u201d. Learn more"
+    ],
+    "baseline_n_cycles": 7,
+    "reasoning_n_cycles": 0
+  },
+  {
+    "id": "proc_2100",
+    "origin": "procedural",
+    "n_steps": 5,
+    "steps": [
+      "Because you will be using some browser-specific extensions, we recommend completing the tutorial using the Chrome Web Browser",
+      "Add the Adobe Experience Platform Debugger extension to your Chrome browser",
+      "Copy the sample html page code accordion Sample html page code | code language-html <!doctype html> <html lang=\"en\"> <head> <title>Tags: Sample HTML Page</title> <!--Preconnect and DNS-Prefetch to improve page load time. REPLACE \"techmarketingdemos\" WITH YOUR OWN AAM PARTNER ID, TARGET CLIENT CODE, AND ANALYTICS TRACKING SERVER--> <link rel=\"preconnect\" href=\"//dpm.demdex.net\"> <link rel=\"preconnect\" href=\"//fast.techmarketingdemos.demdex.net\"> <link rel=\"preconnect\" href=\"//techmarketingdemos.demdex.net\"> <link rel=\"preconnect\" href=\"//cm.everesttech.net\"> <link rel=\"preconnect\" href=\"//techmarketingdemos.tt.omtrdc.net\"> <link rel=\"preconnect\" href=\"//techmarketingdemos.sc.omtrdc.net\"> <link rel=\"dns-prefetch\" href=\"//dpm.demdex.net\"> <link rel=\"dns-prefetch\" href=\"//fast.techmarketingdemos.demdex.net\"> <link rel=\"dns-prefetch\" href=\"//techmarketingdemos.demdex.net\"> <link rel=\"dns-prefetch\" href=\"//cm.everesttech.net\"> <link rel=\"dns-prefetch\" href=\"//techmarketingdemos.tt.omtrdc.net\"> <link rel=\"dns-prefetch\" href=\"//techmarketingdemos.sc.omtrdc.net\"> <!--/Preconnect and DNS-Prefetch--> <!--Data Layer to enable rich data collection and targeting--> <script> var digitalData = { \"page\": { \"pageInfo\" : { \"pageName\": \"Home\" } } }; </script> <!--/Data Layer--> <!--jQuery or other helper libraries--> <script src=\" <!--/jQuery--> <!--Tags Header Embed Code: REPLACE THE NEXT LINE WITH THE EMBED CODE FROM YOUR OWN DEVELOPMENT ENVIRONMENT--> <script src=\"//assets.adobedtm.com/launch-EN93497c30fdf0424eb678d5f4ffac66dc.min.js\" async></script> <!--/Tags Header Embed Code--> </head> <body> <h1>Tags: Sample HTML Page</h1> <p>This is a very simple page to demonstrate basic implementation concepts of Tags</p> <p>See <a href=\" the Experience Cloud in Websites with Tags</a> for the complete tutorial</p> </body> </html>",
+      "Get a text editor in which you can make changes to the sample html page. (If you don\u2019t have one, we recommend trying Brackets)",
+      "Bookmark the Luma site You might find it easier to complete this tutorial with the Luma site open in Chrome, while you read this tutorial and complete the Data Collection interface steps in a different browser. Let\u2019s get started! Next \u201cCreate a tag property\u201d >"
+    ],
+    "baseline_n_cycles": 6,
+    "reasoning_n_cycles": 0
+  },
+  {
+    "id": "curated_884",
+    "origin": "curated",
+    "n_steps": 4,
+    "steps": [
+      "Define Attribution AI model parameters including dataset selection, conversion window, eligible touchpoint channels, and training data date range within AEP Intelligent Services UI",
+      "Run the Attribution AI scoring pipeline to train the algorithmic model on historical conversion paths and generate per-touchpoint influence scores across all ingested events",
+      "Analyze first-touch attribution report to determine which acquisition channels initiate the highest volume of journeys that eventually lead to revenue conversion events",
+      "Benchmark first-touch rule-based attribution against Attribution AI data-driven scores to validate or challenge assumptions about top-of-funnel channel performance"
+    ],
+    "baseline_n_cycles": 3,
+    "reasoning_n_cycles": 0
+  },
+  {
+    "id": "proc_1370",
+    "origin": "procedural",
+    "n_steps": 8,
+    "steps": [
+      "In Journey Optimizer B2B Edition, go to Accounts > Buying groups in the left navigation",
+      "Select the Browse tab",
+      "Click Activate to LinkedIn Destination at the top right. {width=\"800\" modal=\"regular\"}",
+      "Give the dataflow a descriptive name and description (optional). After you save it, the name that you specify for the dataflow is prepended with AJOB2B to aid in identifying the dataflow in Experience Platform",
+      "Enter the Account ID of your LinkedIn Campaign Manager Account. You can find your Account ID by your Account Name in the Campaign Manager UI. {width=\"700\" modal=\"regular\"}",
+      "Click Select buying group filters and define the parameters of your account audience. note important At this time, filters cannot be edited after the dataflow is activated. Double-check your work before you activate the dataflow. {width=\"400\"} For the Engagement score , the operator Between is inclusive, as are percentage ranges. For example, 5.1 and 5 are both between 5 and 6. Empty conditions are treated like Is Any. Click Save to add the specified filters",
+      "Click Select LinkedIn destination and choose the configured LinkedIn destination that you want to use. Upon activation, this setting creates the dataflow using the destination configuration and a corresponding virtual segment",
+      "Double-check your settings and click Activate at the top right. Click Activate again in the confirmation dialog. A banner is displayed with a link to your dataflows menu in Experience Platform so that you can check the dataflow record"
+    ],
+    "baseline_n_cycles": 3,
+    "reasoning_n_cycles": 0
+  },
+  {
+    "id": "proc_1773",
+    "origin": "procedural",
+    "n_steps": 7,
+    "steps": [
+      "Make changes to the code in your project",
+      "Validate the changes with the Sandbox tool",
+      "Use the Packager tool to create a new .zip package",
+      "Use the Uploader tool to upload your new .zip package. The process follows the same instructions as before regarding the initial upload. However, you will notice that because there is already an extension package of that name in development mode, this new package will overwrite the older version instead of creating a new one. note note Arguments can be passed on the command line to save time by avoiding the repeated entering of credentials. For more information on this, read the reactor-uploader documentation. 1\\. The installation step can be skipped when updating an existing package",
+      "Modify resources - if the configuration for any of your extension components has been changed, you will need to update those resources in the UI",
+      "Add your latest changes to your Library and build again",
+      "Complete another round of tests"
+    ],
+    "baseline_n_cycles": 3,
+    "reasoning_n_cycles": 0
+  },
+  {
+    "id": "proc_686",
+    "origin": "procedural",
+    "n_steps": 5,
+    "steps": [
+      "Define which Capping event will be taken into account to increase the counter. Decision event (default value): Maximum number of times an offer can be presented. Impression (inbound channels only): Maximum number of times the offer can be displayed to a user. Clicks : Maximum number of times the decision item can be clicked by a user. Custom event : Cap based on business or behavioral experience events that you track in Adobe Experience Platform\u2014for example, redemptions, purchases, or cart checkouts. Custom event capping uses Adobe Experience Platform XDM experience events that you ingest. In the dropdown, you map the specific experience event that should drive the cap so the capping counter increments each time that event is received. Capping by channel delivery events such as email send is not supported: Custom Event applies only to experience events you ingest, not to delivery or send events. accordion Capping for the Push channel Standard Clicks and Impression capping are not supported for the Push channel. To cap offers delivered via Push, use Custom event capping and set the event type to Push Tracking Application Opened or Push Tracking Custom Action. For push notifications, tracking events from the mobile channel include the Experience Cloud ID (ECID). It is recommended to use ECID in the Campaign or Journey configuration to maintain identity consistency and ensure capping works as expected. accordion Tracking capping events (schema and data collection) For all capping events except decision event, the decision management feedback may not be automatically collected, which could result in the capping counter not being correctly incremented. To make sure each capping event is tracked and accounted for in the capping counter, ensure that the schema used to collect experience events includes the correct field group for that event. Detailed information on data collection is available in Journey Optimizer Decision management documentation: Decision management data collection Configure data collection",
+      "Choose the capping type: Select In total to define how many times the item can be proposed across the combined target audience, meaning across all users. For example, if you are an electronics retailer having a \u2018TV doorbuster deal\u2019, you want the offer to be only returned 200 times across all profiles. Select Per profile to define how many times the offer can be proposed to the same user. For example, if you are a bank with a \u2018Platinum credit card\u2019 offer, you do not want this offer to be shown more than 5 times per profile. Indeed, you believe that if the user has seen the offer 5 times and not acted on it, they have a higher chance to act on the next best offer",
+      "Define the capping threshold. To do so, you can either enter a static value, or calculate the threshold using an expression. Expand the sections below for more details. accordion Static threshold In the Capping count limit field, specify the number of times the offer can be presented to all users or per profiles, depending on the selected capping type. The number must be an integer greater than 0. For example, you defined a custom capping event such as the number of checkouts is taken into account. If you enter 10 in the Capping count limit field, no more offers will be sent after 10 checkouts. accordion Expression threshold Rather that using a static value for the capping threshold, you can define your own expression. This allows you to calculate the threshold dynamically using decision attributes and/or external attributes from an Adobe Experience Platform dataset. For example, a marketer may decide to add a multiplier to adjust exposure. For instance, they could multiply the available inventory by two, allowing the offer to be shown to twice as many customers as units available. This approach anticipates that not all customers will convert, ensuring better reach without overselling. | note Capping rule expressions are currently available as a Limited Availability to all users. They are supported only for the In total capping type. To use an expression, enable the Expression option then edit the expression as desired",
+      "In the Reset capping frequency drop-down list, set the frequency at which the capping counter is reset. To do this, define the time period for the counting (daily, weekly or monthly) and enter the number of days/weeks/months of your choice. For example, if you want the capping count to be reset every 2 weeks, select Weekly from the corresponding drop-down list and type 2 in the other field. The frequency capping counter reset happens at 12am UTC , on the day that you defined or on the first day of the week/month when applicable. The week start day is Sunday. Any duration you choose cannot exceed 2 years (i.e. the corresponding number of months, weeks or days). After publishing your decision item, you will not be able to change the time period (monthly, weekly or daily) you selected for the frequency. You can still edit the frequency capping if the item has the Draft status and was never published before with frequency capping enabled. There may be a buffer time of up to 15 minutes before events are counted toward frequency capping constraints, either when the decision item is approved, or when the capping is created - whichever occurs last",
+      "Click Create to confirm the capping rule creation. You can create up to 10 rules for a single decision item. To do so, click the Create capping button and repeat the steps above"
+    ],
+    "baseline_n_cycles": 3,
+    "reasoning_n_cycles": 0
+  },
+  {
+    "id": "curated_128",
+    "origin": "curated",
+    "n_steps": 3,
+    "steps": [
+      "Connect Tableau to Query Service using the PostgreSQL credentials provided in the Experience Platform UI.",
+      "Write a SQL query in Tableau to pull audience membership and performance metrics from the platform datasets.",
+      "Build an interactive visualization in Tableau dashboarding the audience performance results from the query."
+    ],
+    "baseline_n_cycles": 1,
+    "reasoning_n_cycles": 0
+  },
+  {
+    "id": "curated_168",
+    "origin": "curated",
+    "n_steps": 3,
+    "steps": [
+      "Browse the generated playbook artifacts, such as schemas, segments, and journeys, and review them for accuracy.",
+      "Publish the playbook instance to make its assets available for export.",
+      "Import the published playbook package into your development sandbox to begin working with the assets."
+    ],
+    "baseline_n_cycles": 1,
+    "reasoning_n_cycles": 0
+  },
+  {
+    "id": "curated_295",
+    "origin": "curated",
+    "n_steps": 3,
+    "steps": [
+      "Upload a CSV file of customer records to Experience Platform using the batch ingestion workflow.",
+      "Map the CSV fields to an XDM schema and complete the batch ingestion job to create a dataset.",
+      "Enable the dataset for Real-Time Customer Profile so ingested records merge into unified profiles."
+    ],
+    "baseline_n_cycles": 1,
+    "reasoning_n_cycles": 0
+  },
+  {
+    "id": "curated_312",
+    "origin": "curated",
+    "n_steps": 3,
+    "steps": [
+      "Open your profile schema in the Schema Editor and select the email, phone, and CRM ID fields you want to designate as identities.",
+      "Mark each selected field as an identity field and assign the appropriate identity namespace, such as Email, Phone, or a custom CRM ID namespace.",
+      "Enable the schema for Real-Time Customer Profile so the labeled identity fields are used to stitch records into unified profiles via the identity graph."
+    ],
+    "baseline_n_cycles": 1,
+    "reasoning_n_cycles": 0
+  },
+  {
+    "id": "curated_380",
+    "origin": "curated",
+    "n_steps": 4,
+    "steps": [
+      "Connect to Query Service and explore the raw event history dataset to understand the available behavioral signals.",
+      "Write and run SQL queries in Query Service to compute churn-indicator features such as days since last activity and session frequency.",
+      "Save the query output as a new derived dataset in Experience Platform by using the CREATE TABLE AS SELECT statement.",
+      "Enable the derived churn-indicator dataset for Real-Time Customer Profile so the features are available for segmentation and AI models."
+    ],
+    "baseline_n_cycles": 1,
+    "reasoning_n_cycles": 0
+  },
+  {
+    "id": "curated_455",
+    "origin": "curated",
+    "n_steps": 4,
+    "steps": [
+      "Create custom identity namespaces for each brand's loyalty program identifier in the Identity Service namespace registry.",
+      "Define an XDM schema for the multi-brand loyalty program and add the loyalty ID fields mapped to their respective custom namespaces.",
+      "Label each loyalty ID schema field with its corresponding identity namespace to mark primary and secondary identities.",
+      "Ingest loyalty member records so the identity graph stitches cross-brand profiles into unified customer identities."
+    ],
+    "baseline_n_cycles": 1,
+    "reasoning_n_cycles": 0
+  },
+  {
+    "id": "curated_602",
+    "origin": "curated",
+    "n_steps": 3,
+    "steps": [
+      "Set up a Tableau connection to AEP Query Service by configuring a named data source using the PostgreSQL JDBC driver and the credentials exported from the Platform UI's Query Service credentials panel.",
+      "Compose a SQL query in Tableau targeting the AEP system datasets to retrieve batch ingestion metrics\u2014including record counts, error rates, and ingestion timestamps\u2014grouped by source connector and date.",
+      "Construct a monitoring dashboard in Tableau featuring time-series trend lines and error-rate heat maps that give data engineers a real-time view of dataset ingestion health and allow alerting on anomaly thresholds."
+    ],
+    "baseline_n_cycles": 1,
+    "reasoning_n_cycles": 0
+  },
+  {
+    "id": "curated_901",
+    "origin": "curated",
+    "n_steps": 4,
+    "steps": [
+      "Ask AI Assistant to surface all audiences never referenced in any AJO journey or campaign segment",
+      "Filter and prioritize the AI-generated list by audience size and age to determine deletion impact and risk",
+      "Open each high-priority audience in AEP UI to confirm no pending scheduled activations or draft journey dependencies exist",
+      "Permanently delete validated unused audiences and document removed assets in the data governance log"
+    ],
+    "baseline_n_cycles": 1,
+    "reasoning_n_cycles": 0
+  },
+  {
+    "id": "curated_906",
+    "origin": "curated",
+    "n_steps": 4,
+    "steps": [
+      "Create a dedicated development sandbox in Adobe Experience Platform to isolate the Use Case Playbooks environment from production data",
+      "Add the newly created sandbox to an existing or new product profile in Adobe Admin Console to make it accessible to users",
+      "Assign the required permissions including Playbooks access, schema management, and segment creation rights to the product profile",
+      "Navigate to Use Case Playbooks in the AEP left navigation to verify sandbox access and begin exploring available playbook templates"
+    ],
+    "baseline_n_cycles": 1,
+    "reasoning_n_cycles": 0
+  },
+  {
+    "id": "curated_910",
+    "origin": "curated",
+    "n_steps": 4,
+    "steps": [
+      "Quickly spin up a new AEP sandbox dedicated to AJO Use Case Playbooks to enable rapid prototyping without impacting live configurations",
+      "Associate the prototype sandbox with an existing AJO product profile in Admin Console to leverage already-defined user role structures",
+      "Expand the product profile permissions to include journey management, message templates, and playbook generation rights necessary for AJO workflows",
+      "Switch to the prototype sandbox in AEP and navigate to Use Case Playbooks to instantiate an AJO playbook and review generated assets"
+    ],
+    "baseline_n_cycles": 1,
+    "reasoning_n_cycles": 0
+  },
+  {
+    "id": "curated_919",
+    "origin": "curated",
+    "n_steps": 4,
+    "steps": [
+      "Access the Alerts catalog within Adobe Experience Platform to review all predefined alert categories available for monitoring",
+      "Identify and choose the activation failure alert to enable real-time detection of failed segment exports to destinations",
+      "Configure subscription settings for the alert specifying notification channels such as email or in-platform messages with desired sensitivity levels",
+      "Act upon received activation failure notifications by diagnosing the failed dataflow in the Destinations workspace and re-running the activation"
+    ],
+    "baseline_n_cycles": 1,
+    "reasoning_n_cycles": 0
+  },
+  {
+    "id": "proc_1524",
+    "origin": "procedural",
+    "n_steps": 8,
+    "steps": [
+      "In the left navigation, go to Content Management > Templates. This action opens a list page with all created email templates for the instance listed in a table",
+      "In the header above the list, click Convert Image to Template. {width=\"800\" modal=\"regular\"}",
+      "In the dialog, enter a useful Template name and Description (optional) for the generated email template",
+      "(Optional) Select a Brand theme to apply specific styling to the generated HTML according to the theme specifications",
+      "Use one of the following methods to upload the image file: Drag and drop the image file onto the dialog file area. Click Upload image to use your local file system to locate and select the image file",
+      "Ensure that the image file does not contain any personally identifiable information or personal data and select the checkbox at the bottom of the dialog to confirm. To review the guidelines, click the Adobe Experience Cloud Generative AI User Guidelines link. {width=\"400\" modal=\"regular\"}",
+      "Click Convert. The dialog closes and the new template name is displayed in the list with a status of converting to template\u2026 . The conversion process could take some time, depending on the complexity of the source image and the applied brand theme (if used)",
+      "When the process is complete, click the template name to preview the rendered email content and make any necessary edits"
+    ],
+    "baseline_n_cycles": 1,
+    "reasoning_n_cycles": 0
+  },
+  {
+    "id": "proc_112",
+    "origin": "procedural",
+    "n_steps": 7,
+    "steps": [
+      "Log into the source organization : Navigate to the organization that contains the playbook you created and want to share from the Your playbooks tab",
+      "Publish the playbook : If the playbook isn\u2019t already published, you must publish it before sharing. note note A partnership must be established between the source and target organizations to enable playbook sharing. Learn how to create an organization partnership request",
+      "Initiate the share : Once the playbook is published and a partnership is established, select Share Playbook",
+      "Select the target organization : Choose the organization you want to share the playbook with when prompted",
+      "Confirm and share : Confirm your selection. You will receive confirmation messages indicating successful sharing",
+      "Verify the target organization : Log into the target organization to verify that the playbook is available",
+      "Import the playbook : Select Import to bring the playbook into the target organization. You can view it in the Playbooks tab. If the playbook doesn\u2019t appear, ensure it is published and that the organization partnernship is active. Transitive playbook sharing is not supported. If you share a playbook from one organization to another and then import it, it cannot be shared again from the receiving organization to a third organization"
+    ],
+    "baseline_n_cycles": 1,
+    "reasoning_n_cycles": 0
+  },
+  {
+    "id": "proc_777",
+    "origin": "procedural",
+    "n_steps": 7,
+    "steps": [
+      "From the Brands menu, access the Generative Models tab and click Add model. {modal=\"regular\"}",
+      "Enter a Name for your model",
+      "Enter your Model ID. accordion Find your Firefly model ID Access the Firefly website and navigate to your trained models. Access the Preview & test menu. In the URL, locate the value after customModelId=. Copy this value to use as your model ID. For more information, refer to the Firefly custom models documentation. {modal=\"regular\"} {modal=\"regular\"}",
+      "Optionally, enter a Description to help identify the model",
+      "Click Test connection to verify the model configuration",
+      "Once the connection test is successful, click Save to save your model configuration. {modal=\"regular\"}",
+      "After saving, your custom model is added to your models list. You can disable or delete it at any time. {modal=\"regular\"} Once configured, you can select any of your custom generative models when creating images in your content. Learn more about generating images. {modal=\"regular\"}"
+    ],
+    "baseline_n_cycles": 1,
+    "reasoning_n_cycles": 0
+  },
+  {
+    "id": "proc_554",
+    "origin": "procedural",
+    "n_steps": 7,
+    "steps": [
+      "Navigate to Decisioning > Strategy setup > Rules , then click the Create rule button",
+      "Select the rule entity to specify which type of object the rule is being created for. {width=\"90%\"} Decision item \\- The rule can be applied on a decision item in the context of Decisioning; Targeting \\- The rule can be used when building targeting rules, either as part of content optimization in a campaign or a journey, either in the Optimize journey activity",
+      "If you create a Decision item rule, you can select Enable dataset lookup to use data from Adobe Experience Platform to enrich your decision logic with external data. This is especially useful for attributes that frequently change, such as product availability, or real-time pricing. Learn how to use Adobe Experience Platform data for decisioning",
+      "The rule creation screen opens. Name your rule and provide a description",
+      "Build the rule to suit your needs using the Adobe Experience Platform Segment Builder. To do this, you can leverage various data sources such as: Profile attributes; Decision item attributes - only available when creating a Decision item rule; Audiences; Context data coming from Adobe Experience Platform. Learn how to leverage context data {width=\"85%\"} The Segment Builder provided to create rules presents some specificities compared to the one used with the Adobe Experience Platform Segmentation service. However, the global process described in the documentation is valid to build rules in Journey Optimizer. Learn how to build segment definitions",
+      "As you are adding and configuring new fields in the workspace, the Audience properties pane displays information on the estimated profiles belonging to the audience. Click Refresh estimate to update data. {width=\"85%\"} Profile estimates are unavailable when the rule parameters include data that are not stored in the profile, such as context data",
+      "Once your rule is ready, click Create. The created rule appears in the list and, according to the entity you created, is available for use: In decision items and selection strategies to govern the presentation of decision items to profiles; Or when building targeting in content optimization or path optimization. The nesting depth in a rule is limited to 30 levels. This is measured by counting the closing parentheses ) in the PQL string. A rule string can be up to 15KB in size for UTF-8 encoded characters. This is equivalent to 15,000 ASCII characters (1 byte each), or 3,750\u20137,500 non-ASCII characters (2\u20134 bytes each). Learn more about Eligibility rules Guardrails & limitations"
+    ],
+    "baseline_n_cycles": 1,
+    "reasoning_n_cycles": 0
+  },
+  {
+    "id": "proc_1289",
+    "origin": "procedural",
+    "n_steps": 6,
+    "steps": [
+      "Review the setup instructions section to connect your simulator or device to Assurance",
+      "In the Assurance UI, select Configure. {modal=\"regular\"}",
+      "Select the button next to In-App Messaging",
+      "Select Save. {modal=\"regular\"}",
+      "Select In-App Messaging from the left navigation",
+      "Select the Validation tab. Confirm that you aren\u2019t getting any errors. {modal=\"regular\"}"
+    ],
+    "baseline_n_cycles": 1,
+    "reasoning_n_cycles": 0
+  },
+  {
+    "id": "proc_1198",
+    "origin": "procedural",
+    "n_steps": 8,
+    "steps": [
+      "Click Create offer , then select Personalized offer",
+      "Specify the offer\u2019s name as well as its start and end date and time. Outside of these dates, the offer won\u2019t be selected by the Decisioning engine. When selecting times, your current time zone is taken into account. note caution Updating the start/end dates can have an impact on capping. Learn more",
+      "You can also associate one or several existing collection qualifiers to the offer, allowing you to search and organize the Offer Library more easily. Learn more",
+      "The Offer attributes section allows you to associate key-value pairs with the offer for reporting and analysis purposes",
+      "To assign custom or core data usage labels to the offer, select Manage access. Learn more about Object Level Access Control (OLAC)",
+      "Add representations to define where your offer will display in the message. Learn more When personalizing representation content, only certain functions are supported\u2014see Supported functions in the personalization editor. note caution The size of an offer including all its representations cannot exceed 300KB",
+      "Add constraints to set the conditions for the offer to be displayed. Learn more When you select audiences or decision rules, you can see information on the estimated qualified profiles. Click Refresh to update data. Note that profile estimates are unavailable when rule parameters include data not in the profile such as context data. For example, an eligibility rule that requires the current weather to be \u226580 degrees",
+      "Review and save the offer. Learn more"
+    ],
+    "baseline_n_cycles": 1,
+    "reasoning_n_cycles": 0
+  },
+  {
+    "id": "proc_1726",
+    "origin": "procedural",
+    "n_steps": 6,
+    "steps": [
+      "Install the extensions you want to add",
+      "Create the data elements and rules you want to add",
+      "Open the Publishing tab",
+      "Select the library you want to change, then select Edit",
+      "Use the rules, data elements, and extensions buttons to select the items you want to add to the library",
+      "Save the changes. Changes to the library are shown in the Library Contents change log. Data elements can depend upon extensions. Rules can depend on both data elements and extensions. If you do not include all the necessary components in your library, the build will fail at build time and you\u2019ll need to add the necessary components before you complete a successful build. A future release will check dependencies when making changes to a library"
+    ],
+    "baseline_n_cycles": 1,
+    "reasoning_n_cycles": 0
+  },
+  {
+    "id": "proc_1727",
+    "origin": "procedural",
+    "n_steps": 6,
+    "steps": [
+      "Disable the extensions you want to remove, along with any data elements and rules that depend on those extensions",
+      "Disable the data elements and rules you want to remove",
+      "Open the Publishing tab",
+      "Select the library you want to change",
+      "Use the rules, data elements, and extensions buttons to select the disabled items you want to remove from the library",
+      "Save the changes"
+    ],
+    "baseline_n_cycles": 1,
+    "reasoning_n_cycles": 0
+  },
+  {
+    "id": "proc_361",
+    "origin": "procedural",
+    "n_steps": 5,
+    "steps": [
+      "Check that the total number of deletion jobs submitted via the Privacy Service API doesn\u2019t exceed the daily limit",
+      "Ensure that each job contains no more than 1,000 user profiles, as documented in Create an access/delete job",
+      "If the total number of jobs exceeds the daily limit, split the jobs into smaller batches that meet the daily upload limit",
+      "Schedule the batches across multiple days to stay within the 20,000 jobs per day limit",
+      "Monitor job submissions regularly to avoid exceeding the limits and triggering the 400 error"
+    ],
+    "baseline_n_cycles": 1,
+    "reasoning_n_cycles": 0
+  }
+]

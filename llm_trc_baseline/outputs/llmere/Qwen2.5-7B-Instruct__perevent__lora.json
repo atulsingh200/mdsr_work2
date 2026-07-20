@@ -1,0 +1,14 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "method": "perevent_On",
+  "precision": 0.7894162575013639,
+  "recall": 0.7426860564585116,
+  "f1": 0.7653385049365303,
+  "tp": 4341,
+  "fp": 1158,
+  "fn": 1504,
+  "n_docs": 370,
+  "queries_On": 2057,
+  "pairs_On2": 5845,
+  "speedup_x": 2.84
+}

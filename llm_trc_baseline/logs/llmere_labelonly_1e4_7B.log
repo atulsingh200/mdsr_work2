@@ -1,0 +1,44 @@
+train=38731 val=3954 test=4801
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:03<00:11,  3.84s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:05<00:05,  2.51s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:06<00:02,  2.07s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:08<00:00,  1.85s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:08<00:00,  2.12s/it]
+trainable params: 40,370,176 || all params: 7,655,986,688 || trainable%: 0.5273
+  ep0 it200/9683 loss=1.0956
+  ep0 it400/9683 loss=0.7078
+  ep0 it600/9683 loss=0.5768
+  ep0 it800/9683 loss=0.5081
+  ep0 it1000/9683 loss=0.4692
+  ep0 it1200/9683 loss=0.4397
+  ep0 it1400/9683 loss=0.4200
+  ep0 it1600/9683 loss=0.4050
+  ep0 it1800/9683 loss=0.3917
+  ep0 it2000/9683 loss=0.3820
+  ep0 it2200/9683 loss=0.3756
+  ep0 it2400/9683 loss=0.3678
+  ep0 it2600/9683 loss=0.3619
+  ep0 it2800/9683 loss=0.3566
+  ep0 it3000/9683 loss=0.3526
+  ep0 it3200/9683 loss=0.3465
+  ep0 it3400/9683 loss=0.3424
+  ep0 it3600/9683 loss=0.3358
+  ep0 it3800/9683 loss=0.3314
+  ep0 it4000/9683 loss=0.3285
+  ep0 it4200/9683 loss=0.3248
+  ep0 it4400/9683 loss=0.3219
+  ep0 it4600/9683 loss=0.3190
+  ep0 it4800/9683 loss=0.3162
+  ep0 it5000/9683 loss=0.3129
+  ep0 it5200/9683 loss=0.3103
+  ep0 it5400/9683 loss=nan
+  ep0 it5600/9683 loss=nan
+  ep0 it5800/9683 loss=nan
+  ep0 it6000/9683 loss=nan
+  ep0 it6200/9683 loss=nan
+  ep0 it6400/9683 loss=nan
+  ep0 it6600/9683 loss=nan
+  ep0 it6800/9683 loss=nan
+  ep0 it7000/9683 loss=nan
+  ep0 it7200/9683 loss=nan
+  ep0 it7400/9683 loss=nan
+  ep0 it7600/9683 loss=nan
+  ep0 it7800/9683 loss=nan
+  ep0 it8000/9683 loss=nan
+  ep0 it8200/9683 loss=nan

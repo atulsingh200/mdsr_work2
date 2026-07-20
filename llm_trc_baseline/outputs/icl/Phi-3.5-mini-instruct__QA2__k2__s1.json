@@ -1,0 +1,82 @@
+{
+  "model": "microsoft/Phi-3.5-mini-instruct",
+  "prompt_type": "QA2",
+  "shots": 2,
+  "seed": 1,
+  "overall": {
+    "n": 4801,
+    "acc": 0.5730056238283691,
+    "f1": 0.6380649717514124,
+    "f1_before": 0.6380649717514124,
+    "f1_not_before": 0.47943118334179785
+  },
+  "by_source": {
+    "aep": {
+      "n": 1548,
+      "acc": 0.49870801033591733,
+      "f1": 0.5684093437152391,
+      "f1_before": 0.5684093437152391,
+      "f1_not_before": 0.40215716486902925
+    },
+    "ajo": {
+      "n": 741,
+      "acc": 0.4898785425101215,
+      "f1": 0.5356265356265356,
+      "f1_before": 0.5356265356265356,
+      "f1_not_before": 0.4341317365269461
+    },
+    "procedural": {
+      "n": 2512,
+      "acc": 0.643312101910828,
+      "f1": 0.7064220183486238,
+      "f1_before": 0.7064220183486238,
+      "f1_not_before": 0.5456389452332657
+    }
+  },
+  "n": 4801,
+  "unparsed": 0,
+  "unparsed_rate": 0.0,
+  "pred_pos_rate": 0.6640283274317851,
+  "samples": [
+    {
+      "gen": " 1) YES\n2) NO\n\nExplanation: In Step",
+      "pred": 1,
+      "gold": 0
+    },
+    {
+      "gen": " 1) NO\n2) YES\n\nExplanation: Step A",
+      "pred": 0,
+      "gold": 0
+    },
+    {
+      "gen": " 1) YES\n2) NO\n\nExplanation: Step A",
+      "pred": 1,
+      "gold": 1
+    },
+    {
+      "gen": " 1) YES\n2) NO\n\nExplanation: Step A",
+      "pred": 1,
+      "gold": 1
+    },
+    {
+      "gen": " 1) NO\n2) YES\n\nBoth steps A and B",
+      "pred": 0,
+      "gold": 1
+    },
+    {
+      "gen": " 1) YES\n2) NO\n\nExplanation:\nStep",
+      "pred": 1,
+      "gold": 1
+    },
+    {
+      "gen": " 1) YES\n2) NO\n\nExplanation:\nStep",
+      "pred": 1,
+      "gold": 0
+    },
+    {
+      "gen": " 1) NO\n2) YES\n\nExplanation: Step B",
+      "pred": 0,
+      "gold": 0
+    }
+  ]
+}

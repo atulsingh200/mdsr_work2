@@ -1,0 +1,60 @@
+test rows: 4801  model: Qwen/Qwen2.5-72B-Instruct
+WARNING 07-19 06:45:33 multiproc_worker_utils.py:312] Reducing Torch parallelism from 48 threads to 1 to avoid unnecessary CPU contention. Set OMP_NUM_THREADS in the external environment to tune this value as needed.
+Loading safetensors checkpoint shards:   0% Completed | 0/37 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:   3% Completed | 1/37 [00:00<00:15,  2.35it/s]
+Loading safetensors checkpoint shards:   5% Completed | 2/37 [00:00<00:16,  2.11it/s]
+Loading safetensors checkpoint shards:   8% Completed | 3/37 [00:01<00:16,  2.09it/s]
+Loading safetensors checkpoint shards:  11% Completed | 4/37 [00:01<00:15,  2.14it/s]
+Loading safetensors checkpoint shards:  14% Completed | 5/37 [00:02<00:14,  2.15it/s]
+Loading safetensors checkpoint shards:  16% Completed | 6/37 [00:02<00:13,  2.22it/s]
+Loading safetensors checkpoint shards:  19% Completed | 7/37 [00:03<00:13,  2.15it/s]
+Loading safetensors checkpoint shards:  22% Completed | 8/37 [00:03<00:13,  2.08it/s]
+Loading safetensors checkpoint shards:  24% Completed | 9/37 [00:04<00:12,  2.17it/s]
+Loading safetensors checkpoint shards:  27% Completed | 10/37 [00:04<00:12,  2.22it/s]
+Loading safetensors checkpoint shards:  30% Completed | 11/37 [00:05<00:11,  2.23it/s]
+Loading safetensors checkpoint shards:  32% Completed | 12/37 [00:05<00:11,  2.11it/s]
+Loading safetensors checkpoint shards:  35% Completed | 13/37 [00:06<00:11,  2.17it/s]
+Loading safetensors checkpoint shards:  38% Completed | 14/37 [00:06<00:10,  2.21it/s]
+Loading safetensors checkpoint shards:  41% Completed | 15/37 [00:06<00:10,  2.13it/s]
+Loading safetensors checkpoint shards:  43% Completed | 16/37 [00:07<00:10,  2.07it/s]
+Loading safetensors checkpoint shards:  46% Completed | 17/37 [00:07<00:09,  2.13it/s]
+Loading safetensors checkpoint shards:  49% Completed | 18/37 [00:08<00:08,  2.20it/s]
+Loading safetensors checkpoint shards:  51% Completed | 19/37 [00:08<00:08,  2.01it/s]
+Loading safetensors checkpoint shards:  54% Completed | 20/37 [00:09<00:08,  2.05it/s]
+Loading safetensors checkpoint shards:  57% Completed | 21/37 [00:09<00:07,  2.08it/s]
+Loading safetensors checkpoint shards:  59% Completed | 22/37 [00:10<00:06,  2.15it/s]
+Loading safetensors checkpoint shards:  62% Completed | 23/37 [00:10<00:06,  2.05it/s]
+Loading safetensors checkpoint shards:  65% Completed | 24/37 [00:11<00:06,  2.02it/s]
+Loading safetensors checkpoint shards:  68% Completed | 25/37 [00:11<00:05,  2.08it/s]
+Loading safetensors checkpoint shards:  70% Completed | 26/37 [00:12<00:05,  2.05it/s]
+Loading safetensors checkpoint shards:  73% Completed | 27/37 [00:12<00:04,  2.27it/s]
+Loading safetensors checkpoint shards:  76% Completed | 28/37 [00:13<00:03,  2.26it/s]
+Loading safetensors checkpoint shards:  78% Completed | 29/37 [00:13<00:03,  2.30it/s]
+Loading safetensors checkpoint shards:  81% Completed | 30/37 [00:13<00:02,  2.34it/s]
+Loading safetensors checkpoint shards:  84% Completed | 31/37 [00:14<00:02,  2.24it/s]
+Loading safetensors checkpoint shards:  86% Completed | 32/37 [00:14<00:02,  2.26it/s]
+Loading safetensors checkpoint shards:  89% Completed | 33/37 [00:15<00:01,  2.26it/s]
+Loading safetensors checkpoint shards:  92% Completed | 34/37 [00:15<00:01,  2.30it/s]
+Loading safetensors checkpoint shards:  95% Completed | 35/37 [00:15<00:00,  2.71it/s]
+Loading safetensors checkpoint shards:  97% Completed | 36/37 [00:16<00:00,  2.59it/s]
+Loading safetensors checkpoint shards: 100% Completed | 37/37 [00:16<00:00,  2.36it/s]
+Loading safetensors checkpoint shards: 100% Completed | 37/37 [00:16<00:00,  2.20it/s]
+
+Capturing CUDA graph shapes:   0%|          | 0/35 [00:00<?, ?it/s]Capturing CUDA graph shapes:   3%|▎         | 1/35 [00:00<00:30,  1.10it/s]Capturing CUDA graph shapes:   6%|▌         | 2/35 [00:01<00:29,  1.11it/s]Capturing CUDA graph shapes:   9%|▊         | 3/35 [00:02<00:28,  1.11it/s]Capturing CUDA graph shapes:  11%|█▏        | 4/35 [00:03<00:27,  1.11it/s]Capturing CUDA graph shapes:  14%|█▍        | 5/35 [00:04<00:26,  1.12it/s]Capturing CUDA graph shapes:  17%|█▋        | 6/35 [00:05<00:25,  1.12it/s]Capturing CUDA graph shapes:  20%|██        | 7/35 [00:06<00:24,  1.12it/s]Capturing CUDA graph shapes:  23%|██▎       | 8/35 [00:07<00:24,  1.12it/s]Capturing CUDA graph shapes:  26%|██▌       | 9/35 [00:08<00:23,  1.13it/s]Capturing CUDA graph shapes:  29%|██▊       | 10/35 [00:08<00:22,  1.13it/s]Capturing CUDA graph shapes:  31%|███▏      | 11/35 [00:09<00:21,  1.13it/s]Capturing CUDA graph shapes:  34%|███▍      | 12/35 [00:10<00:20,  1.13it/s]Capturing CUDA graph shapes:  37%|███▋      | 13/35 [00:11<00:19,  1.13it/s]Capturing CUDA graph shapes:  40%|████      | 14/35 [00:12<00:18,  1.13it/s]Capturing CUDA graph shapes:  43%|████▎     | 15/35 [00:13<00:17,  1.13it/s]Capturing CUDA graph shapes:  46%|████▌     | 16/35 [00:14<00:16,  1.13it/s]Capturing CUDA graph shapes:  49%|████▊     | 17/35 [00:15<00:15,  1.13it/s]Capturing CUDA graph shapes:  51%|█████▏    | 18/35 [00:15<00:14,  1.13it/s]Capturing CUDA graph shapes:  54%|█████▍    | 19/35 [00:16<00:14,  1.14it/s]Capturing CUDA graph shapes:  57%|█████▋    | 20/35 [00:17<00:13,  1.14it/s]Capturing CUDA graph shapes:  60%|██████    | 21/35 [00:18<00:12,  1.14it/s]Capturing CUDA graph shapes:  63%|██████▎   | 22/35 [00:19<00:11,  1.15it/s]Capturing CUDA graph shapes:  66%|██████▌   | 23/35 [00:20<00:10,  1.15it/s]Capturing CUDA graph shapes:  69%|██████▊   | 24/35 [00:21<00:09,  1.15it/s]Capturing CUDA graph shapes:  71%|███████▏  | 25/35 [00:22<00:08,  1.15it/s]Capturing CUDA graph shapes:  74%|███████▍  | 26/35 [00:22<00:07,  1.16it/s]Capturing CUDA graph shapes:  77%|███████▋  | 27/35 [00:23<00:06,  1.16it/s]Capturing CUDA graph shapes:  80%|████████  | 28/35 [00:24<00:06,  1.16it/s]Capturing CUDA graph shapes:  83%|████████▎ | 29/35 [00:25<00:05,  1.16it/s]Capturing CUDA graph shapes:  86%|████████▌ | 30/35 [00:26<00:04,  1.16it/s]Capturing CUDA graph shapes:  89%|████████▊ | 31/35 [00:27<00:03,  1.12it/s]Capturing CUDA graph shapes:  91%|█████████▏| 32/35 [00:29<00:03,  1.26s/it]Capturing CUDA graph shapes:  94%|█████████▍| 33/35 [00:30<00:02,  1.14s/it]Capturing CUDA graph shapes:  97%|█████████▋| 34/35 [00:31<00:01,  1.06s/it]Capturing CUDA graph shapes: 100%|██████████| 35/35 [00:32<00:00,  1.12s/it]Capturing CUDA graph shapes: 100%|██████████| 35/35 [00:32<00:00,  1.08it/s]
+[Qwen2.5-72B-Instruct__P__k0] f1=0.5939 acc=0.6336 unparsed=0.000
+[Qwen2.5-72B-Instruct__P__k2__s0] f1=0.6165 acc=0.6463 unparsed=0.000
+[Qwen2.5-72B-Instruct__P__k2__s1] f1=0.6018 acc=0.6311 unparsed=0.000
+[Qwen2.5-72B-Instruct__P__k2__s2] f1=0.6337 acc=0.6478 unparsed=0.000
+[Qwen2.5-72B-Instruct__P__k2__s3] f1=0.6307 acc=0.6451 unparsed=0.000
+[Qwen2.5-72B-Instruct__P__k2__s4] f1=0.5984 acc=0.6440 unparsed=0.000
+[Qwen2.5-72B-Instruct__P__k2] f1=0.6162 +/- 0.0145
+[Qwen2.5-72B-Instruct__QA1__k0] f1=0.7053 acc=0.6372 unparsed=0.000
+[Qwen2.5-72B-Instruct__QA1__k2__s0] f1=0.6837 acc=0.6524 unparsed=0.000
+[Qwen2.5-72B-Instruct__QA1__k2__s1] f1=0.6600 acc=0.6295 unparsed=0.000
+[Qwen2.5-72B-Instruct__QA1__k2__s2] f1=0.7039 acc=0.6609 unparsed=0.000
+[Qwen2.5-72B-Instruct__QA1__k2__s3] f1=0.7035 acc=0.6538 unparsed=0.000
+[Qwen2.5-72B-Instruct__QA1__k2__s4] f1=0.6622 acc=0.6497 unparsed=0.000
+[Qwen2.5-72B-Instruct__QA1__k2] f1=0.6827 +/- 0.0191
+[Qwen2.5-72B-Instruct__QA2__k0] f1=0.7191 acc=0.6384 unparsed=0.000
+/home/colligo/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked shared_memory objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
