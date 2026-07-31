@@ -1,0 +1,149 @@
+"""Dataset + collation for the cross-encoder directional classifier.
+
+Mirrors src/classifier/training/data.py, but the collate JOINTLY tokenizes the
+pair  (text_1, text_2)  into a single sequence  [CLS] text_1 [SEP] text_2 [SEP]
+instead of producing two separate encodings.
+"""
+
+from __future__ import annotations
+
+import json
+import re
+import warnings
+from pathlib import Path
+
+import torch
+from torch.utils.data import Dataset
+
+_VERDICT_RE = re.compile(r"^\s*VERDICT\b")
+
+
+def strip_verdict(reasoning: str) -> str:
+    """Drop the trailing 'VERDICT: BEFORE/NOT_BEFORE (...)' line from a reasoning trace.
+
+    The verdict line spells out the label as text, so it is removed before the
+    reasoning is used as a decoder target -- otherwise the auxiliary generation
+    task could trivially shortcut to copying the label instead of the actual
+    explanation.
+    """
+    lines = reasoning.splitlines()
+    kept = [ln for ln in lines if not _VERDICT_RE.match(ln)]
+    return "\n".join(kept).rstrip()
+
+
+def _parse_step(v) -> int | None:
+    """Normalise a tier/step value to int.  Handles ints, 'tN' strings, and None."""
+    if v is None:
+        return None
+    if isinstance(v, int):
+        return v
+    if isinstance(v, str):
+        digits = "".join(c for c in v if c.isdigit())
+        return int(digits) if digits else None
+    return None
+
+
+class CEPairDataset(Dataset):
+    """In-memory dataset of labelled text pairs from a JSONL file.
+
+    Parameters
+    ----------
+    path      : path to a JSONL file
+    step_key  : field-name prefix for the step/tier columns.
+                ``"tier"`` → reads ``tier_1`` / ``tier_2`` (integers).
+                ``"step"`` → reads ``step_1`` / ``step_2`` (e.g. ``"t2"`` strings).
+    """
+
+    def __init__(self, path: Path, step_key: str = "tier"):
+        self.step_key = step_key
+        self.rows: list[dict] = []
+        skipped = 0
+        with open(path) as f:
+            for ln in f:
+                ln = ln.strip()
+                if not ln:
+                    continue
+                try:
+                    self.rows.append(json.loads(ln))
+                except json.JSONDecodeError:
+                    skipped += 1
+        if skipped:
+            warnings.warn(f"{path.name}: skipped {skipped} malformed line(s)")
+
+    def __len__(self) -> int:
+        return len(self.rows)
+
+    def __getitem__(self, i: int) -> dict:
+        r = self.rows[i]
+        k1, k2 = f"{self.step_key}_1", f"{self.step_key}_2"
+        return {
+            "text_1": r["text_1"],
+            "text_2": r["text_2"],
+            "label": float(r["label"]),
+            "step_1": _parse_step(r.get(k1)),
+            "step_2": _parse_step(r.get(k2)),
+            "idx": i,
+        }
+
+
+class CECollate:
+    """Joint-tokenize text pairs for the cross-encoder."""
+
+    def __init__(self, tokenizer, max_len: int):
+        self.tok = tokenizer
+        self.max_len = max_len
+
+    def __call__(self, batch: list[dict]) -> dict:
+        t1 = [b["text_1"] for b in batch]
+        t2 = [b["text_2"] for b in batch]
+        enc = self.tok(
+            t1, t2, padding=True, truncation="longest_first",
+            max_length=self.max_len, return_tensors="pt",
+        )
+        labels = torch.tensor([b["label"] for b in batch], dtype=torch.float32)
+        step_1 = torch.tensor([b["step_1"] - 1 if b["step_1"] is not None else -1 for b in batch], dtype=torch.long)
+        step_2 = torch.tensor([b["step_2"] - 1 if b["step_2"] is not None else -1 for b in batch], dtype=torch.long)
+        return {
+            "enc": enc,
+            "labels": labels,
+            "step_1": step_1,
+            "step_2": step_2,
+            "idx": [b["idx"] for b in batch],
+        }
+
+
+class CEPairReasoningDataset(CEPairDataset):
+    """CEPairDataset that also exposes a verdict-stripped `reasoning` field."""
+
+    def __getitem__(self, i: int) -> dict:
+        item = super().__getitem__(i)
+        item["reasoning"] = strip_verdict(self.rows[i]["reasoning"])
+        return item
+
+
+class CEReasoningCollate(CECollate):
+    """CECollate plus teacher-forced decoder tensors for the `reasoning` field."""
+
+    def __init__(self, tokenizer, max_len: int, max_reason_len: int):
+        super().__init__(tokenizer, max_len)
+        self.max_reason_len = max_reason_len
+
+    def __call__(self, batch: list[dict]) -> dict:
+        out = super().__call__(batch)
+
+        reasoning = [b["reasoning"] for b in batch]
+        reason_enc = self.tok(
+            reasoning, padding=True, truncation=True,
+            max_length=self.max_reason_len + 1, return_tensors="pt",
+        )
+        ids = reason_enc["input_ids"]
+        pad_id = self.tok.pad_token_id
+        decoder_input_ids = ids[:, :-1]
+        decoder_labels = ids[:, 1:].clone()
+        decoder_labels[decoder_labels == pad_id] = -100
+        decoder_padding_mask = decoder_input_ids == pad_id
+
+        out["decoder_input_ids"] = decoder_input_ids
+        out["decoder_labels"] = decoder_labels
+        out["decoder_padding_mask"] = decoder_padding_mask
+        return out
