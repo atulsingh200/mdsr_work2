@@ -1,0 +1,9 @@
+{
+  "model": "claude-sonnet-4-6",
+  "shots": 2,
+  "prompt": "QA1 (YES/NO)",
+  "n": 4801,
+  "acc": 0.8292,
+  "f1": 0.833,
+  "auc": "N/A \u2014 hard 0/1 predictions only, no probability scores available"
+}
