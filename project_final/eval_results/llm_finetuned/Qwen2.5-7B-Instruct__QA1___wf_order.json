@@ -1,0 +1,26 @@
+{
+  "run_tag": "Qwen2.5-7B-Instruct__QA1___wf_order",
+  "base_model": "Qwen/Qwen2.5-7B-Instruct",
+  "adapter": "outputs/lora/Qwen2.5-7B-Instruct__QA1__lora_adapter",
+  "prompt_type": "QA1",
+  "shots": 0,
+  "yes_token_id": 14004,
+  "no_token_id": 8996,
+  "by_n": {
+    "2": {
+      "correct": 119,
+      "total": 120
+    },
+    "3": {
+      "correct": 361,
+      "total": 407
+    },
+    "4": {
+      "correct": 126,
+      "total": 170
+    }
+  },
+  "total_correct": 606,
+  "total": 697,
+  "order_acc": 0.8694
+}
