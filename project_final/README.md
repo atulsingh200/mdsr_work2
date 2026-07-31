@@ -131,18 +131,11 @@ bash run.sh --group 3
 
 ### 1. Pair Classification — CrossEncoder2x (DeBERTa-v3-large)
 
-Test set: `directional_test.jsonl` (4,801 pairs, all sources combined).
-
-| Model | Data | Acc | AUC | F1 |
-|-------|------|:---:|:---:|:--:|
-| v2_res_baseline (cls only) | proc+AEP+AJO (38k) | 0.7834 | 0.8813 | 0.7871 |
-| v2_fixed_alpha02_ep10 (cls + reasoning) | proc+AEP+AJO (38k) | 0.8611 | 0.9154 | 0.8666 |
-
-**Main results — full test set (4,801 pairs):**
+Test set: `directional_test.jsonl` (4,801 pairs).
 
 | Model | Type | Acc | F1 | AUC |
 |-------|------|:---:|:--:|:---:|
-| Reasoning model (v2_fixed_α02_ep10) | Finetuned + Reasoning | 86.1% | 86.7% | 91.5% |
+| Reasoning model (v2_fixed_α02_ep10) | Finetuned + Reasoning | **86.1%** | **86.7%** | **91.5%** |
 | Claude Sonnet 4.6 (2-shot ICL) | Similarity | 82.9% | 83.3% | — † |
 | Baseline (v2_res_baseline) | Finetuned | 78.3% | 78.7% | 88.1% |
 
@@ -225,7 +218,7 @@ Method: P(YES) from YES-token logprob (single token, confirmed for all models) u
 
 2. **Finetuned LLMs beat reasoning encoder on ordering:** Qwen2.5-14B QA1 FT (92.8%) and Qwen2.5-7B rationale (91.7%) both outperform the CrossEncoder2x reasoning model (89.5%) on workflow ordering.
 
-3. **Claude Sonnet 4.6 is strong ICL:** 82.9% acc on procedural pairs (2-shot) — between the baseline (80.0%) and fine-tuned reasoning model (85.3%), with no training data.
+3. **Claude Sonnet 4.6 is strong ICL:** 82.9% acc (2-shot, 4,801 pairs) — between the baseline (78.3%) and reasoning model (86.1%) on the modified test set, with no training data at all.
 
 4. **4-step is the hardest:** All models degrade significantly on 4-step workflows (encoder: 67–78%, LLMs: 29–87%).
 
