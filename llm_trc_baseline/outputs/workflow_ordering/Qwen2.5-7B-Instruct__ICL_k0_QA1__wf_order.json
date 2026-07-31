@@ -1,0 +1,26 @@
+{
+  "run_tag": "Qwen2.5-7B-Instruct__ICL_k0_QA1__wf_order",
+  "base_model": "Qwen/Qwen2.5-7B-Instruct",
+  "adapter": null,
+  "prompt_type": "QA1",
+  "shots": 0,
+  "yes_token_id": 14004,
+  "no_token_id": 8996,
+  "by_n": {
+    "2": {
+      "correct": 120,
+      "total": 120
+    },
+    "3": {
+      "correct": 357,
+      "total": 407
+    },
+    "4": {
+      "correct": 110,
+      "total": 170
+    }
+  },
+  "total_correct": 587,
+  "total": 697,
+  "order_acc": 0.8422
+}

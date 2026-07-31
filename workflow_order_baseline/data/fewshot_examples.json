@@ -1,0 +1,132 @@
+{
+  "shots_3": [
+    {
+      "id": 650,
+      "title": "Access and subscribe to system alerts | Adobe Journey Optimizer",
+      "num_steps": 3,
+      "shuffled_steps": [
+        "Review the configuration details and error messages provided. Common failure reasons include: SPF validation failed DKIM validation failed MX record validation failed Invalid DNS records The possible configuration failure reasons are listed in this section",
+        "Resolve the issue: Update the channel configuration as needed. You may need to fix specific DNS issues mentioned in the alert. As a single domain can be associated with multiple channel configurations, resolving DNS issues for one channel configuration may automatically fix related issues across several configurations. If the change does not resolve the issue, the same alert will be triggered again the next day. When resolving email configuration issues, keep in mind the best practices listed below: Act promptly - Address configuration failures as soon as they are detected to avoid disruptions in email delivery. Check all configurations - If the alert indicates multiple impacted email configurations, review and fix each of them",
+        "Click the alert to be directed to the impacted email channel configuration in the Journey Optimizer interface. For guidance on editing channel configurations, see this section"
+      ],
+      "gold_order": [
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "id": 813,
+      "title": "Iterate over contextual data | Adobe Journey Optimizer",
+      "num_steps": 3,
+      "shuffled_steps": [
+        "Define the object fields: id, name, price, color (each becomes mappable) Journey canvas configuration",
+        "In the request body, define products as type listObject",
+        "Mark it as Variable"
+      ],
+      "gold_order": [
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "id": 561,
+      "title": "Design your journey | Adobe Journey Optimizer",
+      "num_steps": 4,
+      "shuffled_steps": [
+        "Press Ctrl/Command + C. If you want to only copy one activity, you can click on it and use the Copy icon in the top left of the activity configuration pane",
+        "In any journey, press Ctrl/Command + V to paste the activities without linking them to an existing node. Pasted activities are placed in the same order. After being pasted, activities stay selected so you can easily move them. You can also place the cursor on an empty place holder and hit Ctrl/Command + V. Pasted activities will be linked to the node",
+        "Select the activities you want to copy by moving your mouse while clicking. You can also click on each activity while pressing the Ctrl/Command key. Use Ctrl/Command + A if you want to select all activities",
+        "Open a journey"
+      ],
+      "gold_order": [
+        4,
+        3,
+        1,
+        2
+      ]
+    }
+  ],
+  "shots_5": [
+    {
+      "id": 650,
+      "title": "Access and subscribe to system alerts | Adobe Journey Optimizer",
+      "num_steps": 3,
+      "shuffled_steps": [
+        "Review the configuration details and error messages provided. Common failure reasons include: SPF validation failed DKIM validation failed MX record validation failed Invalid DNS records The possible configuration failure reasons are listed in this section",
+        "Resolve the issue: Update the channel configuration as needed. You may need to fix specific DNS issues mentioned in the alert. As a single domain can be associated with multiple channel configurations, resolving DNS issues for one channel configuration may automatically fix related issues across several configurations. If the change does not resolve the issue, the same alert will be triggered again the next day. When resolving email configuration issues, keep in mind the best practices listed below: Act promptly - Address configuration failures as soon as they are detected to avoid disruptions in email delivery. Check all configurations - If the alert indicates multiple impacted email configurations, review and fix each of them",
+        "Click the alert to be directed to the impacted email channel configuration in the Journey Optimizer interface. For guidance on editing channel configurations, see this section"
+      ],
+      "gold_order": [
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "id": 813,
+      "title": "Iterate over contextual data | Adobe Journey Optimizer",
+      "num_steps": 3,
+      "shuffled_steps": [
+        "Define the object fields: id, name, price, color (each becomes mappable) Journey canvas configuration",
+        "In the request body, define products as type listObject",
+        "Mark it as Variable"
+      ],
+      "gold_order": [
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "id": 1740,
+      "title": "Republish a Library | Adobe Data Collection",
+      "num_steps": 3,
+      "shuffled_steps": [
+        "Select Republish",
+        "Find the library in the Published column that you\u2019d like to republish",
+        "Select the ellipsis (...) in the upper-right corner of the Library card"
+      ],
+      "gold_order": [
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "id": 561,
+      "title": "Design your journey | Adobe Journey Optimizer",
+      "num_steps": 4,
+      "shuffled_steps": [
+        "Press Ctrl/Command + C. If you want to only copy one activity, you can click on it and use the Copy icon in the top left of the activity configuration pane",
+        "In any journey, press Ctrl/Command + V to paste the activities without linking them to an existing node. Pasted activities are placed in the same order. After being pasted, activities stay selected so you can easily move them. You can also place the cursor on an empty place holder and hit Ctrl/Command + V. Pasted activities will be linked to the node",
+        "Select the activities you want to copy by moving your mouse while clicking. You can also click on each activity while pressing the Ctrl/Command key. Use Ctrl/Command + A if you want to select all activities",
+        "Open a journey"
+      ],
+      "gold_order": [
+        4,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "id": 1118,
+      "title": "Direct mail configuration | Adobe Journey Optimizer",
+      "num_steps": 4,
+      "shuffled_steps": [
+        "Set a name for your configuration",
+        "Access the Administration > Channels > Direct mail settings > File routing menu, then click Create file routing config. {align=\"center\" width=\"800\"}",
+        "Fill in the fields specific to each server type as detailed in the tabs below. Amazon S3 If you selected Amazon S3 as the Server type , fill in the details and credentials for your server: AWS bucket name :To know where to find your AWS bucket name, refer to this page. AWS access key : To know where to find your AWS access key ID, refer to this page. AWS secret key : To know where to find your AWS secret key, refer to this page. AWS region : choose the AWS region where the server infrastructure will be located. AWS regions are geographic areas that AWS uses to host its cloud infrastructures. As a general practice, it is preferred to choose the region that is closest to you direct mail provider\u2019s location. {align=\"center\" width=\"800\"} SFTP If you selected SFTP as the Server type , fill in the details and credentials for your server: Authentication type : Select the type of authentication used to connect to the server (password or SSH Key). Account : Account name used to connect to the SFTP server. Server address : \u200bURL of the SFTP server. Port : SFTP connection port number. Password / SSH Key :\u200b Password or SSH Key used to connect to the SFTP server. When using SSH key authentication, the key must be a Base64-encoded OpenSSH private key. If it is a PPK-format file, use the PuTTY tool to convert it to OpenSSH format. For detailed instructions, see this section. To specify a path on the server for saving the file, update the direct mail campaign\u2019s Filename field to include the desired path. Learn more Azure If you selected Azure as the Server type , fill in the details and credentials for your server: Azure Connection String : To find your Azure Connection String , refer to this page. The Azure Connection String should follow the format below: DefaultEndpointsProtocol=[http|https];AccountName=myAccountName;AccountKey=myAccountKey Container Name : To find your Container Name , refer to this page. The Container Name should contain only the container\u2019s name without any slashes. To specify a path within the container for saving the file, update the direct mail campaign\u2019s Filename field to include the desired path. Learn more Data Landing Zone If you selected Data Landing Zone as the Server type , no specific details are required. All customers of Adobe Experience Platform are provisioned with one Data Landing Zone container per sandbox. Learn more about Data Landing Zone in the Adobe Experience Platform documentation. To encrypt the file, copy-paste your encryption key in the PGP/GPG encryption key field. If your file routing configuration is going to be sent using journeys, you can specify the frequency at which the file is going to be sent the server. Once you filled in the details for your server type, select Submit. The file routing configuration is created with the Active status. It is now ready to be used in a direct mail configuration. You can also select Save as draft to create the file routing configuration, but you will not be able to select it in a configuration until it is Active",
+        "Select the type of server you want to use for exporting your direct mail files: Amazon S3, SFTP, Azure, or Data Landing Zone. {align=\"center\" width=\"800\"}"
+      ],
+      "gold_order": [
+        2,
+        1,
+        4,
+        3
+      ]
+    }
+  ]
+}

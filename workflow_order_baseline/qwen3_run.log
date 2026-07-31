@@ -1,0 +1,39 @@
+eval rows: 697  model: Qwen/Qwen3-8B  thinking: True
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Traceback (most recent call last):
+  File "/mnt/localssd/causal-embedding-research/workflow_order_baseline/run_inference.py", line 106, in <module>
+    main()
+  File "/mnt/localssd/causal-embedding-research/workflow_order_baseline/run_inference.py", line 84, in main
+    llm = LLM(model=args.model, tensor_parallel_size=args.tp,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/localssd/causal-embedding-research/llm_trc_baseline/.venv/lib/python3.11/site-packages/vllm/utils.py", line 986, in inner
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/mnt/localssd/causal-embedding-research/llm_trc_baseline/.venv/lib/python3.11/site-packages/vllm/entrypoints/llm.py", line 230, in __init__
+    self.llm_engine = self.engine_class.from_engine_args(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/localssd/causal-embedding-research/llm_trc_baseline/.venv/lib/python3.11/site-packages/vllm/engine/llm_engine.py", line 514, in from_engine_args
+    engine_config = engine_args.create_engine_config(usage_context)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/localssd/causal-embedding-research/llm_trc_baseline/.venv/lib/python3.11/site-packages/vllm/engine/arg_utils.py", line 1044, in create_engine_config
+    model_config = self.create_model_config()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/localssd/causal-embedding-research/llm_trc_baseline/.venv/lib/python3.11/site-packages/vllm/engine/arg_utils.py", line 970, in create_model_config
+    return ModelConfig(
+           ^^^^^^^^^^^^
+  File "/mnt/localssd/causal-embedding-research/llm_trc_baseline/.venv/lib/python3.11/site-packages/vllm/config.py", line 337, in __init__
+    self.multimodal_config = self._init_multimodal_config(
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/localssd/causal-embedding-research/llm_trc_baseline/.venv/lib/python3.11/site-packages/vllm/config.py", line 392, in _init_multimodal_config
+    if ModelRegistry.is_multimodal_model(architectures):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/localssd/causal-embedding-research/llm_trc_baseline/.venv/lib/python3.11/site-packages/vllm/model_executor/models/registry.py", line 461, in is_multimodal_model
+    model_cls, _ = self.inspect_model_cls(architectures)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/localssd/causal-embedding-research/llm_trc_baseline/.venv/lib/python3.11/site-packages/vllm/model_executor/models/registry.py", line 421, in inspect_model_cls
+    return self._raise_for_unsupported(architectures)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/localssd/causal-embedding-research/llm_trc_baseline/.venv/lib/python3.11/site-packages/vllm/model_executor/models/registry.py", line 382, in _raise_for_unsupported
+    raise ValueError(
+ValueError: Model architectures ['Qwen3ForCausalLM'] are not supported for now. Supported architectures: dict_keys(['AquilaModel', 'AquilaForCausalLM', 'ArcticForCausalLM', 'BaiChuanForCausalLM', 'BaichuanForCausalLM', 'BloomForCausalLM', 'CohereForCausalLM', 'Cohere2ForCausalLM', 'DbrxForCausalLM', 'DeciLMForCausalLM', 'DeepseekForCausalLM', 'DeepseekV2ForCausalLM', 'DeepseekV3ForCausalLM', 'ExaoneForCausalLM', 'FalconForCausalLM', 'GemmaForCausalLM', 'Gemma2ForCausalLM', 'GlmForCausalLM', 'GPT2LMHeadModel', 'GPTBigCodeForCausalLM', 'GPTJForCausalLM', 'GPTNeoXForCausalLM', 'GraniteForCausalLM', 'GraniteMoeForCausalLM', 'GritLM', 'InternLMForCausalLM', 'InternLM2ForCausalLM', 'InternLM2VEForCausalLM', 'JAISLMHeadModel', 'JambaForCausalLM', 'LlamaForCausalLM', 'LLaMAForCausalLM', 'MambaForCausalLM', 'FalconMambaForCausalLM', 'MiniCPMForCausalLM', 'MiniCPM3ForCausalLM', 'MistralForCausalLM', 'MixtralForCausalLM', 'QuantMixtralForCausalLM', 'MptForCausalLM', 'MPTForCausalLM', 'NemotronForCausalLM', 'OlmoForCausalLM', 'Olmo2ForCausalLM', 'OlmoeForCausalLM', 'OPTForCausalLM', 'OrionForCausalLM', 'PersimmonForCausalLM', 'PhiForCausalLM', 'Phi3ForCausalLM', 'Phi3SmallForCausalLM', 'PhiMoEForCausalLM', 'Qwen2ForCausalLM', 'Qwen2MoeForCausalLM', 'RWForCausalLM', 'StableLMEpochForCausalLM', 'StableLmForCausalLM', 'Starcoder2ForCausalLM', 'SolarForCausalLM', 'TeleChat2ForCausalLM', 'XverseForCausalLM', 'BartModel', 'BartForConditionalGeneration', 'Florence2ForConditionalGeneration', 'BertModel', 'RobertaModel', 'RobertaForMaskedLM', 'XLMRobertaModel', 'Gemma2Model', 'JambaForSequenceClassification', 'LlamaModel', 'MistralModel', 'Qwen2Model', 'Qwen2ForRewardModel', 'LlavaNextForConditionalGeneration', 'Phi3VForCausalLM', 'Qwen2VLForConditionalGeneration', 'Qwen2ForSequenceClassification', 'BertForSequenceClassification', 'RobertaForSequenceClassification', 'XLMRobertaForSequenceClassification', 'AriaForConditionalGeneration', 'Blip2ForConditionalGeneration', 'ChameleonForConditionalGeneration', 'ChatGLMModel', 'ChatGLMForConditionalGeneration', 'FuyuForCausalLM', 'H2OVLChatModel', 'InternVLChatModel', 'Idefics3ForConditionalGeneration', 'LlavaForConditionalGeneration', 'LlavaNextVideoForConditionalGeneration', 'LlavaOnevisionForConditionalGeneration', 'MantisForConditionalGeneration', 'MiniCPMV', 'MolmoForCausalLM', 'NVLM_D', 'PaliGemmaForConditionalGeneration', 'PixtralForConditionalGeneration', 'QWenLMHeadModel', 'Qwen2AudioForConditionalGeneration', 'UltravoxModel', 'MllamaForConditionalGeneration', 'EAGLEModel', 'MedusaModel', 'MLPSpeculatorPreTrainedModel'])

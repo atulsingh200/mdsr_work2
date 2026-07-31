@@ -1,0 +1,6 @@
+downloading Qwen/Qwen3-8B
+Fetching 15 files:   0%|          | 0/15 [00:00<?, ?it/s]Fetching 15 files:   7%|▋         | 1/15 [00:00<00:02,  6.02it/s]Fetching 15 files:  47%|████▋     | 7/15 [00:12<00:15,  1.93s/it]Fetching 15 files:  60%|██████    | 9/15 [00:13<00:08,  1.37s/it]Fetching 15 files: 100%|██████████| 15/15 [00:13<00:00,  1.15it/s]
+done Qwen/Qwen3-8B /mnt/localssd/.cache/huggingface/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218
+downloading mistralai/Mistral-7B-Instruct-v0.2
+Fetching 16 files:   0%|          | 0/16 [00:00<?, ?it/s]Fetching 16 files:   6%|▋         | 1/16 [00:00<00:02,  7.08it/s]Fetching 16 files:  31%|███▏      | 5/16 [00:10<00:23,  2.14s/it]Fetching 16 files:  38%|███▊      | 6/16 [00:11<00:20,  2.04s/it]Fetching 16 files:  62%|██████▎   | 10/16 [00:13<00:06,  1.06s/it]Fetching 16 files: 100%|██████████| 16/16 [00:13<00:00,  1.22it/s]
+done mistralai/Mistral-7B-Instruct-v0.2 /mnt/localssd/.cache/huggingface/hub/models--mistralai--Mistral-7B-Instruct-v0.2/snapshots/63a8b081895390a26e140280378bc85ec8bce07a

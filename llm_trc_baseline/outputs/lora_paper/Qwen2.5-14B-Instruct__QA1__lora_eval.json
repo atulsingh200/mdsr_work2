@@ -1,0 +1,80 @@
+{
+  "model": "Qwen/Qwen2.5-14B-Instruct",
+  "adapter": "outputs/lora_paper/Qwen2.5-14B-Instruct__QA1__lora_paper_adapter",
+  "prompt_type": "QA1",
+  "method": "lora_vllm_eval",
+  "overall": {
+    "n": 4801,
+    "acc": 0.820662362007915,
+    "f1": 0.8269346733668341,
+    "f1_before": 0.8269346733668341,
+    "f1_not_before": 0.8139183055975794
+  },
+  "by_source": {
+    "aep": {
+      "n": 1548,
+      "acc": 0.8126614987080103,
+      "f1": 0.8218673218673219,
+      "f1_before": 0.8218673218673219,
+      "f1_not_before": 0.8024523160762943
+    },
+    "ajo": {
+      "n": 741,
+      "acc": 0.7327935222672065,
+      "f1": 0.7474489795918368,
+      "f1_before": 0.7474489795918368,
+      "f1_not_before": 0.7163323782234957
+    },
+    "procedural": {
+      "n": 2512,
+      "acc": 0.8515127388535032,
+      "f1": 0.8544674209910261,
+      "f1_before": 0.8544674209910261,
+      "f1_not_before": 0.848435595286469
+    }
+  },
+  "unparsed": 0,
+  "unparsed_rate": 0.0,
+  "samples": [
+    {
+      "gen": "NO",
+      "pred": 0,
+      "gold": 0
+    },
+    {
+      "gen": "NO",
+      "pred": 0,
+      "gold": 0
+    },
+    {
+      "gen": "YES",
+      "pred": 1,
+      "gold": 1
+    },
+    {
+      "gen": "YES",
+      "pred": 1,
+      "gold": 1
+    },
+    {
+      "gen": "YES",
+      "pred": 1,
+      "gold": 1
+    },
+    {
+      "gen": "YES",
+      "pred": 1,
+      "gold": 1
+    },
+    {
+      "gen": "NO",
+      "pred": 0,
+      "gold": 0
+    },
+    {
+      "gen": "NO",
+      "pred": 0,
+      "gold": 0
+    }
+  ]
+}

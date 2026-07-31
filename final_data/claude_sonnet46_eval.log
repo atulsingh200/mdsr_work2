@@ -1,0 +1,11 @@
+Total rows: 4801
+Remaining: 4801
+  [200/4801]  acc=0.8650  5.3 req/s  ETA=14.4min
+  [400/4801]  acc=0.8500  5.5 req/s  ETA=13.2min
+  [600/4801]  acc=0.8550  5.5 req/s  ETA=12.8min
+Total rows: 4801
+Resuming from checkpoint: 952 done
+Remaining: 3849
+  [1000/4801]  acc=0.8380  98.8 req/s  ETA=0.6min
+  [1200/4801]  acc=0.8342  25.4 req/s  ETA=2.4min
+  [1400/4801]  acc=0.8329  16.4 req/s  ETA=3.5min

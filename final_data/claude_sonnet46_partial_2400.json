@@ -1,0 +1,14 @@
+{
+  "model": "claude-sonnet-4-6",
+  "n": 2400,
+  "note": "partial_2400_clean_rows",
+  "acc": 0.8392,
+  "f1": 0.8317,
+  "f1_0": 0.846,
+  "by_source": {
+    "procedural": {
+      "acc": 0.8392,
+      "n": 2400
+    }
+  }
+}
